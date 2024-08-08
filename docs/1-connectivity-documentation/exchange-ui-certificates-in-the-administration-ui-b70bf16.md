@@ -30,6 +30,10 @@ By default, the Cloud Connector includes a self-signed UI certificate. It is use
     ![](images/SCC_Exchange_UI_Certificates_-_Generate_CSR_ebeafe4.png)
 
 4.  Press *Generate*.
+
+    > ### Note:  
+    > When starting the procedure, a previously triggered *Certificate Signing Request* will be invalidated and a response for it can no longer be imported, as a new key pair will be generated and the old private key will be deleted.
+
 5.  You are prompted to save the signing request in a file. The content of the file is the signing request in PEM format.
 
     The signing request must be provided to a Certificate Authority \(CA\) - either one within your company or another one you trust. The CA signs the request and the returned response should be stored in a file.

@@ -36,7 +36,7 @@ The transparent proxy consists of a transparent proxy manager, transparent HTTP 
     kubectl logs -l transparent-proxy.connectivity.api.sap/component=healthcheck --tail=-1 -n <installation-namespace> > transparent-proxy-health-check.log
     ```
 
-5.  To get the logs of the transparent proxy operator \(installed only when [Transparent Proxy is enabled as a Kyma Module in the Kyma environment](transparent-proxy-in-the-kyma-environment-1700cfe.md)\) execute:
+5.  To get the logs of the transparent proxy operator \(installed only when [Transparent Proxy is added as a Kyma Module in the Kyma environment](transparent-proxy-in-the-kyma-environment-1700cfe.md)\) execute:
 
     ```
     kubectl logs -l transparent-proxy.connectivity.api.sap/component=operator --tail=-1 -n <installation-namespace> > transparent-proxy-operator.log
@@ -97,7 +97,7 @@ Changing a log level is done without any downtime and requires no restarts. All 
     kubectl exec <transparent proxy health check pod> -n <installation-namespace> -it -- /etc/logging/change-log-level DEBUG
     ```
 
-5.  To change the log level of the transparent proxy operator \(installed only when [Transparent Proxy is enabled as a Kyma Module in the Kyma environment](transparent-proxy-in-the-kyma-environment-1700cfe.md)\) execute:
+5.  To change the log level of the transparent proxy operator \(installed only when [Transparent Proxy is added as a Kyma Module in the Kyma environment](transparent-proxy-in-the-kyma-environment-1700cfe.md)\) execute:
 
     ```
     kubectl exec <transparent proxy operator pod> -n <installation-namespace> -it -- /etc/logging/change-log-level DEBUG

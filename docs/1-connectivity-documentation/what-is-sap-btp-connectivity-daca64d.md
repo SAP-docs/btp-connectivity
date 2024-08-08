@@ -164,9 +164,6 @@ One of these roles:
 
 -   *Security Administrator* \(must be Global Account member or Cloud Foundry Org/Space member\)
 
-    See [Managing Security Administrators in Your Subaccount \[Feature Set A\]](https://help.sap.com/viewer/65de2977205c403bbc107264b8eccf4b/Cloud/en-US/6752c4b8435c456ebf67a97ddbbcb267.html "Running on the cloud management tools feature set A: When you create a subaccount, SAP BTP automatically grants your user the role for the administration of business users and their authorizations in the subaccount. Having this role, you can also add or remove other users who will then also be user and role administrators of this subaccount.") :arrow_upper_right:.
-
-
 
 
 </td>
@@ -691,5 +688,5 @@ Back to [Content](what-is-sap-btp-connectivity-daca64d.md#loiodaca64dacc6148fcb5
 
 [Monitoring and Troubleshooting](monitoring-and-troubleshooting-27ab9fa.md "Find information on monitoring and troubleshooting for SAP BTP Connectivity.")
 
-[Security Administration: Managing Authentication and Authorization](https://help.sap.com/viewer/65de2977205c403bbc107264b8eccf4b/Cloud/en-US/1ff47b2d980e43a6b2ce294352333708.html "This section describes the tasks of administrators in the Cloud Foundry environment of SAP BTP. Administrators ensure user authentication and assign authorization information to users and user groups.") :arrow_upper_right:
+[Security Administration: Managing Authentication and Authorization](https://help.sap.com/viewer/65de2977205c403bbc107264b8eccf4b/Cloud/en-US/1ff47b2d980e43a6b2ce294352333708.html "This section describes the tasks of administrators of SAP BTP. Administrators ensure user authentication and assign authorization information to users and user groups.") :arrow_upper_right:
 

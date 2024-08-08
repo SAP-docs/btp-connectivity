@@ -385,7 +385,7 @@ x86\_64
 </td>
 <td valign="top">
 
-2.x
+2.1.0 up to 2.17.x
 
 </td>
 </tr>
@@ -402,7 +402,7 @@ x86\_64
 </td>
 <td valign="top">
 
-2.x
+2.1.0 up to 2.16.0
 
 </td>
 </tr>
@@ -419,7 +419,7 @@ x86\_64
 </td>
 <td valign="top">
 
-2.x
+2.1.0 up to 2.12.5
 
 </td>
 </tr>
@@ -436,7 +436,7 @@ x86\_64
 </td>
 <td valign="top">
 
-2.5.1 and higher
+2.5.1 up to 2.17.x
 
 </td>
 </tr>
@@ -453,7 +453,7 @@ x86\_64
 </td>
 <td valign="top">
 
-2.5.1 and higher
+2.5.1 up to 2.17.x
 
 </td>
 </tr>
@@ -470,7 +470,7 @@ x86\_64
 </td>
 <td valign="top">
 
-2.5.1 and higher
+2.5.1 up to 2.12.5
 
 </td>
 </tr>
@@ -504,7 +504,7 @@ x86\_64
 </td>
 <td valign="top">
 
-2.8.1 and higher
+2.8.1 up to 2.16.2
 
 </td>
 </tr>
@@ -528,7 +528,7 @@ x86\_64
 <tr>
 <td valign="top">
 
-Windows Server 2019, Mac OS X 10.12 \(Sierra\), Mac OS X 10.13 \(High Sierra\), Mac OS X 10.14 \(Mojave\)
+Windows Server 2019
 
 </td>
 <td valign="top">
@@ -539,6 +539,40 @@ x86\_64
 <td valign="top">
 
 2.11.3 and higher
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+Mac OS X 10.12 \(Sierra\), Mac OS X 10.13 \(High Sierra\)
+
+</td>
+<td valign="top">
+
+x86\_64
+
+</td>
+<td valign="top">
+
+2.11.3 up to 2.16.2
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+Mac OS X 10.14 \(Mojave\)
+
+</td>
+<td valign="top">
+
+x86\_64
+
+</td>
+<td valign="top">
+
+2.11.3 up to 2.17.x
 
 </td>
 </tr>
@@ -579,7 +613,24 @@ x86\_64
 <tr>
 <td valign="top">
 
-SUSE Linux Enterprise Server 12, SUSE Linux Enterprise Server 15, Red Hat Enterprise Linux 7, Red Hat Enterprise Linux 8
+SUSE Linux Enterprise Server 12, Red Hat Enterprise Linux 7
+
+</td>
+<td valign="top">
+
+ppc64le
+
+</td>
+<td valign="top">
+
+2.13.0 up to 2.17.x
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+SUSE Linux Enterprise Server 15, Red Hat Enterprise Linux 8
 
 </td>
 <td valign="top">
@@ -596,7 +647,7 @@ ppc64le
 <tr>
 <td valign="top">
 
-Windows Server 2022, macOS 10.15 \(Catalina\)
+Windows Server 2022
 
 </td>
 <td valign="top">
@@ -607,6 +658,23 @@ x86\_64
 <td valign="top">
 
 2.14.0 and higher
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+macOS 10.15 \(Catalina\)
+
+</td>
+<td valign="top">
+
+x86\_64
+
+</td>
+<td valign="top">
+
+2.14.0 up to 2.17.x
 
 </td>
 </tr>
@@ -664,7 +732,24 @@ x86\_64
 <tr>
 <td valign="top">
 
-Oracle Linux 9, macOS 11 \(Big Sur\), macOS 12 \(Monterey\), macOS 13 \(Ventura\)
+macOS 11 \(Big Sur\)
+
+</td>
+<td valign="top">
+
+x86\_64
+
+</td>
+<td valign="top">
+
+2.16.0 up to 2.17.x
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+Oracle Linux 9
 
 </td>
 <td valign="top">
@@ -681,17 +766,34 @@ x86\_64
 <tr>
 <td valign="top">
 
-macOS 11 \(Big Sur\), macOS 12 \(Monterey\), macOS 13 \(Ventura\)
+macOS 12 \(Monterey\), macOS 13 \(Ventura\)
 
 </td>
 <td valign="top">
 
-aarch64
+x86\_64, aarch64
 
 </td>
 <td valign="top">
 
 2.16.0 and higher
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+macOS 14 \(Sonoma\)
+
+</td>
+<td valign="top">
+
+x86\_64, aarch64
+
+</td>
+<td valign="top">
+
+2.17.0 and higher
 
 </td>
 </tr>

@@ -6,6 +6,66 @@ Use the “Find Destination” API to extend your destination with a destination
 
 
 
+<a name="loiof56600ab82b748fe95b2d985ebda08c6__section_tjz_tjw_fcc"/>
+
+## Overview
+
+Destination fragments let you manage technical connection configurations \(also known as destinations\) in a more flexible and dynamic way compared to the regular usage of destinations. You can use the destination fragment to extend an existing destination with additional properties, and even to override some of the existing destination properties. This feature enables a variety of technical scenarios which solve higher-level business scenario needs.
+
+For more information, see also [Destination Fragments](destination-fragments-b085906.md).
+
+
+
+<a name="loiof56600ab82b748fe95b2d985ebda08c6__section_o1g_xjw_fcc"/>
+
+## Sample Use Cases
+
+Find below some common use cases for destination fragments:
+
+**Reuse of technical credentials for multiple users or tenants**
+
+![](images/CS_Destination_Fragments_1_2ebfe49.png)
+
+**Option 1:** Single destination, multiple destination fragments
+
+-   In a regular destination, the administrator stores default properties like technical credentials, for example, *OAuth client* or *X.509 client certificate*.
+-   In a destination fragment, the administrator stores user or tenant-specific additional properties, for example, a URL with a specific path, a query parameter, and so on.
+-   At runtime, the application resolves the final destination using the regular destination lookup and in addition specifying the user or tenant-specific destination fragment via the optional HTTP header.
+
+    For more information, see section *Use a Header to Specify the Destination Fragment* below.
+
+-   As a result, the application receives a user or tenant-specific destination, reusing the same technical credentials, this way optimising the technical connection configuration management, for example, without the need to duplicate technical credentials among multiple destinations. The latter reduces the risk of business interruptions during operations like credentials rotation.
+
+![](images/CS_Destination_Fragments_2_4e8cb5e.png)
+
+**Option 2:** Multiple destinations, a single destination fragment
+
+-   In a each tenant-specific destination, the administrator stores properties like *URL* with a specific path, query parameter, and so on.
+-   In a single destination fragment, the administrator stores default properties like technical credentials, for example, *OAuth client* or *X.509 client certificate*.
+-   At runtime, the application resolves the final destination using the regular destination lookup and, optionally, if not already configured in the destination itself, in addition specifying the user or tenant-specific destination fragment via the optional HTTP header.
+
+    For more information, see section *Use a Header to Specify the Destination Fragment* below.
+
+-   As a result, the application receives a user or tenant-specific destination, reusing the same technical credentials, this way optimising the technical connection configuration management, for example, without the need to duplicate technical credentials among multiple destinations. The latter reduces the risk of business interruptions during operations like credentials rotation.
+
+**Reuse of routing properties for multiple users or tenants**
+
+![](images/CS_Destination_Fragments_3_d7a392b.png)
+
+-   In a regular destination, the administrator stores default properties like *URL*, *Authentication*, and so on.
+-   In a destination fragment, the administrator stores user or tenant-specific additional properties, for example, a tenant-specific URL path, an X.509 client certificate, and so on.
+-   At runtime, the application resolves the final destination using the regular destination lookup and in addition specifying the user or tenant-specific destination fragment via the optional HTTP header.
+
+    For more information, see section *Use a Header to Specify the Destination Fragment* below.
+
+-   As a result, the application receives a destination, constructed by re-using the base destination properties but with a user or tenant-specific URL path and technical credentials, this way optimising the technical connection configuration management, for example, without the need to duplicate the base routing properties among multiple destinations. The latter reduces the risk of business interruptions during operations like the change of common or base destination properties.
+
+
+
+<a name="loiof56600ab82b748fe95b2d985ebda08c6__section_tvz_njw_fcc"/>
+
+## How it Works
+
 This extension involves merging the JSON object of the destination properties, together with the JSON object of the fragment properties.
 
 > ### Note:  

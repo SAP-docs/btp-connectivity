@@ -34,12 +34,12 @@ The *connectivity-proxy* Kyma module installs the needed components to establish
 
 <a name="loio7501fbc9aebd4e3180eddec977ca288d__section_sq2_5yg_q1c"/>
 
-## Enable the Connectivity Proxy module
+## Add the Connectivity Proxy module
 
-The connectivity proxy is a standard Kyma module. You can enable the module as described in [Add and Delete a Kyma Module](https://help.sap.com/docs/btp/sap-business-technology-platform/enable-and-disable-kyma-module#loio1b548e9ad4744b978b8b595288b0cb5c).
+The connectivity proxy is a standard Kyma module. You can add the module as described in [Add and Delete a Kyma Module](https://help.sap.com/docs/btp/sap-business-technology-platform/enable-and-disable-kyma-module#loio1b548e9ad4744b978b8b595288b0cb5c).
 
 > ### Note:  
-> The modules `api-gateway`, `btp-operator` and `istio` are required dependencies. They must be enabled to make the connectivity proxy work properly.
+> The modules `api-gateway`, `btp-operator` and `istio` are required dependencies. They must be added to make the connectivity proxy work properly.
 
 ![](images/CS_Kyma_OP_-_CP_Module_Enable_1_539cf37.png)
 
@@ -63,7 +63,7 @@ For more information, see [Configuration Guide](configuration-guide-eaa8204.md).
 
 ## Result
 
-The module will be enabled and will result in an installation of the [Connectivity Proxy for Kubernetes](connectivity-proxy-for-kubernetes-e661713.md) and its supporting workloads.
+The module will be added and will result in an installation of the [Connectivity Proxy for Kubernetes](connectivity-proxy-for-kubernetes-e661713.md) and its supporting workloads.
 
 As part of this installation, a `ServiceInstance` and a `ServiceBinding` resource will be created in the cluster. These are *BTP Operator* resources which result in the creation of a *Connectivity* service instance with service plan *connectivity\_proxy*, and in a service binding in your subaccount. This is needed to pair the connectivity proxy with the SAP BTP Connectivity service.
 

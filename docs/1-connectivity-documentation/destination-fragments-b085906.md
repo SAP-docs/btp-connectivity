@@ -4,7 +4,7 @@
 
 Destination fragments are objects used to override and extend destination properties through the Destination service REST API.
 
-You can use destination fragments to override and/or extend destination properties as result of the “Find a destination” REST API request. Destination fragments are key-value based objects which contain a name and additional configurable properties.
+You can use destination fragments to override and/or extend destination properties as result of the “Find a destination” REST API request. Destination fragments are key-value based objects which contain a name for identification and additional configurable properties.
 
 
 <table>
@@ -28,14 +28,17 @@ FragmentName
 </td>
 <td valign="top">
 
-Name of the fragment. Must be unique for the level on which it is stored/maintained.
+Name of the destination fragment. Must be unique for the level on which it is stored/maintained.
 
 </td>
 </tr>
 </table>
 
 > ### Restriction:  
-> The fragment must not contain the properties “Name” or “Type”.
+> The destination fragment must not contain the properties `Name` or `Type`.
+
+> ### Caution:  
+> Only one destination fragment can be configured in a destination.
 
 Managing destination fragments for your application is supported only by the Destination service REST API. This API is documented in the [SAP Business Accelerator Hub](https://api.sap.com/package/scpconnectivity/rest).
 
