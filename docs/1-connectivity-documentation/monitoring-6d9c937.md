@@ -37,16 +37,8 @@ The cockpit includes a *Connectivity* section, where users can check the status 
 
 Access to this view is granted to:
 
--   Neo envirnoment: Users with a role containing the permission `readSCCTunnels`, for example, the predefined role `Cloud Connector Admin`.
--   Cloud Foundry environment, feature set A: Users with a Cloud Foundry org role containing the permission `readSCCTunnels`, for example, the role `Org Manager`.
-
-    > ### Note:  
-    > As a prerequisite, a Cloud Foundry org must be available.
-
--   Cloud Foundry environment, feature set B: Users with a role containing the permission `readSCCTunnels`, for example, the predefined role `Cloud Connector Administrator`.
-
-> ### Note:  
-> For more information on feature sets in the Cloud Foundry environment, see [Cloud Management Tools — Feature Set Overview](https://help.sap.com/viewer/65de2977205c403bbc107264b8eccf4b/Cloud/en-US/caf4e4e23aef4666ad8f125af393dfb2.html "Cloud management tools represent the group of technologies designed for managing SAP BTP.") :arrow_upper_right:.
+-   Neo environment: Users with a role containing the permission `readSCCTunnels`, for example, the predefined role `Cloud Connector Admin`.
+-   Cloud Foundry environment: Users with a role containing the permission `readSCCTunnels`, for example, the predefined role `Cloud Connector Administrator`.
 
 ![](images/SCC_Monitoring_-_Cockpit_570a863.png)
 

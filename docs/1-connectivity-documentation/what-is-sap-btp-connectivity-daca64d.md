@@ -258,7 +258,7 @@ One of these roles:
 -   *Space Manager*
 -   *Space Developer* 
 
-See [User and Member Management](https://help.sap.com/viewer/65de2977205c403bbc107264b8eccf4b/Cloud/en-US/cc1c676b43904066abb2a4838cbd0c37.html "On SAP BTP, member management takes place at all levels from global account to environment, while user management is relevant for business applications.") :arrow_upper_right:.
+See [User and Member Management](https://help.sap.com/viewer/65de2977205c403bbc107264b8eccf4b/Cloud/en-US/cc1c676b43904066abb2a4838cbd0c37.html "On SAP BTP, user management takes place at all levels from global account to environment.") :arrow_upper_right:.
 
 </td>
 </tr>
@@ -485,7 +485,7 @@ One of these roles:
 -   *Space Manager*
 -   *Space Developer* 
 
-See [User and Member Management](https://help.sap.com/viewer/65de2977205c403bbc107264b8eccf4b/Cloud/en-US/cc1c676b43904066abb2a4838cbd0c37.html "On SAP BTP, member management takes place at all levels from global account to environment, while user management is relevant for business applications.") :arrow_upper_right:.
+See [User and Member Management](https://help.sap.com/viewer/65de2977205c403bbc107264b8eccf4b/Cloud/en-US/cc1c676b43904066abb2a4838cbd0c37.html "On SAP BTP, user management takes place at all levels from global account to environment.") :arrow_upper_right:.
 
 </td>
 </tr>
@@ -510,7 +510,7 @@ One of these roles:
 -   *Space Manager*
 -   *Space Developer* 
 
-See [User and Member Management](https://help.sap.com/viewer/65de2977205c403bbc107264b8eccf4b/Cloud/en-US/cc1c676b43904066abb2a4838cbd0c37.html "On SAP BTP, member management takes place at all levels from global account to environment, while user management is relevant for business applications.") :arrow_upper_right:.
+See [User and Member Management](https://help.sap.com/viewer/65de2977205c403bbc107264b8eccf4b/Cloud/en-US/cc1c676b43904066abb2a4838cbd0c37.html "On SAP BTP, user management takes place at all levels from global account to environment.") :arrow_upper_right:.
 
 </td>
 </tr>
@@ -535,7 +535,7 @@ One of these roles:
 -   *Space Manager*
 -   *Space Developer* 
 
-See [User and Member Management](https://help.sap.com/viewer/65de2977205c403bbc107264b8eccf4b/Cloud/en-US/cc1c676b43904066abb2a4838cbd0c37.html "On SAP BTP, member management takes place at all levels from global account to environment, while user management is relevant for business applications.") :arrow_upper_right:.
+See [User and Member Management](https://help.sap.com/viewer/65de2977205c403bbc107264b8eccf4b/Cloud/en-US/cc1c676b43904066abb2a4838cbd0c37.html "On SAP BTP, user management takes place at all levels from global account to environment.") :arrow_upper_right:.
 
 </td>
 </tr>
@@ -560,7 +560,7 @@ One of these roles:
 -   *Space Manager*
 -   *Space Developer* 
 
-See [User and Member Management](https://help.sap.com/viewer/65de2977205c403bbc107264b8eccf4b/Cloud/en-US/cc1c676b43904066abb2a4838cbd0c37.html "On SAP BTP, member management takes place at all levels from global account to environment, while user management is relevant for business applications.") :arrow_upper_right:.
+See [User and Member Management](https://help.sap.com/viewer/65de2977205c403bbc107264b8eccf4b/Cloud/en-US/cc1c676b43904066abb2a4838cbd0c37.html "On SAP BTP, user management takes place at all levels from global account to environment.") :arrow_upper_right:.
 
 </td>
 </tr>

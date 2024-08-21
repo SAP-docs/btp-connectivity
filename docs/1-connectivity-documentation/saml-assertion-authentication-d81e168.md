@@ -349,6 +349,30 @@ If set to true, any additional attributes taken from the OAuth server's user inf
 
 </td>
 </tr>
+<tr>
+<td valign="top">
+
+`includeSigningCertificateInSAMLAssertion`
+
+</td>
+<td valign="top">
+
+If set to true, the public part of the signing certificate, used for signing the SAML assertion, will be included in the XML structure of the assertion. Some assertion recipients may require this to accept the assertion.
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+`skipUserUuidInSAMLAttributes`
+
+</td>
+<td valign="top">
+
+If set to true, any SAML assertion attribute with name 'user\_uuid' will not be added to the resulting SAML assertion XML, even if such was found in the JWT, specifying the user's identity.
+
+</td>
+</tr>
 </table>
 
 

@@ -32,11 +32,11 @@ Using an LDAP server for user management allows seamless integration of the Clou
 
 The configuration parameters are common for various products and mostly well known.
 
-The apache tomcat project, which is used as underlying technology by the Cloud Connector, provides an excellent tutorial: [tomcat.apache.org/tomcat-8.5-doc/realm-howto.html](https://tomcat.apache.org/tomcat-8.5-doc/realm-howto.html). It explains the LDAP configuration parameters and considers various LDAP directory setups, including their specific configuration.
+The Apache Tomcat project, which is used as underlying technology by the Cloud Connector, provides an excellent tutorial: [tomcat.apache.org/tomcat-9.0-doc/realm-howto.html](https://tomcat.apache.org/tomcat-9.0-doc/realm-howto.html). It explains the LDAP configuration parameters and considers various LDAP directory setups, including their specific configuration.
 
 However, some aspects may raise questions. For this reason, we show you how to configure LDAP and verify LDAP configuration, providing useful background information in this topic.
 
-A basic understanding of LDAP and tomcat's how-to guide is a prerequisite. As help tool, we are using the *ldapsearch* utility. You can use any LDAP client for this procedure.
+A basic understanding of LDAP and Tomcat's how-to guide is a prerequisite. As help tool, we are using the `ldapsearch` utility. You can use any LDAP client for this procedure.
 
 Back to [Top](ldap-configuration-best-practices-703a99d.md#loio703a99d1b00d495298d6fd2cf7492e10__top)
 
@@ -56,13 +56,13 @@ In a first step, you must establish a connection to the LDAP server. Like an HTT
 > ldapsearch -H ldap://<ldaphost>:<port>
 > ```
 
-The return value is ***\-1*** if the address is not reachable. Before you go ahead, you need to know the address of your LDAP server. As soon as the *ldapsearch* utility returns a value other than ***\-1***, the address of the LDAP server is correct. More precisely, it indicates only that there is a server listening on this port, which is supposed to be the LDAP server.
+The return value is ***\-1*** if the address is not reachable. Before you go ahead, you need to know the address of your LDAP server. As soon as the `ldapsearch` utility returns a value other than ***\-1***, the address of the LDAP server is correct. More precisely, it indicates only that there is a server listening on this port, which is supposed to be the LDAP server.
 
 Once the address is known, you can test the connection in the Cloud Connector. Enter the address and add a dummy configuration, for example, `x="x"`, to outwit the check. Then choose the test icon in the upper right corner. For a valid address, the LDAP configuration test in the Cloud Connector reports the following:
 
 ![](images/SCC_LDAP_Best_Practices_-_Connect_2ce58f1.png)
 
-The message: *Connecting to URL ldap://<ldaphost\>:<port\>; Exception performing authentication* indicates that your LDAP server requires user and password for queries.
+The message: *Connecting to URL ldap://<ldaphost\>:<port\>; Exception performing authentication* indicates that your LDAP server requires connection user and password for queries.
 
 Back to [Top](ldap-configuration-best-practices-703a99d.md#loio703a99d1b00d495298d6fd2cf7492e10__top)
 
@@ -72,11 +72,11 @@ Back to [Top](ldap-configuration-best-practices-703a99d.md#loio703a99d1b00d49529
 
 ## TLS Issues
 
-LDAP connection over TLS will run into TLS errors if the LDAP server uses an "untrusted" certificate. This could be a self-signed certificate or a certificate signed by a generally untrusted authority.
+An LDAP connection over TLS will run into TLS errors if the LDAP server uses an "untrusted" certificate. This could be a self-signed certificate or a certificate signed by a generally untrusted authority.
 
-If you cannot use a trusted certificate on your LDAP server, you must import the public part of the issuer certificate to the JDK's trust storage. See the JDK documentation how to do that.
+If you cannot use a generally trusted certificate on your LDAP server, you must import the public part of the specific issuer certificate to the JDK's trust storage. See the JDK documentation how to do that.
 
-Usually, the trust storage location is *cacerts* inside the java directory \(`jre/lib/security/cacerts`\). You can use the *keytool* utility for import.
+Usually, the trust storage location is *cacerts* inside the java directory \(`jre/lib/security/cacerts`\). You can use the `keytool` utility for import.
 
 > ### Sample Code:  
 > ```
@@ -95,16 +95,16 @@ Back to [Top](ldap-configuration-best-practices-703a99d.md#loio703a99d1b00d49529
 
 If the address of the LDAP server is correct and the Cloud Connector can establish a connection, you can proceed with the next step: the authentication by the LDAP directory.
 
-The LDAP server may require authentication or not \(anonymous connection\), before a query can be executed. Authentication is done by user and password, specified by the `connectionName` and `connectionPassword` properties.
+The LDAP server may require authentication or not \(anonymous connection\), before a query can be executed. Authentication is done by user and password, specified by the `Connection User Name` and `Connection Password` properties.
 
 Anonymous access is sufficient in most cases and provides the same level of security. However, you have to deal with the existing setup on the LDAP server.
 
 > ### Note:  
-> The LDAP user is not the same user that is later used to logon on to the Cloud Connector. It is a specific user, which has permissions to query the LDAP directory. It can be stored in an LDAP directory separated from other users. We recommend that you specify the fully-qualified user name like `"uid=admin,ou=system"`.
+> The `Connection User` is not the same user that is later used to logon on to the Cloud Connector. It is a specific user, which has permissions to query the LDAP directory. It can be stored in an LDAP directory separated from other users. We recommend that you specify the fully-qualified user name like `"uid=admin,ou=system"` for it.
+> 
+> Alternatively, *MS Active Directory* LDAP servers also allow the format *user@domain*, for example, *ldapUser@company.local*.
 
-Additionally, *MS Active Directory* allows authentication for *user@domain*, for example, *ldapUser@company.local*.
-
-To verify the values, let's first check the authentication with *ldapsearch*:
+To verify the values, let's first check the authentication with `ldapsearch`:
 
 > ### Sample Code:  
 > ```
@@ -114,7 +114,7 @@ To verify the values, let's first check the authentication with *ldapsearch*:
 > ### Note:  
 > We added a non-existing user base `-b "x=x"` to prevent long output.
 
-The only thing to check here is, if authentication is ok. If it is not, LDAP returns *INVALID\_CREDENTIALS: Bind failed*:
+The only thing to check here is, if authentication is ok. If it is not, LDAP returns `INVALID_CREDENTIALS: Bind failed`:
 
 > ### Sample Code:  
 > ```
@@ -127,7 +127,7 @@ You can perform the same test in the Cloud Connector UI:
 
 ![](images/SCC_LDAP_Best_Practices_-_Authentication_1_37ee4d9.png)
 
-Choose the test icon in the upper right corner, and enter something as name and password:
+Choose the test icon in the upper right corner, and enter something as `User Name` and `Password`:
 
 ![](images/SCC_LDAP_Best_Practices_-_Authentication_2_ea873a1.png)
 
@@ -145,7 +145,7 @@ Back to [Top](ldap-configuration-best-practices-703a99d.md#loio703a99d1b00d49529
 
 Once authentication is checked, set the root node for users. User nodes are nodes containing user details. They are located somewhere in the LDAP tree. Sometimes they are all listed under one branch \(parent node\), but they may also be distributed across several branches. In any case, start with one branch that contains at least one user node.
 
-List the user nodes with *ldapsearch*:
+List the user nodes with `ldapsearch`:
 
 > ### Sample Code:  
 > ```
@@ -185,7 +185,7 @@ The corresponding LDAP selection is:
 > ldapsearch -D "uid=admin,ou=system" -w <password> -H ldap://<ldaphost>:<port> -b "ou=users,dc=scc" "(&(uid=Thor))"
 > ```
 
-Now, we take a closer look now at the response. The user *Thor* was found, its password was successfully validated by LDAP server, but there are no specific roles selected:
+Now, we take a closer look now at the response. The user *Thor* was found, its password was successfully validated by the LDAP server, but there are no specific roles selected:
 
 ![](images/SCC_LDAP_Best_Practices_-_User_Selection_1_b29deff.png)
 
@@ -193,14 +193,14 @@ Let's assume that the users are not located under the same branch in the LDAP tr
 
 ![](images/SCC_LDAP_Best_Practices_-_User_Selection_2_cd6b950.png)
 
-Taking a look at the relative name returned by search, it is *uid=Thor,ou=users* now.
+Taking a look at the relative name returned by search, it is `uid=Thor,ou=users` now.
 
-Besides `uid`, you are free to use every other attribute of the user node. For example, for *Active Directory*, the preferred attribute is often `sAMAccountName`, the corresponding configuration is`userSearch="(sAMAccountName={0})"`.
+Besides `uid`, you are free to use every other attribute of the user node. For example, for *Active Directory*, the preferred attribute is often `sAMAccountName`, the corresponding `Search Rules` configuration is `userSearch="(sAMAccountName={0})"`.
 
 > ### Note:  
-> For *Active Directory*, it might be necessary to add `adCompat="true"` to the configuration.
+> For *Active Directory*, it might be necessary to add `adCompat="true"` to the `Search Rules` configuration.
 
-As mentioned above, you can use every attribute as user ID as long as it is *unique*. To verify this, check the query result for the respective attribute with *ldapsearch*. If it contains more than one node, the test in the Cloud Connector would report *User name \[<userid\>\] has multiple entries, No user found, Authentication for user <userid\> failed*. In our test, the CN \(common name\) attribute is not unique and the following search returns more than one entry.
+As mentioned above, you can use every attribute as user ID as long as it is *unique*. To verify this, check the query result for the respective attribute with `ldapsearch`. If it contains more than one node, the test in the Cloud Connector would report *User name \[<userid\>\] has multiple entries, No user found, Authentication for user <userid\> failed*. In our test, the CN \(common name\) attribute is not unique and the following search returns more than one entry.
 
 > ### Sample Code:  
 > ```
@@ -208,7 +208,7 @@ As mentioned above, you can use every attribute as user ID as long as it is *uni
 > ```
 
 > ### Note:  
-> If `connectionUser` is located under `userBase` and its ID can be selected by the same `userSearch`, you can use just the user ID in the `connectionUser` field instead of a fully-qualified DN.
+> If `connectionUser` is located under `userBase` and its ID can be selected by the same `userSearch`, you can just enter the user ID in the `Connection User Name` field instead of its fully-qualified DN.
 
 Back to [Top](ldap-configuration-best-practices-703a99d.md#loio703a99d1b00d495298d6fd2cf7492e10__top)
 
@@ -220,7 +220,7 @@ Back to [Top](ldap-configuration-best-practices-703a99d.md#loio703a99d1b00d49529
 
 At this point, the configuration let's you establish a connection to the LDAP server and authenticate a user.
 
-In the next step, we configure authorization, that is, the roles assigned to a user.
+In the next step, we configure authorizations, that is, the roles assigned to a user.
 
 A role is a *group* in LDAP terms. The Cloud Connector provides the following roles: `sccadmin`, `sccsubadmin`, `sccsupport`, `sccmonitoring` and `sccdisplay`.
 
@@ -232,7 +232,7 @@ Like users, also groups are represented as nodes in an LDAP tree branch. The bra
 
 The `roleName` defines, which of its attributes is taken as role name. Usually, you wouldn't use the fully-qualified distinguished name as role name.
 
-Check if *ldapsearch* can find entries for the role:
+Check if `ldapsearch` can find entries for the role:
 
 > ### Sample Code:  
 > ```
@@ -256,19 +256,19 @@ LDAP provides two ways to define the relationship between a user and its groups:
 1.  The group node contains one or more attributes `uniqueMember`, or
 2.  Uses one or more attributes `memberOf` in a user node.
 
--   **Case 1**: Extend the current configuration by *roleSearch="\(uniqueMember=\{0\}\)"*.
+-   **Case 1**: Extend the current configuration by `roleSearch="(uniqueMember={0})"`.
 
-    The Cloud Connector's test reports direct roles in this case. Roles selected by *roleSearch* are LDAP entries. Using configuration parameter *roleName*, you specify the LDAP entry attribute which will be the role name.
+    The Cloud Connector's test reports direct roles in this case. Roles selected by `roleSearch` are LDAP entries. Using configuration parameter `roleName`, you specify the LDAP entry attribute which will be the role name.
 
-    In our example, we are using *roleName="cn"* with the following result in the test: *"Found direct role cn=sccadmin,ou=groups,dc=scc -\> sccadmin"*. The selected value *sccadmin* is the value of the attribute *cn* located in the original LDAP entry.
+    In our example, we are using `roleName="cn"` with the following result in the test: *"Found direct role cn=sccadmin,ou=groups,dc=scc -\> sccadmin"*. The selected value `sccadmin` is the value of the attribute `cn` located in the original LDAP entry.
 
 
--   **Case 2**: Extend the current configuration by *userRoleName="memberOf"*.
+-   **Case 2**: Extend the current configuration by `userRoleName="memberOf"`.
 
-    This is reported by the Cloud Connector's test as internal role. If no groups are defined by *memberOf*, the internal group list is empty.
+    This is reported by the Cloud Connector's test as internal role. If no groups are defined by `memberOf`, the internal group list is empty.
 
     > ### Remember:  
-    > The roles specified by an attribute of a user entry are used as is, that is, the configuration parameter *roleName* is irrelevant in this case, and the role name is just set to the attribute value.
+    > The roles specified by an attribute of a user entry are used as is, that is, the configuration parameter `roleName` is irrelevant in this case, and the role name is just set to the attribute value.
 
 
 Below, the test report selected neither internal nor direct roles:
@@ -309,13 +309,13 @@ There are some more configuration parameters available that are out of scope her
 
 For special purposes, you may have to add to your configuration:
 
--   `adCompat="true"`, if your LDAP server uses *MS Active Directory* and you encounter strange errors in the test report.
--   `forceDnHexEscape="true"`, if your LDAP server uses *MS Active Directory* and there are non-standard characters in the DN.
+-   `adCompat="true"`, if you are using an *MS Active Directory* LDAP server and you encounter strange errors in the test report.
+-   `forceDnHexEscape="true"`, if you are using an *MS Active Directory* and there are non-standard characters in the DN.
 -   `connectionTimeout="x"`, if you want to change the default of 5s.
 
 **General Recommendations**
 
--   Don't use the `userPattern` parameter. It invalidates SSL/TLS-based authentication and high availability setup would fail.
+-   Don't use the `userPattern` configuration parameter. It invalidates SSL/TLS-based authentication and high availability setup would fail.
 -   If the user ID has **non-standard characters**, escape them with `\nn`.
 -   For **back-slash**, always use `\\`.
 

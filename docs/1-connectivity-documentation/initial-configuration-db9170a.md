@@ -91,7 +91,7 @@ After installing and starting the Cloud Connector, log on to the administration 
     
     [Default Role Collections \[Feature Set B\]](what-is-sap-btp-connectivity-daca64d.md#loiodaca64dacc6148fcb5c70ed86082ef91__table_default_role_collections_setB) 
 
-    [Role Collections and Roles in Global Accounts, Directories, and Subaccounts \[Feature Set B\]](https://help.sap.com/viewer/65de2977205c403bbc107264b8eccf4b/Cloud/en-US/0039cf082d3d43eba9200fe15647922a.html "In the cloud management tools feature set B, SAP BTP provides a set of role collections to set up administrator access to your global account and subaccounts.") :arrow_upper_right:
+    [Role Collections and Roles in Global Accounts, Directories, and Subaccounts](https://help.sap.com/viewer/65de2977205c403bbc107264b8eccf4b/Cloud/en-US/0039cf082d3d43eba9200fe15647922a.html "SAP BTP provides a set of role collections to set up administrator access to your global account and subaccounts.") :arrow_upper_right:
     
     </td>
     </tr>
@@ -197,7 +197,9 @@ Press *Add Subaccount* to define a subaccount. This will open a dialog or wizard
 1.  \(Optional\) Enter an HTTPS proxy. When in doubt, consult your network administrator to check if a proxy is required.
 
     > ### Note:  
-    > During the configuration process, the Cloud Connector sends HEAD requests to track the status of the proxy in the Cloud Connector UI. As a prerequisite, the proxy must be confgured to allow those HEAD requests. Otherwise, it closes the connection and you get the message *Proxy is not operational \(status code 503\)*.
+    > Up to Cloud Connector 2.17.0, the Cloud Connector sends HEAD requests during the configuration process to track the status of the proxy in the Cloud Connector UI. As a prerequisite, the proxy must be configured to allow those HEAD requests. Otherwise, it closes the connection and you get the message *Proxy is not operational \(status code 503\)*.
+    > 
+    > As of Cloud Connector 2.17.1, HEAD requests will only be sent to the entered proxy in error situations, to create more meaningful error messages identifying the root cause of the error, for example, if the entered proxy is considered as unknown host, or if it does not run on the specified port.
 
     ![](images/SCC_InitialConfig_-_HTTPS_Proxy_6164393.png)
 
