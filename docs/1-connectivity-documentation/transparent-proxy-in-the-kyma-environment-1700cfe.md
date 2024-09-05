@@ -4,7 +4,7 @@
 
 Use the transparent proxy in the Kyma environment.
 
-This documentation serves as a reference for the transparent proxy installation in Kyma environment and the respective [Transparent Proxy Operator](transparent-proxy-operator-2d826aa.md), integrated with [Kyma's Lifecycle Manager](https://github.com/kyma-project/lifecycle-manager).
+This documentation serves as a reference for the transparent proxy installation in Kyma environment and the respective [Transparent Proxy Operator](transparent-proxy-operator-2d826aa.md).
 
 
 

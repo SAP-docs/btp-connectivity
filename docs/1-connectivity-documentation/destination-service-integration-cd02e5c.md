@@ -20,7 +20,7 @@ The Destination service lets you declaratively model a technical connection as a
             > kubectl create secret generic <secret-name> --from-literal=<secret-key>=<destination-service-instance-key> -n <namespace>
             > ```
 
-        -   Reference the Kubernetes secret by providing \`config.integration.destinationService.instances\[n\].serviceCredentials.secretName\`. The secret data format can be either single-key or multi-key \(e.g., secrets created by the BTP Operator for services and bindings inside a Kubernetes Cluster\).
+        -   Reference the Kubernetes secret by providing \`config.integration.destinationService.instances\[n\].serviceCredentials.secretName\`. The secret data format can be either single-key or multi-key \(e.g., secrets created by the BTP Operator for services and bindings inside a Kubernetes cluster\).
             -   If the secret data key format is single-key, you should also provide the value of that key as \`config.integration.destinationService.instances\[n\].serviceCredentials.secretKey\`.
 
             -   If the secret is not in the same namespace as the transparent proxy, also provide \`config.integration.destinationService.instances\[n\].serviceCredentials.secretNamespace\`.
