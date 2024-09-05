@@ -1194,7 +1194,7 @@ List of:
 ## Example
 
 ```
-curl -i -k -H "Accept: application/json" -u <user>:<password> -X GET https://<host>:<port>/api/v1/configuration/connector/ui/cipherSuites
+curl -i -k -H "Accept: application/json" -u <user>:<password> -X GET https://<host>:<port>/api/v1/configuration/connector/ui/CipherSuites
 
 ```
 

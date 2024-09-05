@@ -293,7 +293,7 @@ Oracle JDK 64-bit
 </td>
 </tr>
 <tr>
-<td valign="top">
+<td valign="top" rowspan="3">
 
 [SAP Machine](https://sap.github.io/SapMachine/) 64-bit
 
@@ -312,11 +312,6 @@ Oracle JDK 64-bit
 <tr>
 <td valign="top">
 
-[SAP Machine](https://sap.github.io/SapMachine/) 64-bit
-
-</td>
-<td valign="top">
-
 17
 
 </td>
@@ -327,11 +322,6 @@ Oracle JDK 64-bit
 </td>
 </tr>
 <tr>
-<td valign="top">
-
-[SAP Machine](https://sap.github.io/SapMachine/) 64-bit
-
-</td>
 <td valign="top">
 
 21

@@ -8,8 +8,8 @@ The transparent proxy works in two tenant modes: *dedicated* and *shared*. You c
 
 For more information, see [Configuration Guide](configuration-guide-2a22cd7.md).
 
--   In the *dedicated* tenant mode, the transparent proxy can expose destinations only from the subaccount passed in the service key of the Destinations service. Requests to the transparent proxy remain unchanged.
--   In the *shared* tenant mode, the transparent proxy can expose destinations from any subscribed tenant to the subaccount passed in the service key of the Destinations service.
+-   In the *dedicated* tenant mode, the transparent proxy exposes destinations only from the linked Destination service instance and its subaccount. Requests to the transparent proxy remain unchanged.
+-   In the *shared* tenant mode, the transparent proxy exposes destinations from any subscribed tenant.
 
 
 
@@ -27,13 +27,13 @@ A tenant is successfully onboarded when it is visible in the destination custom 
 
 ## TCP
 
-Tenants are configured in the destination custom resource \(CR\) as annotation with key "transparent-proxy.connectivity.api.sap/tenant-subdomains" and value <all tenant subdomains\> in form of a json array:
+Tenants are configured in the destination custom resource \(CR\) as an annotation with the key `transparent-proxy.connectivity.api.sap/tenant-subdomains`. The value should be a JSON array of tenant subdomains:
 
 ```
 "transparent-proxy.connectivity.api.sap/tenant-subdomains": '["tenantSubdomain1", "tenantSubdomain2", ...]'
 ```
 
-For each tenant, a new instance of TCP proxy is created which is assigned only to that specific tenant and destination. Also, a separate service is created with a prefix containing the tenant subdomain \(for example, if we have tenant subdomain "tenant1" and destination CR "dest", the service name will be "tenant1-dest".
+The transparent proxy will create a [Kubernetes Service](https://kubernetes.io/docs/concepts/services-networking/service/) for each of the tenants described in the `transparent-proxy.connectivity.api.sap/tenant-subdomains` annotation. The names of the Kubernetes services will be: `<destination-cr-name>-<tenant-subdomain>`.
 
 Each tenant is successfully onboarded when it is visible in a Destination CR status.
 

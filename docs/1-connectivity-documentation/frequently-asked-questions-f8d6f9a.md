@@ -63,7 +63,7 @@ The Cloud Connector can connect an SAP Business Suite system version 4.6C and ne
 
 
 </td>
-<td valign="top" colspan="5">
+<td valign="top" colspan="6">
 
 Supported Java Version
 
@@ -105,9 +105,14 @@ Supported Java Version
 17
 
 </td>
+<td valign="top">
+
+21
+
+</td>
 </tr>
 <tr>
-<td valign="top" rowspan="6">
+<td valign="top" rowspan="7">
 
 Cloud Connector Version
 
@@ -142,33 +147,6 @@ No
 No
 
 </td>
-</tr>
-<tr>
-<td valign="top">
-
-= 2.7.2
-
-</td>
-<td valign="top">
-
-Yes
-
-</td>
-<td valign="top">
-
-Yes
-
-</td>
-<td valign="top">
-
-Yes
-
-</td>
-<td valign="top">
-
-No
-
-</td>
 <td valign="top">
 
 No
@@ -178,7 +156,44 @@ No
 <tr>
 <td valign="top">
 
-\>= 2.8
+\>= 2.7.2
+
+</td>
+<td valign="top">
+
+Yes
+
+</td>
+<td valign="top">
+
+Yes
+
+</td>
+<td valign="top">
+
+Yes
+
+</td>
+<td valign="top">
+
+No
+
+</td>
+<td valign="top">
+
+No
+
+</td>
+<td valign="top">
+
+No
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+\>= 2.8.0
 
 </td>
 <td valign="top">
@@ -194,6 +209,11 @@ Yes
 <td valign="top">
 
 Yes
+
+</td>
+<td valign="top">
+
+No
 
 </td>
 <td valign="top">
@@ -238,6 +258,11 @@ No
 No
 
 </td>
+<td valign="top">
+
+No
+
+</td>
 </tr>
 <tr>
 <td valign="top">
@@ -270,6 +295,11 @@ Yes
 No
 
 </td>
+<td valign="top">
+
+No
+
+</td>
 </tr>
 <tr>
 <td valign="top">
@@ -285,6 +315,48 @@ No
 <td valign="top">
 
 No
+
+</td>
+<td valign="top">
+
+Yes
+
+</td>
+<td valign="top">
+
+Yes
+
+</td>
+<td valign="top">
+
+Yes
+
+</td>
+<td valign="top">
+
+No
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+\>= 2.17.0
+
+</td>
+<td valign="top">
+
+No
+
+</td>
+<td valign="top">
+
+No
+
+</td>
+<td valign="top">
+
+Yes
 
 </td>
 <td valign="top">

@@ -4,52 +4,27 @@
 
 Use the transparent proxy in the Kyma environment.
 
-This documentation serves as a reference for adding the transparent proxy in the Kyma environment and the respective transparent proxy operator, integrated with [Kyma's Lifecycle Manager](https://github.com/kyma-project/lifecycle-manager).
-
-The transparent proxy operator continuously observes the state of the system and the desired state defined by the transparent proxy custom resource. It then makes necessary adjustments to the system \(like creating, updating, or deleting resources\) to achieve the desired state, and regularly monitors the health of the transparent proxy, ensuring it runs optimally according to the configurations defined in the custom resource.
+This documentation serves as a reference for the transparent proxy installation in Kyma environment and the respective [Transparent Proxy Operator](transparent-proxy-operator-2d826aa.md), integrated with [Kyma's Lifecycle Manager](https://github.com/kyma-project/lifecycle-manager).
 
 
 
 <a name="loio1700cfe070704d2e80aa76de1033a6c4__section_tpm_wxc_zxb"/>
 
-## Add the Module
+## Add the Transparent Proxy Module
 
-To add the module, refer to [Add and Delete a Kyma module](https://help.sap.com/docs/btp/sap-business-technology-platform/enable-and-disable-kyma-module#loio1b548e9ad4744b978b8b595288b0cb5c).
+To add the transparent proxy module, refer to [Add and Delete a Kyma Module](https://help.sap.com/docs/btp/sap-business-technology-platform/enable-and-disable-kyma-module?version=Cloud#loio1b548e9ad4744b978b8b595288b0cb5c).
 
-With the enablement of the transparent proxy module, a default transparent proxy custom resource is created in the **sap-transp-proxy-system** namespace.
+Navigate to the module management form and opt-in for the transparent proxy module.
+
+![](images/CS_TP_Kyma_185bb6f.png)
 
 > ### Caution:  
 > The **sap-transp-proxy-system** namespace is intended for the monitoring of the transparent proxy resources, do not use it for deploying workloads there.
 
-The default transparent proxy custom resource is defined like this:
+> ### Caution:  
+> All resources created in **sap-transp-proxy-system** will be deleted \(and also the namespace\) with the deletion of the transparent proxy itself - this includes the default Destination service instance and the transparent proxy module created initially.
 
-```
-apiVersion: operator.kyma-project.io/v1alpha1
-kind: TransparentProxy
-metadata:
-  name: transparent-proxy
-  namespace: sap-transp-proxy-system
-spec:
-  config:
-    security:
-      communication:
-        internal:
-          encryptionEnabled: true
-    integration:
-      serviceMesh:
-        istio:
-          istio-injection: enabled
-```
-
-You can update it to meet your requirements. To do this, either use *kubectl edit* or create a YAML file containing the transparent proxy custom resource and edit the spec section with values according to the [Configuration Guide](configuration-guide-2a22cd7.md).
-
-> ### Sample Code:  
-> ```
-> kubectl apply -f <fileName> -n sap-transp-proxy-system
-> 
-> ```
-
-If you want to create a second instance of the transparent proxy, you can create a transparent proxy custom resource in another namespace.
+Once the module is successfully added, a transparent proxy custom resource gets created in the "sap-transp-proxy-system" namespace. You can modify this resource to suit your requirements. For more information, check transparent proxy custom resource section here: [Installation with Operator](installation-with-operator-8f5dd89.md).
 
 
 
@@ -57,27 +32,23 @@ If you want to create a second instance of the transparent proxy, you can create
 
 ## Dependencies
 
-**Service Mesh Configuration**
+The optional dependencies automate the installation and configuration of the transparent proxy:
 
-The transparent proxy supports integration with the Istio service mesh \(for more information, see [Configuration Guide](configuration-guide-2a22cd7.md)\).
+-   With the BTP Operator in place, the transparent proxy will create a Destination service instance in your Kyma cluster and link itself to it.
 
-If the transparent proxy is configured to integrate in the *Istio mesh* and Istio is present on the cluster, the integration with the *certificate manager* becomes optional, otherwise it is mandatory.
+-   Istio will encrypt the traffic between the workloads, making your Kyma instance more secure. The communication with the transparent proxy will be secure, as well as the communication from the transparent proxy to the connectivity proxy, if a connectivity proxy is present in the Kyma instance.
 
-If `encryptionEnabled` is set to "false", but there is integration in the *Istio service mesh*, the transparent proxy custom resource will assume the state "Ready" with message *"installation is ready. Although encryptionEnabled is set to false, the traffic will be encrypted by Istio."*. You can use both, integration with *Istio service mesh* and with the *certificate manager*.
+-   The connectivity proxy becomes mandatory if you want to consume an on-premise system.
 
-**Encryption between Micro Components**
+For more comprehensive information about the transparent proxy dependencies, see [Transparent Proxy Operator](transparent-proxy-operator-2d826aa.md).
 
-If you don't integrate the transparent proxy with a service mesh, you must encrypt the traffic between the micro components. To do that, set `encryptionEnabled` to `true`. This property configures encryption between the transparent proxy micro components internally. Additionally, you should provide the necessary *certificate manager* configuration to make sure encryption works as expected.
 
-For more information, see [Configuration Guide](configuration-guide-2a22cd7.md).
 
-**Destination Service Instance**
+<a name="loio1700cfe070704d2e80aa76de1033a6c4__section_wzh_2kf_3cc"/>
 
-The transparent proxy will load all resources of api version *services.cloud.sap.com/v1* and kind `ServiceInstance` having `spec.serviceOfferingName: destination`, created in namespace `sap-transp-proxy-system`, as destination service instances. In addition, you can configure more destination service instances directly in the transparent proxy custom resource.
+## Connectivity Proxy and On-Premise Connectivity
 
-For more information, see the [Configuration Guide](configuration-guide-2a22cd7.md).
-
-If no resources of api version *services.cloud.sap.com/v1* and kind `ServiceInstance` exist in namespace `sap-transp-proxy-system`, and no destination service instances are directly specified in the transparent proxy custom resource, a default, empty destination service instance with name `sap-transp-proxy-default` will be created in namespace `sap-transp-proxy-system` and loaded as destination service instance in the transparent proxy custom resource.
+If you want to connect to an on-premise system, you will need the connectivity proxy module added in your Kyma instance. The transparent proxy will automatically connect with the connectivity proxy if the connectivity proxy module is added. If you choose to manually link to a connectivity proxy, the automatic connection will not override your configuration.
 
 
 
@@ -85,5 +56,5 @@ If no resources of api version *services.cloud.sap.com/v1* and kind `ServiceInst
 
 ## Troubleshooting
 
-In case of issues, please refer to [Troubleshooting in Kyma](troubleshooting-in-kyma-aebcc82.md).
+In case of issues, please refer to [Transparent Proxy Custom Resource Conditions](transparent-proxy-custom-resource-conditions-d75e31e.md).
 

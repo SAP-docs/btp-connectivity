@@ -4,11 +4,21 @@
 
 Manage namespaces for the transparent proxy for Kubernetes.
 
-The transparent proxy can operate in all namespaces in the cluster, or only in namespaces labeled in the following way: *transparent-proxy.connectivity.api.sap/namespace:<namespace where Transparent Proxy is installed\>*.
+The transparent proxy can operate in either:
 
-For this feature, you can set the Helm property `config.managedNamespacesMode` to `all` or `labelSelector`.
+-   All namespaces in the cluster, or
+-   Only in namespaces labeled in the following way: *transparent-proxy.connectivity.api.sap/namespace:<namespace where Transparent Proxy is installed\>*.
 
-The default value is `all`. This means that the proxy operates with destination custom resources across all namespaces in the cluster.
+To configure this feature, set the Helm property `config.managedNamespacesMode` to either:
+
+-   `all`
+
+    This is the default setting, indicating the proxy operates with destination custom resources across all namespaces in the cluster.
+
+-   `labelSelector`
+
+    Restricting the proxy to operate only in namespaces with the specific label.
+
 
 For more information, see [Configuration Guide](configuration-guide-2a22cd7.md).
 

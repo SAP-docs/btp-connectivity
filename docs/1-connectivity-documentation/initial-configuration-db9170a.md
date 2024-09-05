@@ -126,7 +126,7 @@ After installing and starting the Cloud Connector, log on to the administration 
 
 -   We strongly recommend that you read and follow the steps described in [Recommendations for Secure Setup](recommendations-for-secure-setup-e7ea82a.md). For operating the Cloud Connector securely, see also [Security Guidelines](security-guidelines-8db6945.md).
 
-Back to[Tasks](initial-configuration-db9170a.md#loiodb9170a7d97610148537d5a84bf79ba2__context) 
+Back to [Tasks](initial-configuration-db9170a.md#loiodb9170a7d97610148537d5a84bf79ba2__context) 
 
 
 
@@ -146,7 +146,7 @@ To administer the Cloud Connector, you need a Web browser. To check the list of 
     > By default, the Cloud Connector includes a self-signed UI certificate. Browsers may show a security warning because they don't trust the issuer of this certificate. In this case, you can skip the warning message.
 
 
-Back to[Tasks](initial-configuration-db9170a.md#loiodb9170a7d97610148537d5a84bf79ba2__context) 
+Back to [Tasks](initial-configuration-db9170a.md#loiodb9170a7d97610148537d5a84bf79ba2__context) 
 
 
 
@@ -178,7 +178,7 @@ To edit the password for the `Administrator` user, choose *Configuration* from t
 > ### Note:  
 > User name and password cannot be changed at the same time. If you want to change the user name, you must enter only the current password in a first step. Do not enter values for *<New Password\>* or *<Repeat New Password\>* when changing the user name. To change the password in second step, enter the old password, the new one, and the repeated \(new\) password, but leave the user name unchanged.
 
-Back to[Tasks](initial-configuration-db9170a.md#loiodb9170a7d97610148537d5a84bf79ba2__context) 
+Back to [Tasks](initial-configuration-db9170a.md#loiodb9170a7d97610148537d5a84bf79ba2__context) 
 
 
 
@@ -229,7 +229,7 @@ Press *Add Subaccount* to define a subaccount. This will open a dialog or wizard
         > ### Note:  
         > For a subaccount in the **Cloud Foundry** environment, you must enter the subaccount **ID** as *<Subaccount\>*, rather than its actual \(technical\) name. For information on getting the subaccount ID, see [Find Your Subaccount ID \(Cloud Foundry Environment\)](find-your-subaccount-id-cloud-foundry-environment-b43eff2.md).
         > 
-        > For the **c** environment, enter the subaccount's **technical name** in the field *<Subaccount\>*, not the subaccount ID.
+        > For the **Neo** environment, enter the subaccount's **technical name** in the field *<Subaccount\>*, not the subaccount ID.
 
     3.  *<Subaccount User\>* and *<Password\>* require dedicated values, depending on the type of identity provider \(IDP\) you are using:
 
@@ -323,7 +323,7 @@ The Cloud Connector now starts a handshake with SAP BTP and attempts to establis
     ![](images/SCC_InitialConfig_-_ConnectorInfo_8898b57.png)
 
 
-Back to[Tasks](initial-configuration-db9170a.md#loiodb9170a7d97610148537d5a84bf79ba2__context) 
+Back to [Tasks](initial-configuration-db9170a.md#loiodb9170a7d97610148537d5a84bf79ba2__context) 
 
 
 
@@ -347,7 +347,7 @@ In case of a timeout or a connectivity issue, these icons are yellow \(warning\)
 > ### Note:  
 > When connected, you can monitor the Cloud Connector also in the *Connectivity* section of the SAP BTP cockpit. There, you can track attributes like version, description and high availability set up. Every Cloud Connector configured for your subaccount automatically appears in the *Connectivity* section of the cockpit.
 
-Back to[Tasks](initial-configuration-db9170a.md#loiodb9170a7d97610148537d5a84bf79ba2__context) 
+Back to [Tasks](initial-configuration-db9170a.md#loiodb9170a7d97610148537d5a84bf79ba2__context) 
 
 **Related Information**  
 
@@ -363,4 +363,6 @@ Back to[Tasks](initial-configuration-db9170a.md#loiodb9170a7d97610148537d5a84bf7
 [Managing Member Authorizations in the Neo Environment](https://help.sap.com/viewer/ea72206b834e4ace9cd834feed6c0e09/Cloud/en-US/a1ab5c4cc117455392cd0a512c7f890d.html "SAP BTP includes predefined platform roles that support the typical tasks performed by users when interacting with the platform. In addition, subaccount administrators can combine various scopes into a custom platform role that addresses their individual requirements.") :arrow_upper_right:
 
 [Use a Custom IDP for Subaccount Configuration](use-a-custom-idp-for-subaccount-configuration-2022612.md "Enable custom identity provider (IDP) authentication to configure a Cloud Foundry subaccount in the Cloud Connector by using a one-time passcode.")
+
+[Use LDAP for User Administration](use-ldap-for-user-administration-120ceec.md "You can use LDAP (Lightweight Directory Access Protocol) to manage Cloud Connector users and authentication.")
 

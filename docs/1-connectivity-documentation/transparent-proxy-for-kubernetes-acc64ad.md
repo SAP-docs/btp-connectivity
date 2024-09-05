@@ -20,13 +20,9 @@ The transparent proxy handles HTTP\(s\) protocol for Internet and HTTP/TCP proto
 
 [Using the Transparent Proxy](using-the-transparent-proxy-c5257cf.md "Use the transparent proxy for Kubernetes in different SAP BTP communication scenarios.")
 
-[Multitenancy](multitenancy-6478985.md "Use multitenancy for the transparent proxy for Kubernetes.")
-
-[Destination Custom Resource Scope](destination-custom-resource-scope-bd47cbe.md "Define the access control scope of the destination custom resources for the transparent proxy for Kubernetes.")
-
 [Integration with SAP BTP Connectivity](integration-with-sap-btp-connectivity-aa9fc26.md "Integrate the transparent proxy with other SAP BTP Connectivity services.")
 
-[Lifecycle Management](lifecycle-management-1c18e0c.md "Use the Helm chart to configure and manage the lifecycle of the transparent proxy.")
+[Lifecycle Management](lifecycle-management-1c18e0c.md "Find informationn on installation, configuration, and sizing of the transparent proxy for Kubernetes.")
 
 [Monitoring](monitoring-ba6f417.md "Check the availability, status, and destination custom resources of the transparent proxy for Kubernetes.")
 
@@ -40,5 +36,9 @@ The transparent proxy handles HTTP\(s\) protocol for Internet and HTTP/TCP proto
 
 [Transparent Proxy in the Kyma Environment](transparent-proxy-in-the-kyma-environment-1700cfe.md "Use the transparent proxy in the Kyma environment.")
 
-[Dynamic Lookup of Destinations](dynamic-lookup-of-destinations-6836e00.md "Create a single custom resource to look up one ore more destinations dynamically with the transparent proxy for Kubernetes.")
+[Concepts](concepts-3f9e8f1.md "Find information on basic concepts of the transparent proxy for Kubernetes.")
+
+[Local Development](local-development-bcbcd9f.md "Find a local development guide for the transparent proxy for Kubernetes.")
+
+[Transparent Proxy Operator](transparent-proxy-operator-2d826aa.md "Use the transparent proxy operator for the transparent proxy for Kubernetes.")
 

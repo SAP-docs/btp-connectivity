@@ -1,6 +1,6 @@
 <!-- loiobd47cbece15b4dd6aefbd5c53ff27371 -->
 
-# Destination Custom Resource Scope
+# Restrict Access Using Scoping
 
 Define the access control scope of the destination custom resources for the transparent proxy for Kubernetes.
 

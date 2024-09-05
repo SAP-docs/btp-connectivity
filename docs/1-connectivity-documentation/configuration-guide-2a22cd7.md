@@ -365,7 +365,7 @@ False
 
 Defines the default scope of destination custom resources. Possible values are “namespaced” or “clusterWide”.
 
-See [Destination Custom Resource Scope](destination-custom-resource-scope-bd47cbe.md).
+See [Restrict Access Using Scoping](restrict-access-using-scoping-bd47cbe.md).
 
 </td>
 <td valign="top">
@@ -768,6 +768,11 @@ False
 <td valign="top">
 
 The base64-encoded value of the service key, obtained from the Destination service instance. Required when transparent proxy should create secret and not required when describing an existing secret.
+
+> ### Note:  
+> The base64 encoded value of the service key can only be specified during [Installation with Helm](installation-with-helm-d201be0.md).
+
+
 
 </td>
 <td valign="top">
