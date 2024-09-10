@@ -238,3 +238,5 @@ A static key prefix is used as a namespace grouping of URL's query parameters wh
 
 [User Propagation](user-propagation-23f166f.md "Configure user propagation for the transparent proxy for Kubernetes.")
 
+[SAML Assertion Authentication](saml-assertion-authentication-23db6d9.md "The transparent proxy handles the HTTP communication protocol for both Internet and on-premise destinations protected with the SAML Assertion flow.")
+

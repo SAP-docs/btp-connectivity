@@ -21,5 +21,3 @@ Use OAuth authentication for the transparent proxy for Kubernetes.
 
 [OAuth User Token Exchange Authentication](oauth-user-token-exchange-authentication-05d70a1.md "The transparent proxy handles the HTTP communication protocol for both Internet and on-premise destinations protected with the OAuth User Token Exchange flow.")
 
-[SAML Assertion Authentication](saml-assertion-authentication-23db6d9.md "The transparent proxy handles the HTTP communication protocol for both Internet and on-premise destinations protected with the SAML Assertion flow.")
-
