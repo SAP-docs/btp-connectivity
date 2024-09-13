@@ -10,7 +10,7 @@ Use the operator to install the transparent proxy for Kubernetes.
 
 ## Install/Upgrade
 
-The transparent proxy operator can be installed/upgraded in any Kubernetes cluster using the following yaml configuration:
+The [Transparent Proxy Operator](transparent-proxy-operator-2d826aa.md) can be installed/upgraded in any Kubernetes cluster using the following yaml configuration:
 
 **operator.yaml**
 

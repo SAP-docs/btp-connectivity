@@ -33,10 +33,9 @@ Hover over the elements for a description. Click an element for more information
 
 ## Overview
 
-SAP BTP Connectivity allows SAP BTP applications to securely access remote services that run on the Internet or on-premise. This component:
+SAP BTP Connectivity offers a set of services and software components which allow SAP BTP applications to securely access remote services that run on the Internet or on-premise. This component:
 
 -   Allows subaccount-specific configuration of application connections via destinations.
--   Provides a Java API that application developers can use to consume remote services.
 -   Allows you to make connections to on-premise systems, using the Cloud Connector.
 -   Lets you establish a secure tunnel from your on-premise network to applications on SAP BTP, while you keep full control and auditability of what is exposed to the cloud.
 -   Supports both the Neo environment and the multi-cloud foundation for application development on SAP BTP.
