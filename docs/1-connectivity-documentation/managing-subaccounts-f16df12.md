@@ -30,9 +30,6 @@ You can connect to several subaccounts within a single Cloud Connector installat
 
 You have assigned one of these roles/role collections to the subaccount user that you use for initial Cloud Connector setup, depending on the SAP BTP environment in which your subaccount is running:
 
-> ### Note:  
-> For the **Cloud Foundry** environment, you must know on which cloud management tools feature set \(A or B\) your account is running. For more information on feature sets, see [Cloud Management Tools — Feature Set Overview](https://help.sap.com/viewer/65de2977205c403bbc107264b8eccf4b/Cloud/en-US/caf4e4e23aef4666ad8f125af393dfb2.html "Cloud management tools represent the group of technologies designed for managing SAP BTP.") :arrow_upper_right:.
-
 
 <table>
 <tr>
@@ -55,28 +52,7 @@ More Information
 <tr>
 <td valign="top">
 
-**Cloud Foundry** \[feature set **A**\]
-
-</td>
-<td valign="top">
-
-The user must be a *member of the global account* that the subaccount belongs to.
-
-Alternatively, you can assign the user as *Security Administrator*.
-
-</td>
-<td valign="top">
-
-[Add Members to Your Global Account](https://help.sap.com/viewer/65de2977205c403bbc107264b8eccf4b/Cloud/en-US/4a0491330a164f5a873fa630c7f45f06.html "Add users as global account members using the SAP BTP cockpit.") :arrow_upper_right: 
-
- <?sap-ot O2O class="- topic/xref " href="6752c4b8435c456ebf67a97ddbbcb267.xml" text="" desc="" xtrc="xref:5" xtrf="file:/home/builder/src/dita-all/jjq1673438782153/loiob2927cc326be495da9f4fea0b6bda2b3_en-US/src/content/localization/en-us/f16df12fab9f4fe1b8a4122f0fd54b6e.xml" output-class="" outputTopicFile="file:/home/builder/tp.net.sf.dita-ot/2.3/plugins/com.elovirta.dita.markdown_1.3.0/xsl/dita2markdownImpl.xsl" ?> 
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-**Cloud Foundry** \[feature set **B**\]
+**Cloud Foundry**
 
 </td>
 <td valign="top">
@@ -92,7 +68,7 @@ Alternatively, you can assign a *custom role collection* to the user that includ
 </td>
 <td valign="top">
 
-[Default Role Collections \[Feature Set B\]](what-is-sap-btp-connectivity-daca64d.md#loiodaca64dacc6148fcb5c70ed86082ef91__table_default_role_collections_setB) 
+[Default Role Collections](what-is-sap-btp-connectivity-daca64d.md#loiodaca64dacc6148fcb5c70ed86082ef91__table_default_role_collections_setB) 
 
 [Role Collections and Roles in Global Accounts, Directories, and Subaccounts](https://help.sap.com/viewer/65de2977205c403bbc107264b8eccf4b/Cloud/en-US/0039cf082d3d43eba9200fe15647922a.html "SAP BTP provides a set of role collections to set up administrator access to your global account and subaccounts.") :arrow_upper_right:
 
