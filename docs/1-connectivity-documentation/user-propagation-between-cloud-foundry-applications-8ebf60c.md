@@ -102,6 +102,9 @@ Back to [Steps](user-propagation-between-cloud-foundry-applications-8ebf60c.md#l
 
 3.  In your browser, call `https://${S1_SUBDOMAIN}.authentication.${S1_LANDSCAPE_DOMAIN}/saml/metadata` and download the XML file. Within the XML file you can find the following structure:
 
+    > ### Note:  
+    > The value for `${S1_LANDSCAPE_DOMAIN}` must contain the *main* landscape only. For example, if the landscape is *cf.**us10-001**.hana.ondemand.com*, the URL would look like this: *https://$\{S1\_SUBDOMAIN\}.authentication.**us10**.hana.ondenmand.com/saml/metadata*.
+
     > ### Sample Code:  
     > ```
     > <?xml version="1.0" encoding="UTF-8"?>
