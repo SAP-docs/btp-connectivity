@@ -25,7 +25,7 @@ A tenant is successfully onboarded when it is visible in the destination custom 
 
 <a name="loio6478985d12a54d7ab8a4e5abce3972e0__section_lk3_vxx_yzb"/>
 
-## TCP
+## Non-HTTP
 
 Tenants are configured in the destination custom resource \(CR\) as an annotation with the key `transparent-proxy.connectivity.api.sap/tenant-subdomains`. The value should be a JSON array of tenant subdomains:
 
