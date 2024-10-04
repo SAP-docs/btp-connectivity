@@ -80,9 +80,11 @@ OnPremise
 
 ## Prerequisites
 
-To integrate this functionality, you must create an SAP BTP destination. This destination should have `Type` "TCP" and `ProxyType` "OnPremise". For example:
+To integrate this functionality, you must create an SAP BTP destination.
 
-**TCP Destination**
+This destination must have `Type` "TCP" and `ProxyType` "OnPremise".
+
+**Example: TCP Destination**
 
 > ### Sample Code:  
 > ```
