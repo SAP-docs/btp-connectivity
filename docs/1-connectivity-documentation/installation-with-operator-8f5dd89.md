@@ -697,12 +697,6 @@ rules:
   - list
   - watch
 - apiGroups:
-  - destination.connectivity.api.sap
-  resources:
-  - destinations
-  verbs:
-  - create
-- apiGroups:
   - networking.k8s.io
   resources:
   - networkpolicies
@@ -966,7 +960,7 @@ spec:
         - --leader-elect
         command:
         - /manager
-        image: sapse/sap-transp-proxy-operator:1.6.0
+        image: sapse/sap-transp-proxy-operator:1.6.1
         imagePullPolicy: Always
         livenessProbe:
           httpGet:
@@ -1026,7 +1020,6 @@ spec:
       - configMap:
           name: sap-transp-proxy-sap-transp-proxy-operator-logging-config
         name: sap-transp-proxy-operator-logging-config
-
 ```
 
 Put the above content in a YAML file and execute: \(example if file is named operator.yaml\)

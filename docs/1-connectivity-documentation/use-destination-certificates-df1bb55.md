@@ -2,19 +2,19 @@
 
 # Use Destination Certificates
 
-Maintain trust store and key store certificates in the *Destinations* editor \(SAP BTP cockpit\).
+Maintain certificates \(X.509 client certificates, trusted certificates, CA certificates, trust store and key store certificates\) in the **Destination Certificates** UI or the **Destinations** editor \(SAP BTP cockpit\).
 
 
 
 ## Prerequisites
 
--   For destinations on subaccount level:
+-   Subaccount level:
 
     You have logged on to the cockpit and opened the *Certificate* view by choosing *Connectivity* \> *Destination Certificates*.
 
     ![](images/CS_Destination_Certificates_-_Prereq_f0d2096.png)
 
--   For destinations on service instance level:
+-   Service instance level:
 
     You have logged on to the cockpit and opened the *Destinations* editor for a particular service instance. For more information, see [Access the Destinations Editor](access-the-destinations-editor-82ca377.md).
 
@@ -63,7 +63,7 @@ You can maintain truststore and keystore certificates in the *Destinations* edit
 
 
 
-## Generate a SAP Cloud PKI Infrastructure Certificate
+## Generate a Certificate
 
 1.  Choose *Create*.
 
@@ -130,7 +130,7 @@ You can maintain truststore and keystore certificates in the *Destinations* edit
 ## Certificates on Service Instance Level
 
 > ### Note:  
-> Currently, the new *Destinations* editor is only available on subaccount level. Therefore, the procedure outlined below for the service instance level is different as it uses the old *Destinations* editor. Once the new *Destinations* editor is available for service instance level, the procedures will be unified.
+> Currently, the new *Destination Certificates* UI is only available on subaccount level. Therefore, the procedure outlined below for the service instance level is different as it uses the old *Destinations* editor. Once the new *Destination Certificates* UI is available for service instance level, the procedures will be unified.
 
 
 
