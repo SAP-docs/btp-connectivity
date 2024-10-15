@@ -873,7 +873,7 @@ URI
 </td>
 <td valign="top">
 
-`/api/v1/configuration/connector/ui/uiCertificat` 
+`/api/v1/configuration/connector/ui/uiCertificate` 
 
 </td>
 </tr>
