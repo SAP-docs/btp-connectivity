@@ -41,6 +41,23 @@ Default
 <tr>
 <td valign="top">
 
+additionalCAs.secretName
+
+</td>
+<td valign="top">
+
+This property allows to specify a list of CA certificates which are to be trusted, in addition to the default ones for the outbound communication of the Connectivity Proxy components. The value is the name of a secret in the same namespace in which the proxy is installed. It must contain a field with key "ca-certificates.crt" and with the value being all CAs to be trusted, concatenated together one after the other.
+
+</td>
+<td valign="top">
+
+None
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
 chart.nameSuffix
 
 </td>
@@ -86,6 +103,23 @@ Key in the Connectivity service secret resource that holds the base64-encoded va
 <td valign="top">
 
 "service\_key"
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+config.logging.format
+
+</td>
+<td valign="top">
+
+Specifies the logging format for the Connectivity proxy and it's components. The possible values are "console" and "json".
+
+</td>
+<td valign="top">
+
+"console"
 
 </td>
 </tr>
@@ -290,23 +324,6 @@ Port on which to start the HTTP proxy server.
 <td valign="top">
 
 20003
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-config.servers.proxy.rfcAndLdap.allowRemoteConnections
-
-</td>
-<td valign="top">
-
-Flag for enabling and disabling calls from outside the pod to the RFC and LDAP proxy server.
-
-</td>
-<td valign="top">
-
-true
 
 </td>
 </tr>
@@ -607,6 +624,74 @@ None
 <tr>
 <td valign="top">
 
+config.metrics.prometheus.enabled
+
+</td>
+<td valign="top">
+
+Enables the collection and exposure of metrics in the Prometheus format through an HTTP endpoint.
+
+</td>
+<td valign="top">
+
+false
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+config.metrics.prometheus.port
+
+</td>
+<td valign="top">
+
+Specifies the port on which the Prometheus metrics will be exposed.
+
+</td>
+<td valign="top">
+
+9494
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+config.metrics.prometheus.jvmMetrics.enabled
+
+</td>
+<td valign="top">
+
+Enables the collection of JVM-related metrics \(e.g., memory usage, garbage collection, thread count, etc.\).
+
+</td>
+<td valign="top">
+
+false
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+config.metrics.prometheus.jmxMetrics.enabled
+
+</td>
+<td valign="top">
+
+Enables the collection of metrics from JMX that are exposed by the connectivity proxy.
+
+</td>
+<td valign="top">
+
+false
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
 secretConfig.integration.connectivityService.secretName
 
 </td>
@@ -703,6 +788,23 @@ Key part of the secret that is used for TLS handshake with the Ingress proxy or 
 <td valign="top">
 
 None
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+deployment.affinity.podAntiAffinity.topologyKey
+
+</td>
+<td valign="top">
+
+Configuration of the topology key for the built-in pod anti-affinity setting of the Connectivity Proxy. More info: [Assigning Pods to Nodes | Kubernetes](https://kubernetes.io/docs/concepts/scheduling-eviction/assign-pod-node/#inter-pod-affinity-and-anti-affinity).
+
+</td>
+<td valign="top">
+
+"topology.kubernetes.io/zone"
 
 </td>
 </tr>
@@ -1031,6 +1133,91 @@ The Kubernetes scheduler uses this information to decide which node to place the
 <td valign="top">
 
 256M
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+deployment.regionConfigurationsController.resources.limits.cpu
+
+</td>
+<td valign="top">
+
+The kubelet enforces the limit so that the running container of the Region Configurations Controller utility microservice is not allowed to use more CPU resource than the set limit. In case the limit is crossed, the process would be throttled. If omitted, nothing is enforced.
+
+</td>
+<td valign="top">
+
+None
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+deployment.regionConfigurationsController.resources.limits.memory
+
+</td>
+<td valign="top">
+
+The kubelet enforces the limit so that the running container of the Region Configurations Controller utility microservice is not allowed to use more memory than the set limit. In case the limit is crossed, the process would be terminated with an out of memory \(OOM\) error. If omitted, nothing is enforced.
+
+</td>
+<td valign="top">
+
+None
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+deployment.regionConfigurationsController.resources.requests.cpu
+
+</td>
+<td valign="top">
+
+The Kubernetes scheduler uses this information to decide which node to place the Region Configurations Controller utility microservice Pod on. If there are no nodes with the specified amount of CPU resources, the pod won't be scheduled \(and therefore started\). If omitted, nothing is enforced.
+
+</td>
+<td valign="top">
+
+None
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+deployment.regionConfigurationsController.resources.requests.memory
+
+</td>
+<td valign="top">
+
+The Kubernetes scheduler uses this information to decide which node to place the Region Configurations Controller utility microservice Pod on. If there are no nodes with the specified amount of memory, the pod won't be scheduled \(and therefore started\). If omitted, nothing is enforced.
+
+</td>
+<td valign="top">
+
+None
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+ 
+
+</td>
+<td valign="top">
+
+ 
+
+</td>
+<td valign="top">
+
+ 
 
 </td>
 </tr>
@@ -1675,6 +1862,9 @@ secretConfig:
       secretName: "name of the secret"
  
 deployment:
+  affinity:
+    podAntiAffinity:
+      topologyKey: "topology.kubernetes.io/zone"
   image:
     pullPolicy: "IfNotPresent"
     pullSecret: "name of the pull secret fot the registry"
@@ -1682,6 +1872,14 @@ deployment:
     repository: "com.sap.cloud.connectivity/connectivity-proxy"
     tag: X.Y.Z
   replicaCount: 1
+  regionConfigurationsController:
+    resources:
+      limits:
+        cpu: 1
+        memory: 1024M
+      requests:
+        cpu: 0.1
+        memory: 256M
   resources:
     maxFileDescriptorCount: 64000
     limits:

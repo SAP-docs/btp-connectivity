@@ -164,7 +164,7 @@ Back to [Steps](user-propagation-between-cloud-foundry-applications-8ebf60c.md#l
 ### Establish Trust between Subaccount 1 and Subaccount 2
 
 1.  In the cockpit, navigate to the overview page for subaccount 2.
-2.  From the left panel, select *Security* \> *Trust Configuration*. Choose *New Trust Configuration*. For details, see [Establish Trust and Federation with UAA Using Any SAML Identity Provider](https://help.sap.com/viewer/65de2977205c403bbc107264b8eccf4b/Cloud/en-US/2ce3938c66d94479848bff3090999027.html#loio2ce3938c66d94479848bff3090999027 "To establish trust, configure the trust configuration of the SAML 2.0 identity provider in your subaccount using the SAP BTP cockpit. Next, register your subaccount in User Account and Authentication service using the administration console of your SAML 2.0 identity provider. To complete federation, maintain the federation attributes of the SAML 2.0 user groups. This makes sure that you can assign authorizations to user groups.") :arrow_upper_right:.
+2.  From the left panel, select *Security* \> *Trust Configuration*. Choose *New Trust Configuration*. For details, see [Establish Trust and Federation with UAA Using Any SAML Identity Provider](https://help.sap.com/viewer/65de2977205c403bbc107264b8eccf4b/Cloud/en-US/2ce3938c66d94479848bff3090999027.html#loio2ce3938c66d94479848bff3090999027 "Integrate trust between the SAP BTP subaccount and any SAML 2.0 identity provider.") :arrow_upper_right:.
 3.  Paste the assembled IdP metadata for subaccount 1 in the *<Metadata\>* text box and uncheck *Available for User Logon*.
 
     ![](images/CS_CF2CF_TrustConfig_Subaccount_1_2_396e667.png)
