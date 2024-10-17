@@ -233,7 +233,7 @@ config.servers.proxy.authorization.oauth.allowedClientId
 </td>
 <td valign="top">
 
-Oauth client ID that is authorized to pass through the connectivity proxy when authorization is enabled.
+OAuth client ID that is authorized to pass through the connectivity proxy when authorization is enabled.
 
 </td>
 <td valign="top">
@@ -255,7 +255,7 @@ Write timeout for the client connections to the proxy \(from the proxy's point o
 </td>
 <td valign="top">
 
- 
+10
 
 </td>
 </tr>
