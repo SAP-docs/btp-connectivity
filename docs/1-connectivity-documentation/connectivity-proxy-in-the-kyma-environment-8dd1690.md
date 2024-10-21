@@ -1,12 +1,12 @@
-<!-- loio7501fbc9aebd4e3180eddec977ca288d -->
+<!-- loio8dd1690aa475477ab44624626f45524b -->
 
-# On-Premise Connectivity in the Kyma Environment
+# Connectivity Proxy in the Kyma Environment
 
-The *connectivity-proxy* Kyma module enables secure tunneling between the Kyma environment and on-premise systems. It supports both *on-premise-to-cloud* and *cloud-to-on-premise* scenarios. It requires the *btp-operator* module and *Istio sidecar proxy injection* for proper functionality.
+Find information on installing connectivity proxy in the the Kyma environment, providing easier installation and setup.
 
 
 
-<a name="loio7501fbc9aebd4e3180eddec977ca288d__section_asl_5yg_q1c"/>
+<a name="loio8dd1690aa475477ab44624626f45524b__section_asl_5yg_q1c"/>
 
 ## Prerequisites
 
@@ -24,7 +24,7 @@ The *connectivity-proxy* Kyma module enables secure tunneling between the Kyma e
 
 
 
-<a name="loio7501fbc9aebd4e3180eddec977ca288d__section_sh3_5yg_q1c"/>
+<a name="loio8dd1690aa475477ab44624626f45524b__section_sh3_5yg_q1c"/>
 
 ## Context
 
@@ -32,7 +32,7 @@ The *connectivity-proxy* Kyma module installs the needed components to establish
 
 
 
-<a name="loio7501fbc9aebd4e3180eddec977ca288d__section_sq2_5yg_q1c"/>
+<a name="loio8dd1690aa475477ab44624626f45524b__section_sq2_5yg_q1c"/>
 
 ## Add the Connectivity Proxy module
 
@@ -50,7 +50,7 @@ For more information, see [Configuration Guide](configuration-guide-eaa8204.md).
 > ### Note:  
 > Not all configuration options of the connectivity proxy are supported by the Kyma module.
 > 
-> See [Limitations](on-premise-connectivity-in-the-kyma-environment-7501fbc.md#loio7501fbc9aebd4e3180eddec977ca288d__limits) below for more details.
+> See [Limitations](connectivity-proxy-in-the-kyma-environment-8dd1690.md#loio8dd1690aa475477ab44624626f45524b__limits) below for more details.
 
 ![](images/CS_Kyma_OP_-_CP_Module_Enable_2_711861f.png)
 
@@ -59,7 +59,7 @@ For more information, see [Configuration Guide](configuration-guide-eaa8204.md).
 
 
 
-<a name="loio7501fbc9aebd4e3180eddec977ca288d__section_urz_tyg_q1c"/>
+<a name="loio8dd1690aa475477ab44624626f45524b__section_urz_tyg_q1c"/>
 
 ## Result
 
@@ -98,9 +98,17 @@ The following features of the connectivity proxy are not available via the *conn
 
 
 
-<a name="loio7501fbc9aebd4e3180eddec977ca288d__section_tbj_tyg_q1c"/>
+<a name="loio8dd1690aa475477ab44624626f45524b__section_tbj_tyg_q1c"/>
 
-## Consume the Connectivity Proxy
+## Consume an On-Premise System Through the Connectivity Proxy
+
+**Integration with the Transparent Proxy**
+
+We recommend that you consume an on-premise system through a combination of SAP BTP Connectivity software components and services. While the connectivity proxy is used to establish the connection to the on-premise system/VPC, the transparent proxy provides an abstraction enabling seamless consumption of the target system. Transparent proxy and connectivity proxy integrate automatically with each other when both are available as modules in a Kyma instance.
+
+For more information, see [Transparent Proxy in the Kyma Environment](transparent-proxy-in-the-kyma-environment-1700cfe.md).
+
+**Standalone Usage of the Connectivity Proxy**
 
 As part of the installation, a special `ConfigMap` will be created in the *kyma-system* namespace, called *connectivity-proxy-info*. It contains the host of the connectivity proxy and all its proxy ports.
 

@@ -29,3 +29,5 @@ You can find information about new versions of the connectivity proxy via SAP BT
 
 [Frequently Asked Questions](frequently-asked-questions-a5c54ef.md "Answers to the most common questions about the connectivity proxy for Kubernetes.")
 
+[Connectivity Proxy in the Kyma Environment](connectivity-proxy-in-the-kyma-environment-8dd1690.md "Find information on installing connectivity proxy in the the Kyma environment, providing easier installation and setup.")
+

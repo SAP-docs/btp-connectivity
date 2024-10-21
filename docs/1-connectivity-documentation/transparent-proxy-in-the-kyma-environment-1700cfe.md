@@ -4,7 +4,7 @@
 
 Use the transparent proxy in the Kyma environment.
 
-This documentation serves as a reference for the transparent proxy installation in Kyma environment and the respective [Transparent Proxy Operator](transparent-proxy-operator-2d826aa.md).
+This documentation serves as a reference for the transparent proxy installation in the Kyma environment and the respective [Transparent Proxy Operator](transparent-proxy-operator-2d826aa.md).
 
 
 
@@ -49,6 +49,12 @@ For more comprehensive information about the transparent proxy dependencies, see
 ## Connectivity Proxy and On-Premise Connectivity
 
 If you want to connect to an on-premise system, you will need the connectivity proxy module added in your Kyma instance. The transparent proxy will automatically connect with the connectivity proxy if the connectivity proxy module is added. If you choose to manually link to a connectivity proxy, the automatic connection will not override your configuration.
+
+
+
+## Consume a System Through the Transparent Proxy
+
+For more information about consumption of target systems through the transparent proxy, see [Using the Transparent Proxy](using-the-transparent-proxy-c5257cf.md).
 
 
 
