@@ -55,7 +55,7 @@ Audit entries for configuration changes are written for the following categories
 -   `AdvancedJVM`: Advanced JVM configuration was changed.
 -   `ApplicationConfiguration`: Application-specific connection configuration was changed.
 -   `PayloadTrace`: Tunnel traffic trace was activated/deactivated.
--   • `PayloadSncTrace`: ABAP Cloud SNC traffic trace was activated/deactivated.
+-   `PayloadSncTrace`: ABAP Cloud SNC traffic trace was activated/deactivated.
 -   `CPICTrace`: The CPIC trace level was changed.
 -   `AuditLogLevel`: The subaccount-specific audit log level was changed.
 -   `CrossAuditLogLevel`: The cross-subaccount audit log level was changed.

@@ -5,7 +5,7 @@
 Adapt connectivity settings that control the throughput and HTTP connectivity to on-premise systems.
 
 > ### Caution:  
-> Do not change these parameters unless you are absolutely sure that changes are indispensable for your scenarios. Setting inadequate values can increase the risk of DoS \(Denial of Service\) attacks.
+> Do not change these parameters unless you are absolutely sure that changes are indispensable for your scenarios. Setting inadequate values may increase the risk of DoS \(Denial of Service\) attacks.
 
 
 
