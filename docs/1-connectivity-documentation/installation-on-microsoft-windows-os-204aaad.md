@@ -31,6 +31,8 @@ You can choose between a simple `portable` variant of the Cloud Connector and th
 
     If you want to use SAP JVM, you can download it from the [SAP Development Tools for Eclipse](https://tools.hana.ondemand.com/#cloud) page.
 
+    Alternatively supported SapMachine JDK versions can be downloaded from the [SapMachine Homepage](https://sap.github.io/SapMachine/).
+
 -   When using the `portable` variant, the environment variable *<JAVA\_HOME\>* must be set to the Java installation directory, so that the `bin` subdirectory can be found. Alternatively, you can add the relevant `bin` subdirectory to the *<PATH\>* variable.
 
 

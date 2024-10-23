@@ -12,7 +12,7 @@ Installing the Cloud Connector on an Apple macOS operating system.
 > Apple macOS is not supported for productive scenarios. The developer version described below must not be used as productive version.
 
 > ### Caution:  
-> There are two different Cloud Connector portable versions available for running on Apple macOS with native support either for Apple M1/M2 CPUs based on the *aarch64* architecture, or with native support for INTEL x86 64-bit CPUs based on the *x64* architecture. Make sure you download and use the Cloud Connector version in combination with a JVM version, which both match your used hardware CPU architecture.
+> There are two different Cloud Connector portable versions available for running on Apple macOS with native support either for Apple M series CPUs based on the *aarch64* architecture, or with native support for INTEL x86 64-bit CPUs based on the *x64* architecture. Make sure you download and use the Cloud Connector version in combination with a JVM version, which both match your used hardware CPU architecture.
 
 -   You have one of the supported 64-bit operating systems. For more information, see [Product Availability Matrix](prerequisites-e23f776.md#loioe23f776e4d594fdbaeeb1196d47bbcc0__matrix).
 -   The supported platforms are *aarch64* and *x64*, represented below by the variable `<platform>`.
@@ -20,6 +20,8 @@ Installing the Cloud Connector on an Apple macOS operating system.
 -   A supported Java version must be installed. For more information, see [JDKs](prerequisites-e23f776.md#loioe23f776e4d594fdbaeeb1196d47bbcc0__jdk).
 
     If you are running Apple macOS on an INTEL x86 64-bit CPU and you want to use SAP JVM, you can download it from the [SAP Development Tools for Eclipse](https://tools.hana.ondemand.com/#cloud) page.
+
+    Alternatively supported SapMachine JDK versions for macOS on aarch64 and x64 processor architectures can be downloaded from the [SapMachine Homepage](https://sap.github.io/SapMachine/).
 
 -   Environment variable *<JAVA\_HOME\>* must be set to the Java installation directory so that the `bin` subdirectory can be found. Alternatively, you can add the Java installation's `bin` subdirectory to the *<PATH\>* variable.
 

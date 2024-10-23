@@ -23,7 +23,7 @@ Hover over the elements for a description. Click an element for more information
 
 [Integration and Connectivity in the ABAP Environment](https://help.sap.com/docs/btp/sap-business-technology-platform/integration-and-connectivity?version=Cloud)
 
-[On-Premise Connectivity in the Kyma Environment](https://help.sap.com/docs/connectivity/sap-btp-connectivity-cf/on-premise-connectivity-in-kyma-environment?version=Cloud)
-
 [Resilience Recommendations](https://help.sap.com/docs/connectivity/sap-btp-connectivity-cf/resilience-recommendations?version=Cloud)
+
+[Connectivity in the Kyma Environment](connectivity-in-the-kyma-environment-7501fbc.md)
 

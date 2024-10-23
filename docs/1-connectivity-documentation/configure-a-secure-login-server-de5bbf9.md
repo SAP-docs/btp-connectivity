@@ -8,7 +8,7 @@ Configuration steps for Java SLS support.
 > The information in this section applies to both principal propagation and technical user propagation.
 
 > ### Note:  
-> The Secure Login Server mainstream maintenance ends on December 31, 2027.
+> The Secure Login Server mainstream maintenance ends on December 31, 2027. In particular, this is also relevant when using it with the Cloud Connector for the scenarios with principal propagation and technical user propagation.
 
 
 

@@ -4,6 +4,9 @@
 
 Adapt connectivity settings that control the throughput and HTTP connectivity to on-premise systems.
 
+> ### Caution:  
+> Do not change these parameters unless you are absolutely sure that changes are indispensable for your scenarios. Setting inadequate values can increase the risk of DoS \(Denial of Service\) attacks.
+
 
 
 <a name="loio3975253c1a884638bf6f408f55ea349e__section_vxf_1fc_ztb"/>
@@ -97,9 +100,7 @@ Max. HTTP Request Header Length \(kb\)
 </td>
 <td valign="top">
 
-Max. allowed size of HTTP request headers. Headers containing
-
-authentication information like SAML or JWT could require this size.
+Max. allowed size of HTTP request headers. Headers containing authentication information like SAML or JWT could require this size.
 
 </td>
 <td valign="top">

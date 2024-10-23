@@ -24,7 +24,7 @@ Choose *Audit* from your subaccount menu and go to *Settings* to specify the typ
 
 To enable automatic cleanup of audit log files, choose a period \(14 to 365 days\) from the list in the field *<Automatic Cleanup\>*.
 
-Audit entries for configuration changes are written for the following categories:
+Audit entries for configuration changes are written for the following categories representing the type of configuration that has been touched:
 
 -   `Account`: A subaccount configuration was changed.
 -   `Configuration`: A new subaccount was added or a disaster recovery switch happened.
@@ -46,6 +46,7 @@ Audit entries for configuration changes are written for the following categories
 -   `PrincipalPropagationConfiguration`: The principal propagation settings were changed.
 -   `TrustSynchronization`: The trust configuration for principal propagation was synchronized.
 -   `IdentityProviderTrust`: The trust configuration for a specific identity provider was changed.
+-   `ApplicationBasedIdentityProviderTrust`: Trust configuration for a specific application was changed \(Neo environment only\).
 -   `ApplicationTrust`: The trust configuration to applications was changed.
 -   `TrustedBackendCertificate`: The trust store certificate was added or removed.
 -   `SccCustomRoles`: Custom role name settings were changed.
@@ -53,13 +54,18 @@ Audit entries for configuration changes are written for the following categories
 -   `AdvancedConnectivity`: Advanced connectivity configuration was changed.
 -   `AdvancedJVM`: Advanced JVM configuration was changed.
 -   `ApplicationConfiguration`: Application-specific connection configuration was changed.
--   `PayloadTrace`: Payload trace \(traffic data\) was activated/deactivated.
+-   `PayloadTrace`: Tunnel traffic trace was activated/deactivated.
+-   • `PayloadSncTrace`: ABAP Cloud SNC traffic trace was activated/deactivated.
 -   `CPICTrace`: The CPIC trace level was changed.
 -   `AuditLogLevel`: The subaccount-specific audit log level was changed.
 -   `CrossAuditLogLevel`: The cross-subaccount audit log level was changed.
 -   `AuditLogCleanup`: The audit log cleanup setting was changed.
+-   `UiCertificate`: The Cloud Connector UI certificate was changed.
+-   `CloudConnectorLoggers`: The trace level for the *Cloud Connector Loggers* was changed.
+-   `OtherLoggers`: The trace level for the *Other Loggers* was changed.
+-   `TlsTrace`: TLS trace was activated/deactivated.
 
-
+Other audit types do not have an additional subcategory that could group the audit entries.
 
 In the *Audit Viewer* section, you can first define filter criteria, then display or download the selected audit entries.
 

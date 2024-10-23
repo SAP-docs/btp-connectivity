@@ -63,6 +63,8 @@ In a next step, choose an operator:
 
 > ### Note:  
 > For the condition `${user_type}`, you can only switch between `Technical` or `Business`. The latter refers to the "classical" propagation of business user information, whereas `Technical` is the propagation of a technical user.
+> 
+> For more information, see [Configuring Technical User Propagation](configuring-technical-user-propagation-b62e588.md).
 
 
 
@@ -83,9 +85,16 @@ Using the selection menu, you can assign values for the following parameters:
 -   `${login_name}` 
 
 > ### Note:  
+> `${name}` is a virtual variable of the token, it represents the principal name. When JWTs \(JSON Web token\) are used, there is no clear definition what to use and therefore the value is determined depending in the user type. Below you can find the order of variables that are checked, and the first one available will define the content of `${name}`:
+> 
+> **Business**: `user_name`, `email`, `mail`, `user_uuid`, `sub`
+> 
+> **Technical**: `client_id`, `cid`, `sub`, `azp`
+
+> ### Note:  
 > If the token provided by the Identity Provider contains additional values that are stored in attributes with different names, but you still want to use it for the subject pattern, you can edit the variable name to place the corresponding attribute value in the subject accordingly. For example, provide `${email}`, if a SAML assertion uses `email` instead of providing `mail`, or `${user_uuid}` if the attribute `user_uuid` representing the global user ID is contained in the assertion.
 > 
-> When using a subaccount in the **Cloud Foundry** environment: The Cloud Connector also offers direct access to custom variables injected in the JWT \(JSON Web token\) by SAP BTP *Authorization & Trust Management* that were taken over from a SAML assertion.
+> When using a subaccount in the **Cloud Foundry** environment: The Cloud Connector also offers direct access to custom variables injected in the JWT \(JSON Web token\) by SAP BTP *Authorization & Trust Management* that were taken over from a SAML assertion, and are available in the *xs.user.attributes* section of the token. If such a custom variable has the same name as one on root level, the one on root level can still be accessed using `cp.` as a prefix to the name. *Example*: if `userId` is present on root level and in *xs.user.attributes*, then `${userId}` will contain the value of the variable in *xs.user.attributes*, and `${cp.userId}` the one of the variable on root level. .
 
 The values for these variables are provided by the trusted identiy provider in the token which is passed to the Cloud Connector and specifies the user that has logged on to the cloud application.
 

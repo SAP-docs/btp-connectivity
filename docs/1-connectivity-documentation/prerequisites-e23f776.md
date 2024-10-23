@@ -671,7 +671,7 @@ x86\_64
 <tr>
 <td valign="top">
 
-Windows 11, Red Hat Enterprise Linux 9
+Windows 11
 
 </td>
 <td valign="top">
@@ -693,7 +693,7 @@ Red Hat Enterprise Linux 9
 </td>
 <td valign="top">
 
-ppc64le
+x86\_64, ppc64le
 
 </td>
 <td valign="top">
