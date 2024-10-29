@@ -16,6 +16,16 @@ The connectivity proxy is a Kubernetes component that connects workloads running
 
 3.  If the connectivity proxy runs in multi-region mode, you can link a transparent proxy configuration for a Destination service instance with a connectivity proxy local region configuration. This can be done at design time by adding an association. Doing this, you won't need to provide the HTTP header `SAP-Connectivity-Region-Configuration-Id` on each request - the transparent proxy will automatically pass it to the connectivity proxy:
 
+> ### Note:  
+> To use the Cloud Connector with a specified *Location ID*, you have two options:
+> 
+> -   Pass the Location ID via the HTTP header "SAP-Connectivity-SCC-Location\_ID"
+> -   Use the property "CloudConnectorLocationId" in the referenced SAP BTP destination.
+> 
+> If both methods are used, the value in the HTTP header will take precedence.
+> 
+> For non-HTTP SAP BTP destinations, only the "CloudConnectorLocationId" property is supported.
+
 **Connectivity Proxy Integration**
 
 > ### Sample Code:  

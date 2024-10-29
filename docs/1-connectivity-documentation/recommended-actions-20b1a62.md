@@ -22,13 +22,13 @@ Before doing any restarts or modifications, it is important that you collect all
     2.  Get the status of the transparent HTTP proxy pods:
 
         ```
-        kubectl get pods -l transparent-proxy.connectivity.api.sap/component=http –n <installation-namespace>
+        kubectl get pods -l transparent-proxy.connectivity.api.sap/component=http-proxy –n <installation-namespace>
         ```
 
     3.  Get the status of the transparent TCP proxy pods:
 
         ```
-        kubectl get pods -l transparent-proxy.connectivity.api.sap/component=tcp –n <installation-namespace>
+        kubectl get pods -l transparent-proxy.connectivity.api.sap/component=tcp-proxy –n <installation-namespace>
         ```
 
 
@@ -68,12 +68,12 @@ This indicates that the transparent proxy is currently considered operational. H
 4.  Restart the transparent HTTP proxy and transparent TCP proxy instances. Example via `kubectl`:
 
     ```
-    k delete po -l transparent-proxy.connectivity.api.sap/component=http -n <installation-namespace>
+    k delete po -l transparent-proxy.connectivity.api.sap/component=http-proxy -n <installation-namespace>
     
     ```
 
     ```
-    k delete po -l transparent-proxy.connectivity.api.sap/component=tcp -n <installation-namespace>
+    k delete po -l transparent-proxy.connectivity.api.sap/component=tcp-proxy -n <installation-namespace>
     ```
 
 5.  Collect the logs from the transparent proxy components after the restart completes.
@@ -98,12 +98,12 @@ This indicates that the transparent proxy itself is indeed having issues. Please
 3.  Restart the transparent HTTP proxy and transparent TCP proxy instances. Example via `kubectl`:
 
     ```
-    k delete po -l transparent-proxy.connectivity.api.sap/component=http -n <installation-namespace>
+    k delete po -l transparent-proxy.connectivity.api.sap/component=http-proxy -n <installation-namespace>
     
     ```
 
     ```
-    k delete po -l transparent-proxy.connectivity.api.sap/component=tcp -n <installation-namespace>
+    k delete po -l transparent-proxy.connectivity.api.sap/component=tcp-proxy -n <installation-namespace>
     ```
 
 4.  Collect logs from the transparent proxy after the restart completes.

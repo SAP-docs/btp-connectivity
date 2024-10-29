@@ -186,8 +186,8 @@ Successful requests return the code 200, or, if there is no content, 204. POST a
 The following general errors can be returned by each API:
 
 -   400 – Invalid request. For example, if parameters are invalid or the API is not supported anymore, or an unexpected state occurs, as well as in case of other non-critical errors.
--   401 – Authorization required.
--   403 – The current Cloud Connector instance does not allow the request. Typically, this is the case when the initial password has not been changed yet.
+-   401 – Authentication is required and has failed or no credentials have been provided.
+-   403 – Request is not allowed. Either the user does not have permission to invoke the API or the initial password has not been changed yet.
 -   404 – The specified entity does not exist.
 -   405 – An entity does not support the requested operation.
 -   409 – Current state of the Cloud Connector does not allow a particular request as it conflicts with certain rules or violates certain constraints.

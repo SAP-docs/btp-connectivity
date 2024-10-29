@@ -75,6 +75,16 @@ This happens in the transparent proxy configuration integration section. For exa
 >     serviceName: connectivity-proxy.<connectivity-proxy-namespace>
 > ```
 
+> ### Note:  
+> To use the Cloud Connector with a specified *Location ID*, you have two options:
+> 
+> -   Pass the Location ID via the HTTP header "SAP-Connectivity-SCC-Location\_ID"
+> -   Use the property "CloudConnectorLocationId" in the referenced SAP BTP destination.
+> 
+> If both methods are used, the value in the HTTP header will take precedence.
+> 
+> For non-HTTP SAP BTP destinations, only the "CloudConnectorLocationId" property is supported.
+
 > ### Caution:  
 > For installation in Kyma environment using the transparent proxy module, the integration between the transparent proxy and the connectivity proxy is automatic.
 

@@ -21,7 +21,7 @@ The availability check of the transparent proxy is the minimal verification that
 The `/status` check performs the following :
 
 -   If there are HTTP custom resources defined → is the `sap-transp-proxy-http` alive and running?
--   If there are TCP custom resources defined → are all the `sap-transp-proxy-tcp` alive and running?
+-   If there are non-HTTP custom resources defined → are all `sap-transp-proxy-tcp` pods alive and running?
 -   Is the `sap-transp-proxy-manager` alive and running?
 
 The overall status provided by the `/status` endpoint is formed in the following way:
