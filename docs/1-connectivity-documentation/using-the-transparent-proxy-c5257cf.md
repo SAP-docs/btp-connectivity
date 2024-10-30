@@ -64,16 +64,31 @@ Once done, the application could start consuming the destination from within the
 
 ## On-Premise Connectivity
 
-The transparent proxy handles HTTP and TCP communication protocols for on-premise destinations. In order to use the on-premise scenarios, the application developer needs to install a connectivity proxy and integrate it with the transparent proxy. For more information, see [Lifecycle Management](lifecycle-management-60c0a45.md) \(connectivity proxy documentation\).
+In order to use on-premise connectivity, you should have installed the connectivity proxy and a Cloud Connector.
 
-This happens in the transparent proxy configuration integration section. For example:
+The connectivity proxy is a Kubernetes component that connects workloads running on a Kubernetes cluster to on-premise systems, which are exposed via the Cloud Connector. The connectivity proxy must be paired to an SAP BTP region to grant access to the Cloud Connectors connected to that region. The SAP BTP domain model \(subaccounts\) is used to target a particular Cloud Connector.
 
-> ### Sample Code:  
-> ```
-> integration:
->   connectivityProxy:
->     serviceName: connectivity-proxy.<connectivity-proxy-namespace>
-> ```
+1.  Install the connectivity proxy either via Helm or as a Kyma module.
+
+    For more information, see [Operations via Helm](operations-via-helm-23fc110.md) and [Connectivity Proxy in the Kyma Environment](connectivity-proxy-in-the-kyma-environment-8dd1690.md).
+
+2.  Install the Cloud Connector.
+
+    For more information, see [Installation](installation-57ae3d6.md).
+
+3.  Connect your subaccount to the Cloud Connector and expose your systems.
+
+    For more information, see [Configuration](configuration-ec68ee2.md).
+
+4.  Integrate your connectivity proxy in the transparent proxy configuration:
+
+    > ### Sample Code:  
+    > ```
+    > integration:
+    >   connectivityProxy:
+    >     serviceName: connectivity-proxy.<connectivity-proxy-namespace>
+    > ```
+
 
 > ### Note:  
 > To use the Cloud Connector with a specified *Location ID*, you have two options:

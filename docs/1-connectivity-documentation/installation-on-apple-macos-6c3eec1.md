@@ -21,7 +21,7 @@ Installing the Cloud Connector on an Apple macOS operating system.
 
     If you are running Apple macOS on an INTEL x86 64-bit CPU and you want to use SAP JVM, you can download it from the [SAP Development Tools for Eclipse](https://tools.hana.ondemand.com/#cloud) page.
 
-    Alternatively supported SapMachine JDK versions for macOS on aarch64 and x64 processor architectures can be downloaded from the [SapMachine Homepage](https://sap.github.io/SapMachine/).
+    Alternatively supported SapMachine JDK versions for macOS on aarch64 and x64 processor architectures can be downloaded from the [SapMachine Homepage](https://sapmachine.io/).
 
 -   Environment variable *<JAVA\_HOME\>* must be set to the Java installation directory so that the `bin` subdirectory can be found. Alternatively, you can add the Java installation's `bin` subdirectory to the *<PATH\>* variable.
 

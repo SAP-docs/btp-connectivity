@@ -12,7 +12,14 @@ Configure *technical user propagation* for the transparent proxy for Kubernetes.
 
 ## Prerequisites
 
-The transparent proxy handles HTTP communication protocol for on-premise destinations which use *technical user propagation*. To integrate this functionality, you must create an SAP BTP destination. This destination should have `Type` "HTTP" and `Authentication` "OAuth2TechnicalUserPropagation", for example:
+The transparent proxy handles HTTP communication protocol for on-premise destinations which use *technical user propagation*.
+
+To integrate this functionality, you must:
+
+-   Fulfill the on-premise/private cloud connectivity prerequisites
+-   Create an SAP BTP Destination
+
+This destination should have `Type` "HTTP" and `Authentication` "OAuth2TechnicalUserPropagation", for example:
 
 **Technical User Propagation Destination**
 

@@ -114,7 +114,12 @@ Mandatory when ldap.authentication is "BasicAuthentication"
 
 ## Prerequisites
 
-To integrate this functionality, you must create an SAP BTP destination. This destination should have `Type` "LDAP" and `ldap.proxyType` "OnPremise", for example:
+To integrate this functionality, you must:
+
+-   Fulfill the on-premise/private cloud connectivity prerequisites
+-   Create an SAP BTP Destination
+
+This destination should have `Type` "LDAP" and `ldap.proxyType` "OnPremise", for example:
 
 **LDAP Destination**
 

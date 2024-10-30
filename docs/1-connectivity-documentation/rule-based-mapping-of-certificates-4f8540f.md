@@ -9,7 +9,7 @@ Learn how to efficiently map short-lived certificates to users in the ABAP serve
 
 To perform rule-based mapping of certificates in the ABAP server, proceed as follows:
 
-1.  Enter a dynamic parameter using transaction RZ11.
+1.  Enter a dynamic parameter using transaction RZ10.
 
     1.  Enter the `login/certificate_mapping_rulebased` parameter.
     2.  Choose the *Change Value* button.

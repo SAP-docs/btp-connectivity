@@ -45,11 +45,11 @@ Choose *Import a certificate* for option 1:
 
 Choose *Generate a certificate signing request* for option 2:
 
-![](images/SCC_CS_InitialConfigHTTP_-_CSR_45302a1.png)
+![](images/SCC_Configure_CA_Certificate_1_5ebfffb.png)
 
 Choose *Create and import a self-signed certificate* if you want to use option 3:
 
-![](images/SCC_CS_InitialConfigHTTP_-_Certificate_Selfsigned_e82bc08.png)
+![](images/SCC_Configure_CA_Certificate_2_7b1db4d.png)
 
 In particular for this option, it is useful to export the public key of the CA by choosing the respective button.
 

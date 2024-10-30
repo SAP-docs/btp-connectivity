@@ -12,7 +12,14 @@ Principal propagation, also known as *user propagation*, lets you perform a si
 
 ## Prerequisites
 
-The transparent proxy handles HTTP communication protocol for on-premise destinations which use *principal propagation*. To integrate this functionality, you must create an SAP BTP destination. This destination should have `Type` "HTTP" and `Authentication` "PrincipalPropagation", for example:
+The transparent proxy handles HTTP communication protocol for on-premise destinations which use *principal propagation*.
+
+To integrate this functionality, you must:
+
+-   Fulfill the on-premise/private cloud connectivity prerequisites
+-   Create an SAP BTP Destination
+
+This destination should have `Type` "HTTP" and `Authentication` "PrincipalPropagation", for example:
 
 **Principal Propagation Destination**
 

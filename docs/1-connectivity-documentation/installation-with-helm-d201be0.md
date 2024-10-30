@@ -5,7 +5,7 @@
 Use the Helm chart to configure and manage the lifecycle of the transparent proxy.
 
 > ### Note:  
-> Current version of the transparent proxy is 1.6.1.
+> Current version of the transparent proxy is 1.6.2.
 
 The transparent proxy delivery includes a Helm chart that you can use for lifecycle management. The Helm allows full configuration via [the standard Helm method of a "values.yaml" file](https://helm.sh/docs/chart_template_guide/values_files/).
 
@@ -265,7 +265,7 @@ To deploy the transparent proxy on a Kubernetes cluster, execute the following s
 
 **Registry:** 73554900100900006891.helmsrv.cdn.repositories.cloud.sap
 
-**Tag:** 1.6.1
+**Tag:** 1.6.2
 
 **Authorization**: See [RBSC documentation](https://help.sap.com/viewer/0a64be17478d4f5ba45d14ab62b0d74c/Cloud/en-US/7e83dfc309834942b441fc2106c5b7f5.html).
 

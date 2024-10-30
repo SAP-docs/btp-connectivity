@@ -80,7 +80,10 @@ OnPremise
 
 ## Prerequisites
 
-To integrate this functionality, you must create an SAP BTP destination.
+To integrate this functionality, you must:
+
+-   Fulfill the on-premise/private cloud connectivity prerequisites
+-   Create an SAP BTP Destination
 
 This destination must have `Type` "TCP" and `ProxyType` "OnPremise".
 
