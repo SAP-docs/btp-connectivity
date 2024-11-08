@@ -295,7 +295,7 @@ Oracle JDK 64-bit
 <tr>
 <td valign="top" rowspan="3">
 
-[SAP Machine](https://sap.github.io/SapMachine/) 64-bit
+[SAP Machine](https://sapmachine.io/) 64-bit
 
 </td>
 <td valign="top">
