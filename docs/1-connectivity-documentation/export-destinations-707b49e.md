@@ -21,7 +21,10 @@ You have created a destination in the ** editor.
 3.  Browse to the location on your local file system where you want to save the new destination.
 
     -   If the destination does not contain client certificate authentication, it is saved as a single configuration file.
-    -   If the destination provides client certificate data, it is saved as an archive. The content of this archive contains the main configuration file and a single or multiple PEM files. The actual number of PEM files depends on the amount of aliases inside the client certificate. Each PEM file will be named after an alias and will contain the public data associated with that alias.
+    -   If the destination provides client certificate data, it is saved as an archive.
+
+        The content of this archive includes the main configuration file and a single or multiple PEM files. The actual number of PEM files depends on the amount of aliases inside the client certificate. Each PEM file is named after an alias and contains the public data associated with that alias.
+
 
 
 **Related Information**  
