@@ -1484,6 +1484,70 @@ connectivitytunnel.cf.br10.hana.ondemand.com
 <tr>
 <td valign="top" rowspan="3">
 
+Brazil \(São Paulo\) - Azure
+
+\(`cf.br20.hana.ondemand.com`\)
+
+> ### Caution:  
+> Additional IP addresses will be added to this region.
+> 
+> **Action:**
+> 
+> If you restrict system access by *allowlisting IPs* in firewall rules, make sure you update your configuration as soon as possible. **The additional IP addresses will be used after January 19, 2025**.
+
+
+
+</td>
+<td valign="top" colspan="2">
+
+connectivitynotification.cf.br20.hana.ondemand.com
+
+</td>
+<td valign="top">
+
+`4.228.118.21`
+
+**Additonal IP address:**
+
+`20.201.104.57`
+
+</td>
+</tr>
+<tr>
+<td valign="top" colspan="2">
+
+connectivitycertsigning.cf.br20.hana.ondemand.com
+
+</td>
+<td valign="top">
+
+`4.228.118.21`
+
+**Additonal IP address:**
+
+`20.201.104.57`
+
+</td>
+</tr>
+<tr>
+<td valign="top" colspan="2">
+
+connectivitytunnel.cf.br20.hana.ondemand.com
+
+</td>
+<td valign="top">
+
+`4.228.118.21`
+
+**Additonal IP address:**
+
+`20.201.105.31`
+
+</td>
+</tr>
+<tr>
+<td valign="top" rowspan="3">
+
 Japan \(Tokyo\) - AWS
 
 \(`cf.jp10.hana.ondemand.com`\)
@@ -1934,6 +1998,49 @@ connectivitytunnel.cf.ap21.hana.ondemand.com
 <tr>
 <td valign="top" rowspan="3">
 
+Australia \(Sydney\) - Google Cloud
+
+\(`cf.ap30.hana.ondemand.com`\)
+
+</td>
+<td valign="top" colspan="2">
+
+connectivitynotification.cf.ap30.hana.ondemand.com
+
+</td>
+<td valign="top">
+
+`35.244.71.16`
+
+</td>
+</tr>
+<tr>
+<td valign="top" colspan="2">
+
+connectivitycertsigning.cf.ap30.hana.ondemand.com
+
+</td>
+<td valign="top">
+
+`35.244.71.16`
+
+</td>
+</tr>
+<tr>
+<td valign="top" colspan="2">
+
+connectivitytunnel.cf.ap30.hana.ondemand.com
+
+</td>
+<td valign="top">
+
+`35.244.71.16`
+
+</td>
+</tr>
+<tr>
+<td valign="top" rowspan="3">
+
 Canada \(Montreal\) - AWS
 
 \(`cf.ca10.hana.ondemand.com`\)
@@ -2185,6 +2292,49 @@ connectivitytunnel.cf.cn40.platform.sapcloud.cn
 <td valign="top">
 
 `139.224.7.71`
+
+</td>
+</tr>
+<tr>
+<td valign="top" rowspan="3">
+
+KSA \(Dammam\) - Google Cloud
+
+\(`cf.sa30.hana.ondemand.com`\)
+
+</td>
+<td valign="top" colspan="2">
+
+connectivitynotification.cf.sa30.hana.ondemand.com
+
+</td>
+<td valign="top">
+
+`34.166.32.46` 
+
+</td>
+</tr>
+<tr>
+<td valign="top" colspan="2">
+
+connectivitycertsigning.cf.sa30.hana.ondemand.com
+
+</td>
+<td valign="top">
+
+`34.166.32.46`
+
+</td>
+</tr>
+<tr>
+<td valign="top" colspan="2">
+
+connectivitytunnel.cf.sa30.hana.ondemand.com
+
+</td>
+<td valign="top">
+
+`34.166.32.46`
 
 </td>
 </tr>
