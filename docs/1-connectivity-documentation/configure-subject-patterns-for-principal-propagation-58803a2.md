@@ -130,8 +130,13 @@ You can change the validity settings by choosing the *Edit* button.
 
 ![](images/SCC_SubjectPattern_-_Validity_c6975b3.png)
 
-**Related Information**  
 
 
-[Server Certificate Authentication](server-certificate-authentication-e75d7f1.md "Create and configure a Server Certificate destination for an application.")
+<a name="loio58803a25e5894d759e0df1c5513b41ed__section_zrk_h5h_jdc"/>
+
+## Related Information
+
+[Principal Propagation SSO Authentication for HTTP](principal-propagation-sso-authentication-for-http-73194cc.md)
+
+[Establish Trust and Federation with UAA Using Any SAML Identity Provider](https://help.sap.com/docs/btp/sap-business-technology-platform/establish-trust-and-federation-with-uaa-using-any-saml-identity-provider?version=Cloud) 
 

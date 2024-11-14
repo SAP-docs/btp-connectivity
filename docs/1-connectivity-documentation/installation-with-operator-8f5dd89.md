@@ -6,6 +6,22 @@ Use the operator to install the transparent proxy for Kubernetes.
 
 
 
+<a name="loio8f5dd89fb3d349ab81282d0ee33f4f8e__section_rcj_qmn_jdc"/>
+
+## Prerequisites
+
+**Integration with Destination Service**
+
+With the BTP Operator in place, the transparent proxy will create a Destination service instance in your Kyma cluster and link itself to it. If it is not present, follow the instructions in [Destination Service Integration](destination-service-integration-cd02e5c.md) \(step 3: *Prepare Destination service instance credentials*\).
+
+**Encryption**
+
+Istio injection is enabled by default. If Istio is present in the cluster, traffic between the workloads will be encrypted, making your installation more secure. The communication with the transparent proxy will be secure, as well as the communication from the transparent proxy to the connectivity proxy, if a connectivity proxy is present.
+
+If Istio is not present, you should configure encryption with the [cert-manager](https://cert-manager.io/). Check the [Configuration Guide](configuration-guide-2a22cd7.md) to modify the configuration settings according to your setup, for example, referencing your cert-manager `Issuer` or `ClusterIssuer`.
+
+
+
 <a name="loio8f5dd89fb3d349ab81282d0ee33f4f8e__section_dxy_ypw_hcc"/>
 
 ## Install/Upgrade
@@ -1051,6 +1067,13 @@ Example transparent proxy custom resource configuration:
 >         internal:
 >           encryptionEnabled: true
 >     integration:
+>       #destinationService:
+>         #defaultInstanceName: <instance-name>
+>         #instances:
+>           #- name: <instance-name>
+>             #serviceCredentials:
+>               #secretKey: <secret-key>
+>               #secretName: <secret-name>
 >       serviceMesh:
 >         istio:
 >           istio-injection: enabled

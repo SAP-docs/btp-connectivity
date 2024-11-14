@@ -800,7 +800,7 @@ Back to [Content](prerequisites-e23f776.md#loioe23f776e4d594fdbaeeb1196d47bbcc0_
 You must have Internet connection at least to the following Connectivity service hosts \(depending on the region\), to which you can connect your Cloud Connector. All connections to the hosts are TLS-based and connect to port 443.
 
 > ### Remember:  
-> For some solutions of the BTP portfolio, you must include additional hosts to set up an on-premise connectivity scenario with the Cloud Connector. This applies, for example, to: SAP Data Intelligence, SAP HANA Cloud, Business Appilcation Studio, and SAP Build Apps. Check the respective solution documentation for details.
+> For some solutions of the BTP portfolio, you must include additional hosts to set up an on-premise connectivity scenario with the Cloud Connector. This applies, for example, to: SAP Data Intelligence, SAP HANA Cloud, Business Appilcation Studio, SAP Cloud Identity Services, and SAP Build Apps. Check the respective solution documentation for details.
 
 > ### Note:  
 > To configure the Cloud Connector for SAP Datasphere, see also [Configure Cloud Connector](https://help.sap.com/docs/SAP_DATASPHERE/9f804b8efa8043539289f42f372c4862/f289920243a34127b0c8b13012a1a4b5.html) \(SAP Datasphere documentation\).
