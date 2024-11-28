@@ -16,7 +16,7 @@ You have logged into the cockpit and opened the *Destinations* editor.
 
 ## Procedure
 
-1.  Choose *New Destination*.
+1.  Choose *Create Destination*.
 
     > ### Note:  
     > In section **Destination Configuration**, do not change the default tab *Blank Template*. Tab *Service Instance* only applies for HTTP destinations.

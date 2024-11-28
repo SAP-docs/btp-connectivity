@@ -48,7 +48,7 @@ The shadow instance regularly checks whether the master instance is still alive.
 
     The shadow instance next attempts to establish a tunnel to the given SAP BTP subaccount. If the connection attempt fails to all configured subaccounts \(for whatever reason\), the shadow instance remains in "shadow status", periodically pinging the master and trying to connect to the cloud, while the master is not yet reachable.
 
--   Otherwise, if the the tunnel to the cloud side can be opened, the shadow instance will take over the master role. From this moment, the shadow instance displays the UI of a master instance and allows the usual operations of a master instance, for example, starting/stopping tunnels, modifying the configuration, an so on.
+-   Otherwise, if the the tunnel to the cloud side can be opened, the shadow instance will take over the master role. From this moment, the shadow instance displays the UI of a master instance and offers the usual operations of a master instance, for example, starting/stopping tunnels, modifying the configuration, an so on.
 
     This is, in particular, also the case if the master is still alive, but the network connection between shadow and master is corrupted. This leads to a *master-master* setup, which is automatically detected on the former master once the network between the two instances recovers. The former master will then automatically relinquish its master role and assume the shadow role to get back to the desired setup.
 
@@ -61,7 +61,12 @@ When the original master instance restarts, it first checks whether the register
 The master considers a shadow as lost, if no check/ping is received from that shadow instance during a time interval that is equal to three times the check period. Only after this much time has elapsed can another shadow system register itself.
 
 > ### Note:  
-> On the master, you can manually trigger failover by selecting the *Switch Roles* button. If the shadow is available, the switch is made as expected. Even if the shadow instance cannot be reached, the role switch of the master may still be enforced. Select *Switch Roles* only if you are absolutely certain it is the correct action to take for your current circumstances.
+> On the master instance, you can manually trigger failover \(if a shadow instance is present\) by selecting the *Switch Roles* button.
 > 
-> Even with the active role switch, zero downtime is not guaranteed. Depending on various aspects and timings, there may be short time slots in which establishing new connections fails. When switching the role, all active requests on the master will be broken as the sockets will be closed.
+> Even with the active role switch, zero downtime is not guaranteed. Depending on various aspects and timings, there may be short time slots in which establishing new connections fails. When switching the role, all active requests on the master will be aborted as the sockets will be closed.
+> 
+> An attempt to switch roles will be rejected if none of the subaccounts can be connected on the shadow side as this may indicate that the shadow, which is to take over as master, is not able to process requests. However, the inability to connect subaccounts may simply be due to expired subaccount certificates. This is not necessarily an issue while subaccounts are connected, but may become an issue when attempting to connect. Therefore, make sure the subaccount certificates are valid before switching roles.
+
+> ### Note:  
+> On the master instance, you can force a role switch to assume the shadow role even if no shadow is connected. To do so, press the *Become Shadow* button \(which is the re-labeled *Switch Roles* button\). Enforce the role change only if you are absolutely sure that this is the correct procedure. Should you end up without any master instance after all, use the script *changerole* located in the root installation directory to fix the issue.
 

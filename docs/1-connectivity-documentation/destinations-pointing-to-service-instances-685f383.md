@@ -37,7 +37,7 @@ Using the *Destinations Pointing to Service Instances* template, you only have t
 
 ## Procedure
 
-1.  Choose *New Destination*.
+1.  Choose *Create Destination*.
 2.  Select the tab *Service Instance* in the **Destination Configuration** section.
 3.  In the *<Service Instance\>* dropdown list, you find all the service instances, grouped by space, where you have the role Space Developer.
 4.  Select a service instance.

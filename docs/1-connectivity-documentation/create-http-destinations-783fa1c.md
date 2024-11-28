@@ -16,7 +16,7 @@ You have logged into the cockpit and opened the *Destinations* editor.
 
 ## Procedure
 
-1.  Choose *New Destination*.
+1.  Choose *Create Destination*.
 
     > ### Note:  
     > In section **Destination Configuration**, do not change the default tab *Blank Template*, unless you want to create a destination for a specific service instance in a subscription-based scenario. For more information, see [Destinations Pointing to Service Instances](destinations-pointing-to-service-instances-685f383.md).

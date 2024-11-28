@@ -46,5 +46,7 @@ Proceed as follows to update your subaccount certificate:
 
     > ### Tip:  
     > When using SAP Cloud Identity Services - Identity Authentication \(IAS\) as platform identity provider with two-factor authentication \(2FA / MFA\) for your subaccount, you can simply append the required token to the regular password. For example, if your password is "eX7?6rUm" and the one-time passcode is "123456", you must enter "eX7?6rUm123456" into the *<Password\>* field.
+    > 
+    > **Appending the two-factor authentication** \(2FA / MFA\) token to the regular password **is not required** when updating the Cloud Connector subaccount certificate in the **Neo environment**.
 
 
