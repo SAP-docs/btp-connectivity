@@ -25,7 +25,7 @@ Before you start using these APIs, please also read the general introduction to 
 
 ## Prerequisites
 
-You must use*Basic Authentication* or *form field* authentication to read the monitoring data via API.
+You must use*Basic Authentication* or *form field* authentication to read the monitoring data via API. If certificate-based authentication has been configured for the Cloud Connector, a client certificate must be used instead.
 
 Users must be assigned to the roles `sccmonitoring` or `sccadmin`.
 
