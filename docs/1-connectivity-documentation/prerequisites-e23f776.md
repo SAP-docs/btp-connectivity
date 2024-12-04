@@ -875,7 +875,7 @@ connectivitynotification.cf.eu10.hana.ondemand.com
 
 `3.124.222.77`, `3.122.209.241`, `3.124.208.223`, `18.159.31.22`, `3.69.186.98`, `3.77.195.119`
 
-**Additonal IP addresses:**
+**Additional IP addresses:**
 
 **3.123.247.156, 18.184.184.134, 3.76.166.75**
 
@@ -891,7 +891,7 @@ connectivitycertsigning.cf.eu10.hana.ondemand.com
 
 `3.124.222.77`, `3.122.209.241`, `3.124.208.223`, `18.159.31.22`, `3.69.186.98`, `3.77.195.119`
 
-**Additonal IP addresses:**
+**Additional IP addresses:**
 
 **3.123.247.156, 18.184.184.134, 3.76.166.75**
 
@@ -907,7 +907,7 @@ connectivitytunnel.cf.eu10.hana.ondemand.com
 
 `3.124.222.77`, `3.122.209.241`, `3.124.208.223`, `18.159.31.22`, `3.69.186.98`, `3.77.195.119`
 
-**Additonal IP addresses:**
+**Additional IP addresses:**
 
 **35.157.237.81, 52.58.116.80, 18.196.77.73**
 
@@ -923,7 +923,7 @@ connectivitytunnel.cf.eu10-002.hana.ondemand.com
 
 `3.64.227.236`, `3.126.229.22`, `18.193.180.19`, `18.153.123.11`, `3.121.37.195`, `3.73.215.90`
 
-**Additonal IP addresses:**
+**Additional IP addresses:**
 
 **3.72.125.186, 18.199.43.118, 3.69.159.226**
 
@@ -939,7 +939,7 @@ connectivitytunnel.cf.eu10-003.hana.ondemand.com
 
 `3.127.77.3`, `3.64.196.58`, `18.156.151.247`, `18.197.252.154`, `3.79.137.29`, `52.58.93.50`
 
-**Additonal IP addresses:**
+**Additional IP addresses:**
 
 **3.65.23.248, 18.192.224.62, 35.159.136.14**
 
@@ -955,7 +955,7 @@ connectivitytunnel.cf.eu10-004.hana.ondemand.com
 
 `3.65.185.47`, `3.70.38.218`, `18.196.206.8`, `3.73.109.100`, `3.73.8.210`, `52.59.18.183`
 
-**Additonal IP addresses:**
+**Additional IP addresses:**
 
 **3.125.225.167, 18.158.49.214, 35.157.19.103**
 
@@ -987,7 +987,7 @@ connectivitynotification.cf.eu11.hana.ondemand.com
 
 `3.124.207.41`, `18.157.105.117`, `18.156.209.198`, `3.66.26.249`, `3.72.216.204`, `3.74.99.245`
 
-**Additonal IP addresses:**
+**Additional IP addresses:**
 
 **3.65.41.79, 35.159.179.221, 52.59.124.48**
 
@@ -1003,7 +1003,7 @@ connectivitycertsigning.cf.eu11.hana.ondemand.com
 
 `3.124.207.41`, `18.157.105.117`, `18.156.209.198`, `3.66.26.249`, `3.72.216.204`, `3.74.99.245`
 
-**Additonal IP addresses:**
+**Additional IP addresses:**
 
 **3.65.41.79, 35.159.179.221, 52.59.124.48**
 
@@ -1019,7 +1019,7 @@ connectivitytunnel.cf.eu11.hana.ondemand.com
 
 `3.124.207.41`, `18.157.105.117`, `18.156.209.198`, `3.66.26.249`, `3.72.216.204`, `3.74.99.245`
 
-**Additonal IP addresses:**
+**Additional IP addresses:**
 
 **3.78.138.146, 3.78.214.251, 18.199.183.133**
 
@@ -1051,7 +1051,7 @@ connectivitynotification.cf.eu20.hana.ondemand.com
 
 `40.119.153.88`
 
-**Additonal IP addresses:**
+**Additional IP addresses:**
 
 **57.153.48.23**
 
@@ -1067,7 +1067,7 @@ connectivitycertsigning.cf.eu20.hana.ondemand.com
 
 `40.119.153.88`
 
-**Additonal IP addresses:**
+**Additional IP addresses:**
 
 **57.153.48.23**
 
@@ -1083,7 +1083,7 @@ connectivitytunnel.cf.eu20.hana.ondemand.com
 
 `40.119.153.88`
 
-**Additonal IP addresses:**
+**Additional IP addresses:**
 
 **57.153.52.157**
 
@@ -1099,7 +1099,7 @@ connectivitytunnel.cf.eu20-001.hana.ondemand.com
 
 `20.82.83.59`
 
-**Additonal IP addresses:**
+**Additional IP addresses:**
 
 **20.67.69.84**
 
@@ -1176,7 +1176,7 @@ connectivitynotification.cf.us10.hana.ondemand.com
 
 `52.23.189.23`, `52.4.101.240`, `52.23.1.211`, `18.213.242.208`, `3.214.110.153`, `34.205.56.51`
 
-**Additonal IP addresses:**
+**Additional IP addresses:**
 
 **98.82.227.152, 107.20.252.91, 34.198.33.88**
 
@@ -1192,7 +1192,7 @@ connectivitycertsigning.cf.us10.hana.ondemand.com
 
 `52.23.189.23`, `52.4.101.240`, `52.23.1.211`, `18.213.242.208`, `3.214.110.153`, `34.205.56.51`
 
-**Additonal IP addresses:**
+**Additional IP addresses:**
 
 **98.82.227.152, 107.20.252.91, 34.198.33.88**
 
@@ -1208,7 +1208,7 @@ connectivitytunnel.cf.us10.hana.ondemand.com
 
 `52.23.189.23`, `52.4.101.240`, `52.23.1.211`, `18.213.242.208`, `3.214.110.153`, `34.205.56.51`
 
-**Additonal IP addresses:**
+**Additional IP addresses:**
 
 **54.147.47.110, 18.214.162.12, 44.206.11.12**
 
@@ -1224,7 +1224,7 @@ connectivitytunnel.cf.us10-001.hana.ondemand.com
 
 `3.220.114.17`, `3.227.182.44`, `52.86.131.53`, `44.218.82.203`, `44.219.57.163`, `50.16.106.103` 
 
-**Additonal IP addresses:**
+**Additional IP addresses:**
 
 **54.157.55.28, 3.234.87.202, 50.17.185.79**
 
@@ -1240,7 +1240,7 @@ connectivitytunnel.cf.us10-002.hana.ondemand.com
 
 `34.202.68.0`, `54.234.152.59`, `107.20.66.86`, `3.214.116.95`, `54.144.230.36`, `54.226.37.104`
 
-**Additonal IP addresses:**
+**Additional IP addresses:**
 
 **34.234.117.43, 34.237.168.235, 44.221.148.86**
 
@@ -1272,7 +1272,7 @@ connectivitynotification.cf.us20.hana.ondemand.com
 
 `40.91.120.100` 
 
-**Additonal IP addresses:**
+**Additional IP addresses:**
 
 **52.137.100.108**
 
@@ -1288,7 +1288,7 @@ connectivitycertsigning.cf.us20.hana.ondemand.com
 
 `40.91.120.100`
 
-**Additonal IP addresses:**
+**Additional IP addresses:**
 
 **52.137.100.108**
 
@@ -1304,7 +1304,7 @@ connectivitytunnel.cf.us20.hana.ondemand.com
 
 `40.91.120.100`
 
-**Additonal IP addresses:**
+**Additional IP addresses:**
 
 **52.137.108.200**
 
@@ -1336,7 +1336,7 @@ connectivitynotification.cf.us21.hana.ondemand.com
 
 `40.88.52.17`
 
-**Additonal IP addresses:**
+**Additional IP addresses:**
 
 **48.216.153.6**
 
@@ -1352,7 +1352,7 @@ connectivitycertsigning.cf.us21.hana.ondemand.com
 
 `40.88.52.17`
 
-**Additonal IP addresses:**
+**Additional IP addresses:**
 
 **48.216.153.6**
 
@@ -1368,7 +1368,7 @@ connectivitytunnel.cf.us21.hana.ondemand.com
 
 `40.88.52.17`
 
-**Additonal IP addresses:**
+**Additional IP addresses:**
 
 **48.216.153.226**
 
@@ -1443,7 +1443,7 @@ connectivitynotification.cf.br10.hana.ondemand.com
 
 `18.229.91.150`, `52.67.135.4`, `54.232.179.204`, `18.228.53.198`, `52.67.149.240`, `54.94.179.209`
 
-**Additonal IP addresses:**
+**Additional IP addresses:**
 
 **177.71.155.99, 177.71.245.233, 18.231.25.174**
 
@@ -1459,7 +1459,7 @@ connectivitycertsigning.cf.br10.hana.ondemand.com
 
 `18.229.91.150`, `52.67.135.4`, `54.232.179.204`, `18.228.53.198`, `52.67.149.240`, `54.94.179.209`
 
-**Additonal IP addresses:**
+**Additional IP addresses:**
 
 **177.71.155.99, 177.71.245.233, 18.231.25.174**
 
@@ -1475,7 +1475,7 @@ connectivitytunnel.cf.br10.hana.ondemand.com
 
 `18.229.91.150`, `52.67.135.4`, `54.232.179.204`, `18.228.53.198`, `52.67.149.240`, `54.94.179.209`
 
-**Additonal IP addresses:**
+**Additional IP addresses:**
 
 **18.229.78.152, 54.232.119.169, 18.228.231.243**
 
@@ -1507,7 +1507,7 @@ connectivitynotification.cf.br20.hana.ondemand.com
 
 `4.228.118.21`
 
-**Additonal IP address:**
+**Additional IP address:**
 
 `20.201.104.57`
 
@@ -1523,7 +1523,7 @@ connectivitycertsigning.cf.br20.hana.ondemand.com
 
 `4.228.118.21`
 
-**Additonal IP address:**
+**Additional IP address:**
 
 `20.201.104.57`
 
@@ -1539,7 +1539,7 @@ connectivitytunnel.cf.br20.hana.ondemand.com
 
 `4.228.118.21`
 
-**Additonal IP address:**
+**Additional IP address:**
 
 `20.201.105.31`
 
@@ -1571,7 +1571,7 @@ connectivitynotification.cf.jp10.hana.ondemand.com
 
 `13.114.117.83`, `3.114.248.68`, `3.113.252.15`, `18.178.155.134`, `57.180.140.5`, `57.180.145.179`
 
-**Additonal IP addresses:**
+**Additional IP addresses:**
 
 **35.74.196.228, 35.75.166.160, 52.198.15.94**
 
@@ -1587,7 +1587,7 @@ connectivitycertsigning.cf.jp10.hana.ondemand.com
 
 `13.114.117.83`, `3.114.248.68`, `3.113.252.15`, `18.178.155.134`, `57.180.140.5`, `57.180.145.179`
 
-**Additonal IP addresses:**
+**Additional IP addresses:**
 
 **35.74.196.228, 35.75.166.160, 52.198.15.94**
 
@@ -1603,7 +1603,7 @@ connectivitytunnel.cf.jp10.hana.ondemand.com
 
 `13.114.117.83`, `3.114.248.68`, `3.113.252.15`, `18.178.155.134`, `57.180.140.5`, `57.180.145.179`
 
-**Additonal IP addresses:**
+**Additional IP addresses:**
 
 **13.114.120.142, 18.176.244.8, 54.92.104.72**
 
@@ -1635,7 +1635,7 @@ connectivitynotification.cf.jp20.hana.ondemand.com
 
 `20.43.89.91`
 
-**Additonal IP addresses:**
+**Additional IP addresses:**
 
 **48.218.89.49**
 
@@ -1651,7 +1651,7 @@ connectivitycertsigning.cf.jp20.hana.ondemand.com
 
 `20.43.89.91`
 
-**Additonal IP addresses:**
+**Additional IP addresses:**
 
 **48.218.89.49**
 
@@ -1667,7 +1667,7 @@ connectivitytunnel.cf.jp20.hana.ondemand.com
 
 `20.43.89.91`
 
-**Additonal IP addresses:**
+**Additional IP addresses:**
 
 **48.218.90.204**
 
@@ -1699,7 +1699,7 @@ connectivitynotification.cf.ap10.hana.ondemand.com
 
 `13.236.220.84`, `13.211.73.244`, `3.105.95.184`, `13.55.188.95`, `3.105.212.249`, `3.106.45.106`
 
-**Additonal IP addresses:**
+**Additional IP addresses:**
 
 **3.107.130.66, 3.104.152.189, 3.105.214.80**
 
@@ -1715,7 +1715,7 @@ connectivitycertsigning.cf.ap10.hana.ondemand.com
 
 `13.236.220.84`, `13.211.73.244`, `3.105.95.184`, `13.55.188.95`, `3.105.212.249`, `3.106.45.106`
 
-**Additonal IP addresses:**
+**Additional IP addresses:**
 
 **3.107.130.66, 3.104.152.189, 3.105.214.80**
 
@@ -1731,7 +1731,7 @@ connectivitytunnel.cf.ap10.hana.ondemand.com
 
 `13.236.220.84`, `13.211.73.244`, `3.105.95.184`, `13.55.188.95`, `3.105.212.249`, `3.106.45.106`
 
-**Additonal IP addresses:**
+**Additional IP addresses:**
 
 **13.54.123.199, 13.55.164.105, 3.106.145.100**
 
@@ -1763,7 +1763,7 @@ connectivitynotification.cf.ap11.hana.ondemand.com
 
 `3.0.9.102`,`18.140.39.70`, `18.139.147.53`, `13.229.158.122`, `18.140.228.217`, `52.74.215.89`
 
-**Additonal IP addresses:**
+**Additional IP addresses:**
 
 **52.76.177.178, 13.213.177.227, 13.251.142.208**
 
@@ -1779,7 +1779,7 @@ connectivitycertsigning.cf.ap11.hana.ondemand.com
 
 `3.0.9.102`, `18.140.39.70`, `18.139.147.53`, `13.229.158.122`, `18.140.228.217`, `52.74.215.89`
 
-**Additonal IP addresses:**
+**Additional IP addresses:**
 
 **52.76.177.178, 13.213.177.227, 13.251.142.208**
 
@@ -1795,7 +1795,7 @@ connectivitytunnel.cf.ap11.hana.ondemand.com
 
 `3.0.9.102`, `18.140.39.70`, `18.139.147.53`, `13.229.158.122`, `18.140.228.217`, `52.74.215.89`
 
-**Additonal IP addresses:**
+**Additional IP addresses:**
 
 **13.215.4.190, 13.229.41.216, 52.76.219.61**
 
@@ -1827,7 +1827,7 @@ connectivitynotification.cf.ap12.hana.ondemand.com
 
 `3.35.255.45`, `3.35.106.215`, `3.35.215.12`, `13.209.236.215`, `43.201.194.105`, `43.202.204.5`
 
-**Additonal IP addresses:**
+**Additional IP addresses:**
 
 **3.37.25.26, 43.202.209.5, 54.180.187.39**
 
@@ -1843,7 +1843,7 @@ connectivitycertsigning.cf.ap12.hana.ondemand.com
 
 `3.35.255.45`, `3.35.106.215`, `3.35.215.12`, `13.209.236.215`, `43.201.194.105`, `43.202.204.5`
 
-**Additonal IP addresses:**
+**Additional IP addresses:**
 
 **3.37.25.26, 43.202.209.5, 54.180.187.39**
 
@@ -1859,7 +1859,7 @@ connectivitytunnel.cf.ap12.hana.ondemand.com
 
 `3.35.255.45`, `3.35.106.215`, `3.35.215.12`, `13.209.236.215`, `43.201.194.105`, `43.202.204.5`
 
-**Additonal IP addresses:**
+**Additional IP addresses:**
 
 **3.37.1.194, 13.124.112.64, 54.180.67.191**
 
@@ -1891,7 +1891,7 @@ connectivitynotification.cf.ap20.hana.ondemand.com
 
 `20.53.99.41`
 
-**Additonal IP addresses:**
+**Additional IP addresses:**
 
 **20.227.99.35**
 
@@ -1907,7 +1907,7 @@ connectivitycertsigning.cf.ap20.hana.ondemand.com
 
 `20.53.99.41`
 
-**Additonal IP addresses:**
+**Additional IP addresses:**
 
 **20.227.99.35**
 
@@ -1923,7 +1923,7 @@ connectivitytunnel.cf.ap20.hana.ondemand.com
 
 `20.53.99.41`
 
-**Additonal IP addresses:**
+**Additional IP addresses:**
 
 **20.227.102.91**
 
@@ -1957,7 +1957,7 @@ connectivitynotification.cf.ap21.hana.ondemand.com
 
 `20.184.61.122`
 
-**Additonal IP addresses:**
+**Additional IP addresses:**
 
 **57.155.80.35**
 
@@ -1973,7 +1973,7 @@ connectivitycertsigning.cf.ap21.hana.ondemand.com
 
 `20.184.61.122`
 
-**Additonal IP addresses:**
+**Additional IP addresses:**
 
 **57.155.80.35**
 
@@ -1989,7 +1989,7 @@ connectivitytunnel.cf.ap21.hana.ondemand.com
 
 `20.184.61.122`
 
-**Additonal IP addresses:**
+**Additional IP addresses:**
 
 **57.155.80.232**
 
@@ -2064,7 +2064,7 @@ connectivitynotification.cf.ca10.hana.ondemand.com
 
 `3.98.102.153`, `35.182.75.101`, `35.183.74.34`, `15.157.88.166`, `3.98.202.222`, `52.60.210.33`
 
-**Additonal IP addresses:**
+**Additional IP addresses:**
 
 **15.157.235.215, 15.222.67.204, 3.96.123.72**
 
@@ -2080,7 +2080,7 @@ connectivitycertsigning.cf.ca10.hana.ondemand.com
 
 `3.98.102.153`, `35.182.75.101`, `35.183.74.34`, `15.157.88.166`, `3.98.202.222`, `52.60.210.33`
 
-**Additonal IP addresses:**
+**Additional IP addresses:**
 
 **15.157.235.215, 15.222.67.204, 3.96.123.72**
 
@@ -2096,7 +2096,7 @@ connectivitytunnel.cf.ca10.hana.ondemand.com
 
 `3.98.102.153`, `35.182.75.101`, `35.183.74.34`, `15.157.88.166`, `3.98.202.222`, `52.60.210.33`
 
-**Additonal IP addresses:**
+**Additional IP addresses:**
 
 **3.97.216.231, 15.156.32.232, 52.60.236.134**
 
@@ -2128,7 +2128,7 @@ connectivitynotification.cf.ch20.hana.ondemand.com
 
 `20.208.56.83`
 
-**Additonal IP addresses:**
+**Additional IP addresses:**
 
 **74.242.192.152**
 
@@ -2144,7 +2144,7 @@ connectivitycertsigning.cf.ch20.hana.ondemand.com
 
 `20.208.56.83`
 
-**Additonal IP addresses:**
+**Additional IP addresses:**
 
 **74.242.192.152**
 
@@ -2160,7 +2160,7 @@ connectivitytunnel.cf.ch20.hana.ondemand.com
 
 `20.208.56.83`
 
-**Additonal IP addresses:**
+**Additional IP addresses:**
 
 **74.242.193.142**
 
