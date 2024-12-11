@@ -87,6 +87,7 @@ When creating an HTTP destination, you can use different authentication types fo
 -   [OAuth Refresh Token Authentication](oauth-refresh-token-authentication-bff0136.md)
 -   [OAuth Authorization Code Authentication](oauth-authorization-code-authentication-9f634f6.md)
 -   [OAuth Technical User Propagation Authentication](oauth-technical-user-propagation-authentication-8634e21.md)
+-   [](https://help.sap.com/viewer/cca91383641e40ffbe03bdc78f00f681/Cloud/en-US/f4d28ea5a6ce441fb3dacce0a55d7a35.html "") :arrow_upper_right:
 -   [Using Client Assertion with OAuth Flows](using-client-assertion-with-oauth-flows-789acee.md)
 
 

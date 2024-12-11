@@ -83,7 +83,7 @@ Back to [Response Structure](find-destination-response-structure-83a3f3b.md#loio
 ## Authentication Tokens
 
 > ### Note:  
-> This property is only applicable to destinations that use the following authentication types: *BasicAuthentication*, *OAuth2SAMLBearerAssertion*, *OAuth2ClientCredentials*, *OAuthUserTokenExchange*, *OAuth2JWTBearer*, *OAuth2Password*, *SAMLAssertion*, *OAuth2RefreshToken*, *OAuth2AuthorizationCode*, *OAuth2TechnicalUserPropagation*.
+> This property is only applicable to destinations that use the following authentication types: *BasicAuthentication*, *OAuth2SAMLBearerAssertion*, *OAuth2ClientCredentials*, *OAuthUserTokenExchange*, *OAuth2JWTBearer*, *OAuth2Password*, *SAMLAssertion*, *OAuth2RefreshToken*, *OAuth2AuthorizationCode*, *OAuth2TechnicalUserPropagation*, *OAuth2TokenExchange*.
 
 > ### Restriction:  
 > The section will contain an error if the `tokenServiceUrl` is a private endpoint \(like *localhost*\) and `ProxyType` is `Internet`, as the automation cannot be performed on the server side in this case.
@@ -104,6 +104,7 @@ Back to [Response Structure](find-destination-response-structure-83a3f3b.md#loio
     -   `error` \(optional\): if the retrieval of the token fails, the value of both `type` and `value` is an empty string and this property shows an error message, explaining the problem.
     -   `scope` \(optional\) \(only in OAuth2 destinations\): The scopes issued with the token. The value of the scope parameter is expressed as a list of space-delimited strings. For example, `read write execute`.
     -   `refresh_token` \(optional\) \(only in OAuth2 destinations\): A refresh token, returned by the OAuth service. It can be used to renew the access token via [OAuth Refresh Token Authentication](oauth-refresh-token-authentication-bff0136.md).
+    -   `issued_token_type` \(optional\) \(present and required only in `OAuth2TokenExchange` destinations\): Identifier for the representation of the issued security token \(for example, "urn:ietf:params:oauth:token-type:access\_token"\).
 
 -   **Example:**
 
@@ -202,6 +203,4 @@ Example of a full response for a destination using basic authentication:
 > ```
 
 Back to [Response Structure](find-destination-response-structure-83a3f3b.md#loio83a3f3b9cd314618aba651044ed5b9df__structure)
-
-
 

@@ -57,7 +57,7 @@ When all prerequisites are met, the cloud application can be properly used by en
 -   The *client tool* connects to a *cloud application*, in this case hosted in a Kubernetes cluster.
 -   The *cloud application* knows it needs to connect to the on-premise system, therefore it connects to the connectivity proxy. Depending on the specific requirements of the cloud application environment, the *cloud application* might need to obtain an access token which is used to authenticate the application as a client, as well as to authorize it to connect to the respective tenant-specific Cloud Connector exposing the target system \(see [Operational Modes](operational-modes-148bbad.md)\).
 -   The *connectivity proxy* accepts the client proxy request \(by the *cloud application*\) and routes the traffic via a TLS secure tunnel, which has been already initiated by the Cloud Connector and successfully established.
--   The Cloud Connector receives the *request data* from the *cloud application* and performs the related access control checks. A connection is established to the target on-premise system, and the request data is forwarded to the on-remise system.
+-   The Cloud Connector receives the *request data* from the *cloud application* and performs the related access control checks. A connection is established to the target on-premise system, and the request data is forwarded to the on-premise system.
 -   The *response data* from the on-premise system is routed back to the *cloud application*.
 -   The *cloud application* processes the response data retrieved by the on-premise system and shows the result to the end user.
 

@@ -12,7 +12,7 @@ To apply this mechanism, you must use the following of destination configuration
 -   Destination that uses the client assertion - with specified token service that uses client assertion as a client authentication mechanism
 
 > ### Caution:  
-> Only *OAuth2ClientCredentials* authentication type is allowed for destinations that provide client assertions.The following authentication types are supported for destinations that use client assertions: *OAuth2Password*, *OAuth2ClientCredentials*, *OAuth2AuthorizationCode*, *OAuth2TechnicalUserPropagation*.
+> Only *OAuth2ClientCredentials* authentication type is allowed for destinations that provide client assertions.The following authentication types are supported for destinations that use client assertions: *OAuth2Password*, *OAuth2ClientCredentials*, *OAuth2AuthorizationCode*, *OAuth2TechnicalUserPropagation*, *OAuth2TokenExchange*.
 
 
 
