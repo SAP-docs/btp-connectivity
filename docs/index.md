@@ -43,7 +43,7 @@
                 -   [OAuth Refresh Token Authentication](1-connectivity-documentation/oauth-refresh-token-authentication-bff0136.md)
                 -   [OAuth Authorization Code Authentication](1-connectivity-documentation/oauth-authorization-code-authentication-9f634f6.md)
                 -   [OAuth Technical User Propagation Authentication](1-connectivity-documentation/oauth-technical-user-propagation-authentication-8634e21.md)
-                -   [f4d28ea5a6ce441fb3dacce0a55d7a35.xml](f4d28ea5a6ce441fb3dacce0a55d7a35.md)
+                -   [OAuth Token Exchange Authentication](1-connectivity-documentation/oauth-token-exchange-authentication-f4d28ea.md)
                 -   [Using Client Assertion with OAuth Flows](1-connectivity-documentation/using-client-assertion-with-oauth-flows-789acee.md)
                     -   [Provide Client Assertion Properties as Headers](1-connectivity-documentation/provide-client-assertion-properties-as-headers-6c98d97.md)
                     -   [Client Assertion with Automated Assertion Fetching by the Service](1-connectivity-documentation/client-assertion-with-automated-assertion-fetching-by-the-service-1c34472.md)
