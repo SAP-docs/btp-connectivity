@@ -71,6 +71,7 @@
             -   [Configuring Backup](1-connectivity-documentation/configuring-backup-d0d549a.md)
             -   [Notifications and Alerts](1-connectivity-documentation/notifications-and-alerts-552e8fd.md)
             -   [Destination Fragments](1-connectivity-documentation/destination-fragments-b085906.md)
+            -   [Configure Destination Service IPs in Firewall Rules](1-connectivity-documentation/configure-destination-service-ips-in-firewall-rules-efbaf63.md)
         -   [Developing Applications](1-connectivity-documentation/developing-applications-2cd45a1.md)
             -   [Consuming the Connectivity Service](1-connectivity-documentation/consuming-the-connectivity-service-313b215.md)
                 -   [Authentication to the On-Premise System](1-connectivity-documentation/authentication-to-the-on-premise-system-67b0b94.md)

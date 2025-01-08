@@ -7,7 +7,7 @@ For authentication purposes, configure and deploy an application router for your
 > ### Note:  
 > AppRouter is only required if you want to use multitenancy or perform user-specific service calls. In all other cases, JCo uses [cloud-security-xsuaa-integration](https://github.com/SAP/cloud-security-xsuaa-integration/tree/master/token-client) with `ClientCredentialFlow`.
 
-1.  To set up an application router, follow the steps in [Application Router](https://help.sap.com/viewer/65de2977205c403bbc107264b8eccf4b/Cloud/en-US/01c5f9ba7d6847aaaf069d153b981b51.html "The application router is the single point-of-entry for an application running in the Cloud Foundry environment on SAP BTP. The application router is used to serve static content, authenticate users, rewrite URLs, and forward or proxy requests to other micro services while propagating user information.") :arrow_upper_right: or use the demo file *approuter.zip* \([download](https://help.sap.com/http.svc/download?deliverable_id=21564649)\).
+1.  To set up an application router, follow the steps in [Application Router](https://help.sap.com/docs/btp/sap-business-technology-platform/application-router?state=DRAFT&version=Cloud) or use the demo file *approuter.zip* \([download](https://help.sap.com/http.svc/download?deliverable_id=21564649)\).
 2.  For deployment, you need a manifest file, similar to this one:
 
     > ### Sample Code:  

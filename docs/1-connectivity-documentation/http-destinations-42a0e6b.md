@@ -96,6 +96,9 @@ When creating an HTTP destination, you can use different authentication types fo
 
 ## Custom Query Parameters and Headers
 
+> ### Restriction:  
+> The procedure described below is not supported by all clients, and depends on the consumption method.
+
 By default, the Destination service does not use URL-associated queries and header parameters.
 
 For most authentication types however, you can add them as custom parameters to the URL of a destination.

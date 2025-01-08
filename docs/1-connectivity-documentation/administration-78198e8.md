@@ -138,5 +138,17 @@ Use destination fragments to override and/or extend destination properties as pa
 
 </td>
 </tr>
+<tr>
+<td valign="top">
+
+[Configure Destination Service IPs in Firewall Rules](configure-destination-service-ips-in-firewall-rules-efbaf63.md)
+
+</td>
+<td valign="top">
+
+Include Destination service IP addresses in your target system firewall rules for incoming traffic.
+
+</td>
+</tr>
 </table>
 
