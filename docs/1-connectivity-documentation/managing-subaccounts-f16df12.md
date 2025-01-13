@@ -141,8 +141,6 @@ If you want to connect an additional subaccount to your on-premise landscape, pr
 
 [Update the Certificate for a Subaccount](update-the-certificate-for-a-subaccount-071708a.md "Certificates used by the Cloud Connector are issued with a limited validity period. To prevent a downtime while refreshing the certificate, you can update it for your subaccount directly from the administration UI.")
 
-[Configure a Disaster Recovery Subaccount](configure-a-disaster-recovery-subaccount-39447fa.md "Configure a subaccount as backup for disaster recovery.")
-
 [Find Your Subaccount ID \(Cloud Foundry Environment\)](find-your-subaccount-id-cloud-foundry-environment-b43eff2.md "Get your subaccount ID to configure the Cloud Connector in the Cloud Foundry environment.")
 
 [Configure Custom Regions](configure-custom-regions-a994a75.md "Configure regions that are not available in the standard selection.")

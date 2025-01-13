@@ -141,8 +141,6 @@
                 -   [Copy a Subaccount Configuration](1-connectivity-documentation/copy-a-subaccount-configuration-513d129.md)
                 -   [Use a Custom IDP for Subaccount Configuration](1-connectivity-documentation/use-a-custom-idp-for-subaccount-configuration-2022612.md)
                 -   [Update the Certificate for a Subaccount](1-connectivity-documentation/update-the-certificate-for-a-subaccount-071708a.md)
-                -   [Configure a Disaster Recovery Subaccount](1-connectivity-documentation/configure-a-disaster-recovery-subaccount-39447fa.md)
-                    -   [Convert a Disaster Recovery Subaccount into a Standard Subaccount](1-connectivity-documentation/convert-a-disaster-recovery-subaccount-into-a-standard-subaccount-3573658.md)
                 -   [Find Your Subaccount ID \(Cloud Foundry Environment\)](1-connectivity-documentation/find-your-subaccount-id-cloud-foundry-environment-b43eff2.md)
                 -   [Configure Custom Regions](1-connectivity-documentation/configure-custom-regions-a994a75.md)
             -   [Authenticating Users against On-Premise Systems](1-connectivity-documentation/authenticating-users-against-on-premise-systems-b643fbe.md)
