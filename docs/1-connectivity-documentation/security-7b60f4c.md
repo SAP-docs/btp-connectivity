@@ -42,6 +42,18 @@ Set up and run the Cloud Connector according to the highest security standards.
 
 </td>
 </tr>
+<tr>
+<td valign="top">
+
+Choose between different options to encrypt your data when using the Destination service.
+
+</td>
+<td valign="top">
+
+[Using Encryption Keys for the Destination Service](using-encryption-keys-for-the-destination-service-93accc4.md)
+
+</td>
+</tr>
 </table>
 
 

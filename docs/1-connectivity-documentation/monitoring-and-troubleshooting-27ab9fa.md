@@ -16,9 +16,9 @@ If you encounter an issue with this service, we recommend to follow the procedur
 
 ### **Check Platform Status**
 
-Check the availability of the platform at [SAP BTP Status Page](https://sapcp.statuspage.io).
-
-For more information about selected platform incidents, see [Root Cause Analyses](https://help.sap.com/viewer/product/SCP_RCA/Latest/en-US).
+-   Check the availability of the service at [SAP Trust Center](https://www.sap.com/about/trust-center/cloud-service-status.html).
+-   To find information about region updates and SAP BTP notifications, see also [Platform Updates and Notifications](https://help.sap.com/docs/btp/sap-business-technology-platform/platform-updates-and-notifications?version=Cloud).
+-   For more information about selected platform incidents, see [Root Cause Analyses](https://help.sap.com/viewer/product/SCP_RCA/Latest/en-US).
 
 
 

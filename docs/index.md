@@ -113,6 +113,7 @@
                     -   [Multitenancy for JCo Applications \(Advanced\)](1-connectivity-documentation/multitenancy-for-jco-applications-advanced-93c1e03.md)
                     -   [Configure Principal Propagation for RFC](1-connectivity-documentation/configure-principal-propagation-for-rfc-30c4168.md)
         -   [Security](1-connectivity-documentation/security-7b60f4c.md)
+            -   [Using Encryption Keys for the Destination Service](1-connectivity-documentation/using-encryption-keys-for-the-destination-service-93accc4.md)
         -   [Monitoring and Troubleshooting](1-connectivity-documentation/monitoring-and-troubleshooting-27ab9fa.md)
         -   [Resilience Recommendations](1-connectivity-documentation/resilience-recommendations-6c88a09.md)
         -   [Connectivity in the Kyma Environment](1-connectivity-documentation/connectivity-in-the-kyma-environment-7501fbc.md)
