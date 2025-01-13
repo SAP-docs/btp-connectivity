@@ -6,7 +6,7 @@ Use the *Destinations* editor in the SAP BTP cockpit to configure destinations f
 
 Configuring destinations from scratch provides the complete set of editing functions. While this requires deeper technical knowledge of the scenario and the required connection configuration, it is the most flexible procedure and lets you create any type of supported destination.
 
-To [Create Destinations from a Template](create-destinations-from-a-template-ef56ea0.md), in contrast, you do not need this deeper knowledge for configuration, but edting options are limited by the available templates.
+To [Create Destinations from a Template](create-destinations-from-a-template-ef56ea0.md), in contrast, you do not need this deeper knowledge for configuration, but editing options are limited by the available templates.
 
 **Related Information**  
 

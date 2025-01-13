@@ -80,12 +80,16 @@ For *on-premise-to-cloud* connections, you must look it up manually. You can fin
 
 **Capabilities**
 
-If no settings are modified, the following specifics and features are enabled in the *connectivity\_proxy* Kyma module:
+If no settings are modified, the following specifics and features are available in the *connectivity\_proxy* Kyma module:
 
 -   All proxy servers are enabled \(HTTP, RFC, LDAP, SOCKS5\).
 -   The [Service Channels: On-Premise-to-Cloud Connectivity](service-channels-on-premise-to-cloud-connectivity-bbd3040.md) feature is enabled.
 -   Operational mode is [single tenant, trusted](operational-modes-148bbad.md#loio148bbad274e545efa10de8a356dd474d__single).
 -   [Automatic Pickup on Resource Changes](automatic-pickup-on-resource-changes-78ddb8f.md) is enabled.
+-   [High Availability](high-availability-3c7f10d.md) is set to *off* by default, but can be activated in "path" mode.
+
+-   Auto-scaling \(only applicable if *High Availability* is turned on\) is disabled by default, but can be activated.
+
 
 **Limitations**
 
