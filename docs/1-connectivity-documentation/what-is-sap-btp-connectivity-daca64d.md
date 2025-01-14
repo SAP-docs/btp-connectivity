@@ -498,7 +498,7 @@ Back to [Content](what-is-sap-btp-connectivity-daca64d.md#loiodaca64dacc6148fcb5
 
 [What's New for Connectivity](what-s-new-for-connectivity-7882854.md "Find the latest features, enhancements and bug fixes for SAP BTP Connectivity .")
 
-[Administration](administration-78198e8.md "Manage destinations and authentication for applications.")
+[Administration](administration-78198e8.md "Manage destinations and authentication for SAP BTP applications.")
 
 [Developing Applications](developing-applications-2cd45a1.md "Consume the Connectivity service and the Destination service from an application.")
 

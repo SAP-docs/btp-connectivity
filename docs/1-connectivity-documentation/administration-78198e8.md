@@ -2,7 +2,7 @@
 
 # Administration
 
-Manage destinations and authentication for applications.
+Manage destinations and authentication for SAP BTP applications.
 
 
 <table>
@@ -26,7 +26,7 @@ Description
 </td>
 <td valign="top">
 
-Manage HTTP destinations for applications in the SAP BTP cockpit.
+Manage destinations for SAP BTP applications.
 
 </td>
 </tr>
