@@ -556,7 +556,9 @@ config.tenantMode
 </td>
 <td valign="top">
 
-Mode in which the connectivity proxy works. The possible values are *dedicated* and *shared*. See [Operational Modes](operational-modes-148bbad.md) for details.
+Mode in which the connectivity proxy works. The possible values are *dedicated* \(single-tenant mode\) and *shared* \(multi-tenant mode\).
+
+See [Operational Modes](operational-modes-148bbad.md) for details.
 
 </td>
 <td valign="top">
