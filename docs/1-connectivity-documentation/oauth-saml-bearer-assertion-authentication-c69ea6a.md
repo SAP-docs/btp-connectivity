@@ -131,7 +131,14 @@ Contains the password for the certificate configuration \(if one is needed\) whe
 </td>
 <td valign="top">
 
-Intended audience for the assertion, which is verified by the OAuth authorization server. For more information, see [SAML 2.0 Bearer Assertion Profiles for OAuth 2.0](https://tools.ietf.org/id/draft-ietf-oauth-saml2-bearer-07.html#assertion_reqs).
+Intended audience for the assertion, which is verified by the OAuth authorization server.
+
+For more information, see [SAML 2.0 Bearer Assertion Profiles for OAuth 2.0](https://tools.ietf.org/id/draft-ietf-oauth-saml2-bearer-07.html#assertion_reqs).
+
+> ### Note:  
+> If the `SAMLAssertionProvider` property of the destination is set to `ClientProvided`, this property will not be used.
+
+
 
 </td>
 </tr>
@@ -254,6 +261,23 @@ Value of the `AuthnContextClassRef` tag, which is part of generated `OAuth2SAMLB
 <td valign="top" colspan="2">
 
 **Additional**
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+`SAMLAssertionProvider`
+
+</td>
+<td valign="top">
+
+Specifies how the SAML assertion will be provided to the token service. There are two possible values:
+
+-   `DestinationServiceGenerated`: specifies that Destination service will generate the SAML assertion, sign it using the subaccount trust certificate, and pass it to the token service.
+-   `ClientProvided`: specifies that the client will provide the SAML assertion externally to the Destination service, and the service will pass it to the token service.
+
+If the property is missing, the Destination service will treat it by default as if the property was set to `DestinationServiceGenerated`.
 
 </td>
 </tr>
