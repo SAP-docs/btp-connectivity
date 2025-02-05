@@ -459,7 +459,7 @@ Static key prefix used as a namespace grouping of URL's query parameters whose v
 
 ## Example: authTokens Object in *Find Destination* Response
 
-The response for *Find Destination* will contain an `authTokens` object in the format given below. For more information on the fields in `authTokens`, see ["Find Destination" Response Structure](find-destination-response-structure-83a3f3b.md).
+The response for *Find Destination* will contain an `authTokens` object in the format given below. For more information on the fields in `authTokens`, see ["Find a Destination" Response Structure](find-a-destination-response-structure-83a3f3b.md).
 
 For usage of the `SAP-Connectivity-Technical-Authentication` header, see [Authentication Types](authentication-to-the-on-premise-system-67b0b94.md#loio67b0b94f09f2446598787eea0855e56b__types).
 

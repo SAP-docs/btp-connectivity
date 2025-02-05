@@ -292,7 +292,7 @@ Restriction
 </td>
 <td valign="top">
 
-Service channels are supported only for SAP HANA database, see [Using Service Channels](using-service-channels-16f6342.md).
+Service channels are supported only for RFC and for Kubernetes clusters, see [Using Service Channels](using-service-channels-16f6342.md).
 
 </td>
 </tr>

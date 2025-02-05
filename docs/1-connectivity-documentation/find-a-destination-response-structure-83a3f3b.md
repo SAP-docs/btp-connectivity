@@ -1,8 +1,8 @@
 <!-- loio83a3f3b9cd314618aba651044ed5b9df -->
 
-# "Find Destination" Response Structure
+# "Find a Destination" Response Structure
 
-Overview of data that are returned by the Destination service for the call type "find destination".
+Overview of data that are returned by the Destination service for the call type "Find a Destination".
 
 
 
@@ -10,14 +10,14 @@ Overview of data that are returned by the Destination service for the call type 
 
 ## Response Structure
 
-When you use the "find destination" call \(read a destination by only specifying its name\), the structure of the response includes four parts:
+When you use the "Find a Destination" call \(read a destination by only specifying its name\), the structure of the response includes four parts:
 
--   The [owner of the destination](find-destination-response-structure-83a3f3b.md#loio83a3f3b9cd314618aba651044ed5b9df__owner).
--   The actual [destination configuration](find-destination-response-structure-83a3f3b.md#loio83a3f3b9cd314618aba651044ed5b9df__config).
--   \(Optional\) [Authentication tokens](find-destination-response-structure-83a3f3b.md#loio83a3f3b9cd314618aba651044ed5b9df__tokens) that are relevant to the destination.
--   \(Optional\) [Certificates](find-destination-response-structure-83a3f3b.md#loio83a3f3b9cd314618aba651044ed5b9df__cert) that are relevant to the destination.
+-   The [owner of the destination](find-a-destination-response-structure-83a3f3b.md#loio83a3f3b9cd314618aba651044ed5b9df__owner).
+-   The actual [destination configuration](find-a-destination-response-structure-83a3f3b.md#loio83a3f3b9cd314618aba651044ed5b9df__config).
+-   \(Optional\) [Authentication tokens](find-a-destination-response-structure-83a3f3b.md#loio83a3f3b9cd314618aba651044ed5b9df__tokens) that are relevant to the destination.
+-   \(Optional\) [Certificates](find-a-destination-response-structure-83a3f3b.md#loio83a3f3b9cd314618aba651044ed5b9df__cert) that are relevant to the destination.
 
-Each of these parts is represented in the JSON object as a key-value pair and their values are JSON objects, see [Example](find-destination-response-structure-83a3f3b.md#loio83a3f3b9cd314618aba651044ed5b9df__example).
+Each of these parts is represented in the JSON object as a key-value pair and their values are JSON objects, see [Example](find-a-destination-response-structure-83a3f3b.md#loio83a3f3b9cd314618aba651044ed5b9df__example).
 
 See also [Call the Destination Service](consuming-the-destination-service-7e30625.md#loio7e306250e08340f89d6c103e28840f30__section_CallDestinationService).
 
@@ -42,7 +42,7 @@ See also [Call the Destination Service](consuming-the-destination-service-7e3062
     > ```
 
 
-Back to [Response Structure](find-destination-response-structure-83a3f3b.md#loio83a3f3b9cd314618aba651044ed5b9df__structure)
+Back to [Response Structure](find-a-destination-response-structure-83a3f3b.md#loio83a3f3b9cd314618aba651044ed5b9df__structure)
 
 
 
@@ -54,7 +54,7 @@ Back to [Response Structure](find-destination-response-structure-83a3f3b.md#loio
 
     The JSON object that represents the value of this property contains the actual properties of the destination. To learn more about the available properties, see [HTTP Destinations](http-destinations-42a0e6b.md).
 
-    If a destination fragment was specified in the “Find Destination” call, the value of this property is represented by the JSON object that contains the actual properties of the destination, merged with the JSON object that contains the properties of the destination fragment.
+    If a destination fragment was specified in the “Find a Destination” call, the value of this property is represented by the JSON object that contains the actual properties of the destination, merged with the JSON object that contains the properties of the destination fragment.
 
     For more information on how to extend a destination with a destination fragment, see [Extending Destinations with Fragments](extending-destinations-with-fragments-f56600a.md).
 
@@ -74,7 +74,7 @@ Back to [Response Structure](find-destination-response-structure-83a3f3b.md#loio
     > ```
 
 
-Back to [Response Structure](find-destination-response-structure-83a3f3b.md#loio83a3f3b9cd314618aba651044ed5b9df__structure)
+Back to [Response Structure](find-a-destination-response-structure-83a3f3b.md#loio83a3f3b9cd314618aba651044ed5b9df__structure)
 
 
 
@@ -123,7 +123,7 @@ Back to [Response Structure](find-destination-response-structure-83a3f3b.md#loio
     > ```
 
 
-Back to [Response Structure](find-destination-response-structure-83a3f3b.md#loio83a3f3b9cd314618aba651044ed5b9df__structure)
+Back to [Response Structure](find-a-destination-response-structure-83a3f3b.md#loio83a3f3b9cd314618aba651044ed5b9df__structure)
 
 
 
@@ -163,7 +163,7 @@ Back to [Response Structure](find-destination-response-structure-83a3f3b.md#loio
     > ```
 
 
-Back to [Response Structure](find-destination-response-structure-83a3f3b.md#loio83a3f3b9cd314618aba651044ed5b9df__structure)
+Back to [Response Structure](find-a-destination-response-structure-83a3f3b.md#loio83a3f3b9cd314618aba651044ed5b9df__structure)
 
 
 
@@ -202,5 +202,5 @@ Example of a full response for a destination using basic authentication:
 > }
 > ```
 
-Back to [Response Structure](find-destination-response-structure-83a3f3b.md#loio83a3f3b9cd314618aba651044ed5b9df__structure)
+Back to [Response Structure](find-a-destination-response-structure-83a3f3b.md#loio83a3f3b9cd314618aba651044ed5b9df__structure)
 

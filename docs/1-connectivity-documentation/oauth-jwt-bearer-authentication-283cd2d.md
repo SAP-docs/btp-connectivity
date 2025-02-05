@@ -570,7 +570,7 @@ Back to [Content](oauth-jwt-bearer-authentication-283cd2d.md#loio283cd2d1c72147a
 
 ## Example: AuthTokens Object Response
 
-The response for "find destination" contains an `authTokens` object in the format given below. For more information on the fields in `authTokens`, see ["Find Destination" Response Structure](find-destination-response-structure-83a3f3b.md).
+The response for "find destination" contains an `authTokens` object in the format given below. For more information on the fields in `authTokens`, see ["Find a Destination" Response Structure](find-a-destination-response-structure-83a3f3b.md).
 
 > ### Sample Code:  
 > ```

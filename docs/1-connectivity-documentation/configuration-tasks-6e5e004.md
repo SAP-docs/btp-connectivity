@@ -98,7 +98,7 @@ Back to [Tasks](configuration-tasks-6e5e004.md#loio6e5e004b6553403486a03da53bfca
         ![](images/CS_CF_S4C_Comm_Arr_1_f533983.png)
 
     2.  From the list view, select *New*.
-    3.  In the popup, choose a scenario. For our example, we use `SAP_COM_0013`. Set the arrangement name, for example `SAP_COM_0013_MY_TEST`.
+    3.  In the popup, choose a scenario. For our example, we use `SAP_COM_0008`. Set the arrangement name, for example `SAP_COM_0008_MY_TEST`.
     4.  In the *Common Data* section of the configuration screen, select the *<Communication System\>* that you have created in the step before. The communication user is added automatically in the *Inbound Communication* section, and the *<Authentication Method\>* is set to ***OAuth 2.0***.
 
         ![](images/CS_CF_S4C_Comm_Arr_2_736581b.png)
@@ -319,7 +319,7 @@ To perform the scenario and execute the request from the source application towa
 
 1.  Decide on where the user identity will be located when calling the Destination service. For details, see [User Propagation via SAML 2.0 Bearer Assertion Flow](user-propagation-via-saml-2-0-bearer-assertion-flow-3cb7b81.md). This will determine how exactly you will perform step 2.
 2.  Execute a "find destination" request from the source application to the Destination service. For details, see [Consuming the Destination Service](consuming-the-destination-service-7e30625.md) and the [REST API documentation](https://api.sap.com/api/SAP_CP_CF_Connectivity_Destination/resource).
-3.  From the Destination service response, extract the access token and URL, and construct your request to the target application. See ["Find Destination" Response Structure](find-destination-response-structure-83a3f3b.md) for details on the structure of the response from the Destination service.
+3.  From the Destination service response, extract the access token and URL, and construct your request to the target application. See ["Find a Destination" Response Structure](find-a-destination-response-structure-83a3f3b.md) for details on the structure of the response from the Destination service.
 
 Back to [Tasks](configuration-tasks-6e5e004.md#loio6e5e004b6553403486a03da53bfcaf4e__steps_s4) 
 

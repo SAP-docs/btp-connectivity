@@ -291,7 +291,7 @@ This lets you provide simply a name of the destination while the service will se
 
 
 > ### Note:  
-> The response from this type of call contains not only the configuration of the requested destination, but also some additional data. See ["Find Destination" Response Structure](find-destination-response-structure-83a3f3b.md).
+> The response from this type of call contains not only the configuration of the requested destination, but also some additional data. See ["Find a Destination" Response Structure](find-a-destination-response-structure-83a3f3b.md).
 
 Back to [Call the Destination Service](consuming-the-destination-service-7e30625.md#loio7e306250e08340f89d6c103e28840f30__section_CallDestinationService)
 

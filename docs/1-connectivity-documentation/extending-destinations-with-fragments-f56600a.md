@@ -270,5 +270,5 @@ Name of the destination fragment. The fragment itself must be maintained on the 
 
 [Calling the Destination Service REST API](calling-the-destination-service-rest-api-84c5d38.md "Prerequisites and steps to get access to the Destination service REST API.")
 
-["Find Destination" Response Structure](find-destination-response-structure-83a3f3b.md "Overview of data that are returned by the Destination service for the call type &quot;find destination&quot;.")
+["Find a Destination" Response Structure](find-a-destination-response-structure-83a3f3b.md "Overview of data that are returned by the Destination service for the call type &quot;Find a Destination&quot;.")
 

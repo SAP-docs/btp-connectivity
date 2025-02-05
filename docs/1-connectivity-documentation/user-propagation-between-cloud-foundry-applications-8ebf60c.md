@@ -409,7 +409,7 @@ To perform the scenario and execute the request from application 1, targeting ap
 
 1.  Decide on where the user identity will be located when calling the Destination service. For details, see [User Propagation via SAML 2.0 Bearer Assertion Flow](user-propagation-via-saml-2-0-bearer-assertion-flow-3cb7b81.md). This will determine how exactly you will perform step 2.
 2.  Execute a "find destination" request from application 1 to the Destination service. For details, see [Consuming the Destination Service](consuming-the-destination-service-7e30625.md) and the [REST API documentation](https://api.sap.com/api/SAP_CP_CF_Connectivity_Destination/resource).
-3.  From the Destination service response, extract the access token and URL, and construct your request to application 2. See ["Find Destination" Response Structure](find-destination-response-structure-83a3f3b.md) for details on the structure of the response from the Destination service.
+3.  From the Destination service response, extract the access token and URL, and construct your request to application 2. See ["Find a Destination" Response Structure](find-a-destination-response-structure-83a3f3b.md) for details on the structure of the response from the Destination service.
 
 Back to [Steps](user-propagation-between-cloud-foundry-applications-8ebf60c.md#loio8ebf60c82a8e4cfc904f441c0c0acd6b__steps)
 

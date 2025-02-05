@@ -107,7 +107,7 @@ Back to [Content](cloud-connector-e6c7616.md#loioe6c7616abb5710148cfcf3e75d96d59
 
 1.  Install and configure the Cloud Connector: [Installation](installation-57ae3d6.md), [Initial Configuration](initial-configuration-db9170a.md), [Managing Subaccounts](managing-subaccounts-f16df12.md)
 2.  Access HANA databases on SAP BTP: [Configure a Service Channel for an SAP HANA Database](https://help.sap.com/viewer/b865ed651e414196b39f8922db2122c7/Cloud/en-US/3dc28b456bb64fad89084d2d10af602c.html "Using Cloud Connector service channels, you can establish a connection to an SAP HANA database in SAP BTP that is not directly exposed to external access.") :arrow_upper_right:
-3.  Connect on-premise database or BI tools to a HANA database on SAP BTP: [Connect DB Tools to SAP HANA via Service Channels](connect-db-tools-to-sap-hana-via-service-channels-64d6a51.md)
+3.  Connect on-premise database or BI tools to a HANA database on SAP BTP: [Connect DB Tools to SAP HANA via Service Channels](https://help.sap.com/viewer/b865ed651e414196b39f8922db2122c7/Cloud/en-US/64d6a510e98941d28dbff2fc8179f175.html "") :arrow_upper_right:
 
 > ### Note:  
 > You can use service channels also for other purposes:

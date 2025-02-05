@@ -105,7 +105,7 @@ Set up an allowlist for trusted cloud applications and a trust store for on-prem
 <tr>
 <td valign="top">
 
-[Connect DB Tools to SAP HANA via Service Channels](connect-db-tools-to-sap-hana-via-service-channels-64d6a51.md)
+[Connect DB Tools to SAP HANA via Service Channels](https://help.sap.com/viewer/b865ed651e414196b39f8922db2122c7/Cloud/en-US/64d6a510e98941d28dbff2fc8179f175.html "") :arrow_upper_right:
 
 </td>
 <td valign="top">

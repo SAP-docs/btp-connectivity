@@ -41,7 +41,7 @@ If you provide the user token exchange header with the request to the Destinatio
 -   The header value must be a user JWT \(JSON Web token\) in encoded form, see [RFC 7519](https://tools.ietf.org/html/rfc7519).
 -   If the user token exchange header is not provided with the request to the Destination Service or it is provided, but its value is empty, the token from the `Authorization` header is used instead. In this case, the JWT in the `Authorization` header must be a user JWT in encoded form, otherwise the token exchange does not work.
 
-For information about the response structure of this request, see ["Find Destination" Response Structure](find-destination-response-structure-83a3f3b.md).
+For information about the response structure of this request, see ["Find a Destination" Response Structure](find-a-destination-response-structure-83a3f3b.md).
 
 Back to [Content](exchanging-user-jwts-via-oauth2usertokenexchange-destinations-39d4265.md#loio39d42654093e4f8db20398a06f7eab2b__content)
 

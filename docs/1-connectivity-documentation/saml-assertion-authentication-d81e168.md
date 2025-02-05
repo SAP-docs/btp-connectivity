@@ -391,7 +391,7 @@ audience=https://myXXXXXX.s4hana.ondemand.com
 authnContextClassRef=urn:oasis:names:tc:SAML:2.0:ac:classes:X509
 ```
 
-The response for "find destination" contains an `authTokens` object in the format given below. For more information on the fields in `authTokens`, see ["Find Destination" Response Structure](find-destination-response-structure-83a3f3b.md).
+The response for "find destination" contains an `authTokens` object in the format given below. For more information on the fields in `authTokens`, see ["Find a Destination" Response Structure](find-a-destination-response-structure-83a3f3b.md).
 
 > ### Sample Code:  
 > ```
