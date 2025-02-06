@@ -4,6 +4,9 @@
 
 Configure a user exchange token for principal propagation \(user propagation\) from your application to an on-premise system.
 
+> ### Note:  
+> The on-premise use cases described in this guide are also applicable to virtual private cloud \(VPC\) environments.
+
 
 
 <a name="loio39f538ad62e144c58c056ebc34bb6890__tasks_pp_cs"/>

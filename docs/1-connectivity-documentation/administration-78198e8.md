@@ -4,6 +4,9 @@
 
 Manage destinations and authentication for SAP BTP applications.
 
+> ### Note:  
+> The on-premise use cases described in this guide are also applicable to virtual private cloud \(VPC\) environments.
+
 
 <table>
 <tr>

@@ -13,6 +13,9 @@ Two scenarios are supported: Cloud to on-premise \(using the Connectivity servic
     > ### Note:  
     > This scenario requires the Cloud Connector to connect to your on-premise system.
 
+    > ### Note:  
+    > The on-premise use cases described in this guide are also applicable to virtual private cloud \(VPC\) environments.
+
 
 -   [Scenario: Cloud to Cloud](scenario-cloud-to-cloud-65b11d4.md): The user is propagated from a cloud application to another remote \(cloud\) system using a destination configuration with authentication type `OAuth2SAMLBearerAssertion`.
 

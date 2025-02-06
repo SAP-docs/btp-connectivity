@@ -75,7 +75,7 @@
         -   [Developing Applications](1-connectivity-documentation/developing-applications-2cd45a1.md)
             -   [Consuming the Connectivity Service](1-connectivity-documentation/consuming-the-connectivity-service-313b215.md)
                 -   [Authentication to the On-Premise System](1-connectivity-documentation/authentication-to-the-on-premise-system-67b0b94.md)
-                    -   [Configure Principal Propagation via Corporate IdP Embedded Token](1-connectivity-documentation/configure-principal-propagation-via-corporate-idp-embedded-token-dfecfb4.md)
+                    -   [Configure Principal Propagation via Corporate IdP-Embedded Token](1-connectivity-documentation/configure-principal-propagation-via-corporate-idp-embedded-token-dfecfb4.md)
                     -   [Configure Principal Propagation via User Exchange Token](1-connectivity-documentation/configure-principal-propagation-via-user-exchange-token-39f538a.md)
                     -   [Configure Principal Propagation via IAS Token](1-connectivity-documentation/configure-principal-propagation-via-ias-token-47a3cff.md)
                     -   [Configure Principal Propagation via OIDC Token](1-connectivity-documentation/configure-principal-propagation-via-oidc-token-000232b.md)

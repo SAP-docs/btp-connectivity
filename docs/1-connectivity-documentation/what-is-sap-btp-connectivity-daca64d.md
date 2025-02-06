@@ -4,10 +4,13 @@
 
 Use SAP BTP Connectivity for your application in the multi-cloud foundation: available services, connectivity scenarios, user roles.
 
+> ### Note:  
+> You can use SAP BTP Connectivity for the multi-cloud foundation and for the Neo environment. This documentation refers to SAP BTP, multi-cloud foundation. If you are looking for information about the Neo environment, see [Connectivity for the Neo Environment](https://help.sap.com/viewer/b865ed651e414196b39f8922db2122c7/Cloud/en-US/5ceb84290d5644638f73d40fde3af5d0.html).
+
 SAP BTP Connectivity lets you connect your SAP BTP applications to other Internet resources, or to your on-premise systems running in isolated networks. It provides an extensive set of features to choose different connection types and authentication methods. Using its configuration options, you can tailor access exactly to your needs.
 
 > ### Note:  
-> You can use SAP BTP Connectivity for the multi-cloud foundation and for the Neo environment. This documentation refers to SAP BTP, multi-cloud foundation. If you are looking for information about the Neo environment, see [Connectivity for the Neo Environment](https://help.sap.com/viewer/b865ed651e414196b39f8922db2122c7/Cloud/en-US/5ceb84290d5644638f73d40fde3af5d0.html).
+> The on-premise use cases described in this guide are also applicable to virtual private cloud \(VPC\) environments.
 
 
 

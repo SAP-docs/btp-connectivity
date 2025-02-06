@@ -4,6 +4,12 @@
 
 Configure an Identity Authentication service \(IAS\) token for principal propagation \(user propagation\) from your application to an on-premise system.
 
+> ### Note:  
+> For more information on identity authentication, see [SAP Cloud Identity Services](https://help.sap.com/docs/cloud-identity-services/cloud-identity-services/landing-page?version=Cloud).
+
+> ### Note:  
+> The on-premise use cases described in this guide are also applicable to virtual private cloud \(VPC\) environments.
+
 
 
 ## Scenario

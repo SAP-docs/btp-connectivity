@@ -4,6 +4,9 @@
 
 Provide authentication information for the authentication type you use.
 
+> ### Note:  
+> The on-premise use cases described in this guide are also applicable to virtual private cloud \(VPC\) environments.
+
 You can use the Connectivity service in different authentication scenarios:
 
 -   **No authentication** to the on-premise system
@@ -102,7 +105,7 @@ Back to [Procedure](authentication-to-the-on-premise-system-67b0b94.md#loio67b0b
 **Related Information**  
 
 
-[Configure Principal Propagation via Corporate IdP Embedded Token](configure-principal-propagation-via-corporate-idp-embedded-token-dfecfb4.md "")
+[Configure Principal Propagation via Corporate IdP-Embedded Token](configure-principal-propagation-via-corporate-idp-embedded-token-dfecfb4.md "Configure a corporate IdP-embedded token for principal propagation (user propagation) from your application to an on-premise system.")
 
 [Configure Principal Propagation via User Exchange Token](configure-principal-propagation-via-user-exchange-token-39f538a.md "Configure a user exchange token for principal propagation (user propagation) from your application to an on-premise system.")
 

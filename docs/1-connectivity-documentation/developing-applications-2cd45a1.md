@@ -4,6 +4,9 @@
 
 Consumethe Connectivity service and the Destination service from an application.
 
+> ### Note:  
+> The on-premise use cases described in this guide are also applicable to virtual private cloud \(VPC\) environments.
+
 
 <table>
 <tr>

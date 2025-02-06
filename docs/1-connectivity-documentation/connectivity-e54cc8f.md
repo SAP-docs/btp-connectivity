@@ -40,7 +40,8 @@ SAP BTP Connectivity offers a set of services and software components which allo
 -   Lets you establish a secure tunnel from your on-premise network to applications on SAP BTP, while you keep full control and auditability of what is exposed to the cloud.
 -   Supports both the Neo environment and the multi-cloud foundation for application development on SAP BTP.
 
-
+> ### Note:  
+> The on-premise use cases described in this guide are also applicable to virtual private cloud \(VPC\) environments.
 
 ![](images/CS_Intro_All_NEW_APP_4646938.png)
 

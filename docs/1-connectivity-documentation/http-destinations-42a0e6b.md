@@ -4,6 +4,9 @@
 
 Find information about HTTP destinations for Internet and on-premise connections.
 
+> ### Note:  
+> The on-premise use cases described in this guide are also applicable to virtual private cloud \(VPC\) environments.
+
 
 
 <a name="loio42a0e6b966924f2e902090bdf435e1b2__section_N10024_N10011_N10001"/>

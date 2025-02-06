@@ -4,6 +4,9 @@
 
 Using multitenancy for applications that require a connection to a remote service or on-premise application.
 
+> ### Note:  
+> The on-premise use cases described in this guide are also applicable to virtual private cloud \(VPC\) environments.
+
 
 
 <a name="loio9c0bdd0efc8640739c9d2fa5cfe56cbd__top"/>

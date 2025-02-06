@@ -6,6 +6,9 @@
 
 RFC destinations provide the configuration required for communication with an on-premise ABAP system via Remote Function Call. The RFC destination data is used by the Java Connector \(JCo\) version that is available within SAP BTP to establish and manage the connection.
 
+> ### Note:  
+> The on-premise use cases described in this guide are also applicable to virtual private cloud \(VPC\) environments.
+
 
 
 <a name="loio238d027c154541f597201a0002713c86__section_N10024_N10011_N10001"/>

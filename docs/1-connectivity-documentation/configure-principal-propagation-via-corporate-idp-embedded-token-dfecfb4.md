@@ -1,8 +1,11 @@
 <!-- loiodfecfb4be336426bb31cd2843baeb8d4 -->
 
-# Configure Principal Propagation via Corporate IdP Embedded Token
+# Configure Principal Propagation via Corporate IdP-Embedded Token
 
-Configure a corporate IdP embedded token for principal propagation \(user propagation\) from your application to an on-premise system.
+Configure a corporate IdP-embedded token for principal propagation \(user propagation\) from your application to an on-premise system.
+
+> ### Note:  
+> The on-premise use cases described in this guide are also applicable to virtual private cloud \(VPC\) environments.
 
 
 
@@ -74,7 +77,7 @@ Developer
 
 ## Scenario
 
-For a Cloud Foundry application that uses the Connectivity service, you want the currently logged-in user to be propagated to an on-premise system via token from your trusted corporate IdP.
+For a Cloud Foundry application that uses the Connectivity service, you want the currently logged-in user to be propagated to an on-premise system via token from your trusted corporate IdP \(identity provider\).
 
 For more information, see [Principal Propagation](principal-propagation-e2cbb48.md).
 

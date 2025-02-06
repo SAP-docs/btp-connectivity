@@ -4,6 +4,12 @@
 
 Configure an OpenID-Connect \(OIDC\) token for principal propagation \(user propagation\) from your application to an on-premise system.
 
+> ### Note:  
+> For more information on OIDC, see [OpenID Specifications](https://openid.net/developers/specs/).
+
+> ### Note:  
+> The on-premise use cases described in this guide are also applicable to virtual private cloud \(VPC\) environments.
+
 
 
 <a name="loio000232bddce348ecb068fcbf9d13717d__tasks_pp_cs"/>

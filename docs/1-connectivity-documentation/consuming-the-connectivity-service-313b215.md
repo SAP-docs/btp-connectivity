@@ -5,6 +5,9 @@
 Connect your application to an on-premise system via HTTP.
 
 > ### Note:  
+> The on-premise use cases described in this guide are also applicable to virtual private cloud \(VPC\) environments.
+
+> ### Note:  
 > To use the Connectivity service with a protocol other than HTTP, see
 > 
 > -   [Invoking ABAP Function Modules via RFC](invoking-abap-function-modules-via-rfc-fa4adc9.md)

@@ -4,6 +4,9 @@
 
 Forward the identity of cloud users from SAP BTP to on-premise systems using principal propagation.
 
+> ### Note:  
+> The on-premise use cases described in this guide are also applicable to virtual private cloud \(VPC\) environments.
+
 
 
 ## Concept

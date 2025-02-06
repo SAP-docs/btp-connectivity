@@ -4,6 +4,9 @@
 
 Access on-premise systems from an application via TCP-based protocols, using a SOCKS5 Proxy.
 
+> ### Note:  
+> The on-premise use cases described in this guide are also applicable to virtual private cloud \(VPC\) environments.
+
 
 
 <a name="loiocd1583775afa43f0bb9ec69d9dbcc880__content"/>
