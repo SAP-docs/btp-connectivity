@@ -10,6 +10,9 @@ Create mail destinations in the *Destinations* editor \(SAP BTP cockpit\).
 
 You have logged into the cockpit and opened the *Destinations* editor.
 
+> ### Note:  
+> The on-premise use cases described in this guide are also applicable to virtual private cloud \(VPC\) environments.
+
 
 
 <a name="loio6442cb4f8b0f41178abce14c35f5def4__steps_j4g_jfb_pn"/>

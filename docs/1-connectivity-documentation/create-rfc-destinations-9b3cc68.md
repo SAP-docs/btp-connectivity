@@ -10,6 +10,9 @@ How to create RFC destinations in the *Destinations* editor \(SAP BTP cockpit\).
 
 You have logged into the cockpit and opened the *Destinations* editor.
 
+> ### Note:  
+> The on-premise use cases described in this guide are also applicable to virtual private cloud \(VPC\) environments.
+
 
 
 <a name="loio9b3cc683cca944bd98346bef3181630e__steps_j4g_jfb_pn"/>

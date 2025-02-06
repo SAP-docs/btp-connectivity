@@ -10,6 +10,9 @@ Create HTTP destinations in the *Destinations* editor \(SAP BTP cockpit\).
 
 You have logged into the cockpit and opened the *Destinations* editor.
 
+> ### Note:  
+> The on-premise use cases described in this guide are also applicable to virtual private cloud \(VPC\) environments.
+
 
 
 <a name="loio783fa1c418a244d0abb5f153e69ca4ce__steps_j4g_jfb_pn"/>
