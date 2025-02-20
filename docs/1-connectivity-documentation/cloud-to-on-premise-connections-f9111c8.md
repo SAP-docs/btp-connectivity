@@ -1,10 +1,10 @@
 <!-- loiof9111c8b58034bdcb848c24829c3e0f5 -->
 
-# On-Demand To On-Premise Connections
+# Cloud To On-Premise Connections
 
-Configure the physical connections for on-demand to on-premise calls in the Cloud Connector.
+Configure the physical connections for cloud-to-on-premise calls in the Cloud Connector.
 
-Adjusting the number of physical connections for this direction is possible both globally in the Cloud Connector UI \(*Configuration* \> *Advanced*\), and for individual communication partners on cloud side \(*On-Demand To On-Premise* \> *Applications*\).
+Adjusting the number of physical connections for this direction is possible both globally in the Cloud Connector UI \(*Configuration* \> *Advanced*\), and for individual communication partners on cloud side \(*cloud To On-Premise* \> *Applications*\).
 
 Connections are established for each defined and connected subaccount. The current number of opened connections is visible in the Cloud Connector UI via *<Subaccount\>* \> *Cloud Connections*.
 

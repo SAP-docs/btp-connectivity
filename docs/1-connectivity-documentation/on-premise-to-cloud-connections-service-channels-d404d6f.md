@@ -1,6 +1,6 @@
 <!-- loiod404d6f474814897a5923ffa997cb48b -->
 
-# On-Premise To On-Demand Connections \(Service Channels\)
+# On-Premise To Cloud Connections \(Service Channels\)
 
 Configure the number of physical connections for a Cloud Connector service channel.
 

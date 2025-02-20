@@ -127,6 +127,87 @@ Check your request headers or OAuth Configuration fields in the referenced Desti
 </td>
 <td valign="top">
 
+"x-subject-token-type" request header is required for destination with Authentication: OAuth2TokenExchange
+
+</td>
+<td valign="top">
+
+Transparent Proxy
+
+</td>
+<td valign="top">
+
+ 
+
+</td>
+<td valign="top">
+
+Make sure you pass "x-subject-token-type" header when using OAuth2TokenExchange destinations.
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+400 Bad Request
+
+</td>
+<td valign="top">
+
+"x-actor-token-type" request header is required when "x-actor-token" header is provided in the request
+
+</td>
+<td valign="top">
+
+Transparent Proxy
+
+</td>
+<td valign="top">
+
+ 
+
+</td>
+<td valign="top">
+
+Make sure you pass "x-actor-token-type" when "x-actor-token" is also provided in the request headers.
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+400 Bad Request
+
+</td>
+<td valign="top">
+
+"x-actor-token" request header is required when "x-actor-token-type" header is provided in the request
+
+</td>
+<td valign="top">
+
+Transparent Proxy
+
+</td>
+<td valign="top">
+
+ 
+
+</td>
+<td valign="top">
+
+Make sure you pass "x-actor-token" when "x-actor-token-type" is also provided in the request headers.
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+400 Bad Request
+
+</td>
+<td valign="top">
+
 'x-token-service-tenant' request header is missing. It is required when 'tokenServiceURLType' property in the destination is of type Common.
 
 </td>

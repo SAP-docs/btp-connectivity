@@ -18,7 +18,7 @@ To get the most out of the transparent proxy, you must configure it in a suitabl
 
 ## Sizing Options
 
-The following table gives basic sizing guidance. The values listed in the `CPU`, `Memory` and sections correspond to the properties, which should be defined in the `values.yaml`. For more information, see [Configuration Guide](configuration-guide-2a22cd7.md):
+The following table gives basic sizing guidance. The values listed in the `CPU` and `Memory` sections correspond to the properties, which should be defined in the configuration. For more information, see [Configuration Guide](configuration-guide-2a22cd7.md):
 
 **HTTP Proxy Sizing**
 
@@ -40,29 +40,57 @@ CPU
 Memory
 
 </th>
+<th valign="top">
+
+Max. Number of Requests per Second \(RPS\)
+
+</th>
+<th valign="top">
+
+Concurrent Users
+
+</th>
+<th valign="top">
+
+Bytes per Request \(KB\)
+
+</th>
 </tr>
 <tr>
 <td valign="top">
 
 S:
 
-The expected load is small - request concurrency and size are low
+</td>
+<td valign="top">
+
+-   `deployment.resources.http.requests.cpu: 0.05`
+-   `deployment.resources.http.limits.cpu: 0.05`
+
+
 
 </td>
 <td valign="top">
 
--   `deployment.resources.http.requests.cpu: 0.2`
--   `deployment.resources.http.limits.cpu: 0.4`
+-   `deployment.resources.http.requests.memory: 192 M`
+-   `deployment.resources.http.limits.memory: 192 M`
 
 
 
 </td>
 <td valign="top">
 
--   `deployment.resources.http.requests.memory: 256 M`
--   `deployment.resources.http.limits.memory: 512 M`
+10
 
+</td>
+<td valign="top">
 
+1
+
+</td>
+<td valign="top">
+
+1
 
 </td>
 </tr>
@@ -71,23 +99,36 @@ The expected load is small - request concurrency and size are low
 
 M:
 
-The expected load is medium - request concurrency and size are medium
+</td>
+<td valign="top">
+
+-   `deployment.resources.http.requests.cpu: 0.225`
+-   `deployment.resources.http.limits.cpu: 0.225`
+
+
 
 </td>
 <td valign="top">
 
--   `deployment.resources.http.requests.cpu: 0.4`
--   `deployment.resources.http.limits.cpu: 0.8`
+-   `deployment.resources.http.requests.memory: 256 M`
+-   `deployment.resources.http.limits.memory: 256 M`
 
 
 
 </td>
 <td valign="top">
 
--   `deployment.resources.http.requests.memory: 512 M`
--   `deployment.resources.http.limits.memory: 1024 M`
+100
 
+</td>
+<td valign="top">
 
+10
+
+</td>
+<td valign="top">
+
+3
 
 </td>
 </tr>
@@ -96,23 +137,74 @@ The expected load is medium - request concurrency and size are medium
 
 L:
 
-The expected load is large - request concurrency and size are medium or high
-
 </td>
 <td valign="top">
 
 -   `deployment.resources.http.requests.cpu: 0.8`
--   `deployment.resources.http.limits.cpu: 1.6`
+-   `deployment.resources.http.limits.cpu: 0.8`
 
 
 
 </td>
 <td valign="top">
 
--   `deployment.resources.http.requests.memory: 1024 M`
--   `deployment.resources.http.limits.memory: 2048 M`
+-   `deployment.resources.http.requests.memory: 320 M`
+-   `deployment.resources.http.limits.memory: 320 M`
 
 
+
+</td>
+<td valign="top">
+
+500
+
+</td>
+<td valign="top">
+
+50
+
+</td>
+<td valign="top">
+
+5
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+XL:
+
+</td>
+<td valign="top">
+
+-   `deployment.resources.http.requests.cpu: 1.9`
+-   `deployment.resources.http.limits.cpu: 1.9`
+
+
+
+</td>
+<td valign="top">
+
+-   `deployment.resources.http.requests.memory: 384 M`
+-   `deployment.resources.http.limits.memory: 384 M`
+
+
+
+</td>
+<td valign="top">
+
+1000
+
+</td>
+<td valign="top">
+
+100
+
+</td>
+<td valign="top">
+
+8
 
 </td>
 </tr>
@@ -138,29 +230,57 @@ CPU
 Memory
 
 </th>
+<th valign="top">
+
+Max. Number of Requests per Second \(RPS\)
+
+</th>
+<th valign="top">
+
+Concurrent Users
+
+</th>
+<th valign="top">
+
+Bytes per Request \(KB\)
+
+</th>
 </tr>
 <tr>
 <td valign="top">
 
 S:
 
-The expected load is small - request concurrency and size are low
+</td>
+<td valign="top">
+
+-   `deployment.resources.tcp.requests.cpu: 0.01`
+-   `deployment.resources.tcp.limits.cpu: 0.01`
+
+
 
 </td>
 <td valign="top">
 
--   `deployment.resources.tcp.requests.cpu: 0.05`
--   `deployment.resources.tcp.limits.cpu: 0.1`
-
-
-
-</td>
-<td valign="top">
-
--   `deployment.resources.tcp.requests.memory: 32 M`
+-   `deployment.resources.tcp.requests.memory: 64 M`
 -   `deployment.resources.tcp.limits.memory: 64 M`
 
 
+
+</td>
+<td valign="top">
+
+10
+
+</td>
+<td valign="top">
+
+1
+
+</td>
+<td valign="top">
+
+1
 
 </td>
 </tr>
@@ -169,23 +289,36 @@ The expected load is small - request concurrency and size are low
 
 M:
 
-The expected load is medium - request concurrency and size are medium
+</td>
+<td valign="top">
+
+-   `deployment.resources.tcp.requests.cpu: 0.025`
+-   `deployment.resources.tcp.limits.cpu: 0.025`
+
+
 
 </td>
 <td valign="top">
 
--   `deployment.resources.tcp.requests.cpu: 0.1`
--   `deployment.resources.tcp.limits.cpu: 0.2`
+-   `deployment.resources.tcp.requests.memory: 80 M`
+-   `deployment.resources.tcp.limits.memory: 80 M`
 
 
 
 </td>
 <td valign="top">
 
--   `deployment.resources.tcp.requests.memory: 64 M`
--   `deployment.resources.tcp.limits.memory: 128 M`
+100
 
+</td>
+<td valign="top">
 
+10
+
+</td>
+<td valign="top">
+
+3
 
 </td>
 </tr>
@@ -194,13 +327,49 @@ The expected load is medium - request concurrency and size are medium
 
 L:
 
-The expected load is large - request concurrency and size are medium or high
+</td>
+<td valign="top">
+
+-   `deployment.resources.tcp.requests.cpu: 0.08`
+-   `deployment.resources.tcp.limits.cpu: 0.08`
+
+
+
+</td>
+<td valign="top">
+
+-   `deployment.resources.tcp.requests.memory: 96 M`
+-   `deployment.resources.tcp.limits.memory: 96 M`
+
+
+
+</td>
+<td valign="top">
+
+500
+
+</td>
+<td valign="top">
+
+50
+
+</td>
+<td valign="top">
+
+5
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+XL:
 
 </td>
 <td valign="top">
 
 -   `deployment.resources.tcp.requests.cpu: 0.2`
--   `deployment.resources.tcp.limits.cpu: 0.4`
+-   `deployment.resources.tcp.limits.cpu: 0.2`
 
 
 
@@ -208,9 +377,24 @@ The expected load is large - request concurrency and size are medium or high
 <td valign="top">
 
 -   `deployment.resources.tcp.requests.memory: 128 M`
--   `deployment.resources.tcp.limits.memory: 256 M`
+-   `deployment.resources.tcp.limits.memory: 128 M`
 
 
+
+</td>
+<td valign="top">
+
+1000
+
+</td>
+<td valign="top">
+
+100
+
+</td>
+<td valign="top">
+
+8
 
 </td>
 </tr>
@@ -225,4 +409,11 @@ The expected load is large - request concurrency and size are medium or high
 > **General Note**
 > 
 > These sizing recommendations are just a direction point. There are many factors that affect the performance offered by the transparent proxy, related to the specifics of your concrete scenarios, expected regular and intermittent load, and so on.
+> 
+> The tests were made with the transparent proxy in *dedicated* mode with 50 HTTP or TCP destination custom resources applied respectively.
+
+> ### Note:  
+> **General Note**
+> 
+> These sizing recommendations are aligned with the *Pod Quality* of *Service Classes*, specifically the *Guaranteed* class. The transparent proxy components have the strictest resource limits, making them the least likely to face eviction.
 

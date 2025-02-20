@@ -4,7 +4,7 @@
 
 Define the access control scope of the destination custom resources for the transparent proxy for Kubernetes.
 
-The scoping of access to destinations exposed via *destination custom resources* is based on the *network policies* concept in Kubernetes.
+The scoping of access to destinations exposed via *destination custom resources* \(destination CRs\) is based on the *network policies* concept in Kubernetes.
 
 
 
@@ -25,9 +25,27 @@ Network policies are implemented by a CNI Plugin. To apply network policies, you
 
 ## Procedure
 
+**Global Configuration**
+
 You can set a default scope on all destination custom resources by setting `.Values.config.security.accessControl.destinations.defaultScope` in the `values.yaml` file.
 
 -   If .`Values.config.security.accessControl.destinations.defaultScope` is set to `namespaced`, the destinations exposed via destination custom resources that were created in a namespace, are accessible only by the applications running in this namespace of the destination custom resource.
 -   If `.Values.config.security.accessControl.destinations.defaultScope` is set to `clusterWide`, the destinations exposed via destination custom resources are accessible from any namespace in the cluster.
 -   The default value is `namespaced`.
+
+**Destination CR Configuration**
+
+You can also optionally set scope for the destination CR directly, which will override the global setting from the values.yaml. for that particular CR only.
+
+```
+apiVersion: destination.connectivity.api.sap/v1
+kind: Destination
+metadata:
+  name: <destination-cr-name>
+spec: 
+  destinationRef:
+    name: <destination-name>
+  accessControl:
+    scope: "namespaced|clusterWide"
+```
 

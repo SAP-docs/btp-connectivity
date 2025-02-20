@@ -12,7 +12,7 @@ To allow your cloud applications to access an on-premise LDAP server, insert a n
 2.  Choose *Add* \(+\). A wizard opens and asks for the required values.
 3.  *Backend Type*: Select `Non-SAP System` from the drop down list. When you are done, choose *Next*.
 
-    ![](images/SCC_CS_AccessControlTCP_-_SystemParameters_BackEnd_034ceaa.png)
+    ![](images/SCC_CS_AccessControlTCP_1_034ceaa.png)
 
 4.  *Protocol*: Select `LDAP` or `LDAPS` for the connection to the backend system. When you are done, choose *Next*.
 
@@ -27,7 +27,7 @@ To allow your cloud applications to access an on-premise LDAP server, insert a n
 
 6.  Enter a *Virtual Host* and *Virtual Port*. The virtual host can be a fake name and does not need to exist. The fields are pre-populated with the values of the *Internal Host* and *Internal Port*.
 
-    ![](images/SCC_CS_AccessControlTCP_-_SystemParameters_VirtualHost_b8b5393.png)
+    ![](images/SCC_CS_AccessControlTCP_5_b8b5393.png)
 
 7.  You can enter an optional description at this stage. The respective description will be shown as a tooltip when you press the button *Show Details* in column *Actions* of the *Mapping Virtual To Internal System* overview.
 

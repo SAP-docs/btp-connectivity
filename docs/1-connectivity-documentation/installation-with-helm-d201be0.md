@@ -5,7 +5,7 @@
 Use the Helm chart to configure and manage the lifecycle of the transparent proxy.
 
 > ### Note:  
-> Current version of the transparent proxy is 1.6.2.
+> Current version of the transparent proxy is 1.7.0.
 
 The transparent proxy delivery includes a Helm chart that you can use for lifecycle management. The Helm allows full configuration via [the standard Helm method of a "values.yaml" file](https://helm.sh/docs/chart_template_guide/values_files/).
 
@@ -20,40 +20,7 @@ The transparent proxy Helm chart is available via the RBSC \(*repository-based s
 
 ## Prerequisites
 
-1.  Prepare credentials for the Destination service instance :
-
-    -   Option 1: Reuse existing secret
-        -   If you already have an existing secret in your Kubernetes cluster you can reference it providing the parameter `config.integration.destinationService.instances[n].serviceCredentials.secretName`.
-
-        -   The secret data format can be either one-key or multi-key \(for example, secrets created by Destination service instance creation in the Kyma dashboard\).
-
-        -   If the secret data key format is one-key you should also provide the value of that key as `config.integration.destinationService.instances[n].serviceCredentials.secretKey`.
-
-        -   If that secret is not in the same namespace as the transparent proxy provide also `config.integration.destinationService.instances[n].serviceCredentials.secretNamespace`.
-
-
-    -   Option 2: Create secret holding the Destination service key
-        -   Get the service key of the Destination service instance.
-        -   Base64-encode the service key and place it in the `values.yaml` for `config.integration.destinationService.instances[n].serviceCredentials.secretData`.
-
-
-    For more information, see [Configuration Guide](configuration-guide-2a22cd7.md).
-
-    > ### Note:  
-    > For x.509-based service keys with self-signed certificates, prepare a Kubernetes secret holding the private key for the certificate.
-    > 
-    > **Example:** 
-    > 
-    > ```
-    > kubectl create secret generic x509-svc-key-private-key --from-file=pk.pem
-    > ```
-    > 
-    > If you are using another secret name or internal key in the secret, provide the required parameters \(`config.integration.destinationService.instances[n].serviceCredentials.privateKey.secretName` and
-    > 
-    > `config.integration.destinationService.instances[n].serviceCredentials.privateKey.secretInternalKey`\) in the `values.yaml`.
-    > 
-    > For more information, see [Configuration Guide](configuration-guide-2a22cd7.md).
-
+1.  Prepare credentials for the Destination service instance : see [Destination Service Integration](destination-service-integration-cd02e5c.md) \(step 3\).
 2.  Fill all other properties in `values.yaml` for your scenario, as described in [Configuration Guide](configuration-guide-2a22cd7.md).
 
     > ### Caution:  
@@ -148,7 +115,7 @@ The transparent proxy Helm chart is available via the RBSC \(*repository-based s
     > config:
     >   logging:
     >     ## The initial log level across all transparent proxy components. Accepted log levels are: trace, debug, info, warn, error, fatal.
-    >     ## The log levels can be changed dynamically, see https://help.sap.com/docs/connectivity/sap-btp-connectivity-cf/get-logs-and-change-log-levels
+    >     ## The log levels can be changed dynamically, see https://help.sap.com/docs/connectivity/sap-btp-connectivity-cf/transparent-proxy-troubleshooting?locale=en-US&q=transparent%20proxy#change-log-levels-of-the-transparent-proxy-components
     >     level: info
     >   ## Defines the tenant mode in which Transparent Proxy is working in. Default value "dedicated" means that only Destinations in the subaccount defined in Destination Service key could be exposed and accessed via TP.
     >   ## The other option "shared" shows that the proxy could work with different subscribed tenants to the provider in the service key. Then, on each request "X-Tenant-Subdomain" or "X-Tenant-Id" header becomes required in this mode.
@@ -156,7 +123,7 @@ The transparent proxy Helm chart is available via the RBSC \(*repository-based s
     >   security:
     >     accessControl:
     >       destinations:
-    >         ## Defines the default scope of Destination CRs. Possible values are “namespaced” or “clusterWide”. See https://help.sap.com/docs/connectivity/sap-btp-connectivity-cf/destination-custom-resource-scope?version=Cloud
+    >         ## Defines the default scope of Destination CRs. Possible values are “namespaced” or “clusterWide”. See https://help.sap.com/docs/connectivity/sap-btp-connectivity-cf/destination-custom-resource-scope?locale=en-US&q=transparent%20proxy
     >         defaultScope: "namespaced"
     >     communication:
     >       internal:
@@ -229,43 +196,23 @@ The transparent proxy Helm chart is available via the RBSC \(*repository-based s
 
 ## Deploy \(DockerHub\)
 
-To deploy the transparent proxy on a Kubernetes cluster, execute the following steps:
+The transparent proxy Helm chart is available in DockerHub.
 
-1.  Add the Helm repository and pull the Helm chart from DockerHub.
+You can directly install it with one command:
 
-    You can directly install it with one command:
-
-    ```
-    helm install transparent-proxy oci://registry-1.docker.io/sapse/transparent-proxy --version <version of helm chart> --namespace <namespace> -f <path-to-values.yaml>
-    ```
-
-    For additional information about using OCI registries with Helm, see [Helm docs](https://helm.sh/docs/topics/registries/).
-
-2.  Use the Helm CLI to deploy the transparent proxy:
-
-    ```
-    helm install transparent-proxy transparent-proxy-helm/transparent-proxy --version=<version of helm chart> --namespace <namespace> -f <path-to-values.yaml>
-    ```
-
-    > ### Note:  
-    > **Installation in a Kyma Cluster**
-    > 
-    > In case of installation in a Kyma cluster, if you want to enable istio for the transparent proxy workloads, you need to label the namespace where the transparent proxy is installed with:
-    > 
-    > ```
-    > kubectl label namespace <namespace> istio-injection=enabled
-    > ```
-
+```
+helm install transparent-proxy oci://registry-1.docker.io/sapse/transparent-proxy --version <version of helm chart> --namespace <namespace> -f <path-to-values.yaml>
+```
 
 
 
 <a name="loiod201be05a4aa444898fd20bcecb1ebbb__section_jxx_xbp_y5b"/>
 
-## RBSC Pull information \(Latest Version\)
+## Deploy from Repository Based Shipment Channel \(RBSC\)
 
 **Registry:** 73554900100900006891.helmsrv.cdn.repositories.cloud.sap
 
-**Tag:** 1.6.2
+**Tag:** 1.7.0
 
 **Authorization**: See [RBSC documentation](https://help.sap.com/viewer/0a64be17478d4f5ba45d14ab62b0d74c/Cloud/en-US/7e83dfc309834942b441fc2106c5b7f5.html).
 

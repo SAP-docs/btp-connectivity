@@ -10,7 +10,7 @@ Get logs and change log levels for the transparent proxy for Kubernetes.
 
 ## Get Logs of the Transparent Proxy Components
 
-The transparent proxy consists of a transparent proxy manager, transparent HTTP proxy, transparent proxy health check and multiple transparent TCP proxy instances.
+The transparent proxy consists of a transparent proxy manager, transparent HTTP proxy, transparent TCP proxy, and transparent proxy health check.
 
 1.  To get the logs of the transparent proxy manager, execute:
 
@@ -24,7 +24,7 @@ The transparent proxy consists of a transparent proxy manager, transparent HTTP 
     kubectl logs -l transparent-proxy.connectivity.api.sap/component=http-proxy --all-containers --tail=-1 -n <installation-namespace> > transparent-http-proxy.log
     ```
 
-3.  To get the logs of the transparent TCP proxy instances, execute:
+3.  To get the logs of the transparent TCP proxy, execute:
 
     ```
     kubectl logs -l transparent-proxy.connectivity.api.sap/component=tcp-proxy --tail=-1 -n <installation-namespace> > transparent-tcp-proxy.log
@@ -85,10 +85,10 @@ Changing a log level is done without any downtime and requires no restarts. All 
     kubectl exec <transparent http proxy pod> -n <installation-namespace> -it -- /etc/logging/change-log-level DEBUG
     ```
 
-3.  To change the log level of a transparent TCP proxy instance, execute:
+3.  To change the log level of a transparent TCP proxy, execute:
 
     ```
-    kubectl exec <transparent tcp proxy instance pod> -n <installation-namespace> -it -- /etc/logging/change-log-level DEBUG
+    kubectl exec <transparent tcp proxy pod> -n <installation-namespace> -it -- /etc/logging/change-log-level DEBUG
     ```
 
 4.  To change the log level of the transparent proxy health check, execute:

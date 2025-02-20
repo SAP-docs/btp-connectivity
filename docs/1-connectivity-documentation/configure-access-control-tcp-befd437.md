@@ -12,7 +12,7 @@ To allow your cloud applications to access a certain backend system on the intra
 2.  Choose *Add* \(+\). A wizard opens and asks for the required values.
 3.  *Backend Type*: Select an appropriate system type, for example, `Non-SAP System`, from the drop-down list. When you are done, choose *Next*.
 
-    ![](images/SCC_CS_AccessControlTCP_-_SystemParameters_BackEnd_034ceaa.png)
+    ![](images/SCC_CS_AccessControlTCP_1_034ceaa.png)
 
 4.  *Protocol*: Select `TCP` or `TCP SSL` for the connection to the backend system. When choosing TCP, you can perform an end-to-end TLS handshake from the cloud client to the backend. If the cloud-side client is using plain communication, but you still need to encrypt the hop between Cloud Connector and the backend, choose `TCP SSL`. When you are done, choose *Next*.
 
@@ -38,7 +38,7 @@ To allow your cloud applications to access a certain backend system on the intra
 
 6.  Enter a *Virtual Host* and *Virtual Port*. The virtual host can be a fake name and does not need to exist. The fields are prepopulated with the values of the *Internal Host* and *Port or Port Range*.
 
-    ![](images/SCC_CS_AccessControlTCP_-_SystemParameters_VirtualHost_b8b5393.png)
+    ![](images/SCC_CS_AccessControlTCP_5_b8b5393.png)
 
 7.  You can enter an optional description at this stage. The respective description will be shown as a tooltip when you press the button *Show Details* in column *Actions* of the *Mapping Virtual To Internal System* overview.
 

@@ -13,10 +13,19 @@ The transparent proxy is delivered as Docker images and a Helm chart. You need t
 
 ![](images/CS_Transparent_Proxy_Arch_PPT_d4060b6.png)
 
-The transparent proxy handles the HTTP\(s\) protocol for Internet connections. For on-premise destinations, the transparent proxy handles the protocols HTTP, LDAP, MAIL \(SMTP, IMAP, POP3\), and TCP. The transparent proxy creates a Kubernetes service for each SAP BTP destination configuration exposed by a *destination custom resource*. When an application tries to reach the desired system defined as a destination configuration, the transparent proxy intercepts the traffic \(1\), calls the SAP BTP Destination service \(or uses the cached response for the destination value\) to obtain the configuration for the requested destination \(2\), enriches the request by providing a handshake with the connectivity proxy and authentication mechanism, and routes the traffic to the desired remote system:
+The transparent proxy handles the HTTP\(s\) protocol for Internet connections. For on-premise destinations, the transparent proxy handles the protocols HTTP, LDAP, MAIL \(SMTP, IMAP, POP3\), and TCP. It also supports IPv4, IPv6 and Dual-Stack client workloads, Kubernetes environments, and target systems.
 
--   Directly for Internet-accessible solutions/applications/systems \(3\)
--   Via the connectivity proxy \(3\) and the Cloud Connector \(4\) for on-premise systems
+The transparent proxy creates a Kubernetes service for each SAP BTP destination configuration exposed by a *destination custom resource*.
+
+When an application tries to reach the desired system defined as a destination configuration, the transparent proxy:
+
+-   Intercepts the traffic \(1\)
+-   Calls the SAP BTP Destination service \(or uses the cached response for the destination value\) to obtain the configuration for the requested destination \(2\)
+-   Enriches the request by providing a handshake with the connectivity proxy and authentication mechanism, and routes the traffic to the desired remote system:
+    -   Directly for Internet-accessible solutions/applications/systems \(3\)
+
+    -   Via the connectivity proxy \(3\) and the Cloud Connector \(4\) for on-premise systems
+
 
 **Related Information**  
 

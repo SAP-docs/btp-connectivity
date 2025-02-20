@@ -48,6 +48,87 @@ Required
 <tr>
 <td valign="top">
 
+`additionalCAs.secretName`
+
+</td>
+<td valign="top">
+
+Name of the secret that allows to specify a list of CA certificates which are to be trusted, in addition to the default ones for the outbound technical communication of the transparent proxy components.
+
+</td>
+<td valign="top">
+
+ 
+
+</td>
+<td valign="top">
+
+ 
+
+</td>
+<td valign="top">
+
+False
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+`additionalCAs.secretKey`
+
+</td>
+<td valign="top">
+
+Key in the *additionalCAs.secretName* that defines the CAs to be trusted, concatenated together one after the other.
+
+</td>
+<td valign="top">
+
+ 
+
+</td>
+<td valign="top">
+
+ 
+
+</td>
+<td valign="top">
+
+False
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+`additionalCAs.secretNamespace`
+
+</td>
+<td valign="top">
+
+Namespace of the existing secret to be used, which holds the CA certificates to the Destination service and XSUAA. Should be specified when the *additionalCAs.secretName* is in a different namespace to the transparent proxy's installation namespace.
+
+</td>
+<td valign="top">
+
+ 
+
+</td>
+<td valign="top">
+
+ 
+
+</td>
+<td valign="top">
+
+False
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
 `config.tenantMode`
 
 </td>
@@ -70,7 +151,7 @@ Default value *"dedicated"* specifies that only destinations defined in the suba
 </td>
 <td valign="top">
 
- 
+True
 
 </td>
 </tr>
@@ -304,12 +385,39 @@ False
 
 The mode in which transparent proxy operates with the destinations in the cluster. Possible values are "all" or "labelSelector".
 
-If "labelSelector" is set, the transparent proxy operates only in namespaces labeled with *transparent-proxy.connectivity.api.sap/namespace:<namespace where TP is installed in\>*.
+If "labelSelector" is set, the transparent proxy operates only in namespaces labeled with *transparent-proxy.connectivity.api.sap/namespace:<namespace where transparent proxy is installed in\>*.
 
 </td>
 <td valign="top">
 
 all
+
+</td>
+<td valign="top">
+
+ 
+
+</td>
+<td valign="top">
+
+False
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+`config.metrics.prometheus.enabled`
+
+</td>
+<td valign="top">
+
+Enables the collection and exposure of metrics in the Prometheus format through an HTTP endpoint. When enabled it creates Kubernetes services for each transpararent proxy component which can be configured for scrape in various tools understanding the OpenMetrics format.
+
+</td>
+<td valign="top">
+
+false
 
 </td>
 <td valign="top">
@@ -1022,7 +1130,7 @@ Version of the transparent proxy images to be deployed.
 </td>
 <td valign="top">
 
-<Version of the helm chart\>
+<transparent proxy version\>
 
 </td>
 <td valign="top">
@@ -1071,7 +1179,7 @@ False
 </td>
 <td valign="top">
 
-Amount of transparent TCP proxy pods for each TCP destination to start from this deployment.
+Amount of transparent TCP proxy pods to start.
 
 </td>
 <td valign="top">
@@ -1898,6 +2006,35 @@ By default there is no maximum.
 <td valign="top">
 
 512M
+
+</td>
+<td valign="top">
+
+False
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+`deployment.priority.value`
+
+</td>
+<td valign="top">
+
+Specifies the pod priority of the transparent proxy components. By default in Kyma it is 2000000 \(same as most other Kyma modules\) and in non-Kyma it is 0. For more details about pod priorirty see [Pod Priority and Preemption](https://kubernetes.io/docs/concepts/scheduling-eviction/pod-priority-preemption/).
+
+</td>
+<td valign="top">
+
+Kyma: 2000000
+
+Other environments: 0
+
+</td>
+<td valign="top">
+
+ 
 
 </td>
 <td valign="top">

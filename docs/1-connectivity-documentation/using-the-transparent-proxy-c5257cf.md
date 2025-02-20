@@ -160,6 +160,16 @@ For more information, see [Extending Destinations with Fragments](extending-dest
 
 The destination fragment can be referenced in two ways: statically through a [Destination Custom Resource](destination-custom-resource-fc7951e.md), or dynamically by using [Destination Gateway \(Dynamic Lookup of Destinations\)](destination-gateway-dynamic-lookup-of-destinations-6836e00.md).
 
+
+
+<a name="loioc5257cf110bf4b7b9054eab74ededff4__section_vgq_15q_k2c"/>
+
+## Troubleshooting
+
+In case of errors, always look for detailed error messages and hints in 'x-error-message', 'x-error-origin', 'x-proxy-server' and 'x-internal-error-code'. Also, you could use 'x-request-id' as correlation ID to find more about the error in the transparent proxy HTTP pods.
+
+For more information, see [Troubleshooting](troubleshooting-fce292a.md).
+
 **Related Information**  
 
 
