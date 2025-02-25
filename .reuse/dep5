@@ -1,8 +1,0 @@
-Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
-Upstream-Name: btp-connectivity
-Upstream-Contact: Frank Müller (frank1.mueller@sap.com)
-Source: https://github.com/sap-docs/btp-connectivity
-
-Files: *
-Copyright:  2023 SAP SE or an SAP affiliate company and sap-docs/btp-connectivity contributors
-License: CC-BY-4.0

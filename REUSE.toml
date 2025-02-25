@@ -1,0 +1,10 @@
+version = 1
+SPDX-PackageName = "btp-connectivity"
+SPDX-PackageSupplier = "Frank Müller (frank1.mueller@sap.com)"
+SPDX-PackageDownloadLocation = "https://github.com/sap-docs/btp-connectivity"
+
+[[annotations]]
+path = "**"
+precedence = "aggregate"
+SPDX-FileCopyrightText = "2023 SAP SE or an SAP affiliate company and sap-docs/btp-connectivity contributors"
+SPDX-License-Identifier = "CC-BY-4.0"
