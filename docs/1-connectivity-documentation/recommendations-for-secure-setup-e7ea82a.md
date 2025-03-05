@@ -12,7 +12,7 @@ For the Connectivity service and the Cloud Connector, you should apply the follo
 
 From the *Connector* menu, choose *Security Status* to access an overview showing potential security risks and the recommended actions.
 
-![](images/SCC_Recommendations_for_Secure_Setup_5f7b7fc.png)
+![](images/SCC_Recommendations_for_Secure_Setup_1_5f7b7fc.png)
 
 
 
@@ -85,7 +85,7 @@ Hard drive encryption for machines with a Cloud Connector installation ensures t
 
 ## Supported Protocols
 
-Currently, the protocols HTTP, HTTPS, RFC, RFC with SNC, LDAP, LDAPS, TCP, and TCP over TLS are supported for connections between the SAP BTP and on-premise systems when the Cloud Connector and the Connectivity service are used. The whole route from the application virtual machine in the cloud to the Cloud Connector is always SSL-encrypted.
+Currently, the protocols HTTP, HTTPS, RFC, RFC with SNC, LDAP, LDAPS, TCP, and TCP over TLS are supported for connections between the SAP BTP and on-premises systems when the Cloud Connector and the Connectivity service are used. The whole route from the application virtual machine in the cloud to the Cloud Connector is always SSL-encrypted.
 
 The route from the connector to the back-end system can be TLS-encrypted or SNC-encrypted. See [Configure Access Control \(HTTP\)](configure-access-control-http-e7d4927.md) and [Configure Access Control \(RFC\)](configure-access-control-rfc-ca58689.md).
 
@@ -116,7 +116,7 @@ Initially, a default set of encryption ciphers is enabled for HTTPS connections 
 
 To enable or disable ciphers, choose *Configuration* from the main menu and go to tab *User Interface*, section *Cipher Suites*.
 
-![](images/SCC_Recommendations_for_Secure_Setup_-_Cipher_Suites_af9abf6.png)
+![](images/SCC_Recommendations_for_Secure_Setup_2_af9abf6.png)
 
 The first column labeled **Status Quo** shows the current state of all available ciphers. The second column **Status New** shows the state the ciphers will have after a restart, if that state differs from the current one \(that is, there is no entry in that column if the state remains the same after a restart\).
 

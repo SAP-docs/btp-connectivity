@@ -30,7 +30,7 @@ You can find detailed information, for example the entry creation date for acces
 
 ## Export Access Control Settings
 
-1.  From your subaccount menu, choose *Cloud To On-Premise* and select the tab *Access Control*.
+1.  From your subaccount menu, choose *Cloud To On-Premises* and select the tab *Access Control*.
 2.  To store the current settings in a ZIP file, choose *Download* icon in the upper-right corner.
 3.  You can later import this file into a different Cloud Connector.
 
@@ -254,7 +254,7 @@ HTTP\(S\)
 
 [Configure Access Control \(RFC\)](configure-access-control-rfc-ca58689.md "Specify the backend systems that can be accessed by your cloud applications using RFC.")
 
-[Configure Access Control \(LDAP\)](configure-access-control-ldap-e4ba9b3.md "Add a specified system mapping to the Cloud Connector if you want to use an on-premise LDAP server or user authentication in your cloud application.")
+[Configure Access Control \(LDAP\)](configure-access-control-ldap-e4ba9b3.md "Add a specified system mapping to the Cloud Connector if you want to use an on-premises LDAP server or user authentication in your cloud application.")
 
 [Configure Access Control \(TCP\)](configure-access-control-tcp-befd437.md "Add a specified system mapping to the Cloud Connector if you want to use the TCP protocol for communication with a backend system.")
 

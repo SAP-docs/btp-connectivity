@@ -141,7 +141,7 @@ Use the auditor tool to view and manage audit log information \(Cloud Connector 
 <tr>
 <td valign="top">
 
-[Troubleshooting](troubleshooting-e7df7f1.md) 
+[Monitoring, Logging, And Troubleshooting](monitoring-logging-and-troubleshooting-e7df7f1.md) 
 
 </td>
 <td valign="top">
@@ -158,7 +158,7 @@ Information about monitoring the state of open tunnel connections in the Cloud C
 </td>
 <td valign="top">
 
-How to manage a hybrid scenario, in which applications running on SAP BTP require access to on-premise systems using the Cloud Connector.
+How to manage a hybrid scenario, in which applications running on SAP BTP require access to on-premises systems using the Cloud Connector.
 
 </td>
 </tr>

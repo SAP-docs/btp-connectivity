@@ -323,7 +323,7 @@ Back to [Tasks](consuming-the-connectivity-service-313b215.md#loio313b215066a840
 ![](images/CS_TASK_Admin_219b363.png)
 
 > ### Note:  
-> This is an advanced option when using more than one Cloud Connector for a subaccount. For more information how to set the `location ID` in the Cloud Connector, see [Managing Subaccounts](managing-subaccounts-f16df12.md), step 4 in section *Subaccount Dashboard*.
+> This is an advanced option when using more than one Cloud Connector for a subaccount. For more information how to set the `location ID` in the Cloud Connector, see [Adding and Managing Subaccounts](adding-and-managing-subaccounts-f16df12.md), step 4 in section *Subaccount Dashboard*.
 
 You can connect multiple Cloud Connectors to a subaccount if their `location ID` is different. Using the header `SAP-Connectivity-SCC-Location_ID` you can specify the Cloud Connector over which the connection should be opened. If this header is not specified, the connection is opened to the Cloud Connector that is connected without any `location ID`. For example:
 

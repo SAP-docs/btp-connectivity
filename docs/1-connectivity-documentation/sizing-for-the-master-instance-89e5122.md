@@ -4,7 +4,7 @@
 
 Learn more about the basic criteria for the sizing of your Cloud Connector master instance.
 
-For the master setup, keep in mind the expected load for communication between the SAP BTP and on-premise systems. The setups listed below differ in a mostly qualitative manner, without hard limits for each of them.
+For the master setup, keep in mind the expected load for communication between the SAP BTP and on-premises systems. The setups listed below differ in a mostly qualitative manner, without hard limits for each of them.
 
 > ### Note:  
 > The mentioned sizes are considered as minimal configuration, larger ones are always ok. In general, the more applications, application instances, and subaccounts are connected, the more competition will exist for the limited resources on the machine.

@@ -4,17 +4,17 @@
 
 Copy an existing subcaccount configuration in the Cloud Connector to another subaccount.
 
-You can copy the configuration of a subaccount's *Cloud To On-Premise* and *On-Premise To Coud* sections to a new subaccount, by using the export and import functions in the Cloud Connector administration UI.
+You can copy the configuration of a subaccount's *Cloud To On-Premises* and *On-Premises To Coud* sections to a new subaccount, by using the export and import functions in the Cloud Connector administration UI.
 
 > ### Note:  
-> Principal propagation configuration \(section *Cloud To On-Premise*\) is not exported or imported, since it contains subaccount-specific data.
+> Principal propagation configuration \(section *Cloud To On-Premises*\) is not exported or imported, since it contains subaccount-specific data.
 
 **Procedure: Export an Existing Configuration**
 
 1.  In the Cloud Connector administration UI, choose your subaccount from the navigation menu.
 2.  To export the existing configuration, choose the *Export* button in the upper right corner. The configuration is downloaded as a zip file to your local file system.
 
-    ![](images/SCC_SubaccountConfig_-_Export_fca5e66.png)
+    ![](images/SCC_SubaccountConfig_1_fca5e66.png)
 
 
 **Procedure: Import an Existing Configuration**

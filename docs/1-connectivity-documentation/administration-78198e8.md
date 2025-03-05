@@ -84,7 +84,7 @@ Download and configure X.509 certificates as a prerequisite for user propagation
 <tr>
 <td valign="top">
 
-[Multitenancy in the Connectivity Service](multitenancy-in-the-connectivity-service-9c0bdd0.md)
+[Multitenancy in SAP BTP Connectivity](multitenancy-in-sap-btp-connectivity-9c0bdd0.md)
 
 </td>
 <td valign="top">

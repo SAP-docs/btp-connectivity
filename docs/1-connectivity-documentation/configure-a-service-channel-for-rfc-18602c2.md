@@ -2,7 +2,7 @@
 
 # Configure a Service Channel for RFC
 
-For scenarios that need to call from on-premise systems to SAP BTP ABAP environment using RFC, you can establish a connection to an ABAP Cloud tenant host. To do this, select *On-Premise to Cloud* \> *Service Channels* in the Cloud Connector.
+For scenarios that need to call from on-premises systems to SAP BTP ABAP environment using RFC, you can establish a connection to an ABAP Cloud tenant host. To do this, select *On-Premises to Cloud* \> *Service Channels* in the Cloud Connector.
 
 
 
@@ -22,7 +22,7 @@ For scenarios that need to call from on-premise systems to SAP BTP ABAP environm
 1.  From your subaccount menu, choose *On Premise To Cloud*.
 2.  Choose the *Add* \(+\) icon.
 
-    ![](images/SCC_ServiceChannels_-_RFC_Add_605993f.png)
+    ![](images/SCC_ServiceChannels_-_RFC_1_605993f.png)
 
 3.  In the *Add Service Channel* dialog, select `ABAP Cloud System` from the drop-down list of supported channel types.
 4.  Optionally, provide a *Description* that explains what the ABAP Cloud service channel is used for.
@@ -35,14 +35,14 @@ For scenarios that need to call from on-premise systems to SAP BTP ABAP environm
 7.  In the same dialog window, define the *<Local Instance Number\>* under which the ABAP Cloud system is reachable for the client systems. You can enter any instance number for which the port is not used yet on the Cloud Connector host. The port numbers result from the following pattern: `33<LocalInstanceNumber>`, for activated SNC \(*Secure Network Connection*\) `48<LocalInstanceNumber>`.
 8.  Use the checkbox *Activate SNC* to specify if the opened service channel port should listen to and terminate incoming SNC RFC connections instead of plain RFC connections. The SNC configuration used is the same as in section [Initial Configuration \(RFC\)](initial-configuration-rfc-f09eefe.md). In case of issues, you can use the trace *Cloud Connector loggers*, and also the *SNC payload* and *CPIC* traces.
 
-    For more information on traces, see [Troubleshooting](troubleshooting-e7df7f1.md).
+    For more information on traces, see [Monitoring, Logging, And Troubleshooting](monitoring-logging-and-troubleshooting-e7df7f1.md).
 
     > ### Note:  
     > This SNC option is only supported for ABAP-based clients, not for any RFC connectors as JCo, NCo or NW RFC SDK. For these scenarios, please use the WebSocket RFC protocol without the Cloud Connector.
 
 9.  In the same dialog window, leave *Enabled* selected to establish the channel immediately after choosing *Finish*. Unselect it if you don't want to establish the channel immediately.
 
-    ![](images/SCC_ServiceChannels_-_RFC_Enabled_59bb37f.png)
+    ![](images/SCC_ServiceChannels_-_RFC_2_59bb37f.png)
 
 10. Choose *Finish*.
 

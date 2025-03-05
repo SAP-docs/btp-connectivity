@@ -2,7 +2,7 @@
 
 # Configuration
 
-Configure the Cloud Connector to make it operational for connections between your SAP BTP applications and on-premise systems.
+Configure the Cloud Connector to make it operational for connections between your SAP BTP applications and on-premises systems.
 
 
 <table>
@@ -33,7 +33,7 @@ After installing the Cloud Connector and starting the Cloud Connector daemon, yo
 <tr>
 <td valign="top">
 
-[Managing Subaccounts](managing-subaccounts-f16df12.md)
+[Adding and Managing Subaccounts](adding-and-managing-subaccounts-f16df12.md)
 
 </td>
 <td valign="top">
@@ -45,7 +45,7 @@ How to connect SAP BTP subaccounts to your Cloud Connector.
 <tr>
 <td valign="top">
 
-[Authenticating Users against On-Premise Systems](authenticating-users-against-on-premise-systems-b643fbe.md)
+[Authenticating Users against On-Premises Systems](authenticating-users-against-on-premises-systems-b643fbe.md)
 
 </td>
 <td valign="top">
@@ -98,7 +98,7 @@ Service channels provide access from an external network to certain services on 
 </td>
 <td valign="top">
 
-Set up an allowlist for trusted cloud applications and a trust store for on-premise systems in the Cloud Connector.
+Set up an allowlist for trusted cloud applications and a trust store for on-premises systems in the Cloud Connector.
 
 </td>
 </tr>
@@ -110,7 +110,7 @@ Set up an allowlist for trusted cloud applications and a trust store for on-prem
 </td>
 <td valign="top">
 
-How to connect database, BI, or replication tools running in the on-premise network to a HANA database on SAP BTP using the service channels of the Cloud Connector.
+How to connect database, BI, or replication tools running in the on-premises network to a HANA database on SAP BTP using the service channels of the Cloud Connector.
 
 </td>
 </tr>
@@ -141,12 +141,24 @@ Activate Solution Management reporting in the Cloud Connector.
 <tr>
 <td valign="top">
 
+[Configure Tunnel Connections](configure-tunnel-connections-6069899.md)
+
+</td>
+<td valign="top">
+
+Adjust tunnel parameters for the Cloud Connector.
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
 [Configure Advanced Connectivity](configure-advanced-connectivity-3975253.md)
 
 </td>
 <td valign="top">
 
-Adapt connectivity settings that control the throughput and HTTP connectivity to on-premise systems.
+Adapt connectivity settings that control the throughput and HTTP connectivity to on-premises systems.
 
 </td>
 </tr>
@@ -183,6 +195,18 @@ Backup and restore your Cloud Connector configuration.
 <td valign="top">
 
 Add additional information to the login screen and configure its appearance.
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+[Theming](theming-e7e8197.md)
+
+</td>
+<td valign="top">
+
+Customize the Cloud Connector UI design by choosing from four Horizon themes.
 
 </td>
 </tr>

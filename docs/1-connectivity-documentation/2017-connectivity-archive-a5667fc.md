@@ -54,7 +54,7 @@ Release of SAP Cloud Platform Cloud Connector 2.10.1.
 
 -   SAP Solution Manager can be integrated with one click of a button if the host agent is installed on a Cloud Connector machine. See the *Solution Management* section in [Monitoring](monitoring-6d9c937.md).
 
--   The limitation that only 100 subaccounts could be managed with the administration UI has been removed. See [Managing Subaccounts](managing-subaccounts-f16df12.md).
+-   The limitation that only 100 subaccounts could be managed with the administration UI has been removed. See [Adding and Managing Subaccounts](adding-and-managing-subaccounts-f16df12.md).
 
 
 

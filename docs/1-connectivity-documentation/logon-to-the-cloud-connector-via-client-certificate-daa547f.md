@@ -5,22 +5,22 @@
 Switch from default logon to client certificate logon to access the Cloud Connector.
 
 > ### Caution:  
-> If *high availability* setup is active, this feature does only work if *an additional port has been specified* \(for more information, see [Install a Failover Instance for High Availability](install-a-failover-instance-for-high-availability-c697705.md)\).
+> If *high availability* \(HA\) setup is active, this feature only works if a separate HA port has been specified \(for information on how to specify a separate port for *high availability*, see [Install a Failover Instance for High Availability](install-a-failover-instance-for-high-availability-c697705.md)\).
 > 
-> Otherwise, a Cloud Connector shadow instance cannot connect due to missing trust with error: *There is no trust with Cloud Connector on https://<host\>:<port\>. Reset shadow configuration and try to connect shadow again*.
+> Otherwise, a shadow will not be able to connect due to missing trust which will result in this error: *There is no trust with Cloud Connector on https://<host\>:<port\>. Reset shadow configuration and try to connect shadow again*.
 
 > ### Restriction:  
 > Configuring the logon with a certificate is not allowed for SAP-operated Cloud Connectors, for example in the context of *Enterprise Cloud Services* or *S/4HANA Private Cloud Edition*.
 
-Instead of authenticating with user and password as configured by default \(see [Initial Configuration](initial-configuration-db9170a.md)\), you can switch to client certificate authentication and logon. To do so, choose *Configuration* \(or *Shadow Configuration*\) from the main menu, and tab *User Interface*, section *Authentication*.
+Instead of authenticating with user and password as configured by default \(see [Initial Configuration](initial-configuration-db9170a.md)\), you can employ client certificate authentication and logon. To do so, choose *Configuration* \(or *Shadow Configuration*\) from the main menu, and tab *User Interface*, section *Authentication*.
 
 ![](images/SCC_Logon_to_the_Cloud_Connector_with_a_Client_Certificate_1_8c7b9a2.png)
 
-In the next prompt, specify an object identifier \(OID\) to extract the user name from subject of any given client certificate.
+In the pop-up dialog, specify an object identifier \(OID\) to extract the user name from subject of any given client certificate.
 
 ![](images/SCC_Logon_to_the_Cloud_Connector_with_a_Client_Certificate_2_39b7a67.png)
 
-You must add at least one CA certificate to the *Authentication Allowlist*. These certificates are used by Cloud Connector to validate an incoming client certificate. Typically, these are the root or issuer certificates of eligible client certificates, or the client certificates themselves if they are self-signed.
+You must add at least one trusted certificate to the *Authentication Allowlist*. These certificates are used by Cloud Connector to validate an incoming client certificate. Use root or issuer or intermediate certificates of eligible client certificates, or the client certificates themselves if they are self-signed. Use the *Certificate Required* checkbox for strict certificate logon \(checked\) or a mixed mode that also permits user/password logon if no client certificate is supplied by the browser \(unchecked\).
 
 After activation, a restart is required.
 

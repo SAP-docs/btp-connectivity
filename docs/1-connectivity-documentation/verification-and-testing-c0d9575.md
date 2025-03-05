@@ -24,7 +24,7 @@ Once you have installed the connectivity proxy in your cluster, you can perform 
     > ### Caution:  
     > If the host of the Ingress in your cluster is configured with a self-signed certificate, add the `-k` flag to curl to disable the SSL certificate verification.
 
-3.  Make sure you have connected a Cloud Connector to your cloud subaccount. For more information, see [Managing Subaccounts](managing-subaccounts-f16df12.md).
+3.  Make sure you have connected a Cloud Connector to your cloud subaccount. For more information, see [Adding and Managing Subaccounts](adding-and-managing-subaccounts-f16df12.md).
 
     1.  If you have deployed the connectivity proxy in a **single-tenant trusted mode** and have **enabled** the HTTP proxy in the `values.yml` file, execute the following command:
 

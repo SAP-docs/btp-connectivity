@@ -2,7 +2,7 @@
 
 # Using Service Channels
 
-Configure Cloud Connector service channels to connect your on-premise network to specific services on SAP BTP or to an ABAP Cloud system.
+Configure Cloud Connector service channels to connect your on-premises network to specific services on SAP BTP or to an ABAP Cloud system.
 
 
 
@@ -32,7 +32,7 @@ Description
 </td>
 <td valign="top">
 
-The service channel for **RFC** supports calls from on-premise systems to an ABAP Cloud system using RFC.
+The service channel for **RFC** supports calls from on-premises systems to an ABAP Cloud system using RFC.
 
 </td>
 </tr>

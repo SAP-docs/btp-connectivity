@@ -95,7 +95,7 @@ Administrator, Subaccount Administrator, Display, Support
 An array of objects, each representing a domain mapping through the following properties:
 
 -   `virtualDomain`: Domain used on the cloud side
--   `internalDomain`: Domain used on the on-premise side
+-   `internalDomain`: Domain used on the on-premises side
 
 
 

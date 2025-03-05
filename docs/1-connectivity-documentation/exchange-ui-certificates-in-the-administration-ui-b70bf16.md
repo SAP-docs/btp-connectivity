@@ -27,7 +27,7 @@ By default, the Cloud Connector includes a self-signed UI certificate. It is use
     -   [RFC822](https://tools.ietf.org/html/rfc822): an example for this type of value is a simple email address: for example, `donotreply@sap.com`.
     -   URI: a URI for which the certificate should be valid.
 
-    ![](images/SCC_Exchange_UI_Certificates_-_Generate_CSR_ebeafe4.png)
+    ![](images/SCC_Exchange_UI_Certificates_1_ebeafe4.png)
 
 4.  Press *Generate*.
 
@@ -43,11 +43,10 @@ By default, the Cloud Connector includes a self-signed UI certificate. It is use
 
 6.  To import the signing response, choose the *Upload* icon.
 
-    ![](images/SCC_Exchange_UI_Certificates_-_2_13_0430eef.png)
+    > ### Note:  
+    > You can also upload an existing PKCS\#12 certificate directly \(instead of generating a CSR\).
 
-    You can also upload an existing PKCS\#12 certificate directly \(instead of generating a CSR\).
-
-    ![](images/ExchangeUICertificates_2_13_PKCS_12_60499b9.png)
+    ![](images/SCC_Exchange_UI_Certificates_2_0430eef.png)
 
 7.  Select *Browse* to locate the file and then choose the *Import* button.
 8.  Review the certificate details that are displayed.

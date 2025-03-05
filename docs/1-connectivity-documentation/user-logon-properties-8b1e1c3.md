@@ -134,7 +134,7 @@ Optional property.
 > 
 > In both cases, a specific access token representing the business user or technical user is retrieved in the RFC runtime \(for example, in JCo or SAP BTP ABAP environment\), which can then be sent to the Connectivity service.
 > 
-> For more information, see [Authenticating Users against On-Premise Systems](authenticating-users-against-on-premise-systems-b643fbe.md).
+> For more information, see [Authenticating Users against On-Premises Systems](authenticating-users-against-on-premises-systems-b643fbe.md).
 
 -   If the property is not provided, its default value `CONFIGURED_USER` is used. In this case, user, password, or other credentials are specified directly.
 -   To enable single sign-on via principal propagation \(an access token representing the business user logged on in the cloud application is forwarded to the on-premise system\), set the value to `PrincipalPropagation`. In this case, you do not need to provide `jco.client.user` and `jco.client.passwd` in the configuration.

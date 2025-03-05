@@ -235,23 +235,11 @@ Cloud Connector Version
 </th>
 </tr>
 <tr>
-<td valign="top" rowspan="2">
+<td valign="top">
 
 SAP JVM 64-bit \(recommended\)
 
 </td>
-<td valign="top">
-
-7
-
-</td>
-<td valign="top">
-
-2.x up to 2.12.2
-
-</td>
-</tr>
-<tr>
 <td valign="top">
 
 8
@@ -264,23 +252,11 @@ SAP JVM 64-bit \(recommended\)
 </td>
 </tr>
 <tr>
-<td valign="top" rowspan="2">
+<td valign="top">
 
 Oracle JDK 64-bit
 
 </td>
-<td valign="top">
-
-7
-
-</td>
-<td valign="top">
-
-2.x up to 2.12.2
-
-</td>
-</tr>
-<tr>
 <td valign="top">
 
 8
@@ -300,7 +276,7 @@ Oracle JDK 64-bit
 </td>
 <td valign="top">
 
-11
+11 \(EOM\)
 
 </td>
 <td valign="top">
@@ -787,6 +763,40 @@ x86\_64, aarch64
 
 </td>
 </tr>
+<tr>
+<td valign="top">
+
+macOS 15 \(Sequoia\)
+
+</td>
+<td valign="top">
+
+x86\_64, aarch64
+
+</td>
+<td valign="top">
+
+2.18.0 and higher
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+Windows Server 2025
+
+</td>
+<td valign="top">
+
+x86\_64
+
+</td>
+<td valign="top">
+
+2.18.0 and higher
+
+</td>
+</tr>
 </table>
 
 Back to [Content](prerequisites-e23f776.md#loioe23f776e4d594fdbaeeb1196d47bbcc0__content)
@@ -800,7 +810,7 @@ Back to [Content](prerequisites-e23f776.md#loioe23f776e4d594fdbaeeb1196d47bbcc0_
 You must have Internet connection at least to the following Connectivity service hosts \(depending on the region\), to which you can connect your Cloud Connector. All connections to the hosts are TLS-based and connect to port 443.
 
 > ### Remember:  
-> For some solutions of the BTP portfolio, you must include additional hosts to set up an on-premise connectivity scenario with the Cloud Connector. This applies, for example, to: SAP Data Intelligence, SAP HANA Cloud, Business Appilcation Studio, SAP Cloud Identity Services, and SAP Build Apps. Check the respective solution documentation for details.
+> For some solutions of the BTP portfolio, you must include additional hosts to set up an on-premises connectivity scenario with the Cloud Connector. This applies, for example, to: SAP Data Intelligence, SAP HANA Cloud, Business Appilcation Studio, SAP Cloud Identity Services, and SAP Build Apps. Check the respective solution documentation for details.
 
 > ### Note:  
 > To configure the Cloud Connector for SAP Datasphere, see also [Configure Cloud Connector](https://help.sap.com/docs/SAP_DATASPHERE/9f804b8efa8043539289f42f372c4862/f289920243a34127b0c8b13012a1a4b5.html) \(SAP Datasphere documentation\).
@@ -1243,6 +1253,49 @@ connectivitytunnel.cf.us10-002.hana.ondemand.com
 **Additional IP addresses:**
 
 **34.234.117.43, 34.237.168.235, 44.221.148.86**
+
+</td>
+</tr>
+<tr>
+<td valign="top" rowspan="3">
+
+US West \(Oregon\) - AWS
+
+\(`cf.us11.hana.ondemand.com`\)
+
+</td>
+<td valign="top" colspan="2">
+
+connectivitynotification.cf.us11.hana.ondemand.com
+
+</td>
+<td valign="top">
+
+`34.211.82.149`, `100.20.19.69`, `35.95.238.236`, `54.69.228.173`, `35.161.174.123`, `44.230.137.133`, `54.201.79.229`, `34.217.172.244`, `44.235.33.61` 
+
+</td>
+</tr>
+<tr>
+<td valign="top" colspan="2">
+
+connectivitycertsigning.cf.us11.hana.ondemand.com
+
+</td>
+<td valign="top">
+
+`34.211.82.149`, `100.20.19.69`, `35.95.238.236`, `54.69.228.173`, `35.161.174.123`, `44.230.137.133`, `54.201.79.229`, `34.217.172.244`, `44.235.33.61`
+
+</td>
+</tr>
+<tr>
+<td valign="top" colspan="2">
+
+connectivitytunnel.cf.us11.hana.ondemand.com
+
+</td>
+<td valign="top">
+
+`34.211.82.149`, `100.20.19.69`, `35.95.238.236`, `54.69.228.173`, `35.161.174.123`, `44.230.137.133`, `54.201.79.229`, `34.217.172.244`, `44.235.33.61`
 
 </td>
 </tr>
@@ -2099,6 +2152,49 @@ connectivitytunnel.cf.ca10.hana.ondemand.com
 **Additional IP addresses:**
 
 **3.97.216.231, 15.156.32.232, 52.60.236.134**
+
+</td>
+</tr>
+<tr>
+<td valign="top" rowspan="3">
+
+Canada \(Toronto\) - Azure
+
+\(`cf.ca20.hana.ondemand.com`\)
+
+</td>
+<td valign="top" colspan="2">
+
+connectivitynotification.cf.ca20.hana.ondemand.com
+
+</td>
+<td valign="top">
+
+`130.107.189.169` 
+
+</td>
+</tr>
+<tr>
+<td valign="top" colspan="2">
+
+connectivitycertsigning.cf.ca20.hana.ondemand.com
+
+</td>
+<td valign="top">
+
+`130.107.189.169`
+
+</td>
+</tr>
+<tr>
+<td valign="top" colspan="2">
+
+connectivitytunnel.cf.ca20.hana.ondemand.com
+
+</td>
+<td valign="top">
+
+`130.107.189.169`
 
 </td>
 </tr>

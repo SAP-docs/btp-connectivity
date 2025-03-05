@@ -73,7 +73,7 @@ http://my-virtual-host:1234/my-path#my-fragment?my-query=my-value /
 
 The cloud user identity is passed as a token represented by a JSON Web token \(JWT\). It is forwarded via the connectivity proxy to the Cloud Connector, which validates and further processes it to establish SSO with the on-premise system.
 
-For more information, see [Authenticating Users against On-Premise Systems](authenticating-users-against-on-premise-systems-b643fbe.md) and [Set Up Trust](set-up-trust-a4ee70f.md).
+For more information, see [Authenticating Users against On-Premises Systems](authenticating-users-against-on-premises-systems-b643fbe.md) and [Set Up Trust](set-up-trust-a4ee70f.md).
 
 As of connectivity proxy release 2.1.1, support for principal propagation with IAS tokens is added.
 

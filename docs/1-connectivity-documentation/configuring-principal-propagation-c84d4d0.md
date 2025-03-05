@@ -2,7 +2,7 @@
 
 # Configuring Principal Propagation
 
-Use principal propagation to simplify the access of SAP BTP users to on-premise systems.
+Use principal propagation to simplify the access of SAP BTP users to on-premises systems.
 
 Tasks in this section:
 

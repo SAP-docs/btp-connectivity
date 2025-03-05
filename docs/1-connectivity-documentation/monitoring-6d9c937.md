@@ -40,7 +40,7 @@ Access to this view is granted to:
 -   Neo environment: Users with a role containing the permission `readSCCTunnels`, for example, the predefined role `Cloud Connector Admin`.
 -   Cloud Foundry environment: Users with a role containing the permission `readSCCTunnels`, for example, the predefined role `Cloud Connector Administrator`.
 
-![](images/SCC_Monitoring_-_Cockpit_570a863.png)
+![](images/SCC_Monitoring_570a863.png)
 
 
 
@@ -48,7 +48,9 @@ Access to this view is granted to:
 
 The Cloud Connector offers various views for monitoring its activities and state.
 
-You can check the overall state of the Cloud Connector through its [Hardware Metrics](hardware-metrics-6684f08.md), whereas subaccount-specific performance and usage data is available via [Subaccount-Specific Monitoring](subaccount-specific-monitoring-4c8e47e.md). To provide external monitoring tools, you can use the [Monitoring APIs](monitoring-apis-f6e7a7b.md).
+You can check the overall state of the Cloud Connector through its [Hardware Metrics](hardware-metrics-6684f08.md). Cross-subaccount performance data is provided by the [Performance Monitor](performance-monitor-b288cd9.md), whereas subaccount, whereas subaccount-specific performance and usage data is available via [Subaccount-Specific Monitoring](subaccount-specific-monitoring-4c8e47e.md).
+
+To provide external monitoring tools, you can use the [Monitoring APIs](monitoring-apis-f6e7a7b.md).
 
 **Related Information**  
 

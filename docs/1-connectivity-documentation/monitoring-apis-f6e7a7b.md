@@ -42,7 +42,7 @@ The following APIs are currently available.
 
 -   [Health Check](monitoring-apis-f6e7a7b.md#loiof6e7a7bc6af345d2a334c2427a31d294__Health) \(available as of version 2.6.0\)
 -   [Subaccount Data](monitoring-apis-f6e7a7b.md#loiof6e7a7bc6af345d2a334c2427a31d294__Subaccounts) \(as of 2.10.0\)
--   [Open Connections to On-Premise Backend Systems](monitoring-apis-f6e7a7b.md#loiof6e7a7bc6af345d2a334c2427a31d294__Connections) \(as of 2.10.0\)
+-   [Open Connections to On-Premises Backend Systems](monitoring-apis-f6e7a7b.md#loiof6e7a7bc6af345d2a334c2427a31d294__Connections) \(as of 2.10.0\)
 -   [Open Connections to Cloud Services](monitoring-apis-f6e7a7b.md#loiof6e7a7bc6af345d2a334c2427a31d294__cloud) \(as of 2.15.0\)
 -   [Performance Data](monitoring-apis-f6e7a7b.md#loiof6e7a7bc6af345d2a334c2427a31d294__Performance) \(as of 2.10.0\)
 -   [Top Time Consumers](monitoring-apis-f6e7a7b.md#loiof6e7a7bc6af345d2a334c2427a31d294__Consumers) \(as of 2.11.0\)
@@ -257,7 +257,7 @@ Back to [Available APIs](monitoring-apis-f6e7a7b.md#loiof6e7a7bc6af345d2a334c242
 
 Back to [Context](monitoring-apis-f6e7a7b.md#loiof6e7a7bc6af345d2a334c2427a31d294__context)
 
-**List of Open Connections to On-Premise Backend Systems \(available as of version 2.10.0\)**
+**List of Open Connections to On-Premises Backend Systems \(available as of version 2.10.0\)**
 
 > ### Note:  
 > This API is relevant for the master instance only.

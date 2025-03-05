@@ -12,7 +12,7 @@ Establish trust to an identiy provider to support principal propagation and tech
 
 [Configure Trusted Entities in the Cloud Connector](set-up-trust-a4ee70f.md#loioa4ee70f0274248f8bbc7594179ef948d__configure_trust)
 
-[Configure an On-Premise System for Principal Propagation](set-up-trust-a4ee70f.md#loioa4ee70f0274248f8bbc7594179ef948d__configure_on_premise)
+[Configure an On-Premises System for Principal Propagation](set-up-trust-a4ee70f.md#loioa4ee70f0274248f8bbc7594179ef948d__configure_on_premise)
 
 [Trust Cloud Applications in the Cloud Connector](set-up-trust-a4ee70f.md#loioa4ee70f0274248f8bbc7594179ef948d__trust_cloud_apps)
 
@@ -42,9 +42,9 @@ If you decide to use the principal propagation feature, you must establish trust
 
 You can configure trust to one or more IdPs per subaccount. After you've configured trust in the cockpit for your subaccount, for example, to your own company's IdP\(s\), you can synchronize this list with your Cloud Connector.
 
-![Trust Configuration](images/SCC_SettingUpTrust_-_ConfigureTrust_8f23a34.png)
+![Trust Configuration](images/SCC_SettingUpTrust_8f23a34.png)
 
-From your subaccount menu, choose *Cloud to On-Premise* and go to the *Principal Propagation* tab. Choose the *Synchronize* button to store the list of existing identity providers locally in your Cloud Connector.
+From your subaccount menu, choose *Cloud to On-Premises* and go to the *Principal Propagation* tab. Choose the *Synchronize* button to store the list of existing identity providers locally in your Cloud Connector.
 
 Select an entry to see its details:
 
@@ -57,7 +57,7 @@ Select an entry to see its details:
 You can decide for each entry, whether to trust it for the principal propagation use case by choosing *Edit* and \(de\)selecting the *Trusted* checkbox.
 
 > ### Note:  
-> Whenever you update a SAML IdP configuration for a subaccount on cloud side, you must synchronize the trusted entities in theCloud Connector. Otherwise the validation of the forwarded SAML assertion will fail with an exception containing an exception message similar to this: *Caused by: com.sap.engine.lib.xml.signature.SignatureException: Unable to validate signature -\> java.security.SignatureException: Signature decryption error: javax.crypto.BadPaddingException: Invalid PKCS\#1 padding: encrypted message and modulus lengths do not match!*.
+> Whenever you update an IdP configuration for a subaccount on cloud side, you must synchronize the trusted entities in theCloud Connector. Otherwise the validation of the forwarded SAML assertion will fail with an exception \(in case of SAML assertions containing an exception message similar to this: *Caused by: com.sap.engine.lib.xml.signature.SignatureException: Unable to validate signature -\> java.security.SignatureException: Signature decryption error: javax.crypto.BadPaddingException: Invalid PKCS\#1 padding: encrypted message and modulus lengths do not match!*\).
 
 For more information, see also [Include Tokens from Corporate Identity Providers or Identity Authentication in Tokens of the SAP Authorization and Trust Management Service](https://help.sap.com/docs/btp/sap-business-technology-platform/including-tokens-from-corporate-identity-providers-or-identity-authentication-in-tokens-of-sap-authorization-and-trust-management-service).
 
@@ -67,16 +67,9 @@ Back to [Tasks](set-up-trust-a4ee70f.md#loioa4ee70f0274248f8bbc7594179ef948d__ta
 
 <a name="loioa4ee70f0274248f8bbc7594179ef948d__configure_on_premise"/>
 
-## Configure an On-Premise System for Principal Propagation
+## Configure an On-Premises System for Principal Propagation
 
 Set up principal propagation from SAP BTP to your internal system that is used in a hybrid scenario.
-
-> ### Note:  
-> As a prerequisite for principal propagation for RFC, the following cloud application runtime versions are required:
-> 
-> -   for Java Web: `1.51.8` or higher
-> -   for Java EE 6 Web Profile: `2.31.11` or higher
-> -   other runtimes support it with any version
 
 1.  Set up trust to an entity that is issuing an assertion for the logged-on user \(see section above\).
 2.  Set up the system identity for the Cloud Connector.
@@ -120,7 +113,7 @@ Back to [Tasks](set-up-trust-a4ee70f.md#loioa4ee70f0274248f8bbc7594179ef948d__ta
 
 ## Set up a Trust Store
 
-Configure a trust store that acts as an allowlist for trusted on-premise systems. See [Configure Trust](configure-trust-13bfb28.md).
+Configure a trust store that acts as an allowlist for trusted on-premises systems. See [Configure Trust](configure-trust-13bfb28.md).
 
 Back to [Tasks](set-up-trust-a4ee70f.md#loioa4ee70f0274248f8bbc7594179ef948d__tasks)
 

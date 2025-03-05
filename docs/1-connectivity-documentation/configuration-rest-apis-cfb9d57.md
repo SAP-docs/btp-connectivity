@@ -14,7 +14,7 @@ The Cloud Connector provides several REST APIs that let you configure a newly in
 
 -   [Initial Configuration](initial-configuration-db9170a.md)
 
--   [Managing Subaccounts](managing-subaccounts-f16df12.md)
+-   [Adding and Managing Subaccounts](adding-and-managing-subaccounts-f16df12.md)
 
 -   [Configure Access Control](configure-access-control-f42fe44.md)
 
@@ -31,6 +31,7 @@ For general information on the Cloud Connector REST APIs, see also [REST APIs](r
 ## Available APIs
 
 -   [Common Properties](common-properties-8aed644.md)
+-   [Log and Trace Configuration](log-and-trace-configuration-bee0c5d.md)
 -   [High Availability Settings](high-availability-settings-b168417.md)
 -   [Proxy Settings](proxy-settings-03a1f85.md)
 -   [Authentication and UI Settings](authentication-and-ui-settings-44bff8d.md)
@@ -43,6 +44,9 @@ For general information on the Cloud Connector REST APIs, see also [REST APIs](r
 -   [Domain Mappings](domain-mappings-66e5d47.md)
 -   [Subaccount Service Channels](subaccount-service-channels-b20af3b.md)
 -   [Access Control Entities](access-control-entities-2b8ee62.md)
+-   [Common On-Premises Connectivity Configuration](common-on-premises-connectivity-configuration-03a3ab3.md)
+-   [Audit Log Configuration](audit-log-configuration-35f9d40.md)
+-   [Alerting Configuration](alerting-configuration-19dd06b.md)
 
 **Related Information**  
 

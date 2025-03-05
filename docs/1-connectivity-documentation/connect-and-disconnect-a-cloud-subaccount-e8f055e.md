@@ -2,11 +2,11 @@
 
 # Connect and Disconnect a Cloud Subaccount
 
-The major principle for the connectivity established by the Cloud Connector is that the Cloud Connector administrator should have full control over the connection to the cloud, that is, deciding if and when the Cloud Connector should be connected to the cloud, the accounts to which it should be connected, and which on-premise systems and resources should be accessible to applications of the connected subaccount.
+The major principle for the connectivity established by the Cloud Connector is that the Cloud Connector administrator should have full control over the connection to the cloud, that is, deciding if and when the Cloud Connector should be connected to the cloud, the accounts to which it should be connected, and which on-premises systems and resources should be accessible to applications of the connected subaccount.
 
 Using the administration UI, the Cloud Connector administrator can connect and disconnect the Cloud Connector to and from the configured cloud subaccount. Once disconnected, no communication is possible, either between the cloud subaccount and the Cloud Connector, or to the internal systems. The connection state can be verified and changed by the Cloud Connector administrator on the Subaccount Dashboard tab of the UI.
 
-![](images/SCC_Ops_-_ConnectDisconnect_Account_69b7935.png)
+![](images/SCC_ConnectDisconnect_Subaccount_69b7935.png)
 
 > ### Note:  
 > Once the Cloud Connector is freshly installed and connected to a cloud subaccount, none of the systems in the customer network are yet accessible to the applications of the related cloud subaccount. Accessible systems and resouurces must be configured explicitly in the Cloud Connector one by one, see [Configure Access Control](configure-access-control-f42fe44.md).
@@ -16,5 +16,5 @@ A Cloud Connector instance can be connected to multiple subaccounts in the cloud
 **Related Information**  
 
 
-[Managing Subaccounts](managing-subaccounts-f16df12.md "Add and connect your SAP BTP subaccounts to the Cloud Connector.")
+[Adding and Managing Subaccounts](adding-and-managing-subaccounts-f16df12.md "Add and connect your SAP BTP subaccounts to the Cloud Connector.")
 

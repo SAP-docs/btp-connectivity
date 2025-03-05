@@ -92,9 +92,9 @@ Use the *Download* button to download the selected audit entries as a compressed
 
 ## Example
 
-In the following example, the *Audit Viewer* displays `Any` audit entries, at `Security` level, for the time frame between **December 18 2020, 00:00:00** and **December 19, 00:00:00**:
+In the following example, the *Audit Viewer* displays `Any` audit entries, at `Security` level, for the time frame between **Jan 21 2025, 00:00:00** and **Jan 21 2025, 23:59:59**:
 
-![Audit Selection](images/SCC_AuditLogging_b320cb8.png)
+![Audit Selection](images/SCC_Manage_Audit_Logs_b320cb8.png)
 
 
 

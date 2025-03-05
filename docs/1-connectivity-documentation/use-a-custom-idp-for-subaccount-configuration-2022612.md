@@ -43,31 +43,19 @@ Description
 <tr>
 <td valign="top">
 
-[Set up Connection Parameters and HTTPS Proxy](initial-configuration-db9170a.md#loiodb9170a7d97610148537d5a84bf79ba2__configure_proxy)
+[Adding and Managing Subaccounts](adding-and-managing-subaccounts-f16df12.md)
 
 </td>
 <td valign="top">
 
-Add an *initial* subaccount to a fresh Cloud Connector installation.
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-[Managing Subaccounts](managing-subaccounts-f16df12.md)
-
-</td>
-<td valign="top">
-
-Add *additonal* subaccounts to an existing Cloud Connector installation.
+Add a subaccount to a Cloud Connector installation.
 
 </td>
 </tr>
 <tr>
 <td valign="top">
 
-[Update the Certificate for a Subaccount](update-the-certificate-for-a-subaccount-071708a.md)
+[Renew the Certificate for a Subaccount](renew-the-certificate-for-a-subaccount-071708a.md)
 
 </td>
 <td valign="top">
@@ -80,19 +68,13 @@ Refresh a subaccount certificate's validity period.
 
 To enable custom IDP authentication, for each of these operations you must enter the marker value `$SAP-CP-SSO-PASSCODE$` in the *<Subaccount User\>* or *<User Name\>* field, and a one-time generated passcode \(known as *temporary authentication code*\) in the *<Password\>* field:
 
--   When adding the **initial subaccount** to a fresh Cloud Connector installation, enter the user name `$SAP-CP-SSO-PASSCODE$` and the passcode on the Cloud Connector's *Define Subaccount* screen \(see also [Set up Connection Parameters and HTTPS Proxy](initial-configuration-db9170a.md#loiodb9170a7d97610148537d5a84bf79ba2__configure_proxy)\):
+-   When adding a subaccount to a Cloud Connector installation, enter the user name `$SAP-CP-SSO-PASSCODE$` and the passcode on the Cloud Connector's *Add Subaccount* screen:
 
-    ![](images/SCC_InitialConfig_-_DefineCustomIDP_InitialSubaccount_a4ac4b4.png)
+    ![](images/SCC_Use_Custom_IDP_1_a4ac4b4.png)
 
--   When adding one ore more **additonal subaccount\(s\)** to an existing Cloud Connector installation, provide the user name `$SAP-CP-SSO-PASSCODE$` and the passcode via the *Connector* screen \(see also [Managing Subaccounts](managing-subaccounts-f16df12.md)\):
+-   To **refresh a subaccount certificate**, enter the user name `$SAP-CP-SSO-PASSCODE$` and the passcode via the corresponding *<Subaccount\>* screen \(see also [Renew the Certificate for a Subaccount](renew-the-certificate-for-a-subaccount-071708a.md)\):
 
-    ![](images/SCC_InitialConfig_-_DefineCustomIDP_SubaccountDashboard_bfcb0cb.png)
-
-    ![](images/SCC_InitialConfig_-_DefineCustomIDP_SubaccountDashboard_-_AddSubaccount_bdae995.png)
-
--   To **refresh a subaccount certificate**, enter the user name `$SAP-CP-SSO-PASSCODE$` and the passcode via the corresponding *<Subaccount\>* screen \(see also [Update the Certificate for a Subaccount](update-the-certificate-for-a-subaccount-071708a.md)\):
-
-    ![](images/SCC_InitialConfig_-_DefineCustomIDP_RefreshCertificate_8f2a4f9.png)
+    ![](images/SCC_Use_Custom_IDP_3_8f2a4f9.png)
 
 
 To retrieve the one-time generated passcode, you must use the correct login URL for single sign-on \(SSO\) to access your custom IDP.
@@ -100,10 +82,10 @@ To retrieve the one-time generated passcode, you must use the correct login URL 
 > ### Tip:  
 > As of Cloud Connector version 2.17, you can import subaccount authentication data to simplify the process when using custom IdPs. Instead of using the SSO passcode approach, we strongly recommend that you import an authentication data file.
 > 
-> For more information, see [Set up Connection Parameters and HTTPS Proxy](https://help.sap.com/docs/connectivity/sap-btp-connectivity-cf/cloud-connector-initial-configuration?version=Cloud#set-up-connection-parameters-and-https-proxy) \(steps 2 + 4: file-based subaccount configuration\).
+> For more information, see [Adding and Managing Subaccounts](adding-and-managing-subaccounts-f16df12.md).
 
 > ### Caution:  
-> Mind the required user rights described in the prerequisites for [Initial Configuration](initial-configuration-db9170a.md#loiodb9170a7d97610148537d5a84bf79ba2__prereq) and [Managing Subaccounts](managing-subaccounts-f16df12.md).
+> Mind the required user rights described in the prerequisites for [Initial Configuration](initial-configuration-db9170a.md#loiodb9170a7d97610148537d5a84bf79ba2__prereq) and [Adding and Managing Subaccounts](adding-and-managing-subaccounts-f16df12.md).
 
 Back to [Content](use-a-custom-idp-for-subaccount-configuration-2022612.md#loio202261235a204db5ba0b35bbaa6d40ff__content)
 

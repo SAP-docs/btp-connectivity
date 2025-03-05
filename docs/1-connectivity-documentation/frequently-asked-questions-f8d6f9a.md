@@ -10,11 +10,11 @@ Answers to the most common questions about the Cloud Connector.
 
 
 
-### **Does the Cloud Connector send data from on-premise systems to SAP BTP or the other way around?**
+### **Does the Cloud Connector send data from on-premises systems to SAP BTP or the other way around?**
 
-The connection is opened from the on-premise system to the cloud, but is then used in the other direction.
+The connection is opened from the on-premises system to the cloud, but is then used in the other direction.
 
-An on-premise system is, in contrast to a cloud system, normally located behind a restrictive firewall and its services aren’t accessible thru the Internet. This concept follows a widely used pattern often referred to as *reverse invoke proxy*.
+An on-premises system is, in contrast to a cloud system, normally located behind a restrictive firewall and its services aren’t accessible thru the Internet. This concept follows a widely used pattern often referred to as *reverse invoke proxy*.
 
 
 
@@ -390,13 +390,13 @@ Yes
 
 ### **Which configuration in the SAP BTP destinations do I need to handle the user management access to the Cloud User Store of the Cloud Connector?**
 
-See [Configure an On-Premise User Store](https://help.sap.com/viewer/b865ed651e414196b39f8922db2122c7/Cloud/en-US/933034aeb00d489eaf21d50bbb12fed5.html "Configure SAP BTP Java applications to use your corporate LDAP server or on-premise SAP system as a user store.") :arrow_upper_right:.
+See [Configure an On-Premises User Store](https://help.sap.com/viewer/b865ed651e414196b39f8922db2122c7/Cloud/en-US/933034aeb00d489eaf21d50bbb12fed5.html "Configure SAP BTP Java applications to use your corporate LDAP server or on-premises SAP system as a user store.") :arrow_upper_right:.
 
 
 
 ### **Is the Cloud Connector sufficient to connect the SAP BTP to an SAP ABAP back end or is SAP BTP Integration needed?**
 
-It depends on the scenario: For pure point-to-point connectivity to call on-premise functionality like BAPIs, RFCs, OData services, and so on, that are exposed via on-premise systems, the Cloud Connector might suffice.
+It depends on the scenario: For pure point-to-point connectivity to call on-premises functionality like BAPIs, RFCs, OData services, and so on, that are exposed via on-premises systems, the Cloud Connector might suffice.
 
 However, if you require advanced functionality, for example, n-to-n connectivity as an integration hub, SAP BTP Integration – Process Integration is a more suitable solution. SAP BTP Integration can use the Cloud Connector as a communication channel.
 
@@ -622,7 +622,7 @@ Yes, the Cloud Connector can establish a connection to regions based on the SAP 
 
 The Cloud Connector offers a Service Channel to S/4HANA Cloud instances, given that they are associated with the respective SAP BTP subaccount. For more information, see [Using Service Channels](using-service-channels-16f6342.md).
 
-The Cloud Connector also supports S/4HANA Cloud communication scenarios invoking HTTP services or remote-enabled function modules \(RFMs\) in on-premise ABAP systems.
+The Cloud Connector also supports S/4HANA Cloud communication scenarios invoking HTTP services or remote-enabled function modules \(RFMs\) in on-premises ABAP systems.
 
 
 
@@ -652,13 +652,13 @@ No, this functionality is not currently planned.
 
 
 
-### **Can I use the Cloud Connector from cloud to on-premise for any protocol?**
+### **Can I use the Cloud Connector from cloud to on-premises for any protocol?**
 
 You can use the TCP channel of the Cloud Connector, if the client supports a SOCKS5 proxy to establish the connection and the protocol is TCP-based. However, only the HTTP and RFC protocols currently provide an additional level of access control by checking invoked resources.
 
 
 
-### **Can I use the Cloud Connector from on-premise to cloud for any protocol?**
+### **Can I use the Cloud Connector from on-premises to cloud for any protocol?**
 
 This is possible only for a limited set of protocols. You can use the Cloud Connector as a JDBC or ODBC proxy to access the HANA DB instance within your SAP BTP Neo subaccount \(service channel\). This is sometimes referred to as “HANA protocol”. Also, there are service channels for SSH access to SAP BTP Neo virtual machines, and for RFC access to ABAP cloud systems. All of these service channels provide access to endpoints that are not visible in the Internet.
 
@@ -668,7 +668,7 @@ For HTTP, the endpoints that could be addressed are visible in the Internet. The
 
 ### **Can I check the communication of the service channel?**
 
-No, the audit log monitors access only from SAP BTP to on-premise systems.
+No, the audit log monitors access only from SAP BTP to on-premises systems.
 
 
 

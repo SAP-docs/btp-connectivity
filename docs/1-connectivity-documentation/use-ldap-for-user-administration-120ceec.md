@@ -103,7 +103,7 @@ Authorization is checked by the Cloud Connector based on the user role retrieved
 1.  From the main menu, choose *Configuration* and go to the *User Interface* tab.
 2.  From the *User Administration* section, choose *Switch to LDAP*.
 
-    ![](images/SCC_LDAP_Configuration_Master_c11223f.png)
+    ![](images/SCC_LDAP_Configuration_1_c11223f.png)
 
 3.  Add further LDAP user stores by pressing the *Add* button \(plus icon\) of the **LDAP User Stores** table at the top of the dialog.
 
@@ -137,7 +137,11 @@ Authorization is checked by the Cloud Connector based on the user role retrieved
     -   *<Display Role\>* \(default: `sccdisplay`\)
     -   *<Monitoring Role\>* \(default: `sccmonitoring`\)
 
-13. You can execute an authentication test by choosing the *Test LDAP Configuration* button. In the pop-up dialog, you must specify user name and password of a user who is allowed to logon after activating the configuration. The check verifies if authentication would be successful or not for the respective LDAP configuration.
+13. Set up the *LDAP Trust Store* as required.
+
+    For more information, see [Configure Trust](configure-trust-13bfb28.md).
+
+14. You can execute an authentication test by choosing the *Test LDAP Configuration* button. In the pop-up dialog, you must specify user name and password of a user who is allowed to logon after activating the configuration. The check verifies if authentication would be successful or not for the respective LDAP configuration.
 
     > ### Note:  
     > We strongly recommend that you perform an authentication test. If authentication fails, login may not be possible anymore. The test dialog provides a test protocol that can be viewed and downloaded, which can be helpful for troubleshooting.
@@ -148,13 +152,10 @@ Authorization is checked by the Cloud Connector based on the user role retrieved
 
     You can also configure LDAP authentication on the shadow instance in a high availability setup \(master and shadow\). From the main menu of the shadow instance, select *Shadow Configuration*, go to tab *User Interface*, and check the *User Administration* section.
 
-    > ### Note:  
-    > If you are using LDAP together with a high availability setup, you cannot use the configuration option `userPattern`. Instead, use a combination of `userSearch`, `userSubtree` and `userBase`.
-
     > ### Caution:  
-    > An LDAP connection over TLS can cause TLS errors if the LDAP server uses a certificate that is not signed by a trusted CA. If you cannot use a certificate signed by a trusted CA, you must set up the trust relationship manually, that is, import the public part of the issuer certificate to the JDK's trust storage.
+    > An LDAP connection over TLS can cause TLS errors if the LDAP server uses a certificate that is not signed by a trusted CA. For information on how to specify a trust store, see [Configure Trust](configure-trust-13bfb28.md).
     > 
-    > Usually, the *cacerts* file inside the java directory \(`jre/lib/security/cacerts`\) is used for trust storage. To import the certificate, you can use *keytool*:
+    > If you want to modify the JDK's trust storage, see the JDK documentation. Usually, the trust storage is `cacerts` inside the java directory \(*jre/lib/security/cacerts*\). If possible, you can use the *keytool* utility for import:
     > 
     > ```
     > keytool -import -storepass changeit -file <certificate used by LDAP server> -keystore cacerts -alias <e.g. LDAP_xyz>
@@ -162,12 +163,12 @@ Authorization is checked by the Cloud Connector based on the user role retrieved
     > 
     > For more information, see also [https://docs.oracle.com/cd/E19830-01/819-4712/ablqw/index.html](https://docs.oracle.com/cd/E19830-01/819-4712/ablqw/index.html).
 
-14. After finishing the configuration, choose *Activate*. Immediately after activating the LDAP configuration, a restart of the Cloud Connector server is enforced. After restart, log on to the Cloud Connector with the credentials as per your LDAP configuration.
-15. LDAP user stores may be modified, deleted, added, or moved \(that is, changed in their order\) while LDAP-based user management is active. Navigate to the **LDAP User Stores** table and perform the required actions:
+15. After finishing the configuration, choose *Activate*. Immediately after activating the LDAP configuration, a restart of the Cloud Connector server is enforced. After restart, log on to the Cloud Connector with the credentials as per your LDAP configuration.
+16. LDAP user stores may be modified, deleted, added, or moved \(that is, changed in their order\) while LDAP-based user management is active. Navigate to the **LDAP User Stores** table and perform the required actions:
 
-    ![](images/SCC_LDAP_Configuration_User_Stores_47633c2.png)
+    ![](images/SCC_LDAP_Configuration_2_47633c2.png)
 
-16. To switch back to file-based user management, choose the *Switch* icon in section *User Administration* again.
+17. To switch back to file-based user management, choose the *Switch* icon in section *User Administration* again.
 
 > ### Note:  
 > If you have set up an LDAP configuration incorrectly, you may not be able to logon to the Cloud Connector again. In this case, revert to the file-based user store without the administration UI. For more information, see the next section.

@@ -29,7 +29,7 @@ The Cloud Connector only allows access to trusted backend systems. To configure 
 3.  In section *Mapping Virtual To Internal System* choose *Add* to define a new system.
     1.  For *Backend Type*, select `ABAP System` and choose *Next*.
 
-        ![](images/SCC_CS_AccessControlHTTP_-_SystemParameters_BackEnd_756de88.png)
+        ![](images/SCC_CS_AccessControlHTTP_1_756de88.png)
 
     2.  For *Protocol*, select `RFC` and choose *Next*.
 

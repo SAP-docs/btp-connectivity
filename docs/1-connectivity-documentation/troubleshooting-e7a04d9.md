@@ -113,7 +113,7 @@ kubectl exec <pod> -it -- list-loggers help
 
 ## Troubleshooting the Cloud Connector
 
-For troubleshooting the Cloud Connector, see [Troubleshooting](troubleshooting-e7df7f1.md) \(Cloud Connector\).
+For troubleshooting the Cloud Connector, see [Monitoring, Logging, And Troubleshooting](monitoring-logging-and-troubleshooting-e7df7f1.md) \(Cloud Connector\).
 
 [Back to Top](troubleshooting-e7a04d9.md#loioe7a04d9b30144f40ab0ca3b275ced93f__top)
 

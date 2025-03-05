@@ -54,9 +54,9 @@ Depending on the needs of the project, the Cloud Connector can be either set up 
 </td>
 <td valign="top">
 
-To access highly secure on-premise systems, operate the Cloud Connector centrally by the IT department and install it in the DMZ of the company network.
+To access highly secure on-premises systems, operate the Cloud Connector centrally by the IT department and install it in the DMZ of the company network.
 
-Set up trust between the on-premise system and the Cloud Connector, and only accept requests from trusted Cloud Connectors in the system.
+Set up trust between the on-premises system and the Cloud Connector, and only accept requests from trusted Cloud Connectors in the system.
 
 </td>
 </tr>
@@ -70,7 +70,7 @@ Back to [Topics](security-guidelines-8db6945.md#loio8db6945e70b44c5d8e0873c3e9fb
 </td>
 <td valign="top" rowspan="4">
 
-The Cloud Connector is a security-critical component that handles the inbound access from SAP BTP applications to systems of an on-premise network.
+The Cloud Connector is a security-critical component that handles the inbound access from SAP BTP applications to systems of an on-premises network.
 
 **Methods to secure the operating system**, on which the Cloud Connector is running, should be applied.
 
@@ -185,7 +185,7 @@ Cloud Connector administrators must ensure that the audit log files are properly
 <tr>
 <td valign="top">
 
-To gain end-to-end traceability, you should switch on audit logging also in the connected on-premise systems.
+To gain end-to-end traceability, you should switch on audit logging also in the connected on-premises systems.
 
 </td>
 </tr>
@@ -218,25 +218,25 @@ Back to [Topics](security-guidelines-8db6945.md#loio8db6945e70b44c5d8e0873c3e9fb
 </td>
 <td valign="top">
 
-**HTTP**, **HTTPS**, **RFC** and **RFC over SNC** are currently supported as protocols for the communication direction from the cloud to on-premise.
+**HTTP**, **HTTPS**, **RFC** and **RFC over SNC** are currently supported as protocols for the communication direction from the cloud to on-premises.
 
 The route from the application VM in the cloud to the Cloud Connector is always encrypted.
 
-You can configure the route from the Cloud Connector to the on-premise system to be encrypted or unencrypted.
+You can configure the route from the Cloud Connector to the on-premises system to be encrypted or unencrypted.
 
 </td>
 <td valign="top">
 
-The route from the Cloud Connector to the on-premise system should be encrypted using TLS \(for HTTPS\) or SNC \(for RFC\).
+The route from the Cloud Connector to the on-premises system should be encrypted using TLS \(for HTTPS\) or SNC \(for RFC\).
 
-Trust between the Cloud Connector and the connected on-premise systems should be established \(see [Set Up Trust](set-up-trust-a4ee70f.md)\).
+Trust between the Cloud Connector and the connected on-premises systems should be established \(see [Set Up Trust](set-up-trust-a4ee70f.md)\).
 
 </td>
 </tr>
 <tr>
 <td valign="top" rowspan="3">
 
-*Configuration of On-Premise Systems*
+*Configuration of On-Premises Systems*
 
 Back to [Topics](security-guidelines-8db6945.md#loio8db6945e70b44c5d8e0873c3e9fb3bf2__topics)
 
@@ -248,7 +248,7 @@ When configuring the access to an internal system in the Cloud Connector, map ph
 </td>
 <td valign="top">
 
-Use hostname mapping of exposed on-premise systems in the access control of the Cloud Connector \(see [Configure Access Control \(HTTP\)](configure-access-control-http-e7d4927.md) and [Configure Access Control \(RFC\)](configure-access-control-rfc-ca58689.md)\).
+Use hostname mapping of exposed on-premises systems in the access control of the Cloud Connector \(see [Configure Access Control \(HTTP\)](configure-access-control-http-e7d4927.md) and [Configure Access Control \(RFC\)](configure-access-control-rfc-ca58689.md)\).
 
 </td>
 </tr>
@@ -260,19 +260,19 @@ When configuring the access to an internal system, **restrict access** to those 
 </td>
 <td valign="top">
 
-Narrow access to on-premise systems to resources required by the relevant cloud applications in the access control of the Cloud Connector \(see [Configure Access Control \(HTTP\)](configure-access-control-http-e7d4927.md) and [Configure Access Control \(RFC\)](configure-access-control-rfc-ca58689.md)\).
+Narrow access to on-premises systems to resources required by the relevant cloud applications in the access control of the Cloud Connector \(see [Configure Access Control \(HTTP\)](configure-access-control-http-e7d4927.md) and [Configure Access Control \(RFC\)](configure-access-control-rfc-ca58689.md)\).
 
 </td>
 </tr>
 <tr>
 <td valign="top">
 
-To allow **access only for trusted applications** of your SAP BTP subaccount to on-premise systems, configure the list of trusted applications in the Cloud Connector.
+To allow **access only for trusted applications** of your SAP BTP subaccount to on-premises systems, configure the list of trusted applications in the Cloud Connector.
 
 </td>
 <td valign="top">
 
-Narrow the list of cloud applications which are allowed to use the on-premise tunnel to the ones that need on-premise connectivity \(see [Set Up Trust](set-up-trust-a4ee70f.md)\).
+Narrow the list of cloud applications which are allowed to use the on-premises tunnel to the ones that need on-premises connectivity \(see [Set Up Trust](set-up-trust-a4ee70f.md)\).
 
 </td>
 </tr>

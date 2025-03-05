@@ -28,7 +28,7 @@ Get background information on LDAP configuration for the Cloud Connector.
 
 ## Introduction
 
-Using an LDAP server for user management allows seamless integration of the Cloud Connector into the on-premise environment. It requires some configuration that must match the setup on your LDAP server, and therefore can't be generated automatically.
+Using an LDAP server for user management allows seamless integration of the Cloud Connector into the on-premises environment. It requires some configuration that must match the setup on your LDAP server, and therefore can't be generated automatically.
 
 The configuration parameters are common for various products and mostly well known.
 
@@ -60,9 +60,9 @@ The return value is ***\-1*** if the address is not reachable. Before you go ahe
 
 Once the address is known, you can test the connection in the Cloud Connector. Enter the address and add a dummy configuration, for example, `x="x"`, to outwit the check. Then choose the test icon in the upper right corner. For a valid address, the LDAP configuration test in the Cloud Connector reports the following:
 
-![](images/SCC_LDAP_Best_Practices_-_Connect_2ce58f1.png)
+![](images/SCC_LDAP_Best_Practices_1_2ce58f1.png)
 
-The message: *Connecting to URL ldap://<ldaphost\>:<port\>; Exception performing authentication* indicates that your LDAP server requires connection user and password for queries.
+The message: *Connecting to URL ldap://<ldaphost\>:<port\>; Exception performing authentication* indicates that there is some general connection issue.
 
 Back to [Top](ldap-configuration-best-practices-703a99d.md#loio703a99d1b00d495298d6fd2cf7492e10__top)
 
@@ -72,9 +72,9 @@ Back to [Top](ldap-configuration-best-practices-703a99d.md#loio703a99d1b00d49529
 
 ## TLS Issues
 
-An LDAP connection over TLS will run into TLS errors if the LDAP server uses an "untrusted" certificate. This could be a self-signed certificate or a certificate signed by a generally untrusted authority.
+An LDAP connection over TLS will run into TLS errors if the LDAP server uses an "untrusted" certificate. For information on how to specify a trust store, see [Configure Trust](configure-trust-13bfb28.md).
 
-If you cannot use a generally trusted certificate on your LDAP server, you must import the public part of the specific issuer certificate to the JDK's trust storage. See the JDK documentation how to do that.
+If you want to modify the JDK's trust storage, see the JDK documentation.
 
 Usually, the trust storage location is *cacerts* inside the java directory \(`jre/lib/security/cacerts`\). You can use the `keytool` utility for import.
 
@@ -125,11 +125,11 @@ The only thing to check here is, if authentication is ok. If it is not, LDAP ret
 
 You can perform the same test in the Cloud Connector UI:
 
-![](images/SCC_LDAP_Best_Practices_-_Authentication_1_37ee4d9.png)
+![](images/SCC_LDAP_Best_Practices_2_37ee4d9.png)
 
 Choose the test icon in the upper right corner, and enter something as `User Name` and `Password`:
 
-![](images/SCC_LDAP_Best_Practices_-_Authentication_2_ea873a1.png)
+![](images/SCC_LDAP_Best_Practices_3_ea873a1.png)
 
 Authentication failed in this check, but the connection to the LDAP server was successful.
 
@@ -187,11 +187,11 @@ The corresponding LDAP selection is:
 
 Now, we take a closer look now at the response. The user *Thor* was found, its password was successfully validated by the LDAP server, but there are no specific roles selected:
 
-![](images/SCC_LDAP_Best_Practices_-_User_Selection_1_b29deff.png)
+![](images/SCC_LDAP_Best_Practices_4_b29deff.png)
 
 Let's assume that the users are not located under the same branch in the LDAP tree. For this case, you cannot define more than one *userBase*. Instead, you can set *userBase* for the corresponding parent node, which then includes all the user branches. To achieve this, add `userSubtree="true"` to the configuration.
 
-![](images/SCC_LDAP_Best_Practices_-_User_Selection_2_cd6b950.png)
+![](images/SCC_LDAP_Best_Practices_5_cd6b950.png)
 
 Taking a look at the relative name returned by search, it is `uid=Thor,ou=users` now.
 
@@ -239,7 +239,7 @@ Check if `ldapsearch` can find entries for the role:
 > ldapsearch -D "uid=admin,ou=system" -w <password> -H ldap://<ldaphost>:<port> -b "<roleBase>" "(&(cn=<roleName>))"
 > ```
 
-![](images/SCC_LDAP_Best_Practices_-_User_Role_34d1e4c.png)
+![](images/SCC_LDAP_Best_Practices_6_34d1e4c.png)
 
 When trying to define only `roleBase` and `roleName`, the test reports no roles for the specified user: *Found roles: \[\]*. The empty brackets indicate an 'empty collection'. The reason is that the configuration does not define how users are related to the found groups. Find some background information on this in the next section.
 
@@ -273,13 +273,13 @@ LDAP provides two ways to define the relationship between a user and its groups:
 
 Below, the test report selected neither internal nor direct roles:
 
-![](images/SCC_LDAP_Best_Practices_-_User_Group_1_fe2d29d.png)
+![](images/SCC_LDAP_Best_Practices_7_fe2d29d.png)
 
 To demonstrate an empty result, the parameter `roleSearch` was set to a non-existing attribute here.
 
 Below, the test reflecting LDAP configuration eventually reports a non-empty list of found roles, containing the role `sccadmin`:
 
-![](images/SCC_LDAP_Best_Practices_-_User_Group_2_b562f83.png)
+![](images/SCC_LDAP_Best_Practices_8_b562f83.png)
 
 > ### Note:  
 > Like user nodes, also group nodes on the LDAP server may be located under several branches inside the "base" branch. In this case, add the boolean attribute `roleSubtree="true"`.

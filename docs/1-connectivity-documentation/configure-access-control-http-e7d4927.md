@@ -39,18 +39,18 @@ Insert a new entry in the Cloud Connector access control management:
 
     When you are done, choose *Next*.
 
-    ![](images/SCC_CS_AccessControlHTTP_-_SystemParameters_BackEnd_756de88.png)
+    ![](images/SCC_CS_AccessControlHTTP_1_756de88.png)
 
 4.  *Protocol*: This field allows you to decide whether the Cloud Connector should use `HTTP` or `HTTPS` for the connection to the backend system. Note that this is completely independent from the setting on cloud side. Thus, even if the HTTP destination on cloud side specifies "`http://`" in its URL, you can select `HTTPS`. This way, you are ensured that the entire connection from the cloud application to the actual backend system \(provided through the TLS tunnel\) is TLS-encrypted. The only prerequisite is that the backend system supports HTTPS on that port. For more information, see [Initial Configuration \(HTTP\)](initial-configuration-http-3f974ea.md).
 
     -   If you specify HTTPS and there is a "system certificate" imported in the Cloud Connector, the latter attempts to use that certificate for performing a client-certificate-based logon to the backend system.
     -   If there is no system certificate imported, the Cloud Connector opens an HTTPS connection without client certificate.
 
-    ![](images/SCC_CS_AccessControlHTTP_-_SystemParameters_Protocol_db8736b.png)
+    ![](images/SCC_CS_AccessControlHTTP_2_db8736b.png)
 
 5.  *Internal Host* and *Internal Port* specify the actual host and port under which the target system can be reached within the intranet. It needs to be an existing network address that can be resolved on the intranet and has network visibility for the Cloud Connector without any proxy. Cloud Connector will try to forward the request to the network address specified by the internal host and port, so this address needs to be real.
 
-    ![](images/SCC_CS_AccessControlHTTP_-_SystemParameters_InternalHost_6a19f0a.png)
+    ![](images/SCC_CS_AccessControlHTTP_3_6a19f0a.png)
 
 6.  *Virtual Host* identifies the host name exactly as specified in the *<URL\>* property of the HTTP destination configuration in SAP BTP.
 
@@ -58,18 +58,18 @@ Insert a new entry in the Cloud Connector access control management:
 
     The virtual host can be a fake name and does not need to exist. The *Virtual Port* allows you to distinguish between different entry points of your backend system, for example, `HTTP`/`80` and `HTTPS`/`443`, and to have different sets of access control settings for them. For example, some non-critical resources may be accessed by HTTP, while some other critical resources are to be called using HTTPS only. The fields are prepopulated with the values of the *Internal Host* and *Internal Port*. If you don't modify them, you must provide your internal host and port also in the cloud-side destination configuration or in the URL used for your favorite HTTP client.
 
-    ![](images/SCC_CS_AccessControlHTTP_-_SystemParameters_VirtualHost_5720bc9.png)
+    ![](images/SCC_CS_AccessControlHTTP_4_5720bc9.png)
 
 7.  *Allow Principal Propagation* \(available as of Cloud Connector 2.15\): Defines if any kind of principal propagation should be allowed over this mapping. If not selected, go to step 9.
 
-    ![](images/SCC_CS_AccessControlHTTP_-_SystemParameters_PrincipalPropagation_Allow_9b2b55a.png)
+    ![](images/SCC_CS_AccessControlHTTP_5_9b2b55a.png)
 
 8.  *Principal Type* 
     -   *Procedure for Cloud Connector version 2.15 and higher:*
 
         Defines what kind of principal is sent to the backend within the HTTP request. For the principal type `X.509 Certificate` \(if a principal is sent from the cloud side\), the principal is injected as an HTTP header \(`SSL_CLIENT_CERT`\) and forwarded to the backend. There, depending on the backed configuration, it can be used for authentication.
 
-        ![](images/SCC_CS_AccessControlHTTP_-_SystemParameters_PrincipalType_8a6488c.png)
+        ![](images/SCC_CS_AccessControlHTTP_6_8a6488c.png)
 
     -   *Procedure for Cloud Connector versions below 2.15:*
 
@@ -107,17 +107,21 @@ Insert a new entry in the Cloud Connector access control management:
     > ### Note:  
     > We recommend that you **keep this option deactivated**, as this lets you use principal propagation and basic authentication over the same access control entry, regardless of the logon order settings in the target system.
 
-    ![](images/SCC_CS_AccessControlHTTP_-_SystemParameters_SystemCertificate_For_Logon_8d5e327.png)
+    ![](images/SCC_CS_AccessControlHTTP_7_8d5e327.png)
 
 10. *Host In Request Header* lets you define, which host is used in the host header that is sent to the target server. By choosing `Use Internal Host`, the actual host name is used. When choosing `Use Virtual Host`, the virtual host is used. In the first case, the virtual host is still sent via the `X-Forwarded-Host` header.
 
-    ![](images/SCC_CS_AccessControlHTTP_-_SystemParameters_HostInRequestHeader_34c41d0.png)
+    ![](images/SCC_CS_AccessControlHTTP_8_34c41d0.png)
 
-11. You can enter an optional description at this stage. The respective description will be shown when pressing the *Info* button of the access control entry \(table *Mapping Virtual to Internal System*\).
+11. \(Optional\): You can enter the *System ID*:
 
-    ![](images/SCC_CS_AccessControlHTTP_-_SystemParameters_Description_e38fd87.png)
+    ![](images/SCC_CS_AccessControlHTTP_9_32e1918.png)
 
-12. The summary shows information about the system to be stored and when saving the host mapping, you can trigger a ping from the Cloud Connector to the internal host, using the *Check availability of internal host* checkbox. This allows you to make sure the Cloud Connector can indeed access the internal system, and allows you to catch basic things, such as spelling mistakes or firewall problems between the Cloud Connector and the internal host.
+12. You can enter an optional description at this stage. The respective description will be shown when pressing the *Info* button of the access control entry \(table *Mapping Virtual to Internal System*\).
+
+    ![](images/SCC_CS_AccessControlHTTP_10_e38fd87.png)
+
+13. The summary shows information about the system to be stored and when saving the host mapping, you can trigger a ping from the Cloud Connector to the internal host, using the *Check availability of internal host* checkbox. This allows you to make sure the Cloud Connector can indeed access the internal system, and allows you to catch basic things, such as spelling mistakes or firewall problems between the Cloud Connector and the internal host.
 
     If the ping to the internal host is successful \(that is, the host is reachable via TLS\), the state ***Reachable*** is shown. If it fails, a warning pops up. You can view issue details by choosing the *Details* button, or check them in the log files.
 
@@ -125,11 +129,11 @@ Insert a new entry in the Cloud Connector access control management:
 
     You can execute the availability check for all selected systems in the *Access Control* overview by pressing the button ![](images/SCC_CS_AccessControlHTTP_-_Button_DetailsConnCheck_36eaf8b.png) \(*Check availability...*\) in column *Actions*.
 
-    ![](images/SCC_CS_AccessControlHTTP_-_SystemParameters_Summary_d0f250e.png)
+    ![](images/SCC_CS_AccessControlHTTP_11_d0f250e.png)
 
-13. Optional: You can later edit such a system mapping \(via *Edit*\) to make the Cloud Connector route the requests for `sales-system.cloud:443` to a different backend system. This can be useful if the system is currently down and there is a back-up system that can serve these requests in the meantime. However, you cannot edit the virtual name of this system mapping. If you want to use a different fictional host name in your cloud application, you must delete the mapping and create a new one.
+14. Optional: You can later edit such a system mapping \(via *Edit*\) to make the Cloud Connector route the requests for `sales-system.cloud:443` to a different backend system. This can be useful if the system is currently down and there is a back-up system that can serve these requests in the meantime. However, you cannot edit the virtual name of this system mapping. If you want to use a different fictional host name in your cloud application, you must delete the mapping and create a new one.
 
-    ![](images/SCC_CS_AccessControlHTTP_-_SystemParameters_Edit_96ae914.png)
+    ![](images/SCC_CS_AccessControlHTTP_12_96ae914.png)
 
 
 Back to [Tasks](configure-access-control-http-e7d4927.md#loioe7d4927dbb571014af7ef6ebd6cc3511__content)
@@ -144,7 +148,7 @@ In addition to allowing access to a particular host and port, you also must spec
 
 To define the permitted URLs for a particular backend system, choose the line corresponding to that backend system and choose *Add* in section *Resources Accessible On...* below. A dialog appears prompting you to enter the specific URL path that you want to allow to be invoked.
 
-![](images/SCC_CS_AccessControlHTTP_-_SystemParameters_AddResource_3a753ce.png)
+![](images/SCC_CS_AccessControlHTTP_13_3a753ce.png)
 
 The Cloud Connector checks that the path part of the URL \(up to but not including a possible question mark \(`?`\) that may denote the start of optional CGI-style query parameters\) is exactly as specified in the configuration. If it is not, the request is denied. If you select option *Path and all sub-paths*, the Cloud Connector allows all requests for which the URL path \(not considering any query parameters\) starts with the specified string.
 
@@ -168,7 +172,7 @@ In some cases, it is useful for testing purposes to temporarily disable certain 
 
     The status icon turns red, and from now on, the Cloud Connector will deny all requests coming in for this resource.
 
-    ![](images/SCC_CS_AccessControlHTTP_-_SystemParameters_Resource_Disable_e7db9d1.png)
+    ![](images/SCC_CS_AccessControlHTTP_14_e7db9d1.png)
 
 -   To activate the resource again, select it and choose the *Activate* button.
 -   By choosing *Allow WebSocket upgrade/Disallow WebSocket upgrade* this is possible for the protocol upgrade setting as well.

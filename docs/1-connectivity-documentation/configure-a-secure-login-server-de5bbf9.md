@@ -28,7 +28,7 @@ Configuration steps for Java SLS support.
 
 ## Overview
 
-The Cloud Connector can use on-the-fly generated X.509 user certificates to log in to on-premise systems if the external user session is authenticated \(for example by means of SAML\). If you do not want to use the built-in certification authority \(CA\) functionality of the Cloud Connector \(for example because of security considerations\), you can connect SAP SSO 2.0 Secure Login Server \(SLS\) or higher.
+The Cloud Connector can use on-the-fly generated X.509 user certificates to log in to on-premises systems if the external user session is authenticated \(for example by means of SAML\). If you do not want to use the built-in certification authority \(CA\) functionality of the Cloud Connector \(for example because of security considerations\), you can connect SAP SSO 2.0 Secure Login Server \(SLS\) or higher.
 
 > ### Note:  
 > Make sure you use a version that is still supported, which is currently at least SAP SSO 3.0 Secure Login Server.
@@ -166,7 +166,7 @@ Follow the standard installation procedure of the Cloud Connector and configure 
 2.  Select the profile, for example, `Cloud Connector User Certificates`.
 3.  Import the Root CA certificate of SLS into the Cloud Connector´s [Trust Store](https://help.sap.com/viewer/cca91383641e40ffbe03bdc78f00f681/Cloud/en-US/a4ee70f0274248f8bbc7594179ef948d.html#loioa4ee70f0274248f8bbc7594179ef948d__section_TrustStore).
 
-**On-Premise Target Systems**
+**On-Premises Target Systems**
 
 Follow the standard configuration procedure for Cloud Connector support in the corresponding target system and configure SLS support.
 

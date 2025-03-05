@@ -20,7 +20,7 @@ Install a redundant Cloud Connector instance \(shadow instance\) that monitors t
 2.  From the main menu, choose *High Availability*.
 3.  Choose *Enable*.
 
-    ![](images/SCC_HA_-_Enable_f1b81ec.png)
+    ![](images/SCC_HA_1_f1b81ec.png)
 
     If this flag is not activated, no shadow instance can connect to this Cloud Connector. Additionally, by providing a concrete *Shadow Host* you can ensure that only from this host a shadow instance can be connected.
 
@@ -29,7 +29,7 @@ Install a redundant Cloud Connector instance \(shadow instance\) that monitors t
 
 1.  Choose *Edit*.
 
-    ![](images/SCC_HA_-_Enable_Optional_af20cd8.png)
+    ![](images/SCC_HA_2_af20cd8.png)
 
 2.  You can now change the high availability \(HA\) port to a different one from where the Cloud Connector administration UI is accessible. This port is then used for the master/shadow communication only, that is, to check for failovers or push configuration. This is especially needed in case of a [Logon to the Cloud Connector via Client Certificate](logon-to-the-cloud-connector-via-client-certificate-daa547f.md), so that master/shadow communication is still possible without having a client certificate for logon.
 3.  Additionally, by providing a concrete shadow host you can ensure that a shadow instance can be connected from this host only. The host name will be shown as *Permitted Shadow Host* on the HA screen if you have configured one.
@@ -50,13 +50,13 @@ Install the shadow instance in the same network segment as the master instance. 
 
 1.  On first start-up of a Cloud Connector instance, a UI wizard asks you whether the current instance should be master or shadow. Choose *Shadow* and *Save*:
 
-    ![](images/SCC_HA_-_Installation_Type_fd13d62.png)
+    ![](images/SCC_HA_3_fd13d62.png)
 
 2.  From the main menu, choose *Shadow Connector* and provide connection data for the master instance, that is, the master host and port. Optionally, you can change the high availability \(HA\) port to a different one from where the Cloud Connector administration UI is accessible. This port is then used for the master/shadow communication only, that is, to check for failovers or push configuration. This is especially needed in case of a [Logon to the Cloud Connector via Client Certificate](logon-to-the-cloud-connector-via-client-certificate-daa547f.md) so that master/shadow communication is still possible without having a client certificate for logon.
 
     Additionally, you can choose from the list of known host names, to use the host name under which the shadow host is visible to the master. You can specify a host name manually, if the one you want is not on the list. For the first connection, you must log on to the master instance, using the user name and password for the master instance. The master and shadow instances exchange X.509 certificates, which will be used for mutual authentication.
 
-    ![](images/SCC_HA_-_Shadow_Edit_5499f27.png)
+    ![](images/SCC_HA_4_5499f27.png)
 
     > ### Note:  
     > If you want to attach the shadow instance to a different master, press the *Reset* button. All your high availability settings \(besides the own port configuration\) will be removed, that is, reset to their initial state. This works only if the shadow is not connected.

@@ -23,7 +23,7 @@ Optimal configuration strongly depends on your actual scenarios. A good approach
 **Related Information**  
 
 
-[Cloud To On-Premise Connections](cloud-to-on-premise-connections-f9111c8.md "Configure the physical connections for cloud-to-on-premise calls in the Cloud Connector.")
+[Cloud-To-On-Premises Connections](cloud-to-on-premises-connections-f9111c8.md "Configure the physical connections for cloud-to-on-premises calls in the Cloud Connector.")
 
-[On-Premise To Cloud Connections \(Service Channels\)](on-premise-to-cloud-connections-service-channels-d404d6f.md "Configure the number of physical connections for a Cloud Connector service channel.")
+[On-Premises-To-Cloud Connections \(Service Channels\)](on-premises-to-cloud-connections-service-channels-d404d6f.md "Configure the number of physical connections for a Cloud Connector service channel.")
 

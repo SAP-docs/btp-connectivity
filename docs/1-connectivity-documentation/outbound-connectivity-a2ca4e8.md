@@ -2,7 +2,7 @@
 
 # Outbound Connectivity
 
-The Cloud Connector supports the communication direction from the on-premise network to SAP BTP, using a database tunnel.
+The Cloud Connector supports the communication direction from the on-premises network to SAP BTP, using a database tunnel.
 
 The database tunnel is used to connect local database tools via JDBC or ODBC to the SAP HANA DB or other databases onSAP BTP, for example, SAP Business Objects tools like Lumira, BOE or Data Services.
 
@@ -20,5 +20,5 @@ To use the database tunnel, two different SAP BTP users are required:
 **Related Information**  
 
 
-[Using Service Channels](using-service-channels-16f6342.md "Configure Cloud Connector service channels to connect your on-premise network to specific services on SAP BTP or to an ABAP Cloud system.")
+[Using Service Channels](using-service-channels-16f6342.md "Configure Cloud Connector service channels to connect your on-premises network to specific services on SAP BTP or to an ABAP Cloud system.")
 

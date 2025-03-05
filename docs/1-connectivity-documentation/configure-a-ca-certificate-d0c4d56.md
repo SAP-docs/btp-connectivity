@@ -41,7 +41,7 @@ Use either of the following options to install a local CA certificate:
 
 Choose *Import a certificate* for option 1:
 
-![](images/SCC_CACertiicate_-_Import_bba36da.png)
+![](images/SCC_CACertiicate_1_bba36da.png)
 
 Choose *Generate a certificate signing request* for option 2:
 
@@ -53,11 +53,7 @@ Choose *Create and import a self-signed certificate* if you want to use option 3
 
 In particular for this option, it is useful to export the public key of the CA by choosing the respective button.
 
-
-
-After successful import of the CA certificate, its distinguished name, the name of the issuer, and the validity dates are shown:
-
-![](images/SCC_CACertificate_-_Result_1903299.png)
+After successful import of the CA certificate, its distinguished name, the name of the issuer, and the validity dates are shown.
 
 If a CA certificate is no longer required, you can delete it. Use the respective *Delete* button and confirm the deletion.
 
@@ -67,15 +63,15 @@ If a CA certificate is no longer required, you can delete it. Use the respective
 
 If you want to delegate the CA functionality to a *Secure Login Server* \(SLS\), choose the CA using the *Secure Login Server* option and configure the SLS as follows, after having configured the SLS as described in [Configure a Secure Login Server](configure-a-secure-login-server-de5bbf9.md).
 
-![](images/SCC_CACertificate_-_SLS_1_616cd1e.png)
+![](images/SCC_CACertificate_4_616cd1e.png)
 
 A wizard offers in a first step a quick configuration by metadata URL pointing to the SLS you'd like to use.
 
-![](images/SCC_CACertificate_-_SLS_2_8032a05.png)
+![](images/SCC_CACertificate_5_8032a05.png)
 
 Using the metadata URL lets you fetch the most relevant data from SLS instance. You only have to choose the profile configured on SLS, which should be used for the generation of short-lived certificates. Choose *Finish* to save the configuration.
 
-![](images/SCC_CACertificate_-_SLS_3_88c6f8b.png)
+![](images/SCC_CACertificate_6_88c6f8b.png)
 
 > ### Note:  
 > The URL won't be stored in the Cloud Connector configuration.
@@ -105,11 +101,11 @@ Enter the following:
     > For this privileged port, a client certificate authentication is required, for which the Cloud Connector's system certificate is used.
 
 
-![](images/SCC_CACertificate_-_SLS_4_2962521.png)
+![](images/SCC_CACertificate_7_2962521.png)
 
 In the next step, you can finalize the configuration. The fields in the next step depend on the chosen SLS API version.
 
-![](images/SCC_CACertificate_-_SLS_5_ff65b68.png)
+![](images/SCC_CACertificate_8_ff65b68.png)
 
 Choose *Finish* to save the configuration.
 

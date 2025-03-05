@@ -97,8 +97,8 @@ An array of objects with the following properties:
 
 -   `virtualHost`: Virtual host used on the cloud side \(a string\)
 -   `virtualPort`: Virtual port used on the cloud side \(a string\)
--   `localHost`: Host on the on-premise side \(a string\)
--   `localPort`: Port on the on-premise side \(a string\)
+-   `localHost`: Host on the on-premises side \(a string\)
+-   `localPort`: Port on the on-premises side \(a string\)
 -   `protocol`: Protocol used when sending requests and receiving responses \(a string\)
 -   `backendType`: Type of the backend \(a string\)
 -   `authenticationMode`: Authentication mode used on the backend side \(a string\).
@@ -203,8 +203,8 @@ An array of objects with the following properties:
 
 -   `virtualHost`: Virtual host used on the cloud side \(a string\)
 -   `virtualPort`: Virtual port used on the cloud side \(a string\)
--   `localHost`: Host on the on-premise side \(a string\)
--   `localPort`: Port on the on-premise side \(a string\)
+-   `localHost`: Host on the on-premises side \(a string\)
+-   `localPort`: Port on the on-premises side \(a string\)
 -   `protocol`: Protocol used when sending requests and receiving responses \(a string\)
 -   `backendType`: Type of the backend \(a string\)
 -   `authenticationMode`: Authentication mode used on the backend side \(a string\).
@@ -308,8 +308,8 @@ Administrator, Subaccount Administrator
 
 -   `virtualHost`: Virtual host used on the cloud side \(a string\)
 -   `virtualPort`: Virtual port used on the cloud side \(a string\)
--   `localHost`: Host on the on-premise side \(a string\)
--   `localPort`: Port on the on-premise side \(a string\)
+-   `localHost`: Host on the on-premises side \(a string\)
+-   `localPort`: Port on the on-premises side \(a string\)
 -   `protocol`: Protocol used when sending requests and receiving responses, which must be one of the following strings: `HTTP, HTTPS, RFC, RFCS, LDAP, LDAPS, TCP, TCPS`.
 -   `backendType`: Type of the backend system. Valid values are`abapSys, netweaverCE, netweaverGW, applServerJava, BC, PI, hana, otherSAPsys, nonSAPsys`.
 -   `authenticationMode`: Authentication mode to be used on the backend side, which must be one of the following strings: `NONE,` `NONE_RESTRICTED`, `X509_GENERAL, X509_RESTRICTED, KERBEROS`.
@@ -579,8 +579,8 @@ Administrator, Subaccount Administrator
 -   `virtualHost`: Virtual host used on the cloud side \(a string\)
 -   `virtualPort`: Virtual port used on the cloud side \(a string\)
 
--   `localHost`: Host on the on-premise side \(a string\)
--   `localPort`: Port on the on-premise side \(a string\)
+-   `localHost`: Host on the on-premises side \(a string\)
+-   `localPort`: Port on the on-premises side \(a string\)
 -   `protocol`: Protocol used when sending requests and receiving responses, which must be one of the following strings: `HTTP, HTTPS, RFC, RFCS, LDAP, LDAPS, TCP, TCPS`.
 -   `backendType`: Type of the backend system. Valid values are`abapSys, netweaverCE, netweaverGW, applServerJava, BC, PI, hana, otherSAPsys, nonSAPsys`.
 -   `authenticationMode`: Authentication mode to be used on the backend side, which must be one of the following strings: `NONE,` `NONE_RESTRICTED`, `X509_GENERAL, X509_RESTRICTED, KERBEROS`.

@@ -13,7 +13,7 @@ In addition, you can find the following information about each service channel:
 -   Assigned subaccount \(display name\)
 -   Details \(for example, the assigned ABAP Cloud tenant host\)
 
-From the *Actions* column, you can switch directly to the *On-Premise To Cloud* section of the corresponding subaccount and edit the selected service channel.
+From the *Actions* column, you can switch directly to the *On-Premises To Cloud* section of the corresponding subaccount and edit the selected service channel.
 
 To find the overview list, choose *Connector* from the navigation menu and go to section *Service Channels Overview*:
 

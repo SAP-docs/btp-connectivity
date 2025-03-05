@@ -17,5 +17,5 @@ There are two similar sets of APIs for system certificate and CA certificate for
 
 -   [CA Certificate for Principal Propagation: APIs](ca-certificate-for-principal-propagation-apis-0c4a958.md)
 -   [System Certificate: APIs](system-certificate-apis-236c084.md)
--   [Truststore CA Certificates](truststore-ca-certificates-e8f309f.md)
+-   [Truststore Backend Certificates](truststore-backend-certificates-e8f309f.md)
 

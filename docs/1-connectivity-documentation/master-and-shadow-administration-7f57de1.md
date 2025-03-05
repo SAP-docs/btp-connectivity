@@ -12,7 +12,7 @@ There are several administration activities you can perform on the shadow instan
 
 Also, you can configure the timeout for the connection check, by pressing the gear icon in the section *Connection To Master* of the shadow connector main page.
 
-![](images/SCC_HA_-_Shadow_TimoutSettings_355ae0c.png)
+![](images/SCC_HA_-_Master_and_Shadow_Administration_355ae0c.png)
 
 The *<Connection Timeout\>* field specifies the maximum time allowed for establishing the technical connection to the master, the *<Request Timeout\>* defines the maximum time allowed for executing the check over this connection. In the *Timeout Validation* section, you can check the current settings by pressing the *Execute* button. If the timeouts are hit, you might want to increase the settings accordingly.
 
@@ -63,10 +63,19 @@ The master considers a shadow as lost, if no check/ping is received from that sh
 > ### Note:  
 > On the master instance, you can manually trigger failover \(if a shadow instance is present\) by selecting the *Switch Roles* button.
 > 
-> Even with the active role switch, zero downtime is not guaranteed. Depending on various aspects and timings, there may be short time slots in which establishing new connections fails. When switching the role, all active requests on the master will be aborted as the sockets will be closed.
-> 
-> An attempt to switch roles will be rejected if none of the subaccounts can be connected on the shadow side as this may indicate that the shadow, which is to take over as master, is not able to process requests. However, the inability to connect subaccounts may simply be due to expired subaccount certificates. This is not necessarily an issue while subaccounts are connected, but may become an issue when attempting to connect. Therefore, make sure the subaccount certificates are valid before switching roles.
+> A zero downtime is not guaranteed. Depending on various aspects and timings there can be short time slots in which establishing new connections fails. All requests currently being active on the master will be aborted when switching the role as the sockets will be closed.
+
+> ### Note:  
+> An attempt to switch roles will be rejected if none of the subaccounts can be connected on the shadow side as this may indicate that the shadow, which is to take over as master, will not be able to process requests. However, the inability to connect subaccounts may simply be due to expired subaccount certificates which is not necessarily an issue while subaccounts are connected, but will most certainly become an issue when attempting to connect. Therefore, make sure the subaccount certificates are valid before switching roles.
 
 > ### Note:  
 > On the master instance, you can force a role switch to assume the shadow role even if no shadow is connected. To do so, press the *Become Shadow* button \(which is the re-labeled *Switch Roles* button\). Enforce the role change only if you are absolutely sure that this is the correct procedure. Should you end up without any master instance after all, use the script *changerole* located in the root installation directory to fix the issue.
+
+
+
+<a name="loio7f57de170fbd4405ab485880772af1f1__section_xhb_4mf_32c"/>
+
+## Take-Over Settings
+
+When the shadow instance takes over, by default service channels are immediately closed by the outgoing master instance. This may cause some disruption. It is possible to keep service channels open for a period of time that can be configured as **Service Channel Termination Grace Period** on the **High Availability** screen \(master instance\). Service channels will remain active during the configured grace period, and will be closed once the grace period expires.
 

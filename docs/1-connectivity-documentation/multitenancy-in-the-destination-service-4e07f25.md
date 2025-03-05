@@ -114,5 +114,5 @@ If you, as an application provider, want to create a destination that is used at
 **Related Information**  
 
 
-[Multitenancy in the Connectivity Service](multitenancy-in-the-connectivity-service-9c0bdd0.md "Using multitenancy for applications that require a connection to a remote service or on-premise application.")
+[Multitenancy in SAP BTP Connectivity](multitenancy-in-sap-btp-connectivity-9c0bdd0.md "Using multitenancy for applications that require a connection to a remote service or on-premise application.")
 

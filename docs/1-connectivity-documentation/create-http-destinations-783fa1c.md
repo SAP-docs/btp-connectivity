@@ -46,7 +46,7 @@ You have logged into the cockpit and opened the *Destinations* editor.
 
 8.  \(Optional\) If you are using more than one Cloud Connector for your subaccount, you must enter the *<Location ID\>* of the target Cloud Connector.
 
-    See also [Managing Subaccounts](managing-subaccounts-f16df12.md) \(section **Procedure**, step 4\).
+    See also [Adding and Managing Subaccounts](adding-and-managing-subaccounts-f16df12.md) \(section **Procedure**, step 4\).
 
 9.  \(Optional\) You can enter additional properties.
 

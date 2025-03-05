@@ -62,7 +62,7 @@ To target the destination with the name "example-dest-technical-user-propagation
 
 For the consumption of a destination with *technical user propagation*, the technical user is obtained from the destination by the transparent proxy, forwarded to the [Connectivity Proxy for Kubernetes](connectivity-proxy-for-kubernetes-e661713.md), and then to the [Cloud Connector](cloud-connector-e6c7616.md), which validates and further processes it to establish SSO with the on-premise system.
 
-For more information, see  [Authenticating Users against On-Premise Systems](authenticating-users-against-on-premise-systems-b643fbe.md) and [Configuring Technical User Propagation](configuring-technical-user-propagation-b62e588.md).
+For more information, see  [Authenticating Users against On-Premises Systems](authenticating-users-against-on-premises-systems-b643fbe.md) and [Configuring Technical User Propagation](configuring-technical-user-propagation-b62e588.md).
 
 > ### Note:  
 > `<destination-cr-namespace>` can be omitted if the destination custom resource is created in the same namespace as the application workload.

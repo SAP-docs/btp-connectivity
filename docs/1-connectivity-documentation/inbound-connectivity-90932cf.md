@@ -2,7 +2,7 @@
 
 # Inbound Connectivity
 
-For inbound connections into the on-premise network, the Cloud Connector acts as a reverse invoke proxy between SAP BTP and the internal systems.
+For inbound connections into the on-premises network, the Cloud Connector acts as a reverse invoke proxy between SAP BTP and the internal systems.
 
 
 
@@ -12,7 +12,7 @@ For inbound connections into the on-premise network, the Cloud Connector acts as
 
 Once installed, none of the internal systems are accessible by default through the Cloud Connector: you must configure explicitly each system and each service and resource on every system to be exposed to SAP BTP in the Cloud Connector.
 
-You can also specify a virtual host name and port for a configured on-premise system, which is then used in the cloud. Doing this, you can avoid that information on physical hosts is exposed to the cloud.
+You can also specify a virtual host name and port for a configured on-premises system, which is then used in the cloud. Doing this, you can avoid that information on physical hosts is exposed to the cloud.
 
 
 
@@ -32,7 +32,7 @@ The X.509 certificates which are used to authenticate the Cloud Connector and th
 
 ## Restricting Allowed Applications
 
-As an additional level of control, the Cloud Connector optionally allows restricting the list of SAP BTP applications which are able to use the tunnel. This is useful in situations where multiple applications are deployed in a single SAP BTP subaccount while only particular applications require connectivity to on-premise systems.
+As an additional level of control, the Cloud Connector optionally allows restricting the list of SAP BTP applications which are able to use the tunnel. This is useful in situations where multiple applications are deployed in a single SAP BTP subaccount while only particular applications require connectivity to on-premises systems.
 
 
 
@@ -51,8 +51,8 @@ SAP BTP guarantees strict isolation on subaccount level provided by its infrastr
 The Cloud Connector supports inbound connectivity for HTTP and RFC, any other protocol is not supported.
 
 -   The payload sent via these protocols is encrypted on TLS/tunnel-level.
--   For the route from the Cloud Connector to the on-premise systems, Cloud Connector administrators have the choice for each configured on-premise system whether to use HTTP, HTTPS, RFC or RFC over SNC.
--   For HTTPS, you can configure a so-called system certificate in the Cloud Connector which is used for the trust relationship between the Cloud Connector and the connected on-premise systems.
+-   For the route from the Cloud Connector to the on-premises systems, Cloud Connector administrators have the choice for each configured on-premises system whether to use HTTP, HTTPS, RFC or RFC over SNC.
+-   For HTTPS, you can configure a so-called system certificate in the Cloud Connector which is used for the trust relationship between the Cloud Connector and the connected on-premises systems.
 -   For RFC over SNC, you can configure an SNC PSE in the Cloud Connector respectively.
 
 
@@ -61,10 +61,10 @@ The Cloud Connector supports inbound connectivity for HTTP and RFC, any other pr
 
 ## Principal Propagation
 
-The Cloud Connector also supports principal propagation of the cloud user identity to connected on-premise systems \(single sign-on\). For this, the system certificate \(in case of HTTPS\) or the SNC PSE \(in case of RFC\) is mandatory to be configured and trust with the respective on-premise system must be established. Trust configuration, in particular for principal propagation, is the only reason to configure and touch an on-premise system when using it with the Cloud Connector.
+The Cloud Connector also supports principal propagation of the cloud user identity to connected on-premises systems \(single sign-on\). For this, the system certificate \(in case of HTTPS\) or the SNC PSE \(in case of RFC\) is mandatory to be configured and trust with the respective on-premises system must be established. Trust configuration, in particular for principal propagation, is the only reason to configure and touch an on-premises system when using it with the Cloud Connector.
 
 **Related Information**  
 
 
-[Configuring Principal Propagation](configuring-principal-propagation-c84d4d0.md "Use principal propagation to simplify the access of SAP BTP users to on-premise systems.")
+[Configuring Principal Propagation](configuring-principal-propagation-c84d4d0.md "Use principal propagation to simplify the access of SAP BTP users to on-premises systems.")
 

@@ -2,7 +2,7 @@
 
 # Process Guidelines for Hybrid Scenarios
 
-A hybrid scenario is one, in which applications running on SAP BTP require access to on-premise systems. Define and document your scenario to get an overview of the required process steps.
+A hybrid scenario is one, in which applications running on SAP BTP require access to on-premises systems. Define and document your scenario to get an overview of the required process steps.
 
 
 
@@ -28,7 +28,7 @@ A hybrid scenario is one, in which applications running on SAP BTP require acces
 
 ## Document the Landscape of a Hybrid Solution
 
-To gain an overview of the cloud and on-premise landscape that is relevant for your hybrid scenario, we recommend that you diagrammatically document your cloud subaccounts, their connected Cloud Connectors and any on-premise back-end systems. Include the subaccount names, the purpose of the subaccounts \(dev, test, prod\), information about the Cloud Connector machines \(host, domains\), the URLs of the Cloud Connectors in the landscape overview document, and any other details you might find useful to include.
+To gain an overview of the cloud and on-premises landscape that is relevant for your hybrid scenario, we recommend that you diagrammatically document your cloud subaccounts, their connected Cloud Connectors and any on-premises backend systems. Include the subaccount names, the purpose of the subaccounts \(dev, test, prod\), information about the Cloud Connector machines \(host, domains\), the URLs of the Cloud Connectors in the landscape overview document, and any other details you might find useful to include.
 
 An example of landscape overview documentation could look like this:
 
@@ -432,8 +432,8 @@ For example, the following processes could be seen as relevant and should be def
 
 1.  Transferring application to production: Steps for transferring an application to the productive status on the SAP BTP.
 2.  Application connectivity: The steps for adding a connectivity destination to a deployed application for connections to other resources in the test or productive landscape.
-3.  Cloud Connector Connectivity: Steps for adding an on-premise resource to the Cloud Connector in the test or productive landscapes to make it available for the connected cloud subaccounts.
-4.  On-premise system connectivity: The steps for setting up a trusted relationship between an on-premise system and the Cloud Connector, and to configure user authentication and authorization in the on-premise system in the test or productive landscapes.
+3.  Cloud Connector Connectivity: Steps for adding an on-premises resource to the Cloud Connector in the test or productive landscapes to make it available for the connected cloud subaccounts.
+4.  On-premises system connectivity: The steps for setting up a trusted relationship between an on-premises system and the Cloud Connector, and to configure user authentication and authorization in the on-premises system in the test or productive landscapes.
 5.  Application authorization: The steps for requesting and assigning an authorization that is available inside the SAP BTP application to a user in the test or productive landscapes.
 6.  Administrator permissions: Steps for requesting and assigning the administrator permissions in a cloud subaccount to a user in the test or productive landscape.
 

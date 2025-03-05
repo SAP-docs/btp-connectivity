@@ -2,9 +2,9 @@
 
 # Configuring Technical User Propagation
 
-Use technical user propagation to provide access of technical users to on-premise systems.
+Use technical user propagation to provide access of technical users to on-premises systems.
 
-Using technical user propagation, you can forward the identity of technical users that are identified using an OAuth client and act on behalf of this identity in an on-premise system.
+Using technical user propagation, you can forward the identity of technical users that are identified using an OAuth client and act on behalf of this identity in an on-premises system.
 
 > ### Note:  
 > Technical user propagation is possible only in the Cloud Foundry environment.

@@ -58,7 +58,7 @@ To target the destination with the name "example-dest-principal-propagation" for
 
 For the consumption of a destination with *principal propagation*, the cloud user identity is passed to the transparent proxy as a token represented by a JSON Web token \(JWT\) via an `Authorization` header of scheme `Bearer`. It is forwarded via the transparent proxy to the [Connectivity Proxy for Kubernetes](connectivity-proxy-for-kubernetes-e661713.md) and then to the [Cloud Connector](cloud-connector-e6c7616.md), which validates and further processes it to establish SSO with the on-premise system.
 
-For more information, see [Authenticating Users against On-Premise Systems](authenticating-users-against-on-premise-systems-b643fbe.md)  and [Set Up Trust](set-up-trust-a4ee70f.md).
+For more information, see [Authenticating Users against On-Premises Systems](authenticating-users-against-on-premises-systems-b643fbe.md)  and [Set Up Trust](set-up-trust-a4ee70f.md).
 
 > ### Note:  
 > `<destination-cr-namespace>` can be omitted if the destination custom resource is created in the same namespace as the application workload.

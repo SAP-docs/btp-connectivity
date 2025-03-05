@@ -12,7 +12,7 @@ The Cloud Connector includes an auditor tool for viewing and managing audit log 
 > We recommend that you permanently switch on Cloud Connector audit logging in productive scenarios.
 > 
 > -   Under normal circumstances, set the logging level to `Security` \(the default configuration value\).
-> -   If legal requirements or company policies dictate it, set the logging level to `All`. This lets you use the log files to, for example, detect attacks of a malicious cloud application that tries to access on-premise services without permission, or in a forensic analysis of a security incident.
+> -   If legal requirements or company policies dictate it, set the logging level to `All`. This lets you use the log files to, for example, detect attacks of a malicious cloud application that tries to access on-premises services without permission, or in a forensic analysis of a security incident.
 
 We also recommend that you regularly copy the audit log files of the Cloud Connector to an external persistent storage according to your local regulations. The audit log files can be found in the Cloud Connector root directory `/log/audit/<subaccount-name>/audit-log_<timestamp>.csv`.
 

@@ -589,7 +589,7 @@ NETWORK\_UNREACHABLE
 </td>
 <td valign="top">
 
-The Cloud Connector is not connected to the subaccount and the Cloud Connector `Location ID` that is used by the cloud application can't be identified. See [Connect and Disconnect a Cloud Subaccount](connect-and-disconnect-a-cloud-subaccount-e8f055e.md) and [Managing Subaccounts](managing-subaccounts-f16df12.md), section *Procedure*.
+The Cloud Connector is not connected to the subaccount and the Cloud Connector `Location ID` that is used by the cloud application can't be identified. See [Connect and Disconnect a Cloud Subaccount](connect-and-disconnect-a-cloud-subaccount-e8f055e.md) and [Adding and Managing Subaccounts](adding-and-managing-subaccounts-f16df12.md), section *Procedure*.
 
 </td>
 </tr>

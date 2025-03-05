@@ -51,6 +51,9 @@ The following data and setup is used for this scenario:
 -   Make sure your SAP Web Dispatcher supports SSL. See [Configure SAP Web Dispatcher to Support SSL](https://help.sap.com/viewer/683d6a1797a34730a6e005d1e8de6f22/latest/en-US/493db10a19341067e10000000a42189c.html).
 -   Ensure that TLS client certificates can be used for authentication in the backend system. See [How to Configure SAP Web Dispatcher to Forward SSL Certificates for X.509 Authentication](https://wiki.scn.sap.com/wiki/display/SI/How+to+Configure+SAP+Web+Dispatcher+to+Forward+SSL+Certificates+for+X.509+Authentication) for step-by-step instructions.
 
+> ### Caution:  
+> In case of identity propagation, make sure you do not use a *Web Application Firewall*\(WAF\) or a *Reverse Proxy* between the Cloud Connector and the SAP Web Dispatcher. This would terminate TLS, and disables functions like E2E trust and MITM attack prevention.
+
 Back to [Tasks](configure-identity-propagation-via-sap-web-dispatcher-9025d5f.md#loio9025d5f808d14fef9bad1de88d93f3a3__tasks)
 
 Back to [Concept](configure-identity-propagation-via-sap-web-dispatcher-9025d5f.md#loio9025d5f808d14fef9bad1de88d93f3a3__concept)

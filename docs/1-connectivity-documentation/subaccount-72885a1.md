@@ -30,7 +30,7 @@ Manage the Cloud Connector's subaccount settings via API.
 
 [Connect/Disconnect Subaccount \(Master Only\)](subaccount-72885a1.md#loio72885a1eee784790a8c8d07538051134__connectSub) 
 
-[Refresh Subaccount Certificate \(Master Only\)](subaccount-72885a1.md#loio72885a1eee784790a8c8d07538051134__refreshSubCert) 
+[Renew Subaccount Certificate \(Master Only\)](subaccount-72885a1.md#loio72885a1eee784790a8c8d07538051134__refreshSubCert) 
 
 [Get Subaccount Configuration](subaccount-72885a1.md#loio72885a1eee784790a8c8d07538051134__getSubConfig) 
 
@@ -625,7 +625,7 @@ Back to [Operations](subaccount-72885a1.md#loio72885a1eee784790a8c8d07538051134_
 
 <a name="loio72885a1eee784790a8c8d07538051134__refreshSubCert"/>
 
-## Refresh Subaccount Certificate \(Master Only\)
+## Renew Subaccount Certificate \(Master Only\)
 
 
 <table>
@@ -732,11 +732,11 @@ Administrator, Subaccount Administrator
 
 **Request Properties**:
 
--   `user`: user for the specified region host and subaccount.
+-   `user`: \(cloud\) user for the specified region host and subaccount.
 
 -   `password`: password for the \(cloud\) user.
 
--   `authenticationData`: subaccount authentication data, used instead of `cloudUser` and `cloudPassword` \(as of version 2.17.0\).
+-   `authenticationData`: subaccount authentication data, used instead of `user` and `password` \(as of version 2.17.0\).
 
 **Response Properties**:
 

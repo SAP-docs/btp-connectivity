@@ -15,7 +15,7 @@ Using this configuration option, you can define different patterns identifying t
 
 To configure a subject pattern rule, choose *Configuration* \> *On Premise* \> *Principal Propagation*. In the table shown, you can add or modify a rule consisting of a pattern and a condition.
 
-![](images/SCC_SubjectPattern_-_Configure_83c48da.png)
+![](images/SCC_SubjectPattern_1_83c48da.png)
 
 This table represents an ordered list containing entries that have a specified condition, and the respective subject pattern. You can change the order for an entry by choosing the respective arrow buttons. The workflow in the Cloud Connector looks like this:
 
@@ -25,7 +25,7 @@ The last entry in the table is the default one having no condition \(that is, it
 
 To modify or add table entries, choose the *Edit* or *Add* icon:
 
-![](images/SCC_SubjectPattern_-_Edit_0a53b56.png)
+![](images/SCC_SubjectPattern_3_0a53b56.png)
 
 
 
@@ -65,6 +65,9 @@ In a next step, choose an operator:
 > For the condition `${user_type}`, you can only switch between `Technical` or `Business`. The latter refers to the "classical" propagation of business user information, whereas `Technical` is the propagation of a technical user.
 > 
 > For more information, see [Configuring Technical User Propagation](configuring-technical-user-propagation-b62e588.md).
+
+> ### Note:  
+> As of version 2.18.0, you can find the information about the last usage of a subject pattern rule by choosing the *Details* button.
 
 
 
@@ -118,7 +121,7 @@ By default, the following attributes are provided:
 
 By choosing *Generate Sample Certificate* you can create a sample certificate that looks like one of the short-lived certificates created at runtime. You can use this certificate to, for example, generate user mapping rules in the target system, via transaction CERTRULE in an ABAP system. If your subject pattern contains variable fields, a wizard lets you provide meaningful values for each of them and eventually you can save the sample certificate in `DER` format.
 
-![](images/SCC_SubjectPattern_-_SampleCertificate_8a00fae.png)
+![](images/SCC_SubjectPattern_4_8a00fae.png)
 
 
 
@@ -128,7 +131,7 @@ By choosing *Generate Sample Certificate* you can create a sample certificate th
 
 You can change the validity settings by choosing the *Edit* button.
 
-![](images/SCC_SubjectPattern_-_Validity_c6975b3.png)
+![](images/SCC_SubjectPattern_5_c6975b3.png)
 
 
 
