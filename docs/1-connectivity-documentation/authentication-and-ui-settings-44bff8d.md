@@ -551,7 +551,7 @@ Administrator, Subaccount Administrator, Display, Support
 
 ```
 curl -i -k -H 'Accept:application/json' 
--u Administrator:<password> -X GET https://<scchost>:8443/api/v1/configuration/connector/authentication
+-u Administrator:<password> -X GET https://<scchost>:8443/api/v2/configuration/connector/authentication
 ```
 
 
@@ -661,7 +661,7 @@ In both error cases nothing is stored, and LDAP authentication is disabled.
 ## Example
 
 ```
-curl -i -k -H 'Content-Type: application/json' -u Administrator:<password> -X PUT https://localhost:8443/api/v1/configuration/connector/authentication/ldap -d '{"enabled":true, "orderedLdapConfigurations":[{"hosts":[{"host":"ldaphost", "port":"10389", "isSecure":false}], "config":"roleBase=\"ou=groups,dc=scc\" roleName=\"cn\" roleSearch=\"(uniqueMember={0})\" userBase=\"ou=users,dc=scc\" userSearch=\"(uid={0})\"", "user":"ldapadmin", "password":"<ldapadminpassword>"}]}'  
+curl -i -k -H 'Content-Type: application/json' -u Administrator:<password> -X PUT https://localhost:8443/api/v2/configuration/connector/authentication/ldap -d '{"enabled":true, "orderedLdapConfigurations":[{"hosts":[{"host":"ldaphost", "port":"10389", "isSecure":false}], "config":"roleBase=\"ou=groups,dc=scc\" roleName=\"cn\" roleSearch=\"(uniqueMember={0})\" userBase=\"ou=users,dc=scc\" userSearch=\"(uid={0})\"", "user":"ldapadmin", "password":"<ldapadminpassword>"}]}'  
 ```
 
 

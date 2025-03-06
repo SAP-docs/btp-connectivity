@@ -153,5 +153,17 @@ Include Destination service IP addresses in your target system firewall rules fo
 
 </td>
 </tr>
+<tr>
+<td valign="top">
+
+[Destination Chaining](destination-chaining-08a09f5.md)
+
+</td>
+<td valign="top">
+
+Invoke multiple Destination service interactions with a single *Find Destination* request, automatically using the result of one interaction as input for the next one.
+
+</td>
+</tr>
 </table>
 

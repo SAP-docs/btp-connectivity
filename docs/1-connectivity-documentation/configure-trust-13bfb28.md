@@ -10,7 +10,7 @@ Set up a trust store for on-premises systems in the Cloud Connector.
 
 ## Configure the Trust Store
 
-To configure the trust store, choose *Configuration* from the main menu, and go to tab *On Premise*, section *Backend Trust Store*.
+To configure the trust store, choose *Configuration* from the main menu, and go to tab *On Premises*, section *Backend Trust Store*.
 
 By default, the Cloud Connector **does not trust any** on-premises system when connecting to it via TLS:
 
