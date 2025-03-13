@@ -170,6 +170,13 @@ Cloud Connector Administrator
 
 **Manage destinations** \(all CRUD operations\) on subaccount level \(cockpit\)
 
+> ### Note:  
+> CRUD \(*Create, Read, Update, Delete*\) operations include actions like create destinations, display destinations, edit destinations, and delete destinations.
+> 
+> For more information, see [Managing Destinations](managing-destinations-84e45e0.md).
+
+
+
 </td>
 <td valign="top">
 
@@ -203,6 +210,13 @@ One of these roles:
 <td valign="top">
 
 **Manage certificates** \(all CRUD operations\) on subaccount level \(cockpit\)
+
+> ### Note:  
+> CRUD \(*Create, Read, Update, Delete*\) operations include actions like create destinations, display destinations, edit destinations, and delete destinations.
+> 
+> For more information, see [Managing Destinations](managing-destinations-84e45e0.md).
+
+
 
 </td>
 <td valign="top">
@@ -294,6 +308,13 @@ A role containing the permission `readSCCTunnels`, for example, the predefined r
 
 **Manage destinations** \(all CRUD operations\) on service instance level \(cockpit\)
 
+> ### Note:  
+> CRUD \(*Create, Read, Update, Delete*\) operations include actions like create destinations, display destinations, edit destinations, and delete destinations.
+> 
+> For more information, see [Managing Destinations](managing-destinations-84e45e0.md).
+
+
+
 </td>
 <td valign="top">
 
@@ -343,6 +364,13 @@ See [User and Member Management](https://help.sap.com/viewer/65de2977205c403bbc1
 <td valign="top">
 
 **Manage certificates** \(all CRUD operations\) on service instance level \(cockpit\)
+
+> ### Note:  
+> CRUD \(*Create, Read, Update, Delete*\) operations include actions like create destinations, display destinations, edit destinations, and delete destinations.
+> 
+> For more information, see [Managing Destinations](managing-destinations-84e45e0.md).
+
+
 
 </td>
 <td valign="top">

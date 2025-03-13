@@ -453,7 +453,7 @@ curl -i -k -H 'Content-Type: application/json' -u Administrator:<password> -X PU
 
 ## Authentication API v2
 
-As of version 2.18.0, the Cloud Connector supports multiple LDAP servers. To enable that, the data structures contain an array of LDAP servers instead of a single LDAP server configuration as in API v1.
+As of version 2.18.0, the Cloud Connector REST API supports configurations with multiple LDAP servers. To enable that, the data structures contain an array of LDAP servers instead of a single LDAP server configuration as in API v1.
 
 
 

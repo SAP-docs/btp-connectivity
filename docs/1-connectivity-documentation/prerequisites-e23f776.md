@@ -2158,49 +2158,6 @@ connectivitytunnel.cf.ca10.hana.ondemand.com
 <tr>
 <td valign="top" rowspan="3">
 
-Canada \(Toronto\) - Azure
-
-\(`cf.ca20.hana.ondemand.com`\)
-
-</td>
-<td valign="top" colspan="2">
-
-connectivitynotification.cf.ca20.hana.ondemand.com
-
-</td>
-<td valign="top">
-
-`130.107.189.169` 
-
-</td>
-</tr>
-<tr>
-<td valign="top" colspan="2">
-
-connectivitycertsigning.cf.ca20.hana.ondemand.com
-
-</td>
-<td valign="top">
-
-`130.107.189.169`
-
-</td>
-</tr>
-<tr>
-<td valign="top" colspan="2">
-
-connectivitytunnel.cf.ca20.hana.ondemand.com
-
-</td>
-<td valign="top">
-
-`130.107.189.169`
-
-</td>
-</tr>
-<tr>
-<td valign="top" rowspan="3">
-
 Switzerland \(Zurich\) - Azure
 
 \(`cf.ch20.hana.ondemand.com`\)
