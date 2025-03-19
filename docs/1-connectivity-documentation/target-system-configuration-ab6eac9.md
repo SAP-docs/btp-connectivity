@@ -114,7 +114,7 @@ Represents the so-called "system number" and has two digits. It identifies the l
 </td>
 <td valign="top">
 
-Three-digit ABAP client number. Defines the client of the target ABAP system.
+Represents the client to be used in the ABAP system. Valid format is a 3-digit number.
 
 </td>
 </tr>
@@ -205,7 +205,7 @@ Represents the port on which the message server is listening for incoming reques
 </td>
 <td valign="top">
 
-Three-digit ABAP client number. Defines the client of the target ABAP system.
+Represents the client to be used in the ABAP system. Valid format is a 3-digit number.
 
 </td>
 </tr>
@@ -275,7 +275,7 @@ Represents the WebSocket RFC server port on which the target ABAP system is list
 </td>
 <td valign="top">
 
-Three-digit ABAP client number. Defines the client of the target ABAP system.
+Represents the client to be used in the ABAP system. Valid format is a 3-digit number. Optional for WebSocket RFC, if not provided, the default client associated with the host will be used.
 
 </td>
 </tr>
@@ -331,7 +331,7 @@ If you don't want to use the default JDK trust store \(option *Use default JDK t
 </td>
 <td valign="top">
 
-Password for the JKS trust store file. This field is mandatory if *<Trust Store Location\>* is used.
+Password for the trust store file specified via *<Trust Store Location\>*. This field is mandatory if *<Trust Store Location\>* is used.
 
 </td>
 </tr>

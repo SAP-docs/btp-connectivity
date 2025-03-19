@@ -23,18 +23,6 @@ Description
 <tr>
 <td valign="top">
 
-`jco.client.client`
-
-</td>
-<td valign="top">
-
-Represents the client to be used in the ABAP system. Valid format is a three-digit number.
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
 `jco.client.lang`
 
 </td>
@@ -116,6 +104,30 @@ The default value is `0`.
 For more information on WebSocket RFC, see also:
 
 [WebSocket RFC](https://help.sap.com/viewer/753088fc00704d0a80e7fbd6803c8adb/202009.001/en-US/51f1edadb2754e539f6e6335dd1eb4cc.html)
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+`<Key Store Location>`
+
+</td>
+<td valign="top">
+
+The name of the key store file that contains the client certificate for client certificate authentication against the remote WebSocket RFC server. Mandatory, when setting `jco.client.tls_client_certificate_logon` to 1.
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+`<Key Store Password>` 
+
+</td>
+<td valign="top">
+
+The password for the key store file specified via `<Key Store Location>`. This field is mandatory if `<Key Store Location>` is used.
 
 </td>
 </tr>
