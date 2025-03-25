@@ -56,7 +56,12 @@ Insert a new entry in the Cloud Connector access control management:
 
     See: [Create HTTP Destinations](create-http-destinations-783fa1c.md) \(Cloud Foundry environment\)
 
-    The virtual host can be a fake name and does not need to exist. The *Virtual Port* allows you to distinguish between different entry points of your backend system, for example, `HTTP`/`80` and `HTTPS`/`443`, and to have different sets of access control settings for them. For example, some non-critical resources may be accessed by HTTP, while some other critical resources are to be called using HTTPS only. The fields are prepopulated with the values of the *Internal Host* and *Internal Port*. If you don't modify them, you must provide your internal host and port also in the cloud-side destination configuration or in the URL used for your favorite HTTP client.
+    The virtual host can be a fake name and does not need to exist.
+
+    > ### Note:  
+    > In some scenarios, underscores \("\_"\) may not be allowed for the virtual host name. In these cases, an *HTTP 400 Bad Request* error message will be shown.
+
+    The *Virtual Port* allows you to distinguish between different entry points of your backend system, for example, `HTTP`/`80` and `HTTPS`/`443`, and to have different sets of access control settings for them. For example, some non-critical resources may be accessed by HTTP, while some other critical resources are to be called using HTTPS only. The fields are prepopulated with the values of the *Internal Host* and *Internal Port*. If you don't modify them, you must provide your internal host and port also in the cloud-side destination configuration or in the URL used for your favorite HTTP client.
 
     ![](images/SCC_CS_AccessControlHTTP_4_5720bc9.png)
 
@@ -147,6 +152,9 @@ Back to [Tasks](configure-access-control-http-e7d4927.md#loioe7d4927dbb571014af7
 In addition to allowing access to a particular host and port, you also must specify which URL paths \(*Resources*\) are allowed to be invoked on that host. The Cloud Connector uses very strict allowlists for its access control. Only those URLs for which you explicitly granted access are allowed. All other HTTP\(S\) requests are denied by the Cloud Connector.
 
 To define the permitted URLs for a particular backend system, choose the line corresponding to that backend system and choose *Add* in section *Resources Accessible On...* below. A dialog appears prompting you to enter the specific URL path that you want to allow to be invoked.
+
+> ### Note:  
+> The path name is case sensitive.
 
 ![](images/SCC_CS_AccessControlHTTP_13_3a753ce.png)
 

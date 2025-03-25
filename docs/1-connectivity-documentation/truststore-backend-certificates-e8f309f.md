@@ -464,7 +464,7 @@ Administrator, Subaccount Administrator, Support
 ## Example
 
 ```
-curl -k -u <user>:<password> --request GET  -H "Accept: application/x-pem-file" --output <pem file> https://localhost:8443/api/v1/configuration/connector/onPremise/truststore/certificates
+curl -k -u <user>:<password> --request GET  -H "Accept: application/x-pem-file" --output <pem file> https://<host>:<port>/api/v1/configuration/connector/onPremise/truststore/certificates
 ```
 
 
@@ -577,7 +577,7 @@ Administrator, Subaccount Administrator, Support
 ## Example
 
 ```
-curl -k -u <user>:<password> --request GET  -H "Accept: application/pkix-cert" --output <cert file> https://localhost:8443/api/v1/configuration/connector/onPremise/truststore/certificates/<alias>
+curl -k -u <user>:<password> --request GET  -H "Accept: application/pkix-cert" --output <cert file> https://<host>:<port>/api/v1/configuration/connector/onPremise/truststore/certificates/<alias>
 ```
 
 
@@ -674,7 +674,7 @@ Administrator
 ## Example
 
 ```
-curl -k -H "Accept: application/json" -u <user>:<password> --request DELETE https://localhost:8443/api/v1/configuration/connector/onPremise/truststore/certificates/<alias>
+curl -k -H "Accept: application/json" -u <user>:<password> --request DELETE https://<host>:<port>/api/v1/configuration/connector/onPremise/truststore/certificates/<alias>
 ```
 
 
@@ -767,6 +767,6 @@ Administrator
 ## Example
 
 ```
-curl -k -H "Accept: application/json" -u <user>:<password> --request DELETE https://localhost:8443/api/v1/configuration/connector/onPremise/truststore/certificates
+curl -k -H "Accept: application/json" -u <user>:<password> --request DELETE https://<host>:<port>/api/v1/configuration/connector/onPremise/truststore/certificates
 ```
 
