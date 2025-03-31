@@ -1601,6 +1601,54 @@ connectivitytunnel.cf.br20.hana.ondemand.com
 <tr>
 <td valign="top" rowspan="3">
 
+Brazil \(São Paulo\) - Google Cloud
+
+\(`cf.br30.hana.ondemand.com`\)
+
+> ### Note:  
+> Available as of March 31, 2025
+
+
+
+</td>
+<td valign="top" colspan="2">
+
+connectivitynotification.cf.br30.hana.ondemand.com
+
+</td>
+<td valign="top">
+
+`34.95.189.118` 
+
+</td>
+</tr>
+<tr>
+<td valign="top" colspan="2">
+
+connectivitycertsigning.cf.br30.hana.ondemand.com
+
+</td>
+<td valign="top">
+
+`34.95.189.118`
+
+</td>
+</tr>
+<tr>
+<td valign="top" colspan="2">
+
+connectivitytunnel.cf.br30.hana.ondemand.com
+
+</td>
+<td valign="top">
+
+`34.95.189.118`
+
+</td>
+</tr>
+<tr>
+<td valign="top" rowspan="3">
+
 Japan \(Tokyo\) - AWS
 
 \(`cf.jp10.hana.ondemand.com`\)
@@ -1723,6 +1771,102 @@ connectivitytunnel.cf.jp20.hana.ondemand.com
 **Additional IP addresses:**
 
 **48.218.90.204**
+
+</td>
+</tr>
+<tr>
+<td valign="top" rowspan="3">
+
+Japan \(Osaka\) - Google Cloud
+
+\(`cf.jp30.hana.ondemand.com`\)
+
+> ### Note:  
+> Available as of March 31, 2025
+
+
+
+</td>
+<td valign="top" colspan="2">
+
+connectivitynotification.cf.jp30.hana.ondemand.com
+
+</td>
+<td valign="top">
+
+`34.97.168.169` 
+
+</td>
+</tr>
+<tr>
+<td valign="top" colspan="2">
+
+connectivitycertsigning.cf.jp30.hana.ondemand.com
+
+</td>
+<td valign="top">
+
+`34.97.168.169`
+
+</td>
+</tr>
+<tr>
+<td valign="top" colspan="2">
+
+connectivitytunnel.cf.jp30.hana.ondemand.com
+
+</td>
+<td valign="top">
+
+`34.97.168.169`
+
+</td>
+</tr>
+<tr>
+<td valign="top" rowspan="3">
+
+Japan \(Tokyo\) - Google Cloud
+
+\(`cf.jp31.hana.ondemand.com`\)
+
+> ### Note:  
+> Available as of March 31, 2025
+
+
+
+</td>
+<td valign="top" colspan="2">
+
+connectivitynotification.cf.jp31.hana.ondemand.com
+
+</td>
+<td valign="top">
+
+`34.84.96.118` 
+
+</td>
+</tr>
+<tr>
+<td valign="top" colspan="2">
+
+connectivitycertsigning.cf.jp31.hana.ondemand.com
+
+</td>
+<td valign="top">
+
+`34.84.96.118`
+
+</td>
+</tr>
+<tr>
+<td valign="top" colspan="2">
+
+connectivitytunnel.cf.jp31.hana.ondemand.com
+
+</td>
+<td valign="top">
+
+`34.84.96.118`
 
 </td>
 </tr>
@@ -2158,6 +2302,54 @@ connectivitytunnel.cf.ca10.hana.ondemand.com
 <tr>
 <td valign="top" rowspan="3">
 
+Canada Central \(Toronto\) - Azure
+
+\(`cf.ca20.hana.ondemand.com`\)
+
+> ### Note:  
+> Available as of March 31, 2025
+
+
+
+</td>
+<td valign="top" colspan="2">
+
+connectivitynotification.cf.ca20.hana.ondemand.com
+
+</td>
+<td valign="top">
+
+`4.172.17.29`, `130.107.188.238` 
+
+</td>
+</tr>
+<tr>
+<td valign="top" colspan="2">
+
+connectivitycertsigning.cf.ca20.hana.ondemand.com
+
+</td>
+<td valign="top">
+
+`4.172.17.29`, `130.107.189.169` 
+
+</td>
+</tr>
+<tr>
+<td valign="top" colspan="2">
+
+connectivitytunnel.cf.ca20.hana.ondemand.com
+
+</td>
+<td valign="top">
+
+`4.172.17.29`, `130.107.189.169` 
+
+</td>
+</tr>
+<tr>
+<td valign="top" rowspan="3">
+
 Switzerland \(Zurich\) - Azure
 
 \(`cf.ch20.hana.ondemand.com`\)
@@ -2351,6 +2543,54 @@ connectivitytunnel.cf.cn40.platform.sapcloud.cn
 <tr>
 <td valign="top" rowspan="3">
 
+China North - Azure
+
+\(`cf.cn20.hana.ondemand.com`\)
+
+> ### Note:  
+> Available as of March 31, 2025
+
+
+
+</td>
+<td valign="top" colspan="2">
+
+connectivitynotification.cf.cn20.hana.ondemand.com
+
+</td>
+<td valign="top">
+
+`155.56.210.43` 
+
+</td>
+</tr>
+<tr>
+<td valign="top" colspan="2">
+
+connectivitycertsigning.cf.cn20.hana.ondemand.com
+
+</td>
+<td valign="top">
+
+`155.56.210.43`
+
+</td>
+</tr>
+<tr>
+<td valign="top" colspan="2">
+
+connectivitytunnel.cf.cn20.hana.ondemand.com
+
+</td>
+<td valign="top">
+
+`155.56.210.43`
+
+</td>
+</tr>
+<tr>
+<td valign="top" rowspan="3">
+
 KSA \(Dammam\) - Google Cloud
 
 \(`cf.sa30.hana.ondemand.com`\)
@@ -2388,6 +2628,54 @@ connectivitytunnel.cf.sa30.hana.ondemand.com
 <td valign="top">
 
 `34.166.32.46`
+
+</td>
+</tr>
+<tr>
+<td valign="top" rowspan="3">
+
+KSA \(Dammam\) - Google Cloud
+
+\(`cf.sa31.hana.ondemand.com`\)
+
+> ### Note:  
+> Available as of March 31, 2025
+
+
+
+</td>
+<td valign="top" colspan="2">
+
+connectivitynotification.cf.sa31.hana.ondemand.com
+
+</td>
+<td valign="top">
+
+`34.166.72.122` 
+
+</td>
+</tr>
+<tr>
+<td valign="top" colspan="2">
+
+connectivitycertsigning.cf.sa31.hana.ondemand.com
+
+</td>
+<td valign="top">
+
+`34.166.72.122`
+
+</td>
+</tr>
+<tr>
+<td valign="top" colspan="2">
+
+connectivitytunnel.cf.sa31.hana.ondemand.com
+
+</td>
+<td valign="top">
+
+`34.166.72.122`
 
 </td>
 </tr>
