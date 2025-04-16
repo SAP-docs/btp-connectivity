@@ -17,9 +17,6 @@ The retrieval of the access token performs the OAuth 2.0 client credentials flow
 > ### Note:  
 > The retrieved access token is cached for the duration of its validity.
 
-> ### Restriction:  
-> This authentication type is not yet available for destination configuration via the cockpit.
-
 
 
 <a name="loio8634e210446844d09ae9627b450822fd__section_al2_cjh_ytb"/>
@@ -170,18 +167,6 @@ The URL of the token service, against which the token exchange is performed. Dep
 <tr>
 <td valign="top">
 
-`tokenServiceURLType`
-
-</td>
-<td valign="top">
-
-Either `Dedicated` \(if the `tokenServiceURL` serves only a single tenant\), or `Common` \(if the `tokenServiceURL` serves multiple tenants\).
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
 `tokenServiceUser`
 
 </td>
@@ -219,6 +204,18 @@ Password for `tokenServiceUser` \(if required\).
 <td valign="top">
 
 Value of the OAuth 2.0 `scope` parameter, expressed as a list of space-delimited, case-sensitive strings.
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+`tokenServiceURLType`
+
+</td>
+<td valign="top">
+
+Either `Dedicated` \(if the `tokenServiceURL` serves only a single tenant\), or `Common` \(if the `tokenServiceURL` serves multiple tenants\).
 
 </td>
 </tr>

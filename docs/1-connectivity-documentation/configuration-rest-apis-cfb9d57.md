@@ -44,9 +44,7 @@ For general information on the Cloud Connector REST APIs, see also [REST APIs](r
 -   [Domain Mappings](domain-mappings-66e5d47.md)
 -   [Subaccount Service Channels](subaccount-service-channels-b20af3b.md)
 -   [Access Control Entities](access-control-entities-2b8ee62.md)
--   [Common On-Premises Connectivity Configuration](common-on-premises-connectivity-configuration-03a3ab3.md)
 -   [Audit Log Configuration](audit-log-configuration-35f9d40.md)
--   [Alerting Configuration](alerting-configuration-19dd06b.md)
 
 **Related Information**  
 

@@ -14,9 +14,6 @@ The *OAuth Authorization Code* flow is a standard mechanism for business user lo
 
 The client credentials and an authorization code are used to request an access token from an OAuth server, referred to below as *token service*. This is performed automatically by the Destination service when using the "Find a destination" REST endpoint.
 
-> ### Restriction:  
-> This authentication type is not yet available for destination configuration via the cockpit.
-
 
 
 <a name="loio9f634f6c9cd148b7a32c4ac2b56a24c0__section_al2_cjh_ytb"/>
@@ -143,18 +140,6 @@ Token retrieval URL of the OAuth server.
 </td>
 </tr>
 <tr>
-<td valign="top">
-
-`tokenServiceURLType`
-
-</td>
-<td valign="top">
-
-Either `Dedicated` \(if the `tokenServiceURL` serves only a single tenant\), or `Common` \(if the `tokenServiceURL` serves multiple tenants\).
-
-</td>
-</tr>
-<tr>
 <td valign="top" colspan="2">
 
 **Additional**
@@ -182,6 +167,18 @@ Either `Dedicated` \(if the `tokenServiceURL` serves only a single tenant\), or 
 <td valign="top">
 
 Value of the OAuth 2.0 `scope` parameter, expressed as a list of space-delimited, case-sensitive strings.
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+`tokenServiceURLType`
+
+</td>
+<td valign="top">
+
+Either `Dedicated` \(if the `tokenServiceURL` serves only a single tenant\), or `Common` \(if the `tokenServiceURL` serves multiple tenants\).
 
 </td>
 </tr>

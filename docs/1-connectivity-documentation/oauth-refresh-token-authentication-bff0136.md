@@ -142,18 +142,6 @@ Token retrieval URL of the OAuth server.
 </td>
 </tr>
 <tr>
-<td valign="top">
-
-`tokenServiceURLType`
-
-</td>
-<td valign="top">
-
-Either `Dedicated` \(if the `tokenServiceURL` serves only a single tenant\), or `Common` \(if the `tokenServiceURL` serves multiple tenants\).
-
-</td>
-</tr>
-<tr>
 <td valign="top" colspan="2">
 
 **Additional**
@@ -181,6 +169,18 @@ Either `Dedicated` \(if the `tokenServiceURL` serves only a single tenant\), or 
 <td valign="top">
 
 Value of the OAuth 2.0 `scope` parameter, expressed as a list of space-delimited, case-sensitive strings.
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+`tokenServiceURLType`
+
+</td>
+<td valign="top">
+
+Either `Dedicated` \(if the `tokenServiceURL` serves only a single tenant\), or `Common` \(if the `tokenServiceURL` serves multiple tenants\).
 
 </td>
 </tr>

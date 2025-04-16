@@ -164,18 +164,6 @@ Examples of interpreting of the `tokenServiceURL` for `tokenServiceURLType` `Com
 <tr>
 <td valign="top">
 
-`tokenServiceURLType`
-
-</td>
-<td valign="top">
-
-Either `Dedicated` \(if the `tokenServiceURL` serves only a single tenant\), or `Common` \(if the `tokenServiceURL` serves multiple tenants\).
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
 `tokenServiceUser`
 
 </td>
@@ -213,6 +201,18 @@ Password for `tokenServiceUser` \(if required\).
 <td valign="top">
 
 The value of the OAuth 2.0 scope parameter expressed as a list of space-delimited, case-sensitive strings.
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+`tokenServiceURLType`
+
+</td>
+<td valign="top">
+
+Either `Dedicated` \(if the `tokenServiceURL` serves only a single tenant\), or `Common` \(if the `tokenServiceURL` serves multiple tenants\).
 
 </td>
 </tr>

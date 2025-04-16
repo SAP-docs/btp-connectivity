@@ -44,15 +44,15 @@ You can configure trust to one or more IdPs per subaccount. After you've configu
 
 ![Trust Configuration](images/SCC_SettingUpTrust_8f23a34.png)
 
-From your subaccount menu, choose *Cloud to On-Premises* and go to the *Principal Propagation* tab. Choose the *Synchronize* button to store the list of existing identity providers locally in your Cloud Connector.
+From your subaccount menu, choose *Cloud to On-Premises* and go to the *Principal Propagation* tab. Choose the *Synchronize* button to store the list of existing identity providers and applications locally in your Cloud Connector.
 
 Select an entry to see its details:
 
--   `Name`: the name associated with the identity provider.
--   `Description`: descriptive information about this entry.
--   `Type`: type of the trusted entity.
+-   `Name`: the name associated with the identity provider or application of the entry.
+-   `Description`: descriptive information about the entry.
+-   `Type`: trust type of the entry.
 -   `Trusted`: indicates whether the entry is trusted for principal propagation.
--   `Actions`: Choose the *Show Certificate Information* icon to display detail information for the corresponding entry. The Cloud Connector runtime will use the certificate associated with the entry to verify that the assertion used for principal propagation was issued by a trusted entity.
+-   `Actions`: Choose the *Show Certificate Information* icon in the *Actions* column to display detail information for the corresponding entry if such a certificate is available. The icon is disabled for applications.
 
 You can decide for each entry, whether to trust it for the principal propagation use case by choosing *Edit* and \(de\)selecting the *Trusted* checkbox.
 

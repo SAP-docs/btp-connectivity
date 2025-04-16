@@ -23,9 +23,6 @@ With this token exchange flow, any type of token can be used, provided that it i
 To configure a destination of this type, you must specify all the required properties. You can create destinations of this type via the [Destination Service REST API](destination-service-rest-api-23ccafb.md).
 
 > ### Restriction:  
-> This authentication type is not yet available for destination configuration via the cockpit.
-
-> ### Restriction:  
 > `OAuth2TokenExchange` destinations don’t support dynamic tenant-specific token service URLs. The token service URL is always taken as is.
 
 The table below lists the destination properties needed for the creation of destination of `OAuth2TokenExchange` authentication type.

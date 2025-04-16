@@ -5,11 +5,16 @@
 Use Destination service Java APIs to optimize application development.
 
 > ### Caution:  
-> *Connectivity ApiExt* is NOT a recommended way of consuming the Destination service. If you, for some reason, have the need to use *Connectivity ApiExt*, please open a support ticket on component BC-CP-DEST-CF to discuss your use case.
+> The `ConnectivityConfiguration` and `AuthenticationHeaderProvider` APIs \(the library described in this document\) are not a recommended way of consuming the Destination service. If you, for some reason, have the need to use them, please open a support ticket on component BC-CP-DEST-CF to discuss your use case.
 > 
-> *Connectivity ApiExt* for the Cloud Foundry environment is in support-only mode, which means that no new development is done but bug fixes and security patches. It will NOT evolve with the service and NO feature parity can be expected.
+> For the Cloud Foundry environment, these APIs are in support-only mode, which means that no new development is done but bug fixes and security patches. They will not evolve with the service and no feature parity can be expected.
 > 
-> We recommend using the SAP Cloud SDK as an alternative.
+> For Kubernetes, we recommend that you use the transparent proxy as an alternative:
+> 
+> -   In the Kyma environment: [Transparent Proxy in the Kyma Environment](transparent-proxy-in-the-kyma-environment-1700cfe.md)
+> -   In any Kubernetes environment: [Transparent Proxy for Kubernetes](transparent-proxy-for-kubernetes-acc64ad.md)
+> 
+> For the Cloud Foundry environment, the recommendation is to use the [SAP Cloud SDK](https://sap.github.io/cloud-sdk/docs/java/getting-started) instead.
 
 When running your cloud application with *SAP Java Buildpack*, you can use the following Java APIs to optimize the application development:
 

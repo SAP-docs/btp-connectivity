@@ -75,6 +75,23 @@ Custom string used to suffix your resources.
 <tr>
 <td valign="top">
 
+compliance.fipsModeEnabled
+
+</td>
+<td valign="top">
+
+Configures the Connectivity Proxy and its helper components to run in a mode that is compliant with FIPS \(*Federal Information Processing Standard*\). It will use *Bouncy Castle FIPS* as its Java security provider.
+
+</td>
+<td valign="top">
+
+false
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
 config.displayName
 
 </td>
@@ -824,6 +841,40 @@ Label\(s\) which are configured for the `nodeSelector` property for all connecti
 <td valign="top">
 
 None
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+deployment.podDisruptionBudget.minAvailable
+
+</td>
+<td valign="top">
+
+Configuration for the minimum required available Pods during voluntary disruptions in the Connectivity Proxy *Pod Disruption Budget*. Can be specified as percentage \(e.g. "50%"\) or as an absolute number \(e.g. "3"\).
+
+</td>
+<td valign="top">
+
+"50%"
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+deployment.podDisruptionBudget.unhealthyPodEvictionPolicy
+
+</td>
+<td valign="top">
+
+Configuration for eviction policy of unhealthy pods in the Connectivity Proxy *Pod Disruption Budget*. One of "IfHealthyBudget", "AlwaysAllow". For more information, see: [Kubernetes Pod Disruption Budget](https://kubernetes.io/docs/tasks/run-application/configure-pdb/#unhealthy-pod-eviction-policy).
+
+</td>
+<td valign="top">
+
+"IfHealthyBudget"
 
 </td>
 </tr>
