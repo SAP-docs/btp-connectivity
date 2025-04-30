@@ -12,7 +12,7 @@ Use the “Find Destination” API to extend your destination with a destination
 
 Destination fragments let you manage technical connection configurations \(also known as destinations\) in a more flexible and dynamic way compared to the regular usage of destinations. You can use the destination fragment to extend an existing destination with additional properties, and even to override some of the existing destination properties. This feature enables a variety of technical scenarios which solve higher-level business scenario needs.
 
-For more information, see also [Destination Fragments](destination-fragments-b085906.md).
+For more information, see also [Manage Destination Fragments](manage-destination-fragments-b085906.md).
 
 
 

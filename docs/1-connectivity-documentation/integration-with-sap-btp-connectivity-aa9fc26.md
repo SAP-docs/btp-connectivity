@@ -2,7 +2,7 @@
 
 # Integration with SAP BTP Connectivity
 
-Integrate the transparent proxy with other SAP BTP Connectivity services.
+Integrate the Transparent Proxy with other SAP BTP Connectivity services.
 
 
 <table>
@@ -14,7 +14,7 @@ Integrate the transparent proxy with other SAP BTP Connectivity services.
 </td>
 <td valign="top">
 
-Integrate the transparent proxy for Kubernetes with the SAP BTP Destination service.
+Integrate the Transparent Proxy for Kubernetes with the SAP BTP Destination service.
 
 </td>
 </tr>
@@ -26,7 +26,7 @@ Integrate the transparent proxy for Kubernetes with the SAP BTP Destination serv
 </td>
 <td valign="top">
 
-Integrate the transparent proxy with the connectivity proxy for Kubernetes.
+Integrate the Transparent Proxy with the connectivity proxy for Kubernetes.
 
 </td>
 </tr>

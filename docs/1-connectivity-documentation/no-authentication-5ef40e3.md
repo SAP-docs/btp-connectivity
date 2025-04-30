@@ -2,7 +2,7 @@
 
 # No Authentication
 
-The transparent proxy handles HTTP and TCP communication protocols for both Internet and on-premise destinations without authentication.
+The Transparent Proxy handles HTTP and TCP communication protocols for both Internet and on-premise destinations without authentication.
 
 
 
@@ -25,7 +25,7 @@ To integrate this functionality, you must create an SAP BTP destination. This de
 > }
 > ```
 
-To target the destination with the name "example-dest-basic-auth" for handling by the transparent proxy, you should create a [Destination Custom Resource](destination-custom-resource-fc7951e.md) in a namespace of your choice.
+To target the destination with the name "example-dest-basic-auth" for handling by the Transparent Proxy, you should create a [Destination Custom Resource](destination-custom-resource-fc7951e.md) in a namespace of your choice.
 
 **Destination CR for No Authentication Destination**
 
@@ -57,7 +57,7 @@ To target the destination with the name "example-dest-basic-auth" for handling b
 > function callHttpDestinationNoAuth() {
 >   url = '<destination-cr-name>.<destination-cr-namespace>'
 >   headers = {
->             // X-Tenant-Subdomain is required only when transparent proxy is in shared tenant mode
+>             // X-Tenant-Subdomain is required only when Transparent Proxy is in shared tenant mode
 >             'X-Tenant-Subdomain': '<tenant-where-destination-is-located>'
 >         };
 >  
@@ -77,5 +77,5 @@ To target the destination with the name "example-dest-basic-auth" for handling b
 **Related Information**  
 
 
-[Client Authentication Types for HTTP Destinations](client-authentication-types-for-http-destinations-4e13a04.md "Find details about client authentication types for HTTP destinations.")
+[Client Certificate Authentication](client-certificate-authentication-4e13a04.md "Create and configure a Client Certificate destination for an application.")
 

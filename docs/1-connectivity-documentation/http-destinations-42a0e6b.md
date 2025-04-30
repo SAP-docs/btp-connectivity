@@ -72,13 +72,14 @@ If you work in your local development environment behind a proxy server and want
 
 When creating an HTTP destination, you can use different authentication types for access control:
 
+-   [No Authentication](no-authentication-699f0d1.md)
+-   [Basic Authentication](basic-authentication-4af3980.md)
+-   [Client Certificate Authentication](client-certificate-authentication-4e13a04.md)
 -   [Server Certificate Authentication](server-certificate-authentication-e75d7f1.md)
 
 -   [Principal Propagation SSO Authentication for HTTP](principal-propagation-sso-authentication-for-http-73194cc.md)
 
 -   [OAuth SAML Bearer Assertion Authentication](oauth-saml-bearer-assertion-authentication-c69ea6a.md)
-
--   [Client Authentication Types for HTTP Destinations](client-authentication-types-for-http-destinations-4e13a04.md)
 
 -   [OAuth Client Credentials Authentication](oauth-client-credentials-authentication-4e1d742.md)
 
@@ -107,7 +108,7 @@ By default, the Destination service does not use URL-associated queries and head
 For most authentication types however, you can add them as custom parameters to the URL of a destination.
 
 > ### Tip:  
-> You can use tools like the*transparent proxy for Kubernetes* to process those attributes automatically at runtime.
+> You can use tools like the*Transparent Proxy for Kubernetes* to process those attributes automatically at runtime.
 > 
 > For more information, see [Using the Transparent Proxy](using-the-transparent-proxy-c5257cf.md).
 

@@ -2,9 +2,9 @@
 
 # Managed Namespaces Mode
 
-Manage namespaces for the transparent proxy for Kubernetes.
+Manage namespaces for the Transparent Proxy for Kubernetes.
 
-The transparent proxy can operate in either:
+The Transparent Proxy can operate in either:
 
 -   All namespaces in the cluster, or
 -   Only in namespaces labeled in the following way: *transparent-proxy.connectivity.api.sap/namespace:<namespace where Transparent Proxy is installed\>*.

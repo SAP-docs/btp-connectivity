@@ -1,6 +1,6 @@
 <!-- loio552e8fd876de4c59b4c3df306fd27a60 -->
 
-# Notifications and Alerts
+# Destination Service Notifications
 
 Subscribe to the SAP Alert Notification service to receive notifications and alerts for the Destination service on SAP BTP.
 

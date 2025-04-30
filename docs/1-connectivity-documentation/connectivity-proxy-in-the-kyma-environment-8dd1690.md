@@ -2,7 +2,7 @@
 
 # Connectivity Proxy in the Kyma Environment
 
-Find information on installing connectivity proxy in the the Kyma environment, providing easier installation and setup.
+Find information on installing Connectivity Proxy in the the Kyma environment, providing easier installation and setup.
 
 
 
@@ -36,26 +36,26 @@ The *connectivity-proxy* Kyma module installs the needed components to establish
 
 ## Add the Connectivity Proxy module
 
-The connectivity proxy is a standard Kyma module. You can add the module as described in [Add and Delete a Kyma Module](https://help.sap.com/docs/btp/sap-business-technology-platform/enable-and-disable-kyma-module#loio1b548e9ad4744b978b8b595288b0cb5c).
+The Connectivity Proxy is a standard Kyma module. You can add the module as described in [Add and Delete a Kyma Module](https://help.sap.com/docs/btp/sap-business-technology-platform/enable-and-disable-kyma-module#loio1b548e9ad4744b978b8b595288b0cb5c).
 
 > ### Note:  
-> The modules `api-gateway`, `btp-operator` and `istio` are required dependencies. They must be added to make the connectivity proxy work properly.
+> The modules `api-gateway`, `btp-operator` and `istio` are required dependencies. They must be added to make the Connectivity Proxy work properly.
 
 ![](images/CS_Kyma_OP_-_CP_Module_Enable_1_539cf37.png)
 
-The Kubernetes resource that facilitates this installation in the background is a `ConnectivityProxy` resource. This is a custom resource, defined by the module. It holds the configuration for the connectivity proxy components.
+The Kubernetes resource that facilitates this installation in the background is a `ConnectivityProxy` resource. This is a custom resource, defined by the module. It holds the configuration for the Connectivity Proxy components.
 
 For more information, see [Configuration Guide](configuration-guide-eaa8204.md).
 
 > ### Note:  
-> Not all configuration options of the connectivity proxy are supported by the Kyma module.
+> Not all configuration options of the Connectivity Proxy are supported by the Kyma module.
 > 
 > See [Limitations](connectivity-proxy-in-the-kyma-environment-8dd1690.md#loio8dd1690aa475477ab44624626f45524b__limits) below for more details.
 
 ![](images/CS_Kyma_OP_-_CP_Module_Enable_2_711861f.png)
 
 > ### Caution:  
-> **Do not** create additional resources of type `ConnectivityProxy`. Only one connectivity proxy installation per cluster is supported.
+> **Do not** create additional resources of type `ConnectivityProxy`. Only one Connectivity Proxy installation per cluster is supported.
 
 
 
@@ -65,14 +65,14 @@ For more information, see [Configuration Guide](configuration-guide-eaa8204.md).
 
 The module will be added and will result in an installation of the [Connectivity Proxy for Kubernetes](connectivity-proxy-for-kubernetes-e661713.md) and its supporting workloads.
 
-As part of this installation, a `ServiceInstance` and a `ServiceBinding` resource will be created in the cluster. These are *BTP Operator* resources which result in the creation of a *Connectivity* service instance with service plan *connectivity\_proxy*, and in a service binding in your subaccount. This is needed to pair the connectivity proxy with the SAP BTP Connectivity service.
+As part of this installation, a `ServiceInstance` and a `ServiceBinding` resource will be created in the cluster. These are *BTP Operator* resources which result in the creation of a *Connectivity* service instance with service plan *connectivity\_proxy*, and in a service binding in your subaccount. This is needed to pair the Connectivity Proxy with the SAP BTP Connectivity service.
 
 For more information, see [Connectivity Service](connectivity-service-0edfc0b.md).
 
 > ### Caution:  
-> Do not interact with the created service instance and service binding, as they are only meant for usage by the connectivity proxy. Any modification may cause a loss of functionality.
+> Do not interact with the created service instance and service binding, as they are only meant for usage by the Connectivity Proxy. Any modification may cause a loss of functionality.
 
-The installation also exposes the public facing endpoint of the connectivity proxy via the built-in Istio Ingress controller \(TLS certificates are generated automatically during this process\). This endpoint is used by the Cloud Connector to reach the proxy.
+The installation also exposes the public facing endpoint of the Connectivity Proxy via the built-in Istio Ingress controller \(TLS certificates are generated automatically during this process\). This endpoint is used by the Cloud Connector to reach the proxy.
 
 The `Ingress` endpoint is propagated transparently for *cloud-to-on-premise* scenarios.
 
@@ -93,7 +93,7 @@ If no settings are modified, the following specifics and features are available 
 
 **Limitations**
 
-The following features of the connectivity proxy are not available via the *connectivity-proxy* Kyma module:
+The following features of the Connectivity Proxy are not available via the *connectivity-proxy* Kyma module:
 
 -   [High Availability](high-availability-3c7f10d.md)
 -   [Multi-Region Mode](installing-the-connectivity-proxy-in-multi-region-mode-72072ca.md)
@@ -108,20 +108,20 @@ The following features of the connectivity proxy are not available via the *conn
 
 **Integration with the Transparent Proxy**
 
-We recommend that you consume an on-premise system through a combination of SAP BTP Connectivity software components and services. While the connectivity proxy is used to establish the connection to the on-premise system/VPC, the transparent proxy provides an abstraction enabling seamless consumption of the target system. Transparent proxy and connectivity proxy integrate automatically with each other when both are available as modules in a Kyma instance.
+We recommend that you consume an on-premise system through a combination of SAP BTP Connectivity software components and services. While the Connectivity Proxy is used to establish the connection to the on-premise system/VPC, the Transparent Proxy provides an abstraction enabling seamless consumption of the target system. Transparent Proxy and Connectivity Proxy integrate automatically with each other when both are available as modules in a Kyma instance.
 
 For more information, see [Transparent Proxy in the Kyma Environment](transparent-proxy-in-the-kyma-environment-1700cfe.md).
 
 **Standalone Usage of the Connectivity Proxy**
 
-As part of the installation, a special `ConfigMap` will be created in the *kyma-system* namespace, called *connectivity-proxy-info*. It contains the host of the connectivity proxy and all its proxy ports.
+As part of the installation, a special `ConfigMap` will be created in the *kyma-system* namespace, called *connectivity-proxy-info*. It contains the host of the Connectivity Proxy and all its proxy ports.
 
 ![](images/CS_Kyma_OP_-_CP_Consume_259adc4.png)
 
-To use the connectivity proxy, you must set the appropriate host and port as proxy configuration.
+To use the Connectivity Proxy, you must set the appropriate host and port as proxy configuration.
 
 For more information, see [Using the Connectivity Proxy](using-the-connectivity-proxy-f3c1ef4.md).
 
 > ### Caution:  
-> Every workload using the connectivity proxy to call the on-premise system must have the Istio sidecar proxy injection enabled. Otherwise, the connectivity proxy does not work correctly.
+> Every workload using the Connectivity Proxy to call the on-premise system must have the Istio sidecar proxy injection enabled. Otherwise, the Connectivity Proxy does not work correctly.
 

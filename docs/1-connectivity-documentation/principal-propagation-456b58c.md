@@ -2,7 +2,7 @@
 
 # Principal Propagation
 
-Configure *principal propagation* for the transparent proxy for Kubernetes.
+Configure *principal propagation* for the Transparent Proxy for Kubernetes.
 
 Principal propagation, also known as *user propagation*, lets you perform a single sign-on \(SSO\) of the cloud user towards an on-premise system.
 
@@ -12,7 +12,7 @@ Principal propagation, also known as *user propagation*, lets you perform a si
 
 ## Prerequisites
 
-The transparent proxy handles HTTP communication protocol for on-premise destinations which use *principal propagation*.
+The Transparent Proxy handles HTTP communication protocol for on-premise destinations which use *principal propagation*.
 
 To integrate this functionality, you must:
 
@@ -34,7 +34,7 @@ This destination should have `Type` "HTTP" and `Authentication` "PrincipalPropag
 > }
 > ```
 
-To target the destination with the name "example-dest-principal-propagation" for handling by the transparent proxy, you should create a [Destination Custom Resource](destination-custom-resource-fc7951e.md) in a namespace of your choice.
+To target the destination with the name "example-dest-principal-propagation" for handling by the Transparent Proxy, you should create a [Destination Custom Resource](destination-custom-resource-fc7951e.md) in a namespace of your choice.
 
 **Destination CR for a Principal Propagation Destination**
 
@@ -56,7 +56,7 @@ To target the destination with the name "example-dest-principal-propagation" for
 
 ## Consumption
 
-For the consumption of a destination with *principal propagation*, the cloud user identity is passed to the transparent proxy as a token represented by a JSON Web token \(JWT\) via an `Authorization` header of scheme `Bearer`. It is forwarded via the transparent proxy to the [Connectivity Proxy for Kubernetes](connectivity-proxy-for-kubernetes-e661713.md) and then to the [Cloud Connector](cloud-connector-e6c7616.md), which validates and further processes it to establish SSO with the on-premise system.
+For the consumption of a destination with *principal propagation*, the cloud user identity is passed to the Transparent Proxy as a token represented by a JSON Web token \(JWT\) via an `Authorization` header of scheme `Bearer`. It is forwarded via the Transparent Proxy to the [Connectivity Proxy for Kubernetes](connectivity-proxy-for-kubernetes-e661713.md) and then to the [Cloud Connector](cloud-connector-e6c7616.md), which validates and further processes it to establish SSO with the on-premise system.
 
 For more information, see [Authenticating Users against On-Premises Systems](authenticating-users-against-on-premises-systems-b643fbe.md)  and [Set Up Trust](set-up-trust-a4ee70f.md).
 
@@ -73,7 +73,7 @@ For more information, see [Authenticating Users against On-Premises Systems](a
 >  
 >     url = '<destination-cr-name>.<destination-cr-namespace>'
 >     headers = {
->                 // X-Tenant-Subdomain is required only when transparent proxy is in shared tenant mode
+>                 // X-Tenant-Subdomain is required only when Transparent Proxy is in shared tenant mode
 >                 'X-Tenant-Subdomain': '<tenant-where-destination-is-located>',
 >                 'Authorization': 'Bearer ' + assertionToken,
 >     }

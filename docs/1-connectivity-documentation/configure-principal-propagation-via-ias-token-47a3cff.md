@@ -32,7 +32,7 @@ For more information, see [Principal Propagation](principal-propagation-e2cbb48.
 
 ## Solution
 
-The application sends two headers to the Connectivity proxy:
+The application sends two headers to the Connectivity Proxy:
 
 
 <table>

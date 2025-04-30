@@ -37,11 +37,11 @@ You have logged into the cockpit and opened the *Destinations* editor.
 
 6.  Choose the *Authentication* type to be used for the destination and enter the required parameters. For a detailed parameter description, see [Configuring Authentication](http-destinations-42a0e6b.md#loio42a0e6b966924f2e902090bdf435e1b2__config).
 
-7.  Enter the additional property *mail.smtp.host* to specify the address of the target mail server.
+7.  Enter an *additional property* to specify the address of the target mail server.
 
     1.  In the *Additional Properties* panel, choose *New Property*.
 
-    2.  Choose *mail.smtp.host* from the dropdown menu and specify a value for the property.
+    2.  Depending on the protocol you want to use, enter *mail.imap4.host*, *mail.pop3.host*, or *mail.smtp.host* and specify a value for the property.
 
 
 8.  \(Optional\) You can enter more additional properties.
@@ -59,9 +59,5 @@ You have logged into the cockpit and opened the *Destinations* editor.
 **Related Information**  
 
 
-[Edit and Delete Destinations](edit-and-delete-destinations-372dee2.md "How to edit and delete destinations in the Destinations editor (SAP BTP cockpit).")
-
-[Destination Examples](destination-examples-3a2d575.md "Find configuration examples for HTTP and RFC destinations in SAP BTP, using different authentication types.")
-
-[Cloud Connector](cloud-connector-e6c7616.md "Learn more about the Cloud Connector: features, scenarios and setup.")
+[MAIL Destinations](mail-destinations-e3de817.md "Find information about MAIL destinations for Internet or on-premise connections from an SAP BTP subaccount.")
 

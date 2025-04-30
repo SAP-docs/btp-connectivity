@@ -2,14 +2,14 @@
 
 # Verification and Testing
 
-Check the transparent proxy for Kubernetes after installation.
+Check the Transparent Proxy for Kubernetes after installation.
 
- Once you have installed the transparent proxy in your cluster, you can perform the following steps to verify it is running successfully.
+ Once you have installed the Transparent Proxy in your cluster, you can perform the following steps to verify it is running successfully.
 
 > ### Note:  
 > You may have to wait for a few seconds before all the components are started and can be consumed.
 
-To check the status of the transparent proxy's components, execute the following, replacing the namespace placeholder:
+To check the status of the Transparent Proxy's components, execute the following, replacing the namespace placeholder:
 
 ```
 kubectl run perform-hc --image=radial/busyboxplus:curl -it --rm --restart=Never -- curl -w "\n" 'sap-transp-proxy-int-healthcheck.{installation-namespace}/status'
@@ -84,6 +84,6 @@ and observe the result.
 
 If you encounter problems with any of the above steps, see [Troubleshooting](troubleshooting-fce292a.md) and [Recommended Actions](recommended-actions-20b1a62.md) for further investigation.
 
-Now you can proceed with consuming the transparent proxy from your Kubernetes applications.
+Now you can proceed with consuming the Transparent Proxy from your Kubernetes applications.
 
  

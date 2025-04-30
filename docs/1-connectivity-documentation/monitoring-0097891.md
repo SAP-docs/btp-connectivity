@@ -2,7 +2,7 @@
 
 # Monitoring
 
-Check operability, scenarios and metrics of the connectivity proxy for Kubernetes.
+Check operability, scenarios and metrics of the Connectivity Proxy for Kubernetes.
 
 
 
@@ -10,12 +10,12 @@ Check operability, scenarios and metrics of the connectivity proxy for Kubernete
 
 ## Basic Availability Monitoring
 
-The basic availability check is the minimal verification you can do to make sure the connectivity proxy is alive. This check only shows if the process of the connectivity proxy is running and if it is able to handle requests. This check is also what is configured as the *liveness probe* for the Kubernetes deployment resource.
+The basic availability check is the minimal verification you can do to make sure the Connectivity Proxy is alive. This check only shows if the process of the Connectivity Proxy is running and if it is able to handle requests. This check is also what is configured as the *liveness probe* for the Kubernetes deployment resource.
 
-You can perform this check on-demand by invoking a simple HTTP GET request to the healthcheck endpoint of the connectivity proxy. If the response is ***200 OK***, the check was *successful*. Any other response means the check *failed*. There are two ways to perform this:
+You can perform this check on-demand by invoking a simple HTTP GET request to the healthcheck endpoint of the Connectivity Proxy. If the response is ***200 OK***, the check was *successful*. Any other response means the check *failed*. There are two ways to perform this:
 
 -   From **within the cluster**: Call `connectivity-proxy-tunnel:8042/healthcheck` and observe the result
--   From **outside the cluster**: Call `https://healthcheck.<ingress host of the connectivity proxy>/healthcheck` and observe the result. See [External Health Checking](external-health-checking-5c75674.md) for more details.
+-   From **outside the cluster**: Call `https://healthcheck.<ingress host of the Connectivity Proxy>/healthcheck` and observe the result. See [External Health Checking](external-health-checking-5c75674.md) for more details.
 
 
 
@@ -23,11 +23,11 @@ You can perform this check on-demand by invoking a simple HTTP GET request to th
 
 ## Scenario Monitoring
 
-On top of the availability monitoring of the component itself, it is useful to also monitor entire scenarios. This, however, cannot be provided out of the box by the connectivity proxy as it is specific to the way you use the component. Some options you can explore for this are:
+On top of the availability monitoring of the component itself, it is useful to also monitor entire scenarios. This, however, cannot be provided out of the box by the Connectivity Proxy as it is specific to the way you use the component. Some options you can explore for this are:
 
--   Monitor the failure rate of requests to the connectivity proxy.
--   Monitor the amount of error logs in the connectivity proxy.
--   Set up a scheduled execution of a full scenario that performs end-to-end verification, including the operations done via the connectivity proxy.
+-   Monitor the failure rate of requests to the Connectivity Proxy.
+-   Monitor the amount of error logs in the Connectivity Proxy.
+-   Set up a scheduled execution of a full scenario that performs end-to-end verification, including the operations done via the Connectivity Proxy.
 
 
 
@@ -35,7 +35,7 @@ On top of the availability monitoring of the component itself, it is useful to a
 
 ## Metrics
 
-The connectivity proxy supports the collection and exposure of metrics in *Prometheus* format.
+The Connectivity Proxy supports the collection and exposure of metrics in *Prometheus* format.
 
 The metrics are exposed through an HTTP endpoint on the port specified in the configuration \(default: 9494\).
 
@@ -48,13 +48,13 @@ config:
       enabled: true
 ```
 
-To obtain the collected metrics, send an HTTP GET request to the \`/metrics\` endpoint of the connectivity proxy.
+To obtain the collected metrics, send an HTTP GET request to the \`/metrics\` endpoint of the Connectivity Proxy.
 
 ```
 curl http://connectivity-proxy-prometheus-metrics:9494/metrics
 ```
 
-The metrics collected in the connectivity proxy without any additional configuration include:
+The metrics collected in the Connectivity Proxy without any additional configuration include:
 
 -   **connectivity\_tunnel\_opening\_timeout\_count\_total**: This metric tracks the total number of tunnel openings that have timed out.
 
@@ -70,7 +70,7 @@ The metrics collected in the connectivity proxy without any additional configura
     > ```
 
 
--   **connectivity\_business\_data\_tunnels\_count**: This metric tracks the total number of active business data tunnels \(connections between the connectivity proxy and different Cloud Connectors\).
+-   **connectivity\_business\_data\_tunnels\_count**: This metric tracks the total number of active business data tunnels \(connections between the Connectivity Proxy and different Cloud Connectors\).
 
     > ### Sample Code:  
     > ```
@@ -80,7 +80,7 @@ The metrics collected in the connectivity proxy without any additional configura
     > ```
 
 
-The connectivity proxy also supports the collection of JVM-related metrics by setting `config.metrics.prometheus.jvmMetrics.enabled` to true:
+The Connectivity Proxy also supports the collection of JVM-related metrics by setting `config.metrics.prometheus.jvmMetrics.enabled` to true:
 
 ```
 config:
@@ -105,7 +105,7 @@ This will expose the following JVM-related metrics:
 
 The full list of JVM-related and process-related metrics with descriptions can be found in the [Prometheus Java Client documentation](https://prometheus.github.io/client_java/instrumentation/jvm/).
 
-There is also support for collecting metrics from JMX that are exposed by the connectivity proxy.
+There is also support for collecting metrics from JMX that are exposed by the Connectivity Proxy.
 
 To enable this, set `config.metrics.prometheus.jmxMetrics.enabled` to true:
 
@@ -118,7 +118,7 @@ config:
         enabled: true
 ```
 
-The JMX metrics collected by the connectivity proxy include:
+The JMX metrics collected by the Connectivity Proxy include:
 
 -   `connectivity_proxy_open_tunnel_call_health_status` - Health status of the open tunnel call.
 
@@ -132,7 +132,7 @@ The JMX metrics collected by the connectivity proxy include:
 
 
 ```
-# HELP connectivity_proxy_open_tunnel_call_health_status Open tunnel call health status of the connectivity proxy
+# HELP connectivity_proxy_open_tunnel_call_health_status Open tunnel call health status of the Connectivity Proxy
 # TYPE connectivity_proxy_open_tunnel_call_health_status gauge
 connectivity_proxy_open_tunnel_call_health_status 1.0
 ```

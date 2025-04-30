@@ -2,7 +2,7 @@
 
 # Basic Authentication
 
-The transparent proxy handles the HTTP communication protocol for both Internet and on-premise destinations protected with *Basic Authentication*.
+The Transparent Proxy handles the HTTP communication protocol for both Internet and on-premise destinations protected with *Basic Authentication*.
 
 
 
@@ -27,7 +27,7 @@ To integrate this functionality, you must create an SAP BTP destination. This de
 > }
 > ```
 
-To target the destination with the name "example-dest-basic-auth" for handling by the transparent proxy, you should create a [Destination Custom Resource](destination-custom-resource-fc7951e.md) in a namespace of your choice.
+To target the destination with the name "example-dest-basic-auth" for handling by the Transparent Proxy, you should create a [Destination Custom Resource](destination-custom-resource-fc7951e.md) in a namespace of your choice.
 
 **Destination CR for Basic Authentication**
 
@@ -49,7 +49,7 @@ To target the destination with the name "example-dest-basic-auth" for handling b
 
 ## Consumption
 
-For consumption of destination with authentication type BasicAuthentication no additional Authorization headers have to be provided to the transparent proxy as all necessary data for authorization is in the destination.
+For consumption of destination with authentication type BasicAuthentication no additional Authorization headers have to be provided to the Transparent Proxy as all necessary data for authorization is in the destination.
 
 > ### Note:  
 > `<destination-cr-namespace>` can be omitted if the destination custom resource is created in the same namespace as the application workload.
@@ -61,7 +61,7 @@ For consumption of destination with authentication type BasicAuthentication no a
 > function callHttpDestinationBasic() {
 >   url = '<destination-cr-name>.<destination-cr-namespace>'
 >   headers = {
->             // X-Tenant-Subdomain is required only when transparent proxy is in shared tenant mode
+>             // X-Tenant-Subdomain is required only when Transparent Proxy is in shared tenant mode
 >             'X-Tenant-Subdomain': '<tenant-where-destination-is-located>'
 >         };
 >      
@@ -81,5 +81,5 @@ For consumption of destination with authentication type BasicAuthentication no a
 **Related Information**  
 
 
-[Client Authentication Types for HTTP Destinations](client-authentication-types-for-http-destinations-4e13a04.md "Find details about client authentication types for HTTP destinations.")
+[Client Certificate Authentication](client-certificate-authentication-4e13a04.md "Create and configure a Client Certificate destination for an application.")
 

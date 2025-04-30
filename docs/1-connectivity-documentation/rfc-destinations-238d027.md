@@ -48,3 +48,5 @@ jco.destination.peak_limit=10
 
 [Invoking ABAP Function Modules via RFC](invoking-abap-function-modules-via-rfc-fa4adc9.md "Call a remote-enabled function module in an on-premise or cloud ABAP server from your application, using the RFC protocol.")
 
+[Create RFC Destinations](create-rfc-destinations-9b3cc68.md "How to create RFC destinations in the Destinations editor (SAP BTP cockpit).")
+

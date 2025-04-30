@@ -4,14 +4,14 @@
 
 The Destination service lets you declaratively model a technical connection as a destination configuration, and find via its REST APIs the destination configuration that is required to access a remote service or system from your Kubernetes workload.
 
-To integrate the transparent proxy with the Destination Service, you must:
+To integrate the Transparent Proxy with the Destination Service, you must:
 
 1.  Create a Destination service instance or reuse an existing one.
 2.  Create a service key for the service instance.
 3.  Follow the instructions in step [Prepare Destination service instance credentials](destination-service-integration-cd02e5c.md) to pair with the Destination service. This involves referencing a secret that contains the base64-encoded service key for the Destination service.
 4.  Check the [Configuration Guide](configuration-guide-2a22cd7.md) for *config.integration.destinationService.instances*.
 
-The transparent proxy can consume SAP BTP destinations from multiple Destination service instances. They are specified in the transparent proxy configuration.
+The Transparent Proxy can consume SAP BTP destinations from multiple Destination service instances. They are specified in the Transparent Proxy configuration.
 
 **Integration with Multiple Destination Service Instances**
 
@@ -55,9 +55,9 @@ The transparent proxy can consume SAP BTP destinations from multiple Destination
 >     #            secretInternalKey: <key>
 > ```
 
-A specific instance of the Destination service will be selected by the transparent proxy based on the following rules:
+A specific instance of the Destination service will be selected by the Transparent Proxy based on the following rules:
 
-If the \`defaultInstanceName\` is provided in the transparent proxy configuration, the \`destinationServiceInstanceName\` field in the destination custom resource specification becomes optional.
+If the \`defaultInstanceName\` is provided in the Transparent Proxy configuration, the \`destinationServiceInstanceName\` field in the destination custom resource specification becomes optional.
 
 In cases where two different Destination service instance names are specified, the one in the destination custom resource specification will be prioritized.
 
@@ -86,5 +86,5 @@ In cases where two different Destination service instance names are specified, t
 > ```
 
 > ### Note:  
-> For more details about configuring the transparent proxy, check the [Configuration Guide](configuration-guide-2a22cd7.md).
+> For more details about configuring the Transparent Proxy, check the [Configuration Guide](configuration-guide-2a22cd7.md).
 

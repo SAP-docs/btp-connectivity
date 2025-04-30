@@ -2,9 +2,9 @@
 
 # Destination Custom Resource
 
-A destination custom resource represents an SAP BTP destination from the Destination service that can be used by the transparent proxy.
+A destination custom resource represents an SAP BTP destination from the Destination service that can be used by the Transparent Proxy.
 
-For each destination custom resource, the transparent proxy creates two [Kubernetes Services](https://kubernetes.io/docs/concepts/services-networking/service/): one in the transparent proxy's installation namespace and the other in the destination custom resource's namespace. Both services can be used to access the destination.
+For each destination custom resource, the Transparent Proxy creates two [Kubernetes Services](https://kubernetes.io/docs/concepts/services-networking/service/): one in the Transparent Proxy's installation namespace and the other in the destination custom resource's namespace. Both services can be used to access the destination.
 
 > ### Note:  
 > We recommend that you create the destination custom resource in the same namespace as the application workload. By doing so, you can access the destination without specifying the namespace in the URL.
@@ -15,7 +15,7 @@ For each destination custom resource, the transparent proxy creates two [Kuberne
 
 ## Prerequisites
 
-To target the destination with the name “example-dest” for handling by the transparent proxy, you should create the following Kubernetes resource in a namespace of your choice:
+To target the destination with the name “example-dest” for handling by the Transparent Proxy, you should create the following Kubernetes resource in a namespace of your choice:
 
 > ### Sample Code:  
 > ```
@@ -56,9 +56,9 @@ You can reference a fragment as follows:
 
 -   Dynamically passing a fragment as an HTTP header is only compatible with the [Dynamic Lookup of Destinations](destination-gateway-dynamic-lookup-of-destinations-6836e00.md) approach. You can check the examples given there.
 
-The transparent proxy monitors the available *destinations.destination.connectivity.api.sap* Kubernetes resources. Once a new SAP BTP destination is created for which *destinations.destination.connectivity.api.sap* resource exists, the transparent proxy changes its configuration.
+The Transparent Proxy monitors the available *destinations.destination.connectivity.api.sap* Kubernetes resources. Once a new SAP BTP destination is created for which *destinations.destination.connectivity.api.sap* resource exists, the Transparent Proxy changes its configuration.
 
-After the transparent proxy executes successfully all necessary operations, the status of the *destinations.destination.connectivity.api.sap* Kubernetes resource will be updated as follows and the DNS record <destination-cr-name\> will route to the configured URL in the destination:
+After the Transparent Proxy executes successfully all necessary operations, the status of the *destinations.destination.connectivity.api.sap* Kubernetes resource will be updated as follows and the DNS record <destination-cr-name\> will route to the configured URL in the destination:
 
 > ### Sample Code:  
 > ```
@@ -141,5 +141,5 @@ Once done, the application can start consuming the destination from within the K
 **Related Information**  
 
 
-[Restrict Access Using Scoping](restrict-access-using-scoping-bd47cbe.md "Define the access control scope of the destination custom resources for the transparent proxy for Kubernetes.")
+[Restrict Access Using Scoping](restrict-access-using-scoping-bd47cbe.md "Define the access control scope of the destination custom resources for the Transparent Proxy for Kubernetes.")
 

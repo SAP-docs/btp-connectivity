@@ -2,7 +2,7 @@
 
 # Using the Connectivity Proxy
 
-Use the connectivity proxy for Kubernetes with different communication protocols and principal propagation \(SSO\).
+Use the Connectivity Proxy for Kubernetes with different communication protocols and principal propagation \(SSO\).
 
 [Overview](using-the-connectivity-proxy-f3c1ef4.md#loiof3c1ef45db77489c8d039acc9530358f__overview)
 
@@ -20,20 +20,20 @@ Use the connectivity proxy for Kubernetes with different communication protocols
 
 ## Overview
 
-The connectivity proxy offers multiple proxy endpoints which are communication protocol-specific: TCP \(via SOCKS5\), HTTP, RFC \(invoking ABAP functions\) and LDAP. Depending on the operational mode, the usage may involve technical authorization when connecting to the proxy, see [Operational Modes](operational-modes-148bbad.md).
+The Connectivity Proxy offers multiple proxy endpoints which are communication protocol-specific: TCP \(via SOCKS5\), HTTP, RFC \(invoking ABAP functions\) and LDAP. Depending on the operational mode, the usage may involve technical authorization when connecting to the proxy, see [Operational Modes](operational-modes-148bbad.md).
 
 ![](images/CS_Kubernetes_-_Using_the_Connectivity_Proxy_20911fe.png)
 
 Basically, the application needs to connect to the target on-premise system, and select the respective host and port as a protocol-standard proxy \(with optional authorization\) to get the request routed to the target on-premise system via the Cloud Connector.
 
 > ### Note:  
-> -   The tunnel channel \(between Cloud Connector and connectivity proxy\) always uses TLS, that is, it is encrypted.
-> -   The actual connection from the application to the connectivity proxy may be encrypted or not, depending on the exact scenario used.
+> -   The tunnel channel \(between Cloud Connector and Connectivity Proxy\) always uses TLS, that is, it is encrypted.
+> -   The actual connection from the application to the Connectivity Proxy may be encrypted or not, depending on the exact scenario used.
 > 
 >     > ### Note:  
 >     > If a TLS connection is attempted by the application, the SOCKS5 proxy endpoint must be used.
 > 
-> -   The actual connection from the Cloud Connector towards the on-premise system is established and controlled in the Cloud Connector. As a result, TLS can be enabled or disabled, regardless of the connection from the application to the connectivity proxy.
+> -   The actual connection from the Cloud Connector towards the on-premise system is established and controlled in the Cloud Connector. As a result, TLS can be enabled or disabled, regardless of the connection from the application to the Connectivity Proxy.
 
 [Back to Top](using-the-connectivity-proxy-f3c1ef4.md#loiof3c1ef45db77489c8d039acc9530358f__top)
 
@@ -43,7 +43,7 @@ Basically, the application needs to connect to the target on-premise system, and
 
 ## TCP
 
-TCP connectivity is achieved via the [SOCKS5](https://en.wikipedia.org/wiki/SOCKS) proxy protocol. As the authorization is based on OAuth, we provide a custom authorization scheme for SOCKS5 that lets the application pass the required OAuth tokens and establish technical authorization with the connectivity proxy. For more information, see [Using the TCP Protocol for Cloud Applications](using-the-tcp-protocol-for-cloud-applications-cd15837.md).
+TCP connectivity is achieved via the [SOCKS5](https://en.wikipedia.org/wiki/SOCKS) proxy protocol. As the authorization is based on OAuth, we provide a custom authorization scheme for SOCKS5 that lets the application pass the required OAuth tokens and establish technical authorization with the Connectivity Proxy. For more information, see [Using the TCP Protocol for Cloud Applications](using-the-tcp-protocol-for-cloud-applications-cd15837.md).
 
 [Back to Top](using-the-connectivity-proxy-f3c1ef4.md#loiof3c1ef45db77489c8d039acc9530358f__top)
 
@@ -71,18 +71,18 @@ http://my-virtual-host:1234/my-path#my-fragment?my-query=my-value /
 
 *Principal propagation*, also known as *user propagation*, lets you perform single sign-on \(SSO\) authentication of the cloud user towards an on-premise system.
 
-The cloud user identity is passed as a token represented by a JSON Web token \(JWT\). It is forwarded via the connectivity proxy to the Cloud Connector, which validates and further processes it to establish SSO with the on-premise system.
+The cloud user identity is passed as a token represented by a JSON Web token \(JWT\). It is forwarded via the Connectivity Proxy to the Cloud Connector, which validates and further processes it to establish SSO with the on-premise system.
 
 For more information, see [Authenticating Users against On-Premises Systems](authenticating-users-against-on-premises-systems-b643fbe.md) and [Set Up Trust](set-up-trust-a4ee70f.md).
 
-As of connectivity proxy release 2.1.1, support for principal propagation with IAS tokens is added.
+As of Connectivity Proxy release 2.1.1, support for principal propagation with IAS tokens is added.
 
 **Prerequisites**:
 
 -   Cloud Connector 2.13 \(or higher\) must be used.
 -   The Cloud Connector must be connected to a subaccount, that is, configured with the IAS tenant issuing the tokens \(for more information, see [Establish Trust and Federation Between SAP Authorization and Trust Management Service and SAP Cloud Identity Services](https://help.sap.com/viewer/65de2977205c403bbc107264b8eccf4b/Cloud/en-US/161f8f0cfac64c4fa2d973bc5f08a894.html "Use your SAP Cloud Identity Services tenant as an identity provider or a proxy to your own identity provider hosting your business users. This method avoids the upload and download of SAML meta data by using OpenID Connect (OIDC) to establish trust.") :arrow_upper_right:\).
 
-Principal propagation is supported for both HTTP and RFC communication protocols and can be used in all [Operational Modes](operational-modes-148bbad.md) of the connectivity proxy:
+Principal propagation is supported for both HTTP and RFC communication protocols and can be used in all [Operational Modes](operational-modes-148bbad.md) of the Connectivity Proxy:
 
 -   **Single-tenant in trusted environment**
 
@@ -122,13 +122,13 @@ For more information, see also [XSUAA Token Client and Token Flow API](https://g
 
 *Technical user propagation* lets you perform single sign-on \(SSO\) authentication of a cloud technical user towards an on-premise system. It is very similar to *principal propagation*, but instead of forwarding the identity of business users, the identity of technical users is forwarded.
 
-The technical user is represented by a token in form of a JSON web token \(JWT\) that is usually obtained via the `client_credentials` OAuth flow. It is forwarded via the connectivity proxy to the Cloud Connector, which validates and processes it to perform SSO with the on-premise system.
+The technical user is represented by a token in form of a JSON web token \(JWT\) that is usually obtained via the `client_credentials` OAuth flow. It is forwarded via the Connectivity Proxy to the Cloud Connector, which validates and processes it to perform SSO with the on-premise system.
 
-Technical user propagation is supported as of connectivity proxy version 2.6.1. As a prerequisite, Cloud Connector version 2.15 or higher must be used.
+Technical user propagation is supported as of Connectivity Proxy version 2.6.1. As a prerequisite, Cloud Connector version 2.15 or higher must be used.
 
 Technical user propagation is supported for both HTTP and RFC communication protocols and can be used in all [Operational Modes](operational-modes-148bbad.md).
 
-The token representing the technical user must be sent to the connectivity proxy via the `SAP-Connectivity-Technical-Authentication` HTTP request header.
+The token representing the technical user must be sent to the Connectivity Proxy via the `SAP-Connectivity-Technical-Authentication` HTTP request header.
 
 > ### Caution:  
 > In *technical user propagation* scenarios, you must omit the `Authorization` header.

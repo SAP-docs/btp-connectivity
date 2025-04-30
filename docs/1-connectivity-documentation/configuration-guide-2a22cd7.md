@@ -2,10 +2,10 @@
 
 # Configuration Guide
 
-Use the parameters below to configure the transparent proxy for Kubernetes.
+Use the parameters below to configure the Transparent Proxy for Kubernetes.
 
 > ### Caution:  
-> Changing any of the properties below using *helm upgrade* may result in the restart of some or all transparent proxy components.
+> Changing any of the properties below using *helm upgrade* may result in the restart of some or all Transparent Proxy components.
 
 > ### Note:  
 > \[n\] in the table below means that the described property is part of an array.
@@ -53,7 +53,7 @@ Required
 </td>
 <td valign="top">
 
-Name of the secret that allows to specify a list of CA certificates which are to be trusted, in addition to the default ones for the outbound technical communication of the transparent proxy components.
+Name of the secret that allows to specify a list of CA certificates which are to be trusted, in addition to the default ones for the outbound technical communication of the Transparent Proxy components.
 
 </td>
 <td valign="top">
@@ -107,7 +107,7 @@ False
 </td>
 <td valign="top">
 
-Namespace of the existing secret to be used, which holds the CA certificates to the Destination service and XSUAA. Should be specified when the *additionalCAs.secretName* is in a different namespace to the transparent proxy's installation namespace.
+Namespace of the existing secret to be used, which holds the CA certificates to the Destination service and XSUAA. Should be specified when the *additionalCAs.secretName* is in a different namespace to the Transparent Proxy's installation namespace.
 
 </td>
 <td valign="top">
@@ -134,9 +134,9 @@ False
 </td>
 <td valign="top">
 
-Defines the tenant mode in which the transparent proxy is working.
+Defines the tenant mode in which the Transparent Proxy is working.
 
-Default value *"dedicated"* specifies that only destinations defined in the subaccount in a service key can be exposed and accessed via the transparent proxy. The other option *"shared"* specifies that the proxy can work with different tenants subscribed to the provider in the service key. In this mode, on each request the *"X-Tenant-Subdomain"* or *"X-Tenant-Id"* header is required. The tenant mode *"shared"* works only for destinations of type HTTP.
+Default value *"dedicated"* specifies that only destinations defined in the subaccount in a service key can be exposed and accessed via the Transparent Proxy. The other option *"shared"* specifies that the proxy can work with different tenants subscribed to the provider in the service key. In this mode, on each request the *"X-Tenant-Subdomain"* or *"X-Tenant-Id"* header is required. The tenant mode *"shared"* works only for destinations of type HTTP.
 
 </td>
 <td valign="top">
@@ -217,7 +217,7 @@ False
 </td>
 <td valign="top">
 
-The connect timeout must be used when accessing an HTTP system with `ProxyType`=`OnPremise` through the connectivity proxy. \[1, 60\] seconds allowed.
+The connect timeout must be used when accessing an HTTP system with `ProxyType`=`OnPremise` through the Connectivity Proxy. \[1, 60\] seconds allowed.
 
 </td>
 <td valign="top">
@@ -244,7 +244,7 @@ False
 </td>
 <td valign="top">
 
-Kubernetes service name and namespace associated with the connectivity proxy workload.
+Kubernetes service name and namespace associated with the Connectivity Proxy workload.
 
 </td>
 <td valign="top">
@@ -271,7 +271,7 @@ False
 </td>
 <td valign="top">
 
-Port on which the HTTP interface of the connectivity proxy is started.
+Port on which the HTTP interface of the Connectivity Proxy is started.
 
 </td>
 <td valign="top">
@@ -298,7 +298,7 @@ False
 </td>
 <td valign="top">
 
-Port on which the TCP interface of the connectivity proxy is started.
+Port on which the TCP interface of the Connectivity Proxy is started.
 
 </td>
 <td valign="top">
@@ -327,7 +327,7 @@ False
 
 Integration with Istio service mesh.
 
-The only acceptable value is 'enabled'. If set, the transparent proxy components will be integrated in the mesh, otherwise they will be exclusively removed from the mesh.
+The only acceptable value is 'enabled'. If set, the Transparent Proxy components will be integrated in the mesh, otherwise they will be exclusively removed from the mesh.
 
 If the configuration is changed, it triggers a restart.
 
@@ -356,7 +356,7 @@ False
 </td>
 <td valign="top">
 
-The initial log level across all transparent proxy components. The log levels can be changed dynamically, see [Troubleshooting](https://wiki.one.int.sap/wiki/display/NGP/TP+Troubleshooting).
+The initial log level across all Transparent Proxy components. The log levels can be changed dynamically, see [Troubleshooting](https://wiki.one.int.sap/wiki/display/NGP/TP+Troubleshooting).
 
 </td>
 <td valign="top">
@@ -383,9 +383,9 @@ False
 </td>
 <td valign="top">
 
-The mode in which transparent proxy operates with the destinations in the cluster. Possible values are "all" or "labelSelector".
+The mode in which Transparent Proxy operates with the destinations in the cluster. Possible values are "all" or "labelSelector".
 
-If "labelSelector" is set, the transparent proxy operates only in namespaces labeled with *transparent-proxy.connectivity.api.sap/namespace:<namespace where transparent proxy is installed in\>*.
+If "labelSelector" is set, the Transparent Proxy operates only in namespaces labeled with *transparent-proxy.connectivity.api.sap/namespace:<namespace where Transparent Proxy is installed in\>*.
 
 </td>
 <td valign="top">
@@ -412,7 +412,7 @@ False
 </td>
 <td valign="top">
 
-Enables the collection and exposure of metrics in the Prometheus format through an HTTP endpoint. When enabled it creates Kubernetes services for each transpararent proxy component which can be configured for scrape in various tools understanding the OpenMetrics format.
+Enables the collection and exposure of metrics in the Prometheus format through an HTTP endpoint. When enabled it creates Kubernetes services for each Transparent Proxy component which can be configured for scrape in various tools understanding the OpenMetrics format.
 
 </td>
 <td valign="top">
@@ -500,7 +500,7 @@ True
 </td>
 <td valign="top">
 
-Enables/disables mTLS communication between the transparent proxy components.
+Enables/disables mTLS communication between the Transparent Proxy components.
 
 It should be disabled only in test environments or if you implement your own mTLS solution like Istio for example.
 
@@ -846,7 +846,7 @@ False
 The key in the Destination service secret resource, which holds the base64-encoded value of the destination service key.
 
 > ### Note:  
-> Make sure you provide the right key for an existing secret. Required when the transparent proxy should create a secret and not required when describing an existing secret.
+> Make sure you provide the right key for an existing secret. Required when the Transparent Proxy should create a secret and not required when describing an existing secret.
 
 
 
@@ -875,7 +875,7 @@ False
 </td>
 <td valign="top">
 
-The base64-encoded value of the service key, obtained from the Destination service instance. Required when transparent proxy should create secret and not required when describing an existing secret.
+The base64-encoded value of the service key, obtained from the Destination service instance. Required when Transparent Proxy should create secret and not required when describing an existing secret.
 
 > ### Note:  
 > The base64 encoded value of the service key can only be specified during [Installation with Helm](installation-with-helm-d201be0.md).
@@ -907,7 +907,7 @@ False
 </td>
 <td valign="top">
 
-The namespace of the existing secret to be used, which holds the credentials for the Destination service. This field should not be present if there is no existing secret and the transparent proxy would create one based on the "secretName", "secretData", "secretKey" fields.
+The namespace of the existing secret to be used, which holds the credentials for the Destination service. This field should not be present if there is no existing secret and the Transparent Proxy would create one based on the "secretName", "secretData", "secretKey" fields.
 
 </td>
 <td valign="top">
@@ -988,7 +988,7 @@ False
 </td>
 <td valign="top">
 
-The locally configured region id from the connectivity proxy multi region configurations, that will be used by default when consuming destinations from the given destination service instance. Will be overridden for HTTP scenarios if header`SAP-Connectivity-Region-Configuration-Id` is passed.
+The locally configured region id from the Connectivity Proxy multi region configurations, that will be used by default when consuming destinations from the given destination service instance. Will be overridden for HTTP scenarios if header`SAP-Connectivity-Region-Configuration-Id` is passed.
 
 </td>
 <td valign="top">
@@ -1015,7 +1015,7 @@ False
 </td>
 <td valign="top">
 
-Name of the registry from which the transparent proxy will be downloaded.
+Name of the registry from which the Transparent Proxy will be downloaded.
 
 </td>
 <td valign="top">
@@ -1125,12 +1125,12 @@ False
 </td>
 <td valign="top">
 
-Version of the transparent proxy images to be deployed.
+Version of the Transparent Proxy images to be deployed.
 
 </td>
 <td valign="top">
 
-<transparent proxy version\>
+<Transparent Proxy version\>
 
 </td>
 <td valign="top">
@@ -1152,7 +1152,7 @@ False
 </td>
 <td valign="top">
 
-Amount of transparent HTTP proxy pods to start.
+Amount of Transparent HTTP Proxy pods to start.
 
 </td>
 <td valign="top">
@@ -1179,7 +1179,7 @@ False
 </td>
 <td valign="top">
 
-Amount of transparent TCP proxy pods to start.
+Amount of Transparent TCP Proxy pods to start.
 
 </td>
 <td valign="top">
@@ -1454,7 +1454,7 @@ False
 </td>
 <td valign="top">
 
-Upper limit for the number of HTTP transparent proxy replicas to which the autoscaler can scale up. It should be higher than `deployment.replicas.http`.
+Upper limit for the number of HTTP Transparent Proxy replicas to which the autoscaler can scale up. It should be higher than `deployment.replicas.http`.
 
 </td>
 <td valign="top">
@@ -1481,7 +1481,7 @@ False
 </td>
 <td valign="top">
 
-Target value of the average CPU metric across all transparent HTTP proxy pods, represented as a percentage of the requested value of the CPU for the pods.
+Target value of the average CPU metric across all Transparent HTTP Proxy pods, represented as a percentage of the requested value of the CPU for the pods.
 
 </td>
 <td valign="top">
@@ -1508,7 +1508,7 @@ False
 </td>
 <td valign="top">
 
-Target value of the average memory metric across all transparent HTTP proxy pods, represented as a percentage of the requested value of the memory for the pods.
+Target value of the average memory metric across all Transparent HTTP Proxy pods, represented as a percentage of the requested value of the memory for the pods.
 
 </td>
 <td valign="top">
@@ -1535,7 +1535,7 @@ False
 </td>
 <td valign="top">
 
-Enables or disables the *Vertical Pod Autoscaler* mechanism for http proxy pods.
+Enables or disables the *Vertical Pod Autoscaler* mechanism for HTTP proxy pods.
 
 To take effect, the vertical pod autoscaling mechanism for the cluster should be enabled.
 
@@ -1760,7 +1760,7 @@ False
 </td>
 <td valign="top">
 
-Upper limit for the number of TCP transparent proxy replicas to which the autoscaler can scale up. It should be higher than `deployment.replicas.tcp`.
+Upper limit for the number of TCP Transparent Proxy replicas to which the autoscaler can scale up. It should be higher than `deployment.replicas.tcp`.
 
 </td>
 <td valign="top">
@@ -1787,7 +1787,7 @@ False
 </td>
 <td valign="top">
 
-Target value of the average CPU metric across all transparent TCP proxy pods for a given destination instance, represented as a percentage of the requested value of the CPU for the pods.
+Target value of the average CPU metric across all Transparent TCP Proxy pods for a given destination instance, represented as a percentage of the requested value of the CPU for the pods.
 
 </td>
 <td valign="top">
@@ -1814,7 +1814,7 @@ False
 </td>
 <td valign="top">
 
-Target value of the average memory metric across transparent TCP proxy pods for a given destination instance, represented as a percentage of the requested value of the memory for the pods.
+Target value of the average memory metric across Transparent TCP Proxy pods for a given destination instance, represented as a percentage of the requested value of the memory for the pods.
 
 </td>
 <td valign="top">
@@ -2022,7 +2022,7 @@ False
 </td>
 <td valign="top">
 
-Specifies the pod priority of the transparent proxy components. By default in Kyma it is 2000000 \(same as most other Kyma modules\) and in non-Kyma it is 0. For more details about pod priorirty see [Pod Priority and Preemption](https://kubernetes.io/docs/concepts/scheduling-eviction/pod-priority-preemption/).
+Specifies the pod priority of the Transparent Proxy components. By default in Kyma it is 2000000 \(same as most other Kyma modules\) and in non-Kyma it is 0. For more details about pod priorirty see [Pod Priority and Preemption](https://kubernetes.io/docs/concepts/scheduling-eviction/pod-priority-preemption/).
 
 </td>
 <td valign="top">

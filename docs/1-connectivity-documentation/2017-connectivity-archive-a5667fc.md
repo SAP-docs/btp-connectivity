@@ -268,7 +268,7 @@ The release of SAP Cloud Platform Cloud Connector 2.9.1 includes the following i
 
 **Enhancement**
 
-Update of JCo runtime for SAP Cloud Platform. See [Connectivity](connectivity-e54cc8f.md).
+Update of JCo runtime for SAP Cloud Platform. See [What is SAP BTP Connectivity?](what-is-sap-btp-connectivity-e54cc8f.md).
 
 </td>
 </tr>

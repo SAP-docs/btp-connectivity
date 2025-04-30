@@ -2,7 +2,7 @@
 
 # Error Response Headers
 
-When an error occurs, the transparent proxy returns a response containing one or more of the following error headers:
+When an error occurs, the Transparent Proxy returns a response containing one or more of the following error headers:
 
 -   **x-error-message**
 
@@ -21,12 +21,12 @@ When an error occurs, the transparent proxy returns a response containing one or
 
 -   **x-internal-error-code**
 
-    It represents a status code generated from an internal call, such as to the Destination Service, XSUAA, or connectivity proxy.
+    It represents a status code generated from an internal call, such as to the Destination Service, XSUAA, or Connectivity Proxy.
 
 
 -   **x-request-id**
 
-    The x-request-id header is used by transparent proxy to uniquely identify a request.
+    The x-request-id header is used by Transparent Proxy to uniquely identify a request.
 
 
 -   **x-proxy-server**
@@ -694,7 +694,7 @@ Check Auth Configuration fields or your request headers in the referenced destin
 </td>
 <td valign="top">
 
-On-Premise technical connectivity is not configured. There is no value provided for connectivity proxy service name.
+On-Premise technical connectivity is not configured. There is no value provided for Connectivity Proxy service name.
 
 </td>
 <td valign="top">
@@ -1006,7 +1006,7 @@ Transparent Proxy
 </td>
 <td valign="top">
 
-The region id <regionId\> passed as SAP-Connectivity-Region-Configuration-Id header or statically configured for the given Destination Service instance in the transparent proxy configurations is not found in the connectivity proxy multi region configurations. Make sure that the used region id is existing in the connectivity proxy multi region configurations.
+The region id <regionId\> passed as SAP-Connectivity-Region-Configuration-Id header or statically configured for the given Destination Service instance in the Transparent Proxy configurations is not found in the Connectivity Proxy multi region configurations. Make sure that the used region id is existing in the Connectivity Proxy multi region configurations.
 
 </td>
 </tr>
@@ -1033,7 +1033,7 @@ Transparent Proxy
 </td>
 <td valign="top">
 
-You should either pass SAP-Connectivity-Region-Configuration-Id header or statically configure the region for the given Destination Service instance in the transparent proxy configurations.
+You should either pass SAP-Connectivity-Region-Configuration-Id header or statically configure the region for the given Destination Service instance in the Transparent Proxy configurations.
 
 </td>
 </tr>
@@ -1060,7 +1060,7 @@ Transparent Proxy
 </td>
 <td valign="top">
 
-The connectivity proxy multi region config map does not exist.
+The Connectivity Proxy multi region config map does not exist.
 
 </td>
 </tr>
@@ -1087,7 +1087,7 @@ Transparent Proxy
 </td>
 <td valign="top">
 
-The secret referenced by the connectivity proxy region configuration named <regionName\> does not exist or is invalid.
+The secret referenced by the Connectivity Proxy region configuration named <regionName\> does not exist or is invalid.
 
 </td>
 </tr>

@@ -2,9 +2,9 @@
 
 # Basic CPU and Memory Monitoring
 
-Perform CPU and memory monitoring for the transparent proxy for Kubernetes.
+Perform CPU and memory monitoring for the Transparent Proxy for Kubernetes.
 
-You can monitor the CPU and memory of the transparent proxy pods in the following way:
+You can monitor the CPU and memory of the Transparent Proxy pods in the following way:
 
 ```
 kubectl top pods -l 'transparent-proxy.connectivity.api.sap/component in (http-proxy,tcp-proxy,manager)' -n <installation-namespace>

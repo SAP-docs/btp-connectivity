@@ -2,19 +2,19 @@
 
 # Mutual TLS
 
-Use Transport Layer Security \(TLS\) for the connectivity proxy for Kubernetes.
+Use Transport Layer Security \(TLS\) for the Connectivity Proxy for Kubernetes.
 
 [TLS](https://en.wikipedia.org/wiki/Transport_Layer_Security) encrypts the connection between client and server, following the TLS specification. When using mutual TLS, both the TLS client and the TLS server authenticate each other through X.509 certificates.
 
 In an on-premise network, the TLS client is represented by the Cloud Connector. On the cloud side, the direct TLS server may be:
 
--   The Kubernetes Ingress: In this case, the Ingress terminates the TLS connection and establishes a new TLS connection to the connectivity proxy.
--   The connectivity proxy: In this case, the Ingress does not terminate the TLS, but transparently forwards the TLS traffic to the connectivity proxy.
+-   The Kubernetes Ingress: In this case, the Ingress terminates the TLS connection and establishes a new TLS connection to the Connectivity Proxy.
+-   The Connectivity Proxy: In this case, the Ingress does not terminate the TLS, but transparently forwards the TLS traffic to the Connectivity Proxy.
 
-Connectivity proxy deployment provides two options to configure end-to-end mutual TLS, that is, the TLS communication between Cloud Connector and connectivity proxy:
+Connectivity proxy deployment provides two options to configure end-to-end mutual TLS, that is, the TLS communication between Cloud Connector and Connectivity Proxy:
 
--   [*With* TLS termination in the Ingress](mutual-tls-7ce7883.md#loio7ce7883d1a054634ba18ea5004f253b0__with): TLS configuration has to be made on both the Ingress controller \(TLS client\) and connectivity proxy \(TLS server\).
--   [*Without* TLS termination in the Ingress](mutual-tls-7ce7883.md#loio7ce7883d1a054634ba18ea5004f253b0__without): TLS configuration has to be made only on the connectivity proxy side \(TLS server\).
+-   [*With* TLS termination in the Ingress](mutual-tls-7ce7883.md#loio7ce7883d1a054634ba18ea5004f253b0__with): TLS configuration has to be made on both the Ingress controller \(TLS client\) and Connectivity Proxy \(TLS server\).
+-   [*Without* TLS termination in the Ingress](mutual-tls-7ce7883.md#loio7ce7883d1a054634ba18ea5004f253b0__without): TLS configuration has to be made only on the Connectivity Proxy side \(TLS server\).
 
 
 
@@ -24,7 +24,7 @@ Connectivity proxy deployment provides two options to configure end-to-end mutua
 
 Perform the following steps:
 
-1.  Enable the TLS communication on the connectivity proxy \(TLS server\) side, adding the following configuration in the `values.yaml` file:
+1.  Enable the TLS communication on the Connectivity Proxy \(TLS server\) side, adding the following configuration in the `values.yaml` file:
 
     ```
     config:
@@ -33,7 +33,7 @@ Perform the following steps:
           enableTls: true
     ```
 
-2.  Add the required TLS configuration for the connectivity proxy \(TLS server\). There are two options to do this:
+2.  Add the required TLS configuration for the Connectivity Proxy \(TLS server\). There are two options to do this:
     -   If you already have an appropriate secret for this purpose in the cluster, add the following configuration in the `values.yaml` file:
 
         ```
@@ -98,7 +98,7 @@ Perform the following steps:
                 caCertificate: <base 64-encoded full Certificate Authority chain in PEM format>
         ```
 
-    -   If you didn't add any TLS configuration for the Ingress, the TLS configuration of the connectivity proxy is reused for the Ingress, that is, the connectivity proxy and the Ingress will use the same TLS configuration to communicate to each other.
+    -   If you didn't add any TLS configuration for the Ingress, the TLS configuration of the Connectivity Proxy is reused for the Ingress, that is, the Connectivity Proxy and the Ingress will use the same TLS configuration to communicate to each other.
 
         > ### Note:  
         > In this case, the specified certificate must be issued by the specified certificate authority.
@@ -121,7 +121,7 @@ Perform the following steps:
 
 Perform the following steps:
 
-1.  Enable the TLS communication on the connectivity proxy \(TLS server\) side, adding the following configuration in the `values.yaml` file:
+1.  Enable the TLS communication on the Connectivity Proxy \(TLS server\) side, adding the following configuration in the `values.yaml` file:
 
     ```
     config:
@@ -130,7 +130,7 @@ Perform the following steps:
           enableTls: true
     ```
 
-2.  Add the required TLS configuration for the connectivity proxy \(TLS server\). There are two options to do this:
+2.  Add the required TLS configuration for the Connectivity Proxy \(TLS server\). There are two options to do this:
     -   If you already have an appropriate secret for this purpose in the cluster, add the following configuration in the `values.yaml` file:
 
         ```

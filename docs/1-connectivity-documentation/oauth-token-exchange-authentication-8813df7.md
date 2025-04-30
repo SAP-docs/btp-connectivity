@@ -2,7 +2,7 @@
 
 # OAuth Token Exchange Authentication
 
-The transparent proxy handles the HTTP communication protocol for both Internet and on-premise destinations protected with the *OAuth Token Exchange* flow.
+The Transparent Proxy handles the HTTP communication protocol for both Internet and on-premise destinations protected with the *OAuth Token Exchange* flow.
 
 
 
@@ -32,7 +32,7 @@ To integrate this functionality, you must create an SAP BTP destination. This de
 > }
 > ```
 
-To target the destination with the name "example-dest-oauth-2-token-exchange" for handling by the transparent proxy, you should create a [Destination Custom Resource](destination-custom-resource-fc7951e.md) in a namespace of your choice.
+To target the destination with the name "example-dest-oauth-2-token-exchange" for handling by the Transparent Proxy, you should create a [Destination Custom Resource](destination-custom-resource-fc7951e.md) in a namespace of your choice.
 
 **Destination CR for an OAuth 2 Token Exchange Destination**
 
@@ -54,7 +54,7 @@ To target the destination with the name "example-dest-oauth-2-token-exchange" fo
 
 ## Consumption
 
-For authentication type `OAuth2TokenExchange`, the cloud user identity has to be passed to the transparent proxy as a token represented by a JSON Web token \(JWT\) via an `Authorization` header of scheme `Bearer`.
+For authentication type `OAuth2TokenExchange`, the cloud user identity has to be passed to the Transparent Proxy as a token represented by a JSON Web token \(JWT\) via an `Authorization` header of scheme `Bearer`.
 
 > ### Note:  
 > `<destination-cr-namespace>` can be omitted if the destination custom resource is created in the same namespace as the application workload.
@@ -67,7 +67,7 @@ For authentication type `OAuth2TokenExchange`, the cloud user identity has to be
 >     accessToken = getPasswordAccessToken()
 >     url = '<destination-cr-name>.<destination-cr-namespace>'
 >     headers: {
->             // X-Tenant-Subdomain is required only when transparent proxy is in shared tenant mode
+>             // X-Tenant-Subdomain is required only when Transparent Proxy is in shared tenant mode
 >             'X-Tenant-Subdomain': '<tenant-where-destination-is-located>',
 >             'Authorization': 'Bearer ' + accessToken,
 >             'X-Subject-Token-Type': 'urn:ietf:params:oauth:token-type:jwt',

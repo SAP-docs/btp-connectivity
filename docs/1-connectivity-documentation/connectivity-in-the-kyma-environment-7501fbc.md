@@ -4,10 +4,10 @@
 
 Find an overview of Connectivity components you can use for different purposes in the Kyma environment.
 
-Connectivity features are available for native consumption by workloads within the Kyma environment. Destinations and related resources are managed centrally and technical connectivity is facilitated with the help of transparent proxy and connectivity proxy which are both offered as Kyma modules. This approach simplifies lifecycle management operations based on the *Kubernetes Operator* pattern.
+Connectivity features are available for native consumption by workloads within the Kyma environment. Destinations and related resources are managed centrally and technical connectivity is facilitated with the help of Transparent Proxy and Connectivity Proxy which are both offered as Kyma modules. This approach simplifies lifecycle management operations based on the *Kubernetes Operator* pattern.
 
 > ### Note:  
-> The feature set of transparent proxy and connectivity proxy provided as Kyma modules may differ from their general offering as Kuberenetes-based deployments, which are fully operated by you.
+> The feature set of Transparent Proxy and Connectivity Proxy provided as Kyma modules may differ from their general offering as Kuberenetes-based deployments, which are fully operated by you.
 
 
 
@@ -23,7 +23,7 @@ Use the Destination service to centrally manage destinations and related resourc
 
 ## Transparent Proxy
 
-Use the transparent proxy to achieve unified, virtually transparent technical connectivity to any remote target - application, service or system, hosted in the cloud, on-premise or in a VPC \(virtual private cloud\) on hyperscalers.
+Use the Transparent Proxy to achieve unified, virtually transparent technical connectivity to any remote target - application, service or system, hosted in the cloud, on-premise or in a VPC \(virtual private cloud\) on hyperscalers.
 
 
 
@@ -31,7 +31,7 @@ Use the transparent proxy to achieve unified, virtually transparent technical co
 
 ## Connectivity Proxy
 
-Use the connectivity proxy to enable secure technical connectivity from cloud workloads to systems hosted in the customer premise / VPC, securely exposed via the Cloud Connector.
+Use the Connectivity Proxy to enable secure technical connectivity from cloud workloads to systems hosted in the customer premise / VPC, securely exposed via the Cloud Connector.
 
 
 

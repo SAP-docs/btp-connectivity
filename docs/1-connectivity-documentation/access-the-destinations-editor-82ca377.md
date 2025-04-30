@@ -21,7 +21,7 @@ On service instance level, you can reuse this destination for a specific space a
 ## Prerequisites
 
 -   You are logged into the SAP BTP cockpit.
--   You have the required authorizations.See [User Roles](what-is-sap-btp-connectivity-daca64d.md#loiodaca64dacc6148fcb5c70ed86082ef91__roles).
+-   You have the required authorizations.See [User Roles](getting-started-daca64d.md#loiodaca64dacc6148fcb5c70ed86082ef91__roles).
 
 
 
@@ -41,15 +41,9 @@ On service instance level, you can reuse this destination for a specific space a
 
 1.  In the cockpit, choose your *Global Account* from the *Region Overview* and select a *Subaccount*.
 2.  From the *Spaces* section, select a space name.
-3.  From the left-side menu, choose *Services* \> *Service Instances*.
+3.  From the left-side menu, choose *Services* \> *Instances and Subscriptions*.
 4.  Choose the *Actions* icon for a Destination service instance and select *View Dashboard*.
-
-    ![](images/CS_AccessDestinations_-_ServiceInstance_Access_9035309.png)
-
 5.  On the *Destinations* screen, you can create new destinations or edit existing ones.
-
-    ![](images/CS_AccessDestinations_-_ServiceInstance_Destinations_Edit_70fecbc.png)
-
 
 See also section *Create and Bind a Service Instance from the Cockpit* in [Create and Bind a Destination Service Instance](create-and-bind-a-destination-service-instance-9fdad3c.md).
 
@@ -66,7 +60,7 @@ See also section *Create and Bind a Service Instance from the Cockpit* in [Creat
 
 [Edit and Delete Destinations](edit-and-delete-destinations-372dee2.md "How to edit and delete destinations in the Destinations editor (SAP BTP cockpit).")
 
-[Use Destination Certificates](use-destination-certificates-df1bb55.md "Maintain certificates (X.509 client certificates, trusted certificates, CA certificates, trust store and key store certificates) in the Destination Certificates UI or the Destinations editor (SAP BTP cockpit).")
+[Manage Destination Certificates](manage-destination-certificates-df1bb55.md "Maintain certificates (X.509 client certificates, trusted certificates, CA certificates, trust store and key store certificates) in the Destination Certificates UI or the Destinations editor (SAP BTP cockpit).")
 
 [Import Destinations](import-destinations-91ee9db.md "How to import destinations in the Destinations editor (SAP BTP cockpit).")
 

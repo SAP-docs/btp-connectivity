@@ -19,7 +19,7 @@ You can use a destination to:
 ## Prerequisites
 
 1.  You are logged into the SAP BTP cockpit.
-2.  You have the required authorizations. See [User Roles](what-is-sap-btp-connectivity-daca64d.md#loiodaca64dacc6148fcb5c70ed86082ef91__roles).
+2.  You have the required authorizations. See [User Roles](getting-started-daca64d.md#loiodaca64dacc6148fcb5c70ed86082ef91__roles).
 3.  Make sure the following is fulfilled:
 
     -   Service instance level – you must have created a Destination service instance, see [Create and Bind a Destination Service Instance](create-and-bind-a-destination-service-instance-9fdad3c.md).
@@ -53,7 +53,7 @@ You can use a destination to:
 -   [Check the Availability of a Destination](check-the-availability-of-a-destination-71ea3cc.md)
 -   [Clone Destinations](clone-destinations-b80786e.md)
 -   [Edit and Delete Destinations](edit-and-delete-destinations-372dee2.md)
--   [Use Destination Certificates](use-destination-certificates-df1bb55.md)
+-   [Manage Destination Certificates](manage-destination-certificates-df1bb55.md)
 -   [Import Destinations](import-destinations-91ee9db.md)
 -   [Export Destinations](export-destinations-707b49e.md)
 

@@ -2,7 +2,7 @@
 
 # Troubleshooting
 
-Find procedures to troubleshoot issues with the connectivity proxy for Kubernetes.
+Find procedures to troubleshoot issues with the Connectivity Proxy for Kubernetes.
 
 [Get Logs of the Connectivity Proxy](troubleshooting-e7a04d9.md#loioe7a04d9b30144f40ab0ca3b275ced93f__get)
 
@@ -20,7 +20,7 @@ Find procedures to troubleshoot issues with the connectivity proxy for Kubernete
 
 ## Get Logs of the Connectivity Proxy
 
-As the connectivity proxy workload is represented as a [standard Kubernetes StatefulSet](https://kubernetes.io/docs/concepts/workloads/controllers/statefulset/), fetching the logs is done in the standard Kubernetes way. Example via `kubectl`:
+As the Connectivity Proxy workload is represented as a [standard Kubernetes StatefulSet](https://kubernetes.io/docs/concepts/workloads/controllers/statefulset/), fetching the logs is done in the standard Kubernetes way. Example via `kubectl`:
 
 ```
 kubectl logs statefulset/connectivity-proxy
@@ -37,9 +37,9 @@ kubectl logs statefulset/connectivity-proxy
 When the default logging level is not sufficient for debugging the issue you are facing, you can change the log level to get more insight about the problem.
 
 > ### Note:  
-> Changing a log level to something more verbose will have a negative impact on the performance of the connectivity proxy. Thus, we recommend that you do not keep such a log level for a long period of time.
+> Changing a log level to something more verbose will have a negative impact on the performance of the Connectivity Proxy. Thus, we recommend that you do not keep such a log level for a long period of time.
 
-Changing a log level is done without any downtime and requires no restarts. All you need to do is invoke a simple command on a pod of the connectivity proxy. Here are some examples:
+Changing a log level is done without any downtime and requires no restarts. All you need to do is invoke a simple command on a pod of the Connectivity Proxy. Here are some examples:
 
 **Put all loggers on DEBUG \(full command\)**
 
@@ -180,7 +180,7 @@ You use the HTTP proxy \(port 20003\) and get a 503 response stating that there 
 <tr>
 <td valign="top">
 
-Out of nowhere, the connectivity proxy stops working / monitors indicate a failure \(considered an outage if it happens in production\).
+Out of nowhere, the Connectivity Proxy stops working / monitors indicate a failure \(considered an outage if it happens in production\).
 
 </td>
 <td valign="top">
@@ -192,15 +192,15 @@ See [Recommended Actions](recommended-actions-aec9009.md).
 <tr>
 <td valign="top">
 
-An SSL error is shown in the Cloud Connector when trying to send a request through the connectivity proxy.
+An SSL error is shown in the Cloud Connector when trying to send a request through the Connectivity Proxy.
 
 </td>
 <td valign="top">
 
-Assuming the SSL error occurs during the call from the Cloud Connector to the public endpoint of the connectivity proxy, there are two options:
+Assuming the SSL error occurs during the call from the Cloud Connector to the public endpoint of the Connectivity Proxy, there are two options:
 
 -   Error is due to a connection termination during the SSL handshake. In this case, check you intermediate components \(proxies, firewalls, etc.\).
--   The JVM on which the Cloud Connector is running does not trust the TLS certificate of the public endpoint of the connectivity proxy. In this case, import the certificate \(or its CA\) into the trust store of the JVM.
+-   The JVM on which the Cloud Connector is running does not trust the TLS certificate of the public endpoint of the Connectivity Proxy. In this case, import the certificate \(or its CA\) into the trust store of the JVM.
 
 
 
@@ -213,5 +213,5 @@ Assuming the SSL error occurs during the call from the Cloud Connector to the pu
 **Related Information**  
 
 
-[Recommended Actions](recommended-actions-aec9009.md "Find procedures to resolve an outage of the connectivity proxy for Kubernetes functionality.")
+[Recommended Actions](recommended-actions-aec9009.md "Find procedures to resolve an outage of the Connectivity Proxy for Kubernetes functionality.")
 

@@ -4,7 +4,7 @@
 
 Using multitenancy for applications that require a connection to a remote service or on-premise application.
 
-This section describes the Connectivity-specific usage of multitenancy in SAP BTP, multi-cloud foundation.
+This section describes the Connectivity-specific usage of multitenancy in SAP BTP, Multi-Cloud Foundation.
 
 > ### Note:  
 > Multitenancy connectivity scenarios are fully applicable also for *cloud-to-on-premise* connectivity. The on-premise use cases described in this guide include connections to virtual private cloud \(VPC\) environments.
@@ -16,10 +16,6 @@ This section describes the Connectivity-specific usage of multitenancy in SAP BT
 ## Endpoint Configuration
 
 Applications that require a connection to a remote service can use the Destination service to configure HTTP or RFC endpoints. Endpoints on the cloud side \(SAP BTP\) are configured as destinations. On-premise destinations correspond to the backend systems exposed in the Cloud Connector.
-
-In a provider-managed application, such an endpoint can either be once defined by the application provider \([Provider-Specific Destination](multitenancy-in-sap-btp-connectivity-9c0bdd0.md#loio9c0bdd0efc8640739c9d2fa5cfe56cbd__provider)\), or by each application subscriber \([Subscriber-Specific Destination](multitenancy-in-sap-btp-connectivity-9c0bdd0.md#loio9c0bdd0efc8640739c9d2fa5cfe56cbd__consumer)\).
-
-If the application needs to use the same endpoint, regardless of the current application subscriber, the destination that contains the endpoint configuration is provisioned by the application provider. If the endpoint should be different for each application subscriber, the destination can be provisioned by each particular application subscriber.
 
 
 
@@ -65,7 +61,7 @@ Service instance level
 </td>
 <td valign="top">
 
-Lookup via particular service instance \(in provider or subscriber subaccount associated with this service instance\).
+Lookup via particular service instance \(in provider or consumer subaccount associated with this service instance\).
 
 </td>
 </tr>
@@ -78,7 +74,7 @@ When the application accesses the destination at runtime, the Destination servic
     2.  Searches the destination on *subaccount* level.
 
 
--   For a destination associated with a **subscriber** subaccount:
+-   For a destination associated with a **consumer** subaccount:
     1.  Checks if the destination is available on the *subscription* level. If there is no destination found, it
     2.  Searches the destination on *subaccount* level.
 
@@ -89,7 +85,7 @@ Back to [Top](multitenancy-in-sap-btp-connectivity-9c0bdd0.md#loio9c0bdd0efc8640
 
 <a name="loio9c0bdd0efc8640739c9d2fa5cfe56cbd__provider"/>
 
-## Provider-Specific Destination
+## Provider-Managed Destination
 
 ![](images/CS_Multitenancy_Provider_a2f77d4.png)
 
@@ -99,9 +95,19 @@ Back to [Top](multitenancy-in-sap-btp-connectivity-9c0bdd0.md#loio9c0bdd0efc8640
 
 <a name="loio9c0bdd0efc8640739c9d2fa5cfe56cbd__consumer"/>
 
-## Subscriber-Specific Destination
+## Consumer-Managed Destination
 
 ![](images/CS_Multitenancy_Consumer_573fd49.png)
+
+Back to [Top](multitenancy-in-sap-btp-connectivity-9c0bdd0.md#loio9c0bdd0efc8640739c9d2fa5cfe56cbd__top)
+
+
+
+<a name="loio9c0bdd0efc8640739c9d2fa5cfe56cbd__section_ays_trw_x2c"/>
+
+## On-Premise Connection
+
+![](images/CS_Multitenancy_OnPremise_a9759d2.png)
 
 Back to [Top](multitenancy-in-sap-btp-connectivity-9c0bdd0.md#loio9c0bdd0efc8640739c9d2fa5cfe56cbd__top)
 

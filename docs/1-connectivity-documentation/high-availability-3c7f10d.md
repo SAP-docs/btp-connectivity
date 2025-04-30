@@ -2,7 +2,7 @@
 
 # High Availability
 
-Run the connectivity proxy for Kubernetes in a high-availability setup.
+Run the Connectivity Proxy for Kubernetes in a high-availability setup.
 
 
 
@@ -26,14 +26,14 @@ Run the connectivity proxy for Kubernetes in a high-availability setup.
 
 ## Overview
 
-The connectivity proxy can work in an active-active high-availability setup. In this setup, there are at least two connectivity proxy instances, both running actively and simultaneously.
+The Connectivity Proxy can work in an active-active high-availability setup. In this setup, there are at least two Connectivity Proxy instances, both running actively and simultaneously.
 
 The main purpose of an active-active deployment is to provide high availability and allow zero-downtime maintenance as well as horizontal-scaling capabilities.
 
-The Kubernetes service exposing the connectivity proxy pods distributes and load-balances the traffic from the workloads across all running connectivity proxy pods.
+The Kubernetes service exposing the Connectivity Proxy pods distributes and load-balances the traffic from the workloads across all running Connectivity Proxy pods.
 
 > ### Note:  
-> The load balancing strategy for distributing traffic to the connectivity proxy pods depends on the *kube-proxy* mode. The strategies used by the different *kube-proxy* modes are described in the [Kubernetes documentation](https://kubernetes.io/docs/concepts/services-networking/service/#virtual-ips-and-service-proxies). This configuration is done on cluster level.
+> The load balancing strategy for distributing traffic to the Connectivity Proxy pods depends on the *kube-proxy* mode. The strategies used by the different *kube-proxy* modes are described in the [Kubernetes documentation](https://kubernetes.io/docs/concepts/services-networking/service/#virtual-ips-and-service-proxies). This configuration is done on cluster level.
 
 > ### Tip:  
 > [MultiAZ with Pod Anti-Affinity](https://kubernetes.io/docs/concepts/scheduling-eviction/assign-pod-node/) and [PodDisruptionBudget](https://kubernetes.io/docs/tasks/run-application/configure-pdb/) are supported out of the box in the Helm chart.
@@ -51,11 +51,11 @@ There are two technical options \(modes\) for the active-active deployment:
 -   *Path*
 -   *Subdomain*
 
-The difference between the two modes is in the way the routing information of the current connectivity proxy \(which is being used for the current connection\) is passed to the Cloud Connector.
+The difference between the two modes is in the way the routing information of the current Connectivity Proxy \(which is being used for the current connection\) is passed to the Cloud Connector.
 
 Depending on the perspective, as well as on the concrete requirements and boundaries you have, both modes may have advantages and drawbacks, so you should carefully choose the one which best suits your needs.
 
-The number of connectivity proxy instances that run simultaneously depends on the *replicaCount* configuration in the `values.yml` file.
+The number of Connectivity Proxy instances that run simultaneously depends on the *replicaCount* configuration in the `values.yml` file.
 
 ```
 deployment:
@@ -133,7 +133,7 @@ No
 
 ## High-Availability Mode: *Path* 
 
-To configure the connectivity proxy for the high-availability mode *Path*, add the following configuration in the `values.yml` file:
+To configure the Connectivity Proxy for the high-availability mode *Path*, add the following configuration in the `values.yml` file:
 
 ```
 config:
@@ -148,7 +148,7 @@ config:
 
 ## High-Availability Mode: *Subdomain* 
 
-To configure the connectivity proxy for the high-availability mode *Subdomain*, add the following configuration in the `values.yml file`:
+To configure the Connectivity Proxy for the high-availability mode *Subdomain*, add the following configuration in the `values.yml file`:
 
 ```
 config:

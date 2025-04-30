@@ -2,7 +2,7 @@
 
 # Concepts
 
-Find an overview of important concepts for working with the connectivity proxy for Kubernetes.
+Find an overview of important concepts for working with the Connectivity Proxy for Kubernetes.
 
 
 <table>
@@ -14,7 +14,7 @@ Find an overview of important concepts for working with the connectivity proxy f
 </td>
 <td valign="top">
 
-Learn about the connectivity proxy for Kubernetes: Scenario and conguration steps.
+Learn about the Connectivity Proxy for Kubernetes: Scenario and conguration steps.
 
 </td>
 </tr>
@@ -26,7 +26,7 @@ Learn about the connectivity proxy for Kubernetes: Scenario and conguration step
 </td>
 <td valign="top">
 
-Details about the different operational modes of the connectivity proxy.
+Details about the different operational modes of the Connectivity Proxy.
 
 </td>
 </tr>
@@ -38,7 +38,7 @@ Details about the different operational modes of the connectivity proxy.
 </td>
 <td valign="top">
 
-Use Transport Layer Security \(TLS\) with the connectivity proxy.
+Use Transport Layer Security \(TLS\) with the Connectivity Proxy.
 
 </td>
 </tr>
@@ -50,7 +50,7 @@ Use Transport Layer Security \(TLS\) with the connectivity proxy.
 </td>
 <td valign="top">
 
-Perform external health checks for the connectivity proxy.
+Perform external health checks for the Connectivity Proxy.
 
 </td>
 </tr>
@@ -62,7 +62,7 @@ Perform external health checks for the connectivity proxy.
 </td>
 <td valign="top">
 
-Run the connectivity proxy for Kubernetes in high availability mode.
+Run the Connectivity Proxy for Kubernetes in high availability mode.
 
 </td>
 </tr>
@@ -74,7 +74,7 @@ Run the connectivity proxy for Kubernetes in high availability mode.
 </td>
 <td valign="top">
 
-Using audit logging for the connectivity proxy.
+Using audit logging for the Connectivity Proxy.
 
 </td>
 </tr>
@@ -86,7 +86,7 @@ Using audit logging for the connectivity proxy.
 </td>
 <td valign="top">
 
-Integrate the connectivity proxy with SAP services.
+Integrate the Connectivity Proxy with SAP services.
 
 </td>
 </tr>
@@ -98,7 +98,7 @@ Integrate the connectivity proxy with SAP services.
 </td>
 <td valign="top">
 
-Configure automatic pickup on resource changes for the connectivity proxy.
+Configure automatic pickup on resource changes for the Connectivity Proxy.
 
 </td>
 </tr>
@@ -110,7 +110,7 @@ Configure automatic pickup on resource changes for the connectivity proxy.
 </td>
 <td valign="top">
 
-Use the connectivity proxy to connect to an on-premise network via service channel.
+Use the Connectivity Proxy to connect to an on-premise network via service channel.
 
 </td>
 </tr>
@@ -122,7 +122,7 @@ Use the connectivity proxy to connect to an on-premise network via service chann
 </td>
 <td valign="top">
 
-Install the connectivity proxy in a Kubernetes cluster that is configured for Istio.
+Install the Connectivity Proxy in a Kubernetes cluster that is configured for Istio.
 
 </td>
 </tr>
@@ -134,7 +134,7 @@ Install the connectivity proxy in a Kubernetes cluster that is configured for Is
 </td>
 <td valign="top">
 
-Install the transparent proxy as subchart of the connectivity proxy via Helm.
+Install the Transparent Proxy as subchart of the Connectivity Proxy via Helm.
 
 </td>
 </tr>
@@ -146,7 +146,7 @@ Install the transparent proxy as subchart of the connectivity proxy via Helm.
 </td>
 <td valign="top">
 
-Use a single connectivity proxy installation for your global account.
+Use a single Connectivity Proxy installation for your global account.
 
 </td>
 </tr>

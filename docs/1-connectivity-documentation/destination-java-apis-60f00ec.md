@@ -9,7 +9,7 @@ Use Destination service Java APIs to optimize application development.
 > 
 > For the Cloud Foundry environment, these APIs are in support-only mode, which means that no new development is done but bug fixes and security patches. They will not evolve with the service and no feature parity can be expected.
 > 
-> For Kubernetes, we recommend that you use the transparent proxy as an alternative:
+> For Kubernetes, we recommend that you use the Transparent Proxy as an alternative:
 > 
 > -   In the Kyma environment: [Transparent Proxy in the Kyma Environment](transparent-proxy-in-the-kyma-environment-1700cfe.md)
 > -   In any Kubernetes environment: [Transparent Proxy for Kubernetes](transparent-proxy-for-kubernetes-acc64ad.md)

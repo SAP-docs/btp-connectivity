@@ -2,17 +2,17 @@
 
 # Installation with Helm
 
-Use the Helm chart to configure and manage the lifecycle of the transparent proxy.
+Use the Helm chart to configure and manage the lifecycle of the Transparent Proxy.
 
 > ### Note:  
-> Current version of the transparent proxy is 1.7.0.
+> Current version of the Transparent Proxy is 1.7.0.
 
-The transparent proxy delivery includes a Helm chart that you can use for lifecycle management. The Helm allows full configuration via [the standard Helm method of a "values.yaml" file](https://helm.sh/docs/chart_template_guide/values_files/).
+The Transparent Proxy delivery includes a Helm chart that you can use for lifecycle management. The Helm allows full configuration via [the standard Helm method of a "values.yaml" file](https://helm.sh/docs/chart_template_guide/values_files/).
 
 > ### Note:  
 > If Istio is not present in the cluster, you must manually set up the *certificate manager*. Alternatively, you can disable encryption within the cluster by setting `encryptionEnabled` to `false`. However, the latter is not recommended for use in production environments.
 
-The transparent proxy Helm chart is available via the RBSC \(*repository-based shipment channel*\) Helm repository and DockerHub.
+The Transparent Proxy Helm chart is available via the RBSC \(*repository-based shipment channel*\) Helm repository and DockerHub.
 
 
 
@@ -30,7 +30,7 @@ The transparent proxy Helm chart is available via the RBSC \(*repository-based s
     > By default, mTLS encryption is enabled using [cert-manager](https://cert-manager.io/). You should check the [Configuration Guide](configuration-guide-2a22cd7.md) to modify the configuration settings according to your setup, for example, referencing your *cert-manager Issuer* or *ClusterIssuer*.
 
     > ### Tip:  
-    > Encryption for the transparent proxy components can also be disabled for test purposes or if you have implemented your own mTLS sidecar solution, for example, Istio.
+    > Encryption for the Transparent Proxy components can also be disabled for test purposes or if you have implemented your own mTLS sidecar solution, for example, Istio.
 
     **Example: Transparent Proxy values.yaml Snippet**
 
@@ -38,15 +38,15 @@ The transparent proxy Helm chart is available via the RBSC \(*repository-based s
     > ```
     > deployment:
     >   image:
-    >     ## Тhe name of the registry from which the transparent proxy will be downloaded.
+    >     ## Тhe name of the registry from which the Transparent Proxy will be downloaded.
     >     registry: docker.io
-    >     ## Тhe name of the repository from which the transparent proxy will be downloaded.
+    >     ## Тhe name of the repository from which the Transparent Proxy will be downloaded.
     >     repository: sapse
     >     ## Оne of Always, Never, IfNotPresent. For more information, see https://kubernetes.io/docs/concepts/containers/images#updating-images.
     >     pullPolicy: IfNotPresent
     >     ## Тhe secret used for authenticating against the repository. (Not required when using the DockerHub registry).
     >     #pullSecret: ""
-    >     ## Тhe version of the transparent proxy images that are to be deployed. By default, it is the chart version
+    >     ## Тhe version of the Transparent Proxy images that are to be deployed. By default, it is the chart version
     >     #tag:
     >   replicas:
     >     ## Тhe amount of transparent HTTP proxy pods to start.
@@ -88,7 +88,7 @@ The transparent proxy Helm chart is available via the RBSC \(*repository-based s
     >         ## Enables or disables the Horizontal Pod Autoscaler mechanism see  Horizontal Pod Autoscaler(Kubernetes documentation) for http proxy pods.
     >         ## Cannot enable both horizontal and vertical autoscaling.If you want horizontal autoscaling deployment.autoscaling.http.vertical.enabled should not be set to true
     >         enabled: false
-    >         ## Upper limit for the number of http transparent proxy replicas to which the autoscaler can scale up. It should be higher than deployment.replicas.http.
+    >         ## Upper limit for the number of http Transparent Proxy replicas to which the autoscaler can scale up. It should be higher than deployment.replicas.http.
     >         maxReplicaCount: 2
     >         metrics:
     >           ## Target value of the average CPU metric across all transparent http proxy pods, represented as a percentage of the requested value of the CPU for the pods.
@@ -100,7 +100,7 @@ The transparent proxy Helm chart is available via the RBSC \(*repository-based s
     >         ## Enables or disables the Horizontal Pod Autoscaler mechanism see  Horizontal Pod Autoscaler(Kubernetes documentation) for tcp proxy pods.
     >         ## Cannot enable both horizontal and vertical autoscaling.If you want horizontal autoscaling deployment.autoscaling.tcp.vertical.enabled should not be set to true
     >         enabled: false
-    >         ## Upper limit for the number of tcp transparent proxy replicas to which the autoscaler can scale up. It should be higher than deployment.replicas.tcp.
+    >         ## Upper limit for the number of tcp Transparent Proxy replicas to which the autoscaler can scale up. It should be higher than deployment.replicas.tcp.
     >         maxReplicaCount: 2
     >         metrics:
     >           ## Target value of the average CPU metric across all transparent tcp proxy pods for a given destination instance, represented as a percentage of the requested value of the CPU for the pods.
@@ -114,7 +114,7 @@ The transparent proxy Helm chart is available via the RBSC \(*repository-based s
     >         updateMode: "Off"
     > config:
     >   logging:
-    >     ## The initial log level across all transparent proxy components. Accepted log levels are: trace, debug, info, warn, error, fatal.
+    >     ## The initial log level across all Transparent Proxy components. Accepted log levels are: trace, debug, info, warn, error, fatal.
     >     ## The log levels can be changed dynamically, see https://help.sap.com/docs/connectivity/sap-btp-connectivity-cf/transparent-proxy-troubleshooting?locale=en-US&q=transparent%20proxy#change-log-levels-of-the-transparent-proxy-components
     >     level: info
     >   ## Defines the tenant mode in which Transparent Proxy is working in. Default value "dedicated" means that only Destinations in the subaccount defined in Destination Service key could be exposed and accessed via TP.
@@ -152,7 +152,7 @@ The transparent proxy Helm chart is available via the RBSC \(*repository-based s
     >               # duration: 720h
     >               ## How long before the currently issued certificate’s expiry cert-manager should renew the certificate. Value must be in units accepted by Go time.ParseDuration https://golang.org/pkg/time/#ParseDuration
     >               # renewBefore: 120h
-    >   ## The mode in which Transparent proxy operates with the Destinations in the cluster. Possible values are "all" or "labelSelector".
+    >   ## The mode in which Transparent Proxy operates with the Destinations in the cluster. Possible values are "all" or "labelSelector".
     >   ## If "labelSelector" set, TP operates only in namespaces labeled with "transparent-proxy.connectivity.api.sap/namespace:<namespace where TP is installed in>"
     >   managedNamespacesMode: "all"
     >   manager:
@@ -196,7 +196,7 @@ The transparent proxy Helm chart is available via the RBSC \(*repository-based s
 
 ## Deploy \(DockerHub\)
 
-The transparent proxy Helm chart is available in DockerHub.
+The Transparent Proxy Helm chart is available in DockerHub.
 
 You can directly install it with one command:
 
@@ -242,13 +242,13 @@ helm repo update
 ## Update / Upgrade / Downgrade
 
 > ### Caution:  
-> Changing any of the `values.yaml` configurations using *helm upgrade* may result in the restart of some or all transparent proxy components.
+> Changing any of the `values.yaml` configurations using *helm upgrade* may result in the restart of some or all Transparent Proxy components.
 
-When you have a transparent proxy deployed on the cluster, you may want to maintain it by changing configurations and/or changing its version. To do so, follow these steps:
+When you have a Transparent Proxy deployed on the cluster, you may want to maintain it by changing configurations and/or changing its version. To do so, follow these steps:
 
-1.  Get the transparent proxy Helm chart. It can be the same version as the one currently installed or a different version that you want to upgrade or downgrade.
+1.  Get the Transparent Proxy Helm chart. It can be the same version as the one currently installed or a different version that you want to upgrade or downgrade.
 2.  Prepare the `values.yaml` file for your scenario, as described in [Configuration](configuration-guide-2a22cd7.md#loio2a22cd7872964e6a9ceb5af72920cfd0__config). Here you can just modify the one you used previously by applying the changes you desire.
-3.  Use the Helm CLI to upgrade the transparent proxy:
+3.  Use the Helm CLI to upgrade the Transparent Proxy:
 
     ```
     helm upgrade transparent-proxy oci://registry-1.docker.io/sapse/transparent-proxy --version <version of helm chart> --namespace <namespace> -f <path-to-new-values.yaml>
@@ -261,7 +261,7 @@ When you have a transparent proxy deployed on the cluster, you may want to maint
 
 ## Undeploy
 
-If you need to remove the transparent proxy from your cluster or from a namespace, you can delete all resources installed by Helm except for the [Custom Resource Definition](https://kubernetes.io/docs/tasks/extend-kubernetes/custom-resources/custom-resource-definitions/) \(CRD\) of type `destinations.destination.connectivity.api.sap` using the Helm CLI:
+If you need to remove the Transparent Proxy from your cluster or from a namespace, you can delete all resources installed by Helm except for the [Custom Resource Definition](https://kubernetes.io/docs/tasks/extend-kubernetes/custom-resources/custom-resource-definitions/) \(CRD\) of type `destinations.destination.connectivity.api.sap` using the Helm CLI:
 
 ```
 helm uninstall transparent-proxy
@@ -281,5 +281,5 @@ This will delete the CRD `destinations.destination.connectivity.api.sap` as well
 
 ## Deploy/Update/Undeploy using Landscaper
 
-To deploy/update/undeploy the transparent proxy on a Kubernetes cluster via Landscaper, look at the following [Guided Tour with Landscaper](https://github.com/gardener/landscaper/tree/master/docs/guided-tour). You will need an LAAS instance that you can request from the corresponding team, or launch a local one using the Landscaper CLI.
+To deploy/update/undeploy the Transparent Proxy on a Kubernetes cluster via Landscaper, look at the following [Guided Tour with Landscaper](https://github.com/gardener/landscaper/tree/master/docs/guided-tour). You will need an LAAS instance that you can request from the corresponding team, or launch a local one using the Landscaper CLI.
 

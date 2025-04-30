@@ -2,7 +2,7 @@
 
 # OAuth Refresh Token Authentication
 
-The transparent proxy handles the HTTP communication protocol for both Internet and on-premise destinations protected with the *OAuth Refresh Token* flow.
+The Transparent Proxy handles the HTTP communication protocol for both Internet and on-premise destinations protected with the *OAuth Refresh Token* flow.
 
 
 
@@ -29,7 +29,7 @@ To integrate this functionality, you must create an SAP BTP destination. This de
 > }
 > ```
 
-To target the destination with the name "example-dest-oauth-2-refresh-token" for handling by the transparent proxy, you should create a [Destination Custom Resource](destination-custom-resource-fc7951e.md) in a namespace of your choice.
+To target the destination with the name "example-dest-oauth-2-refresh-token" for handling by the Transparent Proxy, you should create a [Destination Custom Resource](destination-custom-resource-fc7951e.md) in a namespace of your choice.
 
 **Destination CR for an OAuth 2 Refresh Token Destination**
 
@@ -51,7 +51,7 @@ To target the destination with the name "example-dest-oauth-2-refresh-token" for
 
 ## Consumption
 
-For authentication type `OAuth2RefreshToken`, a refresh token has to be passed to the transparent proxy via `Authorization` header of scheme `Bearer`.
+For authentication type `OAuth2RefreshToken`, a refresh token has to be passed to the Transparent Proxy via `Authorization` header of scheme `Bearer`.
 
 For more information, see [OAuth Refresh Token Authentication](oauth-refresh-token-authentication-bff0136.md).
 
@@ -67,7 +67,7 @@ For more information, see [OAuth Refresh Token Authentication](oauth-refresh-tok
 >  
 >     url = '<destination-cr-name>.<destination-cr-namespace>'
 >     headers: {
->             // X-Tenant-Subdomain is required only when transparent proxy is in shared tenant mode
+>             // X-Tenant-Subdomain is required only when Transparent Proxy is in shared tenant mode
 >             'X-Tenant-Subdomain': '<tenant-where-destination-is-located>',
 >             'Authorization': 'Bearer ' + refreshToken,
 >     }

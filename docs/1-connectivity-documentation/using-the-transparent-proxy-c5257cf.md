@@ -2,14 +2,14 @@
 
 # Using the Transparent Proxy
 
-Use the transparent proxy for Kubernetes in different SAP BTP communication scenarios.
+Use the Transparent Proxy for Kubernetes in different SAP BTP communication scenarios.
 
-The transparent proxy lightens the way your Kubernetes workloads connect to remote systems using BTP destinations of type *Internet* and *OnPremise*. It provides authentication, principal propagation, SOCKS5 handshake, and easy access to the destination target systems by exposing them as [Kubernetes Services](https://kubernetes.io/docs/concepts/services-networking/service/).
+The Transparent Proxy lightens the way your Kubernetes workloads connect to remote systems using BTP destinations of type *Internet* and *OnPremise*. It provides authentication, principal propagation, SOCKS5 handshake, and easy access to the destination target systems by exposing them as [Kubernetes Services](https://kubernetes.io/docs/concepts/services-networking/service/).
 
-To target a given destination for handling by the transparent proxy, you should create a custom Kubernetes resource of type *destinations.destination.connectivity.api.sap* that references the given destination. If you do not create a custom Kubernetes resource of type destinations.destination.connectivity.api.sap for a given destination, the destination in question will not be handled by the transparent proxy.
+To target a given destination for handling by the Transparent Proxy, you should create a custom Kubernetes resource of type *destinations.destination.connectivity.api.sap* that references the given destination. If you do not create a custom Kubernetes resource of type destinations.destination.connectivity.api.sap for a given destination, the destination in question will not be handled by the Transparent Proxy.
 
 > ### Note:  
-> There should be no Kubernetes service in the namespace of the destination custom resource or in the namespace where the transparent proxy is installed, with a name equal to the destination custom resource. The transparent proxy handles the creation of Kubernetes services based on the information stored in these custom resources.
+> There should be no Kubernetes service in the namespace of the destination custom resource or in the namespace where the Transparent Proxy is installed, with a name equal to the destination custom resource. The Transparent Proxy handles the creation of Kubernetes services based on the information stored in these custom resources.
 
 
 
@@ -17,7 +17,7 @@ To target a given destination for handling by the transparent proxy, you should 
 
 ## Internet Connectivity
 
-The transparent proxy handles the HTTP\(s\) communication protocol for Internet destinations. The application developer needs to create a BTP destination of Type “HTTP” and ProxyType “Internet”, for example:
+The Transparent Proxy handles the HTTP\(s\) communication protocol for Internet destinations. The application developer needs to create a BTP destination of Type “HTTP” and ProxyType “Internet”, for example:
 
 **Internet Destination** 
 
@@ -34,7 +34,7 @@ The transparent proxy handles the HTTP\(s\) communication protocol for Internet 
 > }
 > ```
 
-To target the destination with the name “example-dest-client-cert” for handling by the transparent proxy, you should create a [Destination Custom Resource](destination-custom-resource-fc7951e.md) in a namespace of your choice:
+To target the destination with the name “example-dest-client-cert” for handling by the Transparent Proxy, you should create a [Destination Custom Resource](destination-custom-resource-fc7951e.md) in a namespace of your choice:
 
 > ### Sample Code:  
 > ```
@@ -64,11 +64,11 @@ Once done, the application could start consuming the destination from within the
 
 ## On-Premise Connectivity
 
-In order to use on-premise connectivity, you should have installed the connectivity proxy and a Cloud Connector.
+In order to use on-premise connectivity, you should have installed the Connectivity Proxy and a Cloud Connector.
 
-The connectivity proxy is a Kubernetes component that connects workloads running on a Kubernetes cluster to on-premise systems, which are exposed via the Cloud Connector. The connectivity proxy must be paired to an SAP BTP region to grant access to the Cloud Connectors connected to that region. The SAP BTP domain model \(subaccounts\) is used to target a particular Cloud Connector.
+The Connectivity Proxy is a Kubernetes component that connects workloads running on a Kubernetes cluster to on-premise systems, which are exposed via the Cloud Connector. The Connectivity Proxy must be paired to an SAP BTP region to grant access to the Cloud Connectors connected to that region. The SAP BTP domain model \(subaccounts\) is used to target a particular Cloud Connector.
 
-1.  Install the connectivity proxy either via Helm or as a Kyma module.
+1.  Install the Connectivity Proxy either via Helm or as a Kyma module.
 
     For more information, see [Operations via Helm](operations-via-helm-23fc110.md) and [Connectivity Proxy in the Kyma Environment](connectivity-proxy-in-the-kyma-environment-8dd1690.md).
 
@@ -80,7 +80,7 @@ The connectivity proxy is a Kubernetes component that connects workloads running
 
     For more information, see [Configuration](configuration-ec68ee2.md).
 
-4.  Integrate your connectivity proxy in the transparent proxy configuration:
+4.  Integrate your Connectivity Proxy in the Transparent Proxy configuration:
 
     > ### Sample Code:  
     > ```
@@ -101,7 +101,7 @@ The connectivity proxy is a Kubernetes component that connects workloads running
 > For non-HTTP SAP BTP destinations, only the "CloudConnectorLocationId" property is supported.
 
 > ### Caution:  
-> For installation in Kyma environment using the transparent proxy module, the integration between the transparent proxy and the connectivity proxy is automatic.
+> For installation in Kyma environment using the Transparent Proxy module, the integration between the Transparent Proxy and the Connectivity Proxy is automatic.
 
 Then the application developer needs to create a BTP destination of `ProxyType` “OnPremise”, for example:
 
@@ -116,7 +116,7 @@ Then the application developer needs to create a BTP destination of `ProxyType` 
 > }
 > ```
 
-To target the destination with the name “example-dest-onprem” for handling by the transparent proxy, you should create a destination custom resource in a namespace of your choice:
+To target the destination with the name “example-dest-onprem” for handling by the Transparent Proxy, you should create a destination custom resource in a namespace of your choice:
 
 > ### Sample Code:  
 > ```
@@ -166,18 +166,18 @@ The destination fragment can be referenced in two ways: statically through a [De
 
 ## Troubleshooting
 
-In case of errors, always look for detailed error messages and hints in 'x-error-message', 'x-error-origin', 'x-proxy-server' and 'x-internal-error-code'. Also, you could use 'x-request-id' as correlation ID to find more about the error in the transparent proxy HTTP pods.
+In case of errors, always look for detailed error messages and hints in 'x-error-message', 'x-error-origin', 'x-proxy-server' and 'x-internal-error-code'. Also, you could use 'x-request-id' as correlation ID to find more about the error in the Transparent Proxy HTTP pods.
 
 For more information, see [Troubleshooting](troubleshooting-fce292a.md).
 
 **Related Information**  
 
 
-[HTTP Destinations](http-destinations-fd3e2a0.md "Configure HTTP destinations for the transparent proxy for Kubernetes.")
+[HTTP Destinations](http-destinations-fd3e2a0.md "Configure HTTP destinations for the Transparent Proxy for Kubernetes.")
 
-[Mail Destinations](mail-destinations-584bc93.md "Configure Mail destinations for the transparent proxy for Kubernetes.")
+[Mail Destinations](mail-destinations-584bc93.md "Configure Mail destinations for the Transparent Proxy for Kubernetes.")
 
-[LDAP Destinations](ldap-destinations-47128a8.md "The transparent proxy simplifies access to target systems defined as LDAP destinations. It handles the LDAP protocol for on-premise destinations.")
+[LDAP Destinations](ldap-destinations-47128a8.md "The Transparent Proxy simplifies access to target systems defined as LDAP destinations. It handles the LDAP protocol for on-premise destinations.")
 
-[TCP Destinations](tcp-destinations-558b39a.md "The transparent proxy simplifies access to target systems defined as TCP destinations. It handles the TCP protocol for on-premise destinations.")
+[TCP Destinations](tcp-destinations-558b39a.md "The Transparent Proxy simplifies access to target systems defined as TCP destinations. It handles the TCP protocol for on-premise destinations.")
 

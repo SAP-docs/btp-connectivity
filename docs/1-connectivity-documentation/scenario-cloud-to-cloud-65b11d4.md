@@ -55,7 +55,7 @@ Operator
 </td>
 <td valign="top">
 
-[Set up Trust Between Systems](set-up-trust-between-systems-82dbeca.md)
+[Manage Trust](manage-trust-82dbeca.md)
 
 </td>
 </tr>

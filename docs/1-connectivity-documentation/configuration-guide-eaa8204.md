@@ -2,9 +2,9 @@
 
 # Configuration Guide
 
-Find an overview of configuration parameters for the connectivity proxy for Kubernetes.
+Find an overview of configuration parameters for the Connectivity Proxy for Kubernetes.
 
-Refer to the table below for the configurations available in the `values.yaml` file of the connectivity proxy.
+Refer to the table below for the configurations available in the `values.yaml` file of the Connectivity Proxy.
 
 > ### Note:  
 > Make sure you become familiar with the semantics, restrictions and interoperability aspects of each property before using it.
@@ -97,7 +97,7 @@ config.displayName
 </td>
 <td valign="top">
 
-Display name for the connectivity proxy installation. It is displayed in the Cloud Connector UI in Cloud Connections section.
+Display name for the Connectivity Proxy installation. It is displayed in the Cloud Connector UI in Cloud Connections section.
 
 </td>
 <td valign="top">
@@ -114,7 +114,7 @@ config.integration.connectivityService.serviceCredentialsKey
 </td>
 <td valign="top">
 
-Key in the Connectivity service secret resource that holds the base64-encoded value of the connectivity proxy service key.
+Key in the Connectivity service secret resource that holds the base64-encoded value of the Connectivity Proxy service key.
 
 </td>
 <td valign="top">
@@ -131,7 +131,7 @@ config.logging.format
 </td>
 <td valign="top">
 
-Specifies the logging format for the Connectivity proxy and it's components. The possible values are "console" and "json".
+Specifies the logging format for the Connectivity Proxy and it's components. The possible values are "console" and "json".
 
 </td>
 <td valign="top">
@@ -250,7 +250,7 @@ config.servers.proxy.authorization.oauth.allowedClientId
 </td>
 <td valign="top">
 
-OAuth client ID that is authorized to pass through the connectivity proxy when authorization is enabled.
+OAuth client ID that is authorized to pass through the Connectivity Proxy when authorization is enabled.
 
 </td>
 <td valign="top">
@@ -471,7 +471,7 @@ config.jvm.memory.maxDirectSize
 </td>
 <td valign="top">
 
-Maximum direct memory size to be set to the java process of the Connectivity proxy. If not set, the value will be calculated, based on the available resources. If the available resources do not set a limit, a default value is used.
+Maximum direct memory size to be set to the java process of the Connectivity Proxy. If not set, the value will be calculated, based on the available resources. If the available resources do not set a limit, a default value is used.
 
 </td>
 <td valign="top">
@@ -488,7 +488,7 @@ config.jvm.memory.maxHeapSize
 </td>
 <td valign="top">
 
-Maximum heap size to be set to the java process of the Connectivity proxy. If not set, the value will be calculated, based on the available resources. If the available resources do not set a limit, a default value is used.
+Maximum heap size to be set to the java process of the Connectivity Proxy. If not set, the value will be calculated, based on the available resources. If the available resources do not set a limit, a default value is used.
 
 </td>
 <td valign="top">
@@ -505,7 +505,7 @@ config.jvm.memory.minHeapSize
 </td>
 <td valign="top">
 
-Minimum heap size to be set to the java process of the Connectivity proxy. If not set, the value will be calculated, based on the available resources. If the available resources do not set a limit, a default value is used.
+Minimum heap size to be set to the java process of the Connectivity Proxy. If not set, the value will be calculated, based on the available resources. If the available resources do not set a limit, a default value is used.
 
 </td>
 <td valign="top">
@@ -522,7 +522,7 @@ config.highAvailabilityMode
 </td>
 <td valign="top">
 
-High availability mode in which the connectivity proxy works. The possible values are `off`, `subdomain`, and `path`. See [High Availability](high-availability-3c7f10d.md) for details.
+High availability mode in which the Connectivity Proxy works. The possible values are `off`, `subdomain`, and `path`. See [High Availability](high-availability-3c7f10d.md) for details.
 
 </td>
 <td valign="top">
@@ -539,7 +539,7 @@ config.subaccountId
 </td>
 <td valign="top">
 
-ID of the subaccount, on whose behalf the connectivity proxy is running. This is mandatory only for the *dedicated* tenant mode. It is ignored when running in *shared* tenant mode.
+ID of the subaccount, on whose behalf the Connectivity Proxy is running. This is mandatory only for the *dedicated* tenant mode. It is ignored when running in *shared* tenant mode.
 
 </td>
 <td valign="top">
@@ -556,7 +556,7 @@ config.subaccountSubdomain
 </td>
 <td valign="top">
 
-Subdomain of the subaccount, on whose behalf the connectivity proxy is running. This is mandatory only for the *dedicated* tenant mode when there is at least one proxy with disabled authorization. It is ignored when running in *shared* tenant mode or if authorization is enabled for all proxies.
+Subdomain of the subaccount, on whose behalf the Connectivity Proxy is running. This is mandatory only for the *dedicated* tenant mode when there is at least one proxy with disabled authorization. It is ignored when running in *shared* tenant mode or if authorization is enabled for all proxies.
 
 </td>
 <td valign="top">
@@ -573,7 +573,7 @@ config.tenantMode
 </td>
 <td valign="top">
 
-Mode in which the connectivity proxy works. The possible values are *dedicated* \(single-tenant mode\) and *shared* \(multi-tenant mode\).
+Mode in which the Connectivity Proxy works. The possible values are *dedicated* \(single-tenant mode\) and *shared* \(multi-tenant mode\).
 
 See [Operational Modes](operational-modes-148bbad.md) for details.
 
@@ -595,7 +595,7 @@ config.serviceChannels.enabled
 Enables or disables the service channels which allow *on-premise to cloud* connectivity to services running in a Kubernetes cluster.
 
 > ### Caution:  
-> Only one connectivity proxy per Kubernetes cluster can have service channels enabled.
+> Only one Connectivity Proxy per Kubernetes cluster can have service channels enabled.
 
 For more information, see [Service Channels: On-Premise-to-Cloud Connectivity](service-channels-on-premise-to-cloud-connectivity-bbd3040.md).
 
@@ -631,7 +631,7 @@ config.multiRegionMode.configMapName
 </td>
 <td valign="top">
 
-The name of the config map holding all region configurations which will be used by the connectivity proxy if multi-region mode is enabled.
+The name of the config map holding all region configurations which will be used by the Connectivity Proxy if multi-region mode is enabled.
 
 </td>
 <td valign="top">
@@ -699,7 +699,7 @@ config.metrics.prometheus.jmxMetrics.enabled
 </td>
 <td valign="top">
 
-Enables the collection of metrics from JMX that are exposed by the connectivity proxy.
+Enables the collection of metrics from JMX that are exposed by the Connectivity Proxy.
 
 </td>
 <td valign="top">
@@ -733,7 +733,7 @@ secretConfig.integration.connectivityService.secretData
 </td>
 <td valign="top">
 
-base64-encoded value of the service key, obtained from the connectivity proxy service instance.
+base64-encoded value of the service key, obtained from the Connectivity Proxy service instance.
 
 </td>
 <td valign="top">
@@ -835,7 +835,7 @@ deployment.nodeSelector
 </td>
 <td valign="top">
 
-Label\(s\) which are configured for the `nodeSelector` property for all connectivity proxy-associated pods. More info: [https://kubernetes.io/docs/concepts/scheduling-eviction/assign-pod-node/\#nodeselector](https://kubernetes.io/docs/concepts/scheduling-eviction/assign-pod-node/#nodeselector)
+Label\(s\) which are configured for the `nodeSelector` property for all Connectivity Proxy-associated pods. More info: [https://kubernetes.io/docs/concepts/scheduling-eviction/assign-pod-node/\#nodeselector](https://kubernetes.io/docs/concepts/scheduling-eviction/assign-pod-node/#nodeselector)
 
 </td>
 <td valign="top">
@@ -954,7 +954,7 @@ deployment.image.tag
 </td>
 <td valign="top">
 
-Version of the connectivity proxy to be deployed.
+Version of the Connectivity Proxy to be deployed.
 
 </td>
 <td valign="top">
@@ -971,7 +971,7 @@ deployment.image.digest
 </td>
 <td valign="top">
 
-Digest the connectivity proxy's image to be deployed. If both digest and tag are provided, the value of the digest has precedence.
+Digest the Connectivity Proxy's image to be deployed. If both digest and tag are provided, the value of the digest has precedence.
 
 </td>
 <td valign="top">
@@ -1042,7 +1042,7 @@ deployment.utilityImage.repository
 Name of the repository of the utility image.
 
 > ### Caution:  
-> The repository must point to an image, which is a version of the Docker official Alpine image \(see [Alpine Docker Image](https://hub.docker.com/_/alpine)\). Usage of any other type of container image is not recommended and can result in broken or dysfunctional connectivity proxy deployment.
+> The repository must point to an image, which is a version of the Docker official Alpine image \(see [Alpine Docker Image](https://hub.docker.com/_/alpine)\). Usage of any other type of container image is not recommended and can result in broken or dysfunctional Connectivity Proxy deployment.
 
 
 
@@ -1112,7 +1112,7 @@ deployment.resources.maxFileDescriptorCount
 </td>
 <td valign="top">
 
-Maximum number of file descriptors that will be used. This value should be based on the overall scenario in which the connectivity proxy is used and on the load of the proxy \(user requests to the proxy\).
+Maximum number of file descriptors that will be used. This value should be based on the overall scenario in which the Connectivity Proxy is used and on the load of the proxy \(user requests to the proxy\).
 
 </td>
 <td valign="top">
@@ -1299,7 +1299,7 @@ deployment.autoscaling.horizontal.maxReplicaCount
 </td>
 <td valign="top">
 
-Upper limit for the number of connectivity proxy replicas to which the autoscaler can scale up. It should be higher than `deployment.replicaCount`.
+Upper limit for the number of Connectivity Proxy replicas to which the autoscaler can scale up. It should be higher than `deployment.replicaCount`.
 
 </td>
 <td valign="top">
@@ -1316,7 +1316,7 @@ deployment.autoscaling.horizontal.metrics.cpuAverageUtilization
 </td>
 <td valign="top">
 
-Target value of the average CPU metric across all connectivity proxy pods, represented as a percentage of the requested value of the CPU for the pods.
+Target value of the average CPU metric across all Connectivity Proxy pods, represented as a percentage of the requested value of the CPU for the pods.
 
 </td>
 <td valign="top">
@@ -1333,7 +1333,7 @@ deployment.autoscaling.horizontal.metrics.memoryAverageUtilization
 </td>
 <td valign="top">
 
-Target value of the average memory metric across all connectivity proxy pods, represented as a percentage of the requested value of the memory for the pods.
+Target value of the average memory metric across all Connectivity Proxy pods, represented as a percentage of the requested value of the memory for the pods.
 
 </td>
 <td valign="top">
@@ -1389,7 +1389,7 @@ deployment.restartWatcher.enabled
 </td>
 <td valign="top">
 
-Enables or disables the restart watcher which watches for changes in secrets and configmaps containing the label *connectivityproxy.sap.com/restart*, and restarts the connectivity proxy if needed. For more information, see [Automatic Pickup on Resource Changes](automatic-pickup-on-resource-changes-78ddb8f.md).
+Enables or disables the restart watcher which watches for changes in secrets and configmaps containing the label *connectivityproxy.sap.com/restart*, and restarts the Connectivity Proxy if needed. For more information, see [Automatic Pickup on Resource Changes](automatic-pickup-on-resource-changes-78ddb8f.md).
 
 </td>
 <td valign="top">
@@ -1440,7 +1440,7 @@ ingress.healthcheck.tls.proxy.secretName
 </td>
 <td valign="top">
 
-Name of the secret that is used for TLS handshake with the connectivity proxy. See [External Health Checking](external-health-checking-5c75674.md) for details.
+Name of the secret that is used for TLS handshake with the Connectivity Proxy. See [External Health Checking](external-health-checking-5c75674.md) for details.
 
 </td>
 <td valign="top">
@@ -1457,7 +1457,7 @@ ingress.healthcheck.tls.proxy.secretData.caCertificate
 </td>
 <td valign="top">
 
-CA certificate part of the secret that is used for TLS handshake with the connectivity proxy. See [External Health Checking](external-health-checking-5c75674.md) for details.
+CA certificate part of the secret that is used for TLS handshake with the Connectivity Proxy. See [External Health Checking](external-health-checking-5c75674.md) for details.
 
 </td>
 <td valign="top">
@@ -1474,7 +1474,7 @@ ingress.healthcheck.tls.proxy.secretData.certificate
 </td>
 <td valign="top">
 
-Certificate part of the secret that is used for TLS handshake with the connectivity proxy. See [External Health Checking](external-health-checking-5c75674.md) for details.
+Certificate part of the secret that is used for TLS handshake with the Connectivity Proxy. See [External Health Checking](external-health-checking-5c75674.md) for details.
 
 </td>
 <td valign="top">
@@ -1491,7 +1491,7 @@ ingress.healthcheck.tls.proxy.secretData.key
 </td>
 <td valign="top">
 
-Key part of the secret that is used for TLS handshake with the connectivity proxy. See [External Health Checking](external-health-checking-5c75674.md) for details.
+Key part of the secret that is used for TLS handshake with the Connectivity Proxy. See [External Health Checking](external-health-checking-5c75674.md) for details.
 
 </td>
 <td valign="top">
@@ -1685,7 +1685,7 @@ ingress.tls.proxy.secretName
 </td>
 <td valign="top">
 
-Name of the secret that is used for TLS handshake with the connectivity proxy. See [Mutual TLS](mutual-tls-7ce7883.md) for details.
+Name of the secret that is used for TLS handshake with the Connectivity Proxy. See [Mutual TLS](mutual-tls-7ce7883.md) for details.
 
 </td>
 <td valign="top">
@@ -1702,7 +1702,7 @@ ingress.tls.proxy.secretData.caCertificate
 </td>
 <td valign="top">
 
-CA certificate part of the secret that is used for TLS handshake with the connectivity proxy. See [Mutual TLS](mutual-tls-7ce7883.md) for details.
+CA certificate part of the secret that is used for TLS handshake with the Connectivity Proxy. See [Mutual TLS](mutual-tls-7ce7883.md) for details.
 
 </td>
 <td valign="top">
@@ -1719,7 +1719,7 @@ ingress.tls.proxy.secretData.certificate
 </td>
 <td valign="top">
 
-Certificate part of the secret that is used for TLS handshake with the connectivity proxy. See [Mutual TLS](mutual-tls-7ce7883.md) for details.
+Certificate part of the secret that is used for TLS handshake with the Connectivity Proxy. See [Mutual TLS](mutual-tls-7ce7883.md) for details.
 
 </td>
 <td valign="top">
@@ -1736,7 +1736,7 @@ ingress.tls.proxy.secretData.key
 </td>
 <td valign="top">
 
-Key part of the secret that is used for TLS handshake with the connectivity proxy. See [Mutual TLS](mutual-tls-7ce7883.md) for details.
+Key part of the secret that is used for TLS handshake with the Connectivity Proxy. See [Mutual TLS](mutual-tls-7ce7883.md) for details.
 
 </td>
 <td valign="top">
@@ -1821,7 +1821,7 @@ transparent-proxy.enabled
 </td>
 <td valign="top">
 
-Flag for enabling and disabling transparent proxy installation as a subchart.
+Flag for enabling and disabling Transparent Proxy installation as a subchart.
 
 </td>
 <td valign="top">

@@ -2,7 +2,7 @@
 
 # Sizing Recommendations
 
-Find basic sizing guidance for the connectivity proxy for Kubernetes.
+Find basic sizing guidance for the Connectivity Proxy for Kubernetes.
 
 
 
@@ -143,7 +143,7 @@ The expected load is large - request concurrency and size is medium or high
 
 ## Relation to Operational Modes
 
-The connectivity proxy can operate in multiple [Operational Modes](operational-modes-148bbad.md).
+The Connectivity Proxy can operate in multiple [Operational Modes](operational-modes-148bbad.md).
 
 A major criteria is the type of tenancy used: single or multi-tenant. If multiple tenants are served, we recommend that you choose a slightly bigger size to make sure each tenant is served without precedence to any other tenant at the same time. Based on the chosen tenancy mode, the following general recommendations apply:
 
@@ -188,8 +188,8 @@ M, L
 </table>
 
 > ### Note:  
-> The above-mentioned sizing recommendations are related to the connectivity proxy software component, also acting as a tunnel server to which Cloud Connector instances connect. This means the Cloud Connector must be sized properly as well, see [Sizing Recommendations](sizing-recommendations-f008494.md) \(Cloud Connector\).
+> The above-mentioned sizing recommendations are related to the Connectivity Proxy software component, also acting as a tunnel server to which Cloud Connector instances connect. This means the Cloud Connector must be sized properly as well, see [Sizing Recommendations](sizing-recommendations-f008494.md) \(Cloud Connector\).
 
 > ### Remember:  
-> These sizing recommendation are just a direction point. There are many factors that affect the performance of the tunneling between Cloud Connector and connectivity proxy. They are closely related to the specifics of your scenario, expected regular and intermittent load, and so on.
+> These sizing recommendation are just a direction point. There are many factors that affect the performance of the tunneling between Cloud Connector and Connectivity Proxy. They are closely related to the specifics of your scenario, expected regular and intermittent load, and so on.
 

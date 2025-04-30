@@ -2,9 +2,9 @@
 
 # Client Certificate Authentication
 
-Configure *Client Certificate Authentication* for the transparent proxy for Kubernetes.
+Configure *Client Certificate Authentication* for the Transparent Proxy for Kubernetes.
 
-The transparent proxy handles HTTP communication protocol for both Internet and on-premise destinations protected with *Client Certificate Authentication*. For this authentication type, the transparent proxy manages the client certificate addition \(client certificates and CA certificates\) by getting them from the destination and adding them to the HTTP client used to establish the communication between the client and server.
+The Transparent Proxy handles HTTP communication protocol for both Internet and on-premise destinations protected with *Client Certificate Authentication*. For this authentication type, the Transparent Proxy manages the client certificate addition \(client certificates and CA certificates\) by getting them from the destination and adding them to the HTTP client used to establish the communication between the client and server.
 
 
 
@@ -35,11 +35,11 @@ To integrate this functionality, you must create an SAP BTP destination. This de
 > 
 > -   Supported cert store types are p12, pfx, pem, der, cer, crt.
 > -   Only RSA pkcs1\(starting with header RSA PRIVATE KEY and having headers with encryption information\) keys are currently supported for decryption from PEM format. The following encryption algorithms are supported DES-CBC, DES-EDE3-CBC, AES-128-CBC, AES-192-CBC, and AES-256-CBC. All key types should be supported if no encryption is present.
-> -   KeyStore.Source=ClientProvided is not supported as the transparent proxy can manage only certificates stored in the Destination Service.
+> -   KeyStore.Source=ClientProvided is not supported as the Transparent Proxy can manage only certificates stored in the Destination Service.
 
-For more information, see [Client Certificate Authentication](client-authentication-types-for-http-destinations-4e13a04.md#loio4e13a04147314e8e9e54321f25d93fdc__clientCert).
+For more information, see [Client Certificate Authentication](client-certificate-authentication-4e13a04.md#loio4e13a04147314e8e9e54321f25d93fdc__clientCert).
 
-To target the destination with the name "example-dest-client-certificate" for handling by the transparent proxy, you should create a [Destination Custom Resource](destination-custom-resource-fc7951e.md) in a namespace of your choice.
+To target the destination with the name "example-dest-client-certificate" for handling by the Transparent Proxy, you should create a [Destination Custom Resource](destination-custom-resource-fc7951e.md) in a namespace of your choice.
 
 **Destination CR for a Client Certificate Destination**
 
@@ -61,7 +61,7 @@ To target the destination with the name "example-dest-client-certificate" for ha
 
 ## Consumption
 
-For consumption of destination with authentication type *ClientCertificateAuthentication*, no additional `Authorization` headers need to be provided to the transparent proxy as all necessary data for authorization is in the destination.
+For consumption of destination with authentication type *ClientCertificateAuthentication*, no additional `Authorization` headers need to be provided to the Transparent Proxy as all necessary data for authorization is in the destination.
 
 > ### Note:  
 > `<destination-cr-namespace>` can be omitted if the destination custom resource is created in the same namespace as the application workload.
@@ -73,7 +73,7 @@ For consumption of destination with authentication type *ClientCertificateAuthen
 > function callHttpsDestinationClientCertificateAuthentication() {
 >   url = '<destination-cr-name>.<destination-cr-namespace>'
 >   headers = {
->             // X-Tenant-Subdomain is required only when transparent proxy is in shared tenant mode
+>             // X-Tenant-Subdomain is required only when Transparent Proxy is in shared tenant mode
 >             'X-Tenant-Subdomain': '<tenant-where-destination-is-located>'
 >         }
 >      
@@ -93,5 +93,5 @@ For consumption of destination with authentication type *ClientCertificateAuthen
 **Related Information**  
 
 
-[Client Authentication Types for HTTP Destinations](client-authentication-types-for-http-destinations-4e13a04.md "Find details about client authentication types for HTTP destinations.")
+[Client Certificate Authentication](client-certificate-authentication-4e13a04.md "Create and configure a Client Certificate destination for an application.")
 

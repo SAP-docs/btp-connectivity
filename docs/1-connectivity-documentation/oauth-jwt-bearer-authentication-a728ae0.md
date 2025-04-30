@@ -2,7 +2,7 @@
 
 # OAuth JWT Bearer Authentication
 
-The transparent proxy handles the HTTP communication protocol for both Internet and on-premise destinations protected with the *OAuth JWT Bearer* flow.
+The Transparent Proxy handles the HTTP communication protocol for both Internet and on-premise destinations protected with the *OAuth JWT Bearer* flow.
 
 
 
@@ -29,7 +29,7 @@ To integrate this functionality, you must create an SAP BTP destination. This de
 > }
 > ```
 
-To target the destination with the name "example-dest-oauth-2-jwt-bearer" for handling by the transparent proxy, you should create a [Destination Custom Resource](destination-custom-resource-fc7951e.md) in a namespace of your choice.
+To target the destination with the name "example-dest-oauth-2-jwt-bearer" for handling by the Transparent Proxy, you should create a [Destination Custom Resource](destination-custom-resource-fc7951e.md) in a namespace of your choice.
 
 **Destination CR for an OAuth 2 JWT Bearer Destination**
 
@@ -51,7 +51,7 @@ To target the destination with the name "example-dest-oauth-2-jwt-bearer" for ha
 
 ## Consumption
 
-For authentication type `OAuth2JWTBearer`, the cloud user identity has to be passed to the transparent proxy as a token represented by a JSON Web token \(JWT\) via `Authorization` header of scheme `Bearer`. Then, the token will be passed as an ‘X-User-Token’ to the Destination service, which then will return `authTokens`, processed by the transparent proxy and attached to the HTTP request as an `Authorization` header.
+For authentication type `OAuth2JWTBearer`, the cloud user identity has to be passed to the Transparent Proxy as a token represented by a JSON Web token \(JWT\) via `Authorization` header of scheme `Bearer`. Then, the token will be passed as an ‘X-User-Token’ to the Destination service, which then will return `authTokens`, processed by the Transparent Proxy and attached to the HTTP request as an `Authorization` header.
 
 > ### Note:  
 > `<destination-cr-namespace>` can be omitted if the destination custom resource is created in the same namespace as the application workload.
@@ -65,7 +65,7 @@ For authentication type `OAuth2JWTBearer`, the cloud user identity has to be pas
 >  
 >     url = '<destination-cr-name>.<destination-cr-namespace>'
 >     headers: {
->             // X-Tenant-Subdomain is required only when transparent proxy is in shared tenant mode
+>             // X-Tenant-Subdomain is required only when Transparent Proxy is in shared tenant mode
 >             'X-Tenant-Subdomain': '<tenant-where-destination-is-located>',
 >             'Authorization': 'Bearer ' + accessToken,
 >         }

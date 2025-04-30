@@ -2,9 +2,9 @@
 
 # Destination Service Integration
 
-Integrate the transparent proxy for Kubernetes with the SAP BTP Destination service.
+Integrate the Transparent Proxy for Kubernetes with the SAP BTP Destination service.
 
-The Destination service lets you declaratively model a technical connection as a destination configuration, and via its REST APIs find the destination configuration that is required to access a remote service or system from your Kubernetes workload. To integrate the transparent proxy with the Destination service, you must:
+The Destination service lets you declaratively model a technical connection as a destination configuration, and via its REST APIs find the destination configuration that is required to access a remote service or system from your Kubernetes workload. To integrate the Transparent Proxy with the Destination service, you must:
 
 1.  Create a Destination service instance or reuse an existing one.
 2.  Create a service key of the service instance.
@@ -23,7 +23,7 @@ The Destination service lets you declaratively model a technical connection as a
         -   Reference the Kubernetes secret by providing \`config.integration.destinationService.instances\[n\].serviceCredentials.secretName\`. The secret data format can be either single-key or multi-key \(e.g., secrets created by the BTP Operator for services and bindings inside a Kubernetes cluster\).
             -   If the secret data key format is single-key, you should also provide the value of that key as \`config.integration.destinationService.instances\[n\].serviceCredentials.secretKey\`.
 
-            -   If the secret is not in the same namespace as the transparent proxy, also provide \`config.integration.destinationService.instances\[n\].serviceCredentials.secretNamespace\`.
+            -   If the secret is not in the same namespace as the Transparent Proxy, also provide \`config.integration.destinationService.instances\[n\].serviceCredentials.secretNamespace\`.
 
 
     -   Option 2. Pass a secret holding the Destination service key directly in the Helm values.yaml

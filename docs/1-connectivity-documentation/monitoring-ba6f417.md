@@ -2,7 +2,7 @@
 
 # Monitoring
 
-Check the availability, status, and destination custom resources of the transparent proxy for Kubernetes.
+Check the availability, status, and destination custom resources of the Transparent Proxy for Kubernetes.
 
 
 
@@ -10,7 +10,7 @@ Check the availability, status, and destination custom resources of the transpar
 
 ## Availability Monitoring
 
-The availability check of the transparent proxy is the minimal verification that can be done to ensure that the transparent proxy is alive and working. This is done by a health check application deployed to the cluster during installation of the transparent proxy.
+The availability check of the Transparent Proxy is the minimal verification that can be done to ensure that the Transparent Proxy is alive and working. This is done by a health check application deployed to the cluster during installation of the Transparent Proxy.
 
 
 
@@ -36,7 +36,7 @@ The overall status provided by the `/status` endpoint is formed in the following
 
 ## Destination Custom Resources Check
 
-The `/destinationCRs` check provides information for all destination custom resources in the namespace where the transparent proxy is installed.
+The `/destinationCRs` check provides information for all destination custom resources in the namespace where the Transparent Proxy is installed.
 
 To find an example, see [Verification and Testing](verification-and-testing-86dde3e.md).
 
@@ -46,7 +46,7 @@ To find an example, see [Verification and Testing](verification-and-testing-86dd
 
 ## Monitoring
 
-The transparent proxy supports the collection and exposure of metrics in *OpenMetrics* format.
+The Transparent Proxy supports the collection and exposure of metrics in *OpenMetrics* format.
 
 The metrics are exposed through an HTTP endpoint on port **9494**.
 
@@ -59,7 +59,7 @@ config:
       enabled: true
 ```
 
-To obtain the collected metrics, send an `HTTP GET` request to the `/metrics` endpoint on any of the transparent proxy components.
+To obtain the collected metrics, send an `HTTP GET` request to the `/metrics` endpoint on any of the Transparent Proxy components.
 
 ```
 curl http://sap-transp-proxy-manager-metrics.<transparent-proxy-namespace>:9494/metrics // Obtain metrics for sap-transp-proxy-manager

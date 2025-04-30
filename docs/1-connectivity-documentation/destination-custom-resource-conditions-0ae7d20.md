@@ -2,7 +2,7 @@
 
 # Destination Custom Resource Conditions
 
-Find an overview of destination custom resource conditions for the transparent proxy for Kubernetes.
+Find an overview of destination custom resource conditions for the Transparent Proxy for Kubernetes.
 
 
 <table>
@@ -26,7 +26,7 @@ The call to the [Kubernetes service](https://kubernetes.io/docs/concepts/service
 </td>
 <td valign="top">
 
-Make sure the URL configured in the destination is valid. Wait for the next transparent proxy manager completion.
+Make sure the URL configured in the destination is valid. Wait for the next Transparent Proxy manager completion.
 
 </td>
 </tr>
@@ -261,12 +261,12 @@ Check Auth Configuration fields or your request headers in the referenced destin
 <tr>
 <td valign="top">
 
-The call to the Kubernetes service referencing your destination returns response with status code 502 and has response header 'x-error-message' with value 'On-Premise technical connectivity is not configured. There is no value provided for connectivity proxy service name.' and 'Transparent Proxy' value in the 'x-error-origin' header.
+The call to the Kubernetes service referencing your destination returns response with status code 502 and has response header 'x-error-message' with value 'On-Premise technical connectivity is not configured. There is no value provided for Connectivity Proxy service name.' and 'Transparent Proxy' value in the 'x-error-origin' header.
 
 </td>
 <td valign="top">
 
-Make sure you provide correct Connectivity proxy serviceName in Helm Configurations.
+Make sure you provide correct Connectivity Proxy serviceName in Helm Configurations.
 
 </td>
 </tr>
@@ -544,7 +544,7 @@ The last condition of type "Available" of the destinations.destination.connectiv
 </td>
 <td valign="top">
 
-The Connectivity proxy should be configured with the same tenant mode as the Transparent proxy.
+The Connectivity Proxy should be configured with the same tenant mode as the Transparent Proxy.
 
 </td>
 </tr>
@@ -556,7 +556,7 @@ The last condition of type "Available" of the destinations.destination.connectiv
 </td>
 <td valign="top">
 
-The Connectivity proxy should be configured with the same tenant mode as the Transparent proxy.
+The Connectivity Proxy should be configured with the same tenant mode as the Transparent Proxy.
 
 </td>
 </tr>
@@ -580,7 +580,7 @@ The last condition of type "Available" of the destinations.destination.connectiv
 </td>
 <td valign="top">
 
-Check the transparent proxy manager for error logs. The tenants Tenant1, Tenant2 could not be onboarded because either the specified destination is not found in the destination service for the given tenants, is not valid in the destinations service or creating k8s components for the given destination/tenant failed.
+Check the Transparent Proxy manager for error logs. The tenants Tenant1, Tenant2 could not be onboarded because either the specified destination is not found in the destination service for the given tenants, is not valid in the destinations service or creating k8s components for the given destination/tenant failed.
 
 </td>
 </tr>
@@ -712,7 +712,7 @@ The call to the Kubernetes service referencing your destination returns response
 </td>
 <td valign="top">
 
-The region id <regionId\> passed as SAP-Connectivity-Region-Configuration-Id header or statically configured for the given destination service instance in the transparent proxy configurations is not found in the connectivity proxy multi region configurations. Make sure that the used region id is existing in the connectivity proxy multi region configurations.
+The region id <regionId\> passed as SAP-Connectivity-Region-Configuration-Id header or statically configured for the given destination service instance in the Transparent Proxy configurations is not found in the Connectivity Proxy multi region configurations. Make sure that the used region id is existing in the Connectivity Proxy multi region configurations.
 
 </td>
 </tr>
@@ -724,19 +724,19 @@ The call to the Kubernetes service referencing your destination returns response
 </td>
 <td valign="top">
 
-You should either pass SAP-Connectivity-Region-Configuration-Id header or statically configure the region for the given destination service instance in the transparent proxy configurations.
+You should either pass SAP-Connectivity-Region-Configuration-Id header or statically configure the region for the given destination service instance in the Transparent Proxy configurations.
 
 </td>
 </tr>
 <tr>
 <td valign="top">
 
-The call to the Kubernetes service referencing your destination returns response with status code 502, response header 'x-error-message' with value "Invalid Connectivity proxy instance configuration. Contact the local Kubernetes cluster administrator to inspect the Connectivity Proxy deployment configuration.", response header 'x-error-origin' with value " Transparent Proxy".
+The call to the Kubernetes service referencing your destination returns response with status code 502, response header 'x-error-message' with value "Invalid Connectivity Proxy instance configuration. Contact the local Kubernetes cluster administrator to inspect the Connectivity Proxy deployment configuration.", response header 'x-error-origin' with value " Transparent Proxy".
 
 </td>
 <td valign="top">
 
-The connectivity proxy multi region config map does not exist.
+The Connectivity Proxy multi-region config map does not exist.
 
 </td>
 </tr>
@@ -748,7 +748,7 @@ The call to the Kubernetes service referencing your destination returns response
 </td>
 <td valign="top">
 
-The secret referenced by the connectivity proxy region configuration named <regionName\> does not exist or is invalid.
+The secret referenced by the Connectivity Proxy region configuration named <regionName\> does not exist or is invalid.
 
 </td>
 </tr>

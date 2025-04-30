@@ -1,6 +1,6 @@
 <!-- loiob08590694eac43a7ad21e33b391f13cf -->
 
-# Destination Fragments
+# Manage Destination Fragments
 
 Destination fragments are objects used to override and extend destination properties through the Destination service REST API.
 

@@ -236,7 +236,7 @@ When this property is set, the user ID in the `NameId` tag of the generated SAML
 
 Contains the name of the certificate configuration to be used for *per-destination* SAML assertion signing. This certificate will be used instead of the standard subaccount-wide signing key.
 
-For more information, see [Set up Trust Between Systems](set-up-trust-between-systems-82dbeca.md).
+For more information, see [Manage Trust](manage-trust-82dbeca.md).
 
 </td>
 </tr>

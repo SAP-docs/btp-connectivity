@@ -13,7 +13,7 @@ Follow the steps below to establish a service channel for a Kubernetes cluster \
 ## Prerequisites
 
 -   You have a service running in a Kubernetes cluster that is connected to your subaccount.
--   You have exposed your application to the connectivity proxy for Kubernetes.
+-   You have exposed your application to the Connectivity Proxy for Kubernetes.
 
     For more information, see [Service Channels: On-Premises-To-Cloud Connections](service-channels-on-premise-to-cloud-connectivity-bbd3040.md).
 

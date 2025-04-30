@@ -1,6 +1,6 @@
 <!-- loiodf1bb55a526942b9bee78fea2ebb3162 -->
 
-# Use Destination Certificates
+# Manage Destination Certificates
 
 Maintain certificates \(X.509 client certificates, trusted certificates, CA certificates, trust store and key store certificates\) in the **Destination Certificates** UI or the **Destinations** editor \(SAP BTP cockpit\).
 
@@ -178,5 +178,5 @@ You can maintain truststore and keystore certificates in the *Destinations* edit
 
 [Import Destinations](import-destinations-91ee9db.md)
 
-[Set up Trust Between Systems](set-up-trust-between-systems-82dbeca.md)
+[Manage Trust](manage-trust-82dbeca.md)
 

@@ -88,7 +88,7 @@ Back to [Steps](user-propagation-between-cloud-foundry-applications-8ebf60c.md#l
 
 ### Assemble IdP Metadata for Subaccount 1 
 
-1.  Download the X.509 certificate of subaccount 1. For instructions, see [Set up Trust Between Systems](set-up-trust-between-systems-82dbeca.md). The content of the file is shown as:
+1.  Download the X.509 certificate of subaccount 1. For instructions, see [Manage Trust](manage-trust-82dbeca.md). The content of the file is shown as:
 
     ```
     -----BEGIN CERTIFICATE-----<content>-----END CERTIFICATE-----

@@ -2,7 +2,7 @@
 
 # Restrict Access Using Scoping
 
-Define the access control scope of the destination custom resources for the transparent proxy for Kubernetes.
+Define the access control scope of the destination custom resources for the Transparent Proxy for Kubernetes.
 
 The scoping of access to destinations exposed via *destination custom resources* \(destination CRs\) is based on the *network policies* concept in Kubernetes.
 

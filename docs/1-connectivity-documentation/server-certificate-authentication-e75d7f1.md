@@ -62,7 +62,7 @@ Optional property. Can be used to specify the preferred TLS version to be used b
 
 Path to the keystore file which contains trusted certificates \(Certificate Authorities\) for authentication against a remote client.
 
-To find the allowed keystore file formats, see [Use Destination Certificates](use-destination-certificates-df1bb55.md).
+To find the allowed keystore file formats, see [Manage Destination Certificates](manage-destination-certificates-df1bb55.md).
 
 1.  The relative path to the keystore file. The root path is the server's location on the file system.
 2.  The name of the keystore file.
@@ -146,5 +146,5 @@ In case *<TrustAll\>* = `TRUE`, the *<HostnameVerifier\>* property is ignored so
 **Related Information**  
 
 
-[Client Authentication Types for HTTP Destinations](client-authentication-types-for-http-destinations-4e13a04.md "Find details about client authentication types for HTTP destinations.")
+[Client Certificate Authentication](client-certificate-authentication-4e13a04.md "Create and configure a Client Certificate destination for an application.")
 

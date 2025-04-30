@@ -2,7 +2,7 @@
 
 # Technical User Propagation
 
-Configure *technical user propagation* for the transparent proxy for Kubernetes.
+Configure *technical user propagation* for the Transparent Proxy for Kubernetes.
 
 *Technical user propagation* is similar to *principal propagation*, but in this case, a technical user is propagated instead of a business user. The retrieval of the access token performs the OAuth 2.0 client credentials flow, according to the token service configurations in the destination.
 
@@ -12,7 +12,7 @@ Configure *technical user propagation* for the transparent proxy for Kubernetes.
 
 ## Prerequisites
 
-The transparent proxy handles HTTP communication protocol for on-premise destinations which use *technical user propagation*.
+The Transparent Proxy handles HTTP communication protocol for on-premise destinations which use *technical user propagation*.
 
 To integrate this functionality, you must:
 
@@ -38,7 +38,7 @@ This destination should have `Type` "HTTP" and `Authentication` "OAuth2Technical
 > }
 > ```
 
-To target the destination with the name "example-dest-technical-user-propagation" for handling by the transparent proxy, you should create a [Destination Custom Resource](destination-custom-resource-fc7951e.md) in a namespace of your choice.
+To target the destination with the name "example-dest-technical-user-propagation" for handling by the Transparent Proxy, you should create a [Destination Custom Resource](destination-custom-resource-fc7951e.md) in a namespace of your choice.
 
 **Destination CR for a Technical User Propagation Destination**
 
@@ -60,7 +60,7 @@ To target the destination with the name "example-dest-technical-user-propagation
 
 ## Consumption
 
-For the consumption of a destination with *technical user propagation*, the technical user is obtained from the destination by the transparent proxy, forwarded to the [Connectivity Proxy for Kubernetes](connectivity-proxy-for-kubernetes-e661713.md), and then to the [Cloud Connector](cloud-connector-e6c7616.md), which validates and further processes it to establish SSO with the on-premise system.
+For the consumption of a destination with *technical user propagation*, the technical user is obtained from the destination by the Transparent Proxy, forwarded to the [Connectivity Proxy for Kubernetes](connectivity-proxy-for-kubernetes-e661713.md), and then to the [Cloud Connector](cloud-connector-e6c7616.md), which validates and further processes it to establish SSO with the on-premise system.
 
 For more information, see  [Authenticating Users against On-Premises Systems](authenticating-users-against-on-premises-systems-b643fbe.md) and [Configuring Technical User Propagation](configuring-technical-user-propagation-b62e588.md).
 
@@ -74,7 +74,7 @@ For more information, see  [Authenticating Users against On-Premises Systems](
 > function callHttpDestinationTechnicalUserPropagation() {
 >   url = '<destination-cr-name>.<destination-cr-namespace>'
 >   headers = {
->             // X-Tenant-Subdomain is required only when transparent proxy is in shared tenant mode
+>             // X-Tenant-Subdomain is required only when Transparent Proxy is in shared tenant mode
 >             'X-Tenant-Subdomain': '<tenant-where-destination-is-located>',
 >         }
 >      

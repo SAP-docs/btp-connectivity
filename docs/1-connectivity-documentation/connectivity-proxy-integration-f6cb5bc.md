@@ -2,19 +2,19 @@
 
 # Connectivity Proxy Integration
 
-Integrate the transparent proxy with the connectivity proxy for Kubernetes.
+Integrate the Transparent Proxy with the Connectivity Proxy for Kubernetes.
 
-The connectivity proxy is a Kubernetes component that connects workloads running on a Kubernetes cluster to on-premise systems exposed via the [Cloud Connector](cloud-connector-e6c7616.md). The transparent proxy itself doesn’t provide direct connections to on-premise systems, that is, the connectivity proxy integration is mandatory for the transparent proxy to route to on-premise destinations. To integrate the transparent proxy with the connectivity proxy, you must:
+The Connectivity Proxy is a Kubernetes component that connects workloads running on a Kubernetes cluster to on-premise systems exposed via the [Cloud Connector](cloud-connector-e6c7616.md). The Transparent Proxy itself doesn’t provide direct connections to on-premise systems, that is, the Connectivity Proxy integration is mandatory for the Transparent Proxy to route to on-premise destinations. To integrate the Transparent Proxy with the Connectivity Proxy, you must:
 
-1.  Install a connectivity proxy instance or reuse an existing one. It must be installed in the same Kubernetes cluster where the transparent proxy is installed.
+1.  Install a Connectivity Proxy instance or reuse an existing one. It must be installed in the same Kubernetes cluster where the Transparent Proxy is installed.
 
     For more information, see [Lifecycle Management](lifecycle-management-60c0a45.md).
 
-2.  Follow the instructions under [Lifecycle Management](lifecycle-management-1c18e0c.md) and set up the `values.yaml` for integrating with the connectivity proxy, providing the `config.integration.connectivityProxy.serviceName`.
+2.  Follow the instructions under [Lifecycle Management](lifecycle-management-1c18e0c.md) and set up the `values.yaml` for integrating with the Connectivity Proxy, providing the `config.integration.connectivityProxy.serviceName`.
 
     For more information, see [Configuration Guide](configuration-guide-2a22cd7.md).
 
-3.  If the connectivity proxy runs in multi-region mode, you can link a transparent proxy configuration for a Destination service instance with a connectivity proxy local region configuration. This can be done at design time by adding an association. Doing this, you won't need to provide the HTTP header `SAP-Connectivity-Region-Configuration-Id` on each request - the transparent proxy will automatically pass it to the connectivity proxy:
+3.  If the Connectivity Proxy runs in multi-region mode, you can link a Transparent Proxy configuration for a Destination service instance with a Connectivity Proxy local region configuration. This can be done at design time by adding an association. Doing this, you won't need to provide the HTTP header `SAP-Connectivity-Region-Configuration-Id` on each request - the Transparent Proxy will automatically pass it to the Connectivity Proxy:
 
 > ### Note:  
 > To use the Cloud Connector with a specified *Location ID*, you have two options:
@@ -37,7 +37,7 @@ The connectivity proxy is a Kubernetes component that connects workloads running
 >       connectionTimeoutSeconds: 1
 > ```
 
-**Association of a local region of connectivity proxy with a Destination service instance in transparent proxy** 
+**Association of a local region of Connectivity Proxy with a Destination service instance in Transparent Proxy** 
 
 > ### Sample Code:  
 > ```
@@ -58,5 +58,5 @@ The connectivity proxy is a Kubernetes component that connects workloads running
 **Related Information**  
 
 
-[Connectivity Proxy for Kubernetes](connectivity-proxy-for-kubernetes-e661713.md "Use the connectivity proxy for Kubernetes to connect workloads on a Kubernetes cluster to on-premise systems.")
+[Connectivity Proxy for Kubernetes](connectivity-proxy-for-kubernetes-e661713.md "Use the Connectivity Proxy for Kubernetes to connect workloads on a Kubernetes cluster to on-premise systems.")
 

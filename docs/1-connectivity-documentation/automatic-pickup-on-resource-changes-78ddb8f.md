@@ -2,9 +2,9 @@
 
 # Automatic Pickup on Resource Changes
 
-Configure automatic pickup on resource changes for the connectivity proxy.
+Configure automatic pickup on resource changes for the Connectivity Proxy.
 
-The connectivity proxy can automatically pick up changes in secrets and configmaps. This is achieved by performing a rolling restart when a resource is modified.
+The Connectivity Proxy can automatically pick up changes in secrets and configmaps. This is achieved by performing a rolling restart when a resource is modified.
 
 
 
@@ -12,7 +12,7 @@ The connectivity proxy can automatically pick up changes in secrets and configma
 
 ## Restart Watcher
 
-The restart watcher is responsible for picking up changes in the above-mentioned resources, and for restarting the connectivity proxy if given conditions are met.
+The restart watcher is responsible for picking up changes in the above-mentioned resources, and for restarting the Connectivity Proxy if given conditions are met.
 
 It will be informed for changes in a secret or configmap containing the label *connectivityproxy.sap.com/restart*.
 
@@ -25,10 +25,10 @@ deployment:
 ```
 
 > ### Note:  
-> The restart watcher is unique for every Helm installation of the connectivity proxy and will be deployed as a part of it.
+> The restart watcher is unique for every Helm installation of the Connectivity Proxy and will be deployed as a part of it.
 
 > ### Caution:  
-> If the connectivity proxy:
+> If the Connectivity Proxy:
 > 
 > -   is with initial installation version < 2.5.0
 > -   is upgraded via Helm to version 2.5.0 or higher
@@ -47,7 +47,7 @@ deployment:
 
 Тhe restart watcher checks for two possible values of the label *connectivityproxy.sap.com/restart*:
 
--   if the value is an empty string, the restart watcher will perform a rolling update on the connectivity proxy, based on respective Helm installation.
+-   if the value is an empty string, the restart watcher will perform a rolling update on the Connectivity Proxy, based on respective Helm installation.
 -   if the value has the form `<helm_installation_name>.<namespace>`, the restart watcher will perform a rolling restart only if the values of `<helm_Installation_name>` and `<namespace>` match the watcher's installation and namespace.
 -   for all other possible values, the restart watcher will not perform a restart.
 
@@ -57,6 +57,6 @@ deployment:
 
 ## Examples
 
--   You have a Helm installation in the *default* namespace and a secret with label *connectivityproxy.sap.com/restart: ""* \(with value empty string\) in namespace *test*. In this case, the connectivity proxy installation in namespace *default* will be restarted for every change of the secret.
--   You have a Helm installation with name *connectivity-proxy* in namespace *test*, and a configmap with name *test-configmap* and label *connectivityproxy.sap.com/restart* : *connectivity-proxy.test*. In this case, the connectivity proxy will be restarted for every change of the configmap. However, if you have another installation in the same namespace *test* but with name *connectivity-proxy2*, restarts will not be triggered on it based on changes of the *configmap test-configmap*.
+-   You have a Helm installation in the *default* namespace and a secret with label *connectivityproxy.sap.com/restart: ""* \(with value empty string\) in namespace *test*. In this case, the Connectivity Proxy installation in namespace *default* will be restarted for every change of the secret.
+-   You have a Helm installation with name *connectivity-proxy* in namespace *test*, and a configmap with name *test-configmap* and label *connectivityproxy.sap.com/restart* : *connectivity-proxy.test*. In this case, the Connectivity Proxy will be restarted for every change of the configmap. However, if you have another installation in the same namespace *test* but with name *connectivity-proxy2*, restarts will not be triggered on it based on changes of the *configmap test-configmap*.
 

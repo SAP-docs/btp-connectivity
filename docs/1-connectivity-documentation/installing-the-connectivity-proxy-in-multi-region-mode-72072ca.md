@@ -2,7 +2,7 @@
 
 # Installing the Connectivity Proxy in Multi-Region Mode
 
-Use a single connectivity proxy installation for your global account.
+Use a single Connectivity Proxy installation for your global account.
 
 
 
@@ -10,9 +10,9 @@ Use a single connectivity proxy installation for your global account.
 
 ## Overview
 
-The connectivity proxy can operate in multi-region mode.
+The Connectivity Proxy can operate in multi-region mode.
 
-SAP BTP regions represent locations \(of data centers\) like eu10, eu20, us10, us20, and so on. Using the multi-region mode, a single connectivity proxy installation can operate in different regions which, however, must be part of the same landscape \(global account\). Otherwise, the uniqueness of subaccount IDs is not guaranteed.
+SAP BTP regions represent locations \(of data centers\) like eu10, eu20, us10, us20, and so on. Using the multi-region mode, a single Connectivity Proxy installation can operate in different regions which, however, must be part of the same landscape \(global account\). Otherwise, the uniqueness of subaccount IDs is not guaranteed.
 
 ![](images/CS_CP_Multi_Region_5e8bfda.png)
 
@@ -22,9 +22,9 @@ SAP BTP regions represent locations \(of data centers\) like eu10, eu20, us10, u
 
 ## Why is the Multi-Region Mode Valuable?
 
-Using the multi-region mode, you can install *a single connectivity proxy* for your global account. Applications - deployed in different regions or in different subaccounts within the same region - can consume the Connectivity service through this single connectivity proxy instance.
+Using the multi-region mode, you can install *a single Connectivity Proxy* for your global account. Applications - deployed in different regions or in different subaccounts within the same region - can consume the Connectivity service through this single Connectivity Proxy instance.
 
-Without multi-region mode, you must install *one connectivity proxy for every region* where applications on cloud side need to consume the Connectivity service. This setup requires considerably more maintenance effort and consumes a lot more resources than just a single \(multi-region\) instance.
+Without multi-region mode, you must install *one Connectivity Proxy for every region* where applications on cloud side need to consume the Connectivity service. This setup requires considerably more maintenance effort and consumes a lot more resources than just a single \(multi-region\) instance.
 
 
 
@@ -41,7 +41,7 @@ Without multi-region mode, you must install *one connectivity proxy for every re
           secretData: <base64 encoded service key>
     ```
 
-    In ***multi-region mode***, you can assign different regions to a single connectivity proxy instance. Consequently, the service keys for each region are needed. In this case, you cannot configure the keys through the *values.yaml* file. Instead, you must put them into secrets, and then specify them in a *ConfigMap*.
+    In ***multi-region mode***, you can assign different regions to a single Connectivity Proxy instance. Consequently, the service keys for each region are needed. In this case, you cannot configure the keys through the *values.yaml* file. Instead, you must put them into secrets, and then specify them in a *ConfigMap*.
 
     Let's create a *ConfigMap* containing two region configurations.
 
@@ -103,11 +103,11 @@ Without multi-region mode, you must install *one connectivity proxy for every re
     ```
 
     > ### Note:  
-    > When multi-region mode is enabled, the connectivity proxy operates in multi-tenant mode. Therefore, you must set the `tenantMode` property to *shared*.
+    > When multi-region mode is enabled, the Connectivity Proxy operates in multi-tenant mode. Therefore, you must set the `tenantMode` property to *shared*.
 
 
 > ### Caution:  
-> If the connectivity proxy is installed in [non-trusted mode](operational-modes-148bbad.md) \(or proxy authorization is enabled\), the [allowed client IDs](security-proxy-authorization-96fc958.md) for all region configurations must be specified in the *ConfigMap*:
+> If the Connectivity Proxy is installed in [non-trusted mode](operational-modes-148bbad.md) \(or proxy authorization is enabled\), the [allowed client IDs](security-proxy-authorization-96fc958.md) for all region configurations must be specified in the *ConfigMap*:
 > 
 > ```
 > apiVersion: v1
@@ -128,10 +128,10 @@ Without multi-region mode, you must install *one connectivity proxy for every re
 
 ## Consume the Connectivity Proxy in Multi-Region Mode
 
-If multi-region mode is enabled, you must send the header `SAP-Connectivity-Region-Configuration-Id` with every request made to the connectivity proxy.
+If multi-region mode is enabled, you must send the header `SAP-Connectivity-Region-Configuration-Id` with every request made to the Connectivity Proxy.
 
 > ### Remember:  
-> Keep in mind that the correct token for each region configuration must be sent. Sending an access token/authorization token to the proxy is required with every request, because the connectivity proxy is working in multi-tenant mode.
+> Keep in mind that the correct token for each region configuration must be sent. Sending an access token/authorization token to the proxy is required with every request, because the Connectivity Proxy is working in multi-tenant mode.
 
 An example for a request with curl through the HTTP protocol:
 
@@ -161,10 +161,10 @@ In this case, the request is for a region configuration with ID *region1* in the
 
 ## Change Region Configuration
 
-As an operator of the connectivity proxy, at some point you might need to make a change in the region configurations *ConfigMap* or in any of the secrets containing service credentials. For example, add or remove a region configuration, or change the service credentials in a secret. This can be done any time, and no further actions are needed to make the connectivity proxy start working with the performed changes:
+As an operator of the Connectivity Proxy, at some point you might need to make a change in the region configurations *ConfigMap* or in any of the secrets containing service credentials. For example, add or remove a region configuration, or change the service credentials in a secret. This can be done any time, and no further actions are needed to make the Connectivity Proxy start working with the performed changes:
 
--   After a short period of time, the changes will be picked up automatically by the connectivity proxy.
+-   After a short period of time, the changes will be picked up automatically by the Connectivity Proxy.
 -   A potentially required restart is also done automatically.
--   The restart of the connectivity proxy's pods is rolling.
+-   The restart of the Connectivity Proxy's pods is rolling.
 -   If high availability mode is enabled, no downtime is expected.
 

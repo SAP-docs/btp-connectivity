@@ -2,11 +2,11 @@
 
 # TCP Destinations
 
-The transparent proxy simplifies access to target systems defined as TCP destinations. It handles the TCP protocol for on-premise destinations.
+The Transparent Proxy simplifies access to target systems defined as TCP destinations. It handles the TCP protocol for on-premise destinations.
 
-The connectivity proxy provides a SOCKS5 proxy interface that you can use to access on-premise systems via TCP-based protocols. SOCKS5 is the industry standard for proxying TCP-based traffic. For more information, see [RFC 1928](https://www.ietf.org/rfc/rfc1928.txt).
+The Connectivity Proxy provides a SOCKS5 proxy interface that you can use to access on-premise systems via TCP-based protocols. SOCKS5 is the industry standard for proxying TCP-based traffic. For more information, see [RFC 1928](https://www.ietf.org/rfc/rfc1928.txt).
 
-The transparent proxy performs the SOCKS5 handshake with the [Connectivity Proxy for Kubernetes](connectivity-proxy-for-kubernetes-e661713.md) to enable the consumption of that \(otherwise complex\) functionality out-of-the-box for the application developer.
+The Transparent Proxy performs the SOCKS5 handshake with the [Connectivity Proxy for Kubernetes](connectivity-proxy-for-kubernetes-e661713.md) to enable the consumption of that \(otherwise complex\) functionality out-of-the-box for the application developer.
 
 **Mandatory Destination Configuration Fields**
 
@@ -99,9 +99,9 @@ This destination must have `Type` "TCP" and `ProxyType` "OnPremise".
 > }
 > ```
 
-To target the destination with the name "example-dest-tcp" for handling by the transparent proxy, you should create a [Destination Custom Resource](destination-custom-resource-fc7951e.md) in a namespace of your choice.
+To target the destination with the name "example-dest-tcp" for handling by the Transparent Proxy, you should create a [Destination Custom Resource](destination-custom-resource-fc7951e.md) in a namespace of your choice.
 
-**Destination CR for a TCP destination in transparent proxy *dedicated* mode**
+**Destination CR for a TCP destination in Transparent Proxy *dedicated* mode**
 
 > ### Sample Code:  
 > ```
@@ -115,13 +115,13 @@ To target the destination with the name "example-dest-tcp" for handling by the t
 >   destinationServiceInstanceName: <dest-service-instance-name> // can be ommited if config.destinationService.defaultInstanceName is provided
 > ```
 
-The transparent proxy will create a [Kubernetes Service](https://kubernetes.io/docs/concepts/services-networking/service/) for that destination on port 20004 \(unless another port is specified in the destination CR\).
+The Transparent Proxy will create a [Kubernetes Service](https://kubernetes.io/docs/concepts/services-networking/service/) for that destination on port 20004 \(unless another port is specified in the destination CR\).
 
 **Multitenant Usage** 
 
-The transparent proxy supports multitenancy for TCP destinations. To consume a target system in a multitenant manner, describe all tenants in the *transparent-proxy.connectivity.api.sap/tenant-subdomains* annotation:
+The Transparent Proxy supports multitenancy for TCP destinations. To consume a target system in a multitenant manner, describe all tenants in the *transparent-proxy.connectivity.api.sap/tenant-subdomains* annotation:
 
-**Destination CR for a TCP destination in transparent proxy *shared* mode** 
+**Destination CR for a TCP destination in Transparent Proxy *shared* mode** 
 
 > ### Sample Code:  
 > ```
@@ -136,7 +136,7 @@ The transparent proxy supports multitenancy for TCP destinations. To consume a t
 >   destinationServiceInstanceName: <dest-service-instance-name> // can be ommited if config.destinationService.defaultInstanceName is provided
 > ```
 
-The transparent proxy will create a [Kubernetes Service](https://kubernetes.io/docs/concepts/services-networking/service/) for each of the tenants described in the *transparent-proxy.connectivity.api.sap/tenant-subdomains* annotation. The names of the Kubernetes services will be: <destination-cr-name\>-<tenant-subdomain\>.
+The Transparent Proxy will create a [Kubernetes Service](https://kubernetes.io/docs/concepts/services-networking/service/) for each of the tenants described in the *transparent-proxy.connectivity.api.sap/tenant-subdomains* annotation. The names of the Kubernetes services will be: <destination-cr-name\>-<tenant-subdomain\>.
 
 
 

@@ -2,14 +2,14 @@
 
 # Multitenancy
 
-Use multitenancy for the transparent proxy for Kubernetes.
+Use multitenancy for the Transparent Proxy for Kubernetes.
 
-The transparent proxy works in two tenant modes: *dedicated* and *shared*. You can change the mode by modifying the Helm property `.config.tenantMode`.
+The Transparent Proxy works in two tenant modes: *dedicated* and *shared*. You can change the mode by modifying the Helm property `.config.tenantMode`.
 
 For more information, see [Configuration Guide](configuration-guide-2a22cd7.md).
 
--   In the *dedicated* tenant mode, the transparent proxy exposes destinations only from the linked Destination service instance and its subaccount. Requests to the transparent proxy remain unchanged.
--   In the *shared* tenant mode, the transparent proxy exposes destinations from any subscribed tenant.
+-   In the *dedicated* tenant mode, the Transparent Proxy exposes destinations only from the linked Destination service instance and its subaccount. Requests to the Transparent Proxy remain unchanged.
+-   In the *shared* tenant mode, the Transparent Proxy exposes destinations from any subscribed tenant.
 
 
 
@@ -17,7 +17,7 @@ For more information, see [Configuration Guide](configuration-guide-2a22cd7.md).
 
 ## HTTP
 
-When requesting a destination through the transparent proxy in shared tenant mode, you must pass the `X-Tenant-Subdomain: <tenant-subdomain>` or `X-Tenant-Id: <tenant-id>` header.
+When requesting a destination through the Transparent Proxy in shared tenant mode, you must pass the `X-Tenant-Subdomain: <tenant-subdomain>` or `X-Tenant-Id: <tenant-id>` header.
 
 A tenant is successfully onboarded when it is visible in the destination custom resource status. The onboarding of a tenant is dynamic and happens during the first request on behalf of that tenant.
 
@@ -33,7 +33,7 @@ Tenants are configured in the destination custom resource \(CR\) as an annotatio
 "transparent-proxy.connectivity.api.sap/tenant-subdomains": '["tenantSubdomain1", "tenantSubdomain2", ...]'
 ```
 
-The transparent proxy will create a [Kubernetes Service](https://kubernetes.io/docs/concepts/services-networking/service/) for each of the tenants described in the `transparent-proxy.connectivity.api.sap/tenant-subdomains` annotation. The names of the Kubernetes services will be: `<destination-cr-name>-<tenant-subdomain>`.
+The Transparent Proxy will create a [Kubernetes Service](https://kubernetes.io/docs/concepts/services-networking/service/) for each of the tenants described in the `transparent-proxy.connectivity.api.sap/tenant-subdomains` annotation. The names of the Kubernetes services will be: `<destination-cr-name>-<tenant-subdomain>`.
 
 Each tenant is successfully onboarded when it is visible in a Destination CR status.
 

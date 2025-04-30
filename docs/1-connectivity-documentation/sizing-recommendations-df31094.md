@@ -10,7 +10,7 @@ When installing a transpartent proxy for Kubernetes, the first thing you need to
 
 ## Overview
 
-To get the most out of the transparent proxy, you must configure it in a suitable way, fitting the scenarios in which it plays a role.
+To get the most out of the Transparent Proxy, you must configure it in a suitable way, fitting the scenarios in which it plays a role.
 
 
 
@@ -403,17 +403,17 @@ XL:
 > ### Note:  
 > **Relation to Connectivity Proxy**
 > 
-> The above-mentioned sizing recommendations for the TCP proxies are related to the connectivity proxy software component, which also acts as a tunnel server to the on-premise systems it connects to. This means that the connectivity proxy has to be properly sized as well, see [Sizing Recommendations](sizing-recommendations-204822a.md) \(connectivity proxy for Kubernetes\).
+> The above-mentioned sizing recommendations for the TCP proxies are related to the Connectivity Proxy software component, which also acts as a tunnel server to the on-premise systems it connects to. This means that the Connectivity Proxy has to be properly sized as well, see [Sizing Recommendations](sizing-recommendations-204822a.md) \(Connectivity Proxy for Kubernetes\).
 
 > ### Note:  
 > **General Note**
 > 
-> These sizing recommendations are just a direction point. There are many factors that affect the performance offered by the transparent proxy, related to the specifics of your concrete scenarios, expected regular and intermittent load, and so on.
+> These sizing recommendations are just a direction point. There are many factors that affect the performance offered by the Transparent Proxy, related to the specifics of your concrete scenarios, expected regular and intermittent load, and so on.
 > 
-> The tests were made with the transparent proxy in *dedicated* mode with 50 HTTP or TCP destination custom resources applied respectively.
+> The tests were made with the Transparent Proxy in *dedicated* mode with 50 HTTP or TCP destination custom resources applied respectively.
 
 > ### Note:  
 > **General Note**
 > 
-> These sizing recommendations are aligned with the *Pod Quality* of *Service Classes*, specifically the *Guaranteed* class. The transparent proxy components have the strictest resource limits, making them the least likely to face eviction.
+> These sizing recommendations are aligned with the *Pod Quality* of *Service Classes*, specifically the *Guaranteed* class. The Transparent Proxy components have the strictest resource limits, making them the least likely to face eviction.
 

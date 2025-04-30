@@ -2,7 +2,7 @@
 
 # Installation with Operator
 
-Use the operator to install the transparent proxy for Kubernetes.
+Use the operator to install the Transparent Proxy for Kubernetes.
 
 
 
@@ -12,11 +12,11 @@ Use the operator to install the transparent proxy for Kubernetes.
 
 **Integration with Destination Service**
 
-You need an existing Destination service instance so the transparent proxy can link to it. If the [SAP BTP Service Operator](https://github.com/SAP/sap-btp-service-operator) is installed in your Kubernetes cluster, the transparent proxy will automatically create a Destination service instance in your Kubernetes cluster and link to it.
+You need an existing Destination service instance so the Transparent Proxy can link to it. If the [SAP BTP Service Operator](https://github.com/SAP/sap-btp-service-operator) is installed in your Kubernetes cluster, the Transparent Proxy will automatically create a Destination service instance in your Kubernetes cluster and link to it.
 
 **Encryption**
 
-Istio injection is enabled by default. If Istio is present in the cluster, traffic between the workloads will be encrypted, making your installation more secure. The communication with the transparent proxy will be secure, as well as the communication from the transparent proxy to the connectivity proxy, if a connectivity proxy is present.
+Istio injection is enabled by default. If Istio is present in the cluster, traffic between the workloads will be encrypted, making your installation more secure. The communication with the Transparent Proxy will be secure, as well as the communication from the Transparent Proxy to the Connectivity Proxy, if a Connectivity Proxy is present.
 
 If Istio is not present, you should configure encryption with the [cert-manager](https://cert-manager.io/). Check the [Configuration Guide](configuration-guide-2a22cd7.md) to modify the configuration settings according to your setup, for example, referencing your cert-manager `Issuer` or `ClusterIssuer`.
 
@@ -26,14 +26,14 @@ If Istio is not present, you should configure encryption with the [cert-manager]
 
 ## Deploy/Upgrade
 
-The transparent proxy with [operator](transparent-proxy-operator-2d826aa.md) can be installed/upgraded in any Kubernetes cluster as follows:
+The Transparent Proxy with [operator](transparent-proxy-operator-2d826aa.md) can be installed/upgraded in any Kubernetes cluster as follows:
 
 Prerequisites:
 
 -   A Kubernetes cluster
 -   *kubectl* installed on your machine
 
-The installation will result in transparent proxy operator and transparent proxy installed with predefined configurations in your Kubernetes cluster. The transparent proxy configuration is located in the transparent proxy custom resource and can be found in the *sap-transp-proxy-system* namespace after installation. The default configuration is the following:
+The installation will result in Transparent Proxy operator and Transparent Proxy installed with predefined configurations in your Kubernetes cluster. The Transparent Proxy configuration is located in the Transparent Proxy custom resource and can be found in the *sap-transp-proxy-system* namespace after installation. The default configuration is the following:
 
 ```
 apiVersion: operator.kyma-project.io/v1alpha1
@@ -63,13 +63,13 @@ spec:
 
 **Deploy/Upgrade Using the SAP BTP Service Operator**
 
-This operation creates *service instance* and *service binding* custom resources in the *sap-transp-proxy-system* namespace, resulting in a destination service instance created in SAP BTP. This destination service instance is loaded in the transparent proxy configuration with name *sap-transp-proxy-default*.
+This operation creates *service instance* and *service binding* custom resources in the *sap-transp-proxy-system* namespace, resulting in a destination service instance created in SAP BTP. This destination service instance is loaded in the Transparent Proxy configuration with name *sap-transp-proxy-default*.
 
 > ### Note:  
-> To upgrade to a newer version, run the same command in a Kubernetes cluster where you have already used this script to install the transparent proxy.
+> To upgrade to a newer version, run the same command in a Kubernetes cluster where you have already used this script to install the Transparent Proxy.
 
 > ### Note:  
-> The upgrade operation will only upgrade to the newer version of the transparent proxy deployments without creating an additional destination service instance or changing configurations.
+> The upgrade operation will only upgrade to the newer version of the Transparent Proxy deployments without creating an additional destination service instance or changing configurations.
 
 Prerequisites:
 
@@ -81,13 +81,13 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/sap-software/btp-transpare
 
 **Deploy/Upgrade Using a Destination Service Instance Key in Plain JSON Format**
 
-The automation script creates a Kubernetes secret containing the service instance and loads it into the transparent proxy configuration.
+The automation script creates a Kubernetes secret containing the service instance and loads it into the Transparent Proxy configuration.
 
 > ### Note:  
-> To upgrade, run the same command in a Kubernetes cluster where you have already used this script to install the transparent proxy.
+> To upgrade, run the same command in a Kubernetes cluster where you have already used this script to install the Transparent Proxy.
 
 > ### Note:  
-> The upgrade operation will update the transparent proxy to the latest version. If you select the name of an existing destination service instance configuration during this process, that configuration will be updated. All other configurations will remain unchanged.
+> The upgrade operation will update the Transparent Proxy to the latest version. If you select the name of an existing destination service instance configuration during this process, that configuration will be updated. All other configurations will remain unchanged.
 
 Prerequisites:
 
@@ -126,7 +126,7 @@ Required
 </td>
 <td valign="top">
 
-The local name of the Destination service instance present in the transparent proxy configuration. It can be later used to reference it in destination custom resources.
+The local name of the Destination service instance present in the Transparent Proxy configuration. It can be later used to reference it in destination custom resources.
 
 </td>
 <td valign="top">
@@ -156,13 +156,13 @@ True
 
 **Deploy/Upgrade Using a Kubernetes Secret Holding a Destination Service Instance Key**
 
-The automation script loads the Kubernetes secret into the transparent proxy configuration.
+The automation script loads the Kubernetes secret into the Transparent Proxy configuration.
 
 > ### Note:  
-> To upgrade, run the same command in a Kubernetes cluster where you have already used this script to install the transparent proxy.
+> To upgrade, run the same command in a Kubernetes cluster where you have already used this script to install the Transparent Proxy.
 
 > ### Note:  
-> The upgrade operation will update the transparent proxy to the latest version. If you select the name of an existing destination service instance configuration during this process, that configuration will be updated. All other configurations will remain unchanged.
+> The upgrade operation will update the Transparent Proxy to the latest version. If you select the name of an existing destination service instance configuration during this process, that configuration will be updated. All other configurations will remain unchanged.
 
 Prerequisites:
 
@@ -201,7 +201,7 @@ Required
 </td>
 <td valign="top">
 
-The local name of the Destination service instance present in the transparent proxy configuration. It can be later used to reference it in destination custom resources.
+The local name of the Destination service instance present in the Transparent Proxy configuration. It can be later used to reference it in destination custom resources.
 
 > ### Note:  
 > If not specified, the script uses the name of the Kubernetes secret.
@@ -274,14 +274,14 @@ True
 
 ## Undeploy
 
-To undeploy the transparent proxy and its operator, run:
+To undeploy the Transparent Proxy and its operator, run:
 
 ```
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/sap-software/btp-transparent-proxy/refs/heads/main/undeploy.sh)"
 ```
 
 > ### Caution:  
-> This action will delete all transparent proxy resources and instances that were previously created by the script or the operator.
+> This action will delete all Transparent Proxy resources and instances that were previously created by the script or the operator.
 
 
 

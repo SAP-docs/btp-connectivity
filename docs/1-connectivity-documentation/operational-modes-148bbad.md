@@ -2,9 +2,9 @@
 
 # Operational Modes
 
-Learn about the different operational modes of the connectivity proxy for Kubernetes.
+Learn about the different operational modes of the Connectivity Proxy for Kubernetes.
 
-The connectivity proxy can run in four different operational modes, based on two main categories:
+The Connectivity Proxy can run in four different operational modes, based on two main categories:
 
 -   Trust for the surrounding environment and the callers of the proxy
 -   Tenant usage of the proxy
@@ -25,7 +25,7 @@ Find below the details for each operational mode:
 
 ## Single-Tenant Usage: *Non-Trusted* Environment
 
-The connectivity proxy operates on behalf of a single, statically configured tenant. Applications cannot be trusted. The connectivity proxy is configured as follows:
+The Connectivity Proxy operates on behalf of a single, statically configured tenant. Applications cannot be trusted. The Connectivity Proxy is configured as follows:
 
 -   Proxy authorization is *enabled*.
 -   Tenant mode is *dedicated*.
@@ -42,7 +42,7 @@ The connectivity proxy operates on behalf of a single, statically configured ten
 
 ## Multi-Tenant Usage: *Non-Trusted* Environment
 
-The connectivity proxy operates on behalf of multiple tenants. Applications cannot be trusted. The connectivity proxy is configured as follows:
+The Connectivity Proxy operates on behalf of multiple tenants. Applications cannot be trusted. The Connectivity Proxy is configured as follows:
 
 -   Proxy authorization is *enabled*.
 -   Tenant mode is *shared*.
@@ -59,7 +59,7 @@ The connectivity proxy operates on behalf of multiple tenants. Applications cann
 
 ## Single-Tenant Usage: *Trusted* Environment
 
-The connectivity proxy operates on behalf of a single, statically configured tenant. Applications are trusted. The connectivity proxy is configured as follows:
+The Connectivity Proxy operates on behalf of a single, statically configured tenant. Applications are trusted. The Connectivity Proxy is configured as follows:
 
 -   Proxy authorization is *disabled*.
 -   Tenant mode is *dedicated*.
@@ -76,7 +76,7 @@ The connectivity proxy operates on behalf of a single, statically configured ten
 
 ## Multi-Tenant Usage: *Trusted* Environment
 
-The connectivity proxy operates on behalf of multiple tenants. Applications are trusted. Applications use service keys of the `connectivity_proxy` service instance of the `connectivity` service. The connectivity proxy is configured as follows:
+The Connectivity Proxy operates on behalf of multiple tenants. Applications are trusted. Applications use service keys of the `connectivity_proxy` service instance of the `connectivity` service. The Connectivity Proxy is configured as follows:
 
 -   Proxy authorization is *disabled*.
 -   Tenant mode is *shared*.
@@ -89,7 +89,7 @@ The connectivity proxy operates on behalf of multiple tenants. Applications are 
 **Related Information**  
 
 
-[Installing the Connectivity Proxy in Multi-Region Mode](installing-the-connectivity-proxy-in-multi-region-mode-72072ca.md "Use a single connectivity proxy installation for your global account.")
+[Installing the Connectivity Proxy in Multi-Region Mode](installing-the-connectivity-proxy-in-multi-region-mode-72072ca.md "Use a single Connectivity Proxy installation for your global account.")
 
-[Configuration Guide](configuration-guide-eaa8204.md "Find an overview of configuration parameters for the connectivity proxy for Kubernetes.")
+[Configuration Guide](configuration-guide-eaa8204.md "Find an overview of configuration parameters for the Connectivity Proxy for Kubernetes.")
 

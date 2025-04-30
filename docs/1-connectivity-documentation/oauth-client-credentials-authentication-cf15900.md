@@ -2,7 +2,7 @@
 
 # OAuth Client Credentials Authentication
 
-The transparent proxy handles the HTTP communication protocol for both Internet and on-premise destinations protected with the *OAuth Client Credentials* flow.
+The Transparent Proxy handles the HTTP communication protocol for both Internet and on-premise destinations protected with the *OAuth Client Credentials* flow.
 
 
 
@@ -29,7 +29,7 @@ To integrate this functionality, you must create an SAP BTP destination. This de
 > }
 > ```
 
-To target the destination with the name "example-dest-oauth-2-client-credentials" for handling by the transparent proxy, you should create a [Destination Custom Resource](destination-custom-resource-fc7951e.md) in a namespace of your choice.
+To target the destination with the name "example-dest-oauth-2-client-credentials" for handling by the Transparent Proxy, you should create a [Destination Custom Resource](destination-custom-resource-fc7951e.md) in a namespace of your choice.
 
 **Destination CR for an OAuth 2 Client Credentials Destination**
 
@@ -51,7 +51,7 @@ To target the destination with the name "example-dest-oauth-2-client-credentials
 
 ## Consumption
 
-For authentication type `OAuth2ClientCredentials`, no additional `Authorization` headers have to be provided to the transparent proxy as all necessary data for authorization is in the destination.
+For authentication type `OAuth2ClientCredentials`, no additional `Authorization` headers have to be provided to the Transparent Proxy as all necessary data for authorization is in the destination.
 
 > ### Note:  
 > `<destination-cr-namespace>` can be omitted if the destination custom resource is created in the same namespace as the application workload.
@@ -63,7 +63,7 @@ For authentication type `OAuth2ClientCredentials`, no additional `Authorization`
 > function callHttpsDestinationOAuth2ClientCredentials() {
 >   url = '<destination-cr-name>.<destination-cr-namespace>'
 >   headers = {
->             // X-Tenant-Subdomain is required only when transparent proxy is in shared tenant mode
+>             // X-Tenant-Subdomain is required only when Transparent Proxy is in shared tenant mode
 >             'X-Tenant-Subdomain': '<tenant-where-destination-is-located>'
 >             // Only when the tokenServiceURLType is 'Common'
 >             'X-Token-Service-Tenant': '<tenant-to-retrieve-oauth-token>'

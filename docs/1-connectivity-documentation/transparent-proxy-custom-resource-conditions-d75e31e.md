@@ -2,7 +2,7 @@
 
 # Transparent Proxy Custom Resource Conditions
 
-When installing the Transparent Proxy via the Transparent Proxy Operator or adding the Transparent Proxy module in Kyma environment, a Transparent Proxy custom resource is created in the 'sap-transp-proxy-system' namespace. In this custom resource, one can define the configuration for the Transparent Proxy and also receive information in the status conditions whether the installation is successful or not. If the installation is not successful, use the table below to find a solution for your problem.
+When installing the Transparent Proxy via the Transparent Proxy Operator or adding the Transparent Proxy module in Kyma environment, a Transparent Proxy custom resource is created in the 'sap-transp-proxy-system' namespace. In this custom resource, you can define the configuration for the Transparent Proxy and also receive information in the status conditions whether the installation is successful or not. If the installation is not successful, use the table below to find a solution for your problem.
 
 
 
@@ -10,7 +10,7 @@ Common Issues and Solutions
 
 For custom resources having Warning state refer to this table with issue/solution to the particular misconfiguration.
 
-Check the Configuration guide after identifying your misconfiguration in the transparent proxy custom resource conditions.
+Check the Configuration guide after identifying your misconfiguration in the Transparent Proxy custom resource conditions.
 
 
 <table>
@@ -118,7 +118,7 @@ Resource with apiVersion cert-manager.io/v1 and kind "<Issuer|ClusterIssuer\>" w
 </td>
 <td valign="top">
 
-The referenced Issuer or ClusterIssuer with apiVersion cert-manager.io/v1 is not found in the cluster. In case it is of type Issuer check the transparent proxy namespace and name. For ClusterIssuer check the name.
+The referenced Issuer or ClusterIssuer with apiVersion cert-manager.io/v1 is not found in the cluster. In case it is of type Issuer check the Transparent Proxy namespace and name. For ClusterIssuer check the name.
 
 </td>
 </tr>
@@ -193,12 +193,12 @@ Examples:
 <tr>
 <td valign="top">
 
-secretName should be provided for connectivity proxy service instance in shared mode.
+secretName should be provided for Connectivity Proxy service instance in shared mode.
 
 </td>
 <td valign="top">
 
-config.integration.connectivityProxy.serviceCredentials.secretName should be provided when config.integration.connectivityProxy.serviceName is not blank and connectivity proxy referenced by config.integration.connectivityProxy.serviceName is in shared mode.
+config.integration.connectivityProxy.serviceCredentials.secretName should be provided when config.integration.connectivityProxy.serviceName is not blank and Connectivity Proxy referenced by config.integration.connectivityProxy.serviceName is in shared mode.
 
 </td>
 </tr>

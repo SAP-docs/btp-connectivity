@@ -2,9 +2,9 @@
 
 # Certificate Manager
 
-Use the certificate manager for secure internal communication of the transparent proxy for Kubernetes.
+Use the certificate manager for secure internal communication of the Transparent Proxy for Kubernetes.
 
-If you do not integrate the transparent proxy with the Istio service mesh, you must encrypt the traffic between the micro-components. Transparent proxy can use either cert-manager.io, or cert.gardener.cloud to encrypt the communication via mTLS between the transparent proxy components.
+If you do not integrate the Transparent Proxy with the Istio service mesh, you must encrypt the traffic between the micro-components. Transparent proxy can use either cert-manager.io, or cert.gardener.cloud to encrypt the communication via mTLS between the Transparent Proxy components.
 
 
 
@@ -12,7 +12,7 @@ If you do not integrate the transparent proxy with the Istio service mesh, you m
 
 ## Prerequisites
 
-Internal communication between transparent proxy components can be made secure by setting the Helm property `.Values.config.security.communication.internal.encryptionEnabled` to `true`.
+Internal communication between Transparent Proxy components can be made secure by setting the Helm property `.Values.config.security.communication.internal.encryptionEnabled` to `true`.
 
 > ### Sample Code:  
 > ```
@@ -78,5 +78,5 @@ To integrate a certificate manager, follow these steps:
 > ```
 
 > ### Note:  
-> For more details about configuring the transparent proxy, check the [Configuration Guide](configuration-guide-2a22cd7.md).
+> For more details about configuring the Transparent Proxy, check the [Configuration Guide](configuration-guide-2a22cd7.md).
 

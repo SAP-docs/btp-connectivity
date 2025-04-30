@@ -42,7 +42,7 @@ You have logged into the cockpit and opened the *Destinations* editor.
     For details, see [HTTP Destinations](http-destinations-42a0e6b.md).
 
     > ### Note:  
-    > If you set an `HTTPS` destination, you need to also add a Trust Store. For more information, see [Use Destination Certificates](use-destination-certificates-df1bb55.md).
+    > If you set an `HTTPS` destination, you need to also add a Trust Store. For more information, see [Manage Destination Certificates](manage-destination-certificates-df1bb55.md).
 
 8.  \(Optional\) If you are using more than one Cloud Connector for your subaccount, you must enter the *<Location ID\>* of the target Cloud Connector.
 

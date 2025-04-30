@@ -76,9 +76,9 @@ Developer
     > 
     > As an alternative for technical user communication, we strongly recommend that you use one of these authentication types:
     > 
-    > -   Basic Authentication \(see [Client Authentication Types for HTTP Destinations](client-authentication-types-for-http-destinations-4e13a04.md)\)
+    > -   Basic Authentication \(see [Client Certificate Authentication](client-certificate-authentication-4e13a04.md)\)
     > 
-    > -   Client Certificate Authentication \(see [Client Authentication Types for HTTP Destinations](client-authentication-types-for-http-destinations-4e13a04.md)\)
+    > -   Client Certificate Authentication \(see [Client Certificate Authentication](client-certificate-authentication-4e13a04.md)\)
     > -   [OAuth Client Credentials Authentication](oauth-client-credentials-authentication-4e1d742.md)
     > 
     > To extend an OAuth access token's validity, consider using an OAuth refresh token.

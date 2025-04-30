@@ -2,9 +2,9 @@
 
 # Verification and Testing
 
-Check if the connectivity proxy for Kubernetes is operational.
+Check if the Connectivity Proxy for Kubernetes is operational.
 
-Once you have installed the connectivity proxy in your cluster, you can perform the following checks to verify it is running successfully.
+Once you have installed the Connectivity Proxy in your cluster, you can perform the following checks to verify it is running successfully.
 
 > ### Note:  
 > Before starting the checks, you must wait for a few seconds until all the components are started and can be consumed.
@@ -15,7 +15,7 @@ Once you have installed the connectivity proxy in your cluster, you can perform 
     kubectl run verify-connectivity-proxy --image=nginx --restart=Never -it --rm -- curl -v -x "connectivity-proxy:20003" "http://virtual:1234/"
     ```
 
-2.  Call the external health check endpoint of the connectivity proxy to verify it is returning a successful response. You can call the endpoint in a web browser or execute the following command from the command line:
+2.  Call the external health check endpoint of the Connectivity Proxy to verify it is returning a successful response. You can call the endpoint in a web browser or execute the following command from the command line:
 
     ```
     kubectl run verify-connectivity-proxy --image=nginx --restart=Never -it --rm -- curl -v -x "connectivity-proxy:20003" "http://virtual:1234/" -H "Proxy-Authorization: Bearer <proxy-authorization-jwt-value>"
@@ -26,19 +26,19 @@ Once you have installed the connectivity proxy in your cluster, you can perform 
 
 3.  Make sure you have connected a Cloud Connector to your cloud subaccount. For more information, see [Adding and Managing Subaccounts](adding-and-managing-subaccounts-f16df12.md).
 
-    1.  If you have deployed the connectivity proxy in a **single-tenant trusted mode** and have **enabled** the HTTP proxy in the `values.yml` file, execute the following command:
+    1.  If you have deployed the Connectivity Proxy in a **single-tenant trusted mode** and have **enabled** the HTTP proxy in the `values.yml` file, execute the following command:
 
         ```
         kubectl run verify-connectivity-proxy --image=nginx --restart=Never -it --rm -- curl -v -x "connectivity-proxy:20003" "http://virtual:1234/"
         ```
 
-    2.  If you have deployed the connectivity proxy in a **single-tenant non-trusted** or **multi-tenant non-trusted mode** and have **enabled** the HTTP proxy in the `values.yml` file, execute the following command:
+    2.  If you have deployed the Connectivity Proxy in a **single-tenant non-trusted** or **multi-tenant non-trusted mode** and have **enabled** the HTTP proxy in the `values.yml` file, execute the following command:
 
         ```
         kubectl run verify-connectivity-proxy --image=nginx --restart=Never -it --rm -- curl -v -x "connectivity-proxy:20003" "http://virtual:1234/" -H "Proxy-Authorization: Bearer <proxy-authorization-jwt-value>"
         ```
 
-    3.  If you have deployed the connectivity proxy in a **single-tenant trusted mode** and have **enabled** the HTTP proxy in the `values.yml` file, execute the following command:
+    3.  If you have deployed the Connectivity Proxy in a **single-tenant trusted mode** and have **enabled** the HTTP proxy in the `values.yml` file, execute the following command:
 
         ```
         kubectl run verify-connectivity-proxy --image=nginx --restart=Never -it --rm -- curl -v -x "connectivity-proxy:20003" "http://virtual:1234/" -H "SAP-CP-Connectivity-Service-Token: <connectivity-service-jwt-value>"
@@ -49,7 +49,7 @@ Once you have installed the connectivity proxy in your cluster, you can perform 
         For more informaion on the different operational modes, see [Operational Modes](operational-modes-148bbad.md).
 
 
-    If the connectivity proxy is working as expected, you get one of these responses:
+    If the Connectivity Proxy is working as expected, you get one of these responses:
 
     -   ***Access denied to system virtual:1234***: If this was a valid request, make sure you expose the system correctly in your Cloud Connector.
 

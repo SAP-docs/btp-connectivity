@@ -2,7 +2,7 @@
 
 # Installation and Configuration
 
-Find troubleshooting information for installation and configuration of the transparent proxy for Kubernetes.
+Find troubleshooting information for installation and configuration of the Transparent Proxy for Kubernetes.
 
 
 <table>
@@ -122,7 +122,7 @@ Applying helm configuration fails with 'Connectivity Proxy tenant mode "shared" 
 </td>
 <td valign="top">
 
-Make sure that the transparent proxy and the referenced connectivity proxy are in the same tenant mode.
+Make sure that the Transparent Proxy and the referenced Connectivity Proxy are in the same tenant mode.
 
 </td>
 </tr>
@@ -134,7 +134,7 @@ Applying helm configuration fails with 'Connectivity Proxy tenant mode "dedicate
 </td>
 <td valign="top">
 
-Make sure that the transparent proxy and the referenced connectivity proxy are in the same tenant mode.
+Make sure that the Transparent Proxy and the referenced Connectivity Proxy are in the same tenant mode.
 
 </td>
 </tr>
@@ -146,7 +146,7 @@ Applying helm configuration fails with "Connectivity Proxy multi region ConfigMa
 </td>
 <td valign="top">
 
-The connectivity proxy multi region config map does not exist.
+The Connectivity Proxy multi region config map does not exist.
 
 </td>
 </tr>

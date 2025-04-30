@@ -2,7 +2,7 @@
 
 # OAuth Authorization Code Authentication
 
-The transparent proxy handles the HTTP communication protocol for both Internet and on-premise destinations protected with the *OAuth Authorization Code* flow.
+The Transparent Proxy handles the HTTP communication protocol for both Internet and on-premise destinations protected with the *OAuth Authorization Code* flow.
 
 
 
@@ -29,7 +29,7 @@ To integrate this functionality, you must create an SAP BTP destination. This de
 > }
 > ```
 
-To target the destination with the name "example-dest-oauth-2-auth-code" for handling by the transparent proxy, you should create a [Destination Custom Resource](destination-custom-resource-fc7951e.md) in a namespace of your choice.
+To target the destination with the name "example-dest-oauth-2-auth-code" for handling by the Transparent Proxy, you should create a [Destination Custom Resource](destination-custom-resource-fc7951e.md) in a namespace of your choice.
 
 **Destination CR for an OAuth 2 Authhroziation Code Destination**
 
@@ -51,7 +51,7 @@ To target the destination with the name "example-dest-oauth-2-auth-code" for han
 
 ## Consumption
 
-For consumption of a destination with authentication type `OAuth2AuthorizationCode`, the code of the business user from the authorization server has to be passed to the transparent proxy via `Authorization` header of scheme `Bearer`. You can also pass the optional headers 'X-redirect-uri' and 'X-code-verifier' to the request. They can also be configured in the destination configuration. If any or both of the headers are present in the request as well as in the destination configuration, the transparent proxy attaches the request headers to the request to the Destination service.
+For consumption of a destination with authentication type `OAuth2AuthorizationCode`, the code of the business user from the authorization server has to be passed to the Transparent Proxy via `Authorization` header of scheme `Bearer`. You can also pass the optional headers 'X-redirect-uri' and 'X-code-verifier' to the request. They can also be configured in the destination configuration. If any or both of the headers are present in the request as well as in the destination configuration, the Transparent Proxy attaches the request headers to the request to the Destination service.
 
 For more information, see [OAuth Authorization Code Authentication](oauth-authorization-code-authentication-9f634f6.md).
 
@@ -68,7 +68,7 @@ For more information, see [OAuth Authorization Code Authentication](oauth-author
 >  
 >     url = '<destination-cr-name>.<destination-cr-namespace>'
 >     headers: {
->             // X-Tenant-Subdomain is required only when transparent proxy is in shared tenant mode
+>             // X-Tenant-Subdomain is required only when Transparent Proxy is in shared tenant mode
 >             'X-Tenant-Subdomain': '<tenant-where-destination-is-located>',
 >             'Authorization': 'Bearer ' + authorizationCode,
 >     }

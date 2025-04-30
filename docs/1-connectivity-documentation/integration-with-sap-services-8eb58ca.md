@@ -2,7 +2,7 @@
 
 # Integration with SAP Services
 
-Integrate the connectivity proxy for Kubernetes with SAP services.
+Integrate the Connectivity Proxy for Kubernetes with SAP services.
 
 
 <table>
@@ -14,7 +14,7 @@ Integrate the connectivity proxy for Kubernetes with SAP services.
 </td>
 <td valign="top">
 
-Use the connectivity proxy for Kubernetes with the Connectivity service to connect to on-premise systems.
+Use the Connectivity Proxy for Kubernetes with the Connectivity service to connect to on-premise systems.
 
 </td>
 </tr>
@@ -26,7 +26,7 @@ Use the connectivity proxy for Kubernetes with the Connectivity service to conne
 </td>
 <td valign="top">
 
-Perform proxy authorization for the connectivity proxy.
+Perform proxy authorization for the Connectivity Proxy.
 
 </td>
 </tr>

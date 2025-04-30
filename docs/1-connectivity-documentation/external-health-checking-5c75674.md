@@ -2,14 +2,14 @@
 
 # External Health Checking
 
-Perform external health checks for the connectivity proxy for Kubernetes.
+Perform external health checks for the Connectivity Proxy for Kubernetes.
 
-External health checking lets you check and monitor the health of the connectivity proxy using an external application. To achieve this, you must call one of the following URLs:
+External health checking lets you check and monitor the health of the Connectivity Proxy using an external application. To achieve this, you must call one of the following URLs:
 
 -   `https://healthcheck.<config.servers.businessDataTunnel.externalHost>/healthcheck`
 -   `https://healthcheck.<config.servers.businessDataTunnel.externalHost>`, that will redirect the request to the first URL.
 
-The external health checking configuration depends on the mutual TLS configuration. Currently, the connectivity proxy deployment provides three mutual TLS configuration options:
+The external health checking configuration depends on the mutual TLS configuration. Currently, the Connectivity Proxy deployment provides three mutual TLS configuration options:
 
 -   [Mutual TLS *only to the Ingress*](external-health-checking-5c75674.md#loio5c756741b38248da8439286621a4e776__with)
 -   [End-to-end mutual TLS *with* termination of the TLS connection in the Ingress](external-health-checking-5c75674.md#loio5c756741b38248da8439286621a4e776__with)
@@ -93,8 +93,8 @@ In this case, execute the following steps:
     ```
 
     > ### Note:  
-    > -   `region_domain`: BTP region to which you are pairing the connectivity proxy.
-    > -   `subaccount`: BTP subaccount, on whose behalf the connectivity proxy is running.
+    > -   `region_domain`: BTP region to which you are pairing the Connectivity Proxy.
+    > -   `subaccount`: BTP subaccount, on whose behalf the Connectivity Proxy is running.
     > -   `user`: BTP subaccount user.
     > -   `password`: Password of the BTP subaccount user.
     > -   `namespace`: Kubernetes namespace to which the secret is created.
@@ -136,7 +136,7 @@ In this case, execute the following steps:
     > ### Note:  
     > The certificate chain of the CA that issues the certificate from the TLS secret must be imported to the trust store of the external health checking application.
 
-5.  Specify the TLS secret that was generated in step 3, to be used for the communication between the Ingress controller and the connectivity proxy. Add the following configuration in the `values.yaml` file:
+5.  Specify the TLS secret that was generated in step 3, to be used for the communication between the Ingress controller and the Connectivity Proxy. Add the following configuration in the `values.yaml` file:
 
     ```
     ingress:

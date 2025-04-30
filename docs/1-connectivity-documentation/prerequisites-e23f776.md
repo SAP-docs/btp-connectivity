@@ -109,7 +109,7 @@ Required Internet connection to SAP BTP hosts per region.
 
 For general information about SAP BTP restrictions, see [Prerequisites and Restrictions](https://help.sap.com/docs/btp/sap-business-technology-platform/prerequisites-and-restrictions?version=Cloud).
 
-For specific information about all Connectivity restrictions, see [Connectivity: Restrictions](connectivity-e54cc8f.md#loioe54cc8fbbb571014beb5caaf6aa31280__restrictions).
+For specific information about all Connectivity restrictions, see [Connectivity: Restrictions](what-is-sap-btp-connectivity-e54cc8f.md#loioe54cc8fbbb571014beb5caaf6aa31280__restrictions).
 
 Back to [Content](prerequisites-e23f776.md#loioe23f776e4d594fdbaeeb1196d47bbcc0__content)
 

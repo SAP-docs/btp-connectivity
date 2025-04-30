@@ -2,7 +2,7 @@
 
 # Local Development
 
-Find a local development guide for the transparent proxy for Kubernetes.
+Find a local development guide for the Transparent Proxy for Kubernetes.
 
 
 
@@ -13,7 +13,7 @@ Find a local development guide for the transparent proxy for Kubernetes.
 Before you begin, ensure the following prerequisites are set up:
 
 1.  *kubectl* \(or an equivalent client\) installed on your machine to communicate with the Kubernetes cluster's control plane.
-2.  One or more Destination service instances that the transparent proxy can work with.
+2.  One or more Destination service instances that the Transparent Proxy can work with.
 3.  An SAP BTP destination created within one of the above Destination service instances, which references the end system.
 4.  A destination custom resource created for that destination.
 
@@ -26,7 +26,7 @@ Before you begin, ensure the following prerequisites are set up:
 
 ## Guide
 
-This guide outlines the steps to set up port forwarding and use a transparent proxy service from your local environment. Follow the steps below to list the services, forward ports, and consume services.
+This guide outlines the steps to set up port forwarding and use a Transparent Proxy service from your local environment. Follow the steps below to list the services, forward ports, and consume services.
 
 1.  List the Kubernetes services in the *sap-transp-proxy-system* namespace:
 
@@ -77,6 +77,6 @@ This guide outlines the steps to set up port forwarding and use a transparent pr
     > ```
 
     > ### Caution:  
-    > If you encounter an error response from the transparent proxy, refer to the [Error Response Headers](error-response-headers-2b3a572.md) page for detailed information and troubleshooting guidance.
+    > If you encounter an error response from the Transparent Proxy, refer to the [Error Response Headers](error-response-headers-2b3a572.md) page for detailed information and troubleshooting guidance.
 
 

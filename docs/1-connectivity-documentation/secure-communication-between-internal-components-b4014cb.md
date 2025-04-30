@@ -2,12 +2,12 @@
 
 # Secure Communication Between Internal Components
 
-Use the certificate manager or the Istio service mesh for secure internal communication of the transparent proxy for Kubernetes.
+Use the certificate manager or the Istio service mesh for secure internal communication of the Transparent Proxy for Kubernetes.
 
 **Related Information**  
 
 
-[Certificate Manager](certificate-manager-6a73ed0.md "Use the certificate manager for secure internal communication of the transparent proxy for Kubernetes.")
+[Certificate Manager](certificate-manager-6a73ed0.md "Use the certificate manager for secure internal communication of the Transparent Proxy for Kubernetes.")
 
-[Istio Service Mesh Integration](istio-service-mesh-integration-f030e5d.md "Transparent proxy supports integration with the Istio service mesh for mTLS communication between the transparent proxy components.")
+[Istio Service Mesh Integration](istio-service-mesh-integration-f030e5d.md "Transparent Proxy supports integration with the Istio service mesh for mTLS communication between the Transparent Proxy components.")
 

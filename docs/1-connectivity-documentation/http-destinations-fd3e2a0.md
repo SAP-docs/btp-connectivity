@@ -2,9 +2,9 @@
 
 # HTTP Destinations
 
-Configure HTTP destinations for the transparent proxy for Kubernetes.
+Configure HTTP destinations for the Transparent Proxy for Kubernetes.
 
-The transparent proxy simplifies access to target systems which use HTTP protocol. It efficiently handles HTTP traffic for both Internet-based and on-premise destinations.
+The Transparent Proxy simplifies access to target systems which use HTTP protocol. It efficiently handles HTTP traffic for both Internet-based and on-premise destinations.
 
 
 
@@ -12,7 +12,7 @@ The transparent proxy simplifies access to target systems which use HTTP protoco
 
 ## HTTP Authentication
 
-The transparent proxy enriches your request by adding credentials configured in the destination configuration. Depending on the authentication of the destination configuration, the transparent proxy propagates them via `Authorization` or `SAP-Connectivity-Authentication` header. For more information, see [Configuring Authentication](http-destinations-42a0e6b.md#loio42a0e6b966924f2e902090bdf435e1b2__config).
+The Transparent Proxy enriches your request by adding credentials configured in the destination configuration. Depending on the authentication of the destination configuration, the Transparent Proxy propagates them via `Authorization` or `SAP-Connectivity-Authentication` header. For more information, see [Configuring Authentication](http-destinations-42a0e6b.md#loio42a0e6b966924f2e902090bdf435e1b2__config).
 
 **Mandatory Destination Configuration Fields**
 
@@ -116,7 +116,7 @@ URL.connectionTimeoutInSeconds
 </td>
 <td valign="top">
 
-The period of time in which the HTTP client expects a confirmation after it initiated a new TCP connection. It must be in the range of 1 second to 5 minutes \(300 seconds\). If you do not use it, its default is 5 seconds. If you decide to use it, the total timeout of the initial request could be the sum of the timeout configured and the time needed to obtain the destination configuration data from the Destination service. You could set custom timeouts for calls to Destination service and connectivity proxy as Helm properties. See the [Configuration Guide](configuration-guide-2a22cd7.md).
+The period of time in which the HTTP client expects a confirmation after it initiated a new TCP connection. It must be in the range of 1 second to 5 minutes \(300 seconds\). If you do not use it, its default is 5 seconds. If you decide to use it, the total timeout of the initial request could be the sum of the timeout configured and the time needed to obtain the destination configuration data from the Destination service. You could set custom timeouts for calls to Destination service and Connectivity Proxy as Helm properties. See the [Configuration Guide](configuration-guide-2a22cd7.md).
 
 </td>
 </tr>
@@ -128,7 +128,7 @@ URL.socketReadTimeoutInSeconds
 </td>
 <td valign="top">
 
-The period of time the HTTP client will wait for receiving a response \(data\) from the server. It must be in the range of 1 second to 12 hours \(43200 seconds\). If you do not use it, its default is 30 seconds. If you decide to use it, the total timeout of the initial request could be the sum of the timeout configured and the time needed to obtain the destination configuration data from the Destination service. You could set custom timeouts for calls to Destination service and connectivity proxy as Helm properties. See the [Configuration Guide](configuration-guide-2a22cd7.md).
+The period of time the HTTP client will wait for receiving a response \(data\) from the server. It must be in the range of 1 second to 12 hours \(43200 seconds\). If you do not use it, its default is 30 seconds. If you decide to use it, the total timeout of the initial request could be the sum of the timeout configured and the time needed to obtain the destination configuration data from the Destination service. You could set custom timeouts for calls to Destination service and Connectivity Proxy as Helm properties. See the [Configuration Guide](configuration-guide-2a22cd7.md).
 
 </td>
 </tr>
@@ -228,15 +228,15 @@ A static key prefix is used as a namespace grouping of URL's query parameters wh
 **Related Information**  
 
 
-[Basic Authentication](basic-authentication-427b91d.md "The transparent proxy handles the HTTP communication protocol for both Internet and on-premise destinations protected with Basic Authentication.")
+[Basic Authentication](basic-authentication-427b91d.md "The Transparent Proxy handles the HTTP communication protocol for both Internet and on-premise destinations protected with Basic Authentication.")
 
-[Client Certificate Authentication](client-certificate-authentication-cd876f8.md "Configure Client Certificate Authentication for the transparent proxy for Kubernetes.")
+[Client Certificate Authentication](client-certificate-authentication-cd876f8.md "Configure Client Certificate Authentication for the Transparent Proxy for Kubernetes.")
 
-[No Authentication](no-authentication-5ef40e3.md "The transparent proxy handles HTTP and TCP communication protocols for both Internet and on-premise destinations without authentication.")
+[No Authentication](no-authentication-5ef40e3.md "The Transparent Proxy handles HTTP and TCP communication protocols for both Internet and on-premise destinations without authentication.")
 
-[OAuth](oauth-cb36b39.md "Use OAuth authentication for the transparent proxy for Kubernetes.")
+[OAuth](oauth-cb36b39.md "Use OAuth authentication for the Transparent Proxy for Kubernetes.")
 
-[User Propagation](user-propagation-23f166f.md "Configure user propagation for the transparent proxy for Kubernetes.")
+[User Propagation](user-propagation-23f166f.md "Configure user propagation for the Transparent Proxy for Kubernetes.")
 
-[SAML Assertion Authentication](saml-assertion-authentication-23db6d9.md "The transparent proxy handles the HTTP communication protocol for both Internet and on-premise destinations protected with the SAML Assertion flow.")
+[SAML Assertion Authentication](saml-assertion-authentication-23db6d9.md "The Transparent Proxy handles the HTTP communication protocol for both Internet and on-premise destinations protected with the SAML Assertion flow.")
 

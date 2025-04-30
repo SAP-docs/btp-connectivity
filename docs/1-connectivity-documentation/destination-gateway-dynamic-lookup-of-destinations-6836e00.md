@@ -2,9 +2,9 @@
 
 # Destination Gateway \(Dynamic Lookup of Destinations\)
 
-Create a single custom resource to look up one ore more destinations dynamically with the transparent proxy for Kubernetes.
+Create a single custom resource to look up one ore more destinations dynamically with the Transparent Proxy for Kubernetes.
 
-The transparent proxy lets you perform a dynamic lookup of one or multiple destinations from a destination service instance and its tenants. To consume a destination in that way, you only have to create a single custom resource.
+The Transparent Proxy lets you perform a dynamic lookup of one or multiple destinations from a destination service instance and its tenants. To consume a destination in that way, you only have to create a single custom resource.
 
 **Example: Destination Custom Resource**
 
@@ -21,7 +21,7 @@ spec:
 
 In the example above, a destination custom resource has `spec.destinationRef.name = "*"`, which indicates that this destination would accept dynamic lookup and only a single Kubernetes service will be created with name `dynamic-destination` which works as an entry point for all destinations from `destinationServiceInstanceName` with `name: dest-service-instance`.
 
-The transparent proxy identifies the destination for which a request should be configured and dispatched by obtaining the destination name \(destination identifier\) from a custom header called `X-Destination-Name`.
+The Transparent Proxy identifies the destination for which a request should be configured and dispatched by obtaining the destination name \(destination identifier\) from a custom header called `X-Destination-Name`.
 
 > ### Note:  
 > This header is specifically intended to identify a destination within a Destination service instance and its tenants.

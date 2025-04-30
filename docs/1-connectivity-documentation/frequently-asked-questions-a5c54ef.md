@@ -2,7 +2,7 @@
 
 # Frequently Asked Questions
 
-Answers to the most common questions about the connectivity proxy for Kubernetes.
+Answers to the most common questions about the Connectivity Proxy for Kubernetes.
 
 
 
@@ -30,37 +30,37 @@ There are several aspects that are being verified:
 
 ### **Why do I need the `connectivity:connectivity_proxy` service key?**
 
-The connectivity proxy is a distributed software component that needs to connect to an instance of the central Connectivity service to function.
+The Connectivity Proxy is a distributed software component that needs to connect to an instance of the central Connectivity service to function.
 
 This pairing is achieved via a `connectivity:connectivity_proxy service` key, which contains both routing information and credentials for this pairing.
 
 
 
-### **Why do I need a public endpoint for the connectivity proxy?**
+### **Why do I need a public endpoint for the Connectivity Proxy?**
 
-To preserve the integrity of an on-premise landscape and not expose anything from there to the Internet, the flow for establishing the connection between connectivity proxy and Cloud Connector is initiated by the Cloud Connector.
+To preserve the integrity of an on-premise landscape and not expose anything from there to the Internet, the flow for establishing the connection between Connectivity Proxy and Cloud Connector is initiated by the Cloud Connector.
 
-The public endpoint is used by the Cloud Connector to call the connectivity proxy and enable the data exchange.
-
-
-
-### **What is the relation of the connectivity proxy to the Connectivity service in SAP BTP?**
-
-The connectivity proxy is a distributed component that must be paired to an instance of the Connectivity service in SAP BTP in order to function.
-
-Cloud Connectors would still connect to the Connectivity service on SAP BTP and the connectivity proxy will make use of those Cloud Connectors via the established pairing.
+The public endpoint is used by the Cloud Connector to call the Connectivity Proxy and enable the data exchange.
 
 
 
-### **What is the relation of the connectivity proxy to the Destination service in SAP BTP?**
+### **What is the relation of the Connectivity Proxy to the Connectivity service in SAP BTP?**
+
+The Connectivity Proxy is a distributed component that must be paired to an instance of the Connectivity service in SAP BTP in order to function.
+
+Cloud Connectors would still connect to the Connectivity service on SAP BTP and the Connectivity Proxy will make use of those Cloud Connectors via the established pairing.
+
+
+
+### **What is the relation of the Connectivity Proxy to the Destination service in SAP BTP?**
 
 There is no dependency or tight integration.
 
-You can use the Destination service to store and retrieve on-premise destination configurations which can then be used to construct a request to on-premise systems through the connectivity proxy.
+You can use the Destination service to store and retrieve on-premise destination configurations which can then be used to construct a request to on-premise systems through the Connectivity Proxy.
 
 
 
-### **Are there any client libraries that I can use with the connectivity proxy?**
+### **Are there any client libraries that I can use with the Connectivity Proxy?**
 
 Please check [Using the Connectivity Proxy](using-the-connectivity-proxy-f3c1ef4.md).
 
@@ -72,19 +72,19 @@ Please check [Connectivity Service](connectivity-service-0edfc0b.md).
 
 
 
-### **Can I port a cloud SDK application from the Cloud Foundry environment to Kubernetes and use the connectivity proxy?**
+### **Can I port a cloud SDK application from the Cloud Foundry environment to Kubernetes and use the Connectivity Proxy?**
 
 It is a bit clunky, but yes.
 
-If you set up the connectivity proxy in an untrusted operational mode, the way the SDK works is well suited for it.
+If you set up the Connectivity Proxy in an untrusted operational mode, the way the SDK works is well suited for it.
 
 However, since the SDK is created with the Cloud Foundry environment in mind, you would need to simulate the `VCAP_SERVICES` environment to get it working.
 
 
 
-### **Is there an equivalent to the lite plan from the Cloud Foundry environment? Is the lite plan relevant for the connectivity proxy?**
+### **Is there an equivalent to the lite plan from the Cloud Foundry environment? Is the lite plan relevant for the Connectivity Proxy?**
 
 The lite plan is only relevant for the Cloud Foundry environment.
 
-There is no lite plan for the connectivity proxy. Instead, you use an XSUAA-based OAuth client of your choice to protect the connectivity proxy, and use it to issue tokens.
+There is no lite plan for the Connectivity Proxy. Instead, you use an XSUAA-based OAuth client of your choice to protect the Connectivity Proxy, and use it to issue tokens.
 

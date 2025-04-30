@@ -193,7 +193,7 @@ To consume the Connectivity service, you must provide some information about you
 
 -   The endpoint in the Cloud Connector \(virtual host and virtual port\) and accessible URL paths on it \(destinations\). See [Configure Access Control \(HTTP\)](configure-access-control-http-e7d4927.md).
 -   The required authentication type for the on-premise system. See [HTTP Destinations](http-destinations-42a0e6b.md).
--   Depending on the authentication type, you may need a username and password for accessing the on-premise system. For more details, see [Client Authentication Types for HTTP Destinations](client-authentication-types-for-http-destinations-4e13a04.md).
+-   Depending on the authentication type, you may need a username and password for accessing the on-premise system. For more details, see [Client Certificate Authentication](client-certificate-authentication-4e13a04.md).
 -   \(Optional\) You can use a *location Id*. For more details, see section [Specify a Cloud Connector Location ID](consuming-the-connectivity-service-313b215.md#loio313b215066a8400db461b311e01bd99b__location).
 
 We recommend that you use the *Destination service* \(see [Consuming the Destination Service](consuming-the-destination-service-7e30625.md)\) to procure this information. However, using the Destination service is optional. You can also provide \(look up\) this information in another appropriate way.
