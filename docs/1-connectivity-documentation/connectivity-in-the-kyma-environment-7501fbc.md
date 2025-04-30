@@ -13,7 +13,7 @@ Connectivity features are available for native consumption by workloads within t
 
 <a name="loio7501fbc9aebd4e3180eddec977ca288d__section_ykp_nmt_bdc"/>
 
-## Destinations Service
+## Destination Service
 
 Use the Destination service to centrally manage destinations and related resources, and delegate actions like access token retrieval and X.509 client certificate renewal.
 
@@ -23,7 +23,7 @@ Use the Destination service to centrally manage destinations and related resourc
 
 ## Transparent Proxy
 
-Use the Transparent Proxy to achieve unified, virtually transparent technical connectivity to any remote target - application, service or system, hosted in the cloud, on-premise or in a VPC \(virtual private cloud\) on hyperscalers.
+Use the Transparent Proxy to achieve unified, virtually transparent technical connectivity to any remote target application, service or system, hosted in the cloud, on premises or in a VPC \(virtual private cloud\) environment on hyperscalers.
 
 
 
@@ -31,7 +31,7 @@ Use the Transparent Proxy to achieve unified, virtually transparent technical co
 
 ## Connectivity Proxy
 
-Use the Connectivity Proxy to enable secure technical connectivity from cloud workloads to systems hosted in the customer premise / VPC, securely exposed via the Cloud Connector.
+Use the Connectivity Proxy to enable secure technical connectivity from cloud workloads to systems hosted on premises/VPC, securely exposed via the Cloud Connector.
 
 
 
