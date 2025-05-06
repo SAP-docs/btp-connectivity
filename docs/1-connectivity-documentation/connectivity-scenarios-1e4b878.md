@@ -60,7 +60,7 @@ Some common *principal propagation* scenarios for communication between an SAP B
 
 ## Scenario: Cloud to On-Premise
 
-In this scenario, you want to perform calls from your SAP BTP application to a target application located in your local *on-premise* network. While the basic procedures are similar to the *cloud-to-cloud* scenario \(including some configuration that is specific to on-premise communication\), this connection type requires the Cloud Connector as additional component, to be installed an managed within your local on-premise network. The Cloud Connector provides a secure tunnel for communication between your local apps and SAP BTP.
+In this scenario, you want to perform calls from your SAP BTP application to a target application located in your local *on-premise* network. While the basic procedures are similar to the *cloud-to-cloud* scenario \(including some configuration that is specific to on-premise communication\), this connection type requires the Cloud Connector as additional component, to be installed and managed within your local on-premise network. The Cloud Connector provides a secure tunnel for communication between your local apps and SAP BTP.
 
 > ### Note:  
 > A commonly used authentication method is *principal propagation* \(also known as *user propagation*\), which lets you propagate the identity of the logged-on user to the target application.
