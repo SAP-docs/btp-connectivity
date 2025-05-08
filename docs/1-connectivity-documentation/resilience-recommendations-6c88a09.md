@@ -7,7 +7,7 @@ Improve resilience of your SAP BTP applications.
 While SAP strives to ensure the highest possible availability of the provided services, true resilience actually is a two-way collaboration between client and server. Thus, it is important to implement any applications using the Connectivity and/or Destination services \(or any other services for that matter\) in a resilient way. This page gives suggestions on measures to take in order to endure short disruptions, network issues, slowdowns or other abnormal situations that might arise. By doing this, these application can withstand such disruptions, ensuring business continuity in the face of underlying issues in the platform.
 
 > ### Note:  
-> When using client libraries like the [BTP security library](https://github.com/SAP/cloud-security-xsuaa-integration), the [Cloud SDK](https://sap.github.io/cloud-sdk/), and so on, many of these recommendations may already be included. However, we recommend that you double-check these features, as they might require additional configuration.
+> When using client libraries like the [BTP security library](https://github.com/SAP/cloud-security-services-integration-library), the [Cloud SDK](https://sap.github.io/cloud-sdk/), and so on, many of these recommendations may already be included. However, we recommend that you double-check these features, as they might require additional configuration.
 
 
 

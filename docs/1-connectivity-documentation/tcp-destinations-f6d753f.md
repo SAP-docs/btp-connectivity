@@ -5,11 +5,6 @@
 Create and manage SAP BTP destinations using the TCP protocol for communication.
 
 > ### Note:  
-> Currently, you can create and manage TCP destinations only via the Destination service REST API.
-> 
-> For more information, see [Destination Service REST API](destination-service-rest-api-23ccafb.md).
-
-> ### Note:  
 > The on-premise use cases described in this guide are also applicable to virtual private cloud \(VPC\) environments.
 
 **Mandatory Destination Configuration Fields**
@@ -60,7 +55,7 @@ Address
 </td>
 <td valign="top">
 
-<virtual\_host\>:<virtual\_port\> of the on-premise application
+*<virtual\_host\>:<virtual\_port\>* of the on-premise application. The address may use *tcp://* as protocol scheme.
 
 </td>
 </tr>
@@ -72,7 +67,7 @@ ProxyType
 </td>
 <td valign="top">
 
-`OnPremise`
+`Internet`, `OnPremise`, or `PrivateLink`
 
 </td>
 </tr>
