@@ -128,15 +128,29 @@ Name of the destination fragment. The fragment itself must be maintained on the 
 
 </td>
 </tr>
-</table>
+<tr>
+<td valign="top">
 
-> ### Note:  
-> To mark a destination fragment provided with the `X-Fragment-Name` as optional, you can use the property `X-Fragment-Optional`. If the fragment is marked as optional and it does not exist, the destination with its original properties will be returned. If the fragment was found and used to override/or extend the requested destination properties, `FragmentName` will be included in the resulting destination properties.
-> 
-> For more information, see the [REST API specification](https://api.sap.com/api/SAP_CP_CF_Connectivity_Destination/resource/get_destinations__name_).
+X-Fragment-Optional
+
+</td>
+<td valign="top">
+
+ 
+
+</td>
+<td valign="top">
+
+To mark a destination fragment provided with the `X-Fragment-Name` as optional, you can use the header `X-Fragment-Optional`. If the fragment is marked as optional and it does not exist, the destination with its original properties will be returned. If the fragment was found and used to override/or extend the requested destination properties, `FragmentName` will be included in the resulting destination properties.
+
+</td>
+</tr>
+</table>
 
 > ### Caution:  
 > Only one `X-Fragment-Name` header may be present in the “Find a Destination” request.
+
+For more information, see the [REST API specification](https://api.sap.com/api/SAP_CP_CF_Connectivity_Destination/resource/get_destinations__name_).
 
 
 
