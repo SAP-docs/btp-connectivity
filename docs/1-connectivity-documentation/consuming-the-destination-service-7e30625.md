@@ -409,5 +409,5 @@ Back to [Tasks](consuming-the-destination-service-7e30625.md#loio7e306250e08340f
 
 [Destination Java APIs](destination-java-apis-60f00ec.md "Use Destination service Java APIs to optimize application development.")
 
-[Extending Destinations with Fragments](extending-destinations-with-fragments-f56600a.md "Use the “Find a Destination” API to extend your destination with a destination fragment.")
+[Extending Destinations with Fragments](extending-destinations-with-fragments-f56600a.md "Use the “Find Destination” API to extend your destination with a destination fragment.")
 

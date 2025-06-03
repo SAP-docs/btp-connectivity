@@ -199,7 +199,7 @@ Press *Add Subaccount* to define a subaccount. This will open a dialog or wizard
     6.  \(Optional\) You can provide a *<Description\>* of the subaccount that becomes a part of the subaccount's detail information.
 
         > ### Note:  
-        > Location ID and description can be changed later on at any time. See [Adding and Managing Subaccounts](adding-and-managing-subaccounts-f16df12.md).
+        > Location ID and description can be changed later on at any time.
 
     7.  Choose *Finish*.
 

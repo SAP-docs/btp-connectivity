@@ -2,7 +2,7 @@
 
 # Extending Destinations with Fragments
 
-Use the “Find a Destination” API to extend your destination with a destination fragment.
+Use the “Find Destination” API to extend your destination with a destination fragment.
 
 
 
@@ -74,7 +74,7 @@ This extension involves merging the JSON object of the destination properties, t
 > The combined JSON of the destination and fragment will be returned in the response body as the value of the “destinationConfiguration” property. Additionally, this combined JSON will be used for retrieving tokens from authorization servers, if applicable.
 
 > ### Note:  
-> The combination of the destination JSON and the fragment JSON happens in the context of the “Find a Destination” request. The actual destination stored in Destination service is not modified.
+> The combination of the destination JSON and the fragment JSON happens in the context of the “Find Destination” request. The actual destination stored in Destination service is not modified.
 
 
 
@@ -128,29 +128,10 @@ Name of the destination fragment. The fragment itself must be maintained on the 
 
 </td>
 </tr>
-<tr>
-<td valign="top">
-
-X-Fragment-Optional
-
-</td>
-<td valign="top">
-
- 
-
-</td>
-<td valign="top">
-
-To mark a destination fragment provided with the `X-Fragment-Name` as optional, you can use the header `X-Fragment-Optional`. If the fragment is marked as optional and it does not exist, the destination with its original properties will be returned. If the fragment was found and used to override/or extend the requested destination properties, `FragmentName` will be included in the resulting destination properties.
-
-</td>
-</tr>
 </table>
 
 > ### Caution:  
-> Only one `X-Fragment-Name` header may be present in the “Find a Destination” request.
-
-For more information, see the [REST API specification](https://api.sap.com/api/SAP_CP_CF_Connectivity_Destination/resource/get_destinations__name_).
+> Only one `X-Fragment-Name` header may be present in the “Find Destination” request.
 
 
 
@@ -179,7 +160,7 @@ For more information, see the [REST API specification](https://api.sap.com/api/S
 > example-property=example-value
 > ```
 
-**cURL call to send “Find a Destination” request:** 
+**cURL call to send “Find Destination” request:** 
 
 > ### Sample Code:  
 > ```
@@ -240,7 +221,7 @@ For more information, see the [REST API specification](https://api.sap.com/api/S
 > tokenServiceURL=https://authserver2.example.com/oauth/token/ 
 > ```
 
-**cURL call to send “Find a Destination” request:**
+**cURL call to send “Find Destination” request:**
 
 > ### Sample Code:  
 > ```

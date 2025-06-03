@@ -858,7 +858,7 @@ IP Address
 </td>
 </tr>
 <tr>
-<td valign="top" rowspan="6">
+<td valign="top" rowspan="7">
 
 Europe \(Frankfurt\) - AWS
 
@@ -968,6 +968,22 @@ connectivitytunnel.cf.eu10-004.hana.ondemand.com
 **Additional IP addresses:**
 
 **3.125.225.167, 18.158.49.214, 35.157.19.103**
+
+</td>
+</tr>
+<tr>
+<td valign="top" colspan="2">
+
+connectivitytunnel.cf.eu10-005.hana.ondemand.com
+
+</td>
+<td valign="top">
+
+`3.122.31.132`, `18.193.56.244`, `3.78.172.245`
+
+**Additional IP addresses:**
+
+**3.72.138.152, 18.195.38.125, 52.57.99.237**
 
 </td>
 </tr>
