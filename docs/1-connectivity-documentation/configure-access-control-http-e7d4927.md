@@ -162,7 +162,7 @@ The Cloud Connector checks that the path part of the URL \(up to but not includi
 
 The *Active* checkbox lets you specify, if that resource is initially enabled or disabled. See the section below for more information on enabled and disabled resources.
 
-The *WebSocket Upgrade* checkbox lets you specify, whether that resource allows a protocol upgrade.
+The *Upgrade Allowed* checkbox lets you specify, whether that resource allows a protocol upgrade.
 
 Back to [Tasks](configure-access-control-http-e7d4927.md#loioe7d4927dbb571014af7ef6ebd6cc3511__content)
 
@@ -183,8 +183,8 @@ In some cases, it is useful for testing purposes to temporarily disable certain 
     ![](images/SCC_CS_AccessControlHTTP_14_e7db9d1.png)
 
 -   To activate the resource again, select it and choose the *Activate* button.
--   By choosing *Allow WebSocket upgrade/Disallow WebSocket upgrade* this is possible for the protocol upgrade setting as well.
--   It is also possible to mark multiple lines and then suspend or activate all of them in one go by clicking the *Activate/Suspend* icons in the top row. The same is true for the corresponding *Allow WebSocket upgrade/Disallow WebSocket* icons.
+-   By choosing *Upgrade Allowed* this is possible for the protocol upgrade setting as well.
+-   It is also possible to mark multiple lines and then suspend or activate all of them in one go by clicking the *Activate/Suspend* icons in the top row. The same is true for the corresponding *Upgrade Allowed* checkboxes.
 
 
 
