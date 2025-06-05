@@ -52,7 +52,7 @@ The following APIs are currently available.
 -   [Certificate Status](monitoring-apis-f6e7a7b.md#loiof6e7a7bc6af345d2a334c2427a31d294__certificates) \(as of 2.13.0\)
 -   [Certificate Selection List](monitoring-apis-f6e7a7b.md#loiof6e7a7bc6af345d2a334c2427a31d294__cert_selection) \(as of 2.13.0, extended in 2.17.0\)
 -   [Usage Statistics](monitoring-apis-f6e7a7b.md#loiof6e7a7bc6af345d2a334c2427a31d294__usage) \(as of 2.13.0\)
--   [Master Role Check](monitoring-apis-f6e7a7b.md#loiof6e7a7bc6af345d2a334c2427a31d294__masterRole) \(as of 2.15.0\)
+-   [Master Role Check](monitoring-apis-f6e7a7b.md#loiof6e7a7bc6af345d2a334c2427a31d294__masterRole) \(as of 2.15.0, extended in 2.18.1\)
 
 **Health Check \(available as of version 2.6.0\)**
 
@@ -1466,7 +1466,7 @@ Back to [Available APIs](monitoring-apis-f6e7a7b.md#loiof6e7a7bc6af345d2a334c242
 
 Back to [Context](monitoring-apis-f6e7a7b.md#loiof6e7a7bc6af345d2a334c2427a31d294__context)
 
-**Master Role Check \(available as of version 2.15.0\)**
+**Master Role Check \(available as of version 2.15.0, extended in 2.18.1\)**
 
 With the master role check API, you can recognize if a Cloud Connector instance has currently the master role. The purpose of this master role check is only to recognize if the Cloud Connector instance is currently the master instance or not, without the need of providing credentials. It is a quick check that you can execute frequently.
 
@@ -1550,9 +1550,9 @@ All roles are accepted
 </tr>
 </table>
 
-**Available as of version 2.18.1:**
+*Available as of version 2.18.1:*
 
-With the alternative master role check API below, you can also recognize whether the concrete Cloud Connector instance currently has the master role. If not, the HTTP status code will shown as ***409***.
+With the alternative master role check API below, you can also recognize whether the concrete Cloud Connector instance currently has the master role. If not, the HTTP status code will be shown as ***409***.
 
 
 <table>
