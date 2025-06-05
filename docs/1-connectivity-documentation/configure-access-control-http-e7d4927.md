@@ -183,7 +183,7 @@ In some cases, it is useful for testing purposes to temporarily disable certain 
     ![](images/SCC_CS_AccessControlHTTP_14_e7db9d1.png)
 
 -   To activate the resource again, select it and choose the *Activate* button.
--   By choosing *Upgrade Allowed* this is possible for the protocol upgrade setting as well.
+-   By choosing *Upgrade Allowed*, this is possible for the protocol upgrade setting as well.
 -   It is also possible to mark multiple lines and then suspend or activate all of them in one go by clicking the *Activate/Suspend* icons in the top row. The same is true for the corresponding *Upgrade Allowed* checkboxes.
 
 

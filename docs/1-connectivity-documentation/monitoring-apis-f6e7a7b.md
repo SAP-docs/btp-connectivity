@@ -1550,6 +1550,90 @@ All roles are accepted
 </tr>
 </table>
 
+**Available as of version 2.18.1:**
+
+With the alternative master role check API below, you can also recognize whether the concrete Cloud Connector instance currently has the master role. If not, the HTTP status code will shown as ***409***.
+
+
+<table>
+<tr>
+<td valign="top">
+
+**URI** 
+
+</td>
+<td valign="top">
+
+`/exposed?action=ensureMasterRole` 
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+**Method** 
+
+</td>
+<td valign="top">
+
+`GET` 
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+**Request** 
+
+</td>
+<td valign="top">
+
+ 
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+**Response** 
+
+</td>
+<td valign="top">
+
+```
+{true, false}
+```
+
+
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+**Errors** 
+
+</td>
+<td valign="top">
+
+***409*** if the instance is not in master role.
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+**Roles**
+
+</td>
+<td valign="top">
+
+All roles are accepted
+
+</td>
+</tr>
+</table>
+
 Back to [Available APIs](monitoring-apis-f6e7a7b.md#loiof6e7a7bc6af345d2a334c2427a31d294__api)
 
 Back to [Context](monitoring-apis-f6e7a7b.md#loiof6e7a7bc6af345d2a334c2427a31d294__context)
