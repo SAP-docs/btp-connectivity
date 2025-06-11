@@ -51,7 +51,7 @@ Specifies the name of the destination, which will be retrieved by the Destinatio
 </td>
 <td valign="top">
 
-Specifies the value of the subject token, which will be used by Destination service to perform the token exchange for a IAS-signed SAML assertion.
+Specifies the value of the subject token \(an access token usually associated with the user principal\), which will be used by Destination service to perform the token exchange for a IAS-signed SAML assertion.
 
 </td>
 </tr>
