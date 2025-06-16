@@ -143,17 +143,17 @@ Client secret for the Client ID.
 </td>
 <td valign="top">
 
-The URL of the token service, against which the token exchange is performed. Depending on the `Token Service URL Type`, this property is interpreted in different ways during the automatic token retrieval:
+The URL of the token service, against which the client credentials flow is performed. Depending on the `Token Service URL Type`, this property is interpreted in different ways during the automatic token retrieval:
 
 -   For `Dedicated`, the token service URL is taken as is.
 -   For `Common`, the token service URL is searched for the tenant placeholder `{tenant}`.
 
-    `{tenant}` is resolved as the subdomain of the subaccount on behalf of which the caller is performing the call. If the placeholder is not found, `{tenant}` is inserted as a subdomain of the token service URL.
+    `{tenant}` is resolved as the subdomain of the subaccount on behalf of which the client credentials flow should be done, based on the `x-tenant` header provided during the call. If the placeholder is not found, `{tenant}` is inserted as a subdomain of the token service URL.
 
     Consult the [Destination Service REST API](destination-service-rest-api-23ccafb.md) to see how the subdomain of the subaccount is specified. The subaccount subdomain is mandated during creation of the subaccount, see [Create a Subaccount](https://help.sap.com/viewer/65de2977205c403bbc107264b8eccf4b/Cloud/en-US/05280a123d3044ae97457a25b3013918.html).
 
 
-**Examples** of interpreting the `tokenServiceURL` for `tokenServiceURLType`=`Common`, if the call to the Destination service is on behalf of a subaccount subdomain with value `mytenant`:
+**Examples** of interpreting the `tokenServiceURL` for `tokenServiceURLType`=`Common`, if the call to the Destination service is done with the `x-tenant` header with value `mytenant`:
 
 -   ***https://authentication.us10.hana.ondemand.com/oauth/token*** → ***https://mytenant.authentication.us10.hana.ondemand.com/oauth/token***
 -   ***https://\{tenant\}.authentication.us10.hana.ondemand.com/oauth/token*** → ***https://mytenant.authentication.us10.hana.ondemand.com/oauth/token***

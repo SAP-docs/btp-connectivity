@@ -1,6 +1,6 @@
 <!-- loio58803a25e5894d759e0df1c5513b41ed -->
 
-# Configure Subject Patterns for Principal Propagation
+# Configure Subject Patterns
 
 Define patterns identifying the user for the subject of a generated short-lived X.509 certificate.
 
@@ -45,6 +45,7 @@ Using the selection menu, you can assign values for the following parameters:
 -   `${name}`
 -   `${mail}`
 -   `${email}`
+-   `${user_uuid}`
 -   `${display_name}`
 -   `${login_name}` 
 
@@ -99,7 +100,7 @@ Using the selection menu, you can assign values for the following parameters:
 > 
 > When using a subaccount in the **Cloud Foundry** environment: The Cloud Connector also offers direct access to custom variables injected in the JWT \(JSON Web token\) by SAP BTP *Authorization & Trust Management* that were taken over from a SAML assertion, and are available in the *xs.user.attributes* section of the token. If such a custom variable has the same name as one on root level, the one on root level can still be accessed using `cp.` as a prefix to the name. *Example*: if `userId` is present on root level and in *xs.user.attributes*, then `${userId}` will contain the value of the variable in *xs.user.attributes*, and `${cp.userId}` the one of the variable on root level.
 
-The values for these variables are provided by the trusted identiy provider in the token which is passed to the Cloud Connector and specifies the user that has logged on to the cloud application.
+The values for these variables are provided by the trusted identity provider in the token which is passed to the Cloud Connector and specifies the user that has logged on to the cloud application.
 
 By default, the following attributes are provided:
 
@@ -141,5 +142,5 @@ You can change the validity settings by choosing the *Edit* button.
 
 [Principal Propagation SSO Authentication for HTTP](principal-propagation-sso-authentication-for-http-73194cc.md)
 
-[Establish Trust and Federation with UAA Using Any SAML Identity Provider](https://help.sap.com/docs/btp/sap-business-technology-platform/establish-trust-and-federation-with-uaa-using-any-saml-identity-provider?version=Cloud) 
+[Trust and Federation with Identity Providers](https://help.sap.com/docs/btp/sap-business-technology-platform/trust-and-federation-with-identity-providers?version=Cloud)
 

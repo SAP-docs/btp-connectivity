@@ -77,7 +77,9 @@ Password for the key store file specified by `KeyStoreLocation`. This property i
 </table>
 
 > ### Note:  
-> You can upload `KeyStore` JKS files using the same command for uploading destination configuration property file. You only need to specify the JKS file instead of the destination configuration file.
+> You can upload `KeyStore` files using the same command for uploading destination configuration property file. You only need to specify the `KeyStore` file instead of the destination configuration file.
+> 
+> For more information on supported file formats, see [Manage Destination Certificates](manage-destination-certificates-df1bb55.md).
 
 **Related Information**  
 

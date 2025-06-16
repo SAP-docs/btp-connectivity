@@ -32,7 +32,7 @@ You can configure principal propagation for HTTP or RFC communication.
 2.  The cloud application then uses a user exchange token \(or a designated secondary header\) to propagate the user to the Connectivity service. See also [Configure Principal Propagation via User Exchange Token](configure-principal-propagation-via-user-exchange-token-39f538a.md).
     -   Optionally, the application may use the Destination service to externalize the connection configuration that points to the target on-premise system. See also [Consuming the Destination Service](consuming-the-destination-service-7e30625.md).
 
-    -   If you are using RFC as communication protocol usa with the *SAP Java Buildpack*, this step is already done by the Java Connector \(JCo\).
+    -   If you are using RFC as communication protocol with the *SAP Java Buildpack*, this step is already done by the Java Connector \(JCo\).
 
 3.  The Connectivity service forwards the JWT \(that represents the user\) to the Cloud Connector.
 4.  The Cloud Connector receives the JWT, verifies it, extracts the attributes, and uses its STS \(security token service\) component to issue a new token \(for example, an X.509 certificate\) with the same or similar attributes to assert the identity to the backend \(BE1-BEm\). The Cloud Connector and the cloud application share the same trust settings, see [Set Up Trust](set-up-trust-a4ee70f.md).

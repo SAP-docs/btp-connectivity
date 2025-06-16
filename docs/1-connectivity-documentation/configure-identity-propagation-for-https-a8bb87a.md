@@ -218,7 +218,7 @@ Back to [Example Data](configure-identity-propagation-for-https-a8bb87a.md#loioa
 
 [Rule-Based Mapping of Certificates](rule-based-mapping-of-certificates-4f8540f.md)
 
-[Configure Subject Patterns for Principal Propagation](configure-subject-patterns-for-principal-propagation-58803a2.md)
+[Configure Subject Patterns](configure-subject-patterns-58803a2.md)
 
 [Set Up Trust](set-up-trust-a4ee70f.md)
 

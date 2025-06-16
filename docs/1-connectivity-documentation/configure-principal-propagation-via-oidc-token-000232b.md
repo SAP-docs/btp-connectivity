@@ -109,7 +109,7 @@ For the example token below, the default value of `${name}` is `test@user.com`:
 > }
 > ```
 
-The Cloud Connector administrator can control the exact value to be used as user principal for the *subject CN* of the X.509 client certificate by configuring a subject pattern. For more information, see [Configure Subject Patterns for Principal Propagation](configure-subject-patterns-for-principal-propagation-58803a2.md).
+The Cloud Connector administrator can control the exact value to be used as user principal for the *subject CN* of the X.509 client certificate by configuring a subject pattern. For more information, see [Configure Subject Patterns](configure-subject-patterns-58803a2.md).
 
 Back to [Tasks](configure-principal-propagation-via-oidc-token-000232b.md#loio000232bddce348ecb068fcbf9d13717d__tasks_pp_cs) 
 

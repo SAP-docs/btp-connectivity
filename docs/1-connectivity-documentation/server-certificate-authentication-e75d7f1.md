@@ -100,7 +100,7 @@ If this property is set to `TRUE` in the destination, the server certificate wil
 
 In case `TrustAll` = `TRUE`, the `TrustStoreLocation` property is ignored so you can omit it.
 
-In case *<TrustAll\>* = `FALSE`, the *<TrustStoreLocation\>* property is mandatory to be used.
+In case `TrustAll` = `FALSE`, the `TrustStoreLocation` property is mandatory to be used.
 
 </td>
 </tr>

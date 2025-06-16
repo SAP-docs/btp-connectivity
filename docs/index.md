@@ -180,7 +180,7 @@
                         -   [Configure Identity Propagation for RFC](1-connectivity-documentation/configure-identity-propagation-for-rfc-33a2f37.md)
                         -   [Rule-Based Mapping of Certificates](1-connectivity-documentation/rule-based-mapping-of-certificates-4f8540f.md)
                             -   [Assign Authorization Objects for Rule-based Mapping](1-connectivity-documentation/assign-authorization-objects-for-rule-based-mapping-0ef22ae.md)
-                    -   [Configure Subject Patterns for Principal Propagation](1-connectivity-documentation/configure-subject-patterns-for-principal-propagation-58803a2.md)
+                    -   [Configure Subject Patterns](1-connectivity-documentation/configure-subject-patterns-58803a2.md)
                     -   [Configure a Secure Login Server](1-connectivity-documentation/configure-a-secure-login-server-de5bbf9.md)
                     -   [Configure Kerberos](1-connectivity-documentation/configure-kerberos-f2339d8.md)
                     -   [Configuring Identity Propagation to SAP NetWeaver AS for Java](1-connectivity-documentation/configuring-identity-propagation-to-sap-netweaver-as-for-java-2e96287.md)

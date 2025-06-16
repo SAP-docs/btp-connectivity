@@ -59,7 +59,7 @@ Learn more about the different types of configuring and supporting principal pro
 <tr>
 <td valign="top">
 
-[Configure Subject Patterns for Principal Propagation](configure-subject-patterns-for-principal-propagation-58803a2.md) 
+[Configure Subject Patterns](configure-subject-patterns-58803a2.md) 
 
 </td>
 <td valign="top">

@@ -93,7 +93,7 @@ Choose `Internet`, `PrivateLink`, or `OnPremise`.
 </td>
 <td valign="top">
 
-\(only if `ProxyType=OnPremise`\) Starting with Cloud Connector 2.9.0, you can connect multiple Cloud Connectors to an account , PrivateLinkas long as their location ID is different. The value defines the location ID identifying the Cloud Connector over which the connection is opened.
+\(only if `ProxyType=OnPremise`\) Starting with Cloud Connector 2.9.0, you can connect multiple Cloud Connectors to an account, as long as their location ID is different. The value defines the location ID identifying the Cloud Connector over which the connection is opened.
 
 The default value is an empty string identifying the Cloud Connector that is connected without any location ID, which is also the case for all Cloud Connector versions prior to 2.9.0.
 
@@ -119,7 +119,7 @@ Authentication type. Use `SAMLAssertion` as value.
 </td>
 <td valign="top">
 
-Value of the `Audience` tag, which is part of the generated SAML assertion. For more information, see[SAML 2.0 specification](http://saml.xml.org/saml-specifications).
+Value of the `Audience` tag, which is part of the generated SAML assertion. For more information, see [SAML 2.0 specification](http://saml.xml.org/saml-specifications).
 
 </td>
 </tr>
@@ -262,7 +262,7 @@ Contains the password for the certificate configuration \(if one is needed\) whe
 
 Base64-encoded *JSON web key set*, containing the signing keys which are used to validate the JWT provided in the *X-User-Token* header.
 
-For more information, see[JWK Set Format](https://tools.ietf.org/html/rfc7517#section-5).
+For more information, see [JWK Set Format](https://tools.ietf.org/html/rfc7517#section-5).
 
 </td>
 </tr>
