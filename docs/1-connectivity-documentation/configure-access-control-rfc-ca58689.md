@@ -45,7 +45,7 @@ To allow your cloud applications to access a certain backend system on the intra
 
     ![](images/SCC_CS_AccessControlRFC_3_9b53fd9.png)
 
-8.  Specify the parameters of the backend system. It needs to be an existing network address that can be resolved on the intranet and has network visibility for the Cloud Connector. If this is only possible using a valid [SAProuter](http://help.sap.com/saphelp_nw75/helpdata/en/48/6a169d31c34e6ee10000000a421937/frameset.htm), specify the router in the respective field. The Cloud Connector will try to establish a connection to this system, so the address has to be real.
+8.  Specify the parameters of the backend system. It needs to be an existing network address that can be resolved on the intranet and has network visibility for the Cloud Connector. If this is only possible using a valid [SAProuter](https://help.sap.com/docs/ABAP_PLATFORM_NEW/e245703406684d8a81812f4c6334eb2f/487612ed5ca5055ee10000000a42189b.html?version=202310.003), specify the router in the respective field. The Cloud Connector will try to establish a connection to this system, so the address has to be real.
     -   When using a load-balancing configuration, the *Message Server* specifies the message server of the ABAP system. The system ID is a three-char identifier that is also found in the SAP Logon configuration. Alternatively, it's possible to directly specify the message server port in the *System ID* field.
 
         ![](images/SCC_CS_AccessControlRFC_4_6abe59d.png)

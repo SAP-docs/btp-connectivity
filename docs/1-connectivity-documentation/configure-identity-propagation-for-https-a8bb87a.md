@@ -194,7 +194,7 @@ To access the required ICF services for your scenario in the ABAP system, choose
 
 
 -   If some of the ICF services require `Basic Authentication`, while others should be accessed via system certificate logon, perform these steps:
-    1.  In the Cloud Connector sytem mapping, choose the principal type `X.509 Certificate (general usage)` as described above.
+    1.  In the Cloud Connector system mapping, choose the principal type `X.509 Certificate (general usage)` as described above.
     2.  In the ABAP system, choose transaction code SICF and go to *Maintain Services*.
     3.  Select the service that requires `Basic Authentication` as logon method.
     4.  Double-click the service and go to tab *Logon Data*.

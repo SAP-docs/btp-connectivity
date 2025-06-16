@@ -85,6 +85,9 @@ To integrate this functionality, you must:
 -   Fulfill the on-premise/private cloud connectivity prerequisites
 -   Create an SAP BTP Destination
 
+    For more information, see [Managing Destinations](managing-destinations-84e45e0.md).
+
+
 This destination must have `Type` "TCP" and `ProxyType` "OnPremise".
 
 **Example: TCP Destination**

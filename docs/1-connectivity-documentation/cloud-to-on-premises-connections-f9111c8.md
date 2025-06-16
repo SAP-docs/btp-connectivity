@@ -35,3 +35,8 @@ The value for *<Protocol Processor Worker Threads\>* is mainly relevant if RFC i
 > ### Note:  
 > The longer the RFC execution time in the backend, the more threads you should provide. Threads can be reused only after the response of a call was returned to SAP BTP.
 
+**Related Information**  
+
+
+[Configure Advanced Connectivity](configure-advanced-connectivity-3975253.md "Adapt connectivity settings that control the throughput and HTTP connectivity to on-premises systems.")
+

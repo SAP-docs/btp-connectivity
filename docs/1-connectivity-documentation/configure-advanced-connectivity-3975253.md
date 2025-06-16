@@ -119,3 +119,8 @@ Size for the response line of the HTTP response. HTTP Body is not included.
 </tr>
 </table>
 
+**Related Information**  
+
+
+[Cloud-To-On-Premises Connections](cloud-to-on-premises-connections-f9111c8.md "Configure the physical connections for cloud-to-on-premises calls in the Cloud Connector.")
+

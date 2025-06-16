@@ -221,7 +221,7 @@ SAP cloud-based enterprise solutions
 </td>
 <td valign="top">
 
-SAP S/4HANA Cloud, SAP C/4HANA
+SAP S/4HANA Cloud \(public edition\), SAP C/4HANA
 
 </td>
 </tr>
