@@ -162,7 +162,7 @@ The Cloud Connector checks that the path part of the URL \(up to but not includi
 
 The *Active* checkbox lets you specify, if that resource is initially enabled or disabled. See the section below for more information on enabled and disabled resources.
 
-The *Upgrade Allowed* checkbox lets you specify, whether that resource allows a protocol upgrade.
+The *Upgrade Allowed* checkbox lets you specify, whether that resource allows a protocol upgrade, for example, upgrade a HTTPS connection to a WebSocket connection.
 
 Back to [Tasks](configure-access-control-http-e7d4927.md#loioe7d4927dbb571014af7ef6ebd6cc3511__content)
 
