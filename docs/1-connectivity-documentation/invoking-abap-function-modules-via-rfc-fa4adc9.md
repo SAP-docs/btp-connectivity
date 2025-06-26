@@ -165,10 +165,20 @@ Back to [Tasks](invoking-abap-function-modules-via-rfc-fa4adc9.md#loiofa4adc9bd4
 -   Your application must not bundle the JCo 3.1 standalone Java archives nor the native library. JCo is already embedded properly in the build pack.
 -   **JCoServer** functionality cannot be used within SAP BTP.
 -   **Environment embedding**, such as offered by JCo standalone 3.1, is not possible. This is, however, similar to SAP NetWeaver AS Java.
--   A **stateful sequence of function module invocations** must be done in a single HTTP request/response cycle.
 -   **Logon authentication** only supports user/password credentials \(basic authentication\) and principal propagation. See [Authentication to the On-Premise System](authentication-to-the-on-premise-system-67b0b94.md).
 
 -   The supported set of **configuration properties** is restricted. For details, see [RFC Destinations](rfc-destinations-238d027.md).
+-   By default, a **stateful sequence of function module invocations** must be done in a single HTTP request/response cycle.
+
+    To make a stateful sequence work across several request/response cycles, you must either set the parameter `USE_JCO_SESSIONS` to `true` in the *manifest.yml* file of your application, or do this after deploying your application to Cloud Foundry. To do this in the Cloud Foundry environment, perform the following steps:
+
+    1.  Open the cloud cockpit.
+    2.  Navigate to your subaccount.
+    3.  Go to *Cloud Foundry* and choose the space where your application is deployed.
+    4.  Select the deployed application from the application list.
+    5.  From the left-side menu, choose *User-Provided Variables*.
+    6.  Here, you can create the parameter `USE_JCO_SESSIONS` with value `true`.
+
 
 Back to [Tasks](invoking-abap-function-modules-via-rfc-fa4adc9.md#loiofa4adc9bd40e45dbac573fd616695446__tasks_rfc)
 
