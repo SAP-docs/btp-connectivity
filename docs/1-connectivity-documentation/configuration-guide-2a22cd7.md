@@ -351,33 +351,6 @@ False
 <tr>
 <td valign="top">
 
-`config.integration.ztis.socketPath` 
-
-</td>
-<td valign="top">
-
-The UNIX socket path to the ZTIS Spire Agent. For more information, see [ZTIS documentation](https://pages.github.tools.sap/pse/pse-docs/docs/identity-k8s/how-to-guides/ztis-spire-agent-helm-chart/).
-
-</td>
-<td valign="top">
-
-/run/spire/agent-sockets/spire-agent.sock
-
-</td>
-<td valign="top">
-
- 
-
-</td>
-<td valign="top">
-
-False
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
 `config.logging.level` 
 
 </td>
