@@ -26,7 +26,9 @@ The Transparent Proxy identifies the destination for which a request should be c
 > ### Note:  
 > This header is specifically intended to identify a destination within a Destination service instance and its tenants.
 
-The destination can also be combined by optionally providing a custom header called `X-Fragment-Name`.
+The destination can be combined with a fragment by optionally providing a custom header called `X-Fragment-Name`. You can choose whether the fragment is optional or mandatory by passing the `X-Fragment-Optional` header, which accepts values `true` or `false`.
+
+If `X-Fragment-Optional=true` and the referenced fragment exists, the destination and fragment are combined. If the referenced fragment does not exist, the base destination is used. Conversely, if `X-Fragment-Optional=false` and the referenced fragment exists, the destination and fragment are combined. If the referenced fragment does not exist, an error is returned.
 
 **Example Destination:**
 
@@ -74,5 +76,30 @@ If you want to call `example-dest` destination, enriching it with the properties
 
 ```
 curl destination-gateway.<destination-cr-namespace> -H "X-Destination-Name: example-dest" -H "X-Fragment-Name: example-fragment"
+```
+
+If you want to call `example-dest` destination, enriching it with the properties from fragment `example-fragment` through the Kubernetes service named `destination-gateway` and specify that the fragment is optional, you can execute the command below:
+
+**Dynamic Lookup of Destinations with Fragment \(Optional\) - Bash Snippet** 
+
+```
+curl destination-gateway.<destination-cr-namespace> -H "X-Destination-Name: example-dest" -H "X-Fragment-Name: example-fragment" -H "X-Fragment-Optional: true"
+
+```
+
+If you want to call `example-dest` destination, enriching it with destination chaining properties through the Kubernetes service named `destination-gateway`, you can execute the command below:
+
+**Dynamic Lookup of Destinations Using Destination Chaining- Bash Snippet**
+
+```
+curl destination-gateway.<destination-cr-namespace> -H "X-Destination-Name: example-dest" -H "X-Chain-Name: <chain-name>" -H "X-Chain-Var-key1: <val1>" -H "X-Chain-Var-key2: <val2>" // and etc for each x-chan-var header
+```
+
+If you want to call `example-dest` destination, enriching it with the properties from fragment `example-fragment` through the Kubernetes service named `destination-gateway` and specify that the fragment is not optional, you can execute the command below:
+
+**Dynamic Lookup of Destinations with Fragment \(Not Optional\) - Bash Snippet**
+
+```
+curl destination-gateway.<destination-cr-namespace> -H "X-Destination-Name: example-dest" -H "X-Fragment-Name: example-fragment" -H "X-Fragment-Optional: false"
 ```
 

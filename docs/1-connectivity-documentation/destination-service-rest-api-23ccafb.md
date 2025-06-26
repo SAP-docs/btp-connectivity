@@ -15,3 +15,5 @@ It shows all available endpoints, the supported operations, parameters, possible
 
 ["Find a Destination" Response Structure](find-a-destination-response-structure-83a3f3b.md "Overview of data that are returned by the Destination service for the call type &quot;Find a Destination&quot;.")
 
+[Referring Resources Using the REST API](referring-resources-using-the-rest-api-78ba73a.md "Select a level for destinations and destination fragments when using the Destination service Consume REST API in a single-tenant or multi-tenant scenario.")
+

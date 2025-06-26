@@ -478,6 +478,33 @@ The provided header value for 'x-destination-name' has invalid characters. Check
 </td>
 <td valign="top">
 
+The value of the header 'x-fragment-optional' should be \\"true\\" or \\"false\\".
+
+</td>
+<td valign="top">
+
+Transparent Proxy
+
+</td>
+<td valign="top">
+
+ 
+
+</td>
+<td valign="top">
+
+The provided header value for 'x-fragment-optional' has invalid characters. The value should be "true" or "false".
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+400 Bad Request
+
+</td>
+<td valign="top">
+
 The requested endpoint is bound to a concrete destination, statically declared in the respective Destination CR. 'x-destination-name' header is not supported for this endpoint. Contact the Transparent Proxy Administrator.
 
 </td>
@@ -493,7 +520,34 @@ Transparent Proxy
 </td>
 <td valign="top">
 
-The Destination Custom Resource is bound to a specific destination via spec.destinationRef.name property. Either change the spec.destinationRef.name property in the CR to "\*" or do not pass the 'x-destination-name' header.
+The Destination Custom Resource is linked to a specific destination via the spec.destinationRef.name property, meaning the spec.destinationRef.name cannot be overridden with an HTTP header. You can either change the spec.destinationRef.name property in the CR to "\*" to convert it to a destination gateway, or configure it directly in the spec.destinationRef.name property.
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+400 Bad Request
+
+</td>
+<td valign="top">
+
+The requested endpoint is bound to a concrete destination, statically declared in the respective Destination CR. 'x-fragment-optional' header is not supported for this endpoint. Contact the Transparent Proxy Administrator.
+
+</td>
+<td valign="top">
+
+Transparent Proxy
+
+</td>
+<td valign="top">
+
+ 
+
+</td>
+<td valign="top">
+
+The Destination Custom Resource is linked to a specific destination via the spec.destinationRef.name property, meaning the spec.fragmentRef.optional cannot be overridden with an HTTP header. You can either change the spec.destinationRef.name property in the CR to "\*" to convert it to a destination gateway, or configure it directly in the spec.fragmentRef.optional property.
 
 </td>
 </tr>
@@ -520,7 +574,7 @@ Transparent Proxy
 </td>
 <td valign="top">
 
-The Destination Custom Resource is bound to a specific destination via spec.destinationRef.name property. Either change the spec.destinationRef.name property in the CR to "\*" or set spec.fragmentRef.name to the desired fragment.
+The Destination Custom Resource is linked to a specific destination via the spec.destinationRef.name property, meaning the spec.fragmentRef.name cannot be overridden with an HTTP header. You can either change the spec.destinationRef.name property in the CR to "\*" to convert it to a destination gateway, or configure it directly in the spec.fragmentRef.name property.
 
 </td>
 </tr>

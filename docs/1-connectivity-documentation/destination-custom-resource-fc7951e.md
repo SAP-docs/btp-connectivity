@@ -81,6 +81,61 @@ After the Transparent Proxy executes successfully all necessary operations, the 
 >     type: Available
 > ```
 
+**Destination Fragments: Optionality** 
+
+You can choose whether a fragment is optional in two ways::
+
+-   Directly in the destination custom resource:
+
+    > ### Sample Code:  
+    > ```
+    > apiVersion: destination.connectivity.api.sap/v1
+    > kind: Destination
+    > metadata:
+    >   name: <destination-cr-name>
+    > spec:  
+    >   destinationRef:
+    >     name: <destination-name>
+    >   fragmentRef:
+    >     name: <fragment-name>
+    >     optional: true/false
+    >   destinationServiceInstanceName: <dest-service-instance-name> // can be ommited if config.destinationService.defaultInstanceName is provided
+    > ```
+
+    > ### Caution:  
+    > Static reference of a fragment optionality is only applicable for a destination custom resource that references particular destination. The [Dynamic Lookup of Destinations](destination-gateway-dynamic-lookup-of-destinations-6836e00.md) feature is not compatible with this approach.
+
+-   Dynamically passing whether a fragment is optional as an HTTP header is only compatible with the [Dynamic Lookup of Destinations](destination-gateway-dynamic-lookup-of-destinations-6836e00.md) approach. You can check the examples given there.
+
+**Destination Chaining** 
+
+You can choose to specify a destination chain name and variables statically in your destination custom resource.
+
+For more information, see [Destination Chaining](destination-chaining-08a09f5.md).
+
+> ### Sample Code:  
+> ```
+> apiVersion: destination.connectivity.api.sap/v1
+> kind: Destination
+> metadata:
+>   name: <destination-cr-name>
+> spec:  
+>   destinationRef:
+>     name: <destination-name>
+>   chainRef:
+>     name: <chain-name> // e.g - com.sap.iasGeneratedOAuth2SamlBearerAssertion
+>     variables:
+>     - name: <chain-var-key> // e.g - samlProviderDestinationName , will result to header key - "X-Chain-Var-samlProviderDestinationName".
+>       value: <chain-var-value> // e.g. the destination name of the provider destination in case "com.sap.iasGeneratedOAuth2SamlBearerAssertion" chain is used.
+>     - name: <chain-var-key2>
+>       value: <chain-var-value2>
+> ```
+
+> ### Caution:  
+> Passing headers that match the chain name or variable name will override the configuration from the destination custom resource.
+> 
+> For example, passing the "X-Chain-Name" header will override `spec.chainRef.name`, or passing "X-Chain-Var-key" will override a `chainRef` variable with name: "key".
+
 **Configure a Custom Service Port**
 
 In the destination custom resource spec you can describe on which port you would like to consume your destination:

@@ -160,6 +160,18 @@ For more information, see [Extending Destinations with Fragments](extending-dest
 
 The destination fragment can be referenced in two ways: statically through a [Destination Custom Resource](destination-custom-resource-fc7951e.md), or dynamically by using [Destination Gateway \(Dynamic Lookup of Destinations\)](destination-gateway-dynamic-lookup-of-destinations-6836e00.md).
 
+You can specify whether a fragment is optional or not by using the destination fragments optionality feature. The destination fragment optionality can be referenced in two ways: statically through a [Destination Custom Resource](destination-custom-resource-fc7951e.md), or dynamically by using [Destination Gateway \(Dynamic Lookup of Destinations\)](destination-gateway-dynamic-lookup-of-destinations-6836e00.md).
+
+
+
+<a name="loioc5257cf110bf4b7b9054eab74ededff4__section_wyd_m5n_sfc"/>
+
+## Destination Chaining
+
+The destination chaining can be referenced in two ways: statically through a [Destination Custom Resource](destination-custom-resource-fc7951e.md), or dynamically by adding the related chain headers during the HTTP request.
+
+For more information, see [Destination Chaining](destination-chaining-08a09f5.md).
+
 
 
 <a name="loioc5257cf110bf4b7b9054eab74ededff4__section_vgq_15q_k2c"/>

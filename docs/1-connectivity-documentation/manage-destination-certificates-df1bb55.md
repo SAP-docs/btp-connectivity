@@ -34,6 +34,9 @@ You can maintain truststore and keystore certificates in the *Destinations* edit
 -   An uploaded certificate file must contain the entire certificate chain.
 
 
+> ### Note:  
+> If you generate a certificate using the **Destination Certificates** UI or the **Destinations** editor in the cockpit, the certificate includes only the public key. You can obtain the private key from the [Destination Service REST API](destination-service-rest-api-23ccafb.md).
+
 <a name="concept_qmm_jqt_f4"/>
 
 <!-- concept\_qmm\_jqt\_f4 -->

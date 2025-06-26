@@ -351,7 +351,7 @@ x86\_64
 </td>
 <td valign="top">
 
-2.1.0 up to 2.17.x
+2.1.0 up to 2.17.2
 
 </td>
 </tr>
@@ -402,7 +402,7 @@ x86\_64
 </td>
 <td valign="top">
 
-2.5.1 up to 2.17.x
+2.5.1 up to 2.17.2
 
 </td>
 </tr>
@@ -419,7 +419,7 @@ x86\_64
 </td>
 <td valign="top">
 
-2.5.1 up to 2.17.x
+2.5.1 up to 2.17.2
 
 </td>
 </tr>
@@ -538,7 +538,7 @@ x86\_64
 </td>
 <td valign="top">
 
-2.11.3 up to 2.17.x
+2.11.3 up to 2.17.2
 
 </td>
 </tr>
@@ -589,7 +589,7 @@ ppc64le
 </td>
 <td valign="top">
 
-2.13.0 up to 2.17.x
+2.13.0 up to 2.17.2
 
 </td>
 </tr>
@@ -640,7 +640,7 @@ x86\_64
 </td>
 <td valign="top">
 
-2.14.0 up to 2.17.x
+2.14.0 up to 2.17.2
 
 </td>
 </tr>
@@ -708,7 +708,7 @@ x86\_64
 </td>
 <td valign="top">
 
-2.16.0 up to 2.17.x
+2.16.0 up to 2.17.2
 
 </td>
 </tr>
@@ -841,7 +841,7 @@ Hosts
 </th>
 <th valign="top">
 
-IP Address
+IP Addresses
 
 </th>
 </tr>
@@ -1171,6 +1171,54 @@ connectivitytunnel.cf.eu30.hana.ondemand.com
 <td valign="top">
 
 `35.198.143.110` 
+
+</td>
+</tr>
+<tr>
+<td valign="top" rowspan="3">
+
+Europe \(Netherlands\) - Google Cloud
+
+\(`cf.eu31.hana.ondemand.com` \)
+
+> ### Note:  
+> Available as of June 30, 2025
+
+
+
+</td>
+<td valign="top" colspan="2">
+
+connectivitynotification.cf.eu31.hana.ondemand.com
+
+</td>
+<td valign="top">
+
+`34.90.22.237` 
+
+</td>
+</tr>
+<tr>
+<td valign="top" colspan="2">
+
+connectivitycertsigning.cf.eu31.hana.ondemand.com
+
+</td>
+<td valign="top">
+
+`34.90.22.237`
+
+</td>
+</tr>
+<tr>
+<td valign="top" colspan="2">
+
+connectivitytunnel.cf.eu31.hana.ondemand.com
+
+</td>
+<td valign="top">
+
+`34.90.22.237`
 
 </td>
 </tr>
@@ -2248,6 +2296,54 @@ connectivitytunnel.cf.ap30.hana.ondemand.com
 <td valign="top">
 
 `35.244.71.16`
+
+</td>
+</tr>
+<tr>
+<td valign="top" rowspan="3">
+
+Singapore - Google Cloud
+
+\(`cf.ap31.hana.ondemand.com`\)
+
+> ### Note:  
+> Available as of June 30, 2025
+
+
+
+</td>
+<td valign="top" colspan="2">
+
+connectivitynotification.cf.ap31.hana.ondemand.com
+
+</td>
+<td valign="top">
+
+`35.198.192.195` 
+
+</td>
+</tr>
+<tr>
+<td valign="top" colspan="2">
+
+connectivitycertsigning.cf.ap31.hana.ondemand.com
+
+</td>
+<td valign="top">
+
+`35.198.192.195`
+
+</td>
+</tr>
+<tr>
+<td valign="top" colspan="2">
+
+connectivitytunnel.cf.ap31.hana.ondemand.com
+
+</td>
+<td valign="top">
+
+`35.198.192.195`
 
 </td>
 </tr>

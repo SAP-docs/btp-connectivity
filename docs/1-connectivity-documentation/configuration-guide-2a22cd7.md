@@ -351,6 +351,33 @@ False
 <tr>
 <td valign="top">
 
+`config.integration.ztis.socketPath` 
+
+</td>
+<td valign="top">
+
+The UNIX socket path to the ZTIS Spire Agent. For more information, see [ZTIS documentation](https://pages.github.tools.sap/pse/pse-docs/docs/identity-k8s/how-to-guides/ztis-spire-agent-helm-chart/).
+
+</td>
+<td valign="top">
+
+/run/spire/agent-sockets/spire-agent.sock
+
+</td>
+<td valign="top">
+
+ 
+
+</td>
+<td valign="top">
+
+False
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
 `config.logging.level` 
 
 </td>
@@ -934,7 +961,7 @@ False
 </td>
 <td valign="top">
 
-The name of the Kubenetes secret, which holds the private key to authenticate if using an x.509-based service key to the Destination service.
+The name of the Kubenetes secret, which holds the private key to authenticate if using an x.509 or x.509\_attested service key to the Destination service.
 
 </td>
 <td valign="top">
@@ -961,7 +988,7 @@ False
 </td>
 <td valign="top">
 
-The name of the internal key inside the Kubenetes secret holding the private key to authenticate if using an x.509-based service key to the Destination service.
+The name of the internal key inside the Kubenetes secret holding the private key to authenticate if using an x.509 or x.509\_attested service key to the Destination service.
 
 </td>
 <td valign="top">
@@ -977,6 +1004,33 @@ pk.pem
 <td valign="top">
 
 False
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+`config.integration.destinationService.instances[n].serviceCredentials.privateKey.secretNamespace` 
+
+</td>
+<td valign="top">
+
+Namespace of the existing secret to be used, holds the private key to authenticate if using an x.509 or x.509\_attested service key to the Destination service.
+
+</td>
+<td valign="top">
+
+ 
+
+</td>
+<td valign="top">
+
+ 
+
+</td>
+<td valign="top">
+
+ 
 
 </td>
 </tr>

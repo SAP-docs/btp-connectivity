@@ -12,31 +12,90 @@ Configure IMAP destinations for the Transparent Proxy for Kubernetes.
 
 To integrate this functionality, you must:
 
--   Fulfill the on-premise/private cloud connectivity prerequisites
--   Create an SAP BTP Destination
+-   For On-Premise/Private Cloud connectivity, fulfill the [prerequisites](using-the-transparent-proxy-c5257cf.md).
+-   Create an SAP BTP Destination.
 
-This destination should have `Type` "MAIL" and `ProxyType` "OnPremise", for example:
-
-**IMAP Destination**
+**Example: OnPremise IMAP Mail Destination with BasicAuthentication**
 
 > ### Sample Code:  
 > ```
 > {
 >         "Name": "example-dest-imap",
 >         "Type": "MAIL",
+>         "Authentication": "BasicAuthentication",
 >         "mail.user": <username>,
 >         "mail.password": <password>,
 >         "mail.transport.protocol": "imap4",
 >         "mail.imap4.host": "imap4",
 >         "mail.imap4.auth": "true",
->         "mail.imap4.port": "464",
+>         "mail.imap4.port": "143",
 >         "ProxyType": "OnPremise"
+> }
+> ```
+
+**Example: OnPremise IMAP Mail Destination with OAuth2ClientCredentials**
+
+> ### Sample Code:  
+> ```
+> {
+>         "Name": "example-dest-imap",
+>         "Type": "MAIL",
+>         "Authentication": "OAuth2ClientCredentials",
+>         "mail.user": <username>,
+>         "mail.transport.protocol": "imap4",
+>         "mail.imap4.host": "imap4",
+>         "mail.imap4.auth": "true",
+>         "mail.imap4.port": "143",
+>         "ProxyType": "OnPremise",
+>         "tokenServiceURL": <token-service-url>,
+>         "clientId": <client-id>,
+>         "clientSecret": <client-secret>,
+>         "tokenServiceURLType": "Dedicated"
+> }
+> ```
+
+**Example: Internet IMAP Mail Destination with BasicAuthentication**
+
+> ### Sample Code:  
+> ```
+> {
+>         "Name": "example-dest-imap",
+>         "Type": "MAIL",
+>         "Authentication": "BasicAuthentication",
+>         "mail.user": <username>,
+>         "mail.password": <password>,
+>         "mail.transport.protocol": "imap4",
+>         "mail.imap4.host": "imap4",
+>         "mail.imap4.auth": "true",
+>         "mail.imap4.port": "143",
+>         "ProxyType": "Internet"
+> }
+> ```
+
+**Example: Internet IMAP Mail Destination with OAuth2ClientCredentials**
+
+> ### Sample Code:  
+> ```
+> {
+>         "Name": "example-dest-imap",
+>         "Type": "MAIL",
+>         "Authentication": "OAuth2ClientCredentials",
+>         "mail.user": <username>,
+>         "mail.transport.protocol": "imap4",
+>         "mail.imap4.host": "imap4",
+>         "mail.imap4.auth": "true",
+>         "mail.imap4.port": "143",
+>         "ProxyType": "Internet",
+>         "tokenServiceURL": <token-service-url>,
+>         "clientId": <client-id>,
+>         "clientSecret": <client-secret>,
+>         "tokenServiceURLType": "Dedicated"
 > }
 > ```
 
 To target the destination with the name "example-dest-imap" for handling by the Transparent Proxy, you should create a [Destination Custom Resource](destination-custom-resource-fc7951e.md) in a namespace of your choice.
 
-**Destination CR for an IMAP Destination**
+**Example: Destination CR for an IMAP Destination**
 
 > ### Sample Code:  
 > ```
@@ -56,7 +115,7 @@ The Transparent Proxy will create a [Kubernetes Service](https://kubernetes.io/d
 
 The Transparent Proxy supports multitenancy for `MAIL` destinations. To consume a target system in a multitenant manner, describe all tenants in the *transparent-proxy.connectivity.api.sap/tenant-subdomains* annotation:
 
-**Destination CR for a MAIL destination in Transparent Proxy *shared* mode** 
+**Example: Destination CR for a MAIL Destination in Transparent Proxy *Shared* Mode** 
 
 > ### Sample Code:  
 > ```
@@ -84,7 +143,7 @@ Once done, the application can start consuming the destination from within the K
 > ### Note:  
 > `<destination-cr-namespace>` can be omitted if the destination custom resource is created in the same namespace as the application workload.
 
-**IMAP Consumption Bash Snippet**
+**IMAP Consumption - Bash Snippet**
 
 > ### Sample Code:  
 > ```
@@ -97,7 +156,7 @@ Once done, the application can start consuming the destination from within the K
 > 5 FETCH 1 BODY[TEXT]
 > ```
 
-**IMAP Consumption in *Shared* \(Multitenant\) Mode Bash Snippet**
+**IMAP Consumption in *Shared* \(Multitenant\) Mode - Bash Snippet**
 
 > ### Sample Code:  
 > ```
