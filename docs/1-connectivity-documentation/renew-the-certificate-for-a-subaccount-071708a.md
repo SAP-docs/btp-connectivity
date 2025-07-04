@@ -17,7 +17,7 @@ You must have the required subaccount authorizations on SAP BTP to renew certifi
 
 See:
 
--   [Connectivity: Technical Roles](getting-started-daca64d.md#loiodaca64dacc6148fcb5c70ed86082ef91__technical) \(**Cloud Foundry** environment\)
+-   [User Roles](user-roles-b922fc8.md) \(**Cloud Foundry** environment\)
 
 
 

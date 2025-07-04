@@ -148,7 +148,7 @@ Authorization is checked by the Cloud Connector based on the user role retrieved
     > 
     > Be advised that such a test queries the selected LDAP server only, not the entire list of servers \(if there is more than one\). Make sure that at least one of the LDAP user stores succeeds in authenticating a given user that you want to use for logon.
 
-    For more information about how to set up LDAP authentication, see [https://tomcat.apache.org/tomcat-9.0-doc/realm-howto.html](https://tomcat.apache.org/tomcat-8.5-doc/realm-howto.html).
+    For more information about how to set up LDAP authentication, see [https://tomcat.apache.org/tomcat-9.0-doc/realm-howto.html](https://tomcat.apache.org/tomcat-9.0-doc/realm-howto.html).
 
     You can also configure LDAP authentication on the shadow instance in a high availability setup \(master and shadow\). From the main menu of the shadow instance, select *Shadow Configuration*, go to tab *User Interface*, and check the *User Administration* section.
 
