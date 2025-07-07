@@ -123,6 +123,7 @@
                 -   [Create Destinations on Service Instance Creation](1-connectivity-documentation/create-destinations-on-service-instance-creation-43c0538.md)
             -   [Manage Destination Fragments](1-connectivity-documentation/manage-destination-fragments-b085906.md)
             -   [Manage Destination Certificates](1-connectivity-documentation/manage-destination-certificates-df1bb55.md)
+                -   [Certificate Types](1-connectivity-documentation/certificate-types-007e405.md)
             -   [Manage Trust](1-connectivity-documentation/manage-trust-82dbeca.md)
             -   [Create and Bind a Destination Service Instance](1-connectivity-documentation/create-and-bind-a-destination-service-instance-9fdad3c.md)
                 -   [Use a Config.JSON to Create or Update a Destination Service Instance](1-connectivity-documentation/use-a-config-json-to-create-or-update-a-destination-service-instance-6816d3c.md)

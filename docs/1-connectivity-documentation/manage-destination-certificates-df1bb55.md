@@ -183,3 +183,5 @@ You can maintain truststore and keystore certificates in the *Destinations* edit
 
 [Manage Trust](manage-trust-82dbeca.md)
 
+[Certificate Types](certificate-types-007e405.md)
+
