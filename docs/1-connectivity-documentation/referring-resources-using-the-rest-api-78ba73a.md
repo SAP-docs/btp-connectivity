@@ -34,7 +34,7 @@ The following sample request shows how you can retrieve a destination with name 
 > ### Sample Code:  
 > ```
 > curl --request GET
->   --url https://<destination-service-url>/destination-configuration/v2/destinations/subaccount@dest1
+>   --url https://<destination-service-url>/destination-configuration/v2/destinations/dest1@subaccount
 >   --header 'Authorization: Bearer {{account token}}'
 > ```
 
@@ -47,9 +47,9 @@ The following sample request shows how you can retrieve a destination with name 
 > ### Sample Code:  
 > ```
 > curl --request GET
->   --url https://<destination-service-url>/destination-configuration/v2/destinations/subaccount@dest1
+>   --url https://<destination-service-url>/destination-configuration/v2/destinations/dest1@subaccount
 >   --header 'Authorization: Bearer {{account token}}'
->   --header 'X-fragment-name: instance@fragment2'
+>   --header 'X-fragment-name: fragment2@instance'
 > ```
 
 
@@ -83,9 +83,9 @@ The following sample request shows how you can retrieve a destination with name 
 > ### Sample Code:  
 > ```
 > curl --request GET
->   --url https://<destination-service-url>/destination-configuration/v2/destinations/provider_subaccount@dest1
+>   --url https://<destination-service-url>/destination-configuration/v2/destinations/dest1@provider_subaccount
 >   --header 'Authorization: Bearer {{subscriber token}}'
->   --header 'X-fragment-name: instance@fragment2'
+>   --header 'X-fragment-name: fragment2@instance'
 > ```
 
 Requesting resources on a single level has no restrictions.
@@ -99,9 +99,9 @@ The following sample request shows how you can retrieve a destination with name 
 > ### Sample Code:  
 > ```
 > curl --request GET
->   --url https://<destination-service-url>/destination-configuration/v2/destinations/subaccount@dest1
+>   --url https://<destination-service-url>/destination-configuration/v2/destinations/dest1@subaccount
 >   --header 'Authorization: Bearer {{subscriber token}}'
->   --header 'X-fragment-name: subaccount@fragment2'
+>   --header 'X-fragment-name: fragment2@subaccount'
 > ```
 
 

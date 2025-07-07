@@ -208,6 +208,9 @@ Press *Add Subaccount* to define a subaccount. This will open a dialog or wizard
 
     ![](images/SCC_AddManageSubaccounts_4_ab635bc.png)
 
+    > ### Note:  
+    > The obtained subaccount authentication data you plan to apply is valid only for a few minutes. Therefore, you need to apply the subaccount authentication data immediately after fetching it from the cloud side.
+
     To download the authentication data file **from your subaccount in the SAP BTP cockpit**, perform the following steps:
 
     1.  Log on to the SAP BTP cockpit and choose the subaccount you'd like to connect to.
