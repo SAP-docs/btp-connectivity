@@ -5,7 +5,7 @@
 Use the Helm chart to configure and manage the lifecycle of the Transparent Proxy.
 
 > ### Note:  
-> Current version of the Transparent Proxy is 1.8.0.
+> Current version of the Transparent Proxy is 1.8.1.
 
 The Transparent Proxy delivery includes a Helm chart that you can use for lifecycle management. The Helm allows full configuration via [the standard Helm method of a "values.yaml" file](https://helm.sh/docs/chart_template_guide/values_files/).
 
