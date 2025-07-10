@@ -103,19 +103,27 @@ Back to [Content](cloud-connector-e6c7616.md#loioe6c7616abb5710148cfcf3e75d96d59
 
 **Connecting On-Premises Database Tools to SAP HANA Databases**
 
+> ### Restriction:  
+> This scenario is only available for the Neo environment.
+
 ![](images/SCC_Intro_2_ded00cb.png)
 
-1.  Install and configure the Cloud Connector: [Installation](installation-57ae3d6.md), [Initial Configuration](initial-configuration-db9170a.md), [Adding and Managing Subaccounts](adding-and-managing-subaccounts-f16df12.md)
+1.  Install and configure the Cloud Connector: [Installation](https://help.sap.com/docs/connectivity/sap-btp-connectivity-neo/installation?version=Cloud), [Initial Configuration](https://help.sap.com/docs/connectivity/sap-btp-connectivity-neo/cloud-connector-initial-configuration?version=Cloud), [Adding and Managing Subaccounts](https://help.sap.com/docs/connectivity/sap-btp-connectivity-neo/managing-subaccounts?version=Cloud)
 2.  Access HANA databases on SAP BTP: [Configure a Service Channel for an SAP HANA Database](https://help.sap.com/viewer/b865ed651e414196b39f8922db2122c7/Cloud/en-US/3dc28b456bb64fad89084d2d10af602c.html "Using Cloud Connector service channels, you can establish a connection to an SAP HANA database in SAP BTP that is not directly exposed to external access.") :arrow_upper_right:
 3.  Connect on-premises database or BI tools to a HANA database on SAP BTP: [Connect DB Tools to SAP HANA via Service Channels](https://help.sap.com/viewer/b865ed651e414196b39f8922db2122c7/Cloud/en-US/64d6a510e98941d28dbff2fc8179f175.html "") :arrow_upper_right:
 
 > ### Note:  
 > You can use service channels also for other purposes:
 > 
-> -   Connect to a virtual machine on SAP BTP.
-> -   Configure an RFC connection from your on-premises system to S/4HANA Cloud.
+> -   Connect to a virtual machine on SAP BTP \(**Neo** environment only\).
+> -   Configure an RFC connection from your on-premises system to S/4HANA Cloud \(**Neo** and **Multi-Cloud** environment\).
+> -   Connect to a service in a Kubernetes cluster \(**Multi-Cloud** environment only\)
 > 
-> See [Using Service Channels](using-service-channels-16f6342.md).
+> See also:
+> 
+> [Using Service Channels](using-service-channels-16f6342.md) \(**Multi-Cloud** environment\)
+> 
+> [Using Service Channels](https://help.sap.com/docs/connectivity/sap-btp-connectivity-neo/using-service-channels?version=Cloud) \(**Neo** environment\)
 
 Back to [Basic Scenarios](cloud-connector-e6c7616.md#loioe6c7616abb5710148cfcf3e75d96d596__scenarios) 
 

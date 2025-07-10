@@ -660,9 +660,26 @@ You can use the TCP channel of the Cloud Connector, if the client supports a SOC
 
 ### **Can I use the Cloud Connector from on-premises to cloud for any protocol?**
 
-This is possible only for a limited set of protocols. You can use the Cloud Connector as a JDBC or ODBC proxy to access the HANA DB instance within your SAP BTP Neo subaccount \(service channel\). This is sometimes referred to as “HANA protocol”. Also, there are service channels for SSH access to SAP BTP Neo virtual machines, and for RFC access to ABAP cloud systems. All of these service channels provide access to endpoints that are not visible in the Internet.
+This is possible only for a limited set of protocols, using Cloud Connector *service channels*:
 
-For HTTP, the endpoints that could be addressed are visible in the Internet. Therefore, you can simply use your normal network infrastructure that is prepared for accessing HTTPS endpoints in the Internet anyway.
+**Neo** environment:
+
+-   You can use the Cloud Connector as a JDBC or ODBC proxy to access the HANA DB instance within your SAP BTP Neo subaccount \(service channel\). This is sometimes referred to as “HANA protocol”.
+-   Also, there are service channels for SSH access to SAP BTP Neo virtual machines.
+
+**Neo** and **Multi-Cloud** environment:
+
+-   RFC access to ABAP cloud systems.
+
+All of these service channels provide access to endpoints that are not visible in the Internet.
+
+See also:
+
+[Using Service Channels](using-service-channels-16f6342.md) \(**Multi-Cloud** environment\)
+
+[Using Service Channels](https://help.sap.com/docs/connectivity/sap-btp-connectivity-neo/using-service-channels?version=Cloud) \(**Neo** environment\)
+
+For HTTP \(**Neo** and **Multi-Cloud**\), the endpoints that can be addressed are visible in the Internet. Therefore, you can simply use your normal network infrastructure that is prepared for accessing HTTPS endpoints in the Internet anyway.
 
 
 
