@@ -20,15 +20,13 @@ Find configuration examples for HTTP and RFC destinations in SAP BTP, using diff
 
 [Mail Destination \(Internet\)](destination-examples-3a2d575.md#loio3a2d57580d474da6960a644462a92861__mail_internet)
 
-[Mail Destination \(On-Premise\)](destination-examples-3a2d575.md#loio3a2d57580d474da6960a644462a92861__mail_onpremise)
-
 
 
 <a name="loio3a2d57580d474da6960a644462a92861__http_client"/>
 
 ## Example: HTTP Destination \(Internet, Client Certificate Authentication\)
 
-![](images/CS_DestinationExample_ClientCertificate_e8ce05c.png)
+![](images/CS_DestinationExample_HTTP_ClientCertificate_e8ce05c.png)
 
 Back to [Content](destination-examples-3a2d575.md#loio3a2d57580d474da6960a644462a92861__content)
 
@@ -38,7 +36,7 @@ Back to [Content](destination-examples-3a2d575.md#loio3a2d57580d474da6960a644462
 
 ## Example: HTTP Destination \(Internet, OAuth2SAMLBearerAssertion\)
 
-![](images/CS_DestinationExample_OAuth2SAML_faece6e.png)
+![](images/CS_DestinationExample_HTTP_OAuth2SAML_faece6e.png)
 
 Back to [Content](destination-examples-3a2d575.md#loio3a2d57580d474da6960a644462a92861__content)
 
@@ -48,7 +46,7 @@ Back to [Content](destination-examples-3a2d575.md#loio3a2d57580d474da6960a644462
 
 ## Example: HTTP Destination \(On-Premise\)
 
-![](images/CS_DestinationExample_OnPremise_9392f72.png)
+![](images/CS_DestinationExample_HTTP_OnPremise_9392f72.png)
 
 Back to [Content](destination-examples-3a2d575.md#loio3a2d57580d474da6960a644462a92861__content)
 
@@ -59,17 +57,6 @@ Back to [Content](destination-examples-3a2d575.md#loio3a2d57580d474da6960a644462
 ## Example: RFC Destination
 
 ![](images/CS_DestinationExample_RFC_7906f66.png)
-
-The following main properties correspond to the relevant additional properties:
-
-*User* → `jco.client.user` 
-
-*Password* → `jco.client.passwd` 
-
-*Repository password* → `jco.destination.repository.passwd`
-
-> ### Note:  
-> For security reasons, do not use these additional properties but use the corresponding main properties' fields.
 
 Back to [Content](destination-examples-3a2d575.md#loio3a2d57580d474da6960a644462a92861__content)
 
@@ -83,20 +70,12 @@ Back to [Content](destination-examples-3a2d575.md#loio3a2d57580d474da6960a644462
 
 Back to [Content](destination-examples-3a2d575.md#loio3a2d57580d474da6960a644462a92861__content)
 
-
-
-<a name="loio3a2d57580d474da6960a644462a92861__mail_onpremise"/>
-
-## Example: Mail Destination \(On-Premise\)
-
-![](images/CS_DestinationExample_MAIL_OnPremise_CF_0967399.png)
-
-Back to [Content](destination-examples-3a2d575.md#loio3a2d57580d474da6960a644462a92861__content)
-
 **Related Information**  
 
 
 [HTTP Destinations](http-destinations-42a0e6b.md "Find information about HTTP destinations for Internet and on-premise connections.")
 
 [RFC Destinations](rfc-destinations-238d027.md "")
+
+[MAIL Destinations](mail-destinations-e3de817.md "Find information about MAIL destinations for Internet or on-premise connections from an SAP BTP subaccount.")
 

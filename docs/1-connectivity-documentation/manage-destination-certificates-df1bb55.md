@@ -8,23 +8,19 @@ Maintain certificates \(X.509 client certificates, trusted certificates, CA cert
 
 ## Prerequisites
 
--   Subaccount level:
+You have logged on to the cockpit and opened the *Certificate* view by choosing *Connectivity* \> *Destination Certificates*.
 
-    You have logged on to the cockpit and opened the *Certificate* view by choosing *Connectivity* \> *Destination Certificates*.
-
-    ![](images/CS_Destination_Certificates_-_Prereq_f0d2096.png)
-
--   Service instance level:
-
-    You have logged on to the cockpit and opened the *Destinations* editor for a particular service instance. For more information, see [Access the Destinations Editor](access-the-destinations-editor-82ca377.md).
-
+![](images/CS_Destination_Certificates_-_Prereq_f0d2096.png)
 
 
 
 ## Context
 
+> ### Note:  
+> You can manage certificates also via the [Destination Service REST API](destination-service-rest-api-23ccafb.md).
+
 > ### Caution:  
-> Uploaded certificates are accessible via the REST APIs, including any private data they may contain.
+> Uploaded certificates are accessible via the [Destination Service REST API](destination-service-rest-api-23ccafb.md), including any private data they may contain.
 
 You can maintain truststore and keystore certificates in the *Destinations* editor. You can upload, generate, view and delete certificates for your destinations and destination fragments.
 
@@ -41,7 +37,7 @@ You can maintain truststore and keystore certificates in the *Destinations* edit
 
 <!-- concept\_qmm\_jqt\_f4 -->
 
-## Certificates on Subaccount Level
+## Procedure
 
 
 
@@ -125,63 +121,4 @@ You can maintain truststore and keystore certificates in the *Destinations* edit
 
     ![](images/CS_Destination_Certificates_-_Delete_2_c5a6879.png)
 
-
-<a name="concept_qmm_jqt_f5"/>
-
-<!-- concept\_qmm\_jqt\_f5 -->
-
-## Certificates on Service Instance Level
-
-> ### Note:  
-> Currently, the new *Destination Certificates* UI is only available on subaccount level. Therefore, the procedure outlined below for the service instance level is different as it uses the old *Destinations* editor. Once the new *Destination Certificates* UI is available for service instance level, the procedures will be unified.
-
-
-
-## Upload Certificates
-
-1.  Choose *Certificates*.
-2.  Choose *Upload Certificate*.
-
-    ![](images/CS_Destination_Certificates_-_Upload_6ba1115.png)
-
-3.  Browse to the certificate file you need to upload.
-
-    The certificate file is added.
-
-
-> ### Note:  
-> You can upload a certificate during creation or editing of a destination, by clicking the *Upload and Delete Certificates* link.
-
-> ### Caution:  
-> Certificates added through the *Upload Certificate* option cannot be renewed automatically.
-
-
-
-## Generate a SAP Cloud PKI Infrastructure Certificate
-
-1.  Choose *Certificates*.
-2.  Choose *Generate Certificate*.
-
-    ![](images/CS_Destination_Certificates_-_Generate_1_311d141.png)
-
-3.  In the pop-up window, enter certificate name and type. Optionally, you can enter certificate CN and certificate validity. \(Optional\) Additionally, you can select the *Enable automatic renewal* checkbox to renew the certificate automatically when it nears its expiration date. Choose *Generate Certificate* again. The certificate is generated, and you can use it in your destinations.
-
-    ![](images/CS_Destination_Certificates_-_Generate_2_4d61d63.png)
-
-
-
-
-<a name="concept_qmm_jqt_f5__section_nkl_gtq_bgb"/>
-
-## More Information
-
-[Create HTTP Destinations](create-http-destinations-783fa1c.md)
-
-[Edit and Delete Destinations](edit-and-delete-destinations-372dee2.md)
-
-[Import Destinations](import-destinations-91ee9db.md)
-
-[Manage Trust](manage-trust-82dbeca.md)
-
-[Certificate Types](certificate-types-007e405.md)
 

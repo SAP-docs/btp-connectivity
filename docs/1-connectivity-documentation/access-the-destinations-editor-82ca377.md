@@ -21,7 +21,7 @@ On service instance level, you can reuse this destination for a specific space a
 ## Prerequisites
 
 -   You are logged into the SAP BTP cockpit.
--   You have the required authorizations.See [User Roles](getting-started-daca64d.md#loiodaca64dacc6148fcb5c70ed86082ef91__roles).
+-   You have the required authorizations. See [User Roles](user-roles-b922fc8.md).
 
 
 
@@ -56,7 +56,7 @@ See also section *Create and Bind a Service Instance from the Cockpit* in [Creat
 
 [Check the Availability of a Destination](check-the-availability-of-a-destination-71ea3cc.md "How to check the availability of a destination in the Destinations editor (SAP BTP cockpit).")
 
-[Clone Destinations](clone-destinations-b80786e.md "How to clone destinations in the Destinations editor (SAP BTP cockpit).")
+[Duplicate Destinations](duplicate-destinations-b80786e.md "How to duplicate destinations in the Destinations editor (SAP BTP cockpit).")
 
 [Edit and Delete Destinations](edit-and-delete-destinations-372dee2.md "How to edit and delete destinations in the Destinations editor (SAP BTP cockpit).")
 

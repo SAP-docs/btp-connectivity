@@ -8,7 +8,7 @@ How to create RFC destinations in the *Destinations* editor \(SAP BTP cockpit\).
 
 ## Prerequisites
 
-You have logged into the cockpit and opened the *Destinations* editor.
+You have logged into the cockpit and opened the *Destinations* editor from your subaccount menu \(choose *Connectivity* \> *Destinations*\).
 
 > ### Note:  
 > The on-premise use cases described in this guide are also applicable to virtual private cloud \(VPC\) environments.
@@ -19,10 +19,9 @@ You have logged into the cockpit and opened the *Destinations* editor.
 
 ## Procedure
 
-1.  Choose *Create Destination*.
+1.  Choose *Create* \> *From Scratch* \> *Create*.
 
-    > ### Note:  
-    > In section **Destination Configuration**, do not change the default tab *Blank Template*. Tab *Service Instance* only applies for HTTP destinations.
+    ![](images/CS_Destinations_Create_From_Scratch_b6be459.png)
 
 2.  Enter a destination name.
 
@@ -30,196 +29,49 @@ You have logged into the cockpit and opened the *Destinations* editor.
 
 4.  The *<Description\>* field is optional.
 
-5.  From the *<Proxy Type\>* dropdown box, select `Internet` or `OnPremise`, depending on the connection you need to provide for your application.
+5.  From the *<Proxy Type\>* dropdown box, select `Internet`, `OnPremise`, or `Local`, depending on the connection type you want to provide for your application.
+
+    ![](images/CS_Destinations_Create_From_Scratch_RFC_8e8b532.png)
 
     > ### Note:  
-    > Using *<Proxy Type\>* `Internet` , you can connect your application to any target service that is exposed to the Internet. *<Proxy Type\>* `OnPremise` requires the Cloud Connector to access resources within your on-premise network.
+    > When using *<Proxy Type\>* `Internet` , you can connect your application to any target service that is exposed to the Internet. *<Proxy Type\>* `OnPremise` requires the Cloud Connector to access resources within your on-premise network.
 
-6.  Enter credentials for *<User\>* and *<Password\>*.
-
-7.  \(Optional\) Enter an *<Alias User\>* name. See also [User Logon Properties](user-logon-properties-8b1e1c3.md).
-
-8.  \(Optional\) Enter credentials for *<Repository User\>* and *<Repository Password\>*, if you want to use a different user for repository lookups. See also [Repository Configuration](repository-configuration-4c4b83b.md).
-
-9.  \(Optional\) If you are using more than one Cloud Connector for your subaccount, you must enter the *<Location ID\>* of the target Cloud Connector.
+6.  \(Optional\) For *OnPremise* connections only: If you are using more than one Cloud Connector for your subaccount, you must enter the *<Location ID\>* of the target Cloud Connector.
 
     See also [Adding and Managing Subaccounts](adding-and-managing-subaccounts-f16df12.md) \(section **Procedure**, step 4\).
 
-10. Depending on the proxy type of your RFC destination, specify at least the following JCo properties in section *Additional Properties*.
+7.  As *Authorization Type*, choose `CONFIGURED_USER`, `PrincipalPropagation` \(for *OnPremise* connections only\), or `TechnicalUserPropagation` \(for *OnPremise* connections only\), and enter the required parameters for the selected authentication type.
+
+    See also [User Logon Properties](user-logon-properties-8b1e1c3.md).
+
+8.  In section *Target System Configuration*, enter the required target system information.
+
+    See also [Target System Configuration](target-system-configuration-ab6eac9.md).
+
+9.  \(Optional\) In section *Repository Configuration*, you can define the repository behavior.
+
+    See also [Repository Configuration](repository-configuration-4c4b83b.md).
+
+10. \(Optional\) In section *Pooling Configuration*, you can define the pooling behavior for the RFC destination.
+
+    See also [Pooling Configuration](pooling-configuration-7add680.md).
+
+11. \(Optional\) In section *Communication Behavior Configuration*, you can control the connection to an ABAP system.
+
+    See also [Parameters Influencing Communication Behavior](parameters-influencing-communication-behavior-cce126a.md).
+
+12. \(Optional\) You can enter additional properties.
 
     1.  In the *Additional Properties* panel, choose *New Property*.
 
-    2.  Add each required property from the dropdown menu and specify its value:
+    2.  Enter a key \(name\) or choose one from the dropdown menu and specify a value for the property. You can add as many properties as you need.
+
+    3.  To delete a property, choose the *Delete* icon next to it.
 
 
-
-    <table>
-    <tr>
-    <th valign="top">
-
-    Proxy Type
-    
-    </th>
-    <th valign="top">
-
-    Property
-    
-    </th>
-    <th valign="top">
-
-    Description
-    
-    </th>
-    </tr>
-    <tr>
-    <td valign="top" rowspan="9">
-    
-    **OnPremise**
-    
-    </td>
-    <td valign="top" colspan="2">
-    
-    **Load Balancing Connections**
-    
-    </td>
-    </tr>
-    <tr>
-    <td valign="top">
-    
-    `jco.client.r3name`
-    
-    </td>
-    <td valign="top">
-    
-    Three-letter system ID of your backend ABAP system \(as configured in the Cloud Connector\).
-    
-    </td>
-    </tr>
-    <tr>
-    <td valign="top">
-    
-    `jco.client.mshost`
-    
-    </td>
-    <td valign="top">
-    
-    Message server host \(as configured in the Cloud Connector\).
-    
-    </td>
-    </tr>
-    <tr>
-    <td valign="top">
-    
-    `jco.client.group`
-    
-    </td>
-    <td valign="top">
-    
-    \(Optional\) The group of application servers that is used \(logon group\). If not specified, the group `PUBLIC` is used.
-    
-    </td>
-    </tr>
-    <tr>
-    <td valign="top">
-    
-    `jco.client.client`
-    
-    </td>
-    <td valign="top">
-    
-    Three-digit ABAP client number \(defines the client of the target ABAP system\).
-    
-    </td>
-    </tr>
-    <tr>
-    <td valign="top" colspan="2">
-    
-    **Direct Connections**
-    
-    </td>
-    </tr>
-    <tr>
-    <td valign="top">
-    
-    `jco.client.ashost`
-    
-    </td>
-    <td valign="top">
-    
-    Application server name of your target ABAP system \(as configured in the Cloud Connector\).
-    
-    </td>
-    </tr>
-    <tr>
-    <td valign="top">
-    
-    `jco.client.sysnr`
-    
-    </td>
-    <td valign="top">
-    
-    Instance number of the application server \(as configured in the Cloud Connector\).
-    
-    </td>
-    </tr>
-    <tr>
-    <td valign="top">
-    
-    `jco.client.client`
-    
-    </td>
-    <td valign="top">
-    
-    Three-digit ABAP client number \(defines the client of the target ABAP system\).
-    
-    </td>
-    </tr>
-    <tr>
-    <td valign="top" rowspan="3">
-    
-    **Internet**
-    
-    </td>
-    <td valign="top">
-    
-    `jco.client.wshost`
-    
-    </td>
-    <td valign="top">
-    
-    WebSocket RFC server host on which the target ABAP system is running. The system must be exposed to the Internet.
-    
-    </td>
-    </tr>
-    <tr>
-    <td valign="top">
-    
-    `jco.client.wsport`
-    
-    </td>
-    <td valign="top">
-    
-    WebSocket RFC server port on which the target ABAP system is listening.
-    
-    </td>
-    </tr>
-    <tr>
-    <td valign="top">
-    
-    `jco.client.client`
-    
-    </td>
-    <td valign="top">
-    
-    Three-digit ABAP client number \(defines the client of the target ABAP system\).
-    
-    </td>
-    </tr>
-    </table>
-    
     For a detailed description of RFC-specific properties \(JCo properties\), see [RFC Destinations](rfc-destinations-238d027.md).
 
-11. Press *Save*.
+13. When you are done, choose *Create*.
 
 
 **Related Information**  

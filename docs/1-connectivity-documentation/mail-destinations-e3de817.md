@@ -18,5 +18,5 @@ Find below an overview of available configuration parameters for each protocol:
 **Related Information**  
 
 
-[Create Mail Destinations](create-mail-destinations-6442cb4.md "Create mail destinations in the Destinations editor (SAP BTP cockpit).")
+[Create MAIL Destinations](create-mail-destinations-6442cb4.md "Create MAIL destinations in the Destinations editor (SAP BTP cockpit).")
 

@@ -1,14 +1,14 @@
 <!-- loio6442cb4f8b0f41178abce14c35f5def4 -->
 
-# Create Mail Destinations
+# Create MAIL Destinations
 
-Create mail destinations in the *Destinations* editor \(SAP BTP cockpit\).
+Create MAIL destinations in the *Destinations* editor \(SAP BTP cockpit\).
 
 
 
 ## Prerequisites
 
-You have logged into the cockpit and opened the *Destinations* editor.
+You have logged into the cockpit and opened the *Destinations* editor from your subaccount menu \(choose *Connectivity* \> *Destinations*\).
 
 > ### Note:  
 > The on-premise use cases described in this guide are also applicable to virtual private cloud \(VPC\) environments.
@@ -19,10 +19,9 @@ You have logged into the cockpit and opened the *Destinations* editor.
 
 ## Procedure
 
-1.  Choose *Create Destination*.
+1.  Choose *Create* \> *From Scratch* \> *Create*.
 
-    > ### Note:  
-    > In section **Destination Configuration**, do not change the default tab *Blank Template*. Tab *Service Instance* only applies for HTTP destinations.
+    ![](images/CS_Destinations_Create_From_Scratch_b6be459.png)
 
 2.  Enter a destination name.
 
@@ -30,7 +29,9 @@ You have logged into the cockpit and opened the *Destinations* editor.
 
 4.  The *Description* field is optional.
 
-5.  From the *Proxy Type* dropdown box, select `Internet` or `OnPremise`, depending on the connection you need to provide for your application.
+5.  From the *Proxy Type* dropdown box, select `Internet`, `OnPremise`, or `PrivateLink`, depending on the connection type you want to provide for your application.
+
+    ![](images/CS_Destinations_Create_From_Scratch_MAIL_9397861.png)
 
     > ### Note:  
     > To access a mail server located in your own network \(via Cloud Connector\), choose `OnPremise`. To access an external mail server, choose `Internet`.
@@ -50,10 +51,10 @@ You have logged into the cockpit and opened the *Destinations* editor.
 
     2.  Enter a key \(name\) or choose one from the dropdown menu and specify a value for the property. You can add as many properties as you need. Each key of an additional property must start with "`mail.`".
 
-    3.  To remove a property, choose the *Remove* button next to it.
+    3.  To delete a property, choose the *Delete* icon next to it.
 
 
-9.  When you are done, choose *Save*.
+9.  When you are done, choose *Create*.
 
 
 **Related Information**  

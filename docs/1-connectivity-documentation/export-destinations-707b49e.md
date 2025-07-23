@@ -8,7 +8,7 @@ Export destinations from the *Destinations* editor in the SAP BTP cockpit to bac
 
 ## Prerequisites
 
-You have created a destination in the ** editor.
+You have created a destination in the *Destinations* editor.
 
 
 
@@ -16,15 +16,13 @@ You have created a destination in the ** editor.
 
 1.  Log into the cockpit and open the *Destinations* editor.
 
-2.  Select a destination and choose the ![](images/Export_destination_cockpit_dbc9e9f.png) button.
+2.  To export a single destination, select it and choose *Export* in the detail view. To export several destinations at once, choose *Turn on bulk actions* and select all destinations you want to export. Then choose *Export* in the destination overview list.
 
-3.  Browse to the location on your local file system where you want to save the new destination.
+    ![](images/CS_Destinations_Export_442aba0.png)
 
-    -   If the destination does not contain client certificate authentication, it is saved as a single configuration file.
-    -   If the destination provides client certificate data, it is saved as an archive.
+3.  Select the file format you want to use for download and choose *Export*. A file will be downloaded to your default download folder.
 
-        The content of this archive includes the main configuration file and a single or multiple PEM files. The actual number of PEM files depends on the amount of aliases inside the client certificate. Each PEM file is named after an alias and contains the public data associated with that alias.
-
+    The download includes the destination data in the selected file format. When downloading several destinations at once, their data will be downloaded as an archive file.
 
 
 **Related Information**  

@@ -8,7 +8,7 @@ Create LDAP destinations in the *Destinations* editor \(SAP BTP cockpit\).
 
 ## Prerequisites
 
-You have logged into the cockpit and opened the *Destinations* editor.
+You have logged into the cockpit and opened the *Destinations* editor from your subaccount menu \(choose *Connectivity* \> *Destinations*\).
 
 > ### Note:  
 > The on-premise use cases described in this guide are also applicable to virtual private cloud \(VPC\) environments.
@@ -19,10 +19,9 @@ You have logged into the cockpit and opened the *Destinations* editor.
 
 ## Procedure
 
-1.  Choose *Create Destination*.
+1.  Choose *Create* \> *From Scratch* \> *Create*.
 
-    > ### Note:  
-    > In section **Destination Configuration**, do not change the default tab *Blank Template*. Tab *Service Instance* only applies for HTTP destinations.
+    ![](images/CS_Destinations_Create_From_Scratch_b6be459.png)
 
 2.  Enter a destination name.
 
@@ -30,15 +29,26 @@ You have logged into the cockpit and opened the *Destinations* editor.
 
 4.  The *Description* field is optional.
 
-5.  From the *Proxy Type* dropdown box, select `OnPremise`.
+5.  From the *Proxy Type* dropdown box, select `Internet`, `OnPremise`, or `PrivateLink`, depending on the connection type you want to provide for your application.
 
-6.  Choose *Authentication* type `NoAuthentication` or `BasicAuthentication`. For a detailed parameter description, see [Configuring Authentication](http-destinations-42a0e6b.md#loio42a0e6b966924f2e902090bdf435e1b2__config).
+    ![](images/CS_Destinations_Create_From_Scratch_LDAP_e5ee40e.png)
 
-7.  \(Optional\) You can enter a *Description* \(free text\) for the LDAP destination.
+6.  Specify the target *URL* of the LDAP server.
 
-8.  \(Optional\) You can enter a Location ID. If more than one Cloud Connector is connected to your subaccount, enter the location ID of the Cloud Connector that is used to connect to the target LDAP server.
+7.  \(Optional\) For *OnPremise* connections only: If more than one Cloud Connector is connected to your subaccount, enter the location ID of the Cloud Connector that is used to connect to the target LDAP server.
 
-9.  When you are done, choose *Save*.
+8.  Choose *Authentication* type `NoAuthentication` or `BasicAuthentication`. For a detailed parameter description, see [Configuring Authentication](http-destinations-42a0e6b.md#loio42a0e6b966924f2e902090bdf435e1b2__config).
+
+9.  \(Optional\) You can enter additional properties.
+
+    1.  In the *Additional Properties* panel, choose *New Property*.
+
+    2.  Enter a key \(name\) or choose one from the dropdown menu and specify a value for the property. You can add as many properties as you need.
+
+    3.  To delete a property, choose the *Delete* icon next to it.
+
+
+10. When you are done, choose *Create*.
 
 
 **Related Information**  

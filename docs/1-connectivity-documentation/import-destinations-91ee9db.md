@@ -8,10 +8,7 @@ How to import destinations in the *Destinations* editor \(SAP BTP cockpit\).
 
 ## Prerequisites
 
-You have previously created an HTTP destination.
-
-> ### Note:  
-> The *Destinations* editor allows importing destination files with extension `.props`, `.properties`, `.jks`, and `.txt`, as well as files with no extension. Destination files must be encoded in **ISO 8859-1** character encoding.
+You have previously stored a destination configuration as JSON, YAML, or Properties file.
 
 
 
@@ -19,12 +16,15 @@ You have previously created an HTTP destination.
 
 1.  Log into the cockpit and open the *Destinations* editor.
 
-2.  Choose *Import from File*.
+2.  Choose *Create* \> *From File* \> *Create*.
 
-3.  Browse to a configuration file that contains destination configuration.
+    ![](images/CS_Destinations_Import_37878fe.png)
 
-    -   If the configuration file contains valid data, it is displayed in the *Destinations* editor with no errors. The *Save* button is enabled so that you can successfully save the imported destination.
-    -   If the configuration file contains invalid properties or values, under the relevant fields in the *Destinations* editor are displayed error messages in red which prompt you to correct them accordingly.
+3.  Browse to a configuration file that contains the destination configuration.
+
+4.  Select the file and upload it.
+
+5.  Review and save the destination.
 
 
 **Related Information**  

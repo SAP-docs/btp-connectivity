@@ -16,10 +16,9 @@ You have logged into the cockpit and opened the *Destinations* editor.
 
 You can use the *Check Connection* button in the *Destinations* editor of the cockpit to verify if the `URL` configured for an HTTP Destination is reachable and if the connection to the specified system is possible.
 
-> ### Note:  
-> This check is available with *Cloud Connector version 2.7.1 or higher*.
+For each destination, the check button is available in the destination detail view.
 
-For each destination, the check button is available in the destination detail view and in the destination overview list \(icon *Check availability of destination connection* in section *Actions*\).
+![](images/CS_Destinations_Check_Connection_5927491.png)
 
 > ### Note:  
 > The check does not guarantee that the target system or service is operational. It only verifies if a connection is possible.

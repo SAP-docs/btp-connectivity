@@ -1,28 +1,30 @@
 <!-- loiob80786e5b6b8428cbbd3fcd648957c17 -->
 
-# Clone Destinations
+# Duplicate Destinations
 
-How to clone destinations in the *Destinations* editor \(SAP BTP cockpit\).
+How to duplicate destinations in the *Destinations* editor \(SAP BTP cockpit\).
 
 
 
 ## Prerequisites
 
-You have previously created or imported an HTTP destination in the *Destinations* editor of the cockpit.
+You have previously created an HTTP destination in the *Destinations* editor of the cockpit.
 
 
 
 ## Procedure
 
-1.  In the *Destinations* editor, go to the existing destination which you want to clone.
+1.  In the *Destinations* editor, select the existing destination which you want to duplicate, and open the detail view.
 
-2.  Choose the ![](images/Clone_destination_cockpit_086962c.png) icon.
+2.  Choose *Duplicate*.
+
+    ![](images/CS_Destinations_Duplicate_23092a9.png)
 
 3.  The editor automatically creates and opens a new destination that contains all the properties of the selected one.
 
-4.  You can modify some parameters if you need.
+4.  You can modify some parameters if you need to.
 
-5.  When you are ready, choose the *Save* button.
+5.  When you are done, choose *Create*.
 
 
 **Related Information**  

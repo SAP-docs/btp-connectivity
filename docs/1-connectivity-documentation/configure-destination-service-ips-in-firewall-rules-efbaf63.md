@@ -22,7 +22,12 @@ Region \(Region Host\)
 </th>
 <th valign="top">
 
-IP Addresses
+IP Addresses \(IPv4\)
+
+</th>
+<th valign="top">
+
+IP Addresses \(IPv6\)
 
 </th>
 </tr>
@@ -43,6 +48,11 @@ Europe \(Frankfurt\) - AWS
 3.68.162.165
 
 </td>
+<td valign="top">
+
+2a05:d014:ca2:3700::/56
+
+</td>
 </tr>
 <tr>
 <td valign="top">
@@ -61,6 +71,11 @@ Europe \(Frankfurt\) - AWS
 3.75.8.16
 
 </td>
+<td valign="top">
+
+2a05:d014:1b2c:b500::/56
+
+</td>
 </tr>
 <tr>
 <td valign="top">
@@ -73,6 +88,11 @@ Europe \(Netherlands\) - Azure
 <td valign="top">
 
 40.115.20.192
+
+</td>
+<td valign="top">
+
+ 
 
 </td>
 </tr>
@@ -93,6 +113,11 @@ US East \(VA\) - AWS
 54.81.172.123
 
 </td>
+<td valign="top">
+
+2600:1f18:ef:9b00::/56
+
+</td>
 </tr>
 <tr>
 <td valign="top">
@@ -111,6 +136,11 @@ US West \(Oregon\) - AWS
 35.155.159.17
 
 </td>
+<td valign="top">
+
+2600:1f14:180c:7200::/56
+
+</td>
 </tr>
 <tr>
 <td valign="top">
@@ -125,6 +155,11 @@ US West \(WA\) - Azure
 52.151.19.92
 
 </td>
+<td valign="top">
+
+ 
+
+</td>
 </tr>
 <tr>
 <td valign="top">
@@ -137,6 +172,11 @@ US East \(VA\) - Azure
 <td valign="top">
 
 20.163.232.70
+
+</td>
+<td valign="top">
+
+ 
 
 </td>
 </tr>
@@ -157,6 +197,11 @@ Brazil \(São Paulo\) - AWS
 54.232.114.228
 
 </td>
+<td valign="top">
+
+2600:1f1e:c13:1500::/56
+
+</td>
 </tr>
 <tr>
 <td valign="top">
@@ -169,6 +214,11 @@ Brazil \(São Paulo\) - Azure
 <td valign="top">
 
 4.201.180.215
+
+</td>
+<td valign="top">
+
+ 
 
 </td>
 </tr>
@@ -189,6 +239,11 @@ Japan \(Tokyo\) - AWS
 54.150.191.131
 
 </td>
+<td valign="top">
+
+2406:da14:1d30:cb00::/56
+
+</td>
 </tr>
 <tr>
 <td valign="top">
@@ -201,6 +256,11 @@ Japan \(Tokyo\) - Azure
 <td valign="top">
 
 48.210.28.199
+
+</td>
+<td valign="top">
+
+ 
 
 </td>
 </tr>
@@ -221,6 +281,11 @@ Australia \(Sydney\) - AWS
 13.210.143.45
 
 </td>
+<td valign="top">
+
+2406:da1c:339:e800::/56
+
+</td>
 </tr>
 <tr>
 <td valign="top">
@@ -237,6 +302,11 @@ Asia Pacific \(Singapore\) - AWS
 13.215.24.185
 
 18.143.71.37
+
+</td>
+<td valign="top">
+
+2406:da18:500:5400::/56
 
 </td>
 </tr>
@@ -257,6 +327,11 @@ Asia Pacific \(Seoul\) - AWS
 52.78.55.157
 
 </td>
+<td valign="top">
+
+2406:da12:ae7:cc00::/56
+
+</td>
 </tr>
 <tr>
 <td valign="top">
@@ -271,6 +346,11 @@ Australia \(Sydney\) - Azure
 13.75.143.163
 
 </td>
+<td valign="top">
+
+ 
+
+</td>
 </tr>
 <tr>
 <td valign="top">
@@ -283,6 +363,11 @@ Singapore - Azure
 <td valign="top">
 
 23.98.89.110
+
+</td>
+<td valign="top">
+
+ 
 
 </td>
 </tr>
@@ -303,6 +388,11 @@ Canada \(Montreal\) - AWS
 3.97.147.84
 
 </td>
+<td valign="top">
+
+2600:1f11:b90:f900::/56
+
+</td>
 </tr>
 <tr>
 <td valign="top">
@@ -317,6 +407,11 @@ Canada Central \(Toronto\) - Azure
 52.138.50.189
 
 </td>
+<td valign="top">
+
+ 
+
+</td>
 </tr>
 <tr>
 <td valign="top">
@@ -329,6 +424,11 @@ Switzerland \(Zurich\) - Azure
 <td valign="top">
 
 51.103.232.173
+
+</td>
+<td valign="top">
+
+ 
 
 </td>
 </tr>
@@ -352,7 +452,12 @@ Region \(Region Host\)
 </th>
 <th valign="top">
 
-IP Addresses
+IP Addresses \(IPv4\)
+
+</th>
+<th valign="top">
+
+IP Addresses \(IPv6\)
 
 </th>
 </tr>
@@ -373,6 +478,11 @@ Europe \(Frankfurt\) - AWS
 18.153.139.6
 
 </td>
+<td valign="top">
+
+2a05:d014:ca2:3702::18, 2a05:d014:ca2:3705::18, 2a05:d014:ca2:3708::18
+
+</td>
 </tr>
 <tr>
 <td valign="top">
@@ -391,6 +501,11 @@ Europe \(Frankfurt\) - AWS
 3.74.96.32
 
 </td>
+<td valign="top">
+
+2a05:d014:1b2c:b502::18, 2a05:d014:1b2c:b508::18, 2a05:d014:1b2c:b505::18
+
+</td>
 </tr>
 <tr>
 <td valign="top">
@@ -403,6 +518,11 @@ Europe \(Netherlands\) - Azure
 <td valign="top">
 
 108.141.17.178
+
+</td>
+<td valign="top">
+
+ 
 
 </td>
 </tr>
@@ -423,6 +543,11 @@ US East \(VA\) - AWS
 52.71.181.35
 
 </td>
+<td valign="top">
+
+2600:1f18:ef:9b05::18, 2600:1f18:ef:9b08::18, 2600:1f18:ef:9b02::18
+
+</td>
 </tr>
 <tr>
 <td valign="top">
@@ -441,6 +566,11 @@ US West \(Oregon\) - AWS
 35.85.25.113
 
 </td>
+<td valign="top">
+
+2600:1f14:180c:7205::18, 2600:1f14:180c:7208::18, 2600:1f14:180c:7202::18
+
+</td>
 </tr>
 <tr>
 <td valign="top">
@@ -455,6 +585,11 @@ US West \(WA\) - Azure
 4.149.160.6
 
 </td>
+<td valign="top">
+
+ 
+
+</td>
 </tr>
 <tr>
 <td valign="top">
@@ -467,6 +602,11 @@ US East \(VA\) - Azure
 <td valign="top">
 
 135.234.230.67
+
+</td>
+<td valign="top">
+
+ 
 
 </td>
 </tr>
@@ -487,6 +627,11 @@ Brazil \(São Paulo\) - AWS
 54.207.88.85
 
 </td>
+<td valign="top">
+
+2600:1f1e:c13:1502::18, 2600:1f1e:c13:1508::18, 2600:1f1e:c13:1505::18
+
+</td>
 </tr>
 <tr>
 <td valign="top">
@@ -499,6 +644,11 @@ Brazil \(São Paulo\) - Azure
 <td valign="top">
 
 4.228.11.82
+
+</td>
+<td valign="top">
+
+ 
 
 </td>
 </tr>
@@ -519,6 +669,11 @@ Japan \(Tokyo\) - AWS
 52.193.24.140
 
 </td>
+<td valign="top">
+
+2406:da14:1d30:cb05::18, 2406:da14:1d30:cb08::18, 2406:da14:1d30:cb02::18
+
+</td>
 </tr>
 <tr>
 <td valign="top">
@@ -531,6 +686,11 @@ Japan \(Tokyo\) - Azure
 <td valign="top">
 
 74.176.24.90
+
+</td>
+<td valign="top">
+
+ 
 
 </td>
 </tr>
@@ -551,6 +711,11 @@ Australia \(Sydney\) - AWS
 13.54.25.95
 
 </td>
+<td valign="top">
+
+2406:da1c:339:e808::18, 2406:da1c:339:e805::18, 2406:da1c:339:e802::18
+
+</td>
 </tr>
 <tr>
 <td valign="top">
@@ -567,6 +732,11 @@ Asia Pacific \(Singapore\) - AWS
 18.141.62.28
 
 18.138.210.183
+
+</td>
+<td valign="top">
+
+2406:da18:500:5402::18, 2406:da18:500:5405::18, 2406:da18:500:5408::18
 
 </td>
 </tr>
@@ -587,6 +757,11 @@ Asia Pacific \(Seoul\) - AWS
 3.38.231.134
 
 </td>
+<td valign="top">
+
+2406:da12:ae7:cc02::18, 2406:da12:ae7:cc05::18, 2406:da12:ae7:cc08::18
+
+</td>
 </tr>
 <tr>
 <td valign="top">
@@ -601,6 +776,11 @@ Australia \(Sydney\) - Azure
 4.237.197.40
 
 </td>
+<td valign="top">
+
+ 
+
+</td>
 </tr>
 <tr>
 <td valign="top">
@@ -613,6 +793,11 @@ Singapore - Azure
 <td valign="top">
 
 57.155.52.252
+
+</td>
+<td valign="top">
+
+ 
 
 </td>
 </tr>
@@ -633,6 +818,11 @@ Canada \(Montreal\) - AWS
 3.97.184.18
 
 </td>
+<td valign="top">
+
+2600:1f11:b90:f908::18, 2600:1f11:b90:f905::18, 2600:1f11:b90:f902::18
+
+</td>
 </tr>
 <tr>
 <td valign="top">
@@ -647,6 +837,11 @@ Canada Central \(Toronto\) - Azure
 130.107.189.173
 
 </td>
+<td valign="top">
+
+ 
+
+</td>
 </tr>
 <tr>
 <td valign="top">
@@ -659,6 +854,11 @@ Switzerland \(Zurich\) - Azure
 <td valign="top">
 
 20.250.185.103
+
+</td>
+<td valign="top">
+
+ 
 
 </td>
 </tr>

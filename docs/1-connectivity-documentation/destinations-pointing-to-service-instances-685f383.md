@@ -37,18 +37,21 @@ Using the *Destinations Pointing to Service Instances* template, you only have t
 
 ## Procedure
 
-1.  Choose *Create Destination*.
-2.  Select the tab *Service Instance* in the **Destination Configuration** section.
-3.  In the *<Service Instance\>* dropdown list, you find all the service instances, grouped by space, where you have the role Space Developer.
-4.  Select a service instance.
-5.  Give the destination configuration a name and, optionally, a description.
-6.  \(Optional\) You can specify additional properties.
-7.  Choose *Next*.
+1.  Choose *Create* \> *Service Instance* \> *Create*.
 
-    A service key for that service instance is automatically generated, using the naming convention *<service\_instance\_name\>-service-key*. If the key name already exists, it is reused. A new destination with pre-filled fields is previewed, using the given service instance data. Do not change the values of these fields.
+    ![](images/CS_Destinations_Create_Service_Instance_4a77c2a.png)
 
-    8. If you want to create a destination with these values, choose *Save*. Otherwise, choose *Cancel*.
+2.  Select a service instance and choose *Next*.
 
+    ![](images/CS_Destinations_Create_Service_Instance_2_87226cd.png)
+
+3.  Choose an existing service key or generate a new one for the selected service instance. Choose *Next*.
+4.  Enter destination details and choose *Next*.
+
+    For more information, see [Create Destinations from Scratch](create-destinations-from-scratch-5eba623.md).
+
+5.  Review destination data.
+6.  Choose *Create*.
 
 
 
@@ -56,8 +59,8 @@ Using the *Destinations Pointing to Service Instances* template, you only have t
 
 ## Result
 
-You have a destination pointing to your service instance. If you delete this service instance or its service key, the destination stops working.
+You have a destination pointing to your service instance.
 
 > ### Caution:  
-> If you delete this service instance or its service key, the destination will stop working.
+> If you delete the used service instance or its service key, the destination will stop working.
 
