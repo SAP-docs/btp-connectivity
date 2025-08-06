@@ -30,7 +30,7 @@ The following data and setup is used:
 
 -   The Cloud Connector system identity's SNC name is `p:CN=SCC, OU=SAP CP Scenarios, O=Trust Community, C=DE`.
 -   The ABAP system's SNC identity name is`p:CN=SID, O=Trust Community, C=DE`. This value can typically be found in the ABAP system instance profile parameter `snc/identity/as` and hence is provided per application server.
--   When using the SAP Cryptographic Library, the ABAP system's SNC identity and the Cloud Connector's system identity should be signed by the same CA for mutual authentication.
+-   When using the SAP Cryptographic Library, we recommend that you use an ABAP system SNC identity and a Cloud Connector system identity signed by the same CA for mutual authentication.
 -   The example short-lived certificate has the subject `CN=P1234567`, where `P1234567` is the SAP BTP application user.
 
 

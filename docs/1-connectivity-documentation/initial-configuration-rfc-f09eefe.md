@@ -67,6 +67,9 @@ When using the SAP Cryptographic Library as SNC implementation, you can use the 
 
 **Windows scripts**: *snc\_create\_pse.bat, snc\_import\_ca\_response.bat*
 
+> ### Note:  
+> These scripts are located in the Cloud Connector installation directory.
+
 1.  Download and extract the SAP Cryptographic Library from the [Download Center](https://support.sap.com/en/my-support/software-downloads.html) \(search for *sapcryptolib*\).
 2.  Copy the respective scripts depending on your OS to the SAP Cryptographic Library folder.
 3.  Make sure the Cloud Connector process is running.

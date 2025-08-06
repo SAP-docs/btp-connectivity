@@ -40,14 +40,14 @@ You have logged into the cockpit and opened the *Destinations* editor from your 
 
 7.  Enter an *additional property* to specify the address of the target mail server.
 
-    1.  In the *Additional Properties* panel, choose *New Property*.
+    1.  In the *Additional Properties* panel, choose *Add Property*.
 
     2.  Depending on the protocol you want to use, enter *mail.imap4.host*, *mail.pop3.host*, or *mail.smtp.host* and specify a value for the property.
 
 
 8.  \(Optional\) You can enter more additional properties.
 
-    1.  In the *Additional Properties* panel, choose *New Property*.
+    1.  In the *Additional Properties* panel, choose *Add Property*.
 
     2.  Enter a key \(name\) or choose one from the dropdown menu and specify a value for the property. You can add as many properties as you need. Each key of an additional property must start with "`mail.`".
 

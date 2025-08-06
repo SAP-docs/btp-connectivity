@@ -31,7 +31,7 @@ You can choose between a simple `portable` variant of the Cloud Connector and th
 
     If you want to use SAP JVM, you can download it from the [SAP Development Tools for Eclipse](https://tools.hana.ondemand.com/#cloud) page.
 
-    Alternatively supported SapMachine JDK versions can be downloaded from the [SapMachine Homepage](https://sapmachine.io/).
+    Alternatively supported SapMachine JDK versions can be downloaded from the SapMachine homepage \(*https://sapmachine.io*\).
 
 -   When using the `portable` variant, the environment variable *<JAVA\_HOME\>* must be set to the Java installation directory, so that the `bin` subdirectory can be found. Alternatively, you can add the relevant `bin` subdirectory to the *<PATH\>* variable.
 
@@ -63,6 +63,9 @@ You can choose between a simple `portable` variant of the Cloud Connector and th
 
 > ### Note:  
 > The Cloud Connector is started as a Windows service in the productive use case. Therefore, installation requires administration permissions. After installation, manage this service under *Control Panel* \> *Administrative Tools* \> *Services*. The service name is `Cloud Connector` \(formerly named `Cloud Connector 2.0`\). Make sure the service is executed with a user that has limited privileges. Typically, privileges allowed for service users are defined by your company policy. Adjust the folder and file permissions to be manageable by only this user and system administrators.
+
+> ### Note:  
+> Using the SAP Cryptographic Library requires the environment variable SECUDIR to be set.
 
 On Windows, the file `scc_service.log` is created and used by the Microsoft MSI installer \(during Cloud Connector installation\), and by the `scchost.exe` executable, which registers and runs the Windows service if you install the Cloud Connector as a Windows background job.
 

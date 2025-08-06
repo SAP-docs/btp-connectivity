@@ -73,7 +73,10 @@ Set up principal propagation from SAP BTP to your internal system that is used i
 
 1.  Set up trust to an entity that is issuing an assertion for the logged-on user \(see section above\).
 2.  Set up the system identity for the Cloud Connector.
-    -   For HTTPS, you must import a system certificate into your Cloud Connector.
+    -   For HTTPS, you must import a system certificate \(X.509 certificate\) into your Cloud Connector.
+
+        For more information, see [Install a System Certificate for Mutual Authentication](initial-configuration-http-3f974ea.md#loio3f974eae3cba4dafa274ec59f69daba6__section_N1001A_N10011_N10001).
+
     -   For RFC, you must import an SNC PSE into your Cloud Connector.
 
 3.  Configure the target system to trust the Cloud Connector.

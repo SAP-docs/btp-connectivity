@@ -411,3 +411,5 @@ Back to [Tasks](consuming-the-destination-service-7e30625.md#loio7e306250e08340f
 
 [Extending Destinations with Fragments](extending-destinations-with-fragments-f56600a.md "Use the “Find Destination” API to extend your destination with a destination fragment.")
 
+[Using an IAS User Token for Corporate IdP Token Principal Propagation to On-Premise Systems](using-an-ias-user-token-for-corporate-idp-token-principal-propagation-to-on-premise-e50acf1.md "Using an IAS user token for corporate IdP token principal propagation to on-premise systems allows automatic token exchange to the corporate IdP token.")
+

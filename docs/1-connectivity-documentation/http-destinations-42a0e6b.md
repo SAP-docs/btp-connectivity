@@ -9,14 +9,6 @@ Find information about HTTP destinations for Internet and on-premise connections
 
 
 
-<a name="loio42a0e6b966924f2e902090bdf435e1b2__section_N10024_N10011_N10001"/>
-
-## Destination Levels
-
-The runtime tries to resolve a destination in the order: *Subaccount Level* → *Service Instance Level*.
-
-
-
 <a name="loio42a0e6b966924f2e902090bdf435e1b2__section_ojj_f1p_slb"/>
 
 ## Destinations for Subscribed Applications
