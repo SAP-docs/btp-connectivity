@@ -394,7 +394,7 @@ For more information, see [Client Assertion with Automated Assertion Fetching by
 </table>
 
 > ### Note:  
-> When consuming a destination via the Destination service REST API, the following headers are mandatory for this authentication type:
+> To find or consume a destination via the Destination service REST API, the following headers are mandatory for this authentication type:
 > 
 > -   `X-Subject-Token`
 > -   `X-Subject-Token-Type`
