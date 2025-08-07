@@ -20,7 +20,7 @@ With this token exchange flow, any type of token can be used, provided that it i
 
 ## Properties
 
-To configure a destination of this type, you must specify all the required properties. You can create destinations of this type via the [Destination Service REST API](destination-service-rest-api-23ccafb.md).
+To configure a destination of this type, you must specify all the required properties.
 
 > ### Restriction:  
 > `OAuth2TokenExchange` destinations don’t support dynamic tenant-specific token service URLs. The token service URL is always taken as is.
@@ -392,6 +392,14 @@ For more information, see [Client Assertion with Automated Assertion Fetching by
 </td>
 </tr>
 </table>
+
+> ### Note:  
+> When consuming a destination via the Destination service REST API, the following headers are mandatory for this authentication type:
+> 
+> -   `X-Subject-Token`
+> -   `X-Subject-Token-Type`
+> 
+> For more information, see the [Destination service REST API](https://api.sap.com/api/SAP_CP_CF_Connectivity_Destination/resource/Consume_a_destination) documentation.
 
 
 

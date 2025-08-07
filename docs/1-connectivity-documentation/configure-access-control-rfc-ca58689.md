@@ -39,6 +39,8 @@ To allow your cloud applications to access a certain backend system on the intra
     > ### Note:  
     > -   The back end must be properly configured to support SNC connections.
     > -   SNC configuration must be provided in the Cloud Connector.
+    > 
+    >     For more information, see also [Configure Identity Propagation for RFC](configure-identity-propagation-for-rfc-33a2f37.md).
 
 6.  Choose *Next*.
 7.  Choose whether you want to configure a load balancing logon or connect to a specific application server.
