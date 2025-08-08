@@ -283,7 +283,7 @@ SapMachine 64-bit
 </td>
 <td valign="top">
 
-2.14.0 and higher
+2.14.0 up to 2.18.x
 
 </td>
 </tr>
@@ -1231,69 +1231,6 @@ connectivitytunnel.cf.eu30.hana.ondemand.com
 <td valign="top">
 
 `35.198.143.110` 
-
-</td>
-<td valign="top">
-
- 
-
-</td>
-</tr>
-<tr>
-<td valign="top" rowspan="3">
-
-Europe \(Netherlands\) - Google Cloud
-
-\(`cf.eu31.hana.ondemand.com` \)
-
-> ### Note:  
-> Available as of June 30, 2025
-
-
-
-</td>
-<td valign="top" colspan="2">
-
-connectivitynotification.cf.eu31.hana.ondemand.com
-
-</td>
-<td valign="top">
-
-`34.90.22.237`
-
-</td>
-<td valign="top">
-
- 
-
-</td>
-</tr>
-<tr>
-<td valign="top" colspan="2">
-
-connectivitycertsigning.cf.eu31.hana.ondemand.com
-
-</td>
-<td valign="top">
-
-`34.90.22.237`
-
-</td>
-<td valign="top">
-
- 
-
-</td>
-</tr>
-<tr>
-<td valign="top" colspan="2">
-
-connectivitytunnel.cf.eu31.hana.ondemand.com
-
-</td>
-<td valign="top">
-
-`34.90.22.237`
 
 </td>
 <td valign="top">
@@ -2528,69 +2465,6 @@ connectivitytunnel.cf.ap30.hana.ondemand.com
 <td valign="top">
 
 `35.244.71.16`
-
-</td>
-<td valign="top">
-
- 
-
-</td>
-</tr>
-<tr>
-<td valign="top" rowspan="3">
-
-Singapore - Google Cloud
-
-\(`cf.ap31.hana.ondemand.com`\)
-
-> ### Note:  
-> Available as of June 30, 2025
-
-
-
-</td>
-<td valign="top" colspan="2">
-
-connectivitynotification.cf.ap31.hana.ondemand.com
-
-</td>
-<td valign="top">
-
-`35.198.192.195`
-
-</td>
-<td valign="top">
-
- 
-
-</td>
-</tr>
-<tr>
-<td valign="top" colspan="2">
-
-connectivitycertsigning.cf.ap31.hana.ondemand.com
-
-</td>
-<td valign="top">
-
-`35.198.192.195`
-
-</td>
-<td valign="top">
-
- 
-
-</td>
-</tr>
-<tr>
-<td valign="top" colspan="2">
-
-connectivitytunnel.cf.ap31.hana.ondemand.com
-
-</td>
-<td valign="top">
-
-`35.198.192.195`
 
 </td>
 <td valign="top">
