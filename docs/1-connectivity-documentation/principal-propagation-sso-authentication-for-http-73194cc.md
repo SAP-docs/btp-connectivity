@@ -23,7 +23,7 @@ You can create and configure a *PrincipalPropagation* destination by using the p
 
 ## Properties
 
-The following credentials need to be specified:
+The table below lists the destination properties for *PrincipalPropagation* authentication type.
 
 
 <table>
@@ -38,6 +38,13 @@ Property
 Description
 
 </th>
+</tr>
+<tr>
+<td valign="top" colspan="2">
+
+**Required**
+
+</td>
 </tr>
 <tr>
 <td valign="top">
@@ -102,19 +109,29 @@ You can only use proxy type `OnPremise`.
 <tr>
 <td valign="top">
 
-`CloudConnectorLocationId` 
+`CloudConnectorLocationId`
 
 </td>
 <td valign="top">
+
+> ### Note:  
+> Required only if multiple Cloud Connectors are connected to a subaccount.
 
 You can connect multiple Cloud Connectors to a subaccount as long as their location ID is different. The location ID specifies the Cloud Connector over which the connection is opened. The default value is an empty string identifying the Cloud Connector that is connected without any location ID.
 
 </td>
 </tr>
 <tr>
+<td valign="top" colspan="2">
+
+**Additional**
+
+</td>
+</tr>
+<tr>
 <td valign="top">
 
-`URL.headers.<header-key>` 
+`URL.headers.<header-key>`
 
 </td>
 <td valign="top">
@@ -141,7 +158,7 @@ A static key prefix used as a namespace grouping of the URL's HTTP headers whose
 <tr>
 <td valign="top">
 
-`URL.queries.<query-key>` 
+`URL.queries.<query-key>`
 
 </td>
 <td valign="top">
