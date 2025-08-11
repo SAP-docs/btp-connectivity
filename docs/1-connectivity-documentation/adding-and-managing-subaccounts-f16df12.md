@@ -105,7 +105,7 @@ After establishing the Cloud Connector connection, this user is not needed any m
 
 
 
-<a name="loiof16df12fab9f4fe1b8a4122f0fd54b6e__section_fg5_fmd_32c"/>
+<a name="loiof16df12fab9f4fe1b8a4122f0fd54b6e__add"/>
 
 ## Adding a Subaccount
 
@@ -195,7 +195,7 @@ Press *Add Subaccount* to define a subaccount. This will open a dialog or wizard
         > **Appending the two-factor authentication** \(2FA / MFA\) token to the regular password **is not required** when performing the initial configuration for a Cloud Connector subaccount in the **Neo environment**.
 
     4.  \(Optional\) You can define a *<Display Name\>* that lets you easily recognize a specific subaccount in the UI compared to the technical subaccount name.
-    5.  \(Optional\) You can define a *<Location ID\>* identifying the location of this Cloud Connector for a specific subaccount. The location ID is used as routing information.It lets you connect multiple Cloud Connectors to a single subaccount. If you don't specify any value for *<Location ID\>*, the default is used. The location ID must be unique per subaccount and should be an identifier that can be used in a URI. To route requests to a Cloud Connector with a location ID, the location ID must be configured in the respective destinations.
+    5.  \(Optional\) You can define a *<Location ID\>* identifying the location of this Cloud Connector for a specific subaccount. The location ID is used as routing information. It lets you connect multiple Cloud Connectors to a single subaccount. If you don't specify any value for *<Location ID\>*, the default \(empty string\) is used. The location ID must be unique per subaccount and should be an identifier that can be used in a URI. To route requests to a Cloud Connector with a location ID, the location ID must be configured in the respective destinations.
     6.  \(Optional\) You can provide a *<Description\>* of the subaccount that becomes a part of the subaccount's detail information.
 
         > ### Note:  

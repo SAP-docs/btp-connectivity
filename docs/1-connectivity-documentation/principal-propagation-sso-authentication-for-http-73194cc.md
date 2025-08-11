@@ -109,6 +109,18 @@ You can only use proxy type `OnPremise`.
 <tr>
 <td valign="top">
 
+**Optional**
+
+</td>
+<td valign="top">
+
+ 
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
 `CloudConnectorLocationId`
 
 </td>
@@ -118,6 +130,8 @@ You can only use proxy type `OnPremise`.
 > Required only if multiple Cloud Connectors are connected to a subaccount.
 
 You can connect multiple Cloud Connectors to a subaccount as long as their location ID is different. The location ID specifies the Cloud Connector over which the connection is opened. The default value is an empty string identifying the Cloud Connector that is connected without any location ID.
+
+For more information, see [Adding a Subaccount](adding-and-managing-subaccounts-f16df12.md#loiof16df12fab9f4fe1b8a4122f0fd54b6e__add) \(step 3e\).
 
 </td>
 </tr>
