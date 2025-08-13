@@ -510,6 +510,12 @@ Modifications of HTTP response headers are done if needed. In particular, Set-Co
 
 
 
+### **Is it possible to use the Cloud Connector as an HTTP proxy for outgoing traffic?**
+
+No, this is not possible. This is possible only for a limited set of protocols. There are many HTTP proxy solutions out there that you can use in your network infrastructure.
+
+
+
 ## Administration
 
 
