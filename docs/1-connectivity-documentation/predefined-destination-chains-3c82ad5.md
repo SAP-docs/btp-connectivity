@@ -4,11 +4,6 @@
 
 Find a list of predefined destination chains that can be consumed through requests to the Destination service.
 
-> ### Note:  
-> Currently, only a predefined chain for IAS \(Identity Authentication service\)-signed SAML assertions is available.
-> 
-> For more information on identity authentication, see [SAP Cloud Identity Services](https://help.sap.com/docs/cloud-identity-services/cloud-identity-services/landing-page?version=Cloud).
-
 
 <table>
 <tr>
@@ -36,12 +31,29 @@ Documentation
 </td>
 <td valign="top">
 
-*IAS-generated SAML assertion to OAuth2 Bearer token* chain.
+*IAS-generated SAML assertion to OAuth2 Bearer token* chain
 
 </td>
 <td valign="top">
 
 [IAS-generated SAML Assertion to OAuth2 Bearer Token Chain](ias-generated-saml-assertion-to-oauth2-bearer-token-chain-d716d41.md)
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+`com.sap.sequentialUserPropagation` 
+
+</td>
+<td valign="top">
+
+*User-token-to-new-user-token* transformation and *new-user-token* consumption chain
+
+</td>
+<td valign="top">
+
+[Sequential User Propagation Chain](sequential-user-propagation-chain-13f633e.md)
 
 </td>
 </tr>

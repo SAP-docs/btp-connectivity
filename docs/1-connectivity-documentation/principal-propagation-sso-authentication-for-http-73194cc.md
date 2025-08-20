@@ -214,8 +214,13 @@ ProxyType=OnPremise
 
 
 
-**Related Information**  
 
 
-[Principal Propagation](principal-propagation-e2cbb48.md "Enable single sign-on (SSO) by forwarding the identity of cloud users to a remote system or service.")
+<a name="loio73194cc419894433994c5f0444b4c6a1__section_qyz_rlz_3gc"/>
+
+## Related Information
+
+[Principal Propagation](principal-propagation-e2cbb48.md)
+
+[Configure Principal Propagation from BTP Applications to On-Premise Systems Using Corporate IdP Tokens](https://help.sap.com/docs/btp/sap-business-technology-platform/configure-principal-propagation-from-btp-applications-to-on-premise-systems-using-corporate-idp-tokens?version=Cloud)
 

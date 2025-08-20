@@ -69,6 +69,54 @@ Specifes the type of the subject token, which will be used by Destination servic
 </tr>
 </table>
 
+
+
+<a name="loiod716d41144c54838a42a1a14a21c7abd__section_rqj_s5n_2gc"/>
+
+## Optional Headers
+
+
+<table>
+<tr>
+<th valign="top">
+
+Header Name
+
+</th>
+<th valign="top">
+
+Description
+
+</th>
+</tr>
+<tr>
+<td valign="top">
+
+`X-chain-var-samlProviderFragmentName` 
+
+</td>
+<td valign="top">
+
+Specifies the name of a destination fragment that will be used to override and/or extend the properties of the destination specified by the `X-chain-var-samlProviderDestinationName` header. In case of overlapping properties, the values of the fragment properties take priority over the values of the destination properties.
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+`X-chain-var-samlProviderFragmentOptional` 
+
+</td>
+<td valign="top">
+
+Marks whether the destination fragment provided with the `X-chain-var-samlProviderFragmentName` is optional. If the fragment is marked as optional and it does not exist, the destination with its original properties will be consumed. If the fragment is not marked as optional and it does not exist, the request will fail.
+
+This header is only applicable if the `X-chain-var-samlProviderFragmentName` header is present. If this header is applicable but not provided, the default value will be *false*.
+
+</td>
+</tr>
+</table>
+
 **Related Information**  
 
 
