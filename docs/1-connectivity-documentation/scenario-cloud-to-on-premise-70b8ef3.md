@@ -93,3 +93,11 @@ Use cases:
 </tr>
 </table>
 
+
+
+<a name="loio70b8ef33812e486d8b745a0b47fd093e__section_qyz_rlz_3gc"/>
+
+## Related Information
+
+[Configure Principal Propagation from BTP Applications to On-Premise Systems Using Corporate IdP Tokens](https://help.sap.com/docs/btp/sap-business-technology-platform/configure-principal-propagation-from-btp-applications-to-on-premise-systems-using-corporate-idp-tokens?version=Cloud)
+

@@ -134,6 +134,7 @@
             -   [Destination Chaining](1-connectivity-documentation/destination-chaining-08a09f5.md)
                 -   [Predefined Destination Chains](1-connectivity-documentation/predefined-destination-chains-3c82ad5.md)
                     -   [IAS-generated SAML Assertion to OAuth2 Bearer Token Chain](1-connectivity-documentation/ias-generated-saml-assertion-to-oauth2-bearer-token-chain-d716d41.md)
+                    -   [Sequential User Propagation Chain](1-connectivity-documentation/sequential-user-propagation-chain-13f633e.md)
             -   [Configuring Backup](1-connectivity-documentation/configuring-backup-d0d549a.md)
         -   [Consuming the Destination Service](1-connectivity-documentation/consuming-the-destination-service-7e30625.md)
             -   [User Propagation via SAML 2.0 Bearer Assertion Flow](1-connectivity-documentation/user-propagation-via-saml-2-0-bearer-assertion-flow-3cb7b81.md)

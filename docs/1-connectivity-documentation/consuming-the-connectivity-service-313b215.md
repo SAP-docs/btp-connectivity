@@ -2,7 +2,7 @@
 
 # Consuming the Connectivity Service
 
-Connect your application to an on-premise system via HTTP.
+Connect your cloud application to an on-premise system via HTTP.
 
 > ### Note:  
 > The on-premise use cases described in this guide are also applicable to virtual private cloud \(VPC\) environments.
@@ -67,7 +67,7 @@ Developer
 [Basic Steps](consuming-the-connectivity-service-313b215.md#loio313b215066a8400db461b311e01bd99b__basic_steps)
 
 1.  [Read Credentials from the Environment Variables](consuming-the-connectivity-service-313b215.md#loio313b215066a8400db461b311e01bd99b__section_EnvironmentVariables)
-2.  [Provide the Destination Information](consuming-the-connectivity-service-313b215.md#loio313b215066a8400db461b311e01bd99b__section_RequiredInformation)
+2.  [Configure Authorization](consuming-the-connectivity-service-313b215.md#loio313b215066a8400db461b311e01bd99b__section_RequiredInformation)
 3.  [Set up the HTTP Proxy for On-Premise Connectivity](consuming-the-connectivity-service-313b215.md#loio313b215066a8400db461b311e01bd99b__section_HttpProxy)
 
 
@@ -118,18 +118,12 @@ Back to [Tasks](consuming-the-connectivity-service-313b215.md#loio313b215066a840
 
 ![](images/CS_TASK_Admin_Dev_7c2c6d8.png)
 
--   You must be a *Global Account* member to connect through the Connectivity service with the Cloud Connector. See [Add Members to Your Global Account](https://help.sap.com/viewer/65de2977205c403bbc107264b8eccf4b/Cloud/en-US/4a0491330a164f5a873fa630c7f45f06.html "Add users as global account members using the SAP BTP cockpit.") :arrow_upper_right:.
-
-    > ### Note:  
-    > To connect a Cloud Connector to your subaccount, you must currently be a **Security Administrator**.
-
 -   You have installed and configured a Cloud Connector in your on-premise landscape for to the scenario you want to use. See [Installation](installation-57ae3d6.md) and [Configuration](configuration-ec68ee2.md).
 -   You have deployed an application in a landscape of the Cloud Foundry environmentthat complies with the [Business Application Pattern](https://help.sap.com/viewer/65de2977205c403bbc107264b8eccf4b/Cloud/en-US/a1de162dffea417eb9cccd7855c607b7.html "In the Cloud Foundry environment, SAP is promoting a pattern for building applications. We use the term Business Application to distinguish from single applications in the context of the Cloud Foundry environment.") :arrow_upper_right:.
 -   The Connectivity service is a regular service in the Cloud Foundry environment. Therefore, to consume the Connectivity service from an application, you must create a service instance and bind it to the application. See [Create and Bind a Connectivity Service Instance](create-and-bind-a-connectivity-service-instance-a2b88cf.md).
--   To get the required authorization for making on-premise calls through the connected Cloud Connector, the application must be bound to an instance of the *xsuaa* service using the service plan 'application'. The *xsuaa* service instance acts as an OAuth 2.0 client and grants user access to the bound application. Make sure you set the `xsappname` property to the name of the application when creating the instance. Find a detailed guide for this procedure in section *3. Creation of the Authorization & Trust Management Instance \(aka XSUAA\)* of the SCN blog [How to use SAP BTP Connectivity and Cloud Connector in the Cloud Foundry environment](https://blogs.sap.com/2017/07/13/part-2-how-to-use-the-sap-cloud-platform-connectivity-and-the-cloud-connector-in-the-cloud-foundry-environment/).
 
 > ### Note:  
-> Currently, the only supported protocol for connecting the Cloud Foundry environment to an on-premise system is HTTP. HTTPS is not needed, since the tunnel used by the Cloud Connector is TLS-encrypted.
+> When connecting to HTTP\(S\) on-premise resources, the call from the cloud application must always use HTTP. If HTTPS is used, a 405 response will be returned. The tunnel used by the Cloud Connector is TLS-encrypted, hence the traffic between cloud and on-premise network is protected regardless of the used protocol.
 
 > ### Caution:  
 > There is a limit of **8192** bytes for the size of the HTTP lines \(for example, request line or header\) that you send via the Connectivity service. If this limit is exceeded, you receive an HTTP error of type 4xx. This issue is usually caused by the size of the *path* + *query* string of the request.
@@ -147,7 +141,7 @@ Back to [Tasks](consuming-the-connectivity-service-313b215.md#loio313b215066a840
 To consume the Connectivity service from your Cloud Foundry application, perform the following basic steps:
 
 1.  [Read Credentials from the Environment Variables](consuming-the-connectivity-service-313b215.md#loio313b215066a8400db461b311e01bd99b__section_EnvironmentVariables)
-2.  [Provide the Destination Information](consuming-the-connectivity-service-313b215.md#loio313b215066a8400db461b311e01bd99b__section_RequiredInformation)
+2.  [Configure Authorization](consuming-the-connectivity-service-313b215.md#loio313b215066a8400db461b311e01bd99b__section_RequiredInformation)
 3.  [Set up the HTTP Proxy for On-Premise Connectivity](consuming-the-connectivity-service-313b215.md#loio313b215066a8400db461b311e01bd99b__section_HttpProxy)
 
 ![](images/CS_CF_Steps_e962b04.png)
@@ -162,7 +156,7 @@ Back to [Tasks](consuming-the-connectivity-service-313b215.md#loio313b215066a840
 
 ![](images/CS_TASK_Dev_a4c82d5.png)
 
-Consuming the Connectivity service requires credentials from the *xsuaa* and *Connectivity* service instances which are bound to the application. By binding the application to service instances of the xsuaa and Connectivity service as described in the prerequisites, these credentials become part of the environment variables of the application. You can access them as follows:
+Consuming the Connectivity service requires credentials from a *connectivity* or an *identity* service instance \(see [Authorization](consuming-the-connectivity-service-313b215.md#loio313b215066a8400db461b311e01bd99b__section_RequiredInformation)\) which are bound to the application. By binding the application to service instances as described in the prerequisites, these credentials become part of the environment variables of the application. You can access them like this:
 
 > ### Sample Code:  
 > ```
@@ -176,27 +170,95 @@ Consuming the Connectivity service requires credentials from the *xsuaa* and *Co
 
 This code stores a JSON object in the credentials variable. Additional parsing is required to extract the value for a specific key.
 
-> ### Note:  
-> We refer to the result of the above code block as `connectivityCredentials`, when called for *connectivity*, and `xsuaaCredentials` for *xsuaa*.
-
 Back to [Tasks](consuming-the-connectivity-service-313b215.md#loio313b215066a8400db461b311e01bd99b__tasks_CS)
 
 
 
 <a name="loio313b215066a8400db461b311e01bd99b__section_RequiredInformation"/>
 
-## Provide the Destination Information
+## Configure Authorization
 
 ![](images/CS_TASK_Admin_Dev_7c2c6d8.png)
 
-To consume the Connectivity service, you must provide some information about your on-premise system and the system mappings for it in the Cloud Connector. You require the following:
+To make calls to on-premise systems configured in the Cloud Connector, the cloud application must be authorized at the proxy endpoint\(s\). The Connectivity service supports authorization tokens issued by Authorization and Trust Management service \(XSUAA\) and Identity Authentication service \(IAS\).
 
--   The endpoint in the Cloud Connector \(virtual host and virtual port\) and accessible URL paths on it \(destinations\). See [Configure Access Control \(HTTP\)](configure-access-control-http-e7d4927.md).
--   The required authentication type for the on-premise system. See [HTTP Destinations](http-destinations-42a0e6b.md).
--   Depending on the authentication type, you may need a username and password for accessing the on-premise system. For more details, see [Client Certificate Authentication](client-certificate-authentication-4e13a04.md).
--   \(Optional\) You can use a *location Id*. For more details, see section [Specify a Cloud Connector Location ID](consuming-the-connectivity-service-313b215.md#loio313b215066a8400db461b311e01bd99b__location).
+**Authorization and Trust Management Service \(XSUAA\)**
 
-We recommend that you use the *Destination service* \(see [Consuming the Destination Service](consuming-the-destination-service-7e30625.md)\) to procure this information. However, using the Destination service is optional. You can also provide \(look up\) this information in another appropriate way.
+XSUAA-based authentication is enabled for all service instances out of the box without preparation steps. The needed credentials for obtaining the token are within the service key / binding of the Connectivity service instance that you want to use.
+
+For more information, see [Create and Bind a Connectivity Service Instance](create-and-bind-a-connectivity-service-instance-a2b88cf.md).
+
+*Example: Obtaining an XSAA proxy authorization token*
+
+Request:
+
+```
+POST <token_service_url for the connectivity service binding>/oauth/token
+Accept: application/json
+Content-Type: application/x-www-form-urlencoded
+ 
+client_id=<clientid>
+client_secret=<clientsecret>
+grant_type=client_credentials
+```
+
+Response:
+
+```
+{
+    "access_token" : "<JWT>",
+    "token_type" : "Bearer",
+    "expires_in" : 3600
+}
+```
+
+> ### Note:  
+> "token\_service\_url" replaces the deprecated property "url", which will be removed soon.
+
+**Identity Authentication Service \(IAS\)** 
+
+To enable your application for consuming the Connectivity service via IAS, you need to perform the following steps:
+
+1.  Establish trust between your subaccount and your tenant of the Cloud Identity Services service using OpenID Connect.
+
+    For more information, see [Establish Trust and Federation Between SAP Authorization and Trust Management Service and SAP Cloud Identity Services](https://help.sap.com/docs/btp/sap-business-technology-platform/establish-trust-and-federation-between-uaa-and-identity-authentication?version=Cloud).
+
+2.  Create or update an existing Connectivity service instance and bind it to the application.
+
+    For more information, see [Create and Bind a Connectivity Service Instance](create-and-bind-a-connectivity-service-instance-a2b88cf.md).
+
+3.  \(Optional\) Verify that the Connectivity binding JSON contains the property "token-type" with value \["xsuaa", "ias"\].
+4.  Create or update an existing Cloud Identity Services instance and bind it to the application. During the creation/update you must set the "consumed-services" property to an array that contains the name of the Connectivity service instance.
+
+    For more information, see [Getting Started with the Identity Service of SAP BTP](https://help.sap.com/docs/cloud-identity-services/cloud-identity-services/getting-started-with-identity-service-of-sap-btp?version=Cloud) and [Reference Information for the Identity Service of SAP BTP](https://help.sap.com/docs/cloud-identity-services/cloud-identity-services/reference-information-for-identity-service-of-sap-btp?version=Cloud).
+
+
+For obtaining an IAS proxy authorization token you should use the Cloud Identity Services binding information. The token request must contain an additional parameter - "resource" with value "urn:sap:identity:application:service:id:<instance\_id\>", where <instance\_id\> is the value of the root-level property "instance\_guid" in the Connectivity binding JSON .
+
+*Example: Obtaining an IAS proxy authorization token*
+
+Request:
+
+```
+POST <ias url>/oauth2/token
+Accept: application/json
+Content-Type: application/x-www-form-urlencoded
+ 
+client_id=<clientid>
+client_secret=<clientsecret>
+grant_type=client_credentials
+resource=urn:sap:identity:application:service:id:<instance_id>
+```
+
+Response:
+
+```
+{
+    "access_token" : "<JWT>",
+    "token_type" : "Bearer",
+    "expires_in" : 3600
+}
+```
 
 Back to [Tasks](consuming-the-connectivity-service-313b215.md#loio313b215066a8400db461b311e01bd99b__tasks_CS)
 
@@ -207,6 +269,17 @@ Back to [Tasks](consuming-the-connectivity-service-313b215.md#loio313b215066a840
 ## Set up the HTTP Proxy for On-Premise Connectivity
 
 ![](images/CS_TASK_Dev_a4c82d5.png)
+
+**Required Information** 
+
+To consume the connectivity service, you must be aware of some information about your on-premise system and the system mappings for it in the Cloud Connector. You need:
+
+-   The endpoint in the Cloud Connector \(virtual host and virtual port\) and accessible URL paths on it \(destinations\). For more information, see [Configure Access Control \(HTTP\)](configure-access-control-http-e7d4927.md).
+-   The required authentication type for the on-premise system. For more information, see [HTTP Destinations](http-destinations-42a0e6b.md).
+-   Depending on the authentication type, you might need a username and password for accessing the on-premise system. For more details, see [HTTP Destinations](http-destinations-42a0e6b.md).
+-   Optionally, you can use a `LocationId`. For more details on this, see [Specify a Cloud Connector Location ID](consuming-the-connectivity-service-313b215.md#loio313b215066a8400db461b311e01bd99b__location).
+
+We recommend that you use the Destination service \(see [Consuming the Destination Service](consuming-the-destination-service-7e30625.md)\) to procure this information. However, this is optional and you can also provide it in a different way.
 
 **Proxy Setup**
 
@@ -221,84 +294,19 @@ The Connectivity service provides a standard HTTP proxy for on-premise connectiv
 > Proxy proxy = new Proxy(Proxy.Type.HTTP, new InetSocketAddress(connProxyHost, connProxyPort));
 >  
 >  
->  
 > // create URL to the remote endpoint you like to call:
 > // virtualhost:1234 is defined as an endpoint in the Cloud Connector, as described in the Required Information section
 > URL url = new URL("http://virtualhost:1234");
 >  
 >  
 > // create the connection object to the endpoint using the proxy
-> // this does not open a connection but only creates a connection object, which can be modified later, before actually connecting
+> // this does not open a connection but only creates a connection object, which can be later modified before actually connecting
 > urlConnection = (HttpURLConnection) url.openConnection(proxy);
+> urlConnection.setRequestProperty("Proxy-Authorization",  "Bearer " + "<token for proxy authorization, as described in the Authorization section>");
 > ```
 
 > ### Note:  
 > `"onpremise_proxy_http_port"` replaces the deprecated variable `"onpremise_proxy_port"`, which will be removed soon.
-
-**Authorization**
-
-To make calls to on-premise services configured in the Cloud Connector through the HTTP proxy, you must authorize at the HTTP proxy. For this, the *OAuth Client Credentials* flow is used: applications must create an OAuth access token using using the parameters `clientid` and `clientsecret` that are provided by the Connectivity service in the environment, as shown in the example code below. When the application has retrieved the access token, it must pass the token to the connectivity proxy using the `Proxy-Authorization` header.
-
-The sample code below uses the following Maven artifacts:
-
--   `org.springframework.security:spring-security-oauth2-core`
--   `org.springframework.security:spring-security-oauth2-client`
-
-> ### Sample Code:  
-> ```
-> import org.springframework.security.authentication.AbstractAuthenticationToken;
-> import org.springframework.security.oauth2.client.ClientCredentialsOAuth2AuthorizedClientProvider;
-> import org.springframework.security.oauth2.client.OAuth2AuthorizationContext;
-> import org.springframework.security.oauth2.client.OAuth2AuthorizedClientProvider;
-> import org.springframework.security.oauth2.client.registration.ClientRegistration;
-> import org.springframework.security.oauth2.core.AuthorizationGrantType;
-> import org.springframework.security.oauth2.core.OAuth2AccessToken;
->  
-> ...
->  
-> // get value of "clientid" and "clientsecret" from the environment variables
-> String clientid = connectivityCredentials.getString("clientid");
-> String clientsecret = connectivityCredentials.getString("clientsecret");
->  
-> // get the URL to xsuaa from the environment variables
-> String xsuaaUrl = xsuaaCredentials.getString("token_service_url");
->  
-> // make request to UAA to retrieve access token
-> ClientRegistration clientRegistration = ClientRegistration.withRegistrationId("some-id").
->     authorizationGrantType(AuthorizationGrantType.CLIENT_CREDENTIALS).
->     clientId(clientid).
->     clientSecret(clientsecret).
->     authorizationUri(xsuaaUrl + "/oauth/authorize").
->     tokenUri(xsuaaUrl + "/oauth/token").
->         build();
->  
-> OAuth2AuthorizationContext xsuaaContext = OAuth2AuthorizationContext.withClientRegistration(clientRegistration).
->     principal(new AbstractAuthenticationToken(null) {
->         @Override
->         public Object getPrincipal() {
->             return null;
->         }
->  
->         @Override
->         public Object getCredentials() {
->             return null;
->         }
->  
->         @Override
->         public String getName() {
->             return "dummyPrincipalName";    // There is no principal in the client credentials authorization grant but a non-empty name is still required.
->         }
->     }).build();
->          
-> OAuth2AuthorizedClientProvider clientCredentialsAccessTokenProvider = new ClientCredentialsOAuth2AuthorizedClientProvider();
-> OAuth2AccessToken token = clientCredentialsAccessTokenProvider.authorize(xsuaaContext).getAccessToken();
->  
-> // set access token as Proxy-Authorization header in the URL connection
-> urlConnection.setRequestProperty("Proxy-Authorization",  token.getTokenType().getValue() + " " + token.getTokenValue());
-> ```
-
-> ### Note:  
-> `xsuaaCredentials.getString("token_service_url")` replaces the deprecated property `xsuaaCredentials.getString("url")`, which will be removed soon.
 
 Back to [Tasks](consuming-the-connectivity-service-313b215.md#loio313b215066a8400db461b311e01bd99b__tasks_CS)
 
@@ -345,7 +353,7 @@ Back to [Tasks](consuming-the-connectivity-service-313b215.md#loio313b215066a840
 
 To consume the Connectivity service from an SaaS application in a multitenant way, the only requirement is that the SaaS application returns the Connectivity service as a dependent service in its dependencies list.
 
-For more information about the subscription flow, see [Develop the Multitenant Business Application](https://help.sap.com/viewer/65de2977205c403bbc107264b8eccf4b/Cloud/en-US/ff540477f5404e3da2a8ce23dcee602a.html).
+For more information about the subscription flow, see [Develop the Multitenant Application](https://help.sap.com/viewer/65de2977205c403bbc107264b8eccf4b/Cloud/en-US/ff540477f5404e3da2a8ce23dcee602a.html).
 
 Back to [Tasks](consuming-the-connectivity-service-313b215.md#loio313b215066a8400db461b311e01bd99b__tasks_CS)
 
