@@ -10,9 +10,8 @@ The Destination service supports client assertion as а client authentication me
 
 For more information, see
 
--   [rfc7521](https://www.rfc-editor.org/rfc/rfc7521)
--   [Provide Client Assertion Properties as Headers](provide-client-assertion-properties-as-headers-6c98d97.md)
--   [Client Assertion with Automated Assertion Fetching by the Service](client-assertion-with-automated-assertion-fetching-by-the-service-1c34472.md).
+-   [RFC 7521](https://www.rfc-editor.org/rfc/rfc7521)
+-   [Provide Client Assertion Properties as Headers](provide-client-assertion-properties-as-headers-6c98d97.md).
 
 
 
