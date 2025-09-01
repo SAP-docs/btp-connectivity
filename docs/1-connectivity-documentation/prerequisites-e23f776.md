@@ -271,9 +271,7 @@ Oracle JDK 64-bit
 <tr>
 <td valign="top" rowspan="3">
 
-SapMachine 64-bit
-
-\(https://sapmachine.io\)
+[SapMachine](https://sapmachine.io) 64-bit
 
 </td>
 <td valign="top">

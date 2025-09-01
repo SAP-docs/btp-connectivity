@@ -40,7 +40,7 @@ You can choose between a simple `portable` variant of the Cloud Connector and th
 
     When installing it using the RPM package, the Cloud Connector will detect it and use it for its runtime.
 
-    Alternatively supported SapMachine JDK versions can be downloaded from the SapMachine homepage \(*https://sapmachine.io*\).
+    Alternatively supported SapMachine JDK versions can be downloaded from the [SapMachine](https://sapmachine.io) homepage.
 
 -   When using the `tar.gz` archive, the environment variable *<JAVA\_HOME\>* must be set to the Java installation directory, so that the `bin` subdirectory can be found. Alternatively, you can add the Java installation's `bin` subdirectory to the *<PATH\>* variable.
 

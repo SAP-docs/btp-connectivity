@@ -7,6 +7,15 @@ Configure a corporate IdP-embedded token for principal propagation \(user propag
 > ### Note:  
 > The on-premise use cases described in this guide are also applicable to virtual private cloud \(VPC\) environments.
 
+> ### Restriction:  
+> Principal Propagation via corporate IdP-embedded token is not supported with IAS proxy authorization. In this case, the corporate IdP token should be sent directly with the "SAP-Connectivity-Authentication" header.
+> 
+> For more information, see [Authentication to the On-Premise System](authentication-to-the-on-premise-system-67b0b94.md).
+> 
+> The IAS login token can be exchanged for a corporate IdP token via the automation functionalities of the Destination service.
+> 
+> For more information, see [Using an IAS User Token for Corporate IdP Token Principal Propagation to On-Premise Systems](using-an-ias-user-token-for-corporate-idp-token-principal-propagation-to-on-premise-e50acf1.md).
+
 
 
 <a name="loiodfecfb4be336426bb31cd2843baeb8d4__tasks"/>
@@ -94,8 +103,9 @@ Back to [Tasks](configure-principal-propagation-via-corporate-idp-embedded-token
 
     After the configuration, the issued XSUAA token contains an embedded token, which is extracted and propagated by the Connectivity service.
 
-    For more information, see [SAP Authorization and Trust Management Service in the Cloud Foundry Environment](https://help.sap.com/docs/CP_AUTHORIZ_TRUST_MNG/ae8e8427ecdf407790d96dad93b5f723/6373bb7a96114d619bfdfdc6f505d1b9.html?version=Cloud).
+    For more information, see [Include Tokens from Corporate Identity Providers or Identity Authentication in Tokens of the SAP Authorization and Trust Management Service](https://help.sap.com/docs/authorization-and-trust-management-service/authorization-and-trust-management/include-tokens-from-corporate-identity-providers-or-identity-authentication-in-tokens-of-sap-authorization-and-trust-management-service?version=Cloud).
 
+-   After the configuration, the issued XSUAA token contains an embedded token, which is extracted and propagated by the Connectivity service.
 -   Trust configuration for that subaccount must be synchronized in the Cloud Connector to obtain the JSON web key set from the configured corporate IdP that is used to verify the token.
 
     For more information, see [Set Up Trust](set-up-trust-a4ee70f.md).

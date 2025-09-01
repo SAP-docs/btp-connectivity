@@ -7,6 +7,11 @@ Configure a user exchange token for principal propagation \(user propagation\) f
 > ### Note:  
 > The on-premise use cases described in this guide are also applicable to virtual private cloud \(VPC\) environments.
 
+> ### Restriction:  
+> Principal Propagation via user exchange token is not supported with IAS proxy authorization. In this case, the principal should be propagated through the "SAP-Connectivity-Authentication" header.
+> 
+> For more information, see [Authentication to the On-Premise System](authentication-to-the-on-premise-system-67b0b94.md).
+
 
 
 <a name="loio39f538ad62e144c58c056ebc34bb6890__tasks_pp_cs"/>
