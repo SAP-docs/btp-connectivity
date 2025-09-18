@@ -4,6 +4,31 @@
 
 Include Destination service IP addresses in your target system firewall rules for incoming and outgoing traffic.
 
+> ### Caution:  
+> The Destination service is planning to enable IPv4 and IPv6 dual stack ingress and egress for **AWS-based regions**. Currently, only IPv4 is supported. Therefore, in our documentation we had only the respective addresses. We have now added also the **IPv6 addresses** that we plan to use. The enablement of the IPv6 addresses will happen no earlier than **February 2026**. Until then, please **ensure any needed action is performed**, based on the information below.
+> 
+> The Destination service *ingress* endpoints are the ones that are called by your HTTP client, accessing its REST API \(you would not usually need to take action for this flow, unless you have productive calls to the service from your own network\) and the Cloud Connector \(only in the cases where automatic token retrieval is performed for an on-premise OAuth destination\). If you make use of this on-premise token retrieval functionality and if the network in which your Cloud Connector is running does not support IPv6, no action is needed, as the IPv4 addresses are unaffected.
+> 
+> If the network in which your Cloud Connector is running does support IPv6, then the Java virtual machine will usually prefer to use IPv4 instead of IPv6 \(usually controlled via the `java.net.preferIPv6Addresses` system property\). If this is the case for your Java virtual machine, again, no action is needed.
+> 
+> 
+> <table>
+> <tr>
+> <td valign="top">
+> 
+> **Required Action:**
+> 
+> If your *JVM is configured to prefer IPv6*, you need to *verify if you have firewall rules in place* that limit outgoing traffic from the network. If that is the case, you would have previously allowed the certain IPv4 addresses to enable the Cloud Connector’s communication with BTP. Now, you need to **add also the IPv6 addresses to the allowlist**.
+> 
+> </td>
+> </tr>
+> </table>
+> 
+> The Destination service *egress* IPs are the ones on behalf of which external resources are accessed either via *Check Connection* or automatic token retrieval for an Internet destination. In some cases, you might have an allowlist for IP addresses at the target system. If that is the case, please add the IPv6 addresses of the Destination service to the list.
+
+> ### Note:  
+> As of version 2.18.1, the Cloud Connector shows the IPv6 status on the **About** screen.
+
 
 
 <a name="loioefbaf636c0394b0b987a666bd13b6046__section_tgk_4j2_gfc"/>
@@ -30,6 +55,30 @@ IP Addresses \(IPv4\)
 IP Addresses \(IPv6\)
 
 </th>
+</tr>
+<tr>
+<td valign="top">
+
+Europe \(Frankfurt\) - SAP
+
+\(cf.eu01.hana.ondemand.com\)
+
+> ### Note:  
+> Available as of September 19, 2025
+
+
+
+</td>
+<td valign="top">
+
+130.214.173.207
+
+</td>
+<td valign="top">
+
+ 
+
+</td>
 </tr>
 <tr>
 <td valign="top">
@@ -460,6 +509,30 @@ IP Addresses \(IPv4\)
 IP Addresses \(IPv6\)
 
 </th>
+</tr>
+<tr>
+<td valign="top">
+
+Europe \(Frankfurt\) - SAP
+
+\(cf.eu01.hana.ondemand.com\)
+
+> ### Note:  
+> Available as of September 19, 2025
+
+
+
+</td>
+<td valign="top">
+
+130.214.124.217
+
+</td>
+<td valign="top">
+
+ 
+
+</td>
 </tr>
 <tr>
 <td valign="top">

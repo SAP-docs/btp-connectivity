@@ -57,7 +57,7 @@ Select an entry to see its details:
 You can decide for each entry, whether to trust it for the principal propagation use case by choosing *Edit* and \(de\)selecting the *Trusted* checkbox.
 
 > ### Note:  
-> Whenever you update an IdP configuration for a subaccount on cloud side, you must synchronize the trusted entities in theCloud Connector. Otherwise the validation of the forwarded SAML assertion will fail with an exception \(in case of SAML assertions containing an exception message similar to this: *Caused by: com.sap.engine.lib.xml.signature.SignatureException: Unable to validate signature -\> java.security.SignatureException: Signature decryption error: javax.crypto.BadPaddingException: Invalid PKCS\#1 padding: encrypted message and modulus lengths do not match!*\).
+> Whenever you update an IdP configuration for a subaccount on cloud side, you must synchronize the trusted entities in the Cloud Connector. Otherwise the validation of the forwarded SAML assertion will fail with an exception \(in case of SAML assertions containing an exception message similar to this: *Caused by: com.sap.engine.lib.xml.signature.SignatureException: Unable to validate signature -\> java.security.SignatureException: Signature decryption error: javax.crypto.BadPaddingException: Invalid PKCS\#1 padding: encrypted message and modulus lengths do not match!*\).
 
 For more information, see also [Include Tokens from Corporate Identity Providers or Identity Authentication in Tokens of the SAP Authorization and Trust Management Service](https://help.sap.com/docs/btp/sap-business-technology-platform/including-tokens-from-corporate-identity-providers-or-identity-authentication-in-tokens-of-sap-authorization-and-trust-management-service).
 

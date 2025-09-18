@@ -4,10 +4,10 @@
 
 Download and configure X.509 certificates as a prerequisite for user propagation from the Multi-Cloud environment.
 
-Setting up a trust scenario for user propagation requires the exchange of public keys and certificates between the affected systems, as well as the respective trust configuration within these systems. This enables you to use an HTTP destination with authentication type `OAuth2SAMLBearerAssertion` or or `SAMLAssertion` for the communication.
+Setting up a trust scenario for user propagation requires the exchange of public keys and certificates between the affected systems, as well as the respective trust configuration within these systems. This enables you to use an HTTP destination with authentication type `OAuth2SAMLBearerAssertion` or `SAMLAssertion` for the communication.
 
 > ### Note:  
-> The described procedures are focused on doing them via the *Destinations* editor in the cockpit. However, they are also fully automatable via the [Destination Service REST API](destination-service-rest-api-23ccafb.md). References to the respective API endpoints are added to the relevant steps bellow.
+> The described procedures are focused on doing them via the *Destinations* editor in the cockpit. However, they are also fully automatable via the [Destination Service REST API](destination-service-rest-api-23ccafb.md). References to the respective API endpoints are added to the relevant steps below.
 
 A trust scenario can include user propagation from the Multi-Cloud environment to another SAP BTP environment, to another Multi-Cloud subaccount, or to a remote system outside SAP BTP, like S/4HANA Cloud, C4C, Success Factors, and others.
 
@@ -160,7 +160,7 @@ Rotation is done by creating a passive X.509 certificate for the subaccount, con
 **Related Information**  
 
 
-[Principal Propagation from the Cloud Foundry to the Neo Environment](https://help.sap.com/viewer/65de2977205c403bbc107264b8eccf4b/Cloud/en-US/391e9ed92ff448e0b4bacac69f853516.html#loio391e9ed92ff448e0b4bacac69f853516 "Enable an application in your subaccount in the Cloud Foundry environment to access an OAuth-protected application in a subaccount in the Neo environment without user login (and user interaction) in the second application. For this scenario to work, the two subaccounts need to be in mutual trust, and in trust with the same identity provider. The first application will propagate its logged-in user to the second application using an OAuth2SAMLBearer destination.") :arrow_upper_right:
+[Principal Propagation from the Multi-Cloud Foundation to the Neo Environment](https://help.sap.com/viewer/65de2977205c403bbc107264b8eccf4b/Cloud/en-US/391e9ed92ff448e0b4bacac69f853516.html#loio391e9ed92ff448e0b4bacac69f853516 "Enable an application in your multi-environment subaccount (for the multi-cloud foundation) to access an OAuth-protected application in a subaccount in the Neo environment without user login (and user interaction) in the second application. For this scenario to work, the two subaccounts need to be in mutual trust, and in trust with the same identity provider. The first application will propagate its logged-in user to the second application using an OAuth2SAMLBearer destination.") :arrow_upper_right:
 
 [User Propagation from the Cloud Foundry Environment to SAP S/4HANA Cloud](user-propagation-from-the-cloud-foundry-environment-to-sap-s-4hana-cloud-9af03a0.md "Configure user propagation (single sign-on), using OAuth communication from the SAP BTP Cloud Foundry environment to S/4HANA Cloud. As OAuth mechanism, you use the OAuth 2.0 SAML Bearer Assertion Flow.")
 

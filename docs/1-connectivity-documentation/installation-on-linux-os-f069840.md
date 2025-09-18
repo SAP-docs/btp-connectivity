@@ -20,7 +20,7 @@ You can choose between a simple `portable` variant of the Cloud Connector and th
 ## Prerequisites
 
 -   You have one of the supported 64-bit operating systems. For more information, see [Product Availability Matrix](prerequisites-e23f776.md#loioe23f776e4d594fdbaeeb1196d47bbcc0__matrix).
--   The supported platforms are `x64` and `ppc64le`, represented below by the variable `<platform>`. Variable `<arch>` is `x86_64` or `ppc64le` respectively.
+-   The supported platforms are `x64` and `ppc64le`, represented below by the variable `<platform>`. Variable *<arch\>* is `x86_64` or `ppc64le` respectively.
 -   You have downloaded either the `portable` variant as `tar.gz` archive for Linux or the RPM `installer` contained in the ZIP for Linux, from [SAP Development Tools for Eclipse](https://tools.hana.ondemand.com/#cloud).
 -   A supported Java version must be installed. For more information, see [JDKs](prerequisites-e23f776.md#loioe23f776e4d594fdbaeeb1196d47bbcc0__jdk).
 
@@ -58,7 +58,7 @@ You can choose between a simple `portable` variant of the Cloud Connector and th
     > If you use the parameter "o", the extracted files are assigned to the user ID and the group ID of the user who has unpacked the archive. This is the default behavior for users other than the `root` user.
 
 2.  Go to this directory and start the Cloud Connector using the `go.sh` script.
-3.  Continue with the `Next Steps` section.
+3.  Continue with the **Next Steps** section.
 
 > ### Note:  
 > In this case, the Cloud Connector is not started as a daemon, and therefore will not automatically start after a reboot of your system. Also, the `portable` version does not support the automatic upgrade procedure.
@@ -79,7 +79,7 @@ You can choose between a simple `portable` variant of the Cloud Connector and th
     rpm -i com.sap.scc-ui-<version>.<arch>.rpm 
     ```
 
-3.  Continue with the `Next Steps` section.
+3.  Continue with the **Next Steps** section.
 
 In the productive case, the Cloud Connector is started as a daemon. If you need to manage the daemon process, execute:
 
@@ -107,7 +107,7 @@ Example \(SAP Cryptographic Library requires SECUDIR to be set\):
 To activate it, you must reinstall the daemon.
 
 > ### Note:  
-> Make sure JAVA\_HOME is set to the JVM used \(in the shell where the command is executed\).
+> Make sure *<JAVA\_HOME\>* is set to the JVM used \(in the shell where the command is executed\).
 
 Execute the following command:
 

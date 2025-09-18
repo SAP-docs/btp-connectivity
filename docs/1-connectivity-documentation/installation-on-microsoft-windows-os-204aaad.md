@@ -40,9 +40,9 @@ You can choose between a simple `portable` variant of the Cloud Connector and th
 ## Portable Scenario
 
 1.  Extract the *<sapcc-<version\>-windows-x64.zip\>* ZIP file to an arbitrary directory on your local file system.
-2.  Set the environment variable JAVA\_HOME to the installation directory of the JDK that you want to use to run the Cloud Connector. Alternatively, you can add the `bin` subdirectory of the JDK installation directory to the PATH﻿ environment variable.
+2.  Set the environment variable *<JAVA\_HOME\>* to the installation directory of the JDK that you want to use to run the Cloud Connector. Alternatively, you can add the `bin` subdirectory of the JDK installation directory to the *<PATH\>*﻿ environment variable.
 3.  Go to the Cloud Connector installation directory and start it using the `go.bat` batch file.
-4.  Continue with the `Next Steps` section.
+4.  Continue with the **Next Steps** section.
 
 > ### Note:  
 > The Cloud Connector is not started as a service when using the portable variant, and hence will not automatically start after a reboot of your system. Also, the portable version does not support the automatic upgrade procedure.sapcc-<version\>-windows-x64.msi
@@ -51,7 +51,7 @@ You can choose between a simple `portable` variant of the Cloud Connector and th
 
 ## Installer Scenario
 
-1.  Start the *<\>*sapcc- installer by double-clicking it.
+1.  Start the <sapcc-<version\>-windows-x64.msi\> installer by double-clicking it.
 2.  The installer informs you that you are now guided through the installation process. Choose *Next\>*.
 3.  Navigate to the desired installation directory for your Cloud Connector and choose *Next\>*. When doing the installation in the context of an upgrade, make sure you choose the previous installation directory again.
 4.  You can choose the port on which the administration UI is reachable. Either leave the default `8443` or choose a different port if needed. Then, choose *Next\>*.
@@ -59,7 +59,7 @@ You can choose between a simple `portable` variant of the Cloud Connector and th
 6.  Decide whether the Cloud Connector should be started immediately after finishing the setup. Then, choose *Next\>*.
 7.  To start the installation, press the *Next\>* button again.
 8.  After successful installation, choose *Close*.
-9.  Continue with the `Next Steps` section.
+9.  Continue with the **Next Steps** section.
 
 > ### Note:  
 > The Cloud Connector is started as a Windows service in the productive use case. Therefore, installation requires administration permissions. After installation, manage this service under *Control Panel* \> *Administrative Tools* \> *Services*. The service name is `Cloud Connector` \(formerly named `Cloud Connector 2.0`\). Make sure the service is executed with a user that has limited privileges. Typically, privileges allowed for service users are defined by your company policy. Adjust the folder and file permissions to be manageable by only this user and system administrators.
@@ -79,7 +79,7 @@ This log file is only needed if a problem occurs during Cloud Connector installa
 
 After installation, the Cloud Connector is registered as a Windows service that is configured to be started automatically after a system reboot. You can start and stop the service via shortcuts on the desktop \("Start Cloud Connector" and "Stop Cloud Connector"\), or by using the `Windows Services` manager and look for the service `SAP Cloud Connector`.
 
-Access the Cloud Connector administration UI at *https://localhost:<port\>*, where the default port is `8443` \(but this port might have been modified during the installation\).
+Access the Cloud Connector administration UI at `https://localhost:<port>`, where the default port is `8443` \(but this port might have been modified during the installation\).
 
 
 

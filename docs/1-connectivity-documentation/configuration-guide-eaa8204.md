@@ -1816,6 +1816,23 @@ None
 <tr>
 <td valign="top">
 
+ipv6.preference.enabled
+
+</td>
+<td valign="top">
+
+If enabled, the JVM will prefer using IPv6 over IPv4 when connecting to outside resources like BTP endpoints.
+
+</td>
+<td valign="top">
+
+false
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
 transparent-proxy.enabled
 
 </td>

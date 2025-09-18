@@ -855,10 +855,82 @@ IP Addresses \(IPv6\)
 
 **Cloud Foundry Environment**
 
+> ### Caution:  
+> The Connectivity service is planning to enable IPv4 and IPv6 dual stack ingress for **AWS-based regions**. Currently, only IPv4 is supported, therefore we had only listed the respective addresses here. We have now added also the **IPv6 addresses** that we plan to use. The enablement of the IPv6 addresses will happen no earlier than **February 2026**. Until then, **please ensure any needed action is performed**, based on the information below.
+> 
+> The Connectivity service ingress endpoints are the ones that are called by the Cloud Connector. If the network in which your Cloud Connector is running *does not* support IPv6, *no action is needed*, as the IPv4 addresses remain unaffected. If the network in which your Cloud Connector is running *does* support IPv6, then the Java virtual machine \(JVM\) will usually prefer using IPv4 instead of IPv6 \(usually controlled via the system property `java.net.preferIPv6Addresses`\). If this is the case for your JVM, again, *no action is needed*. If your *JVM is configured to prefer IPv6*, you need to *verify if you have firewall rules in place* that limit outgoing traffic from the network. If this is true, you would have previously allowed the Connectivity service’s IPv4 addresses in order to enable the Cloud Connector's communication with BTP. Now, you need to *add also the IPv6 addresses* to the allowlist.
+> 
+> As of version 2.18.1, the Cloud Connector shows the IPv6 status on the *About* screen.
+> 
+> Regions for which we haven’t added IPv6 address in the documentation are currently not planned for this activity.
+
 > ### Note:  
 > In the Cloud Foundry environment, IPs are controlled by the respective IaaS provider - Amazon Web Services \(AWS\), Microsoft Azure \(Azure\), or Google Cloud. IPs may change due to network updates on the provider side. Any planned changes will be announced at least 4 weeks before they take effect. See also [Regions](https://help.sap.com/viewer/3504ec5ef16548778610c7e89cc0eac3/Cloud/en-US/350356d1dc314d3199dca15bd2ab9b0e.html).
 
 
+
+</td>
+</tr>
+<tr>
+<td valign="top" rowspan="3">
+
+Europe \(Frankfurt\) - SAP \(EU Access Only\)
+
+\(`cf.eu01.hana.ondemand.com`\)
+
+> ### Note:  
+> Available as of September 19, 2025
+
+
+
+</td>
+<td valign="top" colspan="2">
+
+connectivitynotification.mtls.eu01-l-c.uc-live-eu.shoot.live.k8s-hana.ondemand.com
+
+</td>
+<td valign="top">
+
+`130.214.124.220` 
+
+</td>
+<td valign="top">
+
+ 
+
+</td>
+</tr>
+<tr>
+<td valign="top" colspan="2">
+
+connectivitycertsigning.mtls.eu01-l-c.uc-live-eu.shoot.live.k8s-hana.ondemand.com
+
+</td>
+<td valign="top">
+
+`130.214.124.220` 
+
+</td>
+<td valign="top">
+
+ 
+
+</td>
+</tr>
+<tr>
+<td valign="top" colspan="2">
+
+connectivitytunnel.eu01-l-d.uc-live-eu.shoot.live.k8s-hana.ondemand.com
+
+</td>
+<td valign="top">
+
+`30.214.124.213` 
+
+</td>
+<td valign="top">
+
+ 
 
 </td>
 </tr>

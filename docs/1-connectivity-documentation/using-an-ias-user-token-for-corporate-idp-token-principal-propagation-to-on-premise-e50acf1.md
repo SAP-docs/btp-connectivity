@@ -14,7 +14,7 @@ Using an IAS user token for corporate IdP token principal propagation to on-prem
 
     For more information, see [Get Your Tenant](https://help.sap.com/docs/cloud-identity-services/cloud-identity-services/get-your-tenant?version=Cloud&locale=en-US) \(*SAP Cloud Identity Services* documentation\).
 
--   You have configured a destination with proxy type *OnPremise* and authentication type *PrincipalPropagation*.
+-   You have configured a destination with proxy type `OnPremise` and authentication type `PrincipalPropagation`.
 
 
 

@@ -15,7 +15,7 @@ Installing the Cloud Connector on an Apple macOS operating system.
 > There are two different Cloud Connector portable versions available for running on Apple macOS with native support either for Apple M series CPUs based on the *aarch64* architecture, or with native support for INTEL x86 64-bit CPUs based on the *x64* architecture. Make sure you download and use the Cloud Connector version in combination with a JVM version, which both match your used hardware CPU architecture.
 
 -   You have one of the supported 64-bit operating systems. For more information, see [Product Availability Matrix](prerequisites-e23f776.md#loioe23f776e4d594fdbaeeb1196d47bbcc0__matrix).
--   The supported platforms are *aarch64* and *x64*, represented below by the variable `<platform>`.
+-   The supported platforms are *aarch64* and *x64*, represented below by the variable *<platform\>*.
 -   You have downloaded the `tar.gz` archive for the developer use case on Apple macOS from [SAP Development Tools for Eclipse](https://tools.hana.ondemand.com/#cloud).
 -   A supported Java version must be installed. For more information, see [JDKs](prerequisites-e23f776.md#loioe23f776e4d594fdbaeeb1196d47bbcc0__jdk).
 
@@ -37,7 +37,7 @@ Installing the Cloud Connector on an Apple macOS operating system.
 
 2.  Go to this directory and start Cloud Connector using the `go.sh` script.
 
-3.  Continue with the `Next Steps` section.
+3.  Continue with the **Next Steps** section.
 
     > ### Note:  
     > The Cloud connector is not started as a daemon, and therefore will not automatically start after a reboot of your system. Also, the macOS version of the Cloud Connector does not support the automatic upgrade procedure.

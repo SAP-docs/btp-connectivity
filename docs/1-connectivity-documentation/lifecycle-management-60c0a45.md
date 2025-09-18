@@ -25,13 +25,13 @@ The Connectivity Proxy image is available via the DockerHub image repository, se
 
 -   **Registry**: docker.io
 -   **Repository**: sapse/connectivity-proxy
--   **Tag**: 2.13.0
+-   **Tag**: 2.18.0
 
 **Example**:
 
 > ### Sample Code:  
 > ```
-> docker pull docker.io/sapse/connectivity-proxy:2.13.0
+> docker pull docker.io/sapse/connectivity-proxy:2.18.0
 > 
 > ```
 
@@ -46,13 +46,13 @@ The Connectivity Proxy image is available via the RBSC docker image repository. 
 
 -   **Registry**: 73554900100900005672.dockersrv.cdn.repositories.cloud.sap
 -   **Repository**: com.sap.cloud.connectivity/connectivity-proxy
--   **Tag**: 2.13.0
+-   **Tag**: 2.18.0
 -   **Authorization**: see [Manage Technical Users in SAP Repositories Management](https://help.sap.com/viewer/0a64be17478d4f5ba45d14ab62b0d74c/Cloud/en-US/7e83dfc309834942b441fc2106c5b7f5.html) \(RBSC documentation\).
 
 **Example**:
 
 ```
-docker pull 73554900100900005672.dockersrv.cdn.repositories.cloud.sap/com.sap.cloud.connectivity/connectivity-proxy:2.13.0
+docker pull 73554900100900005672.dockersrv.cdn.repositories.cloud.sap/com.sap.cloud.connectivity/connectivity-proxy:2.18.0
 
 ```
 
@@ -77,7 +77,7 @@ The Connectivity Proxy Helm chart is available via the RBSC Helm repository. Thi
 
 -   **Registry**: 73554900100900005672.helmsrv.cdn.repositories.cloud.sap
 -   **Repository**: com.sap.cloud.connectivity/connectivity-proxy
--   **Tag**: 2.13.0
+-   **Tag**: 2.18.0
 -   **Authorization**: see [Manage Technical Users in SAP Repositories Management](https://help.sap.com/viewer/0a64be17478d4f5ba45d14ab62b0d74c/Cloud/en-US/7e83dfc309834942b441fc2106c5b7f5.html) \(RBSC documentation\).
 
 **Example**:
