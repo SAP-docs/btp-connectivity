@@ -52,7 +52,7 @@ To use JCo functionality seamlessly at compile time in Eclipse, you must include
 
     <artifactId>neo-java-web-api</artifactId>
 
-    <version>[3.71.8,4.0.0)</version>
+    <version>[4.108.9,5.0.0)</version>
 
     <scope>provided</scope>
 

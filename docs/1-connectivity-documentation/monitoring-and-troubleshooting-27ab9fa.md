@@ -22,12 +22,6 @@ If you encounter an issue with this service, we recommend to follow the procedur
 
 
 
-### **Check Guided Answers**
-
-In the SAP Support Portal, check the [Guided Answers](https://ga.support.sap.com/dtp/viewer/index.html#/tree/2065/actions/26547) section for SAP BTP. You can find solutions for general SAP BTP issues as well as for specific services there.
-
-
-
 ### **Contact SAP Support**
 
 You can report an incident or error through the [SAP Support Portal](https://support.sap.com/en/index.html).

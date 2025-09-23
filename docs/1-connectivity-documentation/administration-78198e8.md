@@ -53,7 +53,7 @@ User roles and role collections for SAP BTP Connectivity.
 </td>
 <td valign="top">
 
-Find information on monitoring tools, platform status, guided answers, and SAP support.
+Find information on monitoring tools, platform status, and SAP support.
 
 </td>
 </tr>

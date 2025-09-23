@@ -20,7 +20,7 @@ You can choose between a simple `portable` variant of the Cloud Connector and th
 ## Prerequisites
 
 -   You have one of the supported 64-bit operating systems. For more information, see [Product Availability Matrix](prerequisites-e23f776.md#loioe23f776e4d594fdbaeeb1196d47bbcc0__matrix).
--   The supported platforms are `x64` and `ppc64le`, represented below by the variable `<platform>`. Variable *<arch\>* is `x86_64` or `ppc64le` respectively.
+-   The supported platforms are `x64` and `ppc64le`, represented below by the variable *<platform\>*. Variable *<arch\>* is `x86_64` or `ppc64le` respectively.
 -   You have downloaded either the `portable` variant as `tar.gz` archive for Linux or the RPM `installer` contained in the ZIP for Linux, from [SAP Development Tools for Eclipse](https://tools.hana.ondemand.com/#cloud).
 -   A supported Java version must be installed. For more information, see [JDKs](prerequisites-e23f776.md#loioe23f776e4d594fdbaeeb1196d47bbcc0__jdk).
 

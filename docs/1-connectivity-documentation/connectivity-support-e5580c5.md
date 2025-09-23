@@ -14,7 +14,6 @@ Locate the problem or error you have encountered and follow the recommended step
 
 -   [Frequently Asked Questions](frequently-asked-questions-f8d6f9a.md) \(Cloud Connector\)
 -   [Administration](administration-dfec06d.md) \(Cloud Connector\)
--   [Cloud Connectivity: Guided Answers](https://ga.support.sap.com/dtp/viewer/#/tree/2065/actions/26547:26556)
 -   [Getting Support](https://help.sap.com/viewer/65de2977205c403bbc107264b8eccf4b/Cloud/en-US/5dd739823b824b539eee47b7860a00be.html "To get help, use the available support channels provided by SAP for Me.") :arrow_upper_right: \(SAP Support Portal, SAP BTP community\)
 
 
