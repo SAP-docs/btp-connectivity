@@ -34,6 +34,18 @@ Description
 <tr>
 <td valign="top">
 
+`X-chain-name`
+
+</td>
+<td valign="top">
+
+Specifies the chain which will be applied to the request. In this case, the value must be `com.sap.iasGeneratedOAuth2SamlBearerAssertion`.
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
 `X-chain-var-samlProviderDestinationName`
 
 </td>

@@ -15,7 +15,7 @@ This predefined destination chain simplifies the process of transforming and con
 
 ## Chain Variable Consumption
 
-To successfully consume the chain, the following headers need to be included in the request to the *Find a Destination* REST API endpoint:
+To successfully consume the chain, the following headers must be included in the request to the *Find a Destination* REST API endpoint:
 
 
 <table>
@@ -30,6 +30,18 @@ Header Name
 Description
 
 </th>
+</tr>
+<tr>
+<td valign="top">
+
+`X-chain-name`
+
+</td>
+<td valign="top">
+
+Specifies the chain which will be applied to the request. In this case, the value must be `com.sap.sequentialUserPropagation`.
+
+</td>
 </tr>
 <tr>
 <td valign="top">

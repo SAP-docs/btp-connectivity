@@ -13,7 +13,7 @@ Use SAP BTP Connectivity for your application in the Multi-Cloud Foundation: ava
 
 ## Overview
 
-SAP BTP provides robust connectivity features with which you can establish reliable communication channels, ensuring data flows smoothly and securely across different environments. This capability is essential for enterprise applications, typically complex and needing to consume or push data to a variety of sources or destinations, including systems that are directly accessible, hosted in public or private clouds, or located on customer premises. This connectivity empowers businesses to extend, innovate, and optimize their digital landscapes effectively.
+SAP BTP provides robust connectivity features that let you establish reliable communication channels, ensuring data flows smoothly and securely across different environments. This capability is essential for enterprise applications and typically complex, needing to consume or push data to a variety of sources or destinations, including systems that are accessible directly, hosted in public or private clouds, or located on customer premises. SAP BTP Connectivity empowers businesses to extend, innovate, and optimize their digital landscapes effectively.
 
 > ### Note:  
 > The on-premise use cases described in this guide are also applicable to virtual private cloud \(VPC\) environments.

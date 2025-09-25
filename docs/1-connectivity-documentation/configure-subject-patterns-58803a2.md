@@ -111,8 +111,8 @@ By default, the following attributes are provided:
 -   *<OU\>*: \(name of organizational unit\) – the organizational unit to which the certificate owner belongs
 -   *<ST\>*: \(state of residence\) – the state in which the certificate issuer resides
 -   *<C\>*: \(country of residence\) – the country in which the certificate owner resides
--   *<Expiration Tolerance \(h\)\>*: The length of time in hours, that an application can use a principal issued for a user after the token from cloud side has expired.
--   *<Certificate Validity \(min\)\>*: The length of time in minutes, that a certificate generated for principal propagation can authenticate against the back end. You can reuse a previously generated certificate to improve performance.
+-   *<Expiration Tolerance \(h\)\>*: The length of time in hours, that an application can use a principal issued for a user after the token from cloud side has expired. The minimum value for this attribute is 0, and the maximum 336 \(14 days\).
+-   *<Certificate Validity \(min\)\>*: The length of time in minutes, that a certificate generated for principal propagation can authenticate against the back end. You can reuse a previously generated certificate to improve performance. The minimum value for this attribute is 0, and the maximum 43200 \(30 days\).
 
 
 
