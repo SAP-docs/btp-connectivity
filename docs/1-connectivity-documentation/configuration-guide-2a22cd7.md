@@ -129,6 +129,71 @@ False
 <tr>
 <td valign="top">
 
+`config.http.retry.maxRetries`
+
+</td>
+<td valign="top">
+
+Defines how many additional attempts the Transparent Proxy should make for an HTTP request after the initial attempt fails due to a retry-eligible condition.
+
+The value is a non-negative integer \(0 = no retries; N = up to N retry attempts after the first try\).
+
+Retries are only performed when the failure matches the retry policy \(for example, transport errors like timeouts/connection resets and/or responses with codes listed in `config.http.retry.statusCodes`\).
+
+> ### Note:  
+> Keep in mind that retrying non-idempotent requests \(such as POST without idempotency guarantees\) can cause duplicate side effects.
+
+
+
+</td>
+<td valign="top">
+
+0
+
+</td>
+<td valign="top">
+
+ 
+
+</td>
+<td valign="top">
+
+False
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+`config.http.retry.statusCodes`
+
+</td>
+<td valign="top">
+
+Lists the HTTP response status codes that should trigger a retry attempt. The value is an array of integers \(e.g., \[408, 429, 500, 502, 503, 504\]\). When a response returns one of these codes, the proxy may retry the request up to `config.http.retry.maxRetries` times.
+
+If this list is empty or not set, the proxy will not retry based on HTTP response codes.
+
+</td>
+<td valign="top">
+
+\[\]
+
+</td>
+<td valign="top">
+
+\[502\]
+
+</td>
+<td valign="top">
+
+False
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
 `config.tenantMode`
 
 </td>
