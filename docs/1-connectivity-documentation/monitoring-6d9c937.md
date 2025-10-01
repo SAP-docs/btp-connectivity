@@ -38,7 +38,7 @@ The cockpit includes a *Connectivity* section, where users can check the status 
 Access to this view is granted to:
 
 -   Neo environment: Users with a role containing the permission `readSCCTunnels`, for example, the predefined role `Cloud Connector Admin`.
--   Cloud Foundry environment: Users with a role containing the permission `readSCCTunnels`, for example, the predefined role `Cloud Connector Administrator`.
+-   Multi-Cloud environment: Users with a role containing the permission `readSCCTunnels`, for example, the predefined role `Cloud Connector Administrator`.
 
 ![](images/SCC_Monitoring_570a863.png)
 

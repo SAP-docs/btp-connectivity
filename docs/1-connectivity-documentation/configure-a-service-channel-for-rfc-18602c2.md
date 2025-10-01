@@ -10,7 +10,7 @@ For scenarios that need to call from on-premises systems to SAP BTP ABAP environ
 
 ## Prerequisites
 
--   When using the default connectivity setup with the **Cloud Foundry** subaccount in which the system has been provisioned, you can use a service channel without additional configuration, as long as the system is a single-tenant system.
+-   When using the default connectivity setup with the **Multi-Cloud** subaccount in which the system has been provisioned, you can use a service channel without additional configuration, as long as the system is a single-tenant system.
 -   When using connectivity via a **Neo** subaccount, you must create a communication arrangement for the scenario SAP\_COM\_0200. For more information, see [Create a Communication Arrangement for Cloud Connector Integration](https://help.sap.com/viewer/65de2977205c403bbc107264b8eccf4b/Cloud/en-US/16c9c3d29c79484c9b7cc0560e08e770.html) \(documentation for ABAP environment on SAP BTP\).
 
 

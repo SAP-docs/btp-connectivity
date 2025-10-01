@@ -618,9 +618,9 @@ For trial users, the account name is typically your user name, followed by the s
 
 
 
-### **Does the Cloud Connector work with the SAP BTP Cloud Foundry environment?**
+### **Does the Cloud Connector work with the SAP BTP Multi-Cloud environment?**
 
-Yes, the Cloud Connector can establish a connection to regions based on the SAP BTP Cloud Foundry environment.
+Yes, the Cloud Connector can establish a connection to regions based on the SAP BTP Multi-Cloud environment.
 
 
 
