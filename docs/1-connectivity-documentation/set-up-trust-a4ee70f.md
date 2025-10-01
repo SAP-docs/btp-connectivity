@@ -14,8 +14,6 @@ Establish trust to an identiy provider to support principal propagation and tech
 
 [Configure an On-Premises System for Principal Propagation](set-up-trust-a4ee70f.md#loioa4ee70f0274248f8bbc7594179ef948d__configure_on_premise)
 
-[Trust Cloud Applications in the Cloud Connector](set-up-trust-a4ee70f.md#loioa4ee70f0274248f8bbc7594179ef948d__trust_cloud_apps)
-
 [Set up a Trust Store](set-up-trust-a4ee70f.md#loioa4ee70f0274248f8bbc7594179ef948d__TrustStore)
 
 
@@ -97,16 +95,6 @@ Set up principal propagation from SAP BTP to your internal system that is used i
 > If you have the following scenario: *Application1-\>AppToAppSS0-\>Application2-\>Principal Propagation-\>On premise Backend System* you must mark *Application2* as `trusted` by the Cloud Connector in tab *Principal Propagation*, section *Trust Configuration*.
 > 
 > If you use an identity provider that issues unsigned assertions, you must mark all relevant applications as `trusted` by the Cloud Connector in tab *Principal Propagation*, section *Trust Configuration*.
-
-Back to [Tasks](set-up-trust-a4ee70f.md#loioa4ee70f0274248f8bbc7594179ef948d__tasks)
-
-
-
-<a name="loioa4ee70f0274248f8bbc7594179ef948d__trust_cloud_apps"/>
-
-## Trust Cloud Applications in the Cloud Connector
-
-Configure an allowlist for trusted cloud applications, see [Configure Trust](configure-trust-13bfb28.md).
 
 Back to [Tasks](set-up-trust-a4ee70f.md#loioa4ee70f0274248f8bbc7594179ef948d__tasks)
 

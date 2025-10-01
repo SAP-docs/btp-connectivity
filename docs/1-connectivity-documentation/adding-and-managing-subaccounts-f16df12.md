@@ -52,7 +52,7 @@ More Information
 <tr>
 <td valign="top">
 
-**Cloud Foundry**
+**Multi-Cloud**
 
 </td>
 <td valign="top">
@@ -122,7 +122,10 @@ Press *Add Subaccount* to define a subaccount. This will open a dialog or wizard
 
 2.  In the next step, you can choose between a *manual* configuration and a *file-based* configuration.
 
-    *File-based* configuration lets you use an authentication data file downloaded from your subaccount on SAP BTP to simplify and accelerate subaccount configuration in the Cloud Connector.
+    *File-based* configuration lets you use an authentication data file downloaded from your subaccount on SAP BTP, Multi-Cloud Foundation to simplify and accelerate subaccount configuration in the Cloud Connector.
+
+    > ### Restriction:  
+    > The option *File-based configuration* does not work for subaccounts in the **Neo** environment.
 
     ![](images/SCC_AddManageSubaccounts_2_7edd7f1.png)
 
@@ -133,7 +136,7 @@ Press *Add Subaccount* to define a subaccount. This will open a dialog or wizard
     1.  The *<Region\>* field specifies the SAP BTP region that should be used such as *Europe \(Rot\)*, for example. Both a value help and a drop-down box with suggestions while typing are available.
 
         > ### Remember:  
-        > The available regions and region domains depend on the SAP BTP environment you are using. For more information, see [Regions](https://help.sap.com/docs/btp/sap-business-technology-platform/regions?version=Cloud) \(Cloud Foundry and ABAP environment\) or [Regions and Hosts Available for the Neo Environment](https://help.sap.com/docs/btp/sap-btp-neo-environment/regions-and-hosts-available-for-neo-environment?version=Cloud).
+        > The available regions and region domains depend on the SAP BTP environment you are using. For more information, see [Regions](https://help.sap.com/docs/btp/sap-business-technology-platform/regions?version=Cloud) \(Multi-Cloud environment\) or [Regions and Hosts Available for the Neo Environment](https://help.sap.com/docs/btp/sap-btp-neo-environment/regions-and-hosts-available-for-neo-environment?version=Cloud).
 
         > ### Note:  
         > You can also configure a region yourself, if it is not part of the standard list. Either insert the region host manually, or create a custom region, as described in [Configure Custom Regions](configure-custom-regions-a994a75.md).
@@ -141,21 +144,19 @@ Press *Add Subaccount* to define a subaccount. This will open a dialog or wizard
     2.  For *<Subaccount\>*, enter the value you obtained when you registered your subaccount on SAP BTP.
 
         > ### Note:  
-        > For a subaccount in the **Cloud Foundry** environment, you must enter the subaccount **ID** as *<Subaccount\>*, rather than its actual \(technical\) name. For information on getting the subaccount ID, see [Find Your Subaccount ID \(Cloud Foundry Environment\)](find-your-subaccount-id-cloud-foundry-environment-b43eff2.md).
-        > 
-        > For the **Neo** environment, enter the subaccount's **technical name** in the field *<Subaccount\>*, not the subaccount ID.
+        > For a subaccount in the **Multi-Cloud** environment, you must enter the subaccount **ID** as *<Subaccount\>*, rather than its actual \(technical\) name. For information on getting the subaccount ID, see [Find Your Subaccount ID \(Multi-Cloud Environment\)](find-your-subaccount-id-multi-cloud-environment-b43eff2.md).
 
     3.  *<Subaccount User\>* and *<Password\>* require dedicated values, depending on the type of identity provider \(IDP\) you are using:
 
         > ### Note:  
-        > For more information on IDPs in the **Cloud Foundry** environment, see [Trust and Federation with Identity Providers](https://help.sap.com/docs/btp/sap-business-technology-platform/trust-and-federation-with-identity-providers?version=Cloud).
+        > For more information on IDPs in the **Multi-Cloud** environment, see [Trust and Federation with Identity Providers](https://help.sap.com/docs/btp/sap-business-technology-platform/trust-and-federation-with-identity-providers?version=Cloud).
 
         -   *SAP ID Service* \(Default\):
 
             -   User/password from SAP ID Service must be used.
 
                 > ### Note:  
-                > For a subaccount in the **Cloud Foundry** environment, you must provide your `Login E-mail` as *<Subaccount User\>* instead of a user ID. The user must be a member of the global account the subaccount belongs to.
+                > For a subaccount in the **Multi-Cloud** environment, you must provide your `Login E-mail` as *<Subaccount User\>* instead of a user ID. The user must be a member of the global account the subaccount belongs to.
 
             -   The user must be a member of the subaccount, and the subaccount must have the correct \(SAP ID Service\) user base.
 
@@ -170,8 +171,8 @@ Press *Add Subaccount* to define a subaccount. This will open a dialog or wizard
                 -   User/password from the configured IAS tenant must be provided.
                 -   The user must be a member of the subaccount, and the subaccount must have the correct \(IAS tenant\) user base.
 
-            -   **Cloud Foundry** subaccount:
-                -   For a subaccount in the **Cloud Foundry** environment, the Cloud Connector supports the use of a custom IDP via single sign-on \(SSO\) passcode.
+            -   **Multi-Cloud** subaccount:
+                -   For a subaccount in the **Multi-Cloud** environment, the Cloud Connector supports the use of a custom IDP via single sign-on \(SSO\) passcode.
 
                     For more information, see [Use a Custom IDP for Subaccount Configuration](use-a-custom-idp-for-subaccount-configuration-2022612.md).
 
@@ -185,7 +186,7 @@ Press *Add Subaccount* to define a subaccount. This will open a dialog or wizard
 
         For the **Neo** environment, see also [Add Members to Your Neo Subaccount](https://help.sap.com/viewer/ea72206b834e4ace9cd834feed6c0e09/Cloud/en-US/a253570f081e448d9f78fc2bfeedfdc3.html "Add users as members to a subaccount in the Neo environment and assign roles to them using the SAP BTP cockpit.") :arrow_upper_right:.
 
-        For the **Cloud Foundry** environment, see also [Add Org Members](https://help.sap.com/viewer/65de2977205c403bbc107264b8eccf4b/Cloud/en-US/a4eeaf179ee646b99558f27c0bae7b3e.html "In the SAP BTP cockpit, add users as org members and assign roles to grant the users access to information, such as user and quota information in a Cloud Foundry org.") :arrow_upper_right:.
+        For the **Multi-Cloud** environment, see also [Add Org Members](https://help.sap.com/viewer/65de2977205c403bbc107264b8eccf4b/Cloud/en-US/a4eeaf179ee646b99558f27c0bae7b3e.html "In the SAP BTP cockpit, add users as org members and assign roles to grant the users access to information, such as user and quota information in a Cloud Foundry org.") :arrow_upper_right:.
 
         > ### Tip:  
         > When using SAP Cloud Identity Services - Identity Authentication \(IAS\) as platform identity provider with two-factor authentication \(2FA / MFA\) for your subaccount, you can simply append the required token to the regular password. For example, if your password is "eX7?6rUm" and the one-time passcode is "123456", you must enter "eX7?6rUm123456" into the *<Password\>* field.
@@ -284,7 +285,7 @@ If you want to connect an additional subaccount with your on-premises landscape,
 
 [Renew the Certificate for a Subaccount](renew-the-certificate-for-a-subaccount-071708a.md "Certificates used by the Cloud Connector are issued with a limited validity period. To prevent a downtime while refreshing the certificate, you can renew it for your subaccount directly from the administration UI.")
 
-[Find Your Subaccount ID \(Cloud Foundry Environment\)](find-your-subaccount-id-cloud-foundry-environment-b43eff2.md "Get your subaccount ID to configure the Cloud Connector in the Cloud Foundry environment.")
+[Find Your Subaccount ID \(Multi-Cloud Environment\)](find-your-subaccount-id-multi-cloud-environment-b43eff2.md "Get your subaccount ID to configure the Cloud Connector in the Multi-Cloud environment.")
 
 [Configure Custom Regions](configure-custom-regions-a994a75.md "Configure regions that are not available in the standard selection.")
 

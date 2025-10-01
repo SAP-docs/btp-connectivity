@@ -17,7 +17,7 @@ You must have the required subaccount authorizations on SAP BTP to renew certifi
 
 See:
 
--   [User Roles](user-roles-b922fc8.md) \(**Cloud Foundry** environment\)
+-   [User Roles](user-roles-b922fc8.md) \(**Multi-Cloud** environment\)
 
 
 
@@ -34,12 +34,9 @@ Proceed as follows to renew your subaccount certificate:
 2.  Choose the *Certificate* button. Depending on the cloud environment, you can renew using authentication data from a file or manually by providing the subaccount user and password, or only the latter. The respective dialog or wizard is shown.
 
     > ### Tip:  
-    > You can download an authentication data file from the *Cloud Connectors* view in your subaccount. Choose *Connectivity* \> *Cloud Connectors* \> *Download Authentication Data* from your subaccount menu. This feature is available for subaccounts in Multi-Cloud Foundation, feature set B only.
+    > You can download an authentication data file from the *Cloud Connectors* view in your subaccount. Choose *Connectivity* \> *Cloud Connectors* \> *Download Authentication Data* from your subaccount menu. This feature is available for subaccounts in Multi-Cloud Foundation only.
 
-3.  Enter *<Subaccount User\>* and *<Password\>* \(or use the file with authentication data if the option is offered\) and choose *Renew* \(or *Finish*\). The certificate assigned to your subaccount is renewed.
-
-    > ### Note:  
-    > In the **Cloud Foundry** environment, you must provide your `Login E-mail` instead of a user ID as *<User Name\>*. The label of the respective input field is adapted accordingly.
+3.  Enter *<Subaccount User\>* and *<Password\>* \(or use the file with authentication data if the option is offered\)and choose *Renew* \(or *Finish*\). The certificate assigned to your subaccount is renewed.
 
 
 

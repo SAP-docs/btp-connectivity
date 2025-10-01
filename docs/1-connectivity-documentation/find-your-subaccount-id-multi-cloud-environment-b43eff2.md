@@ -1,8 +1,8 @@
 <!-- loiob43eff2df3f84124995f6acbc9e5c55b -->
 
-# Find Your Subaccount ID \(Cloud Foundry Environment\)
+# Find Your Subaccount ID \(Multi-Cloud Environment\)
 
-Get your subaccount ID to configure the Cloud Connector in the Cloud Foundry environment.
+Get your subaccount ID to configure the Cloud Connector in the Multi-Cloud environment.
 
 In order to set up your subaccount in the Cloud Connector, you must know the subaccount ID. Follow these steps to acquire it:
 
