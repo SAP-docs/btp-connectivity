@@ -31,7 +31,7 @@ See:
 Proceed as follows to renew your subaccount certificate:
 
 1.  Choose *Select Subaccount* at the top of the screen, select your subaccount, and navigate to the subaccount overview.
-2.  Choose the *Certificate* button. Depending on the cloud environment, you can renew using authentication data from a file or manually by providing the subaccount user and password, or only the latter. The respective dialog or wizard is shown.
+2.  Choose *More \(...\)* \> *Certificate* in the upper right corner of the screen. Depending on the cloud environment, you can renew using authentication data from a file or manually by providing the subaccount user and password, or only the latter. The respective dialog or wizard is shown.
 
     > ### Tip:  
     > You can download an authentication data file from the *Cloud Connectors* view in your subaccount. Choose *Connectivity* \> *Cloud Connectors* \> *Download Authentication Data* from your subaccount menu. This feature is available for subaccounts in Multi-Cloud Foundation only.

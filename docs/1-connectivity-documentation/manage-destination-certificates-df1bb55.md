@@ -2,7 +2,7 @@
 
 # Manage Destination Certificates
 
-Maintain certificates \(X.509 client certificates, trusted certificates, CA certificates, trust store and key store certificates\) in the **Destination Certificates** UI or the **Destinations** editor \(SAP BTP cockpit\).
+To use certificate-based authentication methods for a specific destination, you can maintain the corresponding certificates \(X.509 client certificates, trusted certificates, CA certificates, trust store and key store certificates\) in the **Destination Certificates** UI \(SAP BTP cockpit\).
 
 
 

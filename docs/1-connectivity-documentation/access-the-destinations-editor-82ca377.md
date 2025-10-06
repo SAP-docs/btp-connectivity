@@ -60,7 +60,7 @@ See also section *Create and Bind a Service Instance from the Cockpit* in [Creat
 
 [Edit and Delete Destinations](edit-and-delete-destinations-372dee2.md "How to edit and delete destinations in the Destinations editor (SAP BTP cockpit).")
 
-[Manage Destination Certificates](manage-destination-certificates-df1bb55.md "Maintain certificates (X.509 client certificates, trusted certificates, CA certificates, trust store and key store certificates) in the Destination Certificates UI or the Destinations editor (SAP BTP cockpit).")
+[Manage Destination Certificates](manage-destination-certificates-df1bb55.md "To use certificate-based authentication methods for a specific destination, you can maintain the corresponding certificates (X.509 client certificates, trusted certificates, CA certificates, trust store and key store certificates) in the Destination Certificates UI (SAP BTP cockpit).")
 
 [Import Destinations](import-destinations-91ee9db.md "How to import destinations in the Destinations editor (SAP BTP cockpit).")
 
