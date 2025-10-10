@@ -147,8 +147,6 @@ To consume the Connectivity service from your Cloud Foundry application, perform
 2.  [Configure Authorization](consuming-the-connectivity-service-313b215.md#loio313b215066a8400db461b311e01bd99b__section_RequiredInformation)
 3.  [Set up the HTTP Proxy for On-Premise Connectivity](consuming-the-connectivity-service-313b215.md#loio313b215066a8400db461b311e01bd99b__section_HttpProxy)
 
-![](images/CS_CF_Steps_e962b04.png)
-
 Back to [Tasks](consuming-the-connectivity-service-313b215.md#loio313b215066a8400db461b311e01bd99b__tasks_CS)
 
 
