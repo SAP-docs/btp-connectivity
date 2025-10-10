@@ -108,6 +108,17 @@ You can maintain truststore and keystore certificates in the *Destinations* edit
 
 
 
+## Export a Certificate
+
+1.  From the certificate list, select the one you want to export.
+2.  Choose *Export*.
+
+    ![](images/CS_Destination_Certificates_-_Export_d44b778.png)
+
+3.  The certificate will be exported to your download folder.
+
+
+
 <a name="concept_qmm_jqt_f4__section_zh2_tcz_5cc"/>
 
 ## Delete a Certificate

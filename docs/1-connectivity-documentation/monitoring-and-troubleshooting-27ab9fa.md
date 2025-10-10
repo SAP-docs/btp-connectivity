@@ -76,7 +76,7 @@ Troubleshoot connection problems and view different types of logs and traces in 
 </td>
 <td valign="top">
 
-[Monitoring, Logging, And Troubleshooting](monitoring-logging-and-troubleshooting-e7df7f1.md)
+[Monitoring, Logging, and Troubleshooting](monitoring-logging-and-troubleshooting-e7df7f1.md)
 
 </td>
 </tr>

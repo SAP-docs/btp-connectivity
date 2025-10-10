@@ -35,7 +35,7 @@ For scenarios that need to call from on-premises systems to SAP BTP ABAP environ
 7.  In the same dialog window, define the *<Local Instance Number\>* under which the ABAP Cloud system is reachable for the client systems. You can enter any instance number for which the port is not used yet on the Cloud Connector host. The port numbers result from the following pattern: `33<LocalInstanceNumber>`, for activated SNC \(*Secure Network Connection*\) `48<LocalInstanceNumber>`.
 8.  Use the checkbox *Activate SNC* to specify if the opened service channel port should listen to and terminate incoming SNC RFC connections instead of plain RFC connections. The SNC configuration used is the same as in section [Initial Configuration \(RFC\)](initial-configuration-rfc-f09eefe.md). In case of issues, you can use the trace *Cloud Connector loggers*, and also the *SNC payload* and *CPIC* traces.
 
-    For more information on traces, see [Monitoring, Logging, And Troubleshooting](monitoring-logging-and-troubleshooting-e7df7f1.md).
+    For more information on traces, see [Monitoring, Logging, and Troubleshooting](monitoring-logging-and-troubleshooting-e7df7f1.md).
 
     > ### Note:  
     > This SNC option is only supported for ABAP-based clients, not for any RFC connectors as JCo, NCo or NW RFC SDK. For these scenarios, please use the WebSocket RFC protocol without the Cloud Connector.

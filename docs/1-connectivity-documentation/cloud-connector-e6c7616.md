@@ -87,14 +87,16 @@ Back to [Content](cloud-connector-e6c7616.md#loioe6c7616abb5710148cfcf3e75d96d59
 
 **Connecting Cloud Applications to On-Premises Systems**
 
-![](images/SCC_Intro_1_5acbe23.png)
+![](images/SCC_Intro_1_CF_bd53e98.png)
 
 1.  Install the Cloud Connector: [Installation](installation-57ae3d6.md)
-2.  Set up the connection between Cloud Connector, back-end system and your SAP BTP subaccount : [Initial Configuration](initial-configuration-db9170a.md), [Adding and Managing Subaccounts](adding-and-managing-subaccounts-f16df12.md)
-3.  Allow your cloud application to access a back-end system on the intranet: [Configure Access Control](configure-access-control-f42fe44.md)
+2.  Set up the connection between Cloud Connector, backend system and your SAP BTP subaccount : [Initial Configuration](initial-configuration-db9170a.md), [Adding and Managing Subaccounts](adding-and-managing-subaccounts-f16df12.md)
+3.  Allow your cloud application to access a backend system on the intranet: [Configure Access Control](configure-access-control-f42fe44.md)
 4.  Connect your cloud application to an on-premises system:
 
     [Consuming the Connectivity Service](consuming-the-connectivity-service-313b215.md)\(Cloud Foundry environment\)
+
+    [Connectivity Proxy for Kubernetes](connectivity-proxy-for-kubernetes-e661713.md) \(Kubernetes workloads / Kyma environment\)
 
 
 Back to [Basic Scenarios](cloud-connector-e6c7616.md#loioe6c7616abb5710148cfcf3e75d96d596__scenarios) 

@@ -106,6 +106,9 @@ Operator and/or Developer
 
 Using the Connectivity service, you can connect your Cloud Foundry application to an on-premise system through the Cloud Connector. To achieve this, you must provide the required information about the target system \(destination\), and set up an HTTP proxy that lets your application access the on-premise system.
 
+> ### Note:  
+> For more information on connecting Kubernetes workloads to on-premise systems, see [Connectivity Proxy for Kubernetes](connectivity-proxy-for-kubernetes-e661713.md).
+
 ![](images/CS_CF_CS_Process_7164a35.png)
 
 Back to [Tasks](consuming-the-connectivity-service-313b215.md#loio313b215066a8400db461b311e01bd99b__tasks_CS)

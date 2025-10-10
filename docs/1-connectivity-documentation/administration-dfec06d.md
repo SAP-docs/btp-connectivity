@@ -141,7 +141,7 @@ Use the auditor tool to view and manage audit log information \(Cloud Connector 
 <tr>
 <td valign="top">
 
-[Monitoring, Logging, And Troubleshooting](monitoring-logging-and-troubleshooting-e7df7f1.md) 
+[Monitoring, Logging, and Troubleshooting](monitoring-logging-and-troubleshooting-e7df7f1.md) 
 
 </td>
 <td valign="top">

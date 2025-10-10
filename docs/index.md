@@ -263,7 +263,7 @@
             -   [Alerting](1-connectivity-documentation/alerting-87bffd9.md)
             -   [Audit Logging](1-connectivity-documentation/audit-logging-63bd823.md)
                 -   [Manage Audit Logs](1-connectivity-documentation/manage-audit-logs-2264c70.md)
-            -   [Monitoring, Logging, And Troubleshooting](1-connectivity-documentation/monitoring-logging-and-troubleshooting-e7df7f1.md)
+            -   [Monitoring, Logging, and Troubleshooting](1-connectivity-documentation/monitoring-logging-and-troubleshooting-e7df7f1.md)
             -   [Process Guidelines for Hybrid Scenarios](1-connectivity-documentation/process-guidelines-for-hybrid-scenarios-cfc2c6b.md)
             -   [Configuring Backup](1-connectivity-documentation/configuring-backup-9b4e1e3.md)
             -   [Secure Store](1-connectivity-documentation/secure-store-2c51da2.md)
