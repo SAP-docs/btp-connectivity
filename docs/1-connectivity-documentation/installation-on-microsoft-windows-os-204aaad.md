@@ -34,6 +34,12 @@ You can choose between a simple `portable` variant of the Cloud Connector and th
     Alternatively supported SapMachine JDK versions can be downloaded from the [SapMachine](https://sapmachine.io) homepage.
 
 -   When using the `portable` variant, the environment variable *<JAVA\_HOME\>* must be set to the Java installation directory, so that the `bin` subdirectory can be found. Alternatively, you can add the relevant `bin` subdirectory to the *<PATH\>* variable.
+-   If you want to use IPv6 with your Cloud Connector and you run on a dual stack setup, that is, both IPv4 and IPv6 are supported, you need to signal to the JDK that IPv6 should be preferred over IPv4.
+
+    To do this, add `-Djava.net.preferIPv6Addresses=true` next to the other `-D` options in the `props.ini` file.
+
+    For RFC connections to be established with IPv6, in addition the environment variable `SAP_IPv6_ACTIVE` must be set to `1` to make it visible for the Cloud Connector process.
+
 
 
 
@@ -66,6 +72,11 @@ You can choose between a simple `portable` variant of the Cloud Connector and th
 
 > ### Note:  
 > Using the SAP Cryptographic Library requires the environment variable SECUDIR to be set.
+> 
+> If you want to make the variable visible only for the *Windows Service* of the Cloud Connector, add it to the registry in section `Computer\HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\SAP Cloud Connector` as element of the multi-string value `Environment`.
+
+> ### Note:  
+> For IPv6, the environment variable `SAP_IPv6_ACTIVE` must be set to `1`. If you want to make the variable visible only for the *Windows Service* of the Cloud Connector, add it to the registry in section `Computer\HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\SAP Cloud Connector` as element of the multi-string value `Environment`.
 
 On Windows, the file `scc_service.log` is created and used by the Microsoft MSI installer \(during Cloud Connector installation\), and by the `scchost.exe` executable, which registers and runs the Windows service if you install the Cloud Connector as a Windows background job.
 

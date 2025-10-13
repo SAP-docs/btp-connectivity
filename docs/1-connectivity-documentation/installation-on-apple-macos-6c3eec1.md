@@ -24,6 +24,12 @@ Installing the Cloud Connector on an Apple macOS operating system.
     Alternatively supported SapMachine JDK versions for macOS on aarch64 and x64 processor architectures can be downloaded from the [SapMachine](https://sapmachine.io) homepage.
 
 -   Environment variable *<JAVA\_HOME\>* must be set to the Java installation directory so that the `bin` subdirectory can be found. Alternatively, you can add the Java installation's `bin` subdirectory to the *<PATH\>* variable.
+-   If you want to use IPv6 with your Cloud Connector and you run on a dual stack setup, that is, both IPv4 and IPv6 are supported, you need to signal to the JDK that IPv6 should be preferred over IPv4.
+
+    To do this, add `-Djava.net.preferIPv6Addresses=true` next to the other `-D` options in the `props.ini` file.
+
+    For RFC connections to be established with IPv6, in addition the environment variable `SAP_IPv6_ACTIVE` must be set to `1` to make it visible for the Cloud Connector process. The easiest approach is setting it in the bash in which the Cloud Connector will be started with `export SAP_IPv6_ACTIVE=1`.
+
 
 
 

@@ -43,6 +43,12 @@ You can choose between a simple `portable` variant of the Cloud Connector and th
     Alternatively supported SapMachine JDK versions can be downloaded from the [SapMachine](https://sapmachine.io) homepage.
 
 -   When using the `tar.gz` archive, the environment variable *<JAVA\_HOME\>* must be set to the Java installation directory, so that the `bin` subdirectory can be found. Alternatively, you can add the Java installation's `bin` subdirectory to the *<PATH\>* variable.
+-   If you want to use IPv6 with your Cloud Connector and you run on a dual stack setup, that is, both IPv4 and IPv6 are supported, you need to signal to the JDK that IPv6 should be preferred over IPv4.
+
+    To do this, add `-Djava.net.preferIPv6Addresses=true` next to the other `-D` options in the `props.ini` file.
+
+    For RFC connections to be established with IPv6, in addition the environment variable `SAP_IPv6_ACTIVE` must be set to `1` to make it visible for the Cloud Connector process.
+
 
 
 
@@ -91,17 +97,18 @@ systemd distributions: systemctl stop|restart|start|status scc_daemon
 > ### Caution:  
 > When adjusting the Cloud Connector installation \(for example, restoring a backup\), make sure the RPM package management is synchronized with such changes. If you simply replace files that do not fit to the information stored in the package management, lifecycle operations \(such as upgrade or uninstallation\) might fail with errors. Also, the Cloud Connector might get into unrecoverable state.
 > 
-> **Example**: After a file system restore, the system files represent Cloud Connector 2.3.0 but the RPM package management "believes" that version 2.4.3 is installed. In this case, commands like `rpm -U` and `rpm -e` do not work as expected. Furthermore, avoid using the `--force` parameter as it may lead to an unpredictable state with two versions being installed concurrently, which is not supported.
+> **Example**: After a file system restore, the system files represent Cloud Connector 2.17.2 but the RPM package management "believes" that version 2.18.1.2 is installed. In this case, commands like `rpm -U` and `rpm -e` do not work as expected. Furthermore, avoid using the `--force` parameter as it may lead to an unpredictable state with two versions being installed concurrently, which is not supported.
 
 **Extending the Daemon**
 
 When using SNC for encrypting RFC communication, it might be required to provide some settings, for example, environment variables that must be visible for the Cloud Connector process. To achieve this, you must store a file named `scc_daemon_extension.sh` in the installation directory of the Cloud Connector \(`/opt/sap/scc`\), containing all commands needed for initialization without a shebang.
 
-Example \(SAP Cryptographic Library requires SECUDIR to be set\):
+Example \(SAP Cryptographic Library requires SECUDIR to be set, IPv6 support for RFC connectivity\):
 
 > ### Sample Code:  
 > ```
 > export SECUDIR=/path/to/pse_directory
+> export SAP_IPv6_ACTIVE=1
 > ```
 
 To activate it, you must reinstall the daemon.

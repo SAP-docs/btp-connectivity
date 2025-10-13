@@ -402,6 +402,12 @@ However, if you require advanced functionality, for example, n-to-n connectivity
 
 
 
+### **How can I check whether the Cloud Connector is prepared for IPv6 support?**
+
+Check the *Prerequisites* section of the *Installation* chapter for your platform. As of version 2.18.1, the Cloud Connector shows the IPv6 state on the *About* screen.
+
+
+
 ### **How much bandwidth does the Cloud Connector consume?**
 
 The amount of bandwidth depends greatly on the application that is using the Cloud Connector tunnel. If the tunnel isn’t currently used, but still connected, a few bytes per minute is used simply to keep the connection alive.
