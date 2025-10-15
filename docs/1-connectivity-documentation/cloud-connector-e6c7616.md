@@ -87,7 +87,7 @@ Back to [Content](cloud-connector-e6c7616.md#loioe6c7616abb5710148cfcf3e75d96d59
 
 **Connecting Cloud Applications to On-Premises Systems**
 
-![](images/SCC_Intro_1_CF_bd53e98.png)
+![](images/bd53e985c957459394e73cc69ccbd56f.image)
 
 1.  Install the Cloud Connector: [Installation](installation-57ae3d6.md)
 2.  Set up the connection between Cloud Connector, backend system and your SAP BTP subaccount : [Initial Configuration](initial-configuration-db9170a.md), [Adding and Managing Subaccounts](adding-and-managing-subaccounts-f16df12.md)

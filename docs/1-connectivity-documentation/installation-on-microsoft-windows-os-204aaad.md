@@ -33,7 +33,7 @@ You can choose between a simple `portable` variant of the Cloud Connector and th
 
     Alternatively supported SapMachine JDK versions can be downloaded from the [SapMachine](https://sapmachine.io) homepage.
 
--   When using the `portable` variant, the environment variable *<JAVA\_HOME\>* must be set to the Java installation directory, so that the `bin` subdirectory can be found. Alternatively, you can add the relevant `bin` subdirectory to the *<PATH\>* variable.
+-   When using the `portable` variant, the environment variable `JAVA_HOME` must be set to the Java installation directory, so that the `bin` subdirectory can be found. Alternatively, you can add the relevant `bin` subdirectory to the `PATH` variable.
 -   If you want to use IPv6 with your Cloud Connector and you run on a dual stack setup, that is, both IPv4 and IPv6 are supported, you need to signal to the JDK that IPv6 should be preferred over IPv4.
 
     To do this, add `-Djava.net.preferIPv6Addresses=true` next to the other `-D` options in the `props.ini` file.
