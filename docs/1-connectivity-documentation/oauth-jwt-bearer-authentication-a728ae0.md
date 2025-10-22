@@ -65,8 +65,10 @@ For authentication type `OAuth2JWTBearer`, the cloud user identity has to be pas
 >  
 >     url = '<destination-cr-name>.<destination-cr-namespace>'
 >     headers: {
->             // X-Tenant-Subdomain is required only when Transparent Proxy is in shared tenant mode
+>             // X-Tenant-Subdomain is required only when transparent proxy is in shared tenant mode
 >             'X-Tenant-Subdomain': '<tenant-where-destination-is-located>',
+>             // Only when the tokenServiceURLType is 'Common'
+>             'X-Token-Service-Tenant': '<tenant-to-retrieve-oauth-token>'
 >             'Authorization': 'Bearer ' + accessToken,
 >         }
 >  
