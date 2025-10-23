@@ -246,7 +246,14 @@ The token which you will be using for the next step is provided under the `acces
 Now that you have an access token for the Destination service, you can finally call one of the Destination service REST API endpoints. To see the full list of available endpoints in the Destination service REST API and their responses, see [Destination Service REST API reference](https://api.sap.com/api/SAP_CP_CF_Connectivity_Destination/resource/Find_a_Destination).
 
 > ### Caution:  
-> Currently, authentication to the Destination service via IAS token is working only for [destinations](https://api.sap.com/api/SAP_CP_CF_Connectivity_Destination/resource/Destinations_on_Subaccount_Level), [destination fragments](https://api.sap.com/api/SAP_CP_CF_Connectivity_Destination/resource/Destination_Fragments_on_Subaccount_Level), and [certificates](https://api.sap.com/api/SAP_CP_CF_Connectivity_Destination/resource/Certificates_on_Subaccount_Level) on *subaccount* level.
+> Authentication to the Destination service via IAS token requires in addition mTLS for accessing instance level [destinations](https://api.sap.com/api/SAP_CP_CF_Connectivity_Destination/resource/Destinations_on_Service_Instance_Subscription_Level), [destination fragments](https://api.sap.com/api/SAP_CP_CF_Connectivity_Destination/resource/Destination_Fragments_on_Service_Instance_Subscription_Level), and [certificates](https://api.sap.com/api/SAP_CP_CF_Connectivity_Destination/resource/Certificates_on_Service_Instance_Subscription_Level).
+> 
+> > ### Sample Code:  
+> > ```
+> > curl --cert <IAS service instance certificate> --key --cert <IAS service instance private key> -X GET \
+> >         "<uri>/destination-configuration/v1/<endpoint>" \
+> >         -H "Authorization: Bearer <access_token>"
+> > ```
 
 Here is an example of the call using curl:
 
