@@ -81,6 +81,7 @@ After the Transparent Proxy executes successfully all necessary operations, the 
 >     type: Available
 > ```
 
+
 **Destination Fragments: Optionality** 
 
 You can choose whether a fragment is optional in two ways::

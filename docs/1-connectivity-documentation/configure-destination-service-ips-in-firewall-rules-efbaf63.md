@@ -129,6 +129,34 @@ Europe \(Frankfurt\) - AWS
 <tr>
 <td valign="top">
 
+Europe \(Milan\) - AWS
+
+\(cf.eu13.hana.ondemand.com\)
+
+> ### Note:  
+> Available as of October 30, 2025
+
+
+
+</td>
+<td valign="top">
+
+35.152.227.34
+
+18.102.56.228
+
+18.102.175.80
+
+</td>
+<td valign="top">
+
+2a05:d01a:784:e200::/56
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
 Europe \(Netherlands\) - Azure
 
 \(cf.eu20.hana.ondemand.com\)
@@ -481,6 +509,30 @@ Switzerland \(Zurich\) - Azure
 
 </td>
 </tr>
+<tr>
+<td valign="top">
+
+UAE \(Dubai\) - SAP
+
+\(cf.ae01.hana.ondemand.com\)
+
+> ### Note:  
+> Available as of October 31, 2025
+
+
+
+</td>
+<td valign="top">
+
+130.214.0.212
+
+</td>
+<td valign="top">
+
+ 
+
+</td>
+</tr>
 </table>
 
 
@@ -577,6 +629,34 @@ Europe \(Frankfurt\) - AWS
 <td valign="top">
 
 2a05:d014:1b2c:b502::18, 2a05:d014:1b2c:b508::18, 2a05:d014:1b2c:b505::18
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+Europe \(Milan\) - AWS
+
+\(cf.eu13.hana.ondemand.com\)
+
+> ### Note:  
+> Available as of October 30, 2025
+
+
+
+</td>
+<td valign="top">
+
+18.102.157.221
+
+18.102.226.166
+
+15.160.20.175
+
+</td>
+<td valign="top">
+
+2a05:d01a:784:e205::18, 2a05:d01a:784:e208::18, 2a05:d01a:784:e202::18
 
 </td>
 </tr>
@@ -927,6 +1007,30 @@ Switzerland \(Zurich\) - Azure
 <td valign="top">
 
 20.250.185.103
+
+</td>
+<td valign="top">
+
+ 
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+UAE \(Dubai\) - SAP
+
+\(cf.ae01.hana.ondemand.com\)
+
+> ### Note:  
+> Available as of October 31, 2025
+
+
+
+</td>
+<td valign="top">
+
+130.214.0.27
 
 </td>
 <td valign="top">

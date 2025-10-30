@@ -87,6 +87,18 @@ curl destination-gateway.<destination-cr-namespace> -H "X-Destination-Name: exam
 
 ```
 
+
+
+
+
+
+
+
+
+
+
+
+
 If you want to call `example-dest` destination, enriching it with destination chaining properties through the Kubernetes service named `destination-gateway`, you can execute the command below:
 
 **Dynamic Lookup of Destinations Using Destination Chaining- Bash Snippet**

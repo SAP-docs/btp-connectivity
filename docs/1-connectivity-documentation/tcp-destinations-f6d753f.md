@@ -55,7 +55,7 @@ Address
 </td>
 <td valign="top">
 
-*<virtual\_host\>:<virtual\_port\>* of the on-premise application. The address may use *tcp://* as protocol scheme.
+*<virtual\_host\>:<virtual\_port\>* of the on-premise application or or <host\>:<port\> of the Internet application. The address may use *tcp://* as protocol scheme.
 
 </td>
 </tr>

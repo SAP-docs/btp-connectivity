@@ -1161,6 +1161,81 @@ connectivitytunnel.cf.eu11.hana.ondemand.com
 </td>
 </tr>
 <tr>
+<td valign="top" rowspan="3">
+
+Europe \(Milan\) - AWS
+
+\(`cf.eu13.hana.ondemand.com`\)
+
+> ### Note:  
+> Available as of October 30, 2025
+
+
+
+</td>
+<td valign="top" colspan="2">
+
+connectivitynotification.cf.eu13.hana.ondemand.com
+
+</td>
+<td valign="top">
+
+`18.102.145.36`, `35.152.161.248`, `18.102.221.20` 
+
+</td>
+<td valign="top">
+
+2a05:d01a:784:e205::17,
+
+2a05:d01a:784:e208::17,
+
+2a05:d01a:784:e202::17
+
+</td>
+</tr>
+<tr>
+<td valign="top" colspan="2">
+
+connectivitycertsigning.cf.eu13.hana.ondemand.com
+
+</td>
+<td valign="top">
+
+`18.102.145.36`, `35.152.161.248`, `18.102.221.20`
+
+</td>
+<td valign="top">
+
+2a05:d01a:784:e205::17,
+
+2a05:d01a:784:e208::17,
+
+2a05:d01a:784:e202::17
+
+</td>
+</tr>
+<tr>
+<td valign="top" colspan="2">
+
+connectivitytunnel.cf.eu13.hana.ondemand.com
+
+</td>
+<td valign="top">
+
+`18.102.227.45`, `15.161.193.78`, `18.102.173.150` 
+
+</td>
+<td valign="top">
+
+2a05:d01a:89a:3d02::17,
+
+2a05:d01a:89a:3d08::17,
+
+2a05:d01a:89a:3d05::17
+
+</td>
+</tr>
+<tr>
 <td valign="top" rowspan="4">
 
 Europe \(Netherlands\) - Azure
@@ -3081,6 +3156,69 @@ connectivitytunnel.cf.sa31.hana.ondemand.com
 <td valign="top">
 
 `34.166.72.122`
+
+</td>
+<td valign="top">
+
+ 
+
+</td>
+</tr>
+<tr>
+<td valign="top" rowspan="3">
+
+UAE \(Dubai\) - SAP
+
+\(`cf.ae01.hana.ondemand.com`\)
+
+> ### Note:  
+> Available as of October 31, 2025
+
+
+
+</td>
+<td valign="top" colspan="2">
+
+connectivitynotification.mtls.ae01-l-c.uc-live.shoot.live.k8s-hana.ondemand.com
+
+</td>
+<td valign="top">
+
+`130.214.0.25` 
+
+</td>
+<td valign="top">
+
+ 
+
+</td>
+</tr>
+<tr>
+<td valign="top" colspan="2">
+
+connectivitycertsigning.mtls.ae01-l-c.uc-live.shoot.live.k8s-hana.ondemand.com
+
+</td>
+<td valign="top">
+
+`130.214.0.25` 
+
+</td>
+<td valign="top">
+
+ 
+
+</td>
+</tr>
+<tr>
+<td valign="top" colspan="2">
+
+connectivitytunnel.ae01-l-d.uc-live.shoot.live.k8s-hana.ondemand.com
+
+</td>
+<td valign="top">
+
+`130.214.0.22` 
 
 </td>
 <td valign="top">

@@ -10,7 +10,7 @@ Find a step-by-step procedure to use an IAS token for calling available Destinat
 
 To call the Destination service REST API using an IAS token, you must have the following set up:
 
--   [Configured Trust](https://help.sap.com/docs/btp/sap-business-technology-platform/establish-trust-and-federation-between-uaa-and-identity-authentication?version=Cloud) between *SAP Authorization and Trust Management service* and *SAP Cloud Identity Services*
+-   [Configured Trust](https://help.sap.com/docs/btp/sap-business-technology-platform/establish-trust-and-federation-between-uaa-and-identity-authentication?version=Cloud) between [SAP Authorization and Trust Management service](https://help.sap.com/docs/authorization-and-trust-management-service/authorization-and-trust-management/what-is-sap-authorization-and-trust-management-service?version=Cloud) and [SAP Cloud Identity Services](https://help.sap.com/docs/cloud-identity-services/cloud-identity-services/what-is-identity-authentication?version=Cloud)
 -   A Destination service instance inside your subaccount
 -   An Identity service instance inside your subaccount
 
