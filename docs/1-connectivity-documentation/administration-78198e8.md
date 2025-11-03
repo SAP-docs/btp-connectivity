@@ -2,7 +2,7 @@
 
 # Administration
 
-Learn about administration tools, user roles, monitoring, and troubleshooting in SAP BTP, Multi-Cloud Foundation.
+Learn about administration tools, user roles, monitoring, and troubleshooting in SAP BTP, multi-cloud foundation.
 
 > ### Note:  
 > The on-premise use cases described in this guide are also applicable to virtual private cloud \(VPC\) environments.

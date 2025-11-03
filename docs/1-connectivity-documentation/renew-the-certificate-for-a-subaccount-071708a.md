@@ -5,7 +5,7 @@
 Certificates used by the Cloud Connector are issued with a limited validity period. To prevent a downtime while refreshing the certificate, you can renew it for your subaccount directly from the administration UI.
 
 > ### Note:  
-> As of version 2.18.0, the Cloud Connector provides an automatic renewal option for the *Multi-Cloud environment*.
+> As of version 2.18.0, the Cloud Connector provides an automatic renewal option for the *multi-cloud environment*.
 
 
 
@@ -17,7 +17,7 @@ You must have the required subaccount authorizations on SAP BTP to renew certifi
 
 See:
 
--   [User Roles](user-roles-b922fc8.md) \(**Multi-Cloud** environment\)
+-   [User Roles](user-roles-b922fc8.md) \(**multi-cloud** environment\)
 
 
 
@@ -34,7 +34,7 @@ Proceed as follows to renew your subaccount certificate:
 2.  Choose *More \(...\)* \> *Certificate* in the upper right corner of the screen. Depending on the cloud environment, you can renew using authentication data from a file or manually by providing the subaccount user and password, or only the latter. The respective dialog or wizard is shown.
 
     > ### Tip:  
-    > You can download an authentication data file from the *Cloud Connectors* view in your subaccount. Choose *Connectivity* \> *Cloud Connectors* \> *Download Authentication Data* from your subaccount menu. This feature is available for subaccounts in Multi-Cloud Foundation only.
+    > You can download an authentication data file from the *Cloud Connectors* view in your subaccount. Choose *Connectivity* \> *Cloud Connectors* \> *Download Authentication Data* from your subaccount menu. This feature is available for subaccounts in multi-cloud foundation only.
 
 3.  Enter *<Subaccount User\>* and *<Password\>* \(or use the file with authentication data if the option is offered\)and choose *Renew* \(or *Finish*\). The certificate assigned to your subaccount is renewed.
 
@@ -53,7 +53,7 @@ Proceed as follows to renew your subaccount certificate:
 ## Automatic Renewal
 
 > ### Note:  
-> This feature is only supported for SAP BTP, *Multi-Cloud environment*.
+> This feature is only supported for SAP BTP, *multi-cloud environment*.
 
 As of Cloud Connector version 2.18.0, you can schedule the renewal of subaccount certificates to renew them automatically before they expire. This feature is subaccount-specific, therefore you must enable it for each subaccount you want to use it for. You must activate this feature for the respective subaccounts also on the cloud side \(SAP BTP cockpit\).
 

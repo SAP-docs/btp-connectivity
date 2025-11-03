@@ -2,7 +2,7 @@
 
 # Use a Custom IDP for Subaccount Configuration
 
-Enable custom identity provider \(IDP\) authentication to configure a Multi-Cloud subaccount in the Cloud Connector by using a one-time passcode.
+Enable custom identity provider \(IDP\) authentication to configure a multi-cloud subaccount in the Cloud Connector by using a one-time passcode.
 
 
 
@@ -22,7 +22,7 @@ Enable custom identity provider \(IDP\) authentication to configure a Multi-Clou
 
 ## Context
 
-For a subaccount in the **Multi-Cloud** environment that uses a custom IDP, you can choose this IDP for authentication instead of the \(default\) SAP ID service when configuring the subaccount in the Cloud Connector.
+For a subaccount in the **multi-cloud** environment that uses a custom IDP, you can choose this IDP for authentication instead of the \(default\) SAP ID service when configuring the subaccount in the Cloud Connector.
 
 Using custom IDP authentication, you can perform the following operations in the Cloud Connector:
 

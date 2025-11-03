@@ -5,9 +5,9 @@
 SAP BTP Connectivity: overview, features, restrictions.
 
 > ### Note:  
-> This documentation refers to SAP BTP, Multi-Cloud Foundation. If you are looking for information about the Neo environment, see [Connectivity for the Neo Environment](https://help.sap.com/viewer/b865ed651e414196b39f8922db2122c7/Cloud/en-US/5ceb84290d5644638f73d40fde3af5d0.html).
+> This documentation refers to SAP BTP, multi-cloud foundation. If you are looking for information about the Neo environment, see [Connectivity for the Neo Environment](https://help.sap.com/viewer/b865ed651e414196b39f8922db2122c7/Cloud/en-US/5ceb84290d5644638f73d40fde3af5d0.html).
 > 
-> For more information on SAP BTP, Multi-Cloud Foundation, see also [What Is the Multi-Cloud Foundation?](https://help.sap.com/docs/btp/migrating-from-neo-environment-to-multi-cloud-foundation-cloud-foundry-and-kyma/what-is-multi-cloud-foundation?version=Cloud).
+> For more information on SAP BTP, multi-cloud Foundation, see also [What Is the Multi-Cloud Foundation?](https://help.sap.com/docs/btp/migrating-from-neo-environment-to-multi-cloud-foundation-cloud-foundry-and-kyma/what-is-multi-cloud-foundation?version=Cloud).
 
 
 
@@ -38,14 +38,14 @@ SAP BTP Connectivity offers a set of services and software components which allo
 -   Allows subaccount-specific configuration of application connections via destinations.
 -   Allows you to make connections to on-premise systems, using the Cloud Connector.
 -   Lets you establish a secure tunnel from your on-premise network to applications on SAP BTP, while you keep full control and auditability of what is exposed to the cloud.
--   Supports both the Neo environment and the Multi-Cloud Foundation for application development on SAP BTP.
+-   Supports both the Neo environment and the multi-cloud foundation for application development on SAP BTP.
 
 > ### Note:  
 > The on-premise use cases described in this guide are also applicable to virtual private cloud \(VPC\) environments.
 
 ![](images/CS_Intro_All_NEW_APP_4646938.png)
 
--   For Internet communication, the Multi-Cloud Foundation provides the Destination service to establish a connection from your application to another remote service.
+-   For Internet communication, the multi-cloud foundation provides the Destination service to establish a connection from your application to another remote service.
     -   The Transparent Proxy lets you connect workloads on a Kubernetes cluster.
 
 -   To connect to an on-premsie system or service, you can additionally use the Connectivity service and the Connectivity Proxy \(for Kubernetes workloads\).
@@ -63,7 +63,7 @@ Back to [Content](what-is-sap-btp-connectivity-e54cc8f.md#loioe54cc8fbbb571014be
 
 ## Environments
 
-SAP BTP, Multi-Cloud Foundation covers three environments:
+SAP BTP, multi-cloud foundation covers three environments:
 
 -   **Cloud Foundry**
 
@@ -247,7 +247,7 @@ Back to [Content](what-is-sap-btp-connectivity-e54cc8f.md#loioe54cc8fbbb571014be
 
 [Protocols](what-is-sap-btp-connectivity-e54cc8f.md#loioe54cc8fbbb571014beb5caaf6aa31280__protocols)
 
-[Multi-Cloud Foundation](what-is-sap-btp-connectivity-e54cc8f.md#loioe54cc8fbbb571014beb5caaf6aa31280__cf)
+[multi-cloud foundation](what-is-sap-btp-connectivity-e54cc8f.md#loioe54cc8fbbb571014beb5caaf6aa31280__cf)
 
 
 
@@ -471,11 +471,11 @@ Back to [Content](what-is-sap-btp-connectivity-e54cc8f.md#loioe54cc8fbbb571014be
 **Related Information**  
 
 
-[Connectivity for the Multi-Cloud Foundation](connectivity-for-the-multi-cloud-foundation-34010ac.md "Consuming SAP BTP Connectivity for your application in the Multi-Cloud Foundation: Overview.")
+[Connectivity for the Multi-Cloud Foundation](connectivity-for-the-multi-cloud-foundation-34010ac.md "Consuming SAP BTP Connectivity for your application in the multi-cloud foundation: Overview.")
 
-[Connectivity Service](connectivity-service-bd2d4f4.md "Learn how to manage and consume the Connectivity service in SAP BTP, Multi-Cloud Foundation.")
+[Connectivity Service](connectivity-service-bd2d4f4.md "Learn how to manage and consume the Connectivity service in SAP BTP, multi-cloud foundation.")
 
-[Destination Service](destination-service-8ff5483.md "Learn how to manage destinations and consume the Destination service in SAP BTP, Multi-Cloud Foundation.")
+[Destination Service](destination-service-8ff5483.md "Learn how to manage destinations and consume the Destination service in SAP BTP, multi-cloud foundation.")
 
 [Cloud Connector](cloud-connector-e6c7616.md "Learn more about the Cloud Connector: features, scenarios and setup.")
 

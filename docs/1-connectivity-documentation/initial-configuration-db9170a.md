@@ -97,7 +97,7 @@ After installing and starting the Cloud Connector, log on to the administration 
     </tr>
     </table>
     
-    After establishing the Cloud Connector connection, this user is not needed any more, since it serves only for initial connection setup. You may revoke the corresponding role assignment then and remove the user from the *Members* list \( **Neo** environment\), or from the *Users* list \(**Multi-Cloud** environment\).
+    After establishing the Cloud Connector connection, this user is not needed any more, since it serves only for initial connection setup. You may revoke the corresponding role assignment then and remove the user from the *Members* list \( **Neo** environment\), or from the *Users* list \(**multi-cloud** environment\).
 
     > ### Note:  
     > If the Cloud Connector is installed in an environment that is operated by SAP, SAP provides a user that you can add as member in your SAP BTP subaccount and assign the required role.
@@ -211,7 +211,7 @@ Back to [Tasks](initial-configuration-db9170a.md#loiodb9170a7d97610148537d5a84bf
 
 [Managing Member Authorizations in the Neo Environment](https://help.sap.com/viewer/ea72206b834e4ace9cd834feed6c0e09/Cloud/en-US/a1ab5c4cc117455392cd0a512c7f890d.html "SAP BTP includes predefined platform roles that support the typical tasks performed by users when interacting with the platform. In addition, subaccount administrators can combine various scopes into a custom platform role that addresses their individual requirements.") :arrow_upper_right:
 
-[Use a Custom IDP for Subaccount Configuration](use-a-custom-idp-for-subaccount-configuration-2022612.md "Enable custom identity provider (IDP) authentication to configure a Multi-Cloud subaccount in the Cloud Connector by using a one-time passcode.")
+[Use a Custom IDP for Subaccount Configuration](use-a-custom-idp-for-subaccount-configuration-2022612.md "Enable custom identity provider (IDP) authentication to configure a multi-cloud subaccount in the Cloud Connector by using a one-time passcode.")
 
 [Use LDAP for User Administration](use-ldap-for-user-administration-120ceec.md "You can use LDAP (Lightweight Directory Access Protocol) to manage Cloud Connector users and authentication.")
 

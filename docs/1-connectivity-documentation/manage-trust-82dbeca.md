@@ -2,14 +2,14 @@
 
 # Manage Trust
 
-Download and configure X.509 certificates as a prerequisite for user propagation from the Multi-Cloud environment.
+Download and configure X.509 certificates as a prerequisite for user propagation from the multi-cloud environment.
 
 Setting up a trust scenario for user propagation \(also known as *principal propagation*\) requires the exchange of public keys and certificates between the affected systems, as well as the respective trust configuration within these systems. This enables you to use an HTTP destination with authentication type `OAuth2SAMLBearerAssertion` or `SAMLAssertion` for the communication.
 
 > ### Note:  
 > The described procedures are focused on doing them via the *Destinations* editor in the cockpit. However, they are also fully automatable via the [Destination Service REST API](destination-service-rest-api-23ccafb.md). References to the respective API endpoints are added to the relevant steps below.
 
-A trust scenario can include user propagation from the Multi-Cloud environment to another SAP BTP environment, to another Multi-Cloud subaccount, or to a remote system outside SAP BTP, like SAP S/4HANA Cloud, SAP Sales Cloud, SAP Success Factors, and others.
+A trust scenario can include user propagation from the multi-cloud environment to another SAP BTP environment, to another multi-cloud subaccount, or to a remote system outside SAP BTP, like SAP S/4HANA Cloud, SAP Sales Cloud, SAP Success Factors, and others.
 
 
 
@@ -25,9 +25,9 @@ For more information, see [User Roles](user-roles-b922fc8.md).
 
 ## Set Up a Certificate
 
-Download and save locally the X.509 certificate of the subaccount in the Multi-Cloud environment.
+Download and save locally the X.509 certificate of the subaccount in the multi-cloud environment.
 
-1.  Log on to the cockpit and navigate to your subaccount in the Multi-Cloud environment.
+1.  Log on to the cockpit and navigate to your subaccount in the multi-cloud environment.
 2.  From the left-side menu, choose *Connectivity* \> *Destination Trust*.
 3.  If the subaccount does not yet have a *SAML Trust* configuration for the Destination service, choose *Generate Trust*:
 
@@ -66,7 +66,7 @@ If the X.509 certificate validity is about to expire, you can renew the certific
 
 ![](images/CS_Set_Up_Trust_Between_Systems_4_6134aea.png)
 
-1.  Log on to the cockpit and navigate to your subaccount in the Multi-Cloud environment.
+1.  Log on to the cockpit and navigate to your subaccount in the multi-cloud environment.
 2.  From the left-side menu, choose *Connectivity* \> *Destination Trust*.
 3.  Choose *Renew* for the certificate you want to update:
 

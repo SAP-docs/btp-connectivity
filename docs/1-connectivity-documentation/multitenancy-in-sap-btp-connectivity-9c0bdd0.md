@@ -4,7 +4,7 @@
 
 Using multitenancy for applications that require a connection to a remote service or on-premise application.
 
-This section describes the Connectivity-specific usage of multitenancy in SAP BTP, Multi-Cloud Foundation.
+This section describes the Connectivity-specific usage of multitenancy in SAP BTP, multi-cloud foundation.
 
 > ### Note:  
 > Multitenancy connectivity scenarios are fully applicable also for *cloud-to-on-premise* connectivity. The on-premise use cases described in this guide include connections to virtual private cloud \(VPC\) environments.

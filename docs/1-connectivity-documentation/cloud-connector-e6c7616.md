@@ -5,7 +5,7 @@
 Learn more about the Cloud Connector: features, scenarios and setup.
 
 > ### Note:  
-> This documentation refers to SAP BTP, Multi-Cloud Foundation. If you are looking for information about the Neo environment, see [Connectivity for the Neo Environment](https://help.sap.com/viewer/b865ed651e414196b39f8922db2122c7/Cloud/en-US/5ceb84290d5644638f73d40fde3af5d0.html).
+> This documentation refers to SAP BTP, multi-cloud foundation. If you are looking for information about the Neo environment, see [Connectivity for the Neo Environment](https://help.sap.com/viewer/b865ed651e414196b39f8922db2122c7/Cloud/en-US/5ceb84290d5644638f73d40fde3af5d0.html).
 
 
 
@@ -118,12 +118,12 @@ Back to [Content](cloud-connector-e6c7616.md#loioe6c7616abb5710148cfcf3e75d96d59
 > You can use service channels also for other purposes:
 > 
 > -   Connect to a virtual machine on SAP BTP \(**Neo** environment only\).
-> -   Configure an RFC connection from your on-premises system to S/4HANA Cloud \(**Neo** and **Multi-Cloud** environment\).
-> -   Connect to a service in a Kubernetes cluster \(**Multi-Cloud** environment only\)
+> -   Configure an RFC connection from your on-premises system to S/4HANA Cloud \(**Neo** and **multi-cloud** environment\).
+> -   Connect to a service in a Kubernetes cluster \(**multi-cloud** environment only\)
 > 
 > See also:
 > 
-> [Using Service Channels](using-service-channels-16f6342.md) \(**Multi-Cloud** environment\)
+> [Using Service Channels](using-service-channels-16f6342.md) \(**multi-cloud** environment\)
 > 
 > [Using Service Channels](https://help.sap.com/docs/connectivity/sap-btp-connectivity-neo/using-service-channels?version=Cloud) \(**Neo** environment\)
 

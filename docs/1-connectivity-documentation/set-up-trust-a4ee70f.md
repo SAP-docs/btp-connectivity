@@ -114,7 +114,7 @@ Back to [Tasks](set-up-trust-a4ee70f.md#loioa4ee70f0274248f8bbc7594179ef948d__ta
 
 ## Related Information
 
-[Principal Propagation](principal-propagation-e2cbb48.md)\(Multi-Cloud\)
+[Principal Propagation](principal-propagation-e2cbb48.md)\(multi-cloud\)
 
 [Principal Propagation](https://help.sap.com/viewer/b865ed651e414196b39f8922db2122c7/Cloud/en-US/d4d3e1e9b2dd44318b49a4812cd51383.html "Forward the identity of cloud users to an on-premise system to enable single sign-on (Neo environment).") :arrow_upper_right: \(Neo\)
 

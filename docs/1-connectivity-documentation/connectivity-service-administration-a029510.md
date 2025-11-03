@@ -2,7 +2,7 @@
 
 # Connectivity Service: Administration
 
-Manage the Connectivity service in SAP BTP, Multi-Cloud Foundation.
+Manage the Connectivity service in SAP BTP, multi-cloud foundation.
 
 
 <table>

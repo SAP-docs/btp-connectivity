@@ -2,7 +2,7 @@
 
 # Destination Service
 
-Learn how to manage destinations and consume the Destination service in SAP BTP, Multi-Cloud Foundation.
+Learn how to manage destinations and consume the Destination service in SAP BTP, multi-cloud foundation.
 
 > ### Note:  
 > The on-premise use cases described in this guide are also applicable to virtual private cloud \(VPC\) environments.
@@ -28,7 +28,7 @@ The Destination service lets you find the information that is required to access
 </td>
 <td valign="top">
 
-Manage the Destination service in SAP BTP, Multi-Cloud Foundation.
+Manage the Destination service in SAP BTP, multi-cloud foundation.
 
 </td>
 </tr>
@@ -49,9 +49,9 @@ Retrieve and store technical information about the destination to consume a targ
 **Related Information**  
 
 
-[Getting Started](getting-started-daca64d.md "Use SAP BTP Connectivity for your application in the Multi-Cloud Foundation: available services, components and use cases.")
+[Getting Started](getting-started-daca64d.md "Use SAP BTP Connectivity for your application in the multi-cloud foundation: available services, components and use cases.")
 
-[Connectivity Service](connectivity-service-bd2d4f4.md "Learn how to manage and consume the Connectivity service in SAP BTP, Multi-Cloud Foundation.")
+[Connectivity Service](connectivity-service-bd2d4f4.md "Learn how to manage and consume the Connectivity service in SAP BTP, multi-cloud foundation.")
 
 [Cloud Connector](cloud-connector-e6c7616.md "Learn more about the Cloud Connector: features, scenarios and setup.")
 

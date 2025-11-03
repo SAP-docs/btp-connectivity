@@ -49,7 +49,7 @@ For more information, see [Manage Destination Certificates](manage-destination-c
 
 ## Trust
 
-Scenarios involving user propagation from a Multi-Cloud application to other systems, to SAP BTP environments, or to another subaccount in the same SAP BTP environment require a trust configuration between the involved systems \(sender and receiver\).
+Scenarios involving user propagation from a multi-cloud application to other systems, to SAP BTP environments, or to another subaccount in the same SAP BTP environment require a trust configuration between the involved systems \(sender and receiver\).
 
 This includes exchanging public keys and certificates between those systems and configuring trust between them.
 

@@ -5,7 +5,7 @@
 Learn about the JCo properties you can use to configure the target sytem information in an RFC destination.
 
 > ### Note:  
-> This documentation refers to SAP BTP, Multi-Cloud Foundation. If you are looking for information about the Neo environment, see [Target System Configuration](https://help.sap.com/viewer/b865ed651e414196b39f8922db2122c7/Cloud/en-US/f8fac995b0144a0b8ec0801b8f7bab3e.html "Learn about the JCo properties you can use to configure the target sytem information in an RFC destination (Neo environment).") :arrow_upper_right: \(Neo environment\).
+> This documentation refers to SAP BTP, multi-cloud foundation. If you are looking for information about the Neo environment, see [Target System Configuration](https://help.sap.com/viewer/b865ed651e414196b39f8922db2122c7/Cloud/en-US/f8fac995b0144a0b8ec0801b8f7bab3e.html "Learn about the JCo properties you can use to configure the target sytem information in an RFC destination (Neo environment).") :arrow_upper_right: \(Neo environment\).
 
 
 

@@ -2,7 +2,7 @@
 
 # Destination Service: Administration
 
-Manage the Destination service in SAP BTP, Multi-Cloud Foundation.
+Manage the Destination service in SAP BTP, multi-cloud foundation.
 
 
 <table>
@@ -50,7 +50,7 @@ Maintain certificates \(X.509 client certificates, trusted certificates, CA cert
 </td>
 <td valign="top">
 
-Download and configure X.509 certificates as a prerequisite for user propagation from the Multi-Cloud environment.
+Download and configure X.509 certificates as a prerequisite for user propagation from the multi-cloud environment.
 
 </td>
 </tr>

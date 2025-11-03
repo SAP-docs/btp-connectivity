@@ -624,9 +624,9 @@ For trial users, the account name is typically your user name, followed by the s
 
 
 
-### **Does the Cloud Connector work with the SAP BTP Multi-Cloud environment?**
+### **Does the Cloud Connector work with the SAP BTP multi-cloud environment?**
 
-Yes, the Cloud Connector can establish a connection to regions based on the SAP BTP Multi-Cloud environment.
+Yes, the Cloud Connector can establish a connection to regions based on the SAP BTP multi-cloud environment.
 
 
 
@@ -679,7 +679,7 @@ This is possible only for a limited set of protocols, using Cloud Connector *ser
 -   You can use the Cloud Connector as a JDBC or ODBC proxy to access the HANA DB instance within your SAP BTP Neo subaccount \(service channel\). This is sometimes referred to as “HANA protocol”.
 -   Also, there are service channels for SSH access to SAP BTP Neo virtual machines.
 
-**Neo** and **Multi-Cloud** environment:
+**Neo** and **multi-cloud** environment:
 
 -   RFC access to ABAP cloud systems.
 
@@ -687,11 +687,11 @@ All of these service channels provide access to endpoints that are not visible i
 
 See also:
 
-[Using Service Channels](using-service-channels-16f6342.md) \(**Multi-Cloud** environment\)
+[Using Service Channels](using-service-channels-16f6342.md) \(**multi-cloud** environment\)
 
 [Using Service Channels](https://help.sap.com/docs/connectivity/sap-btp-connectivity-neo/using-service-channels?version=Cloud) \(**Neo** environment\)
 
-For HTTP \(**Neo** and **Multi-Cloud**\), the endpoints that can be addressed are visible in the Internet. Therefore, you can simply use your normal network infrastructure that is prepared for accessing HTTPS endpoints in the Internet anyway.
+For HTTP \(**Neo** and **multi-cloud**\), the endpoints that can be addressed are visible in the Internet. Therefore, you can simply use your normal network infrastructure that is prepared for accessing HTTPS endpoints in the Internet anyway.
 
 
 

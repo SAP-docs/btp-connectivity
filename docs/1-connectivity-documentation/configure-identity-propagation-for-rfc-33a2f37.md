@@ -140,7 +140,7 @@ Back to [Example Data](configure-identity-propagation-for-rfc-33a2f37.md#loio33a
 
 [Rule-Based Mapping of Certificates](rule-based-mapping-of-certificates-4f8540f.md)
 
-[Principal Propagation](principal-propagation-e2cbb48.md) \(Multi-Cloud environment\)
+[Principal Propagation](principal-propagation-e2cbb48.md) \(multi-cloud environment\)
 
 [Principal Propagation](https://help.sap.com/viewer/b865ed651e414196b39f8922db2122c7/Cloud/en-US/d4d3e1e9b2dd44318b49a4812cd51383.html "Forward the identity of cloud users to an on-premise system to enable single sign-on (Neo environment).") :arrow_upper_right: \(Neo environment\)
 

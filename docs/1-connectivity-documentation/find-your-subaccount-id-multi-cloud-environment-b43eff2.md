@@ -2,7 +2,7 @@
 
 # Find Your Subaccount ID \(Multi-Cloud Environment\)
 
-Get your subaccount ID to configure the Cloud Connector in the Multi-Cloud environment.
+Get your subaccount ID to configure the Cloud Connector in the multi-cloud environment.
 
 In order to set up your subaccount in the Cloud Connector, you must know the subaccount ID. Follow these steps to acquire it:
 

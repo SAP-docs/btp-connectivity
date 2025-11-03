@@ -2,7 +2,7 @@
 
 # Connectivity Scenarios
 
-Basic connectivity scenarios in SAP BTP, Multi-Cloud Foundation.
+Basic connectivity scenarios in SAP BTP, multi-cloud foundation.
 
 Connections between SAP BTP applications and their target applications \(inside or outside SAP BTP\) can be established in different ways - depending on the location of the target application and on the direction of communication.
 
@@ -47,7 +47,7 @@ For more information on these procedures, see:
 
 
 
-Some common *principal propagation* scenarios for communication between an SAP BTP Multi-Cloud \(Cloud Foundry\) application and different target applications are described in detail here:
+Some common *principal propagation* scenarios for communication between an SAP BTP multi-cloud \(Cloud Foundry\) application and different target applications are described in detail here:
 
 -   [User Propagation from the Cloud Foundry Environment to SAP S/4HANA Cloud](user-propagation-from-the-cloud-foundry-environment-to-sap-s-4hana-cloud-9af03a0.md)
 -   [User Propagation from the Cloud Foundry Environment to SAP SuccessFactors](user-propagation-from-the-cloud-foundry-environment-to-sap-successfactors-67a3b83.md)
