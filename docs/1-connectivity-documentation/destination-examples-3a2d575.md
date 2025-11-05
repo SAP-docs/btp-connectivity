@@ -75,7 +75,7 @@ Back to [Content](destination-examples-3a2d575.md#loio3a2d57580d474da6960a644462
 
 [HTTP Destinations](http-destinations-42a0e6b.md "Find information about HTTP destinations for Internet and on-premise connections.")
 
-[RFC Destinations](rfc-destinations-238d027.md "")
+[RFC Destinations](rfc-destinations-238d027.md "Configure RFC destinations in the SAP BTP cockpit.")
 
 [MAIL Destinations](mail-destinations-e3de817.md "Find information about MAIL destinations for Internet or on-premise connections from an SAP BTP subaccount.")
 

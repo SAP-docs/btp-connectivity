@@ -2,7 +2,7 @@
 
 # Pooling Configuration
 
-Learn about the JCo properties you can use to configure pooling in an RFC destination.
+Configure pooling properties for RFC destinations in the SAP BTP cockpit.
 
 
 
@@ -12,9 +12,16 @@ Learn about the JCo properties you can use to configure pooling in an RFC destin
 
 This group of JCo properties covers different settings for the behavior of the destination's connection pool. All properties are optional.
 
+In the *Destinations* editor in the cockpit, the configuration must be provided in the *Pooling Configuration* panel.
+
 
 <table>
 <tr>
+<th valign="top">
+
+Label in Destinations Editor
+
+</th>
 <th valign="top">
 
 Property
@@ -29,6 +36,11 @@ Description
 <tr>
 <td valign="top">
 
+Pool Capacity
+
+</td>
+<td valign="top">
+
 `jco.destination.pool_capacity`
 
 </td>
@@ -39,6 +51,11 @@ Represents the maximum number of idle connections kept open by the destination. 
 </td>
 </tr>
 <tr>
+<td valign="top">
+
+Peak Limit
+
+</td>
 <td valign="top">
 
 `jco.destination.peak_limit`
@@ -55,6 +72,11 @@ Default setting is the value of `jco.destination.pool_capacity`. If `jco.destina
 <tr>
 <td valign="top">
 
+Maximum Get Client Time
+
+</td>
+<td valign="top">
+
 `jco.destination.max_get_client_time`
 
 </td>
@@ -65,6 +87,11 @@ Represents the maximum time in milliseconds to wait for a free connection in cas
 </td>
 </tr>
 <tr>
+<td valign="top">
+
+Expiration Time
+
+</td>
 <td valign="top">
 
 `jco.destination.expiration_time`
@@ -79,6 +106,11 @@ Represents the time in milliseconds after which idle connections that are availa
 <tr>
 <td valign="top">
 
+Expiration Check Period
+
+</td>
+<td valign="top">
+
 `jco.destination.expiration_check_period`
 
 </td>
@@ -91,12 +123,17 @@ Represents the interval in milliseconds for the timeout checker thread to check 
 <tr>
 <td valign="top">
 
+Pool Check Connection
+
+</td>
+<td valign="top">
+
 `jco.destination.pool_check_connection`
 
 </td>
 <td valign="top">
 
-When setting this value to `1`, a pooled connection will be checked for corruption before being used for the next function module execution. Thus, it is possible to recognize corrupted connections and avoid exceptions being passed to applications when connectivity is basically working \(default value is `0`\).
+If the checkbox *Pool Check Connection* is checked or when setting the property in a file to be imported to `1`, a pooled connection will be checked for corruption before being used for the next function module execution. Thus, it is possible to recognize corrupted connections and avoid exceptions passed to applications when connectivity is working in principle \(default is that the checkbox is unchecked or the value is `0`\).
 
 > ### Note:  
 > Turning on this check has performance impact for stateless communication. This is due to an additional low-level ping to the server, which takes a certain amount of time for non-corrupted connections, depending on latency.

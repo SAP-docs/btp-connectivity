@@ -2,13 +2,22 @@
 
 # User Logon Properties
 
-JCo properties that cover different types of user credentials, as well as the ABAP system client and the logon language.
+Configure user logon properties for RFC destinations in the SAP BTP cockpit.
 
-The currently supported logon mechanism uses user or password as credentials.
+User logon properties for RFC destinations cover different types of user credentials, as well as the ABAP system client and the logon language.
+
+The currently supported logon mechanism uses *user* and *password* as credentials.
+
+In the *Destinations* editor, you can configure the user logon properties for a destination in section *Authentication* of the *Destination Details* panel.
 
 
 <table>
 <tr>
+<th valign="top">
+
+Label in Destinations Editor
+
+</th>
 <th valign="top">
 
 Property
@@ -23,6 +32,11 @@ Description
 <tr>
 <td valign="top">
 
+Logon Language
+
+</td>
+<td valign="top">
+
 `jco.client.lang`
 
 </td>
@@ -35,21 +49,36 @@ Optional property. Represents the logon language. If the property is not provide
 <tr>
 <td valign="top">
 
+User
+
+</td>
+<td valign="top">
+
 `jco.client.user`
 
 </td>
 <td valign="top">
 
-Represents the user to be used for logging on to the ABAP system. Max. 12 characters long.
+Represents the user to be used for logging on to the ABAP system.
 
 > ### Note:  
-> When working with the *Destinations* editor in the cockpit, enter the value in the *<User\>* field. Do not enter it as additional property.
+> *Authentication Type* must be set to `CONFIGURED_USER`.
+
+The value is case-insensitive and the maximum length is 12 characters.
+
+> ### Caution:  
+> When *Proxy Type* is set to `Internet` \(that is, a WebSocket RFC connection\), the checkbox *Use TLS client certificate login* must be unchecked to see the input field in the *Destinations* editor.
 
 
 
 </td>
 </tr>
 <tr>
+<td valign="top">
+
+Alias User
+
+</td>
 <td valign="top">
 
 `jco.client.alias_user`
@@ -57,16 +86,26 @@ Represents the user to be used for logging on to the ABAP system. Max. 12 charac
 </td>
 <td valign="top">
 
-Represents the user to be used for logging on to the ABAP system. Either `jco.client.user` or `jco.client.alias_user` must be specified. The alias user may be up to 40 characters long.
+Represents the user to be used for logging on to the ABAP system.
 
 > ### Note:  
-> When working with the *Destinations* editor in the cockpit, enter the value in the *<Alias User\>* field. Do not enter it as additional property.
+> *Authentication Type* must be set to `CONFIGURED_USER`.
+
+Either `jco.client.user` or `jco.client.alias_user` must be specified. The alias user may be up to 40 characters long and is case-sensitive.
+
+> ### Caution:  
+> When *Proxy Type* is set to `Internet` \(that is, a WebSocket RFC connection\), the checkbox *Use TLS client certificate login* must be unchecked to see the input field in the *Destinations* editor.
 
 
 
 </td>
 </tr>
 <tr>
+<td valign="top">
+
+Password
+
+</td>
 <td valign="top">
 
 `jco.client.passwd`
@@ -77,16 +116,24 @@ Represents the user to be used for logging on to the ABAP system. Either `jco.cl
 Represents the password of the user that is used.
 
 > ### Note:  
-> Passwords in systems of SAP NetWeaver releases lower than 7.0 are case-insensitive and can be only eight characters long. For releases 7.0 and higher, passwords are case-sensitive with a maximum length of 40.
+> *Authentication Type* must be set to `CONFIGURED_USER`.
 
 > ### Note:  
-> When working with the *Destinations* editor in the cockpit, enter this password in the *<Password\>* field. Do not enter it as additional property.
+> Passwords in systems of SAP NetWeaver releases lower than 7.0 are case-insensitive and can be only eight characters long. For releases 7.0 and higher, passwords are case-sensitive with a maximum length of 40.
+> 
+> > ### Caution:  
+> > When *Proxy Type* is set to `Internet` \(that is, using a WebSocket RFC connection\), the checkbox *Use TLS client certificate login* must be unchecked to see the input field in the *Destinations* editor.
 
 
 
 </td>
 </tr>
 <tr>
+<td valign="top">
+
+Use TLS client certificate login
+
+</td>
 <td valign="top">
 
 `jco.client.tls_client_certificate_logon`
@@ -94,52 +141,64 @@ Represents the password of the user that is used.
 </td>
 <td valign="top">
 
-When set to `1`, the client certificate provided by the *KeyStore*, which must be configured in addition, is used for authentication instead of `jco.client.user`/`jco.client.alias_user` and `jco.client.passwd`. This property is only relevant for a connection using WebSocket RFC \(*<Proxy Type\>*=Internet\).
-
-The default value is `0`.
-
 > ### Note:  
-> When working with the Destinations editor in the cockpit, the *<User\>*, *<Alias User\>* and *<Password\>* fields are hidden when setting the property to `1`.
+> *Authentication Type* must be set to `CONFIGURED_USER`.
 
-For more information on WebSocket RFC, see also:
-
-[WebSocket RFC](https://help.sap.com/viewer/753088fc00704d0a80e7fbd6803c8adb/202009.001/en-US/51f1edadb2754e539f6e6335dd1eb4cc.html)
+If the checkbox is checked or the value in a property file is set to `1`, the client certificate provided by the key store \(must be configured in addition\) is used for authentication, and the *User*, *Alias User* and *Password* input fields will be hidden. If the checkbox is unchecked or the value in a property file is set to `0`, the basic credentials must be provided.
 
 </td>
 </tr>
 <tr>
 <td valign="top">
 
-`<Key Store Location>`
+Key Store Location
 
 </td>
 <td valign="top">
 
-The name of the key store file that contains the client certificate for client certificate authentication against the remote WebSocket RFC server. Mandatory, when setting `jco.client.tls_client_certificate_logon` to 1.
+`KeyStoreLocation`
+
+</td>
+<td valign="top">
+
+The name of the key store file that contains the client certificate for client certificate authentication against the remote WebSocket RFC server. Mandatory, if the checkbox *Use TLS client certificate login* is checked or `jco.client.tls_client_certificate_logon` is `1`.
 
 </td>
 </tr>
 <tr>
 <td valign="top">
 
-`<Key Store Password>` 
+Key Store Password
 
 </td>
 <td valign="top">
 
-The password for the key store file specified via `<Key Store Location>`. This field is mandatory if `<Key Store Location>` is used.
+`KeyStorePassword`
+
+</td>
+<td valign="top">
+
+The password for the key store file specified via `KeyStoreLocation`.
+
+> ### Caution:  
+> We strongly recommended that you use only key stores that are protected with a password.
+
+
 
 </td>
 </tr>
 <tr>
+<td valign="top">
+
+Authentication Type
+
+</td>
 <td valign="top">
 
 `jco.destination.auth_type`
 
 </td>
 <td valign="top">
-
-Optional property.
 
 > ### Note:  
 > SAP BTP supports the propagation of business users \(principal propagation\) and technical users from the cloud application towards on-premise systems.
@@ -148,18 +207,23 @@ Optional property.
 > 
 > For more information, see [Authenticating Users against On-Premises Systems](authenticating-users-against-on-premises-systems-b643fbe.md).
 
--   If the property is not provided, its default value `CONFIGURED_USER` is used. In this case, user, password, or other credentials are specified directly.
+-   If the property is not provided in a file, its default value `CONFIGURED_USER` is used. In this case, you must specify *user*, *password*, or other credentials directly.
 -   To enable single sign-on via principal propagation \(an access token representing the business user logged on in the cloud application is forwarded to the on-premise system\), set the value to `PrincipalPropagation`. In this case, you do not need to provide `jco.client.user` and `jco.client.passwd` in the configuration.
 -   To enable technical user propagation \(an access token representing the technical user is forwarded to the on-premise system\), set the value to `TechnicalUserPropagation`. In this case, you do not need to provide `jco.client.user` and `jco.client.passwd` in the configuration.
 
 > ### Note:  
-> For `PrincipalPropagation`/`TechnicalUserPropagation`, you should configure the properties `jco.destination.repository.user` and `jco.destination.repository.passwd` instead, since there are special permissions needed \(for metadata lookup in the back end\) that not all business/technical users might have.
+> For `PrincipalPropagation`, we recommend that you do not use the *RepositoryDefaultCredentials*, since there are special permissions needed \(for metadata lookup in the backend\) that not all business application users might have.
 
 
 
 </td>
 </tr>
 <tr>
+<td valign="top">
+
+Client ID
+
+</td>
 <td valign="top">
 
 `jco.client.tech_user_id`
@@ -167,14 +231,18 @@ Optional property.
 </td>
 <td valign="top">
 
-> ### Note:  
-> Only needed for `jco.destination.auth_type`=`TechnicalUserPropagation`.
-
 Client ID of the application.
+
+Mandatory when setting *Authentication Type*/`jco.destination.auth_type` to `TechnicalUserPropagation`. The *Client ID* is used to retrieve the access token from the OAuth Server.
 
 </td>
 </tr>
 <tr>
+<td valign="top">
+
+Client Secret
+
+</td>
 <td valign="top">
 
 `jco.client.tech_user_secret`
@@ -182,14 +250,18 @@ Client ID of the application.
 </td>
 <td valign="top">
 
-> ### Note:  
-> Only needed for `jco.destination.auth_type`=`TechnicalUserPropagation`.
-
 Client secret for the Client ID.
+
+Mandatory when setting *Authentication Type*/`jco.destination.auth_type` to `TechnicalUserPropagation`.
 
 </td>
 </tr>
 <tr>
+<td valign="top">
+
+Token Service URL
+
+</td>
 <td valign="top">
 
 `jco.client.tech_user_service_url`
@@ -197,13 +269,12 @@ Client secret for the Client ID.
 </td>
 <td valign="top">
 
-> ### Note:  
-> Only needed for `jco.destination.auth_type`=`TechnicalUserPropagation`.
-
 URL of the token service, against which the token exchange is performed.
 
+Mandatory when setting *Authentication Type*/`jco.destination.auth_type` to `TechnicalUserPropagation`.
+
 > ### Remember:  
-> The token service is not accessed through the Cloud Connector, but through the Internet.
+> The token service is not accessed through the Cloud Connector, but directly over the Internet.
 
 
 
