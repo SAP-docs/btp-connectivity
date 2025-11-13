@@ -13,7 +13,7 @@ The Transparent Proxy is delivered as Docker images and a Helm chart. You need t
 
 ![](images/CS_Transparent_Proxy_Arch_PPT_d4060b6.png)
 
-The Transparent Proxy handles the HTTP\(s\) protocol for Internet connections. For on-premise destinations, the Transparent Proxy handles the protocols HTTP, LDAP, MAIL \(SMTP, IMAP, POP3\), and TCP. It also supports IPv4, IPv6 and Dual-Stack client workloads, Kubernetes environments, and target systems.
+The Transparent Proxy handles HTTP, LDAP, MAIL \(SMTP, IMAP, POP3\), and TCP protocols for both Internet and on-premise destinations. It also supports IPv4, IPv6 and Dual-Stack client workloads, Kubernetes environments, and target systems.
 
 The Transparent Proxy creates a Kubernetes service for each SAP BTP destination configuration exposed by a *destination custom resource*.
 

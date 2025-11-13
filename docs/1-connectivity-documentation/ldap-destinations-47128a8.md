@@ -4,15 +4,9 @@
 
 Configure LDAP destinations for the Transparent Proxy for Kubernetes.
 
-**LDAP On-Premise**
+The Transparent Proxy simplifies access to target systems defined as LDAP destinations. It handles the LDAP protocol for both Internet and on-premise destinations.
 
-The transparent proxy simplifies access to target systems defined as LDAP destinations. It handles the LDAP protocol for on-premise destinations.
-
-The transparent proxy performs the connectivity handshake with the [Connectivity Proxy for Kubernetes](connectivity-proxy-for-kubernetes-e661713.md) to enable the consumption of that \(otherwise complex\) functionality out-of-the-box for the application developer. If the destination is configured with ldap.authentication "BasicAuthentication", the transparent proxy executes LDAP simple authentication bind with the on-premise system using the username and password provided in the destination on behalf of the client.
-
-**LDAP Internet**
-
-The Transparent Proxy supports LDAP Internet destinations as well.
+The Transparent Proxy performs the connectivity handshake with the [Connectivity Proxy for Kubernetes](connectivity-proxy-for-kubernetes-e661713.md) to enable the consumption of that \(otherwise complex\) functionality out-of-the-box for the application developer. If the destination is configured with ldap.authentication "BasicAuthentication", the Transparent Proxy executes LDAP simple authentication bind with the on-premise system using the username and password provided in the destination on behalf of the client.
 
 **Mandatory Destination Configuration Fields**
 
@@ -160,9 +154,9 @@ To integrate this functionality, you must:
 > }
 > ```
 
-To target the destination with the name "example-dest-ldap" for handling by the transparent proxy, you should create a [Destination Custom Resource](destination-custom-resource-fc7951e.md) in a namespace of your choice.
+To target the destination with the name "example-dest-ldap" for handling by the Transparent Proxy, you should create a [Destination Custom Resource](destination-custom-resource-fc7951e.md) in a namespace of your choice.
 
-**Destination CR for an LDAP destination in transparent proxy *dedicated* mode**
+**Destination CR for an LDAP destination in Transparent Proxy *dedicated* mode**
 
 > ### Sample Code:  
 > ```
@@ -176,13 +170,13 @@ To target the destination with the name "example-dest-ldap" for handling by the 
 >   destinationServiceInstanceName: <dest-service-instance-name> // can be ommited if config.destinationService.defaultInstanceName is provided
 > ```
 
-The transparent proxy will create a [Kubernetes Service](https://kubernetes.io/docs/concepts/services-networking/service/) for that destination on port 389, the default LDAP port \(unless another port is specified in the destination CR\). The transparent proxy handles the basic authentication with the LDAP server using the credentials from the respective destination.
+The Transparent Proxy will create a [Kubernetes Service](https://kubernetes.io/docs/concepts/services-networking/service/) for that destination on port 389, the default LDAP port \(unless another port is specified in the destination CR\). The Transparent Proxy handles the basic authentication with the LDAP server using the credentials from the respective destination.
 
 **Multitenant Usage** 
 
-The transparent proxy supports multitenancy for LDAP destinations. To consume an end-system in a multitenant manner, describe all tenants in the *transparent-proxy.connectivity.api.sap/tenant-subdomains* annotation:
+The Transparent Proxy supports multitenancy for LDAP destinations. To consume an end-system in a multitenant manner, describe all tenants in the *transparent-proxy.connectivity.api.sap/tenant-subdomains* annotation:
 
-**Destination CR for an LDAP destination in transparent proxy *shared* mode** 
+**Destination CR for an LDAP destination in Transparent Proxy *shared* mode** 
 
 > ### Sample Code:  
 > ```
@@ -197,7 +191,7 @@ The transparent proxy supports multitenancy for LDAP destinations. To consume an
 >   destinationServiceInstanceName: <dest-service-instance-name> // can be ommited if config.destinationService.defaultInstanceName is provided
 > ```
 
-The transparent proxy will create a [Kubernetes Service](https://kubernetes.io/docs/concepts/services-networking/service/) for each of the tenants described in the *transparent-proxy.connectivity.api.sap/tenant-subdomains* annotation. The names of the Kubernetes services will be: <destination-cr-name\>-<tenant-subdomain\>.
+The Transparent Proxy will create a [Kubernetes Service](https://kubernetes.io/docs/concepts/services-networking/service/) for each of the tenants described in the *transparent-proxy.connectivity.api.sap/tenant-subdomains* annotation. The names of the Kubernetes services will be: <destination-cr-name\>-<tenant-subdomain\>.
 
 
 
