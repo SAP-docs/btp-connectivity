@@ -2,11 +2,19 @@
 
 # TCP Destinations
 
+Configure TCP destinations for the Transparent Proxy for Kubernetes.
+
+**TCP On-Premise**
+
 The Transparent Proxy simplifies access to target systems defined as TCP destinations. It handles the TCP protocol for on-premise destinations.
 
 The Connectivity Proxy provides a SOCKS5 proxy interface that you can use to access on-premise systems via TCP-based protocols. SOCKS5 is the industry standard for proxying TCP-based traffic. For more information, see [RFC 1928](https://www.ietf.org/rfc/rfc1928.txt).
 
 The Transparent Proxy performs the SOCKS5 handshake with the [Connectivity Proxy for Kubernetes](connectivity-proxy-for-kubernetes-e661713.md) to enable the consumption of that \(otherwise complex\) functionality out-of-the-box for the application developer.
+
+**TCP Internet**
+
+The Transparent Proxy supports TCP Internet destinations as well.
 
 **Mandatory Destination Configuration Fields**
 
@@ -56,7 +64,7 @@ Address
 </td>
 <td valign="top">
 
-<virtual\_host\>:<virtual\_port\> of the on-premise application
+<virtual\_host\>:<virtual\_port\> of the on-premise application or <host\>:<port\> of the Internet application
 
 </td>
 </tr>
@@ -68,7 +76,7 @@ ProxyType
 </td>
 <td valign="top">
 
-OnPremise
+OnPremise or Internet
 
 </td>
 </tr>
@@ -82,12 +90,13 @@ OnPremise
 
 To integrate this functionality, you must:
 
--   Fulfill the on-premise/private cloud connectivity prerequisites
+-   Fulfill the connectivity prerequisites if you are using an on-premise/private cloud connection.
+
+    For more information, see [On-Premise Connectivity](using-the-transparent-proxy-c5257cf.md#loioc5257cf110bf4b7b9054eab74ededff4__section_czp_m3v_hcc).
+
 -   Create an SAP BTP Destination
 
-This destination must have `Type` "TCP" and `ProxyType` "OnPremise".
-
-**Example: TCP Destination**
+**Example: TCP On-Premise Destination**
 
 > ### Sample Code:  
 > ```
@@ -96,6 +105,18 @@ This destination must have `Type` "TCP" and `ProxyType` "OnPremise".
 >         "Type": "TCP",
 >         "Address": "tcp://<virtual_host>:<virtual_port>",
 >         "ProxyType": "OnPremise"
+> }
+> ```
+
+**Example: TCP Internet Destination**
+
+> ### Sample Code:  
+> ```
+> {
+>         "Name": "example-dest-tcp",
+>         "Type": "TCP",
+>         "Address": "tcp://<host>:<port>",
+>         "ProxyType": "Internet"
 > }
 > ```
 

@@ -87,17 +87,29 @@ curl destination-gateway.<destination-cr-namespace> -H "X-Destination-Name: exam
 
 ```
 
+If you want to call `example-dest` destination, enriching it with the properties from fragment `example-fragment` through the Kubernetes service named `destination-gateway` and specify a destination level `provider_subaccount`, you can execute the command below:
 
+**Dynamic Lookup of Destinations with Destination Level - Bash Snippet** 
 
+```
+curl destination-gateway.<destination-cr-namespace> -H "X-Destination-Name: example-dest" -H "X-Destination-Level: provider_subaccount"
+```
 
+If you want to call `example-dest` destination, enriching it with the properties from fragment `example-fragment` through the Kubernetes service named `destination-gateway` and specify a fragment level `provider_instance`, you can execute the command below:
 
+**Dynamic Lookup of Destinations with Fragment and Fragment Level - Bash Snippet** 
 
+```
+curl destination-gateway.<destination-cr-namespace> -H "X-Destination-Name: example-dest" -H "X-Fragment-Name: example-fragment" -H "X-Fragment-Level: provider_instance"
+```
 
+If you want to call `example-dest` destination, enriching it with the properties from fragment `example-fragment` through the Kubernetes service named `destination-gateway` and specify both, destination and fragment levels, you can execute the command below: 
 
+**Dynamic Lookup of Destinations with Destination Level and Fragment Level - Bash Snippet - Bash Snippet** 
 
-
-
-
+```
+curl destination-gateway.<destination-cr-namespace> -H "X-Destination-Name: example-dest" -H "X-Fragment-Name: example-fragment" -H "X-Destination-Level: provider_subaccount" -H "X-Fragment-Level: subaccount"
+```
 
 If you want to call `example-dest` destination, enriching it with destination chaining properties through the Kubernetes service named `destination-gateway`, you can execute the command below:
 

@@ -66,3 +66,36 @@ The Destination service lets you declaratively model a technical connection as a
 >               secretNamespace: <secret-namespace>
 > ```
 
+
+
+## IAS Authorization
+
+The Destination service lets you authorize using IAS as well:
+
+1.  Create a Destination service instance or reuse an existing one.
+2.  Create a service key for the Destination service instance.
+3.  Create a Cloud Identity service instance or reuse an existing one.
+4.  Create a service key for the Cloud Identity service instance.
+5.  Prepare instance credentials:
+    -   Option 1: Prepare Destination service instance credentials. See step.3 above.
+    -   Option 2: Prepare Cloud Identity service instance credentials. See step 3 above.
+
+6.  Check the [Configuration Guide](configuration-guide-2a22cd7.md) for the parameter `config.integration.destinationService.instances`.
+
+> ### Sample Code:  
+> ```
+> config:
+>   integration:
+>     destinationService:
+>       ## Name of the default destination service instance to be used when 'destinationServiceInstanceName' is not provided in the Destination Custom Resource spec.
+>       #defaultInstanceName: dest-service-instance
+>       connectionTimeoutSeconds: 5
+>       readTimeoutSeconds: 10
+>       instances:
+>           - name: dest-service-instance
+>             serviceCredentials:
+>               secretKey: <secret-key>
+>               secretName: <secret-name>
+>               secretNamespace: <secret-namespace>
+> ```
+

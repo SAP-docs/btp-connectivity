@@ -56,6 +56,11 @@ For authentication type `OAuth2ClientCredentials`, no additional `Authorization`
 > ### Note:  
 > `<destination-cr-namespace>` can be omitted if the destination custom resource is created in the same namespace as the application workload.
 
+> ### Caution:  
+> The `X-Token-Service-Tenant` header represents the subdomain of the tenant on behalf of which to fetch an access token using the configured credentials. When `tokenServiceURLType` in the BTP Destination is `Common`, this header is required and its value will be used to replace the tenant placeholder in the URL or added as a subdomain if no placeholder exists. When `tokenServiceURLType` is `Dedicated`, this header is forbidden and an error will be returned if provided.
+> 
+> If this header is not provided when `tokenServiceURLType` is `Common`, an error will be returned.
+
 **OAuth 2 Client Credentials Pseudocode Snippet**
 
 > ### Sample Code:  
@@ -63,9 +68,9 @@ For authentication type `OAuth2ClientCredentials`, no additional `Authorization`
 > function callHttpsDestinationOAuth2ClientCredentials() {
 >   url = '<destination-cr-name>.<destination-cr-namespace>'
 >   headers = {
->             // X-Tenant-Subdomain is required only when Transparent Proxy is in shared tenant mode
+>             // X-Tenant-Subdomain is required only when transparent proxy is in shared tenant mode
 >             'X-Tenant-Subdomain': '<tenant-where-destination-is-located>'
->             // Only when the tokenServiceURLType is 'Common'
+>             // Only when the tokenServiceURLType in the BTP Destination is 'Common'
 >             'X-Token-Service-Tenant': '<tenant-to-retrieve-oauth-token>'
 >   };
 >      

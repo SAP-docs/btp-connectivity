@@ -59,6 +59,9 @@ config:
       enabled: true
 ```
 
+> ### Note:  
+> The Transparent Proxy requires Prometheus version v2.0.0 or higher.
+
 To obtain the collected metrics, send an `HTTP GET` request to the `/metrics` endpoint on any of the Transparent Proxy components.
 
 ```

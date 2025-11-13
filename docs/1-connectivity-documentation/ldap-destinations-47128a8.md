@@ -2,9 +2,17 @@
 
 # LDAP Destinations
 
+Configure LDAP destinations for the Transparent Proxy for Kubernetes.
+
+**LDAP On-Premise**
+
 The transparent proxy simplifies access to target systems defined as LDAP destinations. It handles the LDAP protocol for on-premise destinations.
 
 The transparent proxy performs the connectivity handshake with the [Connectivity Proxy for Kubernetes](connectivity-proxy-for-kubernetes-e661713.md) to enable the consumption of that \(otherwise complex\) functionality out-of-the-box for the application developer. If the destination is configured with ldap.authentication "BasicAuthentication", the transparent proxy executes LDAP simple authentication bind with the on-premise system using the username and password provided in the destination on behalf of the client.
+
+**LDAP Internet**
+
+The Transparent Proxy supports LDAP Internet destinations as well.
 
 **Mandatory Destination Configuration Fields**
 
@@ -54,7 +62,7 @@ ldap.url
 </td>
 <td valign="top">
 
-<virtual\_host\>:<virtual\_port\> of the on-premise application
+<virtual\_host\>:<virtual\_port\> of the on-premise application or <host\>:<port\> of the Internet application
 
 </td>
 </tr>
@@ -66,7 +74,7 @@ ldap.proxyType
 </td>
 <td valign="top">
 
-OnPremise
+OnPremise or Internet
 
 </td>
 </tr>
@@ -116,12 +124,13 @@ Mandatory when ldap.authentication is "BasicAuthentication"
 
 To integrate this functionality, you must:
 
--   Fulfill the on-premise/private cloud connectivity prerequisites
--   Create an SAP BTP Destination
+-   Fulfill the connectivity prerequisites if you are using an on-premise/private cloud connection.
 
-This destination should have `Type` "LDAP" and `ldap.proxyType` "OnPremise", for example:
+    For more information, see [On-Premise Connectivity](using-the-transparent-proxy-c5257cf.md#loioc5257cf110bf4b7b9054eab74ededff4__section_czp_m3v_hcc).
 
-**LDAP Destination**
+-   Create an SAP BTP Destination.
+
+**Example: LDAP On-Premise Destination**
 
 > ### Sample Code:  
 > ```
@@ -133,6 +142,21 @@ This destination should have `Type` "LDAP" and `ldap.proxyType` "OnPremise", for
 >         "ldap.authentication": "BasicAuthentication",
 >         "ldap.url": "ldap://<virtual_host>:<virtual_port>",
 >         "ldap.proxyType": "OnPremise"
+> }
+> ```
+
+**Example: LDAP Internet Destination**
+
+> ### Sample Code:  
+> ```
+> {
+>         "Name": "example-dest-ldap",
+>         "Type": "LDAP",
+>         "ldap.user": <username>,
+>         "ldap.password": <password>,
+>         "ldap.authentication": "BasicAuthentication",
+>         "ldap.url": "ldap://<host>:<port>",
+>         "ldap.proxyType": "Internet"
 > }
 > ```
 

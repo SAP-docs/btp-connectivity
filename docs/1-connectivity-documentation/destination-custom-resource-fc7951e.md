@@ -81,6 +81,34 @@ After the Transparent Proxy executes successfully all necessary operations, the 
 >     type: Available
 > ```
 
+**Destination/Fragment Levels**
+
+Destination/fragment levels enable specifying a certain level from which the destination/fragment will be retrieved. For more information, see [Referring Resources Using the REST API](referring-resources-using-the-rest-api-78ba73a.md).
+
+You can choose a destination or fragment level as follows:
+
+-   Directly in the Destination custom resource:
+
+    > ### Sample Code:  
+    > ```
+    > apiVersion: destination.connectivity.api.sap/v1
+    > kind: Destination
+    > metadata:
+    >   name: <destination-cr-name>
+    > spec:  
+    >   destinationRef:
+    >     name: <destination-name>
+    >     level: <destination-level>
+    >   fragmentRef:
+    >     name: <fragment-name>
+    >     level: <fragment-level>
+    >   destinationServiceInstanceName: <dest-service-instance-name> // can be ommited if config.destinationService.defaultInstanceName is provided
+    > ```
+
+    > ### Caution:  
+    > Static reference of destination/fragment levels is only applicable for a destination custom resource that references a particular destination/fragment. The [Dynamic Lookup of Destinations](destination-gateway-dynamic-lookup-of-destinations-6836e00.md) feature is not compatible with this approach.
+
+-   Dynamically passing the destination/fragment level as HTTP headers. This approach is only compatible with the [Dynamic Lookup of Destinations](destination-gateway-dynamic-lookup-of-destinations-6836e00.md) approach. You can check the examples given there.
 
 **Destination Fragments: Optionality** 
 

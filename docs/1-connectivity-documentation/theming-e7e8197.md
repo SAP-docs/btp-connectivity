@@ -16,3 +16,6 @@ The default theme is applied to all pages that are not associated with a user \(
 
 Choose any of the four themes to override the default theme. You may revert to the default theme \(chosen by the administrator\) at any time.
 
+> ### Note:  
+> Changes to the default theme or to the user-specific theme that you made in one browser will not take effect in the UI of another browser unless you log out or press the *Reload* button of the browser \(that is, the *Reload* button typically located in the top *left* corner, not to be confused with the *Reload* button of the *Cloud Connector UI* located in the top *right* corner\).
+

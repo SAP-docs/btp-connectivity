@@ -54,6 +54,48 @@ To integrate this functionality, you must:
 > }
 > ```
 
+**Example: OnPremise IMAP Mail Destination with OAuth2RefreshToken**
+
+> ### Sample Code:  
+> ```
+> {
+>         "Name": "example-dest-imap",
+>         "Type": "MAIL",
+>         "Authentication": "OAuth2RefreshToken",
+>         "mail.user": <username>,
+>         "mail.transport.protocol": "imap4",
+>         "mail.imap4.host": "imap4",
+>         "mail.imap4.auth": "true",
+>         "mail.imap4.port": "143",
+>         "ProxyType": "OnPremise",
+>         "tokenServiceURL": <token-service-url>,
+>         "clientId": <client-id>,
+>         "clientSecret": <client-secret>,
+>         "tokenServiceURLType": "Dedicated"
+> }
+> ```
+
+**Example: OnPremise IMAP Mail Destination with OAuth2AuthorizationCode**
+
+> ### Sample Code:  
+> ```
+> {
+>         "Name": "example-dest-imap",
+>         "Type": "MAIL",
+>         "Authentication": "OAuth2AuthorizationCode",
+>         "mail.user": <username>,
+>         "mail.transport.protocol": "imap4",
+>         "mail.imap4.host": "imap4",
+>         "mail.imap4.auth": "true",
+>         "mail.imap4.port": "143",
+>         "ProxyType": "OnPremise",
+>         "tokenServiceURL": <token-service-url>,
+>         "clientId": <client-id>,
+>         "clientSecret": <client-secret>,
+>         "tokenServiceURLType": "Dedicated"
+> }
+> ```
+
 **Example: Internet IMAP Mail Destination with BasicAuthentication**
 
 > ### Sample Code:  
@@ -80,6 +122,48 @@ To integrate this functionality, you must:
 >         "Name": "example-dest-imap",
 >         "Type": "MAIL",
 >         "Authentication": "OAuth2ClientCredentials",
+>         "mail.user": <username>,
+>         "mail.transport.protocol": "imap4",
+>         "mail.imap4.host": "imap4",
+>         "mail.imap4.auth": "true",
+>         "mail.imap4.port": "143",
+>         "ProxyType": "Internet",
+>         "tokenServiceURL": <token-service-url>,
+>         "clientId": <client-id>,
+>         "clientSecret": <client-secret>,
+>         "tokenServiceURLType": "Dedicated"
+> }
+> ```
+
+**Example: Internet IMAP Mail Destination with OAuth2RefreshToken**
+
+> ### Sample Code:  
+> ```
+> {
+>         "Name": "example-dest-imap",
+>         "Type": "MAIL",
+>         "Authentication": "OAuth2RefreshToken",
+>         "mail.user": <username>,
+>         "mail.transport.protocol": "imap4",
+>         "mail.imap4.host": "imap4",
+>         "mail.imap4.auth": "true",
+>         "mail.imap4.port": "143",
+>         "ProxyType": "Internet",
+>         "tokenServiceURL": <token-service-url>,
+>         "clientId": <client-id>,
+>         "clientSecret": <client-secret>,
+>         "tokenServiceURLType": "Dedicated"
+> }
+> ```
+
+**Example: Internet IMAP Mail Destination with OAuth2AuthorizationCode**
+
+> ### Sample Code:  
+> ```
+> {
+>         "Name": "example-dest-imap",
+>         "Type": "MAIL",
+>         "Authentication": "OAuth2AuthorizationCode",
 >         "mail.user": <username>,
 >         "mail.transport.protocol": "imap4",
 >         "mail.imap4.host": "imap4",
@@ -156,12 +240,44 @@ Once done, the application can start consuming the destination from within the K
 > 5 FETCH 1 BODY[TEXT]
 > ```
 
+**IMAP Consumption for Authentication Types OAuth2RefreshToken/OAuth2AuthorizationCode - Bash Snippet**
+
+> ### Sample Code:  
+> ```
+> telnet <destination-cr-name>.<destination-cr-namespace> 143
+>  
+> // Token Format: "user=<username>\x01auth=Bearer <access_token>\x01\x01" where access_token is the refresh token for OAuth2RefreshToken or the authorization code for OAuth2AuthorizationCode and username is your mail user
+> 1 AUTHENTICATE XOAUTH2 <base64-encoded-token>
+>   
+> 2 LIST "" "*"
+>   
+> 3 SELECT INBOX
+>   
+> 5 FETCH 1 BODY[TEXT]
+> ```
+
 **IMAP Consumption in *Shared* \(Multitenant\) Mode - Bash Snippet**
 
 > ### Sample Code:  
 > ```
 > telnet <destination-cr-name>-<tenant-subdomain>.<destination-cr-namespace> 143
 >   
+> 2 LIST "" "*"
+>   
+> 3 SELECT INBOX
+>   
+> 5 FETCH 1 BODY[TEXT]
+> ```
+
+**IMAP Consumption for Authentication Types OAuth2RefreshToken/OAuth2AuthorizationCode - Bash Snippet**
+
+> ### Sample Code:  
+> ```
+> telnet <destination-cr-name>-<tenant-subdomain>.<destination-cr-namespace> 143
+>  
+> // Token Format: "user=<username>\x01auth=Bearer <access_token>\x01\x01" where access_token is the refresh token for OAuth2RefreshToken or the authorization code for OAuth2AuthorizationCode and username is your mail user
+> 1 AUTHENTICATE XOAUTH2 <base64-encoded-token>
+>  
 > 2 LIST "" "*"
 >   
 > 3 SELECT INBOX

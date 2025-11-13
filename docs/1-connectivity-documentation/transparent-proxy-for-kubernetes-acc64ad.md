@@ -54,3 +54,7 @@ When an application tries to reach the desired system defined as a destination
 
 [Transparent Proxy Operator](transparent-proxy-operator-2d826aa.md "Use the Transparent Proxy Operator for the Transparent Proxy for Kubernetes.")
 
+[Integration with Zero Trust Identity Service \(ZTIS\)](integration-with-zero-trust-identity-service-ztis-4f7bb27.md "The Transparent Proxy architecture aligns with zero trust principles by enforcing the concept of &quot;never trust, always verify&quot; through its integration with workload identity frameworks.")
+
+[Security Considerations](security-considerations-ac0c9e9.md "Recommended security measures for the Transparent Proxy for Kubernetes.")
+

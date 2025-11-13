@@ -505,6 +505,60 @@ The provided header value for 'x-fragment-optional' has invalid characters. The 
 </td>
 <td valign="top">
 
+Destination level is invalid in the request. It should be one of the following: provider\_subaccount, provider\_instance, subaccount, instance.
+
+</td>
+<td valign="top">
+
+Transparent Proxy
+
+</td>
+<td valign="top">
+
+ 
+
+</td>
+<td valign="top">
+
+The provided header value for 'x-destination-level' has invalid characters. The value should be one of the following: provider\_subaccount, provider\_instance, subaccount, instance.
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+400 Bad Request
+
+</td>
+<td valign="top">
+
+Fragment level is invalid in the request. It should be one of the following: provider\_subaccount, provider\_instance, subaccount, instance.
+
+</td>
+<td valign="top">
+
+Transparent Proxy
+
+</td>
+<td valign="top">
+
+ 
+
+</td>
+<td valign="top">
+
+The provided header value for 'x-fragment-level' has invalid characters. The value should be one of the following: provider\_subaccount, provider\_instance, subaccount, instance.
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+400 Bad Request
+
+</td>
+<td valign="top">
+
 The requested endpoint is bound to a concrete destination, statically declared in the respective Destination CR. 'x-destination-name' header is not supported for this endpoint. Contact the Transparent Proxy Administrator.
 
 </td>
@@ -575,6 +629,87 @@ Transparent Proxy
 <td valign="top">
 
 The Destination Custom Resource is linked to a specific destination via the spec.destinationRef.name property, meaning the spec.fragmentRef.name cannot be overridden with an HTTP header. You can either change the spec.destinationRef.name property in the CR to "\*" to convert it to a destination gateway, or configure it directly in the spec.fragmentRef.name property.
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+400 Bad Request
+
+</td>
+<td valign="top">
+
+The requested endpoint is bound to a concrete destination, statically declared in the respective Destination CR. 'x-destination-level' header is not supported for this endpoint. Contact the Transparent Proxy Administrator.
+
+</td>
+<td valign="top">
+
+Transparent Proxy
+
+</td>
+<td valign="top">
+
+ 
+
+</td>
+<td valign="top">
+
+The Destination Custom Resource is linked to a specific destination via the spec.destinationRef.name property, meaning the spec.destinationRef.level cannot be overridden with an HTTP header. You can either change the spec.destinationRef.name property in the CR to `"*"` to convert it to a destination gateway, or configure it directly in the spec.destinationRef.level property.
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+400 Bad Request
+
+</td>
+<td valign="top">
+
+The requested endpoint is bound to a concrete destination, statically declared in the respective Destination CR. 'x-fragment-level' header is not supported for this endpoint. Contact the Transparent Proxy Administrator.
+
+</td>
+<td valign="top">
+
+Transparent Proxy
+
+</td>
+<td valign="top">
+
+ 
+
+</td>
+<td valign="top">
+
+The Destination Custom Resource is linked to a specific destination via the `spec.destinationRef.name` property, meaning the `spec.destinationRef.level` cannot be overridden with an HTTP header. You can either change the `spec.destinationRef.name` property in the CR to `"*"` to convert it to a destination gateway, or configure it directly in the `spec.fragmentRef.level` property.
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+400 Bad Request
+
+</td>
+<td valign="top">
+
+'x-fragment-level' header is not supported when 'x-fragment-name' header is not provided.
+
+</td>
+<td valign="top">
+
+Transparent Proxy
+
+</td>
+<td valign="top">
+
+ 
+
+</td>
+<td valign="top">
+
+The 'x-fragment-level' header could only be provided when 'x-fragment-name' level is provided.
 
 </td>
 </tr>

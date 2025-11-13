@@ -52,6 +52,12 @@ For authentication type `SAMLAssertion`, the cloud user identity has to be passe
 > ### Note:  
 > `<destination-cr-namespace>` can be omitted if the destination custom resource is created in the same namespace as the application workload.
 
+> ### Caution:  
+> The `X-Token-Service-Tenant` header represents the subdomain of the tenant on behalf of which to fetch an access token using the configured credentials. When `tokenServiceURLType` in the BTP Destination is `Common`, this header can be used to specify the tenant if the `X-User-Token` does not contain tenant information. The header value will be used to replace the tenant placeholder in the URL or added as a subdomain if no placeholder exists. When `tokenServiceURLType` is `Dedicated`, this header is forbidden and an error will be returned if provided.
+> 
+> -   If `X-Token-Service-Tenant` is not provided but `X-User-Token` contains tenant information, the tenant information will be automatically extracted from the JWT \(JSON web token\).
+> -   If neither the header nor tenant information in the JWT is available, an error will be returned.
+
 **SAML assertion Pseudocode Snippet**
 
 > ### Sample Code:  
@@ -61,8 +67,10 @@ For authentication type `SAMLAssertion`, the cloud user identity has to be passe
 >  
 >     url = '<destination-cr-name>.<destination-cr-namespace>'
 >     headers: {
->             // X-Tenant-Subdomain is required only when Transparent Proxy is in shared tenant mode
+>             // X-Tenant-Subdomain is required only when transparent proxy is in shared tenant mode
 >             'X-Tenant-Subdomain': '<tenant-where-destination-is-located>',
+>             // Only when the tokenServiceURLType in the BTP destination is 'Common'
+>             'X-Token-Service-Tenant': '<tenant-to-retrieve-oauth-token>',
 >             'Authorization': 'Bearer ' + accessToken,
 >     }
 >  

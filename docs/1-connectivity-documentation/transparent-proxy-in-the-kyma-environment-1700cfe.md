@@ -64,3 +64,8 @@ For more information about consumption of target systems through the Transparent
 
 In case of issues, please refer to [Transparent Proxy Custom Resource Conditions](transparent-proxy-custom-resource-conditions-d75e31e.md).
 
+**Related Information**  
+
+
+[Create a Destination Custom Resource in the Kyma Environment](create-a-destination-custom-resource-in-the-kyma-environment-65cf433.md "Create a Destination Custom Resource in the Kyma environment to expose SAP BTP destinations as Kyma-internal endpoints.")
+
