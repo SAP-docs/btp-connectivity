@@ -2,7 +2,7 @@
 
 # SMTPS
 
-Configure SMTPS destinations for the Transparent Proxy for Kubernetes.
+Consume an SMTPS system through the Transparent Proxy for Kubernetes and the Destination service.
 
 
 

@@ -42,7 +42,7 @@ Depending on the configuration you use, different properties are mandatory or op
 The set of available options depends on the *Proxy Type* chosen while editing the destination. In the *Destinations* editor in the cockpit, the configuration must be provided in the *Target System Configuration* panel.
 
 > ### Note:  
-> Target system configurations that are relevant for *Proxy Type* set to `Local` for the `Edge Integration Cell` use case are not covered in this documentation.
+> Target system configurations that are relevant for *Proxy Type* set to `Local` for the *Edge Integration Cell* use case are not covered in this documentation.
 
 Back to [Content](target-system-configuration-ab6eac9.md#loioab6eac92978f469e9eabe3d477ca2411__content)
 

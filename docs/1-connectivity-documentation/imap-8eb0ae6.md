@@ -2,7 +2,7 @@
 
 # IMAP
 
-Configure IMAP destinations for the Transparent Proxy for Kubernetes.
+Consume an IMAP system through the Transparent Proxy for Kubernetes and the Destination service.
 
 
 

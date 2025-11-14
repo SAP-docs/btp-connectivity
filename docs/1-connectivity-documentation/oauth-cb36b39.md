@@ -7,7 +7,7 @@ Use OAuth authentication for the Transparent Proxy for Kubernetes.
 **Related Information**  
 
 
- <?sap-ot O2O class="- topic/link " href="a1ecea9cec924b7bbc7ad6ebc13f784c.xml" text="" desc="" xtrc="link:1" xtrf="file:/home/builder/src/dita-all/jjq1673438782153/loiob2927cc326be495da9f4fea0b6bda2b3_en-US/src/content/localization/en-us/cb36b393b7b44e8f801b8938c3088c76.xml" output-class="" outputTopicFile="file:/home/builder/tp.net.sf.dita-ot/2.3/plugins/com.elovirta.dita.markdown_1.3.0/xsl/dita2markdownImpl.xsl" ?> 
+[IAS-Signed SAML Bearer Assertion](ias-signed-saml-bearer-assertion-a1ecea9.md "The Transparent Proxy supports Token Retrieval Using IAS-Signed SAML2.0 Assertions for the HTTP communication protocol for both Internet and On-Premise destinations.")
 
 [OAuth Authorization Code Authentication](oauth-authorization-code-authentication-7bdfed4.md "The Transparent Proxy handles the HTTP communication protocol for both Internet and on-premise destinations protected with the OAuth Authorization Code flow.")
 

@@ -27,17 +27,17 @@ The Transparent Proxy handles SMTP, POP3, IMAP, SMTPS, POP3S and IMAPS communica
 **Related Information**  
 
 
-[IMAP](imap-8eb0ae6.md "Configure IMAP destinations for the Transparent Proxy for Kubernetes.")
+[IMAP](imap-8eb0ae6.md "Consume an IMAP system through the Transparent Proxy for Kubernetes and the Destination service.")
 
-[IMAPS](imaps-ceb84cb.md "Configure IMAPS destinations for the Transparent Proxy for Kubernetes.")
+[IMAPS](imaps-ceb84cb.md "Consume an IMAPS system through the Transparent Proxy for Kubernetes and the Destination service.")
 
-[POP3](pop3-387e3e4.md "Configure POP3 destinations for the Transparent Proxy for Kubernetes.")
+[POP3](pop3-387e3e4.md "Consume a POP3 system through the Transparent Proxy for Kubernetes and the Destination service.")
 
-[POP3S](pop3s-76db66c.md "Configure POP3S destinations for the Transparent Proxy for Kubernetes.")
+[POP3S](pop3s-76db66c.md "Consume a POP3S system through the Transparent Proxy for Kubernetes and the Destination service.")
 
-[SMTP](smtp-426527a.md "Configure SMTP destinations for the Transparent Proxy for Kubernetes.")
+[SMTP](smtp-426527a.md "Consume an SMTP system through the Transparent Proxy for Kubernetes and the Destination service.")
 
-[SMTPS](smtps-897df97.md "Configure SMTPS destinations for the Transparent Proxy for Kubernetes.")
+[SMTPS](smtps-897df97.md "Consume an SMTPS system through the Transparent Proxy for Kubernetes and the Destination service.")
 
 [MAIL Destinations](mail-destinations-e3de817.md "Find information about MAIL destinations for Internet or on-premise connections from an SAP BTP subaccount.")
 

@@ -78,5 +78,8 @@ To integrate a certificate manager, follow these steps:
 > ```
 
 > ### Note:  
+> The communication between the Transparent Proxy components is encrypted, except for designated integration and observability interfaces that intentionally operate without encryption.
+
+> ### Note:  
 > For more details about configuring the Transparent Proxy, check the [Configuration Guide](configuration-guide-2a22cd7.md).
 

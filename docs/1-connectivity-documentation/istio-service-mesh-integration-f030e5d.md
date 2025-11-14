@@ -41,5 +41,8 @@ If `.Values.config.security.communication.internal.encryptionEnabled` is set to 
 > If Transparent Proxy operator is available and `.Values.config.security.communication.internal.encryptionEnabled` is set to `false` but there is integration in the Istio service mesh, the Transparent Proxy CR will become in "Ready" state with message "installation is ready. Although encryptionEnabled is set to false, the traffic will be encrypted by Istio.".
 
 > ### Note:  
+> If you have set `config.metrics.prometheus.enabled` to `true`, depending on how Istio is configured it might be required to include Prometheus pods also in the Istio service mesh.
+
+> ### Note:  
 > For more details about configuring the Transparent Proxy, check the [Configuration Guide](configuration-guide-2a22cd7.md).
 

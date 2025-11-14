@@ -319,6 +319,7 @@
                 -   [Client Certificate Authentication](1-connectivity-documentation/client-certificate-authentication-cd876f8.md)
                 -   [No Authentication](1-connectivity-documentation/no-authentication-5ef40e3.md)
                 -   [OAuth](1-connectivity-documentation/oauth-cb36b39.md)
+                    -   [IAS-Signed SAML Bearer Assertion](1-connectivity-documentation/ias-signed-saml-bearer-assertion-a1ecea9.md)
                     -   [OAuth Authorization Code Authentication](1-connectivity-documentation/oauth-authorization-code-authentication-7bdfed4.md)
                     -   [OAuth Client Credentials Authentication](1-connectivity-documentation/oauth-client-credentials-authentication-cf15900.md)
                     -   [OAuth JWT Bearer Authentication](1-connectivity-documentation/oauth-jwt-bearer-authentication-a728ae0.md)

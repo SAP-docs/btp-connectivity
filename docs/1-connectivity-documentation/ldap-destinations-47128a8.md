@@ -2,11 +2,9 @@
 
 # LDAP Destinations
 
-Configure LDAP destinations for the Transparent Proxy for Kubernetes.
-
 The Transparent Proxy simplifies access to target systems defined as LDAP destinations. It handles the LDAP protocol for both Internet and on-premise destinations.
 
-The Transparent Proxy performs the connectivity handshake with the [Connectivity Proxy for Kubernetes](connectivity-proxy-for-kubernetes-e661713.md) to enable the consumption of that \(otherwise complex\) functionality out-of-the-box for the application developer. If the destination is configured with ldap.authentication "BasicAuthentication", the Transparent Proxy executes LDAP simple authentication bind with the on-premise system using the username and password provided in the destination on behalf of the client.
+For on-premise connections, the Transparent Proxy performs the connectivity handshake with the [Connectivity Proxy for Kubernetes](connectivity-proxy-for-kubernetes-e661713.md) to enable the consumption of that \(otherwise complex\) functionality out-of-the-box for the application developer. If the destination is configured with authentication type *BasicAuthentication*, the Transparent Proxy executes LDAP simple authentication bind with the on-premise system using the username and password provided in the destination on behalf of the client.
 
 **Mandatory Destination Configuration Fields**
 

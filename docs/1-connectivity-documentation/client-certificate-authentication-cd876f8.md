@@ -2,9 +2,9 @@
 
 # Client Certificate Authentication
 
-Configure *Client Certificate Authentication* for the Transparent Proxy for Kubernetes.
+The Transparent Proxy handles HTTP communication protocol for both Internet and on-premise destinations protected with *Client Certificate Authentication*.
 
-The Transparent Proxy handles HTTP communication protocol for both Internet and on-premise destinations protected with *Client Certificate Authentication*. For this authentication type, the Transparent Proxy manages the client certificate addition \(client certificates and CA certificates\) by getting them from the destination and adding them to the HTTP client used to establish the communication between the client and server.
+For this authentication type, the Transparent Proxy manages the client certificate addition \(client certificates and CA certificates\) by getting them from the destination and adding them to the HTTP client used to establish the communication between the client and server.
 
 
 

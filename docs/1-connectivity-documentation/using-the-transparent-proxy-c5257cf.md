@@ -189,7 +189,7 @@ For more information, see [Troubleshooting](troubleshooting-fce292a.md).
 
 [Mail Destinations](mail-destinations-584bc93.md "Configure Mail destinations for the Transparent Proxy for Kubernetes.")
 
-[LDAP Destinations](ldap-destinations-47128a8.md "Configure LDAP destinations for the Transparent Proxy for Kubernetes.")
+[LDAP Destinations](ldap-destinations-47128a8.md "The Transparent Proxy simplifies access to target systems defined as LDAP destinations. It handles the LDAP protocol for both Internet and on-premise destinations.")
 
-[TCP Destinations](tcp-destinations-558b39a.md "Configure TCP destinations for the Transparent Proxy for Kubernetes.")
+[TCP Destinations](tcp-destinations-558b39a.md "The Transparent Proxy simplifies access to target systems defined as TCP destinations. It handles the TCP protocol for both Internet and on-premise destinations.")
 

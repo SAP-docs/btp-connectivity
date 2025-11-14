@@ -230,7 +230,7 @@ A static key prefix is used as a namespace grouping of URL's query parameters wh
 
 [Basic Authentication](basic-authentication-427b91d.md "The Transparent Proxy handles the HTTP communication protocol for both Internet and on-premise destinations protected with Basic Authentication.")
 
-[Client Certificate Authentication](client-certificate-authentication-cd876f8.md "Configure Client Certificate Authentication for the Transparent Proxy for Kubernetes.")
+[Client Certificate Authentication](client-certificate-authentication-cd876f8.md "The Transparent Proxy handles HTTP communication protocol for both Internet and on-premise destinations protected with Client Certificate Authentication.")
 
 [No Authentication](no-authentication-5ef40e3.md "The Transparent Proxy handles HTTP and TCP communication protocols for both Internet and on-premise destinations without authentication.")
 

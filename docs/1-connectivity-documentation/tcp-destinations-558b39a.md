@@ -2,8 +2,6 @@
 
 # TCP Destinations
 
-Configure TCP destinations for the Transparent Proxy for Kubernetes.
-
 The Transparent Proxy simplifies access to target systems defined as TCP destinations. It handles the TCP protocol for both Internet and on-premise destinations.
 
 The [Connectivity Proxy for Kubernetes](connectivity-proxy-for-kubernetes-e661713.md) provides a SOCKS5 proxy interface that you can use to access on-premise systems via TCP-based protocols. SOCKS5 is the industry standard for proxying TCP-based traffic. For more information, see [RFC 1928](https://www.ietf.org/rfc/rfc1928.txt).

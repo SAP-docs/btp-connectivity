@@ -2,7 +2,7 @@
 
 # IMAPS
 
-Configure IMAPS destinations for the Transparent Proxy for Kubernetes.
+Consume an IMAPS system through the Transparent Proxy for Kubernetes and the Destination service.
 
 
 
