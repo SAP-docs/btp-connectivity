@@ -78,7 +78,7 @@ To integrate a certificate manager, follow these steps:
 > ```
 
 > ### Note:  
-> The communication between the Transparent Proxy components is encrypted, except for designated integration and observability interfaces that intentionally operate without encryption.
+> When configuring `cert-manager`, only the communication between Transparent Proxy micro-components is encrypted. To also encrypt outer communication, such as from applications on the cluster to the Transparent Proxy, or from observability services on the cluster \(for example, Prometheus\) to the Transparent Proxy, use a service mesh \(for example, Istio\).
 
 > ### Note:  
 > For more details about configuring the Transparent Proxy, check the [Configuration Guide](configuration-guide-2a22cd7.md).

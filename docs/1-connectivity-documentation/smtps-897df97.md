@@ -2,7 +2,7 @@
 
 # SMTPS
 
-Consume an SMTPS system through the Transparent Proxy for Kubernetes and the Destination service.
+Consume a mail system via SMTPS through the Transparent Proxy for Kubernetes and the Destination service.
 
 
 
@@ -219,4 +219,9 @@ Once done, the application can start consuming the destination from within the K
 >   
 > .
 > ```
+
+**Related Information**  
+
+
+[Create MAIL Destinations](create-mail-destinations-6442cb4.md "Create MAIL destinations in the Destinations editor (SAP BTP cockpit).")
 

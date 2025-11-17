@@ -2,7 +2,7 @@
 
 # IMAPS
 
-Consume an IMAPS system through the Transparent Proxy for Kubernetes and the Destination service.
+Consume a mail system via IMAPS through the Transparent Proxy for Kubernetes and the Destination service.
 
 
 
@@ -200,4 +200,9 @@ Once done, the application can start consuming the destination from within the K
 >    
 > 5 FETCH 1 BODY[TEXT]
 > ```
+
+**Related Information**  
+
+
+[Create MAIL Destinations](create-mail-destinations-6442cb4.md "Create MAIL destinations in the Destinations editor (SAP BTP cockpit).")
 

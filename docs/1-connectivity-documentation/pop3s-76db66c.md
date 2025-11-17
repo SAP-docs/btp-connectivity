@@ -2,7 +2,7 @@
 
 # POP3S
 
-Consume a POP3S system through the Transparent Proxy for Kubernetes and the Destination service.
+Consume a mail system via POP3S through the Transparent Proxy for Kubernetes and the Destination service.
 
 
 
@@ -211,4 +211,9 @@ Once done, the application can start consuming the destination from within the K
 >     
 > quit
 > ```
+
+**Related Information**  
+
+
+[Create MAIL Destinations](create-mail-destinations-6442cb4.md "Create MAIL destinations in the Destinations editor (SAP BTP cockpit).")
 
