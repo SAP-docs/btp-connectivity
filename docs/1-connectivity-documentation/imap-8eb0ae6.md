@@ -8,7 +8,7 @@ Consume a mail system via IMAP through the Transparent Proxy for Kubernetes and 
 
 <a name="loio8eb0ae6c8258441181fbae1d73d7a9fa__section_tfr_bwv_hcc"/>
 
-## Prerequisites
+## Preparation
 
 To integrate this functionality, you must:
 

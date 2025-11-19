@@ -58,6 +58,10 @@ In this section you can configure the surveillance of pivotal resources and comp
 -   An excessively high *CPU* load over an extended period of time adversely affects performance and may be an indicator of serious issues that jeopardize the operability of the Cloud Connector. The CPU load is monitored and an alert is triggered whenever the CPU load exceeds and continues to exceed a given threshold percentage \(the default is 90%\) for more than a given period of time \(the default is 60 seconds\).
 -   Although the Cloud Connector does not require nor consume large amounts of disk space, running out of it is a circumstance that you should avoid as Cloud Connector configuration files could get corrupted. An alert is triggered if the **Free Disk Space** falls below a critical value \(default is 10 megabytes\).
 -   The Cloud Connector configuration contains various *Certificates*. Whenever one of those expires, scenarios might no longer work as expected so it's important to get notified about the expiration \(the default is 30 days\).
+
+    > ### Caution:  
+    > Trust store certificates are server certificates \(issued by a CA\) of systems that the Cloud Connector communicates with. As the Cloud Connector does not own those certificates, alerts are not triggered for the certificates in a trust store. Alerts are generated only for certificates, for which the Cloud Connector owns the private key as well.
+
 -   As of version 2.18.0, there is a Troubleshooting feature that detects certain issues and provides diagnoses consisting of possible causes and potential fixes to resolve the respective issues. Whenever a new diagnosis is added, an alert is triggered.
 
     For more information, see [Monitoring, Logging, and Troubleshooting](monitoring-logging-and-troubleshooting-e7df7f1.md).
