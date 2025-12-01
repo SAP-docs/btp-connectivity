@@ -17,6 +17,9 @@ This authentication type is used for destinations that refer to a service on the
 </tr>
 </table>
 
+> ### Caution:  
+> In the cockpit, this authentication type is shown in the selection list only if you have entered a URL that starts with `https://`.
+
 The following credentials must be specified:
 
 
