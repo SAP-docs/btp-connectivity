@@ -4,11 +4,9 @@
 
 Create an OAuth client in SuccessFactors for user propagation from the SAP BTP Cloud Foundry environment.
 
-1.  Download the X.509 certificate from your Cloud Foundry subaccount:
+1.  Export the X.509 certificate \(trust certificate\) from your Cloud Foundry subaccount.
 
-    In the cloud cockpit, navigate to your Cloud Foundry subaccount and from the left-side subaccount menu, choose *Connectivity* \> *Destinations*. Choose *Download Trust* to get the certificate for this subaccount.
-
-    ![](images/CS_CF_SF_OAuth_1_0d99553.png)
+    For more information, see [Manage Trust](manage-trust-82dbeca.md).
 
 2.  Create a SuccessFactors OAuth Client:
 

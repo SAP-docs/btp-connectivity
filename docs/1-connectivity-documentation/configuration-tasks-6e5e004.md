@@ -30,13 +30,9 @@ To configure SSO with S/4HANA you must configure trust between the S/4HANA IAS t
 
 ## Configure OAuth Communication
 
-Download the certificate from your Cloud Foundry subaccount on SAP BTP.
+Export the X.509 certificate \(trust certificate\) from your Cloud Foundry subaccount.
 
-1.  From the SAP BTP cockpit, choose *Cloud Foundry environment* \> *your global account*.
-2.  Choose or create a subaccount, and from your left-side subaccount menu, go to *Connectivity* \> *Destinations*.
-3.  Press the *Download Trust* button.
-
-![](images/CS_CF_S4C_OAuth_DownloadTrust_da18af4.png)
+For more information, see [Manage Trust](manage-trust-82dbeca.md).
 
 Back to [Tasks](configuration-tasks-6e5e004.md#loio6e5e004b6553403486a03da53bfcaf4e__steps_s4) 
 
