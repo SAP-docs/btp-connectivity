@@ -379,3 +379,5 @@ Back to [Tasks](consuming-the-connectivity-service-313b215.md#loio313b215066a840
 
 [Using the TCP Protocol for Cloud Applications](using-the-tcp-protocol-for-cloud-applications-cd15837.md "Access on-premise systems from an application via TCP-based protocols, using a SOCKS5 Proxy.")
 
+[Connectivity Service REST API](connectivity-service-rest-api-aae0139.md "Use a REST API to read information about Cloud Connectors connected to a given SAP BTP subaccount.")
+

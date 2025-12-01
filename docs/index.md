@@ -67,6 +67,8 @@
                 -   [Configure Principal Propagation via IAS Token](1-connectivity-documentation/configure-principal-propagation-via-ias-token-47a3cff.md)
                 -   [Configure Principal Propagation via OIDC Token](1-connectivity-documentation/configure-principal-propagation-via-oidc-token-000232b.md)
             -   [Using the TCP Protocol for Cloud Applications](1-connectivity-documentation/using-the-tcp-protocol-for-cloud-applications-cd15837.md)
+            -   [Connectivity Service REST API](1-connectivity-documentation/connectivity-service-rest-api-aae0139.md)
+                -   [Calling the Connectivity Service REST API](1-connectivity-documentation/calling-the-connectivity-service-rest-api-f88c469.md)
     -   [Destination Service](1-connectivity-documentation/destination-service-8ff5483.md)
         -   [Destination Service: Administration](1-connectivity-documentation/destination-service-administration-29925f2.md)
             -   [Replacement of the Old Destinations Editor with a New Set of UIs](1-connectivity-documentation/replacement-of-the-old-destinations-editor-with-a-new-set-of-uis-e21312d.md)
