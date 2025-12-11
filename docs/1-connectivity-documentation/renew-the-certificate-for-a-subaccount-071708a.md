@@ -68,5 +68,5 @@ In the **SAP BTP cockpit**, activate the feature via *Connectivity* \> *Cloud Co
 If automatic renewal is active, the date and time of the first renewal attempt is scheduled to occur n + 7 days before the certificate expires, where n is the minimal \(remaining\) validity period \(in days\) before an expiration alert is triggered. The minimal validity period is an alerting threshold that can be configured through the **Observation Configuration** of [Alerting](alerting-87bffd9.md). A failed renewal attempt will be rescheduled and retried 12 hours later. If automatic renewal is not successful within 7 days it will be cancelled.
 
 > ### Restriction:  
-> The automatic renewal is not available for all cloud regions from the very beginning. It will be activated one by one and will work once the toggle button becomes visible in the concrete region. If the button does not exist, you cannot use the feature.
+> Currently, the automatic renewal is available only for subacounts in cloud regions that are running on the IaaS providers Amazon Web Services, Microsoft Azure, and SAP Cloud Infrastructure. For the time being, automatic renewal cannot be offered in cloud regions that are running on the IaaS providers Alibaba Cloud and Google Cloud.
 
