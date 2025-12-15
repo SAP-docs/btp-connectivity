@@ -71,6 +71,9 @@ The master considers a shadow as lost, if no check/ping is received from that sh
 > ### Note:  
 > On the master instance, you can force a role switch to assume the shadow role even if no shadow is connected. To do so, press the *Become Shadow* button \(which is the re-labeled *Switch Roles* button\). Enforce the role change only if you are absolutely sure that this is the correct procedure. Should you end up without any master instance after all, use the script *changerole* located in the root installation directory to fix the issue.
 
+> ### Caution:  
+> In the rare situation when both master and shadow are not functional, and the shadow instance is being started while the master instance is still not available, the shadow doesn't trigger the failover process for technical reasons. In this case you must \(depending on the situation\) either convert the shadow into master, or connect the shadow to the master manually once the the master instance is recovered.
+
 
 
 <a name="loio7f57de170fbd4405ab485880772af1f1__section_xhb_4mf_32c"/>
