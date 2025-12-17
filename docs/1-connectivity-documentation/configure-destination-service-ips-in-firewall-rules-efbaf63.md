@@ -5,7 +5,7 @@
 Include Destination service IP addresses in your target system firewall rules for incoming and outgoing traffic.
 
 > ### Caution:  
-> The Destination service is planning to enable IPv4 and IPv6 dual stack ingress and egress for **AWS-based regions**. Currently, only IPv4 is supported. Therefore, in our documentation we had only the respective addresses. We have now added also the **IPv6 addresses** that we plan to use. The enablement of the IPv6 addresses will happen no earlier than **February 2026**. Until then, please **ensure any needed action is performed**, based on the information below.
+> The Destination service is planning to enable IPv4 and IPv6 dual stack ingress and egress for **AWS and Google Cloud-based regions**. Currently, only IPv4 is supported. Therefore, in our documentation we had only the respective addresses. We have now added also the **IPv6 addresses** that we plan to use. The enablement of the IPv6 addresses will happen no earlier than **February 2026** \(AWS\) and **April 2026** \(Google Cloud\). Until then, please **ensure any needed action is performed**, based on the information below.
 > 
 > The Destination service *ingress* endpoints are the ones that are called by your HTTP client, accessing its REST API \(you would not usually need to take action for this flow, unless you have productive calls to the service from your own network\) and the Cloud Connector \(only in the cases where automatic token retrieval is performed for an on-premise OAuth destination\). If you make use of this on-premise token retrieval functionality and if the network in which your Cloud Connector is running does not support IPv6, no action is needed, as the IPv4 addresses are unaffected.
 > 
@@ -176,6 +176,31 @@ Europe \(Netherlands\) - Azure
 <tr>
 <td valign="top">
 
+Europe \(Frankfurt\) - Google Cloud
+
+\(cf.eu30.hana.ondemand.com\)
+
+</td>
+<td valign="top">
+
+34.107.98.49/32
+
+35.198.112.96/32
+
+34.107.83.17/32
+
+
+
+</td>
+<td valign="top">
+
+2600:1900:40d0:8a0:0:0:0:0/64
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
 US East \(VA\) - AWS
 
 \(cf.us10.hana.ondemand.com\)
@@ -260,6 +285,31 @@ US East \(VA\) - Azure
 <tr>
 <td valign="top">
 
+US Central \(IA\) - Google Cloud
+
+\(cf.us30.hana.ondemand.com\)
+
+</td>
+<td valign="top">
+
+34.67.55.101/32
+
+34.72.92.245/32
+
+34.29.83.5/32
+
+
+
+</td>
+<td valign="top">
+
+2600:1900:4000:18b3:0:0:0:0/64
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
 Brazil \(São Paulo\) - AWS
 
 \(cf.br10.hana.ondemand.com\)
@@ -338,6 +388,56 @@ Japan \(Tokyo\) - Azure
 <td valign="top">
 
  
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+Japan \(Osaka\) - Google Cloud
+
+\(cf.jp30.hana.ondemand.com\)
+
+</td>
+<td valign="top">
+
+34.97.201.156/32
+
+34.97.188.12/32
+
+34.97.65.243/32
+
+
+
+</td>
+<td valign="top">
+
+2600:1900:41d0:611:0:0:0:0/64
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+Japan \(Tokyo\) - Google Cloud
+
+\(cf.jp31.hana.ondemand.com\)
+
+</td>
+<td valign="top">
+
+34.84.61.30/32
+
+34.180.69.131/32
+
+35.221.82.66/32
+
+
+
+</td>
+<td valign="top">
+
+2600:1900:4051:2b7:0:0:0:0/64
 
 </td>
 </tr>
@@ -451,6 +551,56 @@ Singapore - Azure
 <tr>
 <td valign="top">
 
+Australia \(Sydney\) - Google Cloud
+
+\(cf.ap30.hana.ondemand.com\)
+
+</td>
+<td valign="top">
+
+34.151.67.240/32
+
+35.189.1.23/32
+
+34.40.245.56/32
+
+
+
+</td>
+<td valign="top">
+
+2600:1900:40b0:eb::/64
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+Brazil \(São Paulo\) - Google Cloud
+
+\(cf.br30.hana.ondemand.com\)
+
+</td>
+<td valign="top">
+
+35.247.212.99/32
+
+34.39.174.112/32
+
+34.95.181.127/32
+
+
+
+</td>
+<td valign="top">
+
+2600:1900:40f0:a5e::/64
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
 Canada \(Montreal\) - AWS
 
 \(cf.ca10.hana.ondemand.com\)
@@ -530,6 +680,106 @@ UAE \(Dubai\) - SAP
 <td valign="top">
 
  
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+KSA \(Dammam\) - Google Cloud public sector
+
+\(cf.sa30.hana.ondemand.com\)
+
+</td>
+<td valign="top">
+
+34.166.65.101/32
+
+34.166.162.197/32
+
+34.166.10.123/32
+
+
+
+</td>
+<td valign="top">
+
+2600:1900:5400:775:0:0:0:0/64
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+KSA \(Dammam\) - Google Cloud
+
+\(cf.sa31.hana.ondemand.com\)
+
+</td>
+<td valign="top">
+
+34.166.227.227/32
+
+34.166.78.37/32
+
+34.166.221.54/32
+
+
+
+</td>
+<td valign="top">
+
+2600:1900:5400:4b8:0:0:0:0/64
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+Israel \(Tel Aviv\) - Google Cloud
+
+\(cf.il30.hana.ondemand.com\)
+
+</td>
+<td valign="top">
+
+34.165.245.143/32
+
+35.252.1.206/32
+
+34.165.224.138/32
+
+
+
+</td>
+<td valign="top">
+
+2600:1901:8160:ac3:0:0:0:0/64
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+India \(Mumbai\) - Google Cloud
+
+\(cf.in30.hana.ondemand.com\)
+
+</td>
+<td valign="top">
+
+34.93.233.251/32
+
+34.47.175.95/32
+
+34.14.140.65/32
+
+
+
+</td>
+<td valign="top">
+
+2600:1900:40a0:305:0:0:0:0/64
 
 </td>
 </tr>
@@ -682,6 +932,25 @@ Europe \(Netherlands\) - Azure
 <tr>
 <td valign="top">
 
+Europe \(Frankfurt\) - Google Cloud
+
+\(cf.eu30.hana.ondemand.com\)
+
+</td>
+<td valign="top">
+
+35.246.171.255
+
+</td>
+<td valign="top">
+
+2600:1900:40d0:8a0:8000:3::
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
 US East \(VA\) - AWS
 
 \(cf.us10.hana.ondemand.com\)
@@ -766,6 +1035,25 @@ US East \(VA\) - Azure
 <tr>
 <td valign="top">
 
+US Central \(IA\) - Google Cloud
+
+\(cf.us30.hana.ondemand.com\)
+
+</td>
+<td valign="top">
+
+34.55.44.153
+
+</td>
+<td valign="top">
+
+2600:1900:4000:18b3:8000:3::
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
 Brazil \(São Paulo\) - AWS
 
 \(cf.br10.hana.ondemand.com\)
@@ -808,6 +1096,25 @@ Brazil \(São Paulo\) - Azure
 <tr>
 <td valign="top">
 
+Brazil \(São Paulo\) - Google Cloud
+
+\(cf.br30.hana.ondemand.com\)
+
+</td>
+<td valign="top">
+
+35.247.229.235
+
+</td>
+<td valign="top">
+
+2600:1900:40f0:a5e:8000:3::
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
 Japan \(Tokyo\) - AWS
 
 \(cf.jp10.hana.ondemand.com\)
@@ -844,6 +1151,44 @@ Japan \(Tokyo\) - Azure
 <td valign="top">
 
  
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+Japan \(Osaka\) - Google Cloud
+
+\(cf.jp30.hana.ondemand.com\)
+
+</td>
+<td valign="top">
+
+34.97.81.151
+
+</td>
+<td valign="top">
+
+2600:1900:41d0:611:8000:3::
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+Japan \(Tokyo\) - Google Cloud
+
+\(cf.jp31.hana.ondemand.com\)
+
+</td>
+<td valign="top">
+
+34.85.115.68
+
+</td>
+<td valign="top">
+
+2600:1900:4051:2b7:8000:3::
 
 </td>
 </tr>
@@ -957,6 +1302,25 @@ Singapore - Azure
 <tr>
 <td valign="top">
 
+Australia \(Sydney\) - Google Cloud
+
+\(cf.ap30.hana.ondemand.com\)
+
+</td>
+<td valign="top">
+
+34.40.172.51
+
+</td>
+<td valign="top">
+
+2600:1900:40b0:eb:8000:3::
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
 Canada \(Montreal\) - AWS
 
 \(cf.ca10.hana.ondemand.com\)
@@ -1036,6 +1400,82 @@ UAE \(Dubai\) - SAP
 <td valign="top">
 
  
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+KSA \(Dammam\) - Google Cloud public sector
+
+\(cf.sa30.hana.ondemand.com\)
+
+</td>
+<td valign="top">
+
+34.166.138.63
+
+</td>
+<td valign="top">
+
+2600:1900:5400:775:8000:3::
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+KSA \(Dammam\) - Google Cloud
+
+\(cf.sa31.hana.ondemand.com\)
+
+</td>
+<td valign="top">
+
+34.166.145.125
+
+</td>
+<td valign="top">
+
+2600:1900:5400:4b8:8000:4::
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+Israel \(Tel Aviv\) - Google Cloud
+
+\(cf.il30.hana.ondemand.com\)
+
+</td>
+<td valign="top">
+
+34.165.163.225
+
+</td>
+<td valign="top">
+
+2600:1901:8160:ac3:8000:3::
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+India \(Mumbai\) - Google Cloud
+
+\(cf.in30.hana.ondemand.com\)
+
+</td>
+<td valign="top">
+
+34.93.203.8
+
+</td>
+<td valign="top">
+
+2600:1900:40a0:305:8000:3::
 
 </td>
 </tr>

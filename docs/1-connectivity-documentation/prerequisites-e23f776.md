@@ -856,7 +856,7 @@ IP Addresses \(IPv6\)
 **Cloud Foundry Environment**
 
 > ### Caution:  
-> The Connectivity service is planning to enable IPv4 and IPv6 dual stack ingress for **AWS-based regions**. Currently, only IPv4 is supported, therefore we had only listed the respective addresses here. We have now added also the **IPv6 addresses** that we plan to use. The enablement of the IPv6 addresses will happen no earlier than **February 2026**. Until then, **please ensure any needed action is performed**, based on the information below.
+> The Connectivity service is planning to enable IPv4 and IPv6 dual stack ingress for **AWS and Google Cloud-based regions**. Currently, only IPv4 is supported, therefore we had only listed the respective addresses here. We have now added also the **IPv6 addresses** that we plan to use. The enablement of the IPv6 addresses will happen no earlier than **February 2026** \(AWS\) and **April 2026** \(Google Cloud\). Until then, **please ensure any needed action is performed**, based on the information below.
 > 
 > The Connectivity service ingress endpoints are the ones that are called by the Cloud Connector. If the network in which your Cloud Connector is running *does not* support IPv6, *no action is needed*, as the IPv4 addresses remain unaffected. If the network in which your Cloud Connector is running *does* support IPv6, then the Java virtual machine \(JVM\) will usually prefer using IPv4 instead of IPv6 \(usually controlled via the system property `java.net.preferIPv6Addresses`\). If this is the case for your JVM, again, *no action is needed*. If your *JVM is configured to prefer IPv6*, you need to *verify if you have firewall rules in place* that limit outgoing traffic from the network. If this is true, you would have previously allowed the Connectivity service’s IPv4 addresses in order to enable the Cloud Connector's communication with BTP. Now, you need to *add also the IPv6 addresses* to the allowlist.
 > 
@@ -1343,10 +1343,14 @@ connectivitynotification.cf.eu30.hana.ondemand.com
 
 `35.198.143.110` 
 
+**Additional IP address \(as of April 2026\):**
+
+**35.242.194.251**
+
 </td>
 <td valign="top">
 
- 
+2600:1900:40d0:8a0:8000:2::
 
 </td>
 </tr>
@@ -1360,10 +1364,14 @@ connectivitycertsigning.cf.eu30.hana.ondemand.com
 
 `35.198.143.110` 
 
+**Additional IP address \(as of April 2026\):**
+
+**35.242.194.251**
+
 </td>
 <td valign="top">
 
- 
+2600:1900:40d0:8a0:8000:2::
 
 </td>
 </tr>
@@ -1377,10 +1385,14 @@ connectivitytunnel.cf.eu30.hana.ondemand.com
 
 `35.198.143.110` 
 
+**Additional IP address \(as of April 2026\):**
+
+**34.107.120.89**
+
 </td>
 <td valign="top">
 
- 
+2600:1900:40d0:1897:8000:1::
 
 </td>
 </tr>
@@ -1713,10 +1725,14 @@ connectivitynotification.cf.us30.hana.ondemand.com
 
 `35.184.169.79` 
 
+**Additional IP address \(as of April 2026\):**
+
+**34.57.177.99**
+
 </td>
 <td valign="top">
 
- 
+2600:1900:4000:18b3:8000:2::
 
 </td>
 </tr>
@@ -1730,10 +1746,14 @@ connectivitycertsigning.cf.us30.hana.ondemand.com
 
 `35.184.169.79` 
 
+**Additional IP address \(as of April 2026\):**
+
+**34.57.177.99**
+
 </td>
 <td valign="top">
 
- 
+2600:1900:4000:18b3:8000:2::
 
 </td>
 </tr>
@@ -1747,10 +1767,14 @@ connectivitytunnel.cf.us30.hana.ondemand.com
 
 `35.184.169.79` 
 
+**Additional IP address \(as of April 2026\):**
+
+**35.239.235.94**
+
 </td>
 <td valign="top">
 
- 
+2600:1900:4001:b6d:8000:1::
 
 </td>
 </tr>
@@ -1909,12 +1933,16 @@ connectivitynotification.cf.br30.hana.ondemand.com
 </td>
 <td valign="top">
 
-`34.95.189.118` 
+`34.95.189.118`
+
+**Additional IP address \(as of April 2026\):**
+
+**34.151.240.141**
 
 </td>
 <td valign="top">
 
- 
+2600:1900:40f0:a5e:8000:2::
 
 </td>
 </tr>
@@ -1928,10 +1956,14 @@ connectivitycertsigning.cf.br30.hana.ondemand.com
 
 `34.95.189.118`
 
+**Additional IP address \(as of April 2026\):**
+
+**34.151.240.141**
+
 </td>
 <td valign="top">
 
- 
+2600:1900:40f0:a5e:8000:2::
 
 </td>
 </tr>
@@ -1945,10 +1977,14 @@ connectivitytunnel.cf.br30.hana.ondemand.com
 
 `34.95.189.118`
 
+**Additional IP address \(as of April 2026\):**
+
+**34.39.192.15**
+
 </td>
 <td valign="top">
 
- 
+2600:1900:40f0:648:8000:1::
 
 </td>
 </tr>
@@ -2107,12 +2143,16 @@ connectivitynotification.cf.jp30.hana.ondemand.com
 </td>
 <td valign="top">
 
-`34.97.168.169` 
+`34.97.168.169`
+
+**Additional IP address \(as of April 2026\):**
+
+**34.97.125.57**
 
 </td>
 <td valign="top">
 
- 
+2600:1900:41d0:611:8000:2::
 
 </td>
 </tr>
@@ -2126,10 +2166,14 @@ connectivitycertsigning.cf.jp30.hana.ondemand.com
 
 `34.97.168.169`
 
+**Additional IP address \(as of April 2026\):**
+
+**34.97.125.57**
+
 </td>
 <td valign="top">
 
- 
+2600:1900:41d0:611:8000:2::
 
 </td>
 </tr>
@@ -2143,10 +2187,14 @@ connectivitytunnel.cf.jp30.hana.ondemand.com
 
 `34.97.168.169`
 
+**Additional IP address \(as of April 2026\):**
+
+**34.97.69.170**
+
 </td>
 <td valign="top">
 
- 
+2600:1900:41d0:713:8000:1::
 
 </td>
 </tr>
@@ -2165,12 +2213,16 @@ connectivitynotification.cf.jp31.hana.ondemand.com
 </td>
 <td valign="top">
 
-`34.84.96.118` 
+`34.84.96.118`
+
+**Additional IP address \(as of April 2026\):**
+
+**34.85.108.120**
 
 </td>
 <td valign="top">
 
- 
+2600:1900:4051:2b7:8000:2::
 
 </td>
 </tr>
@@ -2184,10 +2236,14 @@ connectivitycertsigning.cf.jp31.hana.ondemand.com
 
 `34.84.96.118`
 
+**Additional IP address \(as of April 2026\):**
+
+**34.85.108.120**
+
 </td>
 <td valign="top">
 
- 
+2600:1900:4051:2b7:8000:2::
 
 </td>
 </tr>
@@ -2201,10 +2257,14 @@ connectivitytunnel.cf.jp31.hana.ondemand.com
 
 `34.84.96.118`
 
+**Additional IP address \(as of April 2026\):**
+
+**34.104.137.202**
+
 </td>
 <td valign="top">
 
- 
+2600:1900:4050:248:8000:1::
 
 </td>
 </tr>
@@ -2577,10 +2637,14 @@ connectivitynotification.cf.ap30.hana.ondemand.com
 
 `35.244.71.16`
 
+**Additional IP address \(as of April 2026\):**
+
+**34.151.136.86**
+
 </td>
 <td valign="top">
 
- 
+2600:1900:40b0:eb:8000:2::
 
 </td>
 </tr>
@@ -2594,10 +2658,14 @@ connectivitycertsigning.cf.ap30.hana.ondemand.com
 
 `35.244.71.16`
 
+**Additional IP address \(as of April 2026\):**
+
+**34.151.136.86**
+
 </td>
 <td valign="top">
 
- 
+2600:1900:40b0:eb:8000:2::
 
 </td>
 </tr>
@@ -2611,10 +2679,14 @@ connectivitytunnel.cf.ap30.hana.ondemand.com
 
 `35.244.71.16`
 
+**Additional IP address \(as of April 2026\):**
+
+**35.201.15.255**
+
 </td>
 <td valign="top">
 
- 
+2600:1900:40b0:f2b2:8000:1::
 
 </td>
 </tr>
@@ -2833,10 +2905,14 @@ connectivitynotification.cf.in30.hana.ondemand.com
 
 `34.93.125.74`
 
+**Additional IP address \(as of April 2026\):**
+
+**34.100.167.221**
+
 </td>
 <td valign="top">
 
- 
+2600:1900:40a0:305:8000:2::
 
 </td>
 </tr>
@@ -2850,10 +2926,14 @@ connectivitycertsigning.cf.in30.hana.ondemand.com
 
 `34.93.125.74`
 
+**Additional IP address \(as of April 2026\):**
+
+**34.100.167.221**
+
 </td>
 <td valign="top">
 
- 
+2600:1900:40a0:305:8000:2::
 
 </td>
 </tr>
@@ -2867,10 +2947,14 @@ connectivitytunnel.cf.in30.hana.ondemand.com
 
 `34.93.125.74`
 
+**Additional IP address \(as of April 2026\):**
+
+**34.14.155.31**
+
 </td>
 <td valign="top">
 
- 
+2600:1900:40a0:151:8000:1::
 
 </td>
 </tr>
@@ -2891,10 +2975,14 @@ connectivitynotification.cf.il30.hana.ondemand.com
 
 `34.165.59.26`
 
+**Additional IP address \(as of April 2026\):**
+
+**34.165.53.182**
+
 </td>
 <td valign="top">
 
- 
+2600:1901:8160:ac3:8000:2::
 
 </td>
 </tr>
@@ -2908,10 +2996,14 @@ connectivitycertsigning.cf.il30.hana.ondemand.com
 
 `34.165.59.26`
 
+**Additional IP address \(as of April 2026\):**
+
+**34.165.53.182**
+
 </td>
 <td valign="top">
 
- 
+2600:1901:8160:ac3:8000:2::
 
 </td>
 </tr>
@@ -2925,10 +3017,14 @@ connectivitytunnel.cf.il30.hana.ondemand.com
 
 `34.165.59.26`
 
+**Additional IP address \(as of April 2026\):**
+
+**34.165.135.0**
+
 </td>
 <td valign="top">
 
- 
+2600:1901:8160:24b:8000:1::
 
 </td>
 </tr>
@@ -3063,12 +3159,16 @@ connectivitynotification.cf.sa30.hana.ondemand.com
 </td>
 <td valign="top">
 
-`34.166.32.46` 
+`34.166.32.46`
+
+**Additional IP address \(as of April 2026\):**
+
+**34.166.253.135**
 
 </td>
 <td valign="top">
 
- 
+2600:1900:5400:775:8000:2::
 
 </td>
 </tr>
@@ -3082,10 +3182,14 @@ connectivitycertsigning.cf.sa30.hana.ondemand.com
 
 `34.166.32.46`
 
+**Additional IP address \(as of April 2026\):**
+
+**34.166.253.135**
+
 </td>
 <td valign="top">
 
- 
+2600:1900:5400:775:8000:2::
 
 </td>
 </tr>
@@ -3099,10 +3203,14 @@ connectivitytunnel.cf.sa30.hana.ondemand.com
 
 `34.166.32.46`
 
+**Additional IP address \(as of April 2026\):**
+
+**34.166.158.8**
+
 </td>
 <td valign="top">
 
- 
+2600:1900:5400:640:8000:2::
 
 </td>
 </tr>
@@ -3121,12 +3229,16 @@ connectivitynotification.cf.sa31.hana.ondemand.com
 </td>
 <td valign="top">
 
-`34.166.72.122` 
+`34.166.72.122`
+
+**Additional IP address \(as of April 2026\):**
+
+**34.166.211.2**
 
 </td>
 <td valign="top">
 
- 
+2600:1900:5400:4b8:8000:2::
 
 </td>
 </tr>
@@ -3140,10 +3252,14 @@ connectivitycertsigning.cf.sa31.hana.ondemand.com
 
 `34.166.72.122`
 
+**Additional IP address \(as of April 2026\):**
+
+**34.166.211.2**
+
 </td>
 <td valign="top">
 
- 
+2600:1900:5400:4b8:8000:2::
 
 </td>
 </tr>
@@ -3157,10 +3273,14 @@ connectivitytunnel.cf.sa31.hana.ondemand.com
 
 `34.166.72.122`
 
+**Additional IP address \(as of April 2026\):**
+
+**34.166.122.254**
+
 </td>
 <td valign="top">
 
- 
+2600:1900:5400:1a4:8000:1::
 
 </td>
 </tr>
