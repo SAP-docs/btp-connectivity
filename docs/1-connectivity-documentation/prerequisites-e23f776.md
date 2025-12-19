@@ -1236,7 +1236,7 @@ connectivitytunnel.cf.eu13.hana.ondemand.com
 </td>
 </tr>
 <tr>
-<td valign="top" rowspan="4">
+<td valign="top" rowspan="5">
 
 Europe \(Netherlands\) - Azure
 
@@ -1318,6 +1318,23 @@ connectivitytunnel.cf.eu20-001.hana.ondemand.com
 **Additional IP address \(as of January 19, 2025\):**
 
 **20.67.69.84**
+
+</td>
+<td valign="top">
+
+ 
+
+</td>
+</tr>
+<tr>
+<td valign="top" colspan="2">
+
+connectivitytunnel.cf.eu20-002.hana.ondemand.com
+
+</td>
+<td valign="top">
+
+`98.64.76.0` 
 
 </td>
 <td valign="top">
