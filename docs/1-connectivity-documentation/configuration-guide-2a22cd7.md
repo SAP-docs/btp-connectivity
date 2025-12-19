@@ -129,6 +129,33 @@ False
 <tr>
 <td valign="top">
 
+`compliance.fipsModeEnabled`
+
+</td>
+<td valign="top">
+
+Enables or disables FIPS \(*Federal Information Processing Standard*\) mode for the Transparent Proxy components. When enabled, all cryptographic operations performed by the Transparent Proxy components will use FIPS-validated algorithms and libraries.
+
+</td>
+<td valign="top">
+
+false
+
+</td>
+<td valign="top">
+
+ 
+
+</td>
+<td valign="top">
+
+False
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
 `config.http.retry.maxRetries`
 
 </td>
