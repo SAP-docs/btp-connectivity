@@ -935,6 +935,69 @@ connectivitytunnel.eu01-l-d.uc-live-eu.shoot.live.k8s-hana.ondemand.com
 </td>
 </tr>
 <tr>
+<td valign="top" rowspan="3">
+
+Europe \(Rot\) - SAP \(EU Access Only\)
+
+\(`cf.eu02.hana.ondemand.com`\)
+
+> ### Note:  
+> Available as of November 28, 2025
+
+
+
+</td>
+<td valign="top" colspan="2">
+
+connectivitynotification.mtls.eu02-l-c.uc-live-eu.shoot.live.k8s-hana.ondemand.com
+
+</td>
+<td valign="top">
+
+`130.214.170.48` 
+
+</td>
+<td valign="top">
+
+ 
+
+</td>
+</tr>
+<tr>
+<td valign="top" colspan="2">
+
+connectivitycertsigning.mtls.eu02-l-c.uc-live-eu.shoot.live.k8s-hana.ondemand.com
+
+</td>
+<td valign="top">
+
+`130.214.170.48` 
+
+</td>
+<td valign="top">
+
+ 
+
+</td>
+</tr>
+<tr>
+<td valign="top" colspan="2">
+
+connectivitytunnel.eu02-l-d.uc-live-eu.shoot.live.k8s-hana.ondemand.com
+
+</td>
+<td valign="top">
+
+`130.214.170.47` 
+
+</td>
+<td valign="top">
+
+ 
+
+</td>
+</tr>
+<tr>
 <td valign="top" rowspan="7">
 
 Europe \(Frankfurt\) - AWS
@@ -1410,6 +1473,69 @@ connectivitytunnel.cf.eu30.hana.ondemand.com
 <td valign="top">
 
 2600:1900:40d0:1897:8000:1::
+
+</td>
+</tr>
+<tr>
+<td valign="top" rowspan="3">
+
+US West \(Colorado\) - SAP
+
+\(`cf.us02.hana.ondemand.com`\)
+
+> ### Note:  
+> Available as of December 30, 2025
+
+
+
+</td>
+<td valign="top" colspan="2">
+
+connectivitynotification.mtls.us02-l-c.uc-live.shoot.live.k8s-hana.ondemand.com
+
+</td>
+<td valign="top">
+
+`130.214.68.4` 
+
+</td>
+<td valign="top">
+
+ 
+
+</td>
+</tr>
+<tr>
+<td valign="top" colspan="2">
+
+connectivitycertsigning.mtls.us02-l-c.uc-live.shoot.live.k8s-hana.ondemand.com
+
+</td>
+<td valign="top">
+
+`130.214.68.4` 
+
+</td>
+<td valign="top">
+
+ 
+
+</td>
+</tr>
+<tr>
+<td valign="top" colspan="2">
+
+connectivitytunnel.us02-l-d.uc-live.shoot.live.k8s-hana.ondemand.com
+
+</td>
+<td valign="top">
+
+`130.214.68.30` 
+
+</td>
+<td valign="top">
+
+ 
 
 </td>
 </tr>
@@ -2288,6 +2414,69 @@ connectivitytunnel.cf.jp31.hana.ondemand.com
 <tr>
 <td valign="top" rowspan="3">
 
+Australia \(Sydney\) - SAP
+
+\(`cf.ap01.hana.ondemand.com`\)
+
+> ### Note:  
+> Available as of December 30, 2025
+
+
+
+</td>
+<td valign="top" colspan="2">
+
+connectivitynotification.mtls.ap01-l-c.uc-live.shoot.live.k8s-hana.ondemand.com
+
+</td>
+<td valign="top">
+
+`130.214.141.27` 
+
+</td>
+<td valign="top">
+
+ 
+
+</td>
+</tr>
+<tr>
+<td valign="top" colspan="2">
+
+connectivitycertsigning.mtls.ap01-l-c.uc-live.shoot.live.k8s-hana.ondemand.com
+
+</td>
+<td valign="top">
+
+`130.214.141.27` 
+
+</td>
+<td valign="top">
+
+ 
+
+</td>
+</tr>
+<tr>
+<td valign="top" colspan="2">
+
+connectivitytunnel.ap01-l-c.uc-live.shoot.live.k8s-hana.ondemand.com
+
+</td>
+<td valign="top">
+
+`130.214.141.21` 
+
+</td>
+<td valign="top">
+
+ 
+
+</td>
+</tr>
+<tr>
+<td valign="top" rowspan="3">
+
 Australia \(Sydney\) - AWS
 
 \(`cf.ap10.hana.ondemand.com`\)
@@ -3048,64 +3237,6 @@ connectivitytunnel.cf.il30.hana.ondemand.com
 <tr>
 <td valign="top" rowspan="3">
 
-China \(Shanghai\) - Alibaba Cloud
-
-\(`cf.cn40.platform.sapcloud.cn`\)
-
-</td>
-<td valign="top" colspan="2">
-
-connectivitynotification.cf.cn40.platform.sapcloud.cn
-
-</td>
-<td valign="top">
-
-`139.224.7.71`
-
-</td>
-<td valign="top">
-
- 
-
-</td>
-</tr>
-<tr>
-<td valign="top" colspan="2">
-
-connectivitycertsigning.cf.cn40.platform.sapcloud.cn
-
-</td>
-<td valign="top">
-
-`139.224.7.71`
-
-</td>
-<td valign="top">
-
- 
-
-</td>
-</tr>
-<tr>
-<td valign="top" colspan="2">
-
-connectivitytunnel.cf.cn40.platform.sapcloud.cn
-
-</td>
-<td valign="top">
-
-`139.224.7.71`
-
-</td>
-<td valign="top">
-
- 
-
-</td>
-</tr>
-<tr>
-<td valign="top" rowspan="3">
-
 China North - Azure
 
 \(`cf.cn20.hana.ondemand.com`\)
@@ -3153,6 +3284,64 @@ connectivitytunnel.cf.cn20.hana.ondemand.com
 <td valign="top">
 
 `155.56.210.43`
+
+</td>
+<td valign="top">
+
+ 
+
+</td>
+</tr>
+<tr>
+<td valign="top" rowspan="3">
+
+China \(Shanghai\) - Alibaba Cloud
+
+\(`cf.cn40.platform.sapcloud.cn`\)
+
+</td>
+<td valign="top" colspan="2">
+
+connectivitynotification.cf.cn40.platform.sapcloud.cn
+
+</td>
+<td valign="top">
+
+`139.224.7.71`
+
+</td>
+<td valign="top">
+
+ 
+
+</td>
+</tr>
+<tr>
+<td valign="top" colspan="2">
+
+connectivitycertsigning.cf.cn40.platform.sapcloud.cn
+
+</td>
+<td valign="top">
+
+`139.224.7.71`
+
+</td>
+<td valign="top">
+
+ 
+
+</td>
+</tr>
+<tr>
+<td valign="top" colspan="2">
+
+connectivitytunnel.cf.cn40.platform.sapcloud.cn
+
+</td>
+<td valign="top">
+
+`139.224.7.71`
 
 </td>
 <td valign="top">

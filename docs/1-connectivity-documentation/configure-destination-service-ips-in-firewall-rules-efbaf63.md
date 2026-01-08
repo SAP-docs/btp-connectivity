@@ -63,15 +63,29 @@ Europe \(Frankfurt\) - SAP
 
 \(cf.eu01.hana.ondemand.com\)
 
-> ### Note:  
-> Available as of September 19, 2025
-
-
-
 </td>
 <td valign="top">
 
 130.214.173.207
+
+</td>
+<td valign="top">
+
+ 
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+Europe \(Rot\) - SAP
+
+\(cf.eu02.hana.ondemand.com\)
+
+</td>
+<td valign="top">
+
+130.214.170.39
 
 </td>
 <td valign="top">
@@ -133,11 +147,6 @@ Europe \(Milan\) - AWS
 
 \(cf.eu13.hana.ondemand.com\)
 
-> ### Note:  
-> Available as of October 30, 2025
-
-
-
 </td>
 <td valign="top">
 
@@ -195,6 +204,30 @@ Europe \(Frankfurt\) - Google Cloud
 <td valign="top">
 
 2600:1900:40d0:8a0:0:0:0:0/64
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+US West \(Colorado\) - SAP
+
+\(cf.us02.hana.ondemand.com\)
+
+> ### Note:  
+> Available as of December 30, 2025
+
+
+
+</td>
+<td valign="top">
+
+130.214.68.26
+
+</td>
+<td valign="top">
+
+ 
 
 </td>
 </tr>
@@ -444,6 +477,30 @@ Japan \(Tokyo\) - Google Cloud
 <tr>
 <td valign="top">
 
+Australia \(Sydney\) - SAP
+
+\(cf.ap01.hana.ondemand.com\)
+
+> ### Note:  
+> Available as of December 30, 2025
+
+
+
+</td>
+<td valign="top">
+
+130.214.141.233
+
+</td>
+<td valign="top">
+
+ 
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
 Australia \(Sydney\) - AWS
 
 \(cf.ap10.hana.ondemand.com\)
@@ -666,11 +723,6 @@ UAE \(Dubai\) - SAP
 
 \(cf.ae01.hana.ondemand.com\)
 
-> ### Note:  
-> Available as of October 31, 2025
-
-
-
 </td>
 <td valign="top">
 
@@ -819,15 +871,29 @@ Europe \(Frankfurt\) - SAP
 
 \(cf.eu01.hana.ondemand.com\)
 
-> ### Note:  
-> Available as of September 19, 2025
-
-
-
 </td>
 <td valign="top">
 
 130.214.124.217
+
+</td>
+<td valign="top">
+
+ 
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+Europe \(Rot\) - SAP
+
+\(cf.eu02.hana.ondemand.com\)
+
+</td>
+<td valign="top">
+
+130.214.170.43
 
 </td>
 <td valign="top">
@@ -889,11 +955,6 @@ Europe \(Milan\) - AWS
 
 \(cf.eu13.hana.ondemand.com\)
 
-> ### Note:  
-> Available as of October 30, 2025
-
-
-
 </td>
 <td valign="top">
 
@@ -945,6 +1006,30 @@ Europe \(Frankfurt\) - Google Cloud
 <td valign="top">
 
 2600:1900:40d0:8a0:8000:3::
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+US West \(Colorado\) - SAP
+
+\(cf.us02.hana.ondemand.com\)
+
+> ### Note:  
+> Available as of December 30, 2025
+
+
+
+</td>
+<td valign="top">
+
+130.214.68.13
+
+</td>
+<td valign="top">
+
+ 
 
 </td>
 </tr>
@@ -1195,6 +1280,30 @@ Japan \(Tokyo\) - Google Cloud
 <tr>
 <td valign="top">
 
+Australia \(Sydney\) - SAP
+
+\(cf.ap01.hana.ondemand.com\)
+
+> ### Note:  
+> Available as of December 30, 2025
+
+
+
+</td>
+<td valign="top">
+
+130.214.141.24
+
+</td>
+<td valign="top">
+
+ 
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
 Australia \(Sydney\) - AWS
 
 \(cf.ap10.hana.ondemand.com\)
@@ -1385,11 +1494,6 @@ Switzerland \(Zurich\) - Azure
 UAE \(Dubai\) - SAP
 
 \(cf.ae01.hana.ondemand.com\)
-
-> ### Note:  
-> Available as of October 31, 2025
-
-
 
 </td>
 <td valign="top">

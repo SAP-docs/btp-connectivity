@@ -75,7 +75,7 @@ Specifies the value of the subject token \(an access token usually associated wi
 </td>
 <td valign="top">
 
-Specifes the type of the subject token, which will be used by Destination service to perform the token exchange for a IAS-signed SAML assertion. The only accepted value is **"urn:ietf:params:oauth:token-type:access\_token"**.
+Specifes the type of the subject token, which will be used by Destination service to perform the token exchange for a IAS-signed SAML assertion.
 
 </td>
 </tr>

@@ -68,7 +68,7 @@ You can choose between a simple `portable` variant of the Cloud Connector and th
 9.  Continue with the **Next Steps** section.
 
 > ### Note:  
-> The Cloud Connector is started as a Windows service in the productive use case. Therefore, installation requires administration permissions. After installation, manage this service under *Control Panel* \> *Administrative Tools* \> *Services*. The service name is `Cloud Connector` \(formerly named `Cloud Connector 2.0`\). Make sure the service is executed with a user that has limited privileges. Typically, privileges allowed for service users are defined by your company policy. Adjust the folder and file permissions to be manageable by only this user and system administrators.
+> The Cloud Connector is started as a Windows service in the productive use case. Therefore, installation requires administration permissions. After installation, manage this service under *Control Panel* \> *Administrative Tools* \> *Services*. The service name is `SAP Cloud Connector` \(formerly named `Cloud Connector 2.0`\). Make sure the service is executed with a user that has limited privileges. Typically, privileges allowed for service users are defined by your company policy. Adjust the folder and file permissions to be manageable by only this user and system administrators.
 
 > ### Note:  
 > Using the SAP Cryptographic Library requires the environment variable SECUDIR to be set.

@@ -20,6 +20,10 @@ You can enable support for principal propagation or technical user propagation w
 
 -   Using a *Secure Login Server* \(SLS\) and delegate the CA functionality to it.
 
+    > ### Note:  
+    > You cannot use the *Secure Login Service* \(cloud service\) for this purpose.
+
+
 The Cloud Connector uses the configured CA approach to issue short-lived certificates for logging on the same identity in the back end that is logged on in the cloud. For establishing trust with the back end, the respective configuration steps are independent of the approach that you choose for the CA.
 
 

@@ -43,6 +43,11 @@ The following data are used in this example:
 
     To enable mTLS, you must configure a system certificate as described in this topic. Follow step 1 below to make sure the ABAP system trusts this certificate. You can use the connection check and the *Details* button to check if mTLS is working.
 
+    > ### Note:  
+    > The system certificate is only used to enable mTLS \(that is, to establilsh trust between the ABAP system and the Cloud Connector\). For the actual user propagation process \(issuing short-lived certificates for the logged-on user identity in the Cloud Connector\), you must also configure a CA certificate.
+    > 
+    > For more information, see [Configure a CA Certificate](configure-a-ca-certificate-d0c4d56.md).
+
 -   The access control entry \(see [Configure Access Control \(HTTP\)](configure-access-control-http-e7d4927.md)\) must have specified the respective identity type to forward the identity correctly.
 
 

@@ -182,9 +182,6 @@ Where:
 -   `X-chain-var-subjectToken`: Represents the value of the subject token \(an access token usually associated with the user principal\), which will be provided to the IAS token server endpoint and exchanged for an IAS-signed SAML2.0 assertion.
 -   `X-chain-var-subjectTokenType`: Represents the type of the subject token, which will be provided to the IAS token server endpoint and exchanged for an IAS-signed SAML2.0 assertion.
 
-    The type will always equal "*urn:ietf:params:oauth:token-type:access\_token*".
-
-
 Example response:
 
 > ### Sample Code:  

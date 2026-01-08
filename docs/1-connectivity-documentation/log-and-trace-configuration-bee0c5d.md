@@ -66,7 +66,7 @@ Response
 <td valign="top">
 
 ```
-{sccLogLevel, otherLogLevel, tlsTrace, cpicTraceLevel, cleanup, rolloverThreshold, logAndTracePath}
+{sccLogLevel, otherLogLevel, tlsTrace, isTlsTraceActive, cpicTraceLevel, cleanup, rolloverThreshold, logAndTracePath}
 
 ```
 
@@ -106,9 +106,12 @@ Administrator, Subaccount Administrator, Display, Support
 
 -   `otherLogLevel`: log level for all other than Cloud Connector log locations, one of OFF, ERROR, WARN, INFO, DEBUG, TRACE, ALL.
 
--   `isSslTraceActive`: SSL Trace currently active in runtime. If differs to sslTrace, a restart is required.
+-   `tlsTrace`: Indicates if TLS trace is stored in configuration \(true or false\). If different from `isTlsTraceActive`, then a restart is required to activate the setting.
 
--   `sslTrace`: SSL Trace stored in configuration. \(true or false\). A restart is required to activate the setting.
+    > ### Note:  
+    > The `tlsTrace` setting is stored in the configuration file `props.ini`. When restoring a Cloud Connector installation from a backup, and the `tlsTrace` \(or any other\) setting in the backup `props.ini` file differs from the setting in the `props.ini` file of the original installation, the backup `props.ini` file will be added to the installation directory as `props.ini.restored` \(for security reasons\). Therefore, unless manually changed, the original `tlsTrace` setting will be kept after restoring from a backup.
+
+-   `isTlsTraceActive`: TLS trace currently active in runtime. If it differs from `tlsTrace`, then a restart is required.
 
 -   `cpicTraceLevel`: trace level of CPIC layer \(0 - off, 1 - general information, 2 - detailed trace, 3 - verbose level\)
 
@@ -120,7 +123,7 @@ Administrator, Subaccount Administrator, Display, Support
 
 
 > ### Note:  
-> `otherLogLevel` should only be changed if requested by SAP support.
+> `otherLogLevel` should only be changed if requested by SAP support. The default value is `INFO`.
 
 
 
@@ -213,7 +216,11 @@ Administrator, Subaccount Administrator, Support
 
 -   `sccLogLevel`: log level for Cloud Connector log locations, one of OFF, ERROR, WARN, INFO, DEBUG, TRACE, ALL.
 -   `otherLogLevel`: log level for all other than Cloud Connector log locations, one of OFF, ERROR, WARN, INFO, DEBUG, TRACE, ALL.
--   `sslTrace`: SSL Trace stored in configuration. \(true or false\). A restart may require to activate the setting.
+-   `tlsTrace`: Indicates if TLS trace is stored in configuration \(true or false\). When changing its value, a restart is required to activate the setting.
+
+    > ### Note:  
+    > The `tlsTrace` setting is stored in the configuration file `props.ini`. When restoring a Cloud Connector installation from a backup, and the `tlsTrace` \(or any other\) setting in the backup `props.ini` file differs from the setting in the `props.ini` file of the original installation, the backup `props.ini` file will be added to the installation directory as `props.ini.restored` \(for security reasons\). Therefore, unless manually changed, the original `tlsTrace` setting will be kept after restoring from a backup.
+
 -   `cpicTraceLevel`: trace level of CPIC layer \(0 - off, 1 - general information, 2 - detailed trace, 3 - verbose level\)
 -   `cleanup`: number of days to keep the log files \(0 means do not clean up the old log files\)
 -   `rolloverThreshold`: size in megabytes for the scc\_core.trc files. The unit MB must be included, i.e. a valid value is '75 MB' \(with or without space\), for instance. 20 files will be kept before the oldest gets overwritten.
