@@ -156,6 +156,37 @@ False
 <tr>
 <td valign="top">
 
+`config.helm.skipExistingResourceValidation`
+
+</td>
+<td valign="top">
+
+Skips validation of existing Kubernetes resources during Helm installation/upgrade. When set to `true`, the chart will not verify the existence of referenced resources \(for example, Connectivity Proxy ConfigMaps, cert-manager Issuers, additional CA Secrets\).
+
+This is useful for testing helm template generation, CI/CD pipelines, or deploying in environments where referenced resources may not exist yet.
+
+This property is configurable only for Helm installations.
+
+</td>
+<td valign="top">
+
+false
+
+</td>
+<td valign="top">
+
+ 
+
+</td>
+<td valign="top">
+
+False
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
 `config.http.retry.maxRetries`
 
 </td>
