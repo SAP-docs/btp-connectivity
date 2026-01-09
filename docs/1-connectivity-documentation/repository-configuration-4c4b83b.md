@@ -8,7 +8,14 @@ Repository properties let you define the behavior of the repository that dynamic
 
 All properties below are optional. Alternatively, you can create the metadata in the application code, using the metadata factory methods within the `JCo` class, to avoid additional round-trips to the on-premise system.
 
-In the *Destinations* editor in the cockpit, the must be provided in the *Repository Configuration* panel.
+For convenience, those metadata objects can be stored in a `CustomRepository` when using them in the application.
+
+In the *Destinations* editor in the cockpit, the configuration must be provided in the *Repository Configuration* panel.
+
+> ### Note:  
+> **Repository Management: Background**
+> 
+> The built-in comfortable repository management currently uses the system ID as the identifier of a system, so destinations pointing to the same system can share the data to avoid unnecessary round-trips and memory consumption. However, this approach includes a drawback \(described also in SAP Note [1405466](https://me.sap.com/notes/1405466)\): if you merge multiple networks over multiple Cloud Connectors in a single scenario, the probability of duplicate system IDs increases. As a consequence, collisions of different metadata definitions in those systems may cause issues. If duplicates are likely to be expected, using a `CustomRepository` and an application-managed set of repositories is a recommended workaround for this limitation.
 
 
 <table>
