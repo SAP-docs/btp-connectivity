@@ -2134,6 +2134,69 @@ connectivitytunnel.cf.br30.hana.ondemand.com
 <tr>
 <td valign="top" rowspan="3">
 
+Japan \(Tokyo\) - SAP
+
+\(`cf.jp01.hana.ondemand.com`\)
+
+> ### Note:  
+> Available as of January 15, 2026
+
+
+
+</td>
+<td valign="top" colspan="2">
+
+connectivitynotification.mtls.jp01-l-c.uc-live.shoot.live.k8s-hana.ondemand.com
+
+</td>
+<td valign="top">
+
+`130.214.52.41` 
+
+</td>
+<td valign="top">
+
+ 
+
+</td>
+</tr>
+<tr>
+<td valign="top" colspan="2">
+
+connectivitycertsigning.mtls.jp01-l-c.uc-live.shoot.live.k8s-hana.ondemand.com
+
+</td>
+<td valign="top">
+
+`130.214.52.41` 
+
+</td>
+<td valign="top">
+
+ 
+
+</td>
+</tr>
+<tr>
+<td valign="top" colspan="2">
+
+connectivitytunnel.jp01-l-d.uc-live.shoot.live.k8s-hana.ondemand.com
+
+</td>
+<td valign="top">
+
+`130.214.52.46` 
+
+</td>
+<td valign="top">
+
+ 
+
+</td>
+</tr>
+<tr>
+<td valign="top" rowspan="3">
+
 Japan \(Tokyo\) - AWS
 
 \(`cf.jp10.hana.ondemand.com`\)

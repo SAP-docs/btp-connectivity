@@ -385,6 +385,30 @@ Brazil \(São Paulo\) - Azure
 <tr>
 <td valign="top">
 
+Japan \(Tokyo\) - SAP
+
+\(cf.jp01.hana.ondemand.com\)
+
+> ### Note:  
+> Available as of January 15, 2026
+
+
+
+</td>
+<td valign="top">
+
+130.214.52.51
+
+</td>
+<td valign="top">
+
+ 
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
 Japan \(Tokyo\) - AWS
 
 \(cf.jp10.hana.ondemand.com\)
@@ -1194,6 +1218,30 @@ Brazil \(São Paulo\) - Google Cloud
 <td valign="top">
 
 2600:1900:40f0:a5e:8000:3::
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+Japan \(Tokyo\) - SAP
+
+\(cf.jp01.hana.ondemand.com\)
+
+> ### Note:  
+> Available as of January 15, 2026
+
+
+
+</td>
+<td valign="top">
+
+130.214.52.58
+
+</td>
+<td valign="top">
+
+ 
 
 </td>
 </tr>
