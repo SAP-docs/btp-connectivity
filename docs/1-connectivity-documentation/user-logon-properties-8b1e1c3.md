@@ -276,7 +276,9 @@ Mandatory when setting *Authentication Type*/`jco.destination.auth_type` to `Tec
 > ### Remember:  
 > The token service is not accessed through the Cloud Connector, but directly over the Internet.
 
+When using the Authorization and Trust Management service \(xsuaa\) as token service for *Technical User Propagation*, the URL should follow this example:
 
+`https://{tenant}.authentication.us10.hana.ondemand.com/oauth/token → https://mytenant.authentication.us10.hana.ondemand.com/oauth/token`
 
 </td>
 </tr>

@@ -742,7 +742,7 @@ x86\_64, aarch64
 </td>
 <td valign="top">
 
-2.16.0 and higher
+2.16.0 up to 2.18.x
 
 </td>
 </tr>
