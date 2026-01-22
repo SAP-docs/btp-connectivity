@@ -63,7 +63,11 @@ JSON
 </td>
 <td valign="top">
 
-Optional. The data \(destinations, certificates\) to initialise or update the service instance with. The data can be stored on both *service instance* data and *subaccount* data.
+Optional. Typically, the data for the Destination service instance is managed via BTP cockpit or REST API.
+
+For more information, see [Managing Destinations](managing-destinations-84e45e0.md).
+
+This option allows to add data \(destinations, certificates\) to initialise or update the service instance with. The data can be stored on both *service instance* level and *subaccount* level.
 
 </td>
 </tr>

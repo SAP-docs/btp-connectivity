@@ -198,7 +198,7 @@ Press *Add Subaccount* to define a subaccount. This will open a dialog or wizard
     6.  \(Optional\) You can provide a *<Description\>* of the subaccount that becomes a part of the subaccount's detail information.
 
         > ### Note:  
-        > Location ID and description can be changed later on at any time.
+        > Location ID and description can be changed later on at any time. See [Next Steps](adding-and-managing-subaccounts-f16df12.md#loiof16df12fab9f4fe1b8a4122f0fd54b6e__next).
 
     7.  Choose *Finish*.
 
@@ -263,6 +263,8 @@ If you want to connect an additional subaccount with your on-premises landscape,
 > Keep in mind that the specification of an HTTPS proxy is only offered when establishing the first connection.
 
 
+
+<a name="loiof16df12fab9f4fe1b8a4122f0fd54b6e__next"/>
 
 ## Next Steps
 
