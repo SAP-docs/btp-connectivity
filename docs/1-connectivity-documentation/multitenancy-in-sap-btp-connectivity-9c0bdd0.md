@@ -2,12 +2,14 @@
 
 # Multitenancy in SAP BTP Connectivity
 
-Using multitenancy for applications that require a connection to a remote service or on-premise application.
+Find information about the connectivity-specific usage of multitenancy in SAP BTP, multi-cloud foundation.
 
-This section describes the Connectivity-specific usage of multitenancy in SAP BTP, multi-cloud foundation.
+You can use multitenancy for applications that require a connection to a remote service or on-premise application, specified by the consumer account.
 
 > ### Note:  
 > Multitenancy connectivity scenarios are fully applicable also for *cloud-to-on-premise* connectivity. The on-premise use cases described in this guide include connections to virtual private cloud \(VPC\) environments.
+
+In a multitenancy scenario, the individual \(consumer\) tenants are based on the context of the used token to call the respective services.
 
 
 
@@ -15,7 +17,7 @@ This section describes the Connectivity-specific usage of multitenancy in SAP BT
 
 ## Endpoint Configuration
 
-Applications that require a connection to a remote service can use the Destination service to configure HTTP or RFC endpoints. Endpoints on the cloud side \(SAP BTP\) are configured as destinations. On-premise destinations correspond to the backend systems exposed in the Cloud Connector.
+Applications that require a connection to a remote service can use the Destination service to configure HTTP or RFC endpoints for the individual consumers or read the ones configured by the consumer. Endpoints on the cloud side \(SAP BTP\) are configured as destinations. On-premise destinations correspond to the backend systems exposed in the Cloud Connector.
 
 
 
@@ -23,9 +25,9 @@ Applications that require a connection to a remote service can use the Destinati
 
 ## Destination Levels
 
-You can configure destinations simultaneously on two levels: *subaccount* and *service instance*. This means that it is possible to have one and the same destination on more than one configuration level. For more information, see [Managing Destinations](managing-destinations-84e45e0.md).
+You can manage configurations \(destinations, certificates, and so on\) simultaneously on three levels: *subaccount*, *service instance*, and *subscription*. This means that it is possible to have one and the same destination configuration on more than one configuration level. For more information, see [Managing Destinations](managing-destinations-84e45e0.md).
 
-Destination lookup according to the level, when configured on:
+Here is how lookup is performed according to the level, when configured:
 
 
 <table>
@@ -44,7 +46,7 @@ Lookup
 <tr>
 <td valign="top">
 
-Subaccount level
+Subaccount
 
 </td>
 <td valign="top">
@@ -56,7 +58,7 @@ Looked up on subaccount level, no matter which destination service instance is u
 <tr>
 <td valign="top">
 
-Service instance level
+Service instance
 
 </td>
 <td valign="top">
@@ -65,9 +67,23 @@ Lookup via particular service instance \(in provider or consumer subaccount asso
 
 </td>
 </tr>
+<tr>
+<td valign="top">
+
+Subscription
+
+</td>
+<td valign="top">
+
+Lookup via a particular service instance, with a token in the context of a subscriber subaccount \(a different subscription level exists for each subscriber subaccount\).
+
+For more information, see [Accessing and Managing Destination Service Configurations on Subscription Level](accessing-and-managing-destination-service-configurations-on-subscription-level-e23c8de.md).
+
+</td>
+</tr>
 </table>
 
-When the application accesses the destination at runtime, the Destination service does the following:
+When the application accesses the destination at runtime using the "Find API", the Destination service does the following:
 
 -   For a destination associated with a **provider** subaccount:
     1.  Checks if the destination is available on the *service instance* level. If there is no destination found, it
@@ -79,15 +95,23 @@ When the application accesses the destination at runtime, the Destination servic
     2.  Searches the destination on *subaccount* level.
 
 
+For the ["Consume API"](referring-resources-using-the-consume-rest-api-78ba73a.md), the level should be explicitly specified.
+
 Back to [Top](multitenancy-in-sap-btp-connectivity-9c0bdd0.md#loio9c0bdd0efc8640739c9d2fa5cfe56cbd__top)
 
 
 
 <a name="loio9c0bdd0efc8640739c9d2fa5cfe56cbd__provider"/>
 
-## Provider-Managed Destination
+## Provider-Managed Configurations
+
+**Generic configurations \(not specific for the consumer subaccounts\)** 
 
 ![](images/CS_Multitenancy_Provider_a2f77d4.png)
+
+**Consumer-specific configurations**
+
+![](images/CS_Multitenancy_Provider_Consumer-Specific_334b6dd.png)
 
 Back to [Top](multitenancy-in-sap-btp-connectivity-9c0bdd0.md#loio9c0bdd0efc8640739c9d2fa5cfe56cbd__top)
 
@@ -95,9 +119,12 @@ Back to [Top](multitenancy-in-sap-btp-connectivity-9c0bdd0.md#loio9c0bdd0efc8640
 
 <a name="loio9c0bdd0efc8640739c9d2fa5cfe56cbd__consumer"/>
 
-## Consumer-Managed Destination
+## Consumer-Managed Configurations
 
 ![](images/CS_Multitenancy_Consumer_573fd49.png)
+
+> ### Note:  
+> In this scenario, consumer configurations on subaccount level are shared with the provider application.
 
 Back to [Top](multitenancy-in-sap-btp-connectivity-9c0bdd0.md#loio9c0bdd0efc8640739c9d2fa5cfe56cbd__top)
 
@@ -115,4 +142,6 @@ Back to [Top](multitenancy-in-sap-btp-connectivity-9c0bdd0.md#loio9c0bdd0efc8640
 
 
 [Developing Multitenant Applications in the Cloud Foundry Environment](https://help.sap.com/viewer/65de2977205c403bbc107264b8eccf4b/Cloud/en-US/5e8a2b74e4f2442b8257c850ed912f48.html "In the Cloud Foundry environment, you can develop and run multitenant applications, and share them with multiple consumers simultaneously on SAP BTP.") :arrow_upper_right:
+
+[Accessing and Managing Destination Service Configurations on Subscription Level](accessing-and-managing-destination-service-configurations-on-subscription-level-e23c8de.md "Allow subscriber subaccount administrators of your SaaS application to manage Destination service configurations on subscription level.")
 

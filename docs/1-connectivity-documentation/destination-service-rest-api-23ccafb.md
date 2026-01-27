@@ -15,7 +15,7 @@ It shows all available endpoints, the supported operations, parameters, possible
 
 ["Find a Destination" Response Structure](find-a-destination-response-structure-83a3f3b.md "Overview of data that are returned by the Destination service for the call type &quot;Find a Destination&quot;.")
 
-[Referring Resources Using the REST API](referring-resources-using-the-rest-api-78ba73a.md "Select a level for destinations and destination fragments when using the Destination service Consume REST API in a single-tenant or multi-tenant scenario.")
+[Referring Resources Using the Consume REST API](referring-resources-using-the-consume-rest-api-78ba73a.md "Select a level for destinations and destination fragments when using the Destination service Consume REST API in a single-tenant or multi-tenant scenario.")
 
 [Calling the Destination Service REST API via IAS Token](calling-the-destination-service-rest-api-via-ias-token-ce25f2b.md "Find a step-by-step procedure to use an IAS token for calling available Destination service REST API endpoints.")
 

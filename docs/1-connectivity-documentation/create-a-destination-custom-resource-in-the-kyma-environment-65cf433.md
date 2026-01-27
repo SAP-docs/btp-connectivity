@@ -33,8 +33,8 @@ For more information, see [Add the Transparent Proxy module](transparent-proxy-i
 **Optional fields:**
 
 -   `Fragment Reference`: Extend a destination with a fragment. Destination fragments enable more flexible technical connection configuration. For more information, see [Extending Destinations with Fragments](extending-destinations-with-fragments-f56600a.md).
--   `Destination Level`: Specify a certain level from which the destination will be retrieved. For more information, see [Referring Resources Using the REST API](referring-resources-using-the-rest-api-78ba73a.md).
--   `Fragment Level`: Specify a certain level from which the fragment will be retrieved. For more information, see [Referring Resources Using the REST API](referring-resources-using-the-rest-api-78ba73a.md).
+-   `Destination Level`: Specify a certain level from which the destination will be retrieved. For more information, see [Referring Resources Using the Consume REST API](referring-resources-using-the-consume-rest-api-78ba73a.md).
+-   `Fragment Level`: Specify a certain level from which the fragment will be retrieved. For more information, see [Referring Resources Using the Consume REST API](referring-resources-using-the-consume-rest-api-78ba73a.md).
 -   `Fragment Optionality`: Specify whether the fragment is optional \(true\) or mandatory \(false\).
 -   `Destination Service Instance Name`: The local name of the Destination service instance, provided in the Transparent Proxy configuration. For more information, see [Configuration Guide](configuration-guide-2a22cd7.md).
 -   `Chain Reference`: Reference a chain of destinations. For more information, see [Destination Chaining](destination-chaining-08a09f5.md).

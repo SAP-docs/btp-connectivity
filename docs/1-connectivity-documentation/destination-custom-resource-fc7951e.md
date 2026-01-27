@@ -83,7 +83,7 @@ After the Transparent Proxy executes successfully all necessary operations, the 
 
 **Destination/Fragment Levels**
 
-Destination/fragment levels enable specifying a certain level from which the destination/fragment will be retrieved. For more information, see [Referring Resources Using the REST API](referring-resources-using-the-rest-api-78ba73a.md).
+Destination/fragment levels enable specifying a certain level from which the destination/fragment will be retrieved. For more information, see [Referring Resources Using the Consume REST API](referring-resources-using-the-consume-rest-api-78ba73a.md).
 
 You can choose a destination or fragment level as follows:
 

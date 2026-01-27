@@ -1,6 +1,6 @@
 <!-- loio78ba73a91da94c03baecfaa47313b854 -->
 
-# Referring Resources Using the REST API
+# Referring Resources Using the *Consume* REST API
 
 Select a level for destinations and destination fragments when using the Destination service *Consume* REST API in a single-tenant or multi-tenant scenario.
 

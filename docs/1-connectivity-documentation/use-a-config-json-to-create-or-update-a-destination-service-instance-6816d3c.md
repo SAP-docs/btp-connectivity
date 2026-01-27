@@ -71,6 +71,31 @@ This option allows to add data \(destinations, certificates\) to initialise or u
 
 </td>
 </tr>
+<tr>
+<td valign="top">
+
+`subscriber_access` 
+
+</td>
+<td valign="top">
+
+JSON
+
+</td>
+<td valign="top">
+
+Optional. Typically, the data for the Destination service instance is managed via BTP cockpit or REST API.
+
+For more information, see [Managing Destinations](managing-destinations-84e45e0.md).
+
+This option allows you to define the access level for your subscribers to their configurations stored on subscription level, which are shared with them. By default, subscribers have no access.
+
+You can specify separate scopes for both *read* and *write* operations for each entity type. If multiple scopes are defined for an operation, the subscriber must have all of them to perform the operation.
+
+The provided scopes will either be added during instance creation or used to override the existing scopes during instance update. Each section is optional. If a section is not provided, the existing values will remain unchanged. To delete scopes, you need to provide an empty array.
+
+</td>
+</tr>
 </table>
 
 Find the `config.json` structure below:

@@ -22,8 +22,9 @@ You can use a destination to:
 2.  You have the required authorizations. See [User Roles](user-roles-b922fc8.md).
 3.  Make sure the following is fulfilled:
 
-    -   Service instance level – you must have created a Destination service instance, see [Create and Bind a Destination Service Instance](create-and-bind-a-destination-service-instance-9fdad3c.md).
-    -   Subaccount level – no specific prerequisites.
+    -   Subscription level: the SaaS application has allowed users \(of the subscribed consumer\) to manage destinations and you have the roles defined by the SaaS application to perform the desired operation.
+    -   Service instance level: you must have created a Destination service instance, see [Create and Bind a Destination Service Instance](create-and-bind-a-destination-service-instance-9fdad3c.md).
+    -   Subaccount level: no specific prerequisites.
 
     For more information, see [Access the Destinations Editor](access-the-destinations-editor-82ca377.md).
 

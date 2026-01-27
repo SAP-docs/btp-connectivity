@@ -4,6 +4,9 @@
 
 Destination fragments are objects used to override and extend destination properties through the Destination service REST API.
 
+> ### Note:  
+> Management of destination fragments for your application is currently only possible using the [Destination Service REST API](destination-service-rest-api-23ccafb.md).
+
 You can use destination fragments to override and/or extend destination properties as result of the [“Find a Destination” REST API request](calling-the-destination-service-rest-api-84c5d38.md). These properties are key-value based objects which contain a name for identification and additional configurable properties.
 
 The structure of the destination fragment is the following:

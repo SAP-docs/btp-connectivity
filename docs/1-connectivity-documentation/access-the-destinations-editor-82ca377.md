@@ -2,17 +2,20 @@
 
 # Access the Destinations Editor
 
-Access the Destinations Editor in the SAP BTP cockpit to create and manage destinations.
+Access the Destinations editor in the SAP BTP cockpit to create and manage destinations.
 
-You can edit destinations at two different levels:
+You can edit destinations at three different levels:
 
 -   Subaccount level
 
 -   Service instance level
+-   Subscription level
 
-On subaccount level, you can specify a destination for the entire subaccount, defining the used communication protocol and more properties, like authentication method, proxy type and URL.
+On *subaccount* level, you can specify a destination for the entire subaccount, defining the used communication protocol and more properties, like authentication method, proxy type and URL.
 
-On service instance level, you can reuse this destination for a specific space and adjust the URL if required. You can also create a new destination only on service instance level that is specific to the selected service instance and its assigned applications.
+On *service instance* level, you can reuse this destination for a specific space and adjust the URL if required. You can also create a new destination only on service instance level that is specific to the selected service instance and its assigned applications.
+
+On *subscription* level, you specify a destination only for an SaaS application you are subscribed to \(if the SaaS application has allowed this\).
 
 
 
@@ -33,19 +36,36 @@ On service instance level, you can reuse this destination for a specific space a
 
 1.  In the cockpit, select your *Global Account* and your subaccount name from the *Subaccount* menu in the breadcrumbs.
 2.  From the left-side panel, choose *Connectivity* \> *Destinations*.
+3.  The Destinations editor will load. The right panel lets you select the *Context Level* in which to work. The *Subaccount Level* is the default selection.
 
 **Access on Service Instance Level**
 
 > ### Note:  
-> To perform these steps, you must have created a Destination service instance in a *Cloud Foundry* space, see [Create and Bind a Destination Service Instance](create-and-bind-a-destination-service-instance-9fdad3c.md). On service instance level, you can set destinations only for Destination service instances.
+> To perform these steps, you must have a created destination service instance.
+> 
+> For more information, see [Create and Bind a Destination Service Instance](create-and-bind-a-destination-service-instance-9fdad3c.md).
 
 1.  In the cockpit, choose your *Global Account* from the *Region Overview* and select a *Subaccount*.
-2.  From the *Spaces* section, select a space name.
-3.  From the left-side menu, choose *Services* \> *Instances and Subscriptions*.
-4.  Choose the *Actions* icon for a Destination service instance and select *View Dashboard*.
-5.  On the *Destinations* screen, you can create new destinations or edit existing ones.
 
-See also section *Create and Bind a Service Instance from the Cockpit* in [Create and Bind a Destination Service Instance](create-and-bind-a-destination-service-instance-9fdad3c.md).
+    > ### Caution:  
+    > The *Cloud Foundry Organization* must be enabled.
+
+2.  From the left-side menu, choose *Spaces* and select a space name.
+3.  From the left-side menu, choose *Services* \> *Service Instances*.
+4.  Select a service instance and choose *Destinations* from the left-side panel.
+
+**Access on Subscription Level**
+
+1.  In the cockpit, select your global account and your subaccount name from the subaccount menu in the breadcrumbs.
+2.  From the left-side panel, choose *Connectivity* \> *Destinations*.
+3.  The Destinations editor will load. The right panel lets you select the *Context Level* in which to work. Under *Subscriptions* you will see all SaaS applications that support consumer management of destinations and the permissions your user has.
+
+    > ### Note:  
+    > The needed permissions for each subscription level are defined by the respective SaaS application.
+
+
+> ### Note:  
+> If you are developing an SaaS application and want to support consumer management of destinations, see [Accessing and Managing Destination Service Configurations on Subscription Level](accessing-and-managing-destination-service-configurations-on-subscription-level-e23c8de.md).
 
 **Related Information**  
 
