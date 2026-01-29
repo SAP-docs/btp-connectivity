@@ -160,7 +160,7 @@ Back to [Tasks](invoking-abap-function-modules-via-rfc-fa4adc9.md#loiofa4adc9bd4
 -   The supported **runtime environment** is SAP Java Buildpack as of version 1.8.0.
 
     > ### Note:  
-    > You must use the Tomcat or TomEE runtime offered by the build pack to make JCo work correctly. You cannot bring a container of your own.
+    > You must use the Tomcat or TomEE runtime offered by the build pack to make JCo work correctly. You cannot bring a container of your own. This can be achieved by using WAR deployments.
 
 -   Your application must not bundle the JCo 3.1 standalone Java archives nor the native library. JCo is already embedded properly in the build pack.
 -   **JCoServer** functionality cannot be used within SAP BTP.
