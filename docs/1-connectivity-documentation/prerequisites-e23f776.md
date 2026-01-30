@@ -1409,6 +1409,69 @@ connectivitytunnel.cf.eu20-002.hana.ondemand.com
 <tr>
 <td valign="top" rowspan="3">
 
+Europe \(Frankfurt\) - Azure
+
+\(`cf.eu22.hana.ondemand.com` \)
+
+> ### Note:  
+> Available as of January 30, 2026
+
+
+
+</td>
+<td valign="top" colspan="2">
+
+connectivitynotification.cf.eu22.hana.ondemand.com
+
+</td>
+<td valign="top">
+
+131.189.177.61
+
+</td>
+<td valign="top">
+
+ 
+
+</td>
+</tr>
+<tr>
+<td valign="top" colspan="2">
+
+connectivitycertsigning.cf.eu22.hana.ondemand.com
+
+</td>
+<td valign="top">
+
+131.189.177.61
+
+</td>
+<td valign="top">
+
+ 
+
+</td>
+</tr>
+<tr>
+<td valign="top" colspan="2">
+
+connectivitytunnel.cf.eu22.hana.ondemand.com
+
+</td>
+<td valign="top">
+
+4.185.195.58
+
+</td>
+<td valign="top">
+
+ 
+
+</td>
+</tr>
+<tr>
+<td valign="top" rowspan="3">
+
 Europe \(Frankfurt\) - Google Cloud
 
 \(`cf.eu30.hana.ondemand.com` \)
@@ -1473,6 +1536,132 @@ connectivitytunnel.cf.eu30.hana.ondemand.com
 <td valign="top">
 
 2600:1900:40d0:1897:8000:1::
+
+</td>
+</tr>
+<tr>
+<td valign="top" rowspan="3">
+
+UK South \(London\) - Azure
+
+\(`cf.uk20.hana.ondemand.com`\)
+
+> ### Note:  
+> Available as of January 30, 2026
+
+
+
+</td>
+<td valign="top" colspan="2">
+
+connectivitynotification.cf.uk20.hana.ondemand.com
+
+</td>
+<td valign="top">
+
+`4.250.195.185` 
+
+</td>
+<td valign="top">
+
+ 
+
+</td>
+</tr>
+<tr>
+<td valign="top" colspan="2">
+
+connectivitycertsigning.cf.uk20.hana.ondemand.com
+
+</td>
+<td valign="top">
+
+`4.250.195.185` 
+
+</td>
+<td valign="top">
+
+ 
+
+</td>
+</tr>
+<tr>
+<td valign="top" colspan="2">
+
+connectivitytunnel.cf.uk20.hana.ondemand.com
+
+</td>
+<td valign="top">
+
+`4.250.195.80` 
+
+</td>
+<td valign="top">
+
+ 
+
+</td>
+</tr>
+<tr>
+<td valign="top" rowspan="3">
+
+US \(Sterling\) - SAP
+
+\(`cf.us01.hana.ondemand.com`\)
+
+> ### Note:  
+> Available as of January 30, 2026
+
+
+
+</td>
+<td valign="top" colspan="2">
+
+connectivitynotification.mtls.us01-l-c.uc-live.shoot.live.k8s-hana.ondemand.com
+
+</td>
+<td valign="top">
+
+`130.214.107.153` 
+
+</td>
+<td valign="top">
+
+ 
+
+</td>
+</tr>
+<tr>
+<td valign="top" colspan="2">
+
+connectivitycertsigning.mtls.us01-l-c.uc-live.shoot.live.k8s-hana.ondemand.com
+
+</td>
+<td valign="top">
+
+`130.214.107.153` 
+
+</td>
+<td valign="top">
+
+ 
+
+</td>
+</tr>
+<tr>
+<td valign="top" colspan="2">
+
+connectivitytunnel.us01-l-d.uc-live.shoot.live.k8s-hana.ondemand.com
+
+</td>
+<td valign="top">
+
+`130.214.107.141` 
+
+</td>
+<td valign="top">
+
+ 
 
 </td>
 </tr>

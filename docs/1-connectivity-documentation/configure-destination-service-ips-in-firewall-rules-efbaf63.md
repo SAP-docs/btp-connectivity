@@ -185,6 +185,30 @@ Europe \(Netherlands\) - Azure
 <tr>
 <td valign="top">
 
+Europe \(Frankfurt\) - Azure
+
+\(cf.eu22.hana.ondemand.com\)
+
+> ### Note:  
+> Available as of January 30, 2026
+
+
+
+</td>
+<td valign="top">
+
+135.220.43.209
+
+</td>
+<td valign="top">
+
+ 
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
 Europe \(Frankfurt\) - Google Cloud
 
 \(cf.eu30.hana.ondemand.com\)
@@ -204,6 +228,54 @@ Europe \(Frankfurt\) - Google Cloud
 <td valign="top">
 
 2600:1900:40d0:8a0:0:0:0:0/64
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+UK South \(London\) - Azure
+
+\(cf.uk20.hana.ondemand.com\)
+
+> ### Note:  
+> Available as of January 30, 2026
+
+
+
+</td>
+<td valign="top">
+
+172.166.225.229
+
+</td>
+<td valign="top">
+
+ 
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+US \(Sterling\) - SAP
+
+\(cf.us01.hana.ondemand.com\)
+
+> ### Note:  
+> Available as of January 30, 2026
+
+
+
+</td>
+<td valign="top">
+
+130.214.109.51
+
+</td>
+<td valign="top">
+
+ 
 
 </td>
 </tr>
@@ -1017,6 +1089,30 @@ Europe \(Netherlands\) - Azure
 <tr>
 <td valign="top">
 
+Europe \(Frankfurt\) - Azure
+
+\(cf.eu22.hana.ondemand.com\)
+
+> ### Note:  
+> Available as of January 30, 2026
+
+
+
+</td>
+<td valign="top">
+
+131.189.188.171
+
+</td>
+<td valign="top">
+
+ 
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
 Europe \(Frankfurt\) - Google Cloud
 
 \(cf.eu30.hana.ondemand.com\)
@@ -1030,6 +1126,54 @@ Europe \(Frankfurt\) - Google Cloud
 <td valign="top">
 
 2600:1900:40d0:8a0:8000:3::
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+UK South \(London\) - Azure
+
+\(cf.uk20.hana.ondemand.com\)
+
+> ### Note:  
+> Available as of January 30, 2026
+
+
+
+</td>
+<td valign="top">
+
+4.158.194.40
+
+</td>
+<td valign="top">
+
+ 
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+US \(Sterling\) - SAP
+
+\(cf.us01.hana.ondemand.com\)
+
+> ### Note:  
+> Available as of January 30, 2026
+
+
+
+</td>
+<td valign="top">
+
+130.214.107.137
+
+</td>
+<td valign="top">
+
+ 
 
 </td>
 </tr>
