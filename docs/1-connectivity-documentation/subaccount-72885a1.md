@@ -1097,7 +1097,7 @@ An array of objects, each of which represents a trusted IDP through the followin
 
 -   `id`: \(unique\) ID of the trusted IDP \(a number\).
 -   `name`: name of the trusted IDP \(a string\).
--   `description`: description of the trusted IDP \(a string\)
+-   `description`: description of the trusted IDP \(a string\).
 -   `certificate`: object with the following properties: `issuer` \(a string\), `subjectDN` \(a string\), `notBeforeTimeStamp` \(a UTC long number\), and `notAfterTimeStamp` \(a UTC long number\).
 -   `enabled`: flag that indicates whether the IDP is enabled or disabled \(that is, whether the IDP is trusted or not\).
 
