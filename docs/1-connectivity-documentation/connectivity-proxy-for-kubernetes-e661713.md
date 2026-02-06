@@ -11,7 +11,7 @@ The Connectivity Proxy is a Kubernetes component that connects workloads running
 
 The Connectivity Proxy is delivered as a Docker image and a Helm chart. You need to run the image on your Kubernetes cluster with appropriate configurations. The Helm chart simplifies the installation process. See [Lifecycle Management](lifecycle-management-60c0a45.md) for more details.
 
-You can find information about new versions of the Connectivity Proxy via SAP BTP [release notes](https://help.sap.com/doc/43b304f99a8145809c78f292bfc0bc58/Cloud/en-US/98bf747111574187a7c76f8ced51cfeb.html?sel1=Connectivity). To request a new feature, you can use [Influence SAP](https://influence.sap.com/sap/ino/#/campaign/2282).
+You can find information about new versions of the Connectivity Proxy via SAP BTP [release notes](https://help.sap.com/doc/43b304f99a8145809c78f292bfc0bc58/Cloud/en-US/98bf747111574187a7c76f8ced51cfeb.html?sel1=Connectivity). To request a new feature, you can use [Influence SAP](https://influence.sap.com/sap/ino/#/campaign/2277).
 
 ![](images/CS_Kubernetes_Arch_fc5394b.png)
 
