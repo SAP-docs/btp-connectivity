@@ -43,6 +43,7 @@
                     -   [Multitenancy for JCo Applications \(Advanced\)](1-connectivity-documentation/multitenancy-for-jco-applications-advanced-93c1e03.md)
                     -   [Configure Principal Propagation for RFC](1-connectivity-documentation/configure-principal-propagation-for-rfc-30c4168.md)
             -   [Token Retrieval Using IAS-Signed SAML2.0 Assertions](1-connectivity-documentation/token-retrieval-using-ias-signed-saml2-0-assertions-a943bb7.md)
+            -   [Manage Certificates Issued by the SAP Cloud Root CA](1-connectivity-documentation/manage-certificates-issued-by-the-sap-cloud-root-ca-058785a.md)
             -   [Connectivity Scenarios: Examples](1-connectivity-documentation/connectivity-scenarios-examples-c56d0fa.md)
         -   [What's New for Connectivity](1-connectivity-documentation/what-s-new-for-connectivity-7882854.md)
             -   [2021 Connectivity \(Archive\)](1-connectivity-documentation/2021-connectivity-archive-2f8b032.md)

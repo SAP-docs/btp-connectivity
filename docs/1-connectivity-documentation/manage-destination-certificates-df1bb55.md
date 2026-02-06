@@ -133,3 +133,11 @@ You can maintain truststore and keystore certificates in the *Destinations* edit
     ![](images/CS_Destination_Certificates_-_Delete_2_c5a6879.png)
 
 
+
+
+## Related Information
+
+[Certificate Types](certificate-types-007e405.md)
+
+[Manage Certificates Issued by the SAP Cloud Root CA](manage-certificates-issued-by-the-sap-cloud-root-ca-058785a.md)
+
