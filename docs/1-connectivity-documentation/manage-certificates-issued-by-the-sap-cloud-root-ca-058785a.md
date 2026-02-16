@@ -42,7 +42,7 @@ For more information, see also [Calling the Destination Service REST API](callin
 
     > ### Sample Code:  
     > ```
-    > openssl req -utf8 -nodes -sha256 -newkey rsa:4096 -keyout genExample.key -out genExample.csr
+    > openssl req -utf8 -nodes -sha256 -newkey rsa:3072 -keyout genExample.key -out genExample.csr
     > ```
 
     > ### Note:  
