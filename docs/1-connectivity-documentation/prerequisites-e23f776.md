@@ -1756,6 +1756,10 @@ connectivitynotification.cf.us10.hana.ondemand.com
 
 2600:1f18:ef:9b05::17, 2600:1f18:ef:9b08::17, 2600:1f18:ef:9b02::17
 
+**New** \(as of Q2 2026, exact date will be announced via release note\):
+
+**2600:1f18:ef:9b08::17, 2600:1f18:ef:9b0b::17, 2600:1f18:ef:9b02::17**
+
 </td>
 </tr>
 <tr>
@@ -1777,6 +1781,10 @@ connectivitycertsigning.cf.us10.hana.ondemand.com
 
 2600:1f18:ef:9b05::17, 2600:1f18:ef:9b08::17, 2600:1f18:ef:9b02::17
 
+**New** \(as of Q2 2026, exact date will be announced via release note\):
+
+**2600:1f18:ef:9b08::17, 2600:1f18:ef:9b0b::17, 2600:1f18:ef:9b02::17**
+
 </td>
 </tr>
 <tr>
@@ -1797,6 +1805,10 @@ connectivitytunnel.cf.us10.hana.ondemand.com
 <td valign="top">
 
 2600:1f18:12b5:c605::17, 2600:1f18:12b5:c602::17, 2600:1f18:12b5:c608::17
+
+**New** \(as of Q2 2026, exact date will be announced via release note\):
+
+**2600:1f18:12b5:c60b::17, 2600:1f18:12b5:c602::17, 2600:1f18:12b5:c608::17**
 
 </td>
 </tr>
@@ -4916,6 +4928,10 @@ connectivitynotification.cf.us10.hana.ondemand.com
 
 2600:1f18:ef:9b05::17, 2600:1f18:ef:9b08::17, 2600:1f18:ef:9b02::17
 
+**New** \(as of Q2 2026, exact date will be announced via release note\):
+
+**2600:1f18:ef:9b08::17, 2600:1f18:ef:9b0b::17, 2600:1f18:ef:9b02::17**
+
 </td>
 </tr>
 <tr>
@@ -4937,6 +4953,10 @@ connectivitycertsigning.cf.us10.hana.ondemand.com
 
 2600:1f18:ef:9b05::17, 2600:1f18:ef:9b08::17, 2600:1f18:ef:9b02::17
 
+**New** \(as of Q2 2026, exact date will be announced via release note\):
+
+**2600:1f18:ef:9b08::17, 2600:1f18:ef:9b0b::17, 2600:1f18:ef:9b02::17**
+
 </td>
 </tr>
 <tr>
@@ -4957,6 +4977,10 @@ connectivitytunnel.cf.us10.hana.ondemand.com
 <td valign="top">
 
 2600:1f18:12b5:c605::17, 2600:1f18:12b5:c602::17, 2600:1f18:12b5:c608::17
+
+**New** \(as of Q2 2026, exact date will be announced via release note\):
+
+**2600:1f18:12b5:c60b::17, 2600:1f18:12b5:c602::17, 2600:1f18:12b5:c608::17**
 
 </td>
 </tr>

@@ -1222,6 +1222,10 @@ US East \(VA\) - AWS
 
 2600:1f18:ef:9b05::18, 2600:1f18:ef:9b08::18, 2600:1f18:ef:9b02::18
 
+**New** \(as of Q2 2026, exact date will be announced via release note\):
+
+**2600:1f18:ef:9b08::18, 2600:1f18:ef:9b0b::18, 2600:1f18:ef:9b02::18**
+
 </td>
 </tr>
 <tr>
