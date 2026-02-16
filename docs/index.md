@@ -387,4 +387,5 @@
     -   [Connectivity via Reverse Proxy](1-connectivity-documentation/connectivity-via-reverse-proxy-dde01af.md)
     -   [Connectivity Support](1-connectivity-documentation/connectivity-support-e5580c5.md)
         -   [Release and Maintenance Strategy](1-connectivity-documentation/release-and-maintenance-strategy-7c3b531.md)
+    -   [Submitting Improvement Requests](1-connectivity-documentation/submitting-improvement-requests-6a79697.md)
 
