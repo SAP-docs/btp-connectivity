@@ -487,3 +487,5 @@ Back to [Content](what-is-sap-btp-connectivity-e54cc8f.md#loioe54cc8fbbb571014be
 
 [Connectivity Support](connectivity-support-e5580c5.md "Support information for SAP BTP Connectivity and the Cloud Connector.")
 
+[Submitting Improvement Requests](submitting-improvement-requests-6a79697.md "You can submit your improvement request for SAP BTP Connectivity. It’s a single central place for all activities related to product improvement requests.")
+

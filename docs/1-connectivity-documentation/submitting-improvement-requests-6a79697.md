@@ -12,6 +12,8 @@ You can also browse improvement requests, comment, vote, receive updates, and br
 
 > ### Note:  
 > Before you submit your improvement, check if a similar improvement hasn’t already been submitted requested. If yes, please vote for it, instead of submitting a new one.
+> 
+> For more information, see also SAP note [11](https://me.sap.com/notes/11).
 
 
 
