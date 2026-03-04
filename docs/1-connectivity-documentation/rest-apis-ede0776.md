@@ -123,6 +123,51 @@ All operations.
 <tr>
 <td valign="top">
 
+Associate Administrator
+
+\(AssocAdministrator\)
+
+</td>
+<td valign="top">
+
+sccassocadmin
+
+</td>
+<td valign="top">
+
+-   All subaccount administration operations unless a subaccount is managed
+-   Administrate certain cross-subaccount settings including, but not limited to, certificates and back-end trust
+-   Edit log and trace configuration
+
+
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+Subaccount Administrator
+
+\(SubAdministrator\)
+
+</td>
+<td valign="top">
+
+sccsubadmin
+
+</td>
+<td valign="top">
+
+-   All subaccount administration operations unless a subaccount is managed
+-   Edit log and trace configuration
+
+
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
 Support
 
 </td>

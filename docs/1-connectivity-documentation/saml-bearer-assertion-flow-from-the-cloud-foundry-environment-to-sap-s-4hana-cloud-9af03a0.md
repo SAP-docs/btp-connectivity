@@ -1,6 +1,6 @@
 <!-- loio9af03a067bf74457ba0de0221b9cc72a -->
 
-# User Propagation from the Cloud Foundry Environment to SAP S/4HANA Cloud
+# SAML Bearer Assertion Flow from the Cloud Foundry Environment to SAP S/4HANA Cloud
 
 Configure user propagation \(single sign-on\), using OAuth communication from the SAP BTP Cloud Foundry environment to S/4HANA Cloud. As OAuth mechanism, you use the *OAuth 2.0 SAML Bearer Assertion Flow*.
 
@@ -10,9 +10,9 @@ Configure user propagation \(single sign-on\), using OAuth communication from th
 
 ## Steps
 
-[Scenario](user-propagation-from-the-cloud-foundry-environment-to-sap-s-4hana-cloud-9af03a0.md#loio9af03a067bf74457ba0de0221b9cc72a__scenario_s4) 
+[Scenario](saml-bearer-assertion-flow-from-the-cloud-foundry-environment-to-sap-s-4hana-cloud-9af03a0.md#loio9af03a067bf74457ba0de0221b9cc72a__scenario_s4) 
 
-[Prerequisites](user-propagation-from-the-cloud-foundry-environment-to-sap-s-4hana-cloud-9af03a0.md#loio9af03a067bf74457ba0de0221b9cc72a__prereq_s4)
+[Prerequisites](saml-bearer-assertion-flow-from-the-cloud-foundry-environment-to-sap-s-4hana-cloud-9af03a0.md#loio9af03a067bf74457ba0de0221b9cc72a__prereq_s4)
 
 [Configuration Tasks](configuration-tasks-6e5e004.md)
 

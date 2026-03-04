@@ -4,6 +4,11 @@
 
 Manage Cloud Connector service channels via API.
 
+> ### Note:  
+> Access to *managed* subaccounts is reserved for the role *Administrator* for all methods except for method GET.
+> 
+> For more information on managed subaccounts, see [Adding a Subaccount](adding-and-managing-subaccounts-f16df12.md#loiof16df12fab9f4fe1b8a4122f0fd54b6e__add) \(step 2\).
+
 
 <table>
 <tr>
@@ -204,7 +209,7 @@ Roles
 </td>
 <td valign="top">
 
-Administrator,Subaccount Administrator, Display, Support
+Administrator, Associate Administrator, Subaccount Administrator, Display, Support, Monitoring
 
 </td>
 </tr>
@@ -318,7 +323,7 @@ Roles
 </td>
 <td valign="top">
 
-Administrator,Subaccount Administrator, Display, Support
+Administrator, Associate Administrator, Subaccount Administrator, Display, Support, Monitoring
 
 </td>
 </tr>
@@ -392,8 +397,7 @@ Response
 <td valign="top">
 
 ```
-{id, hanaInstanceName, instanceNumber, type, port, enabled, connections, state}
-
+{id, hanaInstanceName, instanceNumber, type, port, enabled, connections, state, comment}
 ```
 
 
@@ -420,13 +424,13 @@ Roles
 </td>
 <td valign="top">
 
-Administrator,Subaccount Administrator, Display, Support
+Administrator, Associate Administrator, Subaccount Administrator, Display, Support, Monitoring
 
 </td>
 </tr>
 </table>
 
-**Response**:
+****:
 
 -   `id`: unique identifier for the service channel \(a positive integer number, starting with 1\). This identifier is unique across all types of service channels.
 
@@ -448,6 +452,7 @@ Administrator,Subaccount Administrator, Display, Support
     -   `openedConnections` \(the number of open, possibly idle connections\), and
     -   `connectedSinceTimeStamp` \(the time stamp, a UTC long number, for the first time the channel was opened/connected\).
 
+-   `comment`: comment or short description; this property is not supplied if no comment was provided.
 
 **Errors**:
 
@@ -536,20 +541,13 @@ Roles
 </td>
 <td valign="top">
 
-Administrator,Subaccount Administrator
+Administrator, Associate Administrator, Subaccount Administrator
 
 </td>
 </tr>
 </table>
 
 **Request**:
-
--   `hanaInstanceName`: name of the HANA instance \(a string\).
-
--   `instanceNumber`: instance number.
-
--   `connections`: maximal number of open connections.
-
 
 **Errors**:
 
@@ -638,7 +636,7 @@ Roles
 </td>
 <td valign="top">
 
-Administrator,Subaccount Administrator
+Administrator, Associate Administrator, Subaccount Administrator
 
 </td>
 </tr>
@@ -741,7 +739,7 @@ Roles
 </td>
 <td valign="top">
 
-Administrator,Subaccount Administrator, Display, Support
+Administrator, Associate Administrator, Subaccount Administrator, Display, Support, Monitoring
 
 </td>
 </tr>
@@ -853,7 +851,7 @@ Roles
 </td>
 <td valign="top">
 
-Administrator,Subaccount Administrator, Display, Support
+Administrator, Associate Administrator, Subaccount Administrator, Display, Support, Monitoring
 
 </td>
 </tr>
@@ -953,7 +951,7 @@ Roles
 </td>
 <td valign="top">
 
-Administrator,Subaccount Administrator, Display, Support
+Administrator, Associate Administrator, Subaccount Administrator, Display, Support, Monitoring
 
 </td>
 </tr>
@@ -1069,7 +1067,7 @@ Roles
 </td>
 <td valign="top">
 
-Administrator,Subaccount Administrator
+Administrator, Associate Administrator, Subaccount Administrator
 
 </td>
 </tr>
@@ -1172,7 +1170,7 @@ Roles
 </td>
 <td valign="top">
 
-Administrator,Subaccount Administrator 
+Administrator, Associate Administrator, Subaccount Administrator
 
 </td>
 </tr>
@@ -1276,7 +1274,7 @@ Roles
 </td>
 <td valign="top">
 
-Administrator,Subaccount Administrator, Display, Support
+Administrator, Associate Administrator, Subaccount Administrator, Display, Support, Monitoring
 
 </td>
 </tr>
@@ -1390,7 +1388,7 @@ Roles
 </td>
 <td valign="top">
 
-Administrator,Subaccount Administrator, Display, Support
+Administrator, Associate Administrator, Subaccount Administrator, Display, Support, Monitoring
 
 </td>
 </tr>
@@ -1506,7 +1504,7 @@ Roles
 </td>
 <td valign="top">
 
-Administrator,Subaccount Administrator
+Administrator, Associate Administrator, Subaccount Administrator
 
 </td>
 </tr>
@@ -1608,7 +1606,7 @@ Roles
 </td>
 <td valign="top">
 
-Administrator, Subaccount Administrator
+Administrator, Associate Administrator, Subaccount Administrator
 
 </td>
 </tr>
@@ -1710,7 +1708,7 @@ Roles
 </td>
 <td valign="top">
 
-Administrator, Subaccount Administrator, Display, Support
+Administrator, Associate Administrator, Subaccount Administrator, Display, Support, Monitoring
 
 </td>
 </tr>
@@ -1812,7 +1810,7 @@ Roles
 </td>
 <td valign="top">
 
-Administrator, Subaccount Administrator, Display, Support
+Administrator, Associate Administrator, Subaccount Administrator, Display, Support, Monitoring
 
 </td>
 </tr>
@@ -1912,7 +1910,7 @@ Roles
 </td>
 <td valign="top">
 
-Administrator, Subaccount Administrator
+Administrator, Associate Administrator, Subaccount Administrator
 
 </td>
 </tr>
@@ -2012,7 +2010,7 @@ Roles
 </td>
 <td valign="top">
 
-Administrator, Subaccount Administrator
+Administrator, Associate Administrator, Subaccount Administrator
 
 </td>
 </tr>
@@ -2118,7 +2116,7 @@ Roles
 </td>
 <td valign="top">
 
-Administrator,Subaccount Administrator
+Administrator, Associate Administrator, Subaccount Administrator
 
 </td>
 </tr>
@@ -2210,7 +2208,7 @@ Roles
 </td>
 <td valign="top">
 
-Administrator,Subaccount Administrator
+Administrator, Associate Administrator, Subaccount Administrator
 
 </td>
 </tr>
@@ -2301,7 +2299,7 @@ Roles
 </td>
 <td valign="top">
 
-Administrator,Subaccount Administrator
+Administrator, Associate Administrator, Subaccount Administrator
 
 </td>
 </tr>
@@ -2313,7 +2311,7 @@ Back to [Top](subaccount-service-channels-b20af3b.md#loiob20af3bf34b441228c2f095
 
 <a name="loiob20af3bf34b441228c2f095744019758__get_all"/>
 
-## Get all Service Channels
+## Get Service Channels
 
 > ### Caution:  
 > **Obsolete**. This API is deprecated and may be removed in a future release. Use the getters for the specific service channel type \(that is, HANA \(database\), Virtual Machine, or ABAP Cloud\) which provide properties tailored for the respective channel type.
@@ -2393,7 +2391,7 @@ Roles
 </td>
 <td valign="top">
 
-Administrator,Subaccount Administrator, Display, Support
+Administrator, Associate Administrator, Subaccount Administrator, Display, Support, Monitoring
 
 </td>
 </tr>
@@ -2498,7 +2496,7 @@ Roles
 </td>
 <td valign="top">
 
-Administrator,Subaccount Administrator, Display, Support
+Administrator, Associate Administrator, Subaccount Administrator, Display, Support, Monitoring
 
 </td>
 </tr>
@@ -2600,7 +2598,7 @@ Roles
 </td>
 <td valign="top">
 
-Administrator, Subaccount Administrator
+Administrator, Associate Administrator, Subaccount Administrator
 
 </td>
 </tr>
@@ -2702,7 +2700,7 @@ Roles
 </td>
 <td valign="top">
 
-Administrator, Subaccount Administrator
+Administrator, Associate Administrator, Subaccount Administrator
 
 </td>
 </tr>

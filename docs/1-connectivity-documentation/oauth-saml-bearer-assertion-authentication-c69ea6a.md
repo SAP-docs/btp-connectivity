@@ -666,7 +666,7 @@ The response for "find destination" contains an `authTokens` object in the forma
 
 [User Propagation via SAML 2.0 Bearer Assertion Flow](user-propagation-via-saml-2-0-bearer-assertion-flow-3cb7b81.md "Learn about the process for automatic token retrieval, using the OAuth2SAMLBearerAssertion authentication type for HTTP destinations.")
 
-[User Propagation between Cloud Foundry Applications](user-propagation-between-cloud-foundry-applications-8ebf60c.md "Propagate the identity of a user between Cloud Foundry applications that are located in different subaccounts or regions.")
+[SAML Bearer Assertion Flow between Cloud Foundry Applications](saml-bearer-assertion-flow-between-cloud-foundry-applications-8ebf60c.md "Propagate the identity of a user between Cloud Foundry applications that are located in different subaccounts or regions.")
 
-[Exchanging User JWTs via OAuth2UserTokenExchange Destinations](exchanging-user-jwts-via-oauth2usertokenexchange-destinations-39d4265.md "Automatic token retrieval using the OAuth2UserTokenExchange authentication type for HTTP destinations.")
+[Exchanging User JWTs via OAuth2JWTBearer Destinations](exchanging-user-jwts-via-oauth2jwtbearer-destinations-39d4265.md "Automatic token retrieval using the OAuth2JWTBearer authentication type for HTTP destinations.")
 

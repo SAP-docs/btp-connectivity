@@ -173,11 +173,9 @@ Diagnoses can be deleted.
 > ### Note:  
 > **Alerting**
 > 
-> An alert is triggered whenever an issue occurs that leads to a new diagnosis unless the issue is related to alerting. Depending on your Alerting **E-Mail Configuration** this may also mean that an E-mail is sent out to inform all recipients. Recurring issues will not trigger alerts and hence will also not trigger E-mails.
+> Certain types of diagnoses, in particular those related to issues occurring in the background \(for example, incoming requests\) trigger an alert. Depending on your Alerting **E-Mail Configuration**, this may also mean that an e-mail is sent out to inform all recipients. Recurrent issues will not trigger alerts and therefore will also not trigger e-mails. If no e-mail is to be sent when a new diagnosis is created, unselect the checkbox for *Troubleshooting* of the **E-Mail Notification** \(see [Alerting](alerting-87bffd9.md#loio87bffd934192418bbb866aedd1442ad8__Observation), section **Observation Configuration**\).
 > 
-> If no E-mail is to be sent when a new diagnosis is created, unselect the checkbox for troubleshooting of the **E-Mail Notification** \(see [Alerting](alerting-87bffd9.md#loio87bffd934192418bbb866aedd1442ad8__Observation), section **Observation Configuration**\).
-> 
-> Deleting a diagnosis does not affect the alert associated with it. If necessary, you can remove the alert manually. Note that it is not always feasible to obtain the information that an issue was resolved, and that therefore there may not be a recovery notification in this context. In these cases, if an issue was resolved there is no automatic removal of the respective diagnosis, nor is the associated alert removed or modified.
+> Deleting a diagnosis does not affect the alert associated with it. If necessary, the alert can be removed manually. Note that is not always feasible to obtain the information that an issue was resolved, and that therefore there may not be a recovery notification in this context. In these cases, if an issue was resolved there is no automatic removal of the respective diagnosis, nor is the associated alert removed or modified.
 
 
 

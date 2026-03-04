@@ -12,7 +12,7 @@ Answers to the most common questions about the Cloud Connector.
 
 ### **Does the Cloud Connector send data from on-premises systems to SAP BTP or the other way around?**
 
-The connection is opened from the on-premises system to the cloud, but is then used in the other direction.
+The connection is opened from the on-premises system to the cloud, but is then typically used in the other direction.
 
 An on-premises system is, in contrast to a cloud system, normally located behind a restrictive firewall and its services aren’t accessible thru the Internet. This concept follows a widely used pattern often referred to as *reverse invoke proxy*.
 
@@ -63,7 +63,7 @@ The Cloud Connector can connect an SAP Business Suite system version 4.6C and ne
 
 
 </td>
-<td valign="top" colspan="6">
+<td valign="top" colspan="5">
 
 Supported Java Version
 
@@ -78,16 +78,6 @@ Supported Java Version
 <td valign="top">
 
 
-
-</td>
-<td valign="top">
-
-6
-
-</td>
-<td valign="top">
-
-7
 
 </td>
 <td valign="top">
@@ -110,21 +100,21 @@ Supported Java Version
 21
 
 </td>
+<td valign="top">
+
+25
+
+</td>
 </tr>
 <tr>
-<td valign="top" rowspan="7">
+<td valign="top" rowspan="5">
 
 Cloud Connector Version
 
 </td>
 <td valign="top">
 
-< 2.7.2
-
-</td>
-<td valign="top">
-
-Yes
+2.7.2 – 2.13.2
 
 </td>
 <td valign="top">
@@ -156,49 +146,7 @@ No
 <tr>
 <td valign="top">
 
-\>= 2.7.2
-
-</td>
-<td valign="top">
-
-Yes
-
-</td>
-<td valign="top">
-
-Yes
-
-</td>
-<td valign="top">
-
-Yes
-
-</td>
-<td valign="top">
-
-No
-
-</td>
-<td valign="top">
-
-No
-
-</td>
-<td valign="top">
-
-No
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-\>= 2.8.0
-
-</td>
-<td valign="top">
-
-No
+2.14.0 – 2.14.2
 
 </td>
 <td valign="top">
@@ -230,54 +178,12 @@ No
 <tr>
 <td valign="top">
 
-\>=2.12.3
-
-</td>
-<td valign="top">
-
-No
-
-</td>
-<td valign="top">
-
-No
+2.15.0 – 2.16.2
 
 </td>
 <td valign="top">
 
 Yes
-
-</td>
-<td valign="top">
-
-No
-
-</td>
-<td valign="top">
-
-No
-
-</td>
-<td valign="top">
-
-No
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-\>= 2.14.0
-
-</td>
-<td valign="top">
-
-No
-
-</td>
-<td valign="top">
-
-No
 
 </td>
 <td valign="top">
@@ -304,17 +210,12 @@ No
 <tr>
 <td valign="top">
 
-\>= 2.15.0
+2.17.0 – 2.18.2
 
 </td>
 <td valign="top">
 
-No
-
-</td>
-<td valign="top">
-
-No
+Yes
 
 </td>
 <td valign="top">
@@ -341,22 +242,17 @@ No
 <tr>
 <td valign="top">
 
-\>= 2.17.0
-
-</td>
-<td valign="top">
-
-No
-
-</td>
-<td valign="top">
-
-No
+≥ 2.19.0
 
 </td>
 <td valign="top">
 
 Yes
+
+</td>
+<td valign="top">
+
+No
 
 </td>
 <td valign="top">
@@ -378,13 +274,10 @@ Yes
 </table>
 
 > ### Restriction:  
-> Support for Java 7 has been discontinued. For more information, see [Prerequisites](prerequisites-e23f776.md#loioe23f776e4d594fdbaeeb1196d47bbcc0__jdk).
+> Support for Java 11 has been discontinued. For more information, see [Prerequisites](prerequisites-e23f776.md#loioe23f776e4d594fdbaeeb1196d47bbcc0__jdk).
 
 > ### Tip:  
 > We recommend that you always use the latest patch level of the respective Java version.
-
-> ### Caution:  
-> Version 2.8 and later of theCloud Connector may have problems with ciphers in Google Chrome, if you use the JVM 7. For more information read [this SCN Article](https://blogs.sap.com/2015/09/09/cloud-connector-and-errsslweakserverephemeraldhkey-with-chrome/).
 
 
 
@@ -398,19 +291,19 @@ See [Configure an On-Premises User Store](https://help.sap.com/viewer/b865ed651e
 
 It depends on the scenario: For pure point-to-point connectivity to call on-premises functionality like BAPIs, RFCs, OData services, and so on, that are exposed via on-premises systems, the Cloud Connector might suffice.
 
-However, if you require advanced functionality, for example, n-to-n connectivity as an integration hub, SAP BTP Integration – Process Integration is a more suitable solution. SAP BTP Integration can use the Cloud Connector as a communication channel.
+However, if you require advanced functionality, for example, n-to-n connectivity as an integration hub, SAP BTP Cloud Integration – Process Integration \(CI-PI\) is a more suitable solution. SAP BTP CI can use the Cloud Connector as a communication channel.
 
 
 
 ### **How can I check whether the Cloud Connector is prepared for IPv6 support?**
 
-Check the *Prerequisites* section of the *Installation* chapter for your platform. As of version 2.18.1, the Cloud Connector shows the IPv6 state on the *About* screen.
+Check the *Prerequisites* section of the *Installation* chapter for your platform. As of version 2.18.1, the Cloud Connector shows on its *About* screen the IPv6 state that it sees in the respective environment.
 
 
 
 ### **How much bandwidth does the Cloud Connector consume?**
 
-The amount of bandwidth depends greatly on the application that is using the Cloud Connector tunnel. If the tunnel isn’t currently used, but still connected, a few bytes per minute is used simply to keep the connection alive.
+The amount of bandwidth depends greatly on the application that is using the Cloud Connector tunnel. If the tunnel isn’t currently used, but still connected, a few bytes per minute is consumed for the WebSocket ping/pong mechanism to keep the connection alive.
 
 
 
@@ -432,20 +325,26 @@ There is no explicit implementation of a disaster recovery setup for the Cloud C
 
 Instead, make sure you have machines available in some other data center than the one in which your productive setup is running. Also, make sure you regularly generate a [Configuration Backup](configuration-backup-abd1ba7.md).
 
-If a disaster situation occurs, install the Cloud Connector again and restore the latest backup. Immediately after the restart that is required after restoring the backup, you are back to a running setup, as long as all the backend systems are reachable from the new location.
+If a disaster situation occurs, install the Cloud Connector again and restore the latest backup. Immediately after the restart that is required after restoring the backup, you are back to a running setup, as long as all the back-end systems are reachable from the new location.
 
 
 
 ### **How many servers do I need to deploy the Cloud Connector?**
 
-We recommend that you use at least three servers, with the following purposes:
+Actually, you need only a single instance, but we recommend that you use at least three servers, with the following purposes:
 
 -   Development
 -   Production master
 -   Production shadow
 
 > ### Note:  
-> Do not run the production master and the production shadow as VMs inside the same physical machine. Doing so removes the redundancy, which is needed to guarantee high availability. A QA \(Quality Assurance\) instance is a useful extension. For disaster recovery, you will need two additional instances: another master instance, and another shadow instance as a reserve for the disaster case.
+> Do not run the production master and the production shadow as VMs inside the same physical machine. Doing so removes the redundancy, which is needed to guarantee high availability. A QA \(Quality Assurance\) instance is a useful extension of a Cloud Connector landscape. For disaster recovery, you will need two additional instances: another master instance, and another shadow instance as a reserve for the disaster case.
+
+
+
+### **What is the recommended upgrade procedure for a Cloud Connector landscape?**
+
+Assuming you run the tiers development, QA, and production, an upgrade in exactly this order is the recommended approach. Like this, you will recognize potential issues in less critical environments first. In exceptional cases, it might be needed to apply a newer version in production before applying it to development instances \(for example, for important \(hot\)fixes\), but this should not be the standard approach.
 
 
 
@@ -463,7 +362,7 @@ No, the Cloud Connector currently supports only basic authentication.
 
 ### **Which operating systems are supported by the Cloud Connector?**
 
-We currently support Windows and Linux versions with an installer for productive scenarios. Additionally, the portable variant of the Cloud Connector is available not only for those operating systems, but also for macOS.
+We currently support Windows and Linux versions with an installer for productive scenarios, in case of Linux for multiple processor architectures. Additionally, the portable variant of the Cloud Connector is available not only for those operating systems, but also for macOS.
 
 You can find the full product availability matrix in [Prerequisites](prerequisites-e23f776.md).
 
@@ -471,9 +370,9 @@ You can find the full product availability matrix in [Prerequisites](prerequisit
 
 ### **Which processor architectures are supported by the Cloud Connector?**
 
-We currently support 64-bit operating systems running only on an x86-64 processor \(also known as x64, x86\_64 or AMD64\), and for Linux also on the *PowerPC Little Endian* variant \(also known as *ppc64le*\).
+We currently support 64-bit operating systems running only on an x86-64 processor \(also known as x64, x86\_64 or AMD64\), and for Linux also on the *PowerPC Little Endian* variant \(also known as *ppc64le*\) as well as the ARM64 processor \(also known as *aarch64*\).
 
-For macOS, also the ARM64 processor \(also known as aarch64\).
+For macOS, also the ARM64 processor \(also known as *aarch64*\).
 
 See [Prerequisites](prerequisites-e23f776.md).
 
@@ -481,7 +380,7 @@ See [Prerequisites](prerequisites-e23f776.md).
 
 ### **Can I use the Cloud Connector without an ABAP back end?**
 
-Yes, you should be able to connect almost any system that supports the HTTP Protocol, to the SAP BTP, for example, Apache HTTP Server, Apache Tomcat, Microsoft IIS, or Nginx.
+Yes, you should be able to connect almost any system that supports the HTTP Protocol, from SAP BTP, for example, Apache HTTP Server, Apache Tomcat, Microsoft IIS, or Nginx.
 
 
 
@@ -495,12 +394,14 @@ No, this is not possible. For client certificate authentication, an end-2-end TL
 
 The Cloud Connector itself does not perform connection pooling, but provides a 1-to-1 mapping for each logical connection received trough the tunnel.
 
-By this mapping, a new connection to the backend system is opened, and kept open until closed either by the backend or by the client on cloud side.
+By this mapping, a new connection to the back-end system is opened, and kept open until closed either by the back end or by the client on cloud side.
 
 The actual connection pooling is defined by the application client on cloud side:
 
 -   If a connection is re-used in the client library, it is re-used on the Cloud Connector side as well.
 -   If it is closed immediately, also the mapped one on Cloud Connector side will be closed immediately.
+
+In that context, it is important that you must use different physical connections for different access control entries on the Cloud Connector side.
 
 
 
@@ -512,13 +413,17 @@ No, this is not supported and may cause odd behavior on the different screens, i
 
 ### **Does the Cloud Connector delete or modify HTTP headers?**
 
-Modifications of HTTP response headers are done if needed. In particular, Set-Cookie domains are adjusted according to the configured domain and host mappings. Also, in case of redirects, the location header will be adjusted according to the host mappings. Modifications of HTTP request headers are also done if needed, which is currently only the case for the *Host* header content. It will be replaced by the internal host, if the host mapping configuration is set up accordingly. The Cloud Connector will not delete any header that is sent by the cloud application. However, the Connectivity service will drop Connectivity service-specific headers, such as `SAP-Connectivity-Authentication` or `SAP-Connectivity-ConsumerAccount` so that those headers will neither reach the Cloud Connector nor the eventual backend.
+Modifications of HTTP response headers are done if needed, in particular, for Set-Cookie domains are adjusted according to the configured domain and host mappings. Also, in case of redirects, the location header will be adjusted according to the host mappings. Modifications of HTTP request headers are also done if needed, which is currently only the case for the `Host` header content will be replaced by the internal host, if the host mapping configuration is setup accordingly.
+
+The Cloud Connector does not delete any header that is sent by the cloud application. However, the Connectivity service will drop Connectivity service-specific headers, such as `SAP-Connectivity-Authentication` or `SAP-Connectivity-ConsumerAccount` so that those headers will neither reach the Cloud Connector nor the eventual back end.
+
+Last but not least, the Cloud Connector will inject the HTTP header `SSL_CLIENT_CERT` containing a short-lived certificate representing a user for identity propagation purposes. If the current request coming in from the cloud does not contain a token representing an identity, and the access control entry is configured to not use the system certificate for logon purposes, the Cloud Connector injects an empty `SSL_CLIENT_CERT` header.
 
 
 
 ### **Is it possible to use the Cloud Connector as an HTTP proxy for outgoing traffic?**
 
-No, this is not possible. This is possible only for a limited set of protocols. There are many HTTP proxy solutions out there that you can use in your network infrastructure.
+No, this is not possible. There are many HTTP proxy solutions out there that you can use in your network infrastructure.
 
 
 
@@ -534,7 +439,9 @@ Yes, find more details here: [Manage Audit Logs](manage-audit-logs-2264c70.md).
 
 ### **Is it possible to split authorization?**
 
-No, currently there is only one role that allows complete administration of the Cloud Connector.
+When using the file based user store, there is only one role that allows complete administration of the Cloud Connector.
+
+If you need multiple roles, setup your Cloud Connector to use LDAP for authentication as described in [Configure Named Cloud Connector Users](configure-named-cloud-connector-users-3859e50.md).
 
 
 
@@ -544,7 +451,7 @@ Yes, to enable this, you must configure an LDAP server. See: [Use LDAP for User 
 
 
 
-### **How can I reset the Cloud Connector's administrator password when not using LDAP for authentication?**
+### **How can I reset the Cloud Connector's administrator password when using the file-based user store for authentication?**
 
 Visit [https://tools.hana.ondemand.com/\#cloud](https://tools.hana.ondemand.com/#cloud) to download the portable version of the Cloud Connector. Extract the *users.xml* file in the *config* directory to the *config* directory of your Cloud Connector installation, then restart the Cloud Connector.
 
@@ -562,7 +469,9 @@ Starting with Cloud Connector version 2.11, you can use a dedicated backup featu
 
 ### **Can I create a backup of the complete installation?**
 
-Yes, you can create an archive file of the installation directory to create a full backup. Before you restore from a backup, note the following:
+Yes, but we don't recommend to do it. Instead, you should use the backup feature as described in the previous question. Only this type of backup will be supported. Restoring a file system-based backup would happen on your own risk.
+
+You can create an archive file of the installation directory to create a full backup. Before you restore from a backup, note the following:
 
 -   If you restore the backup on a different host, the UI certificate will be invalidated.
 -   Before you restore the backup, you should perform a “normal” installation and then replace the files. This registers the Cloud Connector at your operating systems package manager.
@@ -682,6 +591,10 @@ This is possible only for a limited set of protocols, using Cloud Connector *ser
 **Neo** and **multi-cloud** environment:
 
 -   RFC access to ABAP cloud systems.
+
+**Multi-cloud** environment:
+
+-   Access services in a Kubernetes deployment that hosts a *Connectivity Proxy*, in particular, also in Kyma clusters.
 
 All of these service channels provide access to endpoints that are not visible in the Internet.
 

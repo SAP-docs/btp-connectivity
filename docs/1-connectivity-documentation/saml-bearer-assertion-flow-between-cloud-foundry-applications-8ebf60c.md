@@ -1,6 +1,6 @@
 <!-- loio8ebf60c82a8e4cfc904f441c0c0acd6b -->
 
-# User Propagation between Cloud Foundry Applications
+# SAML Bearer Assertion Flow between Cloud Foundry Applications
 
 Propagate the identity of a user between Cloud Foundry applications that are located in different subaccounts or regions.
 
@@ -10,18 +10,18 @@ Propagate the identity of a user between Cloud Foundry applications that are loc
 
 ## Steps
 
-[Scenario](user-propagation-between-cloud-foundry-applications-8ebf60c.md#loio8ebf60c82a8e4cfc904f441c0c0acd6b__scenario)
+[Scenario](saml-bearer-assertion-flow-between-cloud-foundry-applications-8ebf60c.md#loio8ebf60c82a8e4cfc904f441c0c0acd6b__scenario)
 
-[Prerequisites](user-propagation-between-cloud-foundry-applications-8ebf60c.md#loio8ebf60c82a8e4cfc904f441c0c0acd6b__prereq)
+[Prerequisites](saml-bearer-assertion-flow-between-cloud-foundry-applications-8ebf60c.md#loio8ebf60c82a8e4cfc904f441c0c0acd6b__prereq)
 
-[Concept](user-propagation-between-cloud-foundry-applications-8ebf60c.md#loio8ebf60c82a8e4cfc904f441c0c0acd6b__concept)
+[Concept](saml-bearer-assertion-flow-between-cloud-foundry-applications-8ebf60c.md#loio8ebf60c82a8e4cfc904f441c0c0acd6b__concept)
 
-[Procedure](user-propagation-between-cloud-foundry-applications-8ebf60c.md#loio8ebf60c82a8e4cfc904f441c0c0acd6b__procedure)
+[Procedure](saml-bearer-assertion-flow-between-cloud-foundry-applications-8ebf60c.md#loio8ebf60c82a8e4cfc904f441c0c0acd6b__procedure)
 
-1.  [Assemble IdP Metadata for Subaccount 1](user-propagation-between-cloud-foundry-applications-8ebf60c.md#loio8ebf60c82a8e4cfc904f441c0c0acd6b__assemble)
-2.  [Establish Trust between Subaccount 1 and Subaccount 2](user-propagation-between-cloud-foundry-applications-8ebf60c.md#loio8ebf60c82a8e4cfc904f441c0c0acd6b__establish)
-3.  [Create an OAuthSAMLBearerAssertion Destination for Application 1](user-propagation-between-cloud-foundry-applications-8ebf60c.md#loio8ebf60c82a8e4cfc904f441c0c0acd6b__create)
-4.  [Consume the Destination and Execute the Scenario](user-propagation-between-cloud-foundry-applications-8ebf60c.md#loio8ebf60c82a8e4cfc904f441c0c0acd6b__consume)
+1.  [Assemble IdP Metadata for Subaccount 1](saml-bearer-assertion-flow-between-cloud-foundry-applications-8ebf60c.md#loio8ebf60c82a8e4cfc904f441c0c0acd6b__assemble)
+2.  [Establish Trust between Subaccount 1 and Subaccount 2](saml-bearer-assertion-flow-between-cloud-foundry-applications-8ebf60c.md#loio8ebf60c82a8e4cfc904f441c0c0acd6b__establish)
+3.  [Create an OAuthSAMLBearerAssertion Destination for Application 1](saml-bearer-assertion-flow-between-cloud-foundry-applications-8ebf60c.md#loio8ebf60c82a8e4cfc904f441c0c0acd6b__create)
+4.  [Consume the Destination and Execute the Scenario](saml-bearer-assertion-flow-between-cloud-foundry-applications-8ebf60c.md#loio8ebf60c82a8e4cfc904f441c0c0acd6b__consume)
 
 
 
@@ -33,7 +33,7 @@ Propagate the identity of a user between Cloud Foundry applications that are loc
 -   You want to call another Cloud Foundry application \(**application 2**\) in a different subaccount, in the same or another region.
 -   You want to propagate the identity of the user that is logged in to application 1, to application 2.
 
-Back to [Steps](user-propagation-between-cloud-foundry-applications-8ebf60c.md#loio8ebf60c82a8e4cfc904f441c0c0acd6b__steps)
+Back to [Steps](saml-bearer-assertion-flow-between-cloud-foundry-applications-8ebf60c.md#loio8ebf60c82a8e4cfc904f441c0c0acd6b__steps)
 
 
 
@@ -45,7 +45,7 @@ Back to [Steps](user-propagation-between-cloud-foundry-applications-8ebf60c.md#l
 -   You have an instance of the Destination service bound to application 1.
 -   You have a user JWT \(JSON Web Token\) in application 1 where the call to application 2 is performed.
 
-Back to [Steps](user-propagation-between-cloud-foundry-applications-8ebf60c.md#loio8ebf60c82a8e4cfc904f441c0c0acd6b__steps)
+Back to [Steps](saml-bearer-assertion-flow-between-cloud-foundry-applications-8ebf60c.md#loio8ebf60c82a8e4cfc904f441c0c0acd6b__steps)
 
 
 
@@ -76,7 +76,7 @@ The authentication endpoint accepts the SAML assertion and returns an OAuth acce
 
 ![](images/CS_CF2CF_Overview_Trust_Different_Regions_f8e4f90.png)
 
-Back to [Steps](user-propagation-between-cloud-foundry-applications-8ebf60c.md#loio8ebf60c82a8e4cfc904f441c0c0acd6b__steps)
+Back to [Steps](saml-bearer-assertion-flow-between-cloud-foundry-applications-8ebf60c.md#loio8ebf60c82a8e4cfc904f441c0c0acd6b__steps)
 
 
 
@@ -156,7 +156,7 @@ Back to [Steps](user-propagation-between-cloud-foundry-applications-8ebf60c.md#l
     > </ns3:EntityDescriptor>
     > ```
 
-    Back to [Steps](user-propagation-between-cloud-foundry-applications-8ebf60c.md#loio8ebf60c82a8e4cfc904f441c0c0acd6b__steps)
+    Back to [Steps](saml-bearer-assertion-flow-between-cloud-foundry-applications-8ebf60c.md#loio8ebf60c82a8e4cfc904f441c0c0acd6b__steps)
 
 
 
@@ -175,7 +175,7 @@ Back to [Steps](user-propagation-between-cloud-foundry-applications-8ebf60c.md#l
 > ### Note:  
 > Additionally, you must add users to this new trust configuration and assign appropriate scopes to them.
 
-Back to [Steps](user-propagation-between-cloud-foundry-applications-8ebf60c.md#loio8ebf60c82a8e4cfc904f441c0c0acd6b__steps)
+Back to [Steps](saml-bearer-assertion-flow-between-cloud-foundry-applications-8ebf60c.md#loio8ebf60c82a8e4cfc904f441c0c0acd6b__steps)
 
 
 
@@ -399,7 +399,7 @@ Back to [Steps](user-propagation-between-cloud-foundry-applications-8ebf60c.md#l
 
 7.  Choose *Save*.
 
-Back to [Steps](user-propagation-between-cloud-foundry-applications-8ebf60c.md#loio8ebf60c82a8e4cfc904f441c0c0acd6b__steps)
+Back to [Steps](saml-bearer-assertion-flow-between-cloud-foundry-applications-8ebf60c.md#loio8ebf60c82a8e4cfc904f441c0c0acd6b__steps)
 
 
 
@@ -411,7 +411,7 @@ To perform the scenario and execute the request from application 1, targeting ap
 2.  Execute a "find destination" request from application 1 to the Destination service. For details, see [Consuming the Destination Service](consuming-the-destination-service-7e30625.md) and the [REST API documentation](https://api.sap.com/api/SAP_CP_CF_Connectivity_Destination/resource).
 3.  From the Destination service response, extract the access token and URL, and construct your request to application 2. See ["Find a Destination" Response Structure](find-a-destination-response-structure-83a3f3b.md) for details on the structure of the response from the Destination service.
 
-Back to [Steps](user-propagation-between-cloud-foundry-applications-8ebf60c.md#loio8ebf60c82a8e4cfc904f441c0c0acd6b__steps)
+Back to [Steps](saml-bearer-assertion-flow-between-cloud-foundry-applications-8ebf60c.md#loio8ebf60c82a8e4cfc904f441c0c0acd6b__steps)
 
 
 

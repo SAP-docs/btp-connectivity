@@ -148,12 +148,12 @@ CPU
 </td>
 <td valign="top">
 
-Single core 3 GHz, x86-64 architecture compatible
+Dual core 2 GHz, *x86-64*, *aarch64*, or *ppc64le* architecture-compatible
 
 </td>
 <td valign="top">
 
-Dual core 2 GHz, x86-64 architecture compatible
+Multi core 3 GHz, *x86-64*, *aarch64*, or *ppc64le* architecture-compatible
 
 </td>
 </tr>
@@ -165,12 +165,12 @@ Memory \(RAM\)
 </td>
 <td valign="top">
 
-2 GB
+4 GB
 
 </td>
 <td valign="top">
 
-4 GB
+16 GB
 
 </td>
 </tr>
@@ -182,7 +182,7 @@ Free disk space
 </td>
 <td valign="top">
 
-3 GB
+2 GB
 
 </td>
 <td valign="top">
@@ -269,7 +269,7 @@ Oracle JDK 64-bit
 </td>
 </tr>
 <tr>
-<td valign="top" rowspan="3">
+<td valign="top" rowspan="4">
 
 [SapMachine](https://sapmachine.io) 64-bit
 
@@ -281,7 +281,7 @@ Oracle JDK 64-bit
 </td>
 <td valign="top">
 
-2.14.0 up to 2.18.x
+2.14.0 up to 2.18.2
 
 </td>
 </tr>
@@ -309,6 +309,18 @@ Oracle JDK 64-bit
 
 </td>
 </tr>
+<tr>
+<td valign="top">
+
+25
+
+</td>
+<td valign="top">
+
+2.19.0 and higher
+
+</td>
+</tr>
 </table>
 
 Back to [Content](prerequisites-e23f776.md#loioe23f776e4d594fdbaeeb1196d47bbcc0__content)
@@ -318,6 +330,9 @@ Back to [Content](prerequisites-e23f776.md#loioe23f776e4d594fdbaeeb1196d47bbcc0_
 <a name="loioe23f776e4d594fdbaeeb1196d47bbcc0__matrix"/>
 
 ## Product Availability Matrix
+
+> ### Note:  
+> Whether a concrete combination of JDK and operating system can actually be used depends on the availablity of the JDK for the operating system.
 
 
 <table>
@@ -742,7 +757,7 @@ x86\_64, aarch64
 </td>
 <td valign="top">
 
-2.16.0 up to 2.18.x
+2.16.0 up to 2.18.2
 
 </td>
 </tr>
@@ -759,7 +774,7 @@ x86\_64, aarch64
 </td>
 <td valign="top">
 
-2.17.0 and higher
+2.17.0 up to 2.19.x
 
 </td>
 </tr>
@@ -794,6 +809,57 @@ x86\_64
 <td valign="top">
 
 2.18.0 and higher
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+macOS 26 \(Tahoe\)
+
+</td>
+<td valign="top">
+
+x86\_64, aarch64
+
+</td>
+<td valign="top">
+
+2.19.0 and higher
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+SUSE Linux Enterprise Server 15, Red Hat Enterprise Linux 9
+
+</td>
+<td valign="top">
+
+aarch64
+
+</td>
+<td valign="top">
+
+2.19.0 and higher
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+SUSE Linux Enterprise Server 16, Red Hat Enterprise Linux 10
+
+</td>
+<td valign="top">
+
+x86\_64, ppc64le, aarch64
+
+</td>
+<td valign="top">
+
+2.19.0 and higher
 
 </td>
 </tr>

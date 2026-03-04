@@ -61,12 +61,14 @@ The number of requests that are shown is limited to 50. You can either view all 
 
 ![](images/SCC_Monitoring_Cloud_to_On-Premise_3_37faef8.png)
 
-A horizontal stacked bar chart breaks down the duration of the request into several parts: external \(backend\), open connection, internal \(Cloud Connector\), SSO handling, and latency effects \(between SAP BTP and Cloud Connector\). The numbers in each part represent milliseconds.
+For the **HTTP** protocol specifically, an additional section called *Protocol-Specific Data* is available as of Cloud Connector version 2.19. This section displays extended request information, such as *Status Code* and *Status Message* \(200 and OK in the case shown above\).
+
+A horizontal stacked bar chart breaks down the duration of the request into several parts: *External \(Back End\)*, *Open Connection, Internal \(SCC\)*, *SSO Handling*, and *Latency Effects* \(between SAP BTP and Cloud Connector\). The numbers shown on the chart sections are milliseconds.
 
 > ### Note:  
 > Sections with a duration of less than 1ms are not included.
 
-In the above example, the selected request took 34ms, to which the Cloud Connector contributed 1ms. Opening a connection took 18ms. Backend processing consumed 7ms. Latency effects accounted for the remaining 8ms, while there was no SSO handling necessary and hence it took no time at all.
+In the example, the selected request took 65ms, to which the Cloud Connector contributed 2ms. Opening the connection took 18ms. Processing at the back-end side consumed 41ms. Latency effects accounted for the remaining 4ms, while there was no SSO handling necessary and hence it took no time at all.
 
 > ### Note:  
 > The term "request" only refers to RFC and HTTP requests. TCP or LDAP traffic does not contribute to *Most Recent Requests* or *Top Time Consumers*.

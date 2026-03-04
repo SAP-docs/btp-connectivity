@@ -1,8 +1,8 @@
 <!-- loioe8f309f6f28b45a9afe342a6e515f3fc -->
 
-# Truststore Backend Certificates
+# Truststore Back-End Certificates
 
-Manage backend certificates in the truststore via API.
+Manage back-end certificates in the truststore via API.
 
 
 
@@ -12,6 +12,9 @@ Manage backend certificates in the truststore via API.
 
 > ### Note:  
 > This API is available as of Cloud Connector version 2.15.0.
+
+> ### Caution:  
+> The path component *onPremises* of the URI is available as of version 2.18.0. Older versions must use *onPremise*. The latter is currently accepted by all versions, but we recommend that you use *onPremises* as *onPremise* may be discontinued at some point.
 
 
 <table>
@@ -23,7 +26,7 @@ URI
 </td>
 <td valign="top">
 
-`/api/v1/configuration/connector/onPremise/truststore` 
+`/api/v1/configuration/connector/onPremises/truststore` 
 
 </td>
 </tr>
@@ -87,7 +90,7 @@ Roles
 </td>
 <td valign="top">
 
-Administrator, Subaccount Administrator, Display, Support
+Administrator, Associate Administrator, Subaccount Administrator, Display, Support, Monitoring
 
 </td>
 </tr>
@@ -106,14 +109,14 @@ Administrator, Subaccount Administrator, Display, Support
 -   `notAfterTimeStamp`: \(a UTC long number\).
 
 > ### Note:  
-> No HTTP requests can be executed if `trustAllBackends` is `false` and the certificate list as per `trustedBackendSystems` is empty.
+> No HTTP requests can be processed if `trustAllBackends` is `false` and the certificate list as per `trustedBackendSystems` is empty.
 
 
 
 ## Example
 
 ```
-curl -i -k -u <user>:<password> -X GET https://<host>:<port>/api/v1/configuration/connector/onPremise/truststoreConfiguration
+curl -i -k -u <user>:<password> -X GET https://<host>:<port>/api/v1/configuration/connector/onPremises/truststoreConfiguration
 ```
 
 
@@ -135,7 +138,7 @@ URI
 </td>
 <td valign="top">
 
-`/api/v1/configuration/connector/onPremise/truststore` 
+`/api/v1/configuration/connector/onPremises/truststore` 
 
 </td>
 </tr>
@@ -211,7 +214,7 @@ Roles
 </td>
 <td valign="top">
 
-Administrator
+Administrator, Associate Administrator
 
 </td>
 </tr>
@@ -229,14 +232,14 @@ Administrator
 ## Example
 
 ```
-curl -k -u <user>:<password> -X PATCH  -H "Accept: application/json" -d '{"trustAllBackends": true}' https://<host>:<port>/api/v1/configuration/connector/onPremise/truststore
+curl -k -u <user>:<password> -X PATCH  -H "Accept: application/json" -d '{"trustAllBackends": true}' https://<host>:<port>/api/v1/configuration/connector/onPremises/truststore
 ```
 
 
 
 <a name="loioe8f309f6f28b45a9afe342a6e515f3fc__section_wpj_r4x_ycc"/>
 
-## Add a Backend Certificate to Truststore \(Master Only\)
+## Add a Back-End Certificate to Truststore \(Master Only\)
 
 > ### Note:  
 > This API is available as of Cloud Connector version 2.18.0.
@@ -251,7 +254,7 @@ URI
 </td>
 <td valign="top">
 
-`/api/v1/configuration/connector/onPremise/truststore/certificates` 
+`/api/v1/configuration/connector/onPremises/truststore/certificates` 
 
 </td>
 </tr>
@@ -327,7 +330,7 @@ Roles
 </td>
 <td valign="top">
 
-Administrator
+Administrator, Associate Administrator
 
 </td>
 </tr>
@@ -349,14 +352,14 @@ Administrator
 ## Example
 
 ```
-curl -k -u <user>:<password> --request POST -F 'certificates=@<file>' https://<host>:<port>/api/v1/configuration/connector/onPremise/truststore/certificates
+curl -k -u <user>:<password> --request POST -F 'certificates=@<file>' https://<host>:<port>/api/v1/configuration/connector/onPremises/truststore/certificates
 ```
 
 
 
 <a name="loioe8f309f6f28b45a9afe342a6e515f3fc__section_ddp_xfd_5cc"/>
 
-## Download All Backend Certificates From Truststore \(Master Only\)
+## Download All Back-End Certificates From Truststore \(Master Only\)
 
 > ### Note:  
 > This API is available as of Cloud Connector version 2.18.0.
@@ -371,7 +374,7 @@ URI
 </td>
 <td valign="top">
 
-`/api/v1/configuration/connector/onPremise/truststore/certificates` 
+`/api/v1/configuration/connector/onPremises/truststore/certificates` 
 
 </td>
 </tr>
@@ -445,7 +448,7 @@ Roles
 </td>
 <td valign="top">
 
-Administrator, Subaccount Administrator, Support
+Administrator, Associate Administrator, Subaccount Administrator, Display, Support, Monitoring
 
 </td>
 </tr>
@@ -464,14 +467,14 @@ Administrator, Subaccount Administrator, Support
 ## Example
 
 ```
-curl -k -u <user>:<password> --request GET  -H "Accept: application/x-pem-file" --output <pem file> https://<host>:<port>/api/v1/configuration/connector/onPremise/truststore/certificates
+curl -k -u <user>:<password> --request GET  -H "Accept: application/x-pem-file" --output <pem file> https://<host>:<port>/api/v1/configuration/connector/onPremises/truststore/certificates
 ```
 
 
 
 <a name="loioe8f309f6f28b45a9afe342a6e515f3fc__section_p4d_5wv_tcc"/>
 
-## Download a Backend Certificate From Truststore \(Master Only\)
+## Download a Back-End Certificate From Truststore \(Master Only\)
 
 > ### Note:  
 > This API is available as of Cloud Connector version 2.18.0.
@@ -486,7 +489,7 @@ URI
 </td>
 <td valign="top">
 
-`/api/v1/configuration/connector/onPremise/truststore/certificates/<alias>` 
+`/api/v1/configuration/connector/onPremises/truststore/certificates/<alias>` 
 
 </td>
 </tr>
@@ -558,7 +561,7 @@ Roles
 </td>
 <td valign="top">
 
-Administrator, Subaccount Administrator, Support
+Administrator, Associate Administrator, Subaccount Administrator, Display, Support, Monitoring
 
 </td>
 </tr>
@@ -577,14 +580,14 @@ Administrator, Subaccount Administrator, Support
 ## Example
 
 ```
-curl -k -u <user>:<password> --request GET  -H "Accept: application/pkix-cert" --output <cert file> https://<host>:<port>/api/v1/configuration/connector/onPremise/truststore/certificates/<alias>
+curl -k -u <user>:<password> --request GET  -H "Accept: application/pkix-cert" --output <cert file> https://<host>:<port>/api/v1/configuration/connector/onPremises/truststore/certificates/<alias>
 ```
 
 
 
 <a name="loioe8f309f6f28b45a9afe342a6e515f3fc__section_snl_13d_s5b"/>
 
-## Delete a Backend Certificate From Truststore \(Master Only\)
+## Delete a Back-End Certificate From Truststore \(Master Only\)
 
 > ### Note:  
 > This API is available as of Cloud Connector version 2.15.0.
@@ -599,7 +602,7 @@ URI
 </td>
 <td valign="top">
 
-`/api/v1/configuration/connector/onPremise/truststore/certificates/<alias>` 
+`/api/v1/configuration/connector/onPremises/truststore/certificates/<alias>` 
 
 </td>
 </tr>
@@ -659,7 +662,7 @@ Roles
 </td>
 <td valign="top">
 
-Administrator
+Administrator, Associate Administrator
 
 </td>
 </tr>
@@ -674,14 +677,14 @@ Administrator
 ## Example
 
 ```
-curl -k -H "Accept: application/json" -u <user>:<password> --request DELETE https://<host>:<port>/api/v1/configuration/connector/onPremise/truststore/certificates/<alias>
+curl -k -H "Accept: application/json" -u <user>:<password> --request DELETE https://<host>:<port>/api/v1/configuration/connector/onPremises/truststore/certificates/<alias>
 ```
 
 
 
 <a name="loioe8f309f6f28b45a9afe342a6e515f3fc__section_akp_13d_s5b"/>
 
-## Delete All CA Backend From Truststore \(Master Only\)
+## Delete All CA Back-End Certificates From Truststore \(Master Only\)
 
 > ### Note:  
 > This API is available as of Cloud Connector version 2.15.0.
@@ -696,7 +699,7 @@ URI
 </td>
 <td valign="top">
 
-`/api/v1/configuration/connector/onPremise/truststore/certificates` 
+`/api/v1/configuration/connector/onPremises/truststore/certificates` 
 
 </td>
 </tr>
@@ -756,7 +759,7 @@ Roles
 </td>
 <td valign="top">
 
-Administrator
+Administrator, Associate Administrator
 
 </td>
 </tr>
@@ -767,6 +770,6 @@ Administrator
 ## Example
 
 ```
-curl -k -H "Accept: application/json" -u <user>:<password> --request DELETE https://<host>:<port>/api/v1/configuration/connector/onPremise/truststore/certificates
+curl -k -H "Accept: application/json" -u <user>:<password> --request DELETE https://<host>:<port>/api/v1/configuration/connector/onPremises/truststore/certificates
 ```
 

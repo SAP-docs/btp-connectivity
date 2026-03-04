@@ -24,7 +24,16 @@ Find the detailed configuration steps for each communication protocol here:
 
 Adding a new subaccount is not of any use unless you expose the systems you want to be available for this subaccount in the access control settings. You can copy the complete access control settings from another subaccount on the same Cloud Connector, or from a file, by using the import/export mechanism provided by the Cloud Connector.
 
-You can find detailed information, for example the entry creation date for access control or resource entries, by choosing the *Details* button in the **Actions** column.
+You can find detailed information, like the creation date of an access control entry \(also referred to as a *system mapping*\) , by choosing the *Details* button in the **Actions** column.
+
+![](images/SCC_AccessControl_-_Details_32a91ff.png)
+
+When creating an access control entry, the connection to the respective internal host is checked immediately, and details of that check are available via the detailed information as explained above. Such a check can be repeated, or executed for the first time after restarting the Cloud Connector, by pressing the respective button in the **Actions** column:
+
+![](images/SCC_AccessControl_-_Connection_0ccadbd.png)
+
+> ### Note:  
+> If an internal host and port combination is used by several access control entries, the check result will be updated for all those entries unless the protocol differs from the protocol where the check was triggered.
 
 
 
@@ -60,9 +69,9 @@ Two additional options define the behavior of the import:
 
 <a name="loiof42fe4471d6a4a5fb09b7f3bb83c66a4__section_ukl_jsw_1bc"/>
 
-## Backend Types
+## Back-End Types
 
-When creating a new access control entry, you can select one of the following backend types :
+When creating a new access control entry, you can select one of the following back-end types :
 
 
 <table>
@@ -91,7 +100,11 @@ ABAP System
 </td>
 <td valign="top">
 
-HTTP\(S\), RFC\(S\), TCP\(S\)
+HTTP, HTTPS,
+
+RFC, RFC SNC, WebSocket RFC,
+
+TCP, TCP TLS
 
 </td>
 <td valign="top">
@@ -108,29 +121,14 @@ Supports:
 <tr>
 <td valign="top">
 
-Non-SAP System
+SAP HANA
 
 </td>
 <td valign="top">
 
-HTTP\(S\), TCP\(S\), LDAP\(S\)
+HTTP, HTTPS,
 
-</td>
-<td valign="top">
-
- 
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-Other SAP System
-
-</td>
-<td valign="top">
-
-HTTP\(S\), TCP\(S\)
+TCP, TCP TLS
 
 </td>
 <td valign="top">
@@ -147,24 +145,7 @@ SAP Application Server Java
 </td>
 <td valign="top">
 
-HTTP\(S\)
-
-</td>
-<td valign="top">
-
- 
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-SAP Business Connector
-
-</td>
-<td valign="top">
-
-HTTP\(S\)
+HTTP, HTTPS
 
 </td>
 <td valign="top">
@@ -181,7 +162,7 @@ SAP Composition Environment
 </td>
 <td valign="top">
 
-HTTP\(S\)
+HTTP, HTTPS
 
 </td>
 <td valign="top">
@@ -193,33 +174,12 @@ HTTP\(S\)
 <tr>
 <td valign="top">
 
-SAP Gateway
+SAP Business Connector
 
 </td>
 <td valign="top">
 
-HTTP\(S\), RFC\(S\), TCP\(S\)
-
-</td>
-<td valign="top">
-
-Supports:
-
--   [URL mangling for BSPs](https://community.sap.com/t5/additional-blogs-by-sap/bsp-in-depth-url-mangling/ba-p/12859663)
-
-
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-SAP HANA
-
-</td>
-<td valign="top">
-
-HTTP\(S\), TCP\(S\)
+HTTP, HTTPS
 
 </td>
 <td valign="top">
@@ -236,7 +196,72 @@ SAP Process Integration
 </td>
 <td valign="top">
 
-HTTP\(S\)
+HTTP, HTTPS
+
+</td>
+<td valign="top">
+
+ 
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+SAP Gateway
+
+</td>
+<td valign="top">
+
+HTTP, HTTPS,
+
+RFC, RFC SNC, WebSocket RFC,
+
+TCP, TCP TLS
+
+</td>
+<td valign="top">
+
+Supports:
+
+-   [URL mangling for BSPs](https://community.sap.com/t5/additional-blogs-by-sap/bsp-in-depth-url-mangling/ba-p/12859663)
+
+
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+Other SAP System
+
+</td>
+<td valign="top">
+
+HTTP, HTTPS,
+
+TCP, TCP TLS
+
+</td>
+<td valign="top">
+
+ 
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+Non-SAP System
+
+</td>
+<td valign="top">
+
+HTTP, HTTPS,
+
+TCP, TCP TLS,
+
+LDAP, LDAPS
 
 </td>
 <td valign="top">
@@ -250,15 +275,15 @@ HTTP\(S\)
 **Related Information**  
 
 
-[Configure Access Control \(HTTP\)](configure-access-control-http-e7d4927.md "Specify the backend systems that can be accessed by your cloud applications using HTTP.")
+[Configure Access Control \(HTTP\)](configure-access-control-http-e7d4927.md "Specify the back-end systems that can be accessed by your cloud applications using HTTP.")
 
-[Configure Access Control \(RFC\)](configure-access-control-rfc-ca58689.md "Specify the backend systems that can be accessed by your cloud applications using RFC.")
+[Configure Access Control \(RFC\)](configure-access-control-rfc-ca58689.md "Specify the back-end systems that can be accessed by your cloud applications using RFC.")
 
 [Configure Access Control \(LDAP\)](configure-access-control-ldap-e4ba9b3.md "Add a specified system mapping to the Cloud Connector if you want to use an on-premises LDAP server or user authentication in your cloud application.")
 
-[Configure Access Control \(TCP\)](configure-access-control-tcp-befd437.md "Add a specified system mapping to the Cloud Connector if you want to use the TCP protocol for communication with a backend system.")
+[Configure Access Control \(TCP\)](configure-access-control-tcp-befd437.md "Add a specified system mapping to the Cloud Connector if you want to use the TCP protocol for communication with a back-end system.")
 
-[Configure Accessible Resources](configure-accessible-resources-3b12086.md "Configure backend systems and resources in the Cloud Connector, to make them available for a cloud application.")
+[Configure Accessible Resources](configure-accessible-resources-3b12086.md "Configure back-end systems and resources in the Cloud Connector, to make them available for a cloud application.")
 
 [Configure Domain Mappings for Cookies](configure-domain-mappings-for-cookies-b7d257b.md "")
 

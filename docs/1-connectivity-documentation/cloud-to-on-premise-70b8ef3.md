@@ -1,6 +1,6 @@
 <!-- loio70b8ef33812e486d8b745a0b47fd093e -->
 
-# Scenario: Cloud to On-Premise
+# Cloud to On-Premise
 
 Forward the identity of cloud users from SAP BTP to on-premise systems using principal propagation.
 

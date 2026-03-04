@@ -1,6 +1,6 @@
 <!-- loio7a74c144076f4b3aac84df0ff9556081 -->
 
-# Certificate Management for Backend Communication
+# Certificate Management for Back-End Communication
 
 Manage a CA certificate for principal propagation or a system certificate via API.
 
@@ -16,6 +16,6 @@ There are two similar sets of APIs for system certificate and CA certificate for
 > -   `value`: the value associated with the chosen type.
 
 -   [CA Certificate for Principal Propagation: APIs](ca-certificate-for-principal-propagation-apis-0c4a958.md)
--   [System Certificate: APIs](system-certificate-apis-236c084.md)
--   [Truststore Backend Certificates](truststore-backend-certificates-e8f309f.md)
+-   [System Certificate APIs](system-certificate-apis-236c084.md)
+-   [Truststore Back-End Certificates](truststore-back-end-certificates-e8f309f.md)
 

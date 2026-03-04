@@ -8,7 +8,7 @@ The Connectivity and Destination services let you forward the identity of a clou
 
 Two scenarios are supported: Cloud to on-premise \(using the Connectivity service\) and cloud to cloud \(using the Destination service\).
 
--   [Scenario: Cloud to On-Premise](scenario-cloud-to-on-premise-70b8ef3.md): The user is propagated from a cloud application to an on-premise system using a destination configuration with authentication type `PrincipalPropagation`.
+-   [Cloud to On-Premise](cloud-to-on-premise-70b8ef3.md): The user is propagated from a cloud application to an on-premise system using a destination configuration with authentication type `PrincipalPropagation`.
 
     > ### Note:  
     > This scenario requires the Cloud Connector to connect to your on-premise system.
@@ -17,7 +17,7 @@ Two scenarios are supported: Cloud to on-premise \(using the Connectivity servic
     > The on-premise use cases described in this guide are also applicable to virtual private cloud \(VPC\) environments.
 
 
--   [Scenario: Cloud to Cloud](scenario-cloud-to-cloud-65b11d4.md): The user is propagated from a cloud application to another remote \(cloud\) system using a destination configuration with authentication type `OAuth2SAMLBearerAssertion`.
+-   [Cloud to Cloud](cloud-to-cloud-65b11d4.md): The user is propagated from a cloud application to another remote \(cloud\) system using a destination configuration with authentication types `OAuth2SAMLBearerAssertion` or `OAuth2JWTBearer`.
 
 For more information on setting up destinations, see:
 

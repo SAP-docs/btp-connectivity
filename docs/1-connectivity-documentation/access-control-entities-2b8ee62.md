@@ -105,7 +105,7 @@ Roles
 </td>
 <td valign="top">
 
-Administrator,Subaccount Administrator, Display, Support
+Administrator, Associate Administrator, Subaccount Administrator, Display, Support, Monitoring
 
 </td>
 </tr>
@@ -201,7 +201,7 @@ Roles
 </td>
 <td valign="top">
 
-Administrator,Subaccount Administrator, Display, Support
+Administrator, Associate Administrator, Subaccount Administrator, Display, Support, Monitoring
 
 </td>
 </tr>
@@ -299,7 +299,7 @@ Roles
 </td>
 <td valign="top">
 
-Administrator,Subaccount Administrator
+Administrator, Associate Administrator, Subaccount Administrator
 
 </td>
 </tr>
@@ -315,7 +315,7 @@ Back to [Top](access-control-entities-2b8ee62.md#loio2b8ee62d19db43649365f82f78b
 
 <a name="loio2b8ee62d19db43649365f82f78b185a0__extend_allowed"/>
 
-## Extend Allowed Clients \(Master Only\)
+## Add Allowed Clients \(Master Only\)
 
 
 <table>
@@ -392,7 +392,7 @@ Roles
 </td>
 <td valign="top">
 
-Administrator,Subaccount Administrator
+Administrator, Associate Administrator, Subaccount Administrator
 
 </td>
 </tr>
@@ -485,7 +485,7 @@ Roles
 </td>
 <td valign="top">
 
-Administrator,Subaccount Administrator
+Administrator, Associate Administrator, Subaccount Administrator
 
 </td>
 </tr>
@@ -506,7 +506,7 @@ Back to [Top](access-control-entities-2b8ee62.md#loio2b8ee62d19db43649365f82f78b
 
 <a name="loio2b8ee62d19db43649365f82f78b185a0__extend_blocked"/>
 
-## Extend Blocked Client/User Pairs \(Master Only\)
+## Add Blocked Client/User Pairs \(Master Only\)
 
 
 <table>
@@ -582,7 +582,7 @@ Roles
 </td>
 <td valign="top">
 
-Administrator,Subaccount Administrator
+Administrator, Associate Administrator, Subaccount Administrator
 
 </td>
 </tr>
@@ -675,7 +675,7 @@ Roles
 </td>
 <td valign="top">
 
-Administrator,Subaccount Administrator
+Administrator, Associate Administrator, Subaccount Administrator
 
 </td>
 </tr>
@@ -759,7 +759,7 @@ Roles
 </td>
 <td valign="top">
 
-Administrator,Subaccount Administrator
+Administrator, Associate Administrator, Subaccount Administrator
 
 </td>
 </tr>
@@ -843,7 +843,7 @@ Roles
 </td>
 <td valign="top">
 
-Administrator,Subaccount Administrator 
+Administrator, Subaccount Administrator 
 
 </td>
 </tr>
@@ -927,7 +927,7 @@ Roles
 </td>
 <td valign="top">
 
-Administrator,Subaccount Administrator 
+Administrator, Associate Administrator, Subaccount Administrator
 
 </td>
 </tr>

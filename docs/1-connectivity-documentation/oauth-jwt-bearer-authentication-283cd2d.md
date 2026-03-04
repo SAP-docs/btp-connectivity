@@ -165,7 +165,7 @@ The URL of the token service, against which the token exchange is performed. Dep
 
     `{tenant}` is resolved as the subdomain of the subaccount on behalf of which the caller is performing the call. If the placeholder is not found, `{tenant}` is inserted as a subdomain of the token service URL.
 
-    See [Automated Access Token Retrieval](exchanging-user-jwts-via-oauth2usertokenexchange-destinations-39d4265.md#loio39d42654093e4f8db20398a06f7eab2b__retrrieval) for information about how the tenant is determined.
+    See [Automated Access Token Retrieval](exchanging-user-jwts-via-oauth2jwtbearer-destinations-39d4265.md#loio39d42654093e4f8db20398a06f7eab2b__retrrieval) for information about how the tenant is determined.
 
     The subaccount subdomain is mandated during creation of the subaccount, see [Create a Subaccount](https://help.sap.com/viewer/65de2977205c403bbc107264b8eccf4b/Cloud/en-US/05280a123d3044ae97457a25b3013918.html "Create subaccounts in your global account using the SAP BTP cockpit.") :arrow_upper_right:.
 

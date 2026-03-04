@@ -1,6 +1,6 @@
 <!-- loio67a3b83989fd4c4f8aef2f9e2ce3787a -->
 
-# User Propagation from the Cloud Foundry Environment to SAP SuccessFactors
+# SAML Bearer Assertion Flow from the Cloud Foundry Environment to SAP SuccessFactors
 
 Configure user propagation from the SAP BTP Cloud Foundry environment to SAP SuccessFactors.
 
@@ -10,11 +10,11 @@ Configure user propagation from the SAP BTP Cloud Foundry environment to SAP Suc
 
 ## Steps
 
-[Scenario](user-propagation-from-the-cloud-foundry-environment-to-sap-successfactors-67a3b83.md#loio67a3b83989fd4c4f8aef2f9e2ce3787a__scenario_sf) 
+[Scenario](saml-bearer-assertion-flow-from-the-cloud-foundry-environment-to-sap-successfactors-67a3b83.md#loio67a3b83989fd4c4f8aef2f9e2ce3787a__scenario_sf) 
 
-[Prerequisites](user-propagation-from-the-cloud-foundry-environment-to-sap-successfactors-67a3b83.md#loio67a3b83989fd4c4f8aef2f9e2ce3787a__prereq_sf)
+[Prerequisites](saml-bearer-assertion-flow-from-the-cloud-foundry-environment-to-sap-successfactors-67a3b83.md#loio67a3b83989fd4c4f8aef2f9e2ce3787a__prereq_sf)
 
-[Concept Overview](user-propagation-from-the-cloud-foundry-environment-to-sap-successfactors-67a3b83.md#loio67a3b83989fd4c4f8aef2f9e2ce3787a__concept_sf)
+[Concept Overview](saml-bearer-assertion-flow-from-the-cloud-foundry-environment-to-sap-successfactors-67a3b83.md#loio67a3b83989fd4c4f8aef2f9e2ce3787a__concept_sf)
 
 [Create an OAuth Client in SAP SuccessFactors](create-an-oauth-client-in-sap-successfactors-69130a7.md)
 

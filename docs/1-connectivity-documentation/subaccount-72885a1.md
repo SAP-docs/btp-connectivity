@@ -4,6 +4,11 @@
 
 Manage the Cloud Connector's subaccount settings via API.
 
+> ### Note:  
+> Access to *managed* subaccounts is reserved for the role *Administrator* for all methods except for method GET.
+> 
+> For more information on managed subaccounts, see [Adding a Subaccount](adding-and-managing-subaccounts-f16df12.md#loiof16df12fab9f4fe1b8a4122f0fd54b6e__add) \(step 2\).
+
 
 
 <a name="loio72885a1eee784790a8c8d07538051134__operations"/>
@@ -72,6 +77,10 @@ Manage the Cloud Connector's subaccount settings via API.
 
 </td>
 <td valign="top">
+
+[Get Automatic Trust Synchronization Configuration](subaccount-72885a1.md#loio72885a1eee784790a8c8d07538051134__GetAutoTrustSync)
+
+[Set Automatic Trust Synchronization Configuration](subaccount-72885a1.md#loio72885a1eee784790a8c8d07538051134__SetAutoTrustSync)
 
 [Synchronize Trust List \(Master Only\)](subaccount-72885a1.md#loio72885a1eee784790a8c8d07538051134__syncTrustList)
 
@@ -169,7 +178,7 @@ Roles
 </td>
 <td valign="top">
 
-Administrator, Subaccount Administrator, Display, Support
+Administrator, Associate Administrator, Subaccount Administrator, Display, Support, Monitoring
 
 </td>
 </tr>
@@ -228,7 +237,7 @@ Request
 <td valign="top">
 
 ```
-{regionHost, subaccount, cloudUser, cloudPassword, locationID, displayName, description}
+{regionHost, subaccount, cloudUser, cloudPassword, locationID, autoCertRenewal, displayName, description, isManaged}
 
 ```
 
@@ -247,7 +256,7 @@ Request
 <td valign="top">
 
 ```
-{authenticationData, locationID, displayName, description}
+{authenticationData, locationID, autoCertRenewal, displayName, description, isManaged}
 ```
 
 
@@ -265,7 +274,7 @@ Response
 201, created subaccount entity:
 
 ```
-{regionHost, subaccount, locationID, displayName, description, tunnel}
+{regionHost, subaccount, locationID, autoCertRenewal, displayName, description, tunnel}
 
 ```
 
@@ -293,7 +302,7 @@ Roles
 </td>
 <td valign="top">
 
-Administrator, Subaccount Administrator
+Administrator, Associate Administrator, Subaccount Administrator
 
 </td>
 </tr>
@@ -307,19 +316,23 @@ Administrator, Subaccount Administrator
 
 -   `cloudPassword`: password for the cloud user.
 
--   `authenticationData`: subaccount authentication data, used instead of `cloudUser`, `cloudPassword` and `regionHost` \(as of version 2.17.0\).
+-   `authenticationData`: subaccount authentication data, used instead of \(that is, potentially overriding\) `cloudUser`, `cloudPassword` and `regionHost`.
 -   `locationID`: location identifier for the Cloud Connector instance \(a string; optional\).
+-   `autoCertRenewal`: flag indicating the auto renewal of the subaccount certificate is allowed \(boolean; optional, default is false\) \(as of 2.19\).
 -   `displayName`: display name of the subaccount \(a string; optional\).
 -   `description`: subaccount description \(a string; optional\).
+-   `isManaged`: flag that indicates whether or not the subaccount to be created should be a managed subaccount \(Boolean; optional, default is false\)
 
 **Response Properties**:
 
 -   `regionHost`: region host name \(a string\).
 -   `subaccount`: subaccount technical name \(a string\).
 -   `locationID`: location ID \(a string\); this property is not available if the default location ID is in use.
+-   `autoCertRenewal`: flag indicating whether auto renewal of the subaccount certificate is allowed \(as of 2.19\).
 -   `displayName`: display name of the subaccount \(a string\); this property is not available if there is no specified display name.
 -   `description`: subaccount description \(a string\); this property is not available if there is no description.
 -   `tunnel`: object outlining the current state of the tunnel.
+-   `isManaged`: a flag that indicates whether or not the subaccount is a managed subaccount \(as of 2.19\).
 
 **Errors**:
 
@@ -404,7 +417,7 @@ Roles
 </td>
 <td valign="top">
 
-Administrator, Subaccount Administrator
+Administrator, Associate Administrator, Subaccount Administrator
 
 </td>
 </tr>
@@ -458,7 +471,7 @@ Request
 <td valign="top">
 
 ```
-{locationID, displayName, description}
+{locationID, autoCertRenewal, displayName, description}
 ```
 
 
@@ -474,7 +487,7 @@ Response
 <td valign="top">
 
 ```
-{regionHost, subaccount, locationID, displayName, description, tunnel}
+{regionHost, subaccount, locationID, autoCertRenewal, displayName, description, tunnel}
 
 ```
 
@@ -502,7 +515,7 @@ Roles
 </td>
 <td valign="top">
 
-Administrator, Subaccount Administrator
+Administrator, Associate Administrator, Subaccount Administrator
 
 </td>
 </tr>
@@ -511,6 +524,7 @@ Administrator, Subaccount Administrator
 **Request Properties**:
 
 -   `locationID`: location identifier for the Cloud Connector instance \(a string; optional\); if this parameter is not supplied the location ID will not change. Revert to the default location ID by supplying the empty string.
+-   `autoCertRenewal`: flag indicating the auto renewal of the subaccount certificate is allowed \(boolean; optional, default false\) \(as of 2.19\).
 -   `displayName`: subaccount display name \(a string; optional\); if this parameter is not supplied the display name will not change. Clear the display name by using an empty string.
 -   `description`: subaccount description \(a string; optional\); if this parameter is not supplied the description will not change. Clear the description by using an empty string.
 
@@ -519,6 +533,7 @@ Administrator, Subaccount Administrator
 -   `regionHost`: region host name \(a string\).
 -   `subaccount`: subaccount technical name \(a string\).
 -   `locationID`: location identifier for the Cloud Connector instance \(a string\); this property is not available if the default location ID is in use.
+-   `autoCertRenewal`: flag indicating the auto renewal of the subaccount certificate is allowed \(boolean; optional, default false\) \(as of 2.19\).
 -   `displayName`: display name of the subaccount \(a string\); this property is not available if there is no specified display name.
 -   `description`: subaccount description \(a string\); this property is not available if there is no description.
 -   `tunnel`: object outlining the current state of the tunnel.
@@ -609,7 +624,7 @@ Roles
 </td>
 <td valign="top">
 
-Administrator, Subaccount Administrator
+Administrator, Associate Administrator, Subaccount Administrator
 
 </td>
 </tr>
@@ -696,7 +711,7 @@ Response
 <td valign="top">
 
 ```
-{regionHost, subaccount, locationID, displayName, description, tunnel}
+{regionHost, subaccount, locationID, autoCertRenewal, displayName, description, tunnel}
 
 ```
 
@@ -724,7 +739,7 @@ Roles
 </td>
 <td valign="top">
 
-Administrator, Subaccount Administrator
+Administrator, Associate Administrator, Subaccount Administrator
 
 </td>
 </tr>
@@ -743,6 +758,7 @@ Administrator, Subaccount Administrator
 -   `regionHost`: region host name \(a string\).
 -   `subaccount`: subaccount technical name \(a string\).
 -   `locationID`: location identifier for the Cloud Connector instance \(a string\); this property is not available if the default location ID is in use.
+-   `autoCertRenewal`: flag indicating that auto renewal of the subaccount certificate is allowed \(boolean; optional, default false\) \(as of 2.19\).
 -   `displayName`: display name of the subaccount \(a string\); this property is not available if there is no specified display name.
 -   `description`: subaccount description \(a string\); this property is not available if there is no description.
 -   `tunnel`: object outlining the current state of the tunnel.
@@ -806,7 +822,7 @@ Response
 <td valign="top">
 
 ```
-{regionHost, subaccount, locationID, displayName, description, tunnel:{state, connections, applicationConnections:[], serviceChannels:[]}}
+{regionHost, subaccount, locationID, autoCertRenewal, displayName, description, tunnel, isManaged}
 
 ```
 
@@ -834,7 +850,7 @@ Roles
 </td>
 <td valign="top">
 
-Administrator, Subaccount Administrator, Display, Support
+Administrator, Associate Administrator, Subaccount Administrator, Display, Support, Monitoring
 
 </td>
 </tr>
@@ -845,17 +861,11 @@ Administrator, Subaccount Administrator, Display, Support
 -   `regionHost`: region host name \(a string\).
 -   `subaccount`: subaccount technical name \(a string\).
 -   `locationID`: location ID \(a string\); this property is not available if the default location ID is in use.
+-   `autoCertRenewal`: flag indicating that auto renewal of the subaccount certificate is allowed \(as of version 2.19\).
 -   `displayName`: display name of the subaccount \(a string\); this property is not available if there is no specified display name.
 -   `description`: description \(a string\); this property is not available if there is no description.
--   `tunnel`: array of connection tunnels used by the subaccount.
-    -   `state`: *Connected*, *ConnectFailure*, or *Disconnected*
-
-    -   `connectedSinceTimeStamp`: connection start time as UTC timestamp
-    -   `connections`: number of subaccount connections
-    -   `applicationConnections`: array of connections to application instances
-    -   `serviceChannels`: type and state of the service channels used \(types: HANA database, Virtual Machine or RFC\)
-    -   `subaccountCertificate`: information on the subaccount certificate such as validity period, issuer and subject DN
-
+-   `tunnel`: object outlining the current state of the tunnel.
+-   `isManaged`: flag that indicates whether or not the subaccount is a managed subaccount \(as of version 2.19\).
 
 Back to [Operations](subaccount-72885a1.md#loio72885a1eee784790a8c8d07538051134__operations)
 
@@ -911,6 +921,243 @@ Back to [Operations](subaccount-72885a1.md#loio72885a1eee784790a8c8d07538051134_
 
 > ### Caution:  
 > Disaster recovery discontinued as of version 2.16. A `POST` request to */api/v1/configuration/subaccounts/<regionHost\>/<subaccount\>/recovery/takeover* will trigger a 410 response.
+
+Back to [Operations](subaccount-72885a1.md#loio72885a1eee784790a8c8d07538051134__operations)
+
+
+
+<a name="loio72885a1eee784790a8c8d07538051134__GetAutoTrustSync"/>
+
+## Get Automatic Trust Synchronization Configuration
+
+> ### Note:  
+> Available as of version 2.19.0.
+
+
+<table>
+<tr>
+<td valign="top">
+
+URI
+
+</td>
+<td valign="top">
+
+`/api/v1/configuration/subaccounts/<regionHost>/<subaccount>/trust` 
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+Method
+
+</td>
+<td valign="top">
+
+*GET* 
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+Request
+
+</td>
+<td valign="top">
+
+
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+Response
+
+</td>
+<td valign="top">
+
+```
+{autoSyncTrustEnabled}
+```
+
+
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+Errors
+
+</td>
+<td valign="top">
+
+ 
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+Roles
+
+</td>
+<td valign="top">
+
+Administrator, Associate Administrator, Subaccount Administrator, Display, Support, Monitoring
+
+</td>
+</tr>
+</table>
+
+**Response**:
+
+-   `autoSyncTrustEnabled`: Boolean - whether automatic trust configuration synchronization is enabled for this subaccount.
+
+**Errors**:
+
+-   `NOT_FOUND`: no subaccount found for the specified path parameters.
+
+> ### Sample Code:  
+> ```
+> curl -i -k -H "Accept: application/json" -u <user>:<password> -X GET https://<host>:<port>/api/v1/configuration/subaccounts/<regionHost>/<subaccount>/trust
+> ```
+
+> ### Sample Code:  
+> **Sample output: Trust synchronization configuration \(GET\)** 
+> 
+> ```
+> {
+>   "autoSyncTrustEnabled": true
+> }
+> ```
+
+Back to [Operations](subaccount-72885a1.md#loio72885a1eee784790a8c8d07538051134__operations)
+
+
+
+<a name="loio72885a1eee784790a8c8d07538051134__SetAutoTrustSync"/>
+
+## Set Automatic Trust Synchronization Configuration
+
+> ### Note:  
+> Available as of version 2.19.0.
+
+
+<table>
+<tr>
+<td valign="top">
+
+URI
+
+</td>
+<td valign="top">
+
+`/api/v1/configuration/subaccounts/<regionHost>/<subaccount>/trust` 
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+Method
+
+</td>
+<td valign="top">
+
+*PUT* 
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+Request
+
+</td>
+<td valign="top">
+
+```
+{autoSyncTrustEnabled}
+```
+
+
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+Response
+
+</td>
+<td valign="top">
+
+204 on success
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+Errors
+
+</td>
+<td valign="top">
+
+INVALID\_REQUEST, NOT\_FOUND
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+Roles
+
+</td>
+<td valign="top">
+
+Administrator, Associate Administrator, Subaccount Administrator
+
+</td>
+</tr>
+</table>
+
+**Request**:
+
+-   `autoSyncTrustEnabled`: Boolean - whether automatic trust configuration synchronization is enabled for this subaccount
+
+**Errors**:
+
+-   `NOT_FOUND`: no subaccount found for the specified path parameters.
+-   `INVALID_REQUEST`:
+
+    -   empty or malformed input data
+
+    -   invalid property name
+
+    -   invalid value for `autoSyncTrustEnabled`
+
+    -   no trust configuration found for the specified subaccount
+
+
+
+> ### Sample Code:  
+> ```
+> curl -i -k -H "Content-Type: application/json" -u <user>:<password> -X PUT https://<host>:<port>/api/v1/configuration/subaccounts/<regionHost>/<subaccount>/trust -d "{\"autoSyncTrustEnabled\": true}"
+> ```
+
+> ### Sample Code:  
+> **Sample input: Trust synchronization configuration \(PUT\)**
+> 
+> ```
+> {
+>   "autoSyncTrustEnabled": true
+> }
+> ```
 
 Back to [Operations](subaccount-72885a1.md#loio72885a1eee784790a8c8d07538051134__operations)
 
@@ -993,7 +1240,7 @@ Roles
 </td>
 <td valign="top">
 
-Administrator, Subaccount Administrator
+Administrator, Associate Administrator, Subaccount Administrator
 
 </td>
 </tr>
@@ -1085,7 +1332,7 @@ Roles
 </td>
 <td valign="top">
 
-Administrator, Subaccount Administrator, Display, Support
+Administrator, Associate Administrator, Subaccount Administrator, Display, Support, Monitoring
 
 </td>
 </tr>
@@ -1187,7 +1434,7 @@ Roles
 </td>
 <td valign="top">
 
-Administrator, Subaccount Administrator, Display, Support
+Administrator, Associate Administrator, Subaccount Administrator, Display, Support, Monitoring
 
 </td>
 </tr>
@@ -1287,7 +1534,7 @@ Roles
 </td>
 <td valign="top">
 
-Administrator, Subaccount Administrator
+Administrator, Associate Administrator, Subaccount Administrator
 
 </td>
 </tr>
@@ -1384,7 +1631,7 @@ Roles
 </td>
 <td valign="top">
 
-Administrator, Subaccount Administrator
+Administrator, Associate Administrator, Subaccount Administrator
 
 </td>
 </tr>
@@ -1485,7 +1732,7 @@ Roles
 </td>
 <td valign="top">
 
-Administrator, Subaccount Administrator
+Administrator, Associate Administrator, Subaccount Administrator
 
 </td>
 </tr>

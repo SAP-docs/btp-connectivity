@@ -22,17 +22,7 @@ This guarantees traceability of the Cloud Connector configuration changes via th
 
 If you have an LDAP server in your landscape, you can configure the Cloud Connector to authenticate Cloud Connector users against the LDAP server.
 
-Valid users or user groups must be assigned to one of the following roles:
-
--   Administrator users: `admin` or `sccadmin`
--   Display users: `sccdisplay` or `sccmonitoring`
-
-    > ### Note:  
-    > The role `sccmonitoring` provides access to the monitoring APIs, and is particularly used by the SAP Solution Manager infrastructure, see [Monitoring APIs](monitoring-apis-f6e7a7b.md).
-
--   Support users: `sccsupport`
-
-Alternatively, you can define custom role names for each of these user groups, see: [Use LDAP for User Administration](use-ldap-for-user-administration-120ceec.md).
+For more information about the supported roles for LDAP, see [Use LDAP for User Administration](use-ldap-for-user-administration-120ceec.md).
 
 Once configured, the default Cloud Connector `Administrator` user becomes inactive and can no longer be used to log on to the Cloud Connector.
 

@@ -428,5 +428,5 @@ The response for "find destination" contains an `authTokens` object in the forma
 
 [Destination Examples](destination-examples-3a2d575.md "Find configuration examples for HTTP and RFC destinations in SAP BTP, using different authentication types.")
 
-[Exchanging User JWTs via OAuth2UserTokenExchange Destinations](exchanging-user-jwts-via-oauth2usertokenexchange-destinations-39d4265.md "Automatic token retrieval using the OAuth2UserTokenExchange authentication type for HTTP destinations.")
+[Exchanging User JWTs via OAuth2JWTBearer Destinations](exchanging-user-jwts-via-oauth2jwtbearer-destinations-39d4265.md "Automatic token retrieval using the OAuth2JWTBearer authentication type for HTTP destinations.")
 

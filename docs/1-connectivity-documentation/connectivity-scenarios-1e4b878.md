@@ -40,7 +40,7 @@ For more information on these procedures, see:
 
 -   [Managing Destinations](managing-destinations-84e45e0.md)
 -   [Principal Propagation](principal-propagation-e2cbb48.md)
-    -   [Scenario: Cloud to Cloud](scenario-cloud-to-cloud-65b11d4.md)
+    -   [Cloud to Cloud](cloud-to-cloud-65b11d4.md)
         -   [Manage Trust](manage-trust-82dbeca.md)
 
 
@@ -49,10 +49,10 @@ For more information on these procedures, see:
 
 Some common *principal propagation* scenarios for communication between an SAP BTP multi-cloud \(Cloud Foundry\) application and different target applications are described in detail here:
 
--   [User Propagation from the Cloud Foundry Environment to SAP S/4HANA Cloud](user-propagation-from-the-cloud-foundry-environment-to-sap-s-4hana-cloud-9af03a0.md)
--   [User Propagation from the Cloud Foundry Environment to SAP SuccessFactors](user-propagation-from-the-cloud-foundry-environment-to-sap-successfactors-67a3b83.md)
--   [User Propagation between Cloud Foundry Applications](user-propagation-between-cloud-foundry-applications-8ebf60c.md)
--   [User Propagation from the Cloud Foundry Environment to the Neo Environment](user-propagation-from-the-cloud-foundry-environment-to-the-neo-environment-95dde76.md)
+-   [SAML Bearer Assertion Flow from the Cloud Foundry Environment to SAP S/4HANA Cloud](saml-bearer-assertion-flow-from-the-cloud-foundry-environment-to-sap-s-4hana-cloud-9af03a0.md)
+-   [SAML Bearer Assertion Flow from the Cloud Foundry Environment to SAP SuccessFactors](saml-bearer-assertion-flow-from-the-cloud-foundry-environment-to-sap-successfactors-67a3b83.md)
+-   [SAML Bearer Assertion Flow between Cloud Foundry Applications](saml-bearer-assertion-flow-between-cloud-foundry-applications-8ebf60c.md)
+-   [SAML Bearer Assertion Flow from the Cloud Foundry Environment to the Neo Environment](saml-bearer-assertion-flow-from-the-cloud-foundry-environment-to-the-neo-environment-95dde76.md)
 
 
 
@@ -72,7 +72,7 @@ Find more information about the basic procedures for cloud-to-on-premise communi
 -   [Cloud Connector](cloud-connector-e6c7616.md)
 -   [Managing Destinations](managing-destinations-84e45e0.md)
 -   [Principal Propagation](principal-propagation-e2cbb48.md)
-    -   [Scenario: Cloud to On-Premise](scenario-cloud-to-on-premise-70b8ef3.md)
+    -   [Cloud to On-Premise](cloud-to-on-premise-70b8ef3.md)
 
 
 

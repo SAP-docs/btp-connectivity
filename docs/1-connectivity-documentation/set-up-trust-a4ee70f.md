@@ -52,6 +52,8 @@ Select an entry to see its details:
 -   `Trusted`: indicates whether the entry is trusted for principal propagation.
 -   `Actions`: Choose the *Show Certificate Information* icon in the *Actions* column to display detail information for the corresponding entry if such a certificate is available. The icon is disabled for applications.
 
+The synchronization process can also be automated by enabling the *Automatic Trust Synchronization* switch, which instructs the Cloud Connector to synchronize the trust configuration at regular intervals. In particular, if the [automatic signing key rotation](https://help.sap.com/docs/authorization-and-trust-management-service/authorization-and-trust-management/rotate-signing-keys-of-access-tokens?version=Cloud#automatic-signing-key-rotation) is active you should consider to also enable the automatic synchronization.
+
 You can decide for each entry, whether to trust it for the principal propagation use case by choosing *Edit* and \(de\)selecting the *Trusted* checkbox.
 
 > ### Note:  
@@ -71,19 +73,21 @@ Set up principal propagation from SAP BTP to your internal system that is used i
 
 1.  Set up trust to an entity that is issuing an assertion for the logged-on user \(see section above\).
 2.  Set up the system identity for the Cloud Connector.
-    -   For HTTPS, you must import a system certificate \(X.509 certificate\) into your Cloud Connector.
+    -   For HTTPS and WebSocket RFC, you must import a system certificate \(X.509 certificate\) into your Cloud Connector.
 
         For more information, see [Install a System Certificate for Mutual Authentication](initial-configuration-http-3f974ea.md#loio3f974eae3cba4dafa274ec59f69daba6__section_N1001A_N10011_N10001).
 
-    -   For RFC, you must import an SNC PSE into your Cloud Connector.
+    -   For RFC SNC, you must use an SNC PSE for your Cloud Connector.
 
 3.  Configure the target system to trust the Cloud Connector.
 
     There are two levels of trust:
 
-    1.  First, you must allow the Cloud Connector to identify itself with its system certificate \(for HTTPS\), or with the SNC PSE \(for RFC\).
+    1.  First, you must allow the Cloud Connector to identify itself with its system certificate \(for HTTPS and WebSocket RFC\), or with the SNC PSE \(for RFC SNC\).
     2.  Then, you must allow this identity to propagate the user accordingly:
         -   For HTTPS, the Cloud Connector forwards the true identity in a short-lived `X.509` certificate in an HTTP header named `SSL_CLIENT_CERT`. The system must use this certificate for logging on the real user. The SSL handshake, however, is performed through the system certificate. For more information on identity forwarding, see [Configure Access Control \(HTTP\)](configure-access-control-http-e7d4927.md).
+        -   For WebSocket RFC, the Cloud Connector will forward the true identity in a short-lived X.509 certificate in an HTTP header named `SSL_CLIENT_CERT` while performing the WebSocket upgrade when connecting to the back end. The TLS handshake, however, is performed through the system certificate. The trigger to use the forwarded certificate for logon is sent as part of the RFC protocol.
+
         -   For RFC, the Cloud Connector forwards the true identity as part of the RFC protocol.
 
 

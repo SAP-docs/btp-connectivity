@@ -20,7 +20,7 @@ In the pop-up dialog, specify an object identifier \(OID\) to extract the user n
 
 ![](images/SCC_Logon_to_the_Cloud_Connector_with_a_Client_Certificate_2_39b7a67.png)
 
-You must add at least one trusted certificate to the *Authentication Allowlist*. These certificates are used by Cloud Connector to validate an incoming client certificate. Use root or issuer or intermediate certificates of eligible client certificates, or the client certificates themselves if they are self-signed. Use the *Certificate Required* checkbox for strict certificate logon \(checked\) or a mixed mode that also permits user/password logon if no client certificate is supplied by the browser \(unchecked\).
+You must add at least one trusted certificate to the *Authentication Allowlist*. These certificates are used by Cloud Connector to validate an incoming client certificate. Use root or issuer or intermediate certificates of eligible client certificates, or the client certificates themselves if they are self-signed. Check the *User/Password Fallback Enabled* checkbox for a mixed mode that also permits user/password logon if no client certificate is supplied by the browser, or uncheck it for strict certificate logon without any recourse to basic authentication through user and password.
 
 After activation, a restart is required.
 
@@ -35,4 +35,7 @@ The login works as follows:
 3.  If trust can be established, the Cloud Connector extracts the user from the subject as per the specified user mapping OID. This user will be logged on if it can be found in the current user store. If LDAP is used, the respective roles are checked and assigned.
 
 If you select, for example, *CN* as OID, and have a client certificate with a subject containing *CN=Administrator*, the user *Administrator* is used after mutual trust was established.
+
+> ### Note:  
+> You can reset certificate-based authentication and revert to basic authentication with user and password by running the script *useBasicAuthentication* in the root directory of your Cloud Connector installation. The Cloud Connector needs to be restarted for basic authentication to take effect.
 

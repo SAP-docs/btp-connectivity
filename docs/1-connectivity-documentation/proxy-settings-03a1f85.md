@@ -84,7 +84,7 @@ Roles
 </td>
 <td valign="top">
 
-Administrator, Display, Support
+Administrator, Associate Administrator, Subaccount Administrator, Display, Support, Monitoring
 
 </td>
 </tr>

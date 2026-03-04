@@ -84,7 +84,7 @@ Roles
 </td>
 <td valign="top">
 
-Administrator, Display, Support
+Administrator, Associate Administrator, Subaccount Administrator, Display, Support, Monitoring
 
 </td>
 </tr>
@@ -110,7 +110,7 @@ curl -ik -u <user>:<password>  https://<host>:<port>/api/v1/configuration/connec
 
 <a name="loio024ab69a759844d0866e7d605a0a2598__section_lys_l1b_vcb"/>
 
-## Set Solution Management Configuration and Turn On Reporting
+## Activate Solution Management Reporting
 
 This API turns on the integration with the Solution Manager. The prerequisite is an available Host Agent. You can specify a path to the Host Agent executable, if you don't use the default path.
 
@@ -176,7 +176,7 @@ Errors
 </td>
 <td valign="top">
 
-
+INVALID\_CONFIGURATION, RUNTIME\_FAILURE
 
 </td>
 </tr>
@@ -197,7 +197,12 @@ Administrator, Support
 **Response Properties**:
 
 -   `hostAgentPath`: path for host agent executable \(string, optional\).
--   `dsrEnabled`: flag indicating if DSR reporting is active \(boolean, optional\)-
+-   `dsrEnabled`: flag indicating if DSR reporting is active \(boolean, optional\)
+
+**Errors**:
+
+-   `INVALID_CONFIGURATION` \(409\): host agent executable is not a file or does not exist.
+-   `RUNTIME_FAILURE` \(500\): failure when executing the host agent executable.
 
 
 
@@ -218,7 +223,7 @@ curl -ik -u <user>:<password>  https://<host>:<port>/api/v1/configuration/connec
 
 <a name="loio024ab69a759844d0866e7d605a0a2598__section_j4c_12b_vcb"/>
 
-## Turn Off Solution Management Reporting
+## Deactivate Solution Management Reporting
 
 
 <table>
@@ -307,7 +312,7 @@ curl -ik -u <user>:<password>  https://<host>:<port>/api/v1/configuration/connec
 
 
 
-## Download Current LMDB XML Report
+## Get Registration File
 
 Generates a zip file containing the registration file for the solution management LMDB \(Landscape Management Database\).
 

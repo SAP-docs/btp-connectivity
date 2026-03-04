@@ -11,7 +11,7 @@ The Cloud Connector allows to set some sensible parameters controlling the HTTP 
 
 ![](images/SCC_Configure_Advanced_Connectivity_82efcf5.png)
 
-Find a brief description of these critical configuration parameters below:
+Find a brief description of these critical configuration parameters below that are related to HTTP processing:
 
 
 <table>
@@ -57,7 +57,7 @@ Max. HTTP Request Header Length \(kb\)
 </td>
 <td valign="top">
 
-Max. allowed size of HTTP request headers. Headers containing authentication information like SAML or JWT could require this size.
+Max. size allowed for HTTP request headers. Headers containing authentication information in tokens, like SAML or JWT, may require this size.
 
 </td>
 <td valign="top">
@@ -74,7 +74,7 @@ Max. Size HTTP Request \(kb\)
 </td>
 <td valign="top">
 
-Size for the request line of HTTP request. HTTP Body is not included.
+Max. size for the request line of an HTTP request. HTTP body is not included.
 
 </td>
 <td valign="top">
@@ -91,7 +91,7 @@ Max. HTTP Response Header Length \(kb\)
 </td>
 <td valign="top">
 
-Max. allowed size of HTTP response headers.
+Max. size allowed for HTTP response headers.
 
 </td>
 <td valign="top">
@@ -108,7 +108,7 @@ Max. Size HTTP Response \(kb\)
 </td>
 <td valign="top">
 
-Size for the response line of the HTTP response. HTTP Body is not included.
+Max. size for the response line of an HTTP response. HTTP body is not included.
 
 </td>
 <td valign="top">

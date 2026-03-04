@@ -30,7 +30,23 @@ Authorization
 </td>
 <td valign="top">
 
-Administrate the Cloud Connector \(all operations and settings\).
+Administrate the Cloud Connector \(unrestricted access to all operations and settings\).
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+`sccassocadmin`
+
+</td>
+<td valign="top">
+
+-   Administrate all subaccount-related settings unless a subaccount is *managed*.
+-   Perform support-related tasks like setting trace levels or creating a thread dump.
+-   Administrate certain cross-subaccount settings including, but not limited to, certificates and back-end trust.
+
+
 
 </td>
 </tr>
@@ -42,9 +58,8 @@ Administrate the Cloud Connector \(all operations and settings\).
 </td>
 <td valign="top">
 
--   Manage all subaccount-related settings.
+-   Administrate all subaccount-related settings unless a subaccount is *managed*.
 -   Perform support-related tasks like setting trace levels or creating a thread dump.
--   Access to some cross-subaccount settings, like system certificate settings.
 
 
 
@@ -132,6 +147,7 @@ Authorization is checked by the Cloud Connector based on the user role retrieved
 11. \(Optional\) Provide a service user and its password in the fields *Connection User Name* and *Connection Password*.
 12. \(Optional\) You can override the roles in the *Custom Roles* section. If no custom role is provided, the Cloud Connector checks permissions for the corresponding default role name:
     -   *<Administrator Role\>* \(default: `sccadmin`\)
+    -   *<Associate Administrator Role\>*: If not provided, the Cloud Connector will check permissions for the default role name `sccassocadmin`.
     -   *<Sub-Administrator Role\>* \(default: `sccsubadmin`\)
     -   *<Support Role\>* \(default: `sccsupport`\)
     -   *<Display Role\>* \(default: `sccdisplay`\)

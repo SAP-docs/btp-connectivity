@@ -4,16 +4,22 @@
 
 Adjust tunnel parameters for the Cloud Connector.
 
-If required, you can adjust the following parameters for the communication tunnel by changing their default values:
+If required, you can adjust the following parameters influencing the tunnel behavior by changing their default values:
 
--   Application Tunnel Connections \(default: 1\)
+-   Application Tunnel Connections \(default: 1\): This parameter specifies the default value for the maximal number of tunnel connections *per application*. The value must be higher than 0.
+
+-   Tunnel Worker Threads \(default: 10\): The number of threads per subaccount that are available for processing incoming packages from the cloud.
+
+-   Protocol Processor Worker Threads \(default: 20\): The number of threads used for protocol-specific processing per subaccount.
 
     > ### Note:  
-    > This parameter specifies the default value for the maximal number of tunnel connections *per application*. The value must be higher than 0.
+    > The thread pool size for RFC is derived from that value. The thread pool size will be 5 times of the protocol worker thread size, meaning that at most this number of concurrent requests can be performed for the subaccount.
 
--   Tunnel Worker Threads \(default: 10\)
+-   Max. Reconnect Attempts \(default: 150\): Whenever the tunnel connection to a subaccount breaks, the Cloud Connector will perform that many reconnect attempts in order to re-establish the tunnel to the Connectivity service.
 
--   Protocol Processor Worker Threads \(default: 20\)
+    > ### Note:  
+    > The reconnect procedure will be triggered only if the connection has been established successfully before. If the connection fails directly after startup, it will stay disconnected to avoid unnecessary connection attempts.
+
 
 For detailed information on connection configuration requirements, see [Configuration Setup](configuration-setup-7437cd6.md).
 
@@ -26,7 +32,7 @@ To change the parameter values, do the following:
 2.  In the *Edit Connectivity Settings* dialog, change the parameter values as required.
 3.  Choose *Save*.
 
-Additionally, you can specify the number of allowed tunnel connections for each application that you have specified as a [trusted application](set-up-trust-a4ee70f.md#loioa4ee70f0274248f8bbc7594179ef948d__trust_cloud_apps).
+For the **Neo** environment only: Additionally, you can specify the number of allowed tunnel connections for each application that you have specified as a [trusted application](set-up-trust-a4ee70f.md#loioa4ee70f0274248f8bbc7594179ef948d__trust_cloud_apps).
 
 > ### Note:  
 > If you don't change the value for a trusted application, it keeps the default setting specified above. If you change the value, it may be higher or lower than the default and must be higher than 0.

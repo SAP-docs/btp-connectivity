@@ -2,7 +2,7 @@
 
 # Configure Access Control \(RFC\)
 
-Specify the backend systems that can be accessed by your cloud applications using RFC.
+Specify the back-end systems that can be accessed by your cloud applications using RFC.
 
 
 
@@ -14,25 +14,27 @@ Specify the backend systems that can be accessed by your cloud applications usin
 
 [Limit the Accessible Resources for RFC](configure-access-control-rfc-ca58689.md#loioca5868997e48468395cf0ca4882f5783__limit)
 
+[Configure WebSocket RFC](configure-access-control-rfc-ca58689.md#loioca5868997e48468395cf0ca4882f5783__webSocket)
+
 
 
 <a name="loioca5868997e48468395cf0ca4882f5783__expose"/>
 
 ## Expose Intranet Systems
 
-To allow your cloud applications to access a certain backend system on the intranet, insert a new entry in the Cloud Connector *Access Control* management.
+To allow your cloud applications to access a certain back-end system on the intranet, insert a new entry in the Cloud Connector *Access Control* management.
 
 1.  Choose *Cloud To On-Premises* from your *Subaccount* menu and go to tab *Access Control*.
 2.  Choose *Add*.
-3.  *Backend Type*: Select the backend system type \( `ABAP System` or `SAP Gateway` for RFC\).
+3.  *Back-end Type*: Select the back-end system type \( `ABAP System` or `SAP Gateway` for RFC\).
 
     ![](images/SCC_CS_AccessControlHTTP_1_756de88.png)
 
 4.  Choose *Next*.
-5.  *Protocol*: Choose `RFC` or `RFC SNC` for connecting to the backend system.
+5.  *Protocol*: Choose `RFC` or `RFC SNC` for connecting to the back-end system. For WebSocket RFC \(as of version 2.19\), see section [Configure WebSocket RFC](configure-access-control-rfc-ca58689.md#loioca5868997e48468395cf0ca4882f5783__webSocket) below.
 
     > ### Note:  
-    > The value `RFC SNC` is independent from your settings on the cloud side, since it only specifies the communication beween Cloud Connector and backend system. Using `RFC SNC`, you can ensure that the entire connection from the cloud application to the actual backend system \(provided by the SSL tunnel\) is secured, partly with SSL and partly with SNC. For more information, see [Initial Configuration \(RFC\)](initial-configuration-rfc-f09eefe.md).
+    > The value `RFC SNC` is independent from your settings on the cloud side, since it only specifies the communication beween Cloud Connector and back-end system. Using `RFC SNC`, you can ensure that the entire connection from the cloud application to the actual back-end system \(provided by the SSL tunnel\) is secured, partly with SSL and partly with SNC. For more information, see [Initial Configuration \(RFC\)](initial-configuration-rfc-f09eefe.md).
 
     ![](images/SCC_CS_AccessControlRFC_2_41370c7.png)
 
@@ -47,7 +49,7 @@ To allow your cloud applications to access a certain backend system on the intra
 
     ![](images/SCC_CS_AccessControlRFC_3_9b53fd9.png)
 
-8.  Specify the parameters of the backend system. It needs to be an existing network address that can be resolved on the intranet and has network visibility for the Cloud Connector. If this is only possible using a valid [SAProuter](https://help.sap.com/docs/ABAP_PLATFORM_NEW/e245703406684d8a81812f4c6334eb2f/487612ed5ca5055ee10000000a42189b.html?version=202310.003), specify the router in the respective field. The Cloud Connector will try to establish a connection to this system, so the address has to be real.
+8.  Specify the parameters of the back-end system. It needs to be an existing network address that can be resolved on the intranet and has network visibility for the Cloud Connector. If this is only possible using a valid [SAProuter](https://help.sap.com/docs/ABAP_PLATFORM_NEW/e245703406684d8a81812f4c6334eb2f/487612ed5ca5055ee10000000a42189b.html?version=202310.003), specify the router in the respective field. The Cloud Connector will try to establish a connection to this system, so the address has to be real.
     -   When using a load-balancing configuration, the *Message Server* specifies the message server of the ABAP system. The system ID is a three-char identifier that is also found in the SAP Logon configuration. Alternatively, it's possible to directly specify the message server port in the *System ID* field.
 
         ![](images/SCC_CS_AccessControlRFC_4_6abe59d.png)
@@ -61,13 +63,13 @@ To allow your cloud applications to access a certain backend system on the intra
 
     ![](images/SCC_CS_AccessControlRFC_6_fd5bae9.png)
 
-    -   *Virtual Message Server* - specifies the host name exactly as specified as the `jco.client.mshost` property in the RFC destination configuration in the cloud. The *Virtual System ID* allows you to distinguish between different entry points of your backend system that have different sets of access control settings. The value needs to be the same like for the `jco.client.r3name` property in the RFC destination configuration in the cloud.
-    -   *Virtual Application Server* - it specifies the host name exactly as specified as the `jco.client.ashost` property in the RFC destination configuration in the cloud. The *Virtual Instance Number* allows you to distinguish between different entry points of your backend system that have different sets of access control settings. The value needs to be the same like for the `jco.client.sysnr` property in the RFC destination configuration in the cloud.
+    -   *Virtual Message Server* - specifies the host name exactly as specified as the `jco.client.mshost` property in the RFC destination configuration in the cloud. The *Virtual System ID* allows you to distinguish between different entry points of your back-end system that have different sets of access control settings. The value needs to be the same like for the `jco.client.r3name` property in the RFC destination configuration in the cloud.
+    -   *Virtual Application Server* - it specifies the host name exactly as specified as the `jco.client.ashost` property in the RFC destination configuration in the cloud. The *Virtual Instance Number* allows you to distinguish between different entry points of your back-end system that have different sets of access control settings. The value needs to be the same like for the `jco.client.sysnr` property in the RFC destination configuration in the cloud.
 
 10. This step is only relevant if you have chosen `RFC SNC`. The *<Principal Type\>* field defines what kind of principal is used when configuring a destination on the cloud side using this system mapping with authentication type `Principal Propagation`. No matter what you choose, make sure that the general configuration for the *<Principal Type\>* has been done to make it work correctly. For destinations using different authentication types, this setting is ignored. In case you choose `None` as *<Principal Type\>*, it is not possible to apply principal propagation to this system.
 
     > ### Note:  
-    > If you use an RFC connection, you cannot choose between different principal types. Only the `X.509` certificate is supported. You need an SNC-enabled backend connection to use it.
+    > If you use an RFC connection, you cannot choose between different principal types. Only the `X.509` certificate is supported. You need an SNC-enabled back-end connection to use it.
 
     For more information on principal propagation, see [Configuring Principal Propagation](configuring-principal-propagation-c84d4d0.md).
 
@@ -85,15 +87,15 @@ To allow your cloud applications to access a certain backend system on the intra
 
     ![](images/SCC_CS_AccessControlHTTP_10_e38fd87.png)
 
-14. The summary shows information about the system to be stored. When saving the system mapping, you can trigger a ping from the Cloud Connector to the internal host, using the *Check Internal Host* checkbox. This allows you to make sure the Cloud Connector can indeed access the internal system, and allows you to catch basic things, such as spelling mistakes or firewall problems between the Cloud Connector and the internal host.
+14. The summary shows information about the system to be stored. When saving the host mapping, a ping is triggered from the Cloud Connector to the internal host. This allows you to make sure the Cloud Connector can indeed access the internal system. That way, you can detect basic issues such as spelling mistakes or firewall problems between the Cloud Connector and the internal host at an early stage.
 
-    If the ping to the internal host is successful \(that is, the host is reachable via TLS\), the state ***Reachable*** is shown. If it fails, a warning pops up. You can view issue details by choosing the *Details* button, or check them in the log files.
+    If the ping to the internal host is successful, the state ***Reachable*** is shown. If it fails, a warning is shown. You can view issue details by choosing the *Details* button, or check them in the log files.
 
-    You can execute such a check at any time later for all selected systems in the *Access Control* overview.
+    You can execute such a check later at any time in the **Mapping Virtual To Internal System** overview by pressing **Check Availability of Internal Host** in column **Actions**.
 
     ![](images/SCC_CS_AccessControlRFC_11_0ac09aa.png)
 
-15. Optional: You can later edit a system mapping \(choose *Edit*\) to make the Cloud Connector route the requests for `sales-system.cloud:sapgw42` to a different backend system. This can be useful if the system is currently down and there is a back-up system that can serve these requests in the meantime. However, you cannot edit the virtual name of this system mapping. If you want to use a different fictional host name in your cloud application, you must delete the mapping and create a new one. Here, you can also change the *Principal Type* to `None` in case you don't want to allow principal propagation to a certain system.
+15. Optional: You can later edit a system mapping \(choose *Edit*\), for example, to make the Cloud Connector route the requests to a different back-end system. This can be useful if the system is currently down and there is a back-up system that can serve these requests in the meantime. However, you cannot edit the virtual name of this system mapping. If you want to use a different fictional host name in your cloud application, you must delete the mapping and create a new one.
 
     ![](images/SCC_CS_AccessControlRFC_12_054980a.png)
 
@@ -115,13 +117,52 @@ To allow your cloud applications to access a certain backend system on the intra
 
 In addition to allowing access to a particular host and port, you also must specify which function modules \(*Resources*\) are allowed to be invoked on that host. You can enter an optional description at this stage. The Cloud Connector uses very strict allowlists for its access control. Besides internally used infrastructure function modules, only function modules for which you explicitly granted access are allowed.
 
-1.  To define the permitted function modules for a particular backend system, choose the row corresponding to that backend system and press *Add* in section *Resources Accessible On...* below. A dialog appears, prompting you to enter the specific function module name whose invoking you want to allow.
+1.  To define the permitted function modules for a particular back-end system, choose the row corresponding to that back-end system and press *Add* in section *Resources Accessible On...* below. A dialog appears, prompting you to enter the specific function module name whose invoking you want to allow.
 
     ![](images/SCC_CS_AccessControlRFC_14_e20dafb.png)
 
 2.  The Cloud Connector checks that the function module name of an incoming request is exactly as specified in the configuration. If it is not, the request is denied.
 3.  If you select the *Prefix* option, the Cloud Connector allows all incoming requests, for which the function module name begins with the specified string.
 4.  The *Active* checkbox allows you to specify whether that resource should be initially enabled or disabled.
+
+Back to [Tasks](configure-access-control-rfc-ca58689.md#loioca5868997e48468395cf0ca4882f5783__tasks)
+
+
+
+<a name="loioca5868997e48468395cf0ca4882f5783__webSocket"/>
+
+## Configure WebSocket RFC
+
+As of Cloud Connector version 2.19, you can employ *RFC via WebSocket Secure* \(or *WebSocket RFC* for short\). Since it is based on HTTP, its configuration differs from classic RFC configuration as shown above. The first steps up to selecting the protocol are the same. To use WebSocket RFC, select `WebSocket RFC` at this step:
+
+![](images/SCC_CS_AccessControlRFC_-_WebSocket_1_badfd39.png)
+
+Similar to HTTP, internal and virtual host and port need to be provided next:
+
+![](images/SCC_CS_AccessControlRFC_-_WebSocket_2_d33db01.png)
+
+We recommend that you choose an arbitrary \(but unique\) virtual host name that differs from the internal host if only to hide internal network details or to avoid confusion when the internal host needs to be changed:
+
+![](images/SCC_CS_AccessControlRFC_-_WebSocket_3_cc2a27c.png)
+
+Next, select what kind of principal is sent to the back end if any:
+
+![](images/SCC_CS_AccessControlRFC_-_WebSocket_4_f9210f2.png)
+
+If no principal is available, you can opt to use the system certificate for authentication at the back end:
+
+![](images/SCC_CS_AccessControlRFC_-_WebSocket_5_eb12d6e.png)
+
+Since WebSocket RFC is based on HTTP, you have the same choice as with HTTP regarding the value to be used for header `Host`. By choosing *Use Internal Host*, the actual host name is used, and when choosing *Use Virtual Host* the virtual one is used. In the first case, the virtual host is also sent via the `X-Forwarded-Host` header:
+
+![](images/SCC_CS_AccessControlRFC_-_WebSocket_6_01e138a.png)
+
+The final steps are optional and are the same as for classic RFC: providing a system ID and a description.
+
+You can edit a WebSocket RFC entry at any time with the same kind of restrictions that apply to classic RFC or any access control entry.
+
+> ### Note:  
+> WebSocket RFC is per se secured. Therefore, there is no additional option similar to SNC for classic RFC.
 
 Back to [Tasks](configure-access-control-rfc-ca58689.md#loioca5868997e48468395cf0ca4882f5783__tasks)
 

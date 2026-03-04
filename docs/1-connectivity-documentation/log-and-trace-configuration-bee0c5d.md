@@ -17,7 +17,7 @@ Configuration changes are applied to the corresponding locations. The API method
 
 <a name="loiobee0c5d8f2714665ab56cecd13acf740__section_m1b_3tz_5cc"/>
 
-## Get Cross-Account Configuration
+## Get Cross-Account Trace Configuration
 
 
 <table>
@@ -94,7 +94,7 @@ Roles
 </td>
 <td valign="top">
 
-Administrator, Subaccount Administrator, Display, Support
+Administrator, Associate Administrator, Subaccount Administrator, Display, Support, Monitoring
 
 </td>
 </tr>
@@ -206,7 +206,7 @@ Roles
 </td>
 <td valign="top">
 
-Administrator, Subaccount Administrator, Support
+Administrator, Support
 
 </td>
 </tr>
@@ -232,7 +232,7 @@ Administrator, Subaccount Administrator, Support
 
 <a name="loiobee0c5d8f2714665ab56cecd13acf740__section_ywk_htz_5cc"/>
 
-## Get Subaccount-Related Configuration
+## Get Subaccount-Related Trace Configuration
 
 
 <table>
@@ -309,7 +309,7 @@ Roles
 </td>
 <td valign="top">
 
-Administrator, Subaccount Administrator, Display, Support
+Administrator, Associate Administrator, Subaccount Administrator, Display, Support, Monitoring
 
 </td>
 </tr>
@@ -401,7 +401,7 @@ Roles
 </td>
 <td valign="top">
 
-Administrator, Subaccount Administrator, Support
+Administrator, Support
 
 </td>
 </tr>

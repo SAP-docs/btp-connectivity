@@ -1,6 +1,6 @@
 <!-- loio65b11d4ed333450ebebb8a2e25e805b7 -->
 
-# Scenario: Cloud to Cloud
+# Cloud to Cloud
 
 Forward the identity of cloud users from SAP BTP to remote systems on the Internet, enabling single sign-on \(SSO\).
 
@@ -77,8 +77,13 @@ Operator and/or Developer
 
 **Use Cases: Cloud to Cloud**
 
--   [User Propagation from the Cloud Foundry Environment to SAP S/4HANA Cloud](user-propagation-from-the-cloud-foundry-environment-to-sap-s-4hana-cloud-9af03a0.md)
--   [User Propagation from the Cloud Foundry Environment to SAP SuccessFactors](user-propagation-from-the-cloud-foundry-environment-to-sap-successfactors-67a3b83.md)
--   [User Propagation between Cloud Foundry Applications](user-propagation-between-cloud-foundry-applications-8ebf60c.md)
--   [User Propagation from the Cloud Foundry Environment to the Neo Environment](user-propagation-from-the-cloud-foundry-environment-to-the-neo-environment-95dde76.md)
+-   [SAML Bearer Assertion Flow from the Cloud Foundry Environment to SAP S/4HANA Cloud](saml-bearer-assertion-flow-from-the-cloud-foundry-environment-to-sap-s-4hana-cloud-9af03a0.md)
+-   [SAML Bearer Assertion Flow from the Cloud Foundry Environment to SAP SuccessFactors](saml-bearer-assertion-flow-from-the-cloud-foundry-environment-to-sap-successfactors-67a3b83.md)
+-   [SAML Bearer Assertion Flow between Cloud Foundry Applications](saml-bearer-assertion-flow-between-cloud-foundry-applications-8ebf60c.md)
+-   [SAML Bearer Assertion Flow from the Cloud Foundry Environment to the Neo Environment](saml-bearer-assertion-flow-from-the-cloud-foundry-environment-to-the-neo-environment-95dde76.md)
+
+**Related Information**  
+
+
+[Setting up Trust Between Systems \(for SAML Bearer Assertion Flows\)](setting-up-trust-between-systems-for-saml-bearer-assertion-flows-0984977.md "Establish trust for principal propagation using an SAML Bearer Assertion flow.")
 

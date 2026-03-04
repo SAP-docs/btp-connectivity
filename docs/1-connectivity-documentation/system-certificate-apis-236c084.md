@@ -1,11 +1,14 @@
 <!-- loio236c0842c2cf48238b919d8f95a5afac -->
 
-# System Certificate: APIs
+# System Certificate APIs
 
 Manage a system certificate via API.
 
 > ### Note:  
 > The APIs below are available as of Cloud Connector version 2.13.0.
+
+> ### Caution:  
+> The path component *onPremises* of the URI is available as of version 2.18.0. Older versions must use *onPremise*. The latter is currently accepted by all versions, but we recommend that you use *onPremises* as *onPremise* may be discontinued at some point.
 
 
 
@@ -23,7 +26,7 @@ URI
 </td>
 <td valign="top">
 
-`/api/v1/configuration/connector/onPremise/systemCertificate` 
+`/api/v1/configuration/connector/onPremises/systemCertificate` 
 
 </td>
 </tr>
@@ -88,7 +91,7 @@ Roles
 </td>
 <td valign="top">
 
-Administrator, Display, Support
+Administrator, Associate Administrator, Subaccount Administrator, Display, Support, Monitoring
 
 </td>
 </tr>
@@ -114,7 +117,7 @@ Administrator, Display, Support
 ## Example
 
 ```
-curl -i -k -H "Accept: application/json" -u <user>:<password> -X GET  https://<host>:<port>/api/v1/configuration/connector/onPremise/systemCertificate
+curl -i -k -H "Accept: application/json" -u <user>:<password> -X GET  https://<host>:<port>/api/v1/configuration/connector/onPremises/systemCertificate
 ```
 
 
@@ -133,7 +136,7 @@ URI
 </td>
 <td valign="top">
 
-`/api/v1/configuration/connector/onPremise/systemCertificate` 
+`/api/v1/configuration/connector/onPremises/systemCertificate` 
 
 </td>
 </tr>
@@ -193,7 +196,7 @@ Roles
 </td>
 <td valign="top">
 
-Administrator, Display, Support
+Administrator, Associate Administrator, Subaccount Administrator, Display, Support, Monitoring
 
 </td>
 </tr>
@@ -218,7 +221,7 @@ Administrator, Display, Support
 ## Example
 
 ```
-curl -i -k -H "Accept: application/pkix-cert" -u <user>:<password> -X GET --output sys.crt https://<host>:<port>/api/v1/configuration/connector/onPremise/systemCertificate
+curl -i -k -H "Accept: application/pkix-cert" -u <user>:<password> -X GET --output sys.crt https://<host>:<port>/api/v1/configuration/connector/onPremises/systemCertificate
 
 ```
 
@@ -238,7 +241,7 @@ URI
 </td>
 <td valign="top">
 
-`/api/v1/configuration/connector/onPremise/systemCertificate` 
+`/api/v1/configuration/connector/onPremises/systemCertificate` 
 
 </td>
 </tr>
@@ -314,7 +317,7 @@ Roles
 </td>
 <td valign="top">
 
-Administrator
+Administrator, Associate Administrator
 
 </td>
 </tr>
@@ -338,7 +341,7 @@ The certificate created this way has a validity of 1 year.
 ## Example
 
 ```
-curl -i -k -H "Accept: application/json" -H "Content-Type: application/json" -u <user>:<password> -X POST --data '{"type":"selfsigned", "subjectDN":"CN=me"}'  https://<host>:<port>/api/v1/configuration/connector/onPremise/systemCertificate
+curl -i -k -H "Accept: application/json" -H "Content-Type: application/json" -u <user>:<password> -X POST --data '{"type":"selfsigned", "subjectDN":"CN=me"}'  https://<host>:<port>/api/v1/configuration/connector/onPremises/systemCertificate
 
 ```
 
@@ -358,7 +361,7 @@ URI
 </td>
 <td valign="top">
 
-`/api/v1/configuration/connector/onPremise/systemCertificate` 
+`/api/v1/configuration/connector/onPremises/systemCertificate` 
 
 </td>
 </tr>
@@ -434,7 +437,7 @@ Roles
 </td>
 <td valign="top">
 
-Administrator
+Administrator, Associate Administrator
 
 </td>
 </tr>
@@ -457,7 +460,7 @@ Administrator
 
 ```
 curl -k -u <user>:<password> -X POST -H "Content-Type: application/json" --data '{"type":"csr", "subjectDN":"CN=me"}' 
-https://<host>:<port>/api/v1/configuration/connector/onPremise/systemCertificate  -o csr.pem
+https://<host>:<port>/api/v1/configuration/connector/onPremises/systemCertificate  -o csr.pem
 ```
 
 
@@ -478,7 +481,7 @@ URI
 </td>
 <td valign="top">
 
-`/api/v1/configuration/connector/onPremise/systemCertificate` 
+`/api/v1/configuration/connector/onPremises/systemCertificate` 
 
 </td>
 </tr>
@@ -538,7 +541,7 @@ Roles
 </td>
 <td valign="top">
 
-Administrator
+Administrator, Associate Administrator
 
 </td>
 </tr>
@@ -559,7 +562,7 @@ Administrator
 ## Example
 
 ```
-curl -i -k -u <user>:<password> -X PATCH -F signedCertificate=@<signedchain.pem> https://<host>:<port>/api/v1/configuration/connector/onPremise/systemCertificate
+curl -i -k -u <user>:<password> -X PATCH -F signedCertificate=@<signedchain.pem> https://<host>:<port>/api/v1/configuration/connector/onPremises/systemCertificate
 
 ```
 
@@ -588,7 +591,7 @@ URI
 </td>
 <td valign="top">
 
-`/api/v1/configuration/connector/onPremise/systemCertificate` 
+`/api/v1/configuration/connector/onPremises/systemCertificate` 
 
 </td>
 </tr>
@@ -648,7 +651,7 @@ Roles
 </td>
 <td valign="top">
 
-Administrator
+Administrator, Associate Administrator
 
 </td>
 </tr>
@@ -672,7 +675,7 @@ Administrator
 ## Example
 
 ```
-curl -i -k -u <user>:<password> https://<host>:<port>/api/v1/configuration/connector/onPremise/systemCertificate -X PUT -F password=<p21Password> -F pkcs12=@<p12file>
+curl -i -k -u <user>:<password> https://<host>:<port>/api/v1/configuration/connector/onPremises/systemCertificate -X PUT -F password=<p21Password> -F pkcs12=@<p12file>
 
 ```
 
@@ -697,7 +700,7 @@ URI
 </td>
 <td valign="top">
 
-`/api/v1/configuration/connector/onPremise/systemCertificate` 
+`/api/v1/configuration/connector/onPremises/systemCertificate` 
 
 </td>
 </tr>
@@ -757,7 +760,7 @@ Roles
 </td>
 <td valign="top">
 
-Administrator
+Administrator, Associate Administrator
 
 </td>
 </tr>
@@ -772,7 +775,7 @@ Administrator
 ## Example
 
 ```
-curl -k -H "Accept: application/json" -u <user>:<password> --request DELETE https://localhost:8443/api/v1/configuration/connector/onPremise/systemCertificate
+curl -k -H "Accept: application/json" -u <user>:<password> --request DELETE https://localhost:8443/api/v1/configuration/connector/onPremises/systemCertificate
 
 ```
 

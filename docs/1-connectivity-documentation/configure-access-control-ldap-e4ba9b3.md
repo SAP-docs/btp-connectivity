@@ -10,16 +10,16 @@ To allow your cloud applications to access an on-premises LDAP server, insert a 
 
 1.  Choose *Cloud To On-Premises* from your *Subaccount* menu.
 2.  Choose *Add* \(+\). A wizard opens and asks for the required values.
-3.  *Backend Type*: Select `Non-SAP System` from the drop down list. When you are done, choose *Next*.
+3.  *Back-End Type*: Select `Non-SAP System` from the drop down list. When you are done, choose *Next*.
 
     ![](images/SCC_CS_AccessControlLDAP_1_034ceaa.png)
 
-4.  *Protocol*: Select `LDAP` or `LDAPS` for the connection to the backend system. When you are done, choose *Next*.
+4.  *Protocol*: Select `LDAP` or `LDAPS` for the connection to the back-end system. When you are done, choose *Next*.
 
     ![](images/SCC_CS_AccessControlLDAP_2_ea48b4a.png)
 
     > ### Note:  
-    > If you specify `LDAPS`, and there is a "system certificate" imported in the Cloud Connector, the latter attempts to use this certificate for performing a client-certificate-based logon to the backend system.
+    > If you specify `LDAPS`, and there is a "system certificate" imported in the Cloud Connector, the latter attempts to use this certificate for performing a client-certificate-based logon to the back-end system.
 
 5.  *Internal Host* and *Internal Port*: specify the host and port under which the target system can be reached within the intranet. It needs to be an existing network address that can be resolved on the intranet and has network visibility for the Cloud Connector. The Cloud Connector will try to forward the request to the network address specified by the internal host and port, so this address needs to be real.
 
@@ -33,11 +33,11 @@ To allow your cloud applications to access an on-premises LDAP server, insert a 
 
     ![](images/SCC_CS_AccessControlLDAP_5_a333556.png)
 
-8.  The summary shows information about the system to be stored. When saving the host mapping, you can trigger a ping from the Cloud Connector to the internal host, using the *Check Internal Host* check box. This allows you to make sure the Cloud Connector can indeed access the internal system. Also, you can catch basic things, such as spelling mistakes or firewall problems between Cloud Connector the internal host.
+8.  The summary shows information about the system to be stored. When saving the host mapping, a ping is triggered from the Cloud Connector to the internal host. This allows you to make sure the Cloud Connector can indeed access the internal system. That way, you can detect basic issues such as spelling mistakes or firewall problems between the Cloud Connector and the internal host at an early stage.
 
-    If the ping to the internal host is successful, the state ***Reachable*** is shown. If it fails, a warning is displayed in column **Check Result**. You can view issue details by choosing the *Details* button, or check them in the log files.
+    If the ping to the internal host is successful, the state ***Reachable*** is shown. If it fails, a warning is shown. You can view issue details by choosing the *Details* button, or check them in the log files.
 
-    You can execute such a check at any time later for all selected systems in the *Mapping Virtual To Internal System* overview by pressing *Check Availability of Internal Host* in column *Actions*.
+    You can execute such a check later at any time in the **Mapping Virtual To Internal System** overview by pressing **Check Availability of Internal Host** in column **Actions**.
 
     ![](images/SCC_CS_AccessControlLDAP_6_785151c.png)
 

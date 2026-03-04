@@ -2,7 +2,7 @@
 
 # Configure Accessible Resources
 
-Configure backend systems and resources in the Cloud Connector, to make them available for a cloud application.
+Configure back-end systems and resources in the Cloud Connector, to make them available for a cloud application.
 
 
 
@@ -20,7 +20,7 @@ Configure backend systems and resources in the Cloud Connector, to make them ava
 
 ## Map Systems and Limit Access
 
-Initially, after installing a new Cloud Connector, no network systems or resources are exposed to the cloud. You must configure each system and resource used by applications of the connected cloud subaccount. To do this, choose *Cloud To On Premise* from your subaccount menu and go to tab *Access Control*:
+Initially, after installing a new Cloud Connector, no network systems or resources are exposed to the cloud. You must configure each system and resource used by applications of the connected cloud subaccount. To do this, choose *Cloud To On-Premises* from your subaccount menu and go to tab *Access Control*:
 
 ![](images/SCC_Configuring_Accessible_Resources_1_cd562f2.png)
 
@@ -29,11 +29,7 @@ The Cloud Connector supports any type of system \(SAP or non-SAP system\) that c
 -   For systems using HTTP communication, see: [Configure Access Control \(HTTP\)](configure-access-control-http-e7d4927.md).
 -   For information on configuring RFC resources, see: [Configure Access Control \(RFC\)](configure-access-control-rfc-ca58689.md).
 
-We recommend that you limit the access to backend services and resources. Instead of configuring a system and granting access to all its resources, grant access only to the resources needed by the cloud application. For example, define access to an HTTP service by specifying the service URL root path and allowing access to all its subpaths.
-
-When configuring an on-premises system, you can define a virtual host and port for the specified system. The virtual host name and port represent the fully qualified domain name of the related system in the cloud. We recommend that you use the virtual host name/port mapping to prevent leaking information about a system's physical machine name and port to the cloud.
-
-![](images/SCC_Configuring_Accessible_Resources_2_44c68df.png)
+We recommend that you limit the access to only those back-end services and resources that are explicitly required by cloud applications. For example, instead of configuring a system and granting access to all its resources, grant access only to the specific resources that are needed by the respective cloud application. For example, define access to an HTTP service by specifying the service URL root path and allowing access to all its subpaths.
 
 Back to [Tasks](configure-accessible-resources-3b12086.md#loio3b12086100b344d39a2ff0c9410e66c6__tasks)
 
@@ -81,7 +77,7 @@ As an administrator taking care for a scenario configuration in some other Cloud
 
 ![](images/SCC_Configuring_Accessible_Resources_4_7e13093.png)
 
-All resources belonging to a scenario get an additional scenario icon in their status. When hovering over it, the assigned scenario\(s\) of this resource are listed.
+All resources belonging to a scenario are shown with an additional scenario icon in their status. When hovering over it, the assigned scenario\(s\) of this resource are listed.
 
 Back to [Use Scenarios for Resources](configure-accessible-resources-3b12086.md#loio3b12086100b344d39a2ff0c9410e66c6__scenarios)
 

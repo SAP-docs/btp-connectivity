@@ -84,7 +84,7 @@ Roles
 </td>
 <td valign="top">
 
-Administrator, Subaccount Administrator, Support, Display
+Administrator, Associate Administrator, Subaccount Administrator, Display, Support, Monitoring
 
 </td>
 </tr>
@@ -187,7 +187,7 @@ Roles
 </td>
 <td valign="top">
 
-Administrator, Subaccount Administrator, Support
+Administrator
 
 </td>
 </tr>
@@ -292,7 +292,7 @@ Roles
 </td>
 <td valign="top">
 
-Administrator, Subaccount Administrator, Support, Display
+Administrator, Associate Administrator, Subaccount Administrator, Display, Support, Monitoring
 
 </td>
 </tr>
@@ -390,7 +390,7 @@ Roles
 </td>
 <td valign="top">
 
-Administrator, Subaccount Administrator, Support
+Administrator
 
 </td>
 </tr>

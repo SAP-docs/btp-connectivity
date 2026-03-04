@@ -4,6 +4,11 @@
 
 Manage the Cloud Connector's system mappings via API.
 
+> ### Note:  
+> Access to *managed* subaccounts is reserved for the role *Administrator* for all methods except for method GET.
+> 
+> For more information on managed subaccounts, see [Adding a Subaccount](adding-and-managing-subaccounts-f16df12.md#loiof16df12fab9f4fe1b8a4122f0fd54b6e__add) \(step 2\).
+
 
 
 <a name="loioe933fd930039402c907d5afaa75eb0e1__section_rcp_l1b_vcb"/>
@@ -85,7 +90,7 @@ Roles
 </td>
 <td valign="top">
 
-Administrator, Subaccount Administrator, Display, Support
+Administrator, Associate Administrator, Subaccount Administrator, Display, Support, Monitoring
 
 </td>
 </tr>
@@ -191,7 +196,7 @@ Roles
 </td>
 <td valign="top">
 
-Administrator, Subaccount Administrator, Display, Support
+Administrator, Associate Administrator, Subaccount Administrator, Display, Support, Monitoring
 
 </td>
 </tr>
@@ -298,7 +303,7 @@ Roles
 </td>
 <td valign="top">
 
-Administrator, Subaccount Administrator
+Administrator, Associate Administrator, Subaccount Administrator
 
 </td>
 </tr>
@@ -399,7 +404,7 @@ Roles
 </td>
 <td valign="top">
 
-Administrator, Subaccount Administrator
+Administrator, Associate Administrator, Subaccount Administrator
 
 </td>
 </tr>
@@ -481,7 +486,7 @@ Roles
 </td>
 <td valign="top">
 
-Administrator, Subaccount Administrator
+Administrator, Associate Administrator, Subaccount Administrator
 
 </td>
 </tr>
@@ -568,7 +573,7 @@ Roles
 </td>
 <td valign="top">
 
-Administrator, Subaccount Administrator
+Administrator, Associate Administrator, Subaccount Administrator
 
 </td>
 </tr>

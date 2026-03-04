@@ -53,6 +53,7 @@ The following APIs are currently available.
 -   [Certificate Selection List](monitoring-apis-f6e7a7b.md#loiof6e7a7bc6af345d2a334c2427a31d294__cert_selection) \(as of 2.13.0, extended in 2.17.0\)
 -   [Usage Statistics](monitoring-apis-f6e7a7b.md#loiof6e7a7bc6af345d2a334c2427a31d294__usage) \(as of 2.13.0\)
 -   [Master Role Check](monitoring-apis-f6e7a7b.md#loiof6e7a7bc6af345d2a334c2427a31d294__masterRole) \(as of 2.15.0, extended in 2.18.1\)
+-   [Alert Information](monitoring-apis-f6e7a7b.md#loiof6e7a7bc6af345d2a334c2427a31d294__alerts) \(as of 2.19.0\)
 
 **Health Check \(available as of version 2.6.0\)**
 
@@ -1633,6 +1634,121 @@ All roles are accepted
 </td>
 </tr>
 </table>
+
+Back to [Available APIs](monitoring-apis-f6e7a7b.md#loiof6e7a7bc6af345d2a334c2427a31d294__api)
+
+Back to [Context](monitoring-apis-f6e7a7b.md#loiof6e7a7bc6af345d2a334c2427a31d294__context)
+
+
+
+<a name="loiof6e7a7bc6af345d2a334c2427a31d294__alerts"/>
+
+## Alert Information \(available as of version 2.19.0\)
+
+This API retrieves the alerts in a Cloud Connector instance: :
+
+
+<table>
+<tr>
+<td valign="top">
+
+**URI** 
+
+</td>
+<td valign="top" colspan="2">
+
+`/api/monitoring/alerts` 
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+**Method**
+
+</td>
+<td valign="top" colspan="2">
+
+GET
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+**Request** 
+
+</td>
+<td valign="top" colspan="2">
+
+
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+**Response** 
+
+</td>
+<td valign="top" colspan="2">
+
+```
+[Array of alerts]
+ 
+```
+
+
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+**Errors**
+
+</td>
+<td valign="top" colspan="2">
+
+ 
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+**Roles**
+
+</td>
+<td valign="top" colspan="2">
+
+Administrator, Monitoring
+
+</td>
+</tr>
+</table>
+
+**Response Properties:**
+
+-   `alerts`: array of alerts
+    -   `timestamp`: timestamp when the alert was generated
+    -   `status`: indicates the level of severity
+    -   `type`: the cause of the alert
+    -   `origin`: the HA role
+    -   `message`: message of the alert
+    -   `entity`: serves as a unique marker when multiple alerts of the same type can occur, otherwise empty
+
+
+-   `version`: API version
+
+> ### Sample Code:  
+> ```
+> curl -k -H 'Accept:application/json' -u <user>:<password> -X GET https://<scchost>:<sccport>/api/monitoring/alerts
+> ```
+
+*Example*:
+
+![](images/SCC_MonitoringAPI_-_AlertInfo_63c1094.png)
 
 Back to [Available APIs](monitoring-apis-f6e7a7b.md#loiof6e7a7bc6af345d2a334c2427a31d294__api)
 

@@ -401,7 +401,7 @@ Back to [Tasks](consuming-the-destination-service-7e30625.md#loio7e306250e08340f
 
 [Destination Service REST API](destination-service-rest-api-23ccafb.md "Destination service REST API specification for SAP BTP.")
 
-[Exchanging User JWTs via OAuth2UserTokenExchange Destinations](exchanging-user-jwts-via-oauth2usertokenexchange-destinations-39d4265.md "Automatic token retrieval using the OAuth2UserTokenExchange authentication type for HTTP destinations.")
+[Exchanging User JWTs via OAuth2JWTBearer Destinations](exchanging-user-jwts-via-oauth2jwtbearer-destinations-39d4265.md "Automatic token retrieval using the OAuth2JWTBearer authentication type for HTTP destinations.")
 
 [Use Cases](use-cases-effd6be.md "Find instructions for typical RFC end-to-end scenarios that use the Connectivity service and/or the Destination service.")
 

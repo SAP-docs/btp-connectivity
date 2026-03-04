@@ -1,6 +1,6 @@
 <!-- loio95dde761bb0d4df3acfe9e32e80bb6b7 -->
 
-# User Propagation from the Cloud Foundry Environment to the Neo Environment
+# SAML Bearer Assertion Flow from the Cloud Foundry Environment to the Neo Environment
 
 Propagate the identity of a user from a Cloud Foundry application to a Neo application.
 
@@ -10,19 +10,19 @@ Propagate the identity of a user from a Cloud Foundry application to a Neo appli
 
 ## Steps
 
-[Scenario](user-propagation-from-the-cloud-foundry-environment-to-the-neo-environment-95dde76.md#loio95dde761bb0d4df3acfe9e32e80bb6b7__scenario)
+[Scenario](saml-bearer-assertion-flow-from-the-cloud-foundry-environment-to-the-neo-environment-95dde76.md#loio95dde761bb0d4df3acfe9e32e80bb6b7__scenario)
 
-[Prerequisites](user-propagation-from-the-cloud-foundry-environment-to-the-neo-environment-95dde76.md#loio95dde761bb0d4df3acfe9e32e80bb6b7__prereq)
+[Prerequisites](saml-bearer-assertion-flow-from-the-cloud-foundry-environment-to-the-neo-environment-95dde76.md#loio95dde761bb0d4df3acfe9e32e80bb6b7__prereq)
 
-[Concept](user-propagation-from-the-cloud-foundry-environment-to-the-neo-environment-95dde76.md#loio95dde761bb0d4df3acfe9e32e80bb6b7__concept)
+[Concept](saml-bearer-assertion-flow-from-the-cloud-foundry-environment-to-the-neo-environment-95dde76.md#loio95dde761bb0d4df3acfe9e32e80bb6b7__concept)
 
-[Procedure](user-propagation-from-the-cloud-foundry-environment-to-the-neo-environment-95dde76.md#loio95dde761bb0d4df3acfe9e32e80bb6b7__procedure)
+[Procedure](saml-bearer-assertion-flow-from-the-cloud-foundry-environment-to-the-neo-environment-95dde76.md#loio95dde761bb0d4df3acfe9e32e80bb6b7__procedure)
 
-1.  [Configure a Local Service Provider for the Neo Subaccount](user-propagation-from-the-cloud-foundry-environment-to-the-neo-environment-95dde76.md#loio95dde761bb0d4df3acfe9e32e80bb6b7__configure)
-2.  [Establish Trust between Cloud Foundry and Neo Subaccounts](user-propagation-from-the-cloud-foundry-environment-to-the-neo-environment-95dde76.md#loio95dde761bb0d4df3acfe9e32e80bb6b7__establish)
-3.  [Create an OAuth Client for the Neo Application](user-propagation-from-the-cloud-foundry-environment-to-the-neo-environment-95dde76.md#loio95dde761bb0d4df3acfe9e32e80bb6b7__create)
-4.  [Create an OAuth2SAMLBearerAssertion Destination for the Cloud Foundry Application](user-propagation-from-the-cloud-foundry-environment-to-the-neo-environment-95dde76.md#loio95dde761bb0d4df3acfe9e32e80bb6b7__oauth)
-5.  [Consume the Destination and Execute the Scenario](user-propagation-from-the-cloud-foundry-environment-to-the-neo-environment-95dde76.md#loio95dde761bb0d4df3acfe9e32e80bb6b7__consume)
+1.  [Configure a Local Service Provider for the Neo Subaccount](saml-bearer-assertion-flow-from-the-cloud-foundry-environment-to-the-neo-environment-95dde76.md#loio95dde761bb0d4df3acfe9e32e80bb6b7__configure)
+2.  [Establish Trust between Cloud Foundry and Neo Subaccounts](saml-bearer-assertion-flow-from-the-cloud-foundry-environment-to-the-neo-environment-95dde76.md#loio95dde761bb0d4df3acfe9e32e80bb6b7__establish)
+3.  [Create an OAuth Client for the Neo Application](saml-bearer-assertion-flow-from-the-cloud-foundry-environment-to-the-neo-environment-95dde76.md#loio95dde761bb0d4df3acfe9e32e80bb6b7__create)
+4.  [Create an OAuth2SAMLBearerAssertion Destination for the Cloud Foundry Application](saml-bearer-assertion-flow-from-the-cloud-foundry-environment-to-the-neo-environment-95dde76.md#loio95dde761bb0d4df3acfe9e32e80bb6b7__oauth)
+5.  [Consume the Destination and Execute the Scenario](saml-bearer-assertion-flow-from-the-cloud-foundry-environment-to-the-neo-environment-95dde76.md#loio95dde761bb0d4df3acfe9e32e80bb6b7__consume)
 
 
 
@@ -34,7 +34,7 @@ Propagate the identity of a user from a Cloud Foundry application to a Neo appli
 -   You want to consume OAuth protected APIs exposed by an application deployed in the Neo environment.
 -   You want to propagate the identity of the user logged in to the Cloud Foundry application, to the Neo application.
 
-Back to [Steps](user-propagation-from-the-cloud-foundry-environment-to-the-neo-environment-95dde76.md#loio95dde761bb0d4df3acfe9e32e80bb6b7__steps)
+Back to [Steps](saml-bearer-assertion-flow-from-the-cloud-foundry-environment-to-the-neo-environment-95dde76.md#loio95dde761bb0d4df3acfe9e32e80bb6b7__steps)
 
 
 
@@ -47,7 +47,7 @@ Back to [Steps](user-propagation-from-the-cloud-foundry-environment-to-the-neo-e
 -   You have bound an instance of the XSUAA service with the `application` plan to the application.
 -   You have deployed an application in the Neo environment.
 
-Back to [Steps](user-propagation-from-the-cloud-foundry-environment-to-the-neo-environment-95dde76.md#loio95dde761bb0d4df3acfe9e32e80bb6b7__steps)
+Back to [Steps](saml-bearer-assertion-flow-from-the-cloud-foundry-environment-to-the-neo-environment-95dde76.md#loio95dde761bb0d4df3acfe9e32e80bb6b7__steps)
 
 
 
@@ -70,7 +70,7 @@ The OAuth service accepts the SAML assertion and returns an OAuth access token. 
 
 ![](images/CS_CF2NEO_Concept_ef63c76.png)
 
-Back to [Steps](user-propagation-from-the-cloud-foundry-environment-to-the-neo-environment-95dde76.md#loio95dde761bb0d4df3acfe9e32e80bb6b7__steps)
+Back to [Steps](saml-bearer-assertion-flow-from-the-cloud-foundry-environment-to-the-neo-environment-95dde76.md#loio95dde761bb0d4df3acfe9e32e80bb6b7__steps)
 
 
 
@@ -90,7 +90,7 @@ Back to [Steps](user-propagation-from-the-cloud-foundry-environment-to-the-neo-e
 > ### Note:  
 > IMPORTANT: When you choose `Custom` for the*Local Service Provider* type, the default IdP \(SAP ID service\) will no longer be available. If your scenario requires login to the SAP ID service as well, you can safely skip this step and leave the default settings for the Local Service Provider.
 
-Back to [Steps](user-propagation-from-the-cloud-foundry-environment-to-the-neo-environment-95dde76.md#loio95dde761bb0d4df3acfe9e32e80bb6b7__steps)
+Back to [Steps](saml-bearer-assertion-flow-from-the-cloud-foundry-environment-to-the-neo-environment-95dde76.md#loio95dde761bb0d4df3acfe9e32e80bb6b7__steps)
 
 
 
@@ -117,7 +117,7 @@ Back to [Steps](user-propagation-from-the-cloud-foundry-environment-to-the-neo-e
     ![](images/CS_CF2NEO_SigningCertificate_378a4d6.png)
 
 
-Back to [Steps](user-propagation-from-the-cloud-foundry-environment-to-the-neo-environment-95dde76.md#loio95dde761bb0d4df3acfe9e32e80bb6b7__steps)
+Back to [Steps](saml-bearer-assertion-flow-from-the-cloud-foundry-environment-to-the-neo-environment-95dde76.md#loio95dde761bb0d4df3acfe9e32e80bb6b7__steps)
 
 
 
@@ -139,7 +139,7 @@ Back to [Steps](user-propagation-from-the-cloud-foundry-environment-to-the-neo-e
 
 ![](images/CS_CF2NEO_RegisterNewClient_Details_f51fc2a.png)
 
-Back to [Steps](user-propagation-from-the-cloud-foundry-environment-to-the-neo-environment-95dde76.md#loio95dde761bb0d4df3acfe9e32e80bb6b7__steps)
+Back to [Steps](saml-bearer-assertion-flow-from-the-cloud-foundry-environment-to-the-neo-environment-95dde76.md#loio95dde761bb0d4df3acfe9e32e80bb6b7__steps)
 
 
 
@@ -173,7 +173,7 @@ Enter two additional properties:
 
 ![](images/CS_CF2NEO_DestinationConfiguration_ec076c2.png)
 
-Back to [Steps](user-propagation-from-the-cloud-foundry-environment-to-the-neo-environment-95dde76.md#loio95dde761bb0d4df3acfe9e32e80bb6b7__steps)
+Back to [Steps](saml-bearer-assertion-flow-from-the-cloud-foundry-environment-to-the-neo-environment-95dde76.md#loio95dde761bb0d4df3acfe9e32e80bb6b7__steps)
 
 
 
@@ -185,5 +185,5 @@ To perform the scenario and execute the request from the source application towa
 2.  Execute a "find destination" request from the source application to the Destination service. For details, see [Consuming the Destination Service](consuming-the-destination-service-7e30625.md) and the [REST API documentation](https://api.sap.com/api/SAP_CP_CF_Connectivity_Destination/resource).
 3.  From the Destination service response, extract the access token and URL, and construct your request to the target application. See ["Find a Destination" Response Structure](find-a-destination-response-structure-83a3f3b.md) for details on the structure of the response from the Destination service.
 
-Back to [Steps](user-propagation-from-the-cloud-foundry-environment-to-the-neo-environment-95dde76.md#loio95dde761bb0d4df3acfe9e32e80bb6b7__steps)
+Back to [Steps](saml-bearer-assertion-flow-from-the-cloud-foundry-environment-to-the-neo-environment-95dde76.md#loio95dde761bb0d4df3acfe9e32e80bb6b7__steps)
 

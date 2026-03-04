@@ -4,6 +4,11 @@
 
 Manage the Cloud Connector's system mapping resources via API.
 
+> ### Note:  
+> Access to *managed* subaccounts is reserved for the role *Administrator* for all methods except for method GET.
+> 
+> For more information on managed subaccounts, see [Adding a Subaccount](adding-and-managing-subaccounts-f16df12.md#loiof16df12fab9f4fe1b8a4122f0fd54b6e__add) \(step 2\).
+
 
 
 <a name="loio99df2b95fb5245c7921673ad8fc2a542__section_twx_kxj_jrb"/>
@@ -157,7 +162,7 @@ Roles
 </td>
 <td valign="top">
 
-Administrator, Subaccount Administrator, Display, Support
+Administrator, Associate Administrator, Subaccount Administrator, Display, Support, Monitoring
 
 </td>
 </tr>
@@ -255,7 +260,7 @@ Roles
 </td>
 <td valign="top">
 
-Administrator, Subaccount Administrator, Display, Support
+Administrator, Associate Administrator, Subaccount Administrator, Display, Support, Monitoring
 
 </td>
 </tr>
@@ -275,7 +280,7 @@ Back to [Top](system-mapping-resources-99df2b9.md#loio99df2b95fb5245c7921673ad8f
 
 <a name="loio99df2b95fb5245c7921673ad8fc2a542__create_resource"/>
 
-## Create System Mapping Resource
+## Create System Mapping Resource \(Master Only\)
 
 
 <table>
@@ -352,7 +357,7 @@ Roles
 </td>
 <td valign="top">
 
-Administrator, Subaccount Administrator
+Administrator, Associate Administrator, Subaccount Administrator
 
 </td>
 </tr>
@@ -381,7 +386,7 @@ Back to [Top](system-mapping-resources-99df2b9.md#loio99df2b95fb5245c7921673ad8f
 
 <a name="loio99df2b95fb5245c7921673ad8fc2a542__edit_resource"/>
 
-## Replace System Mapping Resource
+## Replace System Mapping Resource \(Master Only\)
 
 
 <table>
@@ -457,7 +462,7 @@ Roles
 </td>
 <td valign="top">
 
-Administrator, Subaccount Administrator
+Administrator, Associate Administrator, Subaccount Administrator
 
 </td>
 </tr>
@@ -476,7 +481,7 @@ Back to [Top](system-mapping-resources-99df2b9.md#loio99df2b95fb5245c7921673ad8f
 
 <a name="loio99df2b95fb5245c7921673ad8fc2a542__delete_resource"/>
 
-## Delete System Mapping Resource
+## Delete System Mapping Resource \(Master Only\)
 
 
 <table>
@@ -548,7 +553,7 @@ Roles
 </td>
 <td valign="top">
 
-Administrator, Subaccount Administrator
+Administrator, Associate Administrator, Subaccount Administrator
 
 </td>
 </tr>
@@ -564,7 +569,7 @@ Back to [Top](system-mapping-resources-99df2b9.md#loio99df2b95fb5245c7921673ad8f
 
 <a name="loio99df2b95fb5245c7921673ad8fc2a542__delete_all_resources"/>
 
-## Delete all System Mapping Resources
+## Delete all System Mapping Resources \(Master Only\)
 
 
 <table>
@@ -636,7 +641,7 @@ Roles
 </td>
 <td valign="top">
 
-Administrator, Subaccount Administrator
+Administrator, Associate Administrator, Subaccount Administrator
 
 </td>
 </tr>
@@ -730,7 +735,7 @@ Roles
 </td>
 <td valign="top">
 
-Administrator, Subaccount Administrator, Display, Support
+Administrator, Associate Administrator, Subaccount Administrator, Display, Support, Monitoring
 
 </td>
 </tr>
@@ -832,7 +837,7 @@ Roles
 </td>
 <td valign="top">
 
-Administrator, Subaccount Administrator, Display, Support
+Administrator, Associate Administrator, Subaccount Administrator
 
 </td>
 </tr>
@@ -935,7 +940,7 @@ Roles
 </td>
 <td valign="top">
 
-Administrator, Subaccount Administrator, Display, Support
+Administrator, Associate Administrator, Subaccount Administrator
 
 </td>
 </tr>
@@ -1031,7 +1036,7 @@ Roles
 </td>
 <td valign="top">
 
-Administrator, Subaccount Administrator, Display, Support
+Administrator, Associate Administrator, Subaccount Administrator
 
 </td>
 </tr>
@@ -1118,7 +1123,7 @@ Roles
 </td>
 <td valign="top">
 
-Administrator, Subaccount Administrator, Display, Support
+Administrator, Associate Administrator, Subaccount Administrator
 
 </td>
 </tr>
@@ -1215,7 +1220,7 @@ Roles
 </td>
 <td valign="top">
 
-Administrator, Subaccount Administrator, Display, Support
+Administrator, Associate Administrator, Subaccount Administrator, Display, Support, Monitoring
 
 </td>
 </tr>
@@ -1317,7 +1322,7 @@ Roles
 </td>
 <td valign="top">
 
-Administrator, Subaccount Administrator, Display, Support
+Administrator, Associate Administrator, Subaccount Administrator
 
 </td>
 </tr>
@@ -1419,7 +1424,7 @@ Roles
 </td>
 <td valign="top">
 
-Administrator, Subaccount Administrator, Display, Support
+Administrator, Associate Administrator, Subaccount Administrator
 
 </td>
 </tr>
@@ -1516,7 +1521,7 @@ Roles
 </td>
 <td valign="top">
 
-Administrator, Subaccount Administrator, Display, Support
+Administrator, Associate Administrator, Subaccount Administrator
 
 </td>
 </tr>
@@ -1605,13 +1610,11 @@ Roles
 </td>
 <td valign="top">
 
-Administrator, Subaccount Administrator, Display, Support
+Administrator, Associate Administrator, Subaccount Administrator
 
 </td>
 </tr>
 </table>
 
 Back to [Top](system-mapping-resources-99df2b9.md#loio99df2b95fb5245c7921673ad8fc2a542__top)
-
-
 

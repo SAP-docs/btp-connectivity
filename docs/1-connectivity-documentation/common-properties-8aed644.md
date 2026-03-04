@@ -84,7 +84,7 @@ Roles
 </td>
 <td valign="top">
 
-Administrator, Subaccount Administrator, Display, Support
+Administrator, Associate Administrator, Subaccount Administrator, Display, Support, Monitoring
 
 </td>
 </tr>
@@ -180,7 +180,7 @@ Roles
 </td>
 <td valign="top">
 
-Administrator, Subaccount Administrator, Display, Support
+Administrator, Associate Administrator, Subaccount Administrator, Display, Support, Monitoring
 
 </td>
 </tr>
@@ -276,7 +276,7 @@ Roles
 </td>
 <td valign="top">
 
-Administrator
+Administrator, Associate Administrator
 
 </td>
 </tr>
@@ -299,5 +299,98 @@ Administrator
 
     > ### Note:  
     > `null` is not a JSON string.
+
+
+
+
+## Get Available Cipher Suites
+
+
+<table>
+<tr>
+<td valign="top">
+
+URI
+
+</td>
+<td valign="top">
+
+`/api/v1/configuration/availableCipherSuites` 
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+Method
+
+</td>
+<td valign="top">
+
+*GET* 
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+Request
+
+</td>
+<td valign="top">
+
+
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+Response
+
+</td>
+<td valign="top">
+
+```
+[cipherSuite, ...]
+
+```
+
+
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+Errors
+
+</td>
+<td valign="top">
+
+
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+Roles
+
+</td>
+<td valign="top">
+
+Administrator, Subaccount Administrator, Display, Support, Monitoring
+
+</td>
+</tr>
+</table>
+
+-   **Response**:
+    -   list of:
+
+        -   `cipherSuite`: cipher suite name like TLS\_AES\_128\_GCM\_SHA256 \(a string\)
+
+
 
 

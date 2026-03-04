@@ -7,6 +7,9 @@ Manage a CA certificate for principal propagation via API.
 > ### Note:  
 > The APIs below are available as of Cloud Connector version 2.13.0.
 
+> ### Caution:  
+> The path component *onPremises* of the URI is available as of version 2.18.0. Older versions must use *onPremise*. The latter is currently accepted by all versions, but we recommend that you use *onPremises* as *onPremise* may be discontinued at some point.
+
 
 
 <a name="loio0c4a9588f9184ec99ee2f522d02db5bb__section_rcp_l1b_vcb"/>
@@ -23,7 +26,7 @@ URI
 </td>
 <td valign="top">
 
-`/api/v1/configuration/connector/onPremise/ppCaCertificate` 
+`/api/v1/configuration/connector/onPremises/ppCaCertificate` 
 
 </td>
 </tr>
@@ -87,7 +90,7 @@ Roles
 </td>
 <td valign="top">
 
-Administrator, Display, Support
+Administrator, Associate Administrator, Subaccount Administrator, Display, Support, Monitoring
 
 </td>
 </tr>
@@ -99,7 +102,7 @@ Administrator, Display, Support
 -   `issuer`: the issuer \(a string\)
 -   `notBeforeTimeStamp`: timestamp of the beginning of the validity period \(a UTC long number\)
 -   `notAfterTimeStamp`: timestamp of the end of the validity period \(a UTC long number\)
--   `subjectAltNames`: subject alternative names \(see [Certificate Management for Backend Communication](certificate-management-for-backend-communication-7a74c14.md) for details\).
+-   `subjectAltNames`: subject alternative names \(see [Certificate Management for Back-End Communication](certificate-management-for-back-end-communication-7a74c14.md) for details\).
 
 **Errors:**
 
@@ -113,7 +116,7 @@ Administrator, Display, Support
 ## Example
 
 ```
-curl -i -k -H "Accept: application/json" -u <user>:<password> -X GET  https://<host>:<port>/api/v1/configuration/connector/onPremise/ppCaCertificate
+curl -i -k -H "Accept: application/json" -u <user>:<password> -X GET  https://<host>:<port>/api/v1/configuration/connector/onPremises/ppCaCertificate
 ```
 
 
@@ -132,7 +135,7 @@ URI
 </td>
 <td valign="top">
 
-`/api/v1/configuration/connector/onPremise/ppCaCertificate` 
+`/api/v1/configuration/connector/onPremises/ppCaCertificate` 
 
 </td>
 </tr>
@@ -192,7 +195,7 @@ Roles
 </td>
 <td valign="top">
 
-Administrator, Display, Support
+Administrator, Associate Administrator, Subaccount Administrator, Display, Support, Monitoring
 
 </td>
 </tr>
@@ -217,7 +220,7 @@ Administrator, Display, Support
 ## Example
 
 ```
-curl -k -H "Accept: application/pkix-cert" -u <user>:<password> -X GET --output sys.crt https://<host>:<port>/api/v1/configuration/connector/onPremise/ppCaCertificate
+curl -k -H "Accept: application/pkix-cert" -u <user>:<password> -X GET --output sys.crt https://<host>:<port>/api/v1/configuration/connector/onPremises/ppCaCertificate
 ```
 
 
@@ -236,7 +239,7 @@ URI
 </td>
 <td valign="top">
 
-`/api/v1/configuration/connector/onPremise/ppCaCertificate` 
+`/api/v1/configuration/connector/onPremises/ppCaCertificate` 
 
 </td>
 </tr>
@@ -301,7 +304,7 @@ Roles
 </td>
 <td valign="top">
 
-Administrator
+Administrator, Associate Administrator
 
 </td>
 </tr>
@@ -316,7 +319,7 @@ Administrator
     > This property is available as of version 2.15.0.
 
 -   `subjectDN`: the subject distinguished name \(a string\)
--   `subjectAltNames`: subject alternative names \(see [Certificate Management for Backend Communication](certificate-management-for-backend-communication-7a74c14.md) for details\). This property is optional.
+-   `subjectAltNames`: subject alternative names \(see [Certificate Management for Back-End Communication](certificate-management-for-back-end-communication-7a74c14.md) for details\). This property is optional.
 
 The certificate created this way has a validity of 1 year.
 
@@ -325,7 +328,7 @@ The certificate created this way has a validity of 1 year.
 ## Example
 
 ```
-curl -i -k -H "Accept: application/json" -H "Content-Type: application/json" -u <user>:<password> -X POST --data '{"type":"selfsigned", "subjectDN":"CN=me"}'  https://<host>:<port>/api/v1/configuration/connector/onPremise/ppCaCertificate
+curl -i -k -H "Accept: application/json" -H "Content-Type: application/json" -u <user>:<password> -X POST --data '{"type":"selfsigned", "subjectDN":"CN=me"}'  https://<host>:<port>/api/v1/configuration/connector/onPremises/ppCaCertificate
 ```
 
 
@@ -344,7 +347,7 @@ URI
 </td>
 <td valign="top">
 
-`/api/v1/configuration/connector/onPremise/ppCaCertificate` 
+`/api/v1/configuration/connector/onPremises/ppCaCertificate` 
 
 </td>
 </tr>
@@ -409,7 +412,7 @@ Roles
 </td>
 <td valign="top">
 
-Administrator
+Administrator, Associate Administrator
 
 </td>
 </tr>
@@ -424,7 +427,7 @@ Administrator
     > This property is available as of version 2.15.0.
 
 -   `subjectDN`: the subject distinguished name \(a string\)
--   `subjectAltNames`: subject alternative names \(see [Certificate Management for Backend Communication](certificate-management-for-backend-communication-7a74c14.md) for details\). This property is optional.
+-   `subjectAltNames`: subject alternative names \(see [Certificate Management for Back-End Communication](certificate-management-for-back-end-communication-7a74c14.md) for details\). This property is optional.
 
 
 
@@ -432,7 +435,7 @@ Administrator
 
 ```
 curl -k -u <user>:<password> -X POST -H "Content-Type: application/json" --data '{"type":"csr", "subjectDN":"CN=me"}' 
-https://<host>:<port>/api/v1/configuration/connector/onPremise/ppCaCertificate  -o csr.pem
+https://<host>:<port>/api/v1/configuration/connector/onPremises/ppCaCertificate  -o csr.pem
 ```
 
 
@@ -453,7 +456,7 @@ URI
 </td>
 <td valign="top">
 
-`/api/v1/configuration/connector/onPremise/ppCaCertificate` 
+`/api/v1/configuration/connector/onPremises/ppCaCertificate` 
 
 </td>
 </tr>
@@ -513,7 +516,7 @@ Roles
 </td>
 <td valign="top">
 
-Administrator
+Administrator, Associate Administrator
 
 </td>
 </tr>
@@ -534,7 +537,7 @@ Administrator
 ## Example
 
 ```
-curl -i -k -u <user>:<password> -X PATCH -F signedCertificate=@<signedchain.pem> https://<host>:<port>/api/v1/configuration/connector/onPremise/ppCaCertificate
+curl -i -k -u <user>:<password> -X PATCH -F signedCertificate=@<signedchain.pem> https://<host>:<port>/api/v1/configuration/connector/onPremises/ppCaCertificate
 ```
 
 **Example: Sign The Certificate Signing Request**
@@ -562,7 +565,7 @@ URI
 </td>
 <td valign="top">
 
-`/api/v1/configuration/connector/onPremise/ppCaCertificate` 
+`/api/v1/configuration/connector/onPremises/ppCaCertificate` 
 
 </td>
 </tr>
@@ -622,7 +625,7 @@ Roles
 </td>
 <td valign="top">
 
-Administrator
+Administrator, Associate Administrator
 
 </td>
 </tr>
@@ -646,7 +649,7 @@ Administrator
 ## Example
 
 ```
-curl -i -k -u <user>:<password> https://<host>:<port>/api/v1/configuration/connector/onPremise/ppCaCertificate -X PUT -F 'password=<p21Password>' -F pkcs12=@<p12file>
+curl -i -k -u <user>:<password> https://<host>:<port>/api/v1/configuration/connector/onPremises/ppCaCertificate -X PUT -F 'password=<p21Password>' -F pkcs12=@<p12file>
 
 ```
 
@@ -671,7 +674,7 @@ URI
 </td>
 <td valign="top">
 
-`/api/v1/configuration/connector/onPremise/ppCaCertificate` 
+`/api/v1/configuration/connector/onPremises/ppCaCertificate` 
 
 </td>
 </tr>
@@ -731,7 +734,7 @@ Roles
 </td>
 <td valign="top">
 
-Administrator
+Administrator, Associate Administrator
 
 </td>
 </tr>
@@ -746,7 +749,7 @@ Administrator
 ## Example
 
 ```
-curl -k -H "Accept: application/json" -u <user>:<password> --request DELETE https://localhost:8443/api/v1/configuration/connector/onPremise/ppCaCertificate
+curl -k -H "Accept: application/json" -u <user>:<password> --request DELETE https://localhost:8443/api/v1/configuration/connector/onPremises/ppCaCertificate
 
 ```
 

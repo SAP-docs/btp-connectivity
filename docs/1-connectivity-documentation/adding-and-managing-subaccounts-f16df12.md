@@ -127,6 +127,8 @@ Press *Add Subaccount* to define a subaccount. This will open a dialog or wizard
     > ### Restriction:  
     > The option *File-based configuration* does not work for subaccounts in the **Neo** environment.
 
+    You can also choose whether the subaccount is to be *managed* or not. A managed subaccount substantially restricts access for non-administrator roles beyond the restrictions already present to the extent that a subaccount can only be configured and maintained by an administrator \(read-only access as well as connecting/disconnecting is not affected\).
+
     ![](images/SCC_AddManageSubaccounts_2_7edd7f1.png)
 
 3.  \(Skip if you have selected *file-based* configuration\) For *manual* configuration, the following dialog is shown:
@@ -198,9 +200,14 @@ Press *Add Subaccount* to define a subaccount. This will open a dialog or wizard
     6.  \(Optional\) You can provide a *<Description\>* of the subaccount that becomes a part of the subaccount's detail information.
 
         > ### Note:  
-        > Location ID and description can be changed later on at any time. See [Next Steps](adding-and-managing-subaccounts-f16df12.md#loiof16df12fab9f4fe1b8a4122f0fd54b6e__next).
+        > Location ID and description can be changed later on at any time. See [Next Steps \(Editing\)](adding-and-managing-subaccounts-f16df12.md#loiof16df12fab9f4fe1b8a4122f0fd54b6e__next).
 
-    7.  Choose *Finish*.
+    7.  Select the automatic subaccount certificate renewal policy.
+
+        > ### Note:  
+        > **Neo** regions do not support automatic subaccount certificate renewal. Choosing automatic renewal for a subaccount of a Neo region has no effect. For other regions, the policy can be changed later on at any time. See [Next Steps \(Editing\)](adding-and-managing-subaccounts-f16df12.md#loiof16df12fab9f4fe1b8a4122f0fd54b6e__next).
+
+    8.  Choose *Finish*.
 
 
 4.  \(Skip if you have selected *manual* configuration\) For the *file-based* approach using authentication data, the following dialog is shown:
@@ -217,7 +224,7 @@ Press *Add Subaccount* to define a subaccount. This will open a dialog or wizard
     3.  Go back to the Cloud Connector *Add Subaccount* dialog and select *Add subaccount authentication data from file*.
     4.  Choose the file containing the authentication data and press *Next*.
 
-        You can then review the data extracted from the file, as well as optionally enter a location ID and a description \(see steps 3d and 3e for details on the latter two properties\).
+        You can then review the data extracted from the file, as well as optionally enter a location ID, a description, and enable automatic subaccount certificate renewal \(see steps 3e-g for details on those properties\).
 
 
     If you have the authentication data **available as a string from your SaaS solution**:
@@ -268,7 +275,7 @@ If you want to connect an additional subaccount with your on-premises landscape,
 
 ## Next Steps
 
--   To modify an existing subaccount, choose the *Edit* icon and change the *<Display Name\>*, *<Location ID\>* and/or *<Description\>*.
+-   To modify an existing subaccount, choose the *Edit* icon and change the *<Display Name\>*, *<Location ID\>*, *<Description\>*, and the automatic subaccount certificate renewal policy. The latter is not available for Neo regions.
 
     ![](images/SCC_AddManageSubaccounts_9_cee3063.png)
 

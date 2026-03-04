@@ -27,19 +27,21 @@ For more information, see [Kerberos Protocol Extensions: Service for User and Co
 
 1.  Choose *Configuration* from the main menu.
 
-2.  From the *Kerberos* section of the *On Premise* tab, choose *Edit*.
+2.  From the *Kerberos* section of the *On Premises* tab, choose *Edit*.
 
     ![](images/SCC_Kerberos_0f22a4f.png)
 
-3.  Enter the name of your Kerberos realm.
+3.  In the *KDC Hosts* field \(press *Add* to display the field\), enter the host name of your KDC in format <host\>:<port\>. The port is optional. If you do not specify a port, the default one, 88, will be used.
 
-4.  Upload a KEYTAB file that contains the secret keys of your service user. The KEYTAB file should contain the `rc4-hmac` key for your user.
+4.  Choose the desired *Encryption Key* algorithm from the list of the 2 available ones: `RC4_HMAC` or `AES256_CTS_HMAC_SHA1_96`.
 
-5.  Enter the name of the service user to be used for communication with the KDC. This user should be allowed to request Kerberos tokens for other users for the backend systems that you are going to access.
+5.  In the *Realm Name* field, enter the name of your Kerberos realm.
 
-6.  In the *<KDC Hosts\>* field \(press *Add* to display the field\), enter the host name of your KDC using the format `<host>:<port>`. The port is optional; if you leave it empty, the default, 88, is used.
+6.  Upload a KEYTAB file that contains the secret keys of your service user. The KEYTAB file should fit to the chosen encryption key for your user.
 
-7.  Choose *Save*.
+7.  In the *User Name* field, enter the name of the service user to be used for communication with the KDC. This service user should be allowed to request Kerberos tokens for other users for the back-end systems that you are going to access.
+
+8.  Choose *Save*.
 
 
 

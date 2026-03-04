@@ -58,5 +58,5 @@ To renew a certificate that is close to expiration, install the new certificate 
 **Related Information**  
 
 
-[Configure Access Control \(HTTP\)](configure-access-control-http-e7d4927.md "Specify the backend systems that can be accessed by your cloud applications using HTTP.")
+[Configure Access Control \(HTTP\)](configure-access-control-http-e7d4927.md "Specify the back-end systems that can be accessed by your cloud applications using HTTP.")
 
