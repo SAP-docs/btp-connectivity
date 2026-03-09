@@ -388,7 +388,6 @@
             -   [Multitenancy](1-connectivity-documentation/multitenancy-6478985.md)
         -   [Local Development](1-connectivity-documentation/local-development-bcbcd9f.md)
         -   [Transparent Proxy Operator](1-connectivity-documentation/transparent-proxy-operator-2d826aa.md)
-        -   [Integration with Zero Trust Identity Service \(ZTIS\)](1-connectivity-documentation/integration-with-zero-trust-identity-service-ztis-4f7bb27.md)
         -   [Security Considerations](1-connectivity-documentation/security-considerations-ac0c9e9.md)
     -   [Connectivity via Reverse Proxy](1-connectivity-documentation/connectivity-via-reverse-proxy-dde01af.md)
     -   [Connectivity Support](1-connectivity-documentation/connectivity-support-e5580c5.md)
