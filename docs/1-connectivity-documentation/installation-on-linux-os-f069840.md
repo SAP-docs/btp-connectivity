@@ -20,13 +20,13 @@ You can choose between a simple `portable` variant of the Cloud Connector and th
 ## Prerequisites
 
 -   You have one of the supported 64-bit operating systems. For more information, see [Product Availability Matrix](prerequisites-e23f776.md#loioe23f776e4d594fdbaeeb1196d47bbcc0__matrix).
--   The supported platforms are `x64` and `ppc64le`, represented below by the variable *<platform\>*. Variable *<arch\>* is `x86_64` or `ppc64le` respectively.
--   You have downloaded either the `portable` variant as `tar.gz` archive for Linux or the RPM `installer` contained in the ZIP for Linux, from [SAP Development Tools for Eclipse](https://tools.hana.ondemand.com/#cloud).
+-   The supported platforms are `x64`, `arm64`, and `ppc64le`, represented below by the variable *<platform\>*. Variable *<arch\>* is `x86_64`, `aarch64`, or `ppc64le` respectively.
+-   You have downloaded either the `portable` variant as `tar.gz` archive for Linux or the RPM `installer` contained in the ZIP for Linux, from the [SAP Development Tools](https://tools.hana.ondemand.com/#cloud) page.
 -   A supported Java version must be installed. For more information, see [JDKs](prerequisites-e23f776.md#loioe23f776e4d594fdbaeeb1196d47bbcc0__jdk).
 
-    If you want to use SAP JVM, you can download it from the [SAP Development Tools for Eclipse](https://tools.hana.ondemand.com/#cloud) page.
+    If you want to use SAP JVM, you can download its installer package from the [SAP Development Tools](https://tools.hana.ondemand.com/#cloud) page or a compressed SAR archive from the [SAP Software Center](https://me.sap.com/swdcnav/products/_APP=00200682500000001943&_EVENT=DISPHIER&HEADER=Y&FUNCTIONBAR=N&EVENT=TREE&NE=NAVIGATE&ENR=01200615320100003755&V=MAINT).
 
-    Use the following command to install it:
+    If you downloaded the RPM package, use the following command to install it:
 
     ```
     rpm -i sapjvm-<version>-linux-<platform>.rpm
@@ -38,7 +38,7 @@ You can choose between a simple `portable` variant of the Cloud Connector and th
     rpm -qa | grep jvm
     ```
 
-    When installing it using the RPM package, the Cloud Connector will detect it and use it for its runtime.
+    An installed RPM package will be detected by the Cloud Connector and used for its runtime.
 
     Alternatively supported SapMachine JDK versions can be downloaded from the [SapMachine](https://sapmachine.io) homepage.
 

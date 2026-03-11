@@ -16,10 +16,10 @@ Installing the Cloud Connector on an Apple macOS operating system.
 
 -   You have one of the supported 64-bit operating systems. For more information, see [Product Availability Matrix](prerequisites-e23f776.md#loioe23f776e4d594fdbaeeb1196d47bbcc0__matrix).
 -   The supported platforms are *aarch64* and *x64*, represented below by the variable *<platform\>*.
--   You have downloaded the `tar.gz` archive for the developer use case on Apple macOS from [SAP Development Tools for Eclipse](https://tools.hana.ondemand.com/#cloud).
+-   You have downloaded the `tar.gz` archive for the developer use case on Apple macOS from the [SAP Development Tools](https://tools.hana.ondemand.com/#cloud) page.
 -   A supported Java version must be installed. For more information, see [JDKs](prerequisites-e23f776.md#loioe23f776e4d594fdbaeeb1196d47bbcc0__jdk).
 
-    If you are running Apple macOS on an INTEL x86 64-bit CPU and you want to use SAP JVM, you can download it from the [SAP Development Tools for Eclipse](https://tools.hana.ondemand.com/#cloud) page.
+    If you are running Apple macOS on an INTEL x86 64-bit CPU and you want to use SAP JVM, you can download its installer package from the [SAP Development Tools](https://tools.hana.ondemand.com/#cloud) page or a compressed SAR archive from the [SAP Software Center](https://me.sap.com/swdcnav/products/_APP=00200682500000001943&_EVENT=DISPHIER&HEADER=Y&FUNCTIONBAR=N&EVENT=TREE&NE=NAVIGATE&ENR=01200615320100003755&V=MAINT).
 
     Alternatively supported SapMachine JDK versions for macOS on aarch64 and x64 processor architectures can be downloaded from the [SapMachine](https://sapmachine.io) homepage.
 

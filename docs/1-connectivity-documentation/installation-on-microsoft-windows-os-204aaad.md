@@ -22,14 +22,14 @@ You can choose between a simple `portable` variant of the Cloud Connector and th
 ## Prerequisites
 
 -   You have one of the supported 64-bit operating systems. For more information, see [Product Availability Matrix](prerequisites-e23f776.md#loioe23f776e4d594fdbaeeb1196d47bbcc0__matrix).
--   You have downloaded either the `portable` variant as ZIP archive for Windows, or the MSI `installer` from the [SAP Development Tools for Eclipse](https://tools.hana.ondemand.com/#cloud) page.
+-   You have downloaded either the `portable` variant as ZIP archive for Windows, or the MSI `installer` from the [SAP Development Tools](https://tools.hana.ondemand.com/#cloud) page.
 -   You must install Microsoft Visual Studio C++ 2019 runtime libraries \(download `vc_redist.x64.exe`\).
 
     For more information, see [Microsoft Visual C++ Redistributable latest supported downloads](https://learn.microsoft.com/en-us/cpp/windows/latest-supported-vc-redist?view=msvc-170).
 
 -   A supported Java version must be installed. For more information, see [JDKs](prerequisites-e23f776.md#loioe23f776e4d594fdbaeeb1196d47bbcc0__jdk).
 
-    If you want to use SAP JVM, you can download it from the [SAP Development Tools for Eclipse](https://tools.hana.ondemand.com/#cloud) page.
+    If you want to use SAP JVM, you can download its installer package from the [SAP Development Tools](https://tools.hana.ondemand.com/#cloud) page or a compressed SAR archive from the [SAP Software Center](https://me.sap.com/swdcnav/products/_APP=00200682500000001943&_EVENT=DISPHIER&HEADER=Y&FUNCTIONBAR=N&EVENT=TREE&NE=NAVIGATE&ENR=01200615320100003755&V=MAINT).
 
     Alternatively supported SapMachine JDK versions can be downloaded from the [SapMachine](https://sapmachine.io) homepage.
 

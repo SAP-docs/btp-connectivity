@@ -332,7 +332,7 @@ Back to [Content](prerequisites-e23f776.md#loioe23f776e4d594fdbaeeb1196d47bbcc0_
 ## Product Availability Matrix
 
 > ### Note:  
-> Whether a concrete combination of JDK and operating system can actually be used depends on the availablity of the JDK for the operating system.
+> Whether a concrete combination of JDK and operating system can actually be used depends on the availability of the JDK for the operating system.
 
 
 <table>
