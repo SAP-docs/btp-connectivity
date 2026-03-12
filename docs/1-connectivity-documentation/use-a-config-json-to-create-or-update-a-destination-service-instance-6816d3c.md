@@ -110,13 +110,13 @@ Find the `config.json` structure below:
 >             "existing_certificates_policy": "update|fail|ignore",
 >             "destinations" : [
 >                 {
->                     ...
+>                     ... // a destination entity in key-value JSON format, as used in the service REST API
 >                 }
->             ],
+> 			],
 >             "certificates" : [
 >                 {
->                     ...
->                 }
+>                     ... // a certificate entity in key-value JSON format, as used in the service REST API
+>                 }
 >             ]
 >         },
 >         "instance" : {
@@ -124,16 +124,34 @@ Find the `config.json` structure below:
 >             "existing_certificates_policy": "update|fail|ignore",
 >             "destinations" : [
 >                 {
->                     ...
->                 }
->             ],
+>                     ... // a destination entity in key-value JSON format, as used in the service REST API
+>                 }
+> 			],
 >             "certificates" : [
 >                 {
->                     ...
->                 } 
+>                     ... // a certificate entity in key-value JSON format, as used in the service REST API
+>                 }  
 >             ]
 >         }
->     }
+> 	},
+>  	"subscriber_access" : {
+> 	    "destination": {
+>      		"read_scopes":[
+>         		"my-saas-app!b3.ds.subscription.destination.read"
+>               ],
+>       		"write_scopes": [
+>         		"my-saas-app!b3.ds.subscription.destination.write"
+>               ]
+>     	},
+>     	"certificate": {
+>       		"read_scopes":[
+>         		"my-saas-app!b3.ds.subscription.certificate.read"
+>       		],
+>       		"write_scopes": [
+>         		"my-saas-app!b3.ds.subscription.certificate.write"
+>       		]
+>     	}
+>     }    
 > }
 > ```
 
