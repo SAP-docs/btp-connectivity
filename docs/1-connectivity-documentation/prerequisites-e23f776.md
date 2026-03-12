@@ -271,7 +271,7 @@ Oracle JDK 64-bit
 <tr>
 <td valign="top" rowspan="4">
 
-[SapMachine](https://sapmachine.io) 64-bit
+SapMachine 64-bit
 
 </td>
 <td valign="top">
@@ -322,6 +322,10 @@ Oracle JDK 64-bit
 </td>
 </tr>
 </table>
+
+If you want to use SAP JVM, you can download its installer package from the [SAP Development Tools](https://tools.hana.ondemand.com/#cloud) page or a compressed SAR archive from the [SAP Software Center](https://me.sap.com/swdcnav/products/_APP=00200682500000001943&_EVENT=DISPHIER&HEADER=Y&FUNCTIONBAR=N&EVENT=TREE&NE=NAVIGATE&ENR=01200615320100003755&V=MAINT).
+
+Alternatively supported SapMachine JDK versions can be downloaded from the [SapMachine](https://sapmachine.io) homepage.
 
 Back to [Content](prerequisites-e23f776.md#loioe23f776e4d594fdbaeeb1196d47bbcc0__content)
 
