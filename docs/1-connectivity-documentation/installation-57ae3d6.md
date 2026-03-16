@@ -10,7 +10,7 @@ Choose a procedure to install the Cloud Connector on your operating system.
 
 ## Portable Version vs. Installer Version
 
-On **Microsoft Windows** and **Linux**, two installation modes are available: a `portable` version and an `installer` version. On **Mac OS X**, only the `portable` version is available.
+On **Microsoft Windows** and **Linux**, two installation variants are available: a `portable` version and an `installer` version. On **Apple macOS**, only the `portable` version is available.
 
 -   `Portable` version: can be installed easily, by extracting a compressed archive into an empty directory. It does not require administrator or root privileges for the installation, and you can run multiple instances on the same host.
 

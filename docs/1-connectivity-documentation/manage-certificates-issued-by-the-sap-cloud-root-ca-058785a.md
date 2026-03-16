@@ -89,7 +89,7 @@ For more information, see also [Calling the Destination Service REST API](callin
 
 2.  Note that the `${...}` values are the data collected in the previous steps.
 3.  You can specify the `Validity` of the certificate.
-4.  You can set an `AutomaticRenew` flag for the certificate. If your subaccount does not offer the auto-renew function, you may want to get notified about the certificate expiration.
+4.  You can set an `AutomaticRenew` flag for the certificate. If you do not use the auto-renew function, you may want to get notified about the certificate expiration.
 
     For more information, see [Destination Service Notifications](destination-service-notifications-552e8fd.md).
 

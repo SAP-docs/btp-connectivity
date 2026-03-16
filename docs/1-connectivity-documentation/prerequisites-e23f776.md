@@ -888,6 +888,9 @@ You must have Internet connection at least to the following Connectivity service
 > ### Note:  
 > For general information on IP ranges per region, see [Regions](https://help.sap.com/viewer/3504ec5ef16548778610c7e89cc0eac3/Cloud/en-US/350356d1dc314d3199dca15bd2ab9b0e.html) \(Cloud Foundry and ABAP environment\) or [Regions and Hosts Available for the Neo Environment](https://help.sap.com/viewer/ea72206b834e4ace9cd834feed6c0e09/Cloud/en-US/d722f7cea9ec408b85db4c3dcba07b52.html). Find detailed information about the region status and planned network updates on [Platform Updates and Notifications](https://help.sap.com/docs/BTP/65de2977205c403bbc107264b8eccf4b/99070c7bfc0e4f41842bd7c648b7fca7.html).
 
+> ### Note:  
+> The *Connectivity Region Host* in the table below is mentioned only if it differs from the usual *Region Host*.
+
 [Cloud Foundry Environment](prerequisites-e23f776.md#loioe23f776e4d594fdbaeeb1196d47bbcc0__cf)
 
 [ABAP Environment](prerequisites-e23f776.md#loioe23f776e4d594fdbaeeb1196d47bbcc0__abap)
@@ -901,7 +904,11 @@ You must have Internet connection at least to the following Connectivity service
 <tr>
 <th valign="top">
 
-Region \(Region Host\)
+Region
+
+\(Region Host\)
+
+\(Connectivity Region Host\)
 
 </th>
 <th valign="top" colspan="2">
@@ -947,6 +954,8 @@ IP Addresses \(IPv6\)
 Europe \(Frankfurt\) - SAP \(EU Access Only\)
 
 \(`cf.eu01.hana.ondemand.com`\)
+
+\(mtls.eu01-l-c.uc-live-eu.shoot.live.k8s-hana.ondemand.com\)
 
 > ### Note:  
 > Available as of September 19, 2025
@@ -1010,6 +1019,8 @@ connectivitytunnel.eu01-l-d.uc-live-eu.shoot.live.k8s-hana.ondemand.com
 Europe \(Rot\) - SAP \(EU Access Only\)
 
 \(`cf.eu02.hana.ondemand.com`\)
+
+\(mtls.eu02-l-c.uc-live-eu.shoot.live.k8s-hana.ondemand.com\)
 
 > ### Note:  
 > Available as of November 28, 2025
@@ -1679,6 +1690,8 @@ US \(Sterling\) - SAP
 
 \(`cf.us01.hana.ondemand.com`\)
 
+\(mtls.us01-l-c.uc-live.shoot.live.k8s-hana.ondemand.com\)
+
 > ### Note:  
 > Available as of January 30, 2026
 
@@ -1741,6 +1754,8 @@ connectivitytunnel.us01-l-d.uc-live.shoot.live.k8s-hana.ondemand.com
 US West \(Colorado\) - SAP
 
 \(`cf.us02.hana.ondemand.com`\)
+
+\(mtls.us02-l-c.uc-live.shoot.live.k8s-hana.ondemand.com\)
 
 > ### Note:  
 > Available as of December 30, 2025
@@ -2409,6 +2424,8 @@ Japan \(Tokyo\) - SAP
 
 \(`cf.jp01.hana.ondemand.com`\)
 
+\(mtls.jp01-l-c.uc-live.shoot.live.k8s-hana.ondemand.com\)
+
 > ### Note:  
 > Available as of January 15, 2026
 
@@ -2751,6 +2768,8 @@ connectivitytunnel.cf.jp31.hana.ondemand.com
 Australia \(Sydney\) - SAP
 
 \(`cf.ap01.hana.ondemand.com`\)
+
+\(mtls.ap01-l-c.uc-live.shoot.live.k8s-hana.ondemand.com\)
 
 > ### Note:  
 > Available as of December 30, 2025
@@ -3830,6 +3849,8 @@ connectivitytunnel.cf.sa31.hana.ondemand.com
 UAE \(Dubai\) - SAP
 
 \(`cf.ae01.hana.ondemand.com`\)
+
+\(mtls.ae01-l-c.uc-live.shoot.live.k8s-hana.ondemand.com\)
 
 > ### Note:  
 > Available as of October 31, 2025
