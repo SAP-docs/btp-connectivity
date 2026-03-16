@@ -18,6 +18,9 @@ The Destination service lets you find the information that is required to access
 -   Manages routing and authentication details, as well as custom scenario-specific parameters.
 -   Performs authentication flows based on the configured details.
 
+> ### Note:  
+> Each subaccount is limited to a maximum of 1,000 entities per configuration type \(destination, certificate, fragment\).
+
 
 <table>
 <tr>
