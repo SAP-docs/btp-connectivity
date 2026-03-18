@@ -22,7 +22,7 @@ Use the multitarget-application \(MTA\) descriptor to manage destinations for co
 
 When modeling a multitarget application \(MTA\), you can create and update destinations from your MTA descriptor.
 
-For more information on MTA, see [Multitarget Applications in the Cloud Foundry Environment](https://help.sap.com/viewer/65de2977205c403bbc107264b8eccf4b/Cloud/en-US/d04fc0e2ad894545aebfd7126384307c.html "A Multitarget application (MTA) is essentially a single application that consists of multiple parts. These parts are created using various technologies and share the same lifecycle.") :arrow_upper_right:.
+For more information on MTA, see [Multitarget Applications in the Cloud Foundry Environment](https://help.sap.com/viewer/65de2977205c403bbc107264b8eccf4b/Cloud/en-US/d04fc0e2ad894545aebfd7126384307c.html "A multitarget application (MTA) is essentially a single application that consists of multiple parts. These parts are created using various technologies and share the same lifecycle.") :arrow_upper_right:.
 
 Back to [Content](create-destinations-using-the-mta-descriptor-8aeea65.md#loio8aeea65eb9d64267b554f64a3db8a349__content)
 

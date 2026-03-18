@@ -105,6 +105,18 @@ Invoke multiple destinations with a single *Find a Destination* request.
 <tr>
 <td valign="top">
 
+[Labeling Destination Service Entities](labeling-destination-service-entities-90f0f67.md)
+
+</td>
+<td valign="top">
+
+You can assign labels to some of the configurations that you can manage within the Destination service. Currently, this is supported for destinations and certificates.
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
 [Configuring Backup](configuring-backup-d0d549a.md)
 
 </td>

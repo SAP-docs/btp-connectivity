@@ -49,6 +49,8 @@ For more information on these procedures, see:
 
 Some common *principal propagation* scenarios for communication between an SAP BTP multi-cloud \(Cloud Foundry\) application and different target applications are described in detail here:
 
+-   [JWT Bearer Flow between Two Applications in SAP Cloud Identity Services \(App to App\)](jwt-bearer-flow-between-two-applications-in-sap-cloud-identity-services-app-to-app-34cff47.md)
+-   [JWT Bearer Flow from the Multi-Cloud Environment to SuccessFactors](jwt-bearer-flow-from-the-multi-cloud-environment-to-successfactors-6f0675b.md)
 -   [SAML Bearer Assertion Flow from the Cloud Foundry Environment to SAP S/4HANA Cloud](saml-bearer-assertion-flow-from-the-cloud-foundry-environment-to-sap-s-4hana-cloud-9af03a0.md)
 -   [SAML Bearer Assertion Flow from the Cloud Foundry Environment to SAP SuccessFactors](saml-bearer-assertion-flow-from-the-cloud-foundry-environment-to-sap-successfactors-67a3b83.md)
 -   [SAML Bearer Assertion Flow between Cloud Foundry Applications](saml-bearer-assertion-flow-between-cloud-foundry-applications-8ebf60c.md)

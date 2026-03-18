@@ -69,19 +69,7 @@ Developer
 ![](images/CS_TASK_Admin_Dev_7c2c6d8.png)
 
 -   You have configured an `OAuth2SAMLBearerAssertion` destination. See [OAuth SAML Bearer Assertion Authentication](oauth-saml-bearer-assertion-authentication-c69ea6a.md).
--   Unless using the destination property `SystemUser`, the user’s identity should be represented by a JSON Web token \(JWT\).
-
-    > ### Caution:  
-    > The `SystemUser` property is deprecated and will be removed soon. We recommend that you work on behalf of specific \(named\) users instead of working with a technical user.
-    > 
-    > As an alternative for technical user communication, we strongly recommend that you use one of these authentication types:
-    > 
-    > -   Basic Authentication \(see [Client Certificate Authentication](client-certificate-authentication-4e13a04.md)\)
-    > 
-    > -   Client Certificate Authentication \(see [Client Certificate Authentication](client-certificate-authentication-4e13a04.md)\)
-    > -   [OAuth Client Credentials Authentication](oauth-client-credentials-authentication-4e1d742.md)
-    > 
-    > To extend an OAuth access token's validity, consider using an OAuth refresh token.
+-   The user’s identity should be represented by a JSON Web token \(JWT\).
 
     > ### Note:  
     > Though actually not being a strict requirement, it is likely that you need a user JWT to get the relevant information. See [SAP Authorization and Trust Management Service](https://help.sap.com/viewer/65de2977205c403bbc107264b8eccf4b/Cloud/en-US/6373bb7a96114d619bfdfdc6f505d1b9.html "The global account and subaccounts get their users from identity providers. Administrators make sure that users can only access their dedicated subaccount by making sure that there is a dedicated trust relationship only between the identity providers and the respective subaccounts. Developers configure and deploy application-based security artifacts containing authorizations, and administrators assign these authorizations using the SAP BTP cockpit.") :arrow_upper_right:.
@@ -102,7 +90,7 @@ For an `OAuth2SAMLBearerAssertion` destination, you can use the automated token 
 
 **Determine the Propagated User ID**
 
-There are currently three sources that can provide the propagated user ID. They are prioritized, meaning that the lookup always starts from the top-priority source and goes down the list. If the propagated user ID is not found at a given level, the next level is checked. If not found on any level, the operation would fail.
+There are currently two sources that can provide the propagated user ID. They are prioritized, meaning that the lookup always starts from the top-priority source and goes down the list. If the propagated user ID is not found at a given level, the next level is checked. If not found on any level, the operation would fail.
 
 Find the available sources in the table below, in order of their priority.
 
@@ -121,18 +109,6 @@ Source
 Procedure
 
 </th>
-</tr>
-<tr>
-<td valign="top">
-
-*System User*
-
-</td>
-<td valign="top">
-
-The system user is a special user ID that is hardcoded in your destination as value of the `SystemUser` property. If you set this property, its value is used as the propagated user ID.
-
-</td>
 </tr>
 <tr>
 <td valign="top">
@@ -224,31 +200,16 @@ Authorization Header
 <tr>
 <td valign="top">
 
-Propagate a **technical user** principal, using the `SystemUser` property of an `OAuth2SAMLBearerAssertion` destination maintained in the **subscriber subaccount**, and used by the **provider application**.
+Propagate a **business user** principal, using an `OAuth2SAMLBearerAssertion` destination maintained in the **same subaccount** where the application is deployed.
+
+The business user is represented by a JWT that was **issued by the provider**.
 
 </td>
 <td valign="top">
 
-Access token, retrieved
+The JWT, previously retrieved by the application
 
--   via the client credentials of the Destination service instance \(bound to the application\).
--   using the subscriber's tenant-specific `Token Service URL`.
-
-
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-Propagate a **technical user** principal, using the `SystemUser` property of an `OAuth2SAMLBearerAssertion` destination maintained in the **same subaccount** where the application is deployed.
-
-</td>
-<td valign="top">
-
-Access token, retrieved
-
--   via the client credentials of the Destination service instance \(bound to the application\).
+-   by exchanging the JWT \(that represents the user\) to another user access token via the client credentials of the Destination service instance \(bound to the application\).
 -   using the provider's tenant-specific `Token Service URL`.
 
 
@@ -269,25 +230,6 @@ The JWT, previously retrieved from the application
 
 -   by exchanging the JWT \(that represents the user\) to another user access token via the client credentials of the Destination service instance \(bound to the application\).
 -   using the subscriber's tenant-specific `Token Service URL`.
-
-
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-Propagate a **business user** principal, using an `OAuth2SAMLBearerAssertion` destination maintained in the **same subaccount** where the application is deployed.
-
-The business user is represented by a JWT that was **issued by the provider**.
-
-</td>
-<td valign="top">
-
-The JWT, previously retrieved by the application
-
--   by exchanging the JWT \(that represents the user\) to another user access token via the client credentials of the Destination service instance \(bound to the application\).
--   using the provider's tenant-specific `Token Service URL`.
 
 
 

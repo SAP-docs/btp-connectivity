@@ -218,7 +218,7 @@ Password for `tokenServiceUser` \(if required\).
 User to be used when requesting an access token from the OAuth authorization server. If this property is not specified, the currently logged-in user is used.
 
 > ### Caution:  
-> This property is deprecated and will be removed soon. We recommend that you work on behalf of specific \(named\) users instead of working with a technical user.
+> This property is deprecated and will be removed by end of September 2026. We recommend that you work on behalf of specific \(named\) users instead of working with a technical user.
 > 
 > As an alternative for technical user communication, we strongly recommend that you use one of these authentication types:
 > 
@@ -228,6 +228,8 @@ User to be used when requesting an access token from the OAuth authorization ser
 > -   [OAuth Client Credentials Authentication](oauth-client-credentials-authentication-4e1d742.md)
 > 
 > To extend an OAuth access token's validity, consider using an OAuth refresh token.
+> 
+> For *SuccessFactors* scenarios, see [Technical User Access to SuccessFactors](technical-user-access-to-successfactors-60267d3.md).
 
 
 
