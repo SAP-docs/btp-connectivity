@@ -338,7 +338,7 @@ The *LDAP Configuration* APIs use the following objects to describe the LDAP ser
 ## Change LDAP Authentication
 
 > ### Caution:  
-> The Cloud Connector will restart if the request was successful. There is no test that confirms login will work afterwards. If you run into problems you can revert to basic authentication by executing the script `useFileUserStore` located in the root directory of your Cloud Connector installation.
+> The Cloud Connector will restart if the request was successful and the configuration was changed. There is no test that confirms login will work afterwards. If you run into problems you can revert to basic authentication by executing the script `useFileUserStore` located in the root directory of your Cloud Connector installation.
 
 
 <table>
@@ -563,6 +563,9 @@ curl -i -k -H 'Accept:application/json'
 > ### Note:  
 > Available as of version 2.18.0.
 
+> ### Caution:  
+> The Cloud Connector will restart if the request was successful and the configuration was changed. There is no test that confirms login will work afterwards. If you run into problems you can revert to basic authentication by executing the script `useFileUserStore` located in the root directory of your Cloud Connector installation.
+
 
 <table>
 <tr>
@@ -654,7 +657,8 @@ Administrator
 -   INVALID\_REQUEST \(400\): configuration is invalid
 -   INVALID\_CONFIGURATION \(409\): LDAP server is not accessible \(does not respond\)
 
-In both error cases nothing is stored, and LDAP authentication is disabled.
+> ### Note:  
+> In both error cases nothing is stored, and LDAP authentication is disabled.
 
 
 
@@ -772,6 +776,9 @@ curl -i -k -H 'Accept:application/json'
 > ### Note:  
 > Available as of version 2.18.0.
 
+> ### Note:  
+> No restart will be performed on the Cloud Connector. To activate the configuration, a manual restart will be required.
+
 
 <table>
 <tr>
@@ -873,6 +880,9 @@ Administrator
 
 -   INVALID\_REQUEST \(400\): configuration is invalid
 -   INVALID\_CONFIGURATION \(409\): LDAP server is not accessible \(does not respond\)
+
+> ### Note:  
+> In both error cases nothing is stored, and LDAP configuration remains unchanged.
 
 
 
@@ -985,6 +995,9 @@ curl -i -k -H 'Accept:application/json' -u Administrator:<password> -X GET https
 > ### Note:  
 > Available as of version 2.18.0.
 
+> ### Note:  
+> No restart will be performed on the Cloud Connector. To activate the configuration, a manual restart will be required.
+
 
 <table>
 <tr>
@@ -1072,6 +1085,9 @@ Administrator
 -   INVALID\_REQUEST \(400\): configuration is invalid
 -   INVALID\_CONFIGURATION \(409\): LDAP server is not accessible \(does not respond\)
 
+> ### Note:  
+> In error cases nothing is stored, and LDAP configuration remains unchanged.
+
 
 
 ## Example
@@ -1089,6 +1105,9 @@ curl -i -k -H 'Accept:application/json' -u Administrator:<password> -X PUT https
 
 > ### Note:  
 > Available as of version 2.18.0.
+
+> ### Note:  
+> No restart will be performed on the Cloud Connector. To activate the configuration, a manual restart will be required.
 
 
 <table>
@@ -1166,6 +1185,9 @@ Administrator
 </tr>
 </table>
 
+> ### Note:  
+> Removal of the last remaining LDAP server is not allowed.
+
 
 
 ## Example
@@ -1183,6 +1205,9 @@ curl -i -k -H 'Accept:application/json'
 
 > ### Note:  
 > Available as of version 2.18.0.
+
+> ### Note:  
+> No restart will be performed on the Cloud Connector. To activate the configuration, a manual restart will be required.
 
 
 <table>
