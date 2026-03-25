@@ -62,7 +62,7 @@ User
 Represents the user to be used for logging on to the ABAP system.
 
 > ### Note:  
-> *Authentication Type* must be set to `CONFIGURED_USER`.
+> *Authorization Type* must be set to `CONFIGURED_USER`.
 
 The value is case-insensitive and the maximum length is 12 characters.
 
@@ -89,7 +89,7 @@ Alias User
 Represents the user to be used for logging on to the ABAP system.
 
 > ### Note:  
-> *Authentication Type* must be set to `CONFIGURED_USER`.
+> *Authorization Type* must be set to `CONFIGURED_USER`.
 
 Either `jco.client.user` or `jco.client.alias_user` must be specified. The alias user may be up to 40 characters long and is case-sensitive.
 
@@ -116,7 +116,7 @@ Password
 Represents the password of the user that is used.
 
 > ### Note:  
-> *Authentication Type* must be set to `CONFIGURED_USER`.
+> *Authorization Type* must be set to `CONFIGURED_USER`.
 
 > ### Note:  
 > Passwords in systems of SAP NetWeaver releases lower than 7.0 are case-insensitive and can be only eight characters long. For releases 7.0 and higher, passwords are case-sensitive with a maximum length of 40.
@@ -142,7 +142,7 @@ Use TLS client certificate login
 <td valign="top">
 
 > ### Note:  
-> *Authentication Type* must be set to `CONFIGURED_USER`.
+> *Authorization Type* must be set to `CONFIGURED_USER`.
 
 If the checkbox is checked or the value in a property file is set to `1`, the client certificate provided by the key store \(must be configured in addition\) is used for authentication, and the *User*, *Alias User* and *Password* input fields will be hidden. If the checkbox is unchecked or the value in a property file is set to `0`, the basic credentials must be provided.
 
@@ -190,7 +190,7 @@ The password for the key store file specified via `KeyStoreLocation`.
 <tr>
 <td valign="top">
 
-Authentication Type
+Authorization Type
 
 </td>
 <td valign="top">
@@ -233,7 +233,7 @@ Client ID
 
 Client ID of the application.
 
-Mandatory when setting *Authentication Type*/`jco.destination.auth_type` to `TechnicalUserPropagation`. The *Client ID* is used to retrieve the access token from the OAuth Server.
+Mandatory when setting *Authorization Type*/`jco.destination.auth_type` to `TechnicalUserPropagation`. The *Client ID* is used to retrieve the access token from the OAuth Server.
 
 </td>
 </tr>
@@ -252,7 +252,7 @@ Client Secret
 
 Client secret for the Client ID.
 
-Mandatory when setting *Authentication Type*/`jco.destination.auth_type` to `TechnicalUserPropagation`.
+Mandatory when setting *Authorization Type*/`jco.destination.auth_type` to `TechnicalUserPropagation`.
 
 </td>
 </tr>
@@ -271,7 +271,7 @@ Token Service URL
 
 URL of the token service, against which the token exchange is performed.
 
-Mandatory when setting *Authentication Type*/`jco.destination.auth_type` to `TechnicalUserPropagation`.
+Mandatory when setting *Authorization Type*/`jco.destination.auth_type` to `TechnicalUserPropagation`.
 
 > ### Remember:  
 > The token service is not accessed through the Cloud Connector, but directly over the Internet.
