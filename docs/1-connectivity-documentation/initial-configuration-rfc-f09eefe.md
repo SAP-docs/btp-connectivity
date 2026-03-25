@@ -135,6 +135,9 @@ When using the SAP Cryptographic Library as SNC implementation, you can use the 
 
 11. Restart the Cloud Connector and check the above screen if `SECUDIR` is set correctly. SNC setup for SAP Cryptographic Library should be complete now. In a next step, you must [Configure Access Control](configure-access-control-rfc-ca58689.md) and, if needed, [Configure Identity Propagation for RFC](configure-identity-propagation-for-rfc-33a2f37.md).
 
+> ### Caution:  
+> The certificate in the PSE you generated in this process needs to be monitored separately, it is not under the control of Cloud Connector. Update it before expiration to make sure your scenarios keep working.
+
 If you have further issues, check SAP note [1525059](https://me.sap.com/notes/1525059).
 
 **Related Information**  
