@@ -190,6 +190,18 @@ Value of the OAuth 2.0 scope parameter expressed as a list of space-delimited, c
 <tr>
 <td valign="top">
 
+`tokenServiceURL.ProxyType`
+
+</td>
+<td valign="top">
+
+If set, it will use the specified `ProxyType` for the token service, independent from the `ProxyType` of the whole destination. This lets you configure Internet-based token services for on-premise systems.
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
 `tokenServiceURL.headers.<header-key>` 
 
 </td>
