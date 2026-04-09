@@ -2,7 +2,7 @@
 
 # Installing the Connectivity Proxy in Multi-Region Mode
 
-Use a single Connectivity Proxy installation for your global account.
+Use a single Connectivity Proxy installation for your Kubernetes cluster.
 
 
 

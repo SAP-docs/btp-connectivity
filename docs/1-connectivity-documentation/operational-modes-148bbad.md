@@ -89,7 +89,7 @@ The Connectivity Proxy operates on behalf of multiple tenants. Applications are 
 **Related Information**  
 
 
-[Installing the Connectivity Proxy in Multi-Region Mode](installing-the-connectivity-proxy-in-multi-region-mode-72072ca.md "Use a single Connectivity Proxy installation for your global account.")
+[Installing the Connectivity Proxy in Multi-Region Mode](installing-the-connectivity-proxy-in-multi-region-mode-72072ca.md "Use a single Connectivity Proxy installation for your Kubernetes cluster.")
 
 [Configuration Guide](configuration-guide-eaa8204.md "Find an overview of configuration parameters for the Connectivity Proxy for Kubernetes.")
 
