@@ -40,6 +40,9 @@ Follow the steps below to establish a service channel for a Kubernetes cluster \
 
     2.  It is automatically split into the fields **K8s Cluster Host** and **K8s Service ID**.
 
+    > ### Note:  
+    > This cluster host points to the [Connectivity Proxy](connectivity-proxy-for-kubernetes-e661713.md) that exposes the service mapped by the Cloud Connector service channel.
+
 7.  Specify the service ID as configured in the service mapping in [Service Channels: On-Premises-to-Cloud Connectivity](service-channels-on-premise-to-cloud-connectivity-bbd3040.md).
 8.  In the same dialog window, choose the local port and the number of connections. You can enter any port that is not used yet.
 9.  Leave the *Enabled* option selected to establish the channel immediately after clicking *Save*, or deselect it if the channel should not be established yet.

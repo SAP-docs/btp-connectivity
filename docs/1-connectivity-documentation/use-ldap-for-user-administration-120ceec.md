@@ -116,7 +116,14 @@ Authorization is checked by the Cloud Connector based on the user role retrieved
 ## Setting LDAP Authentication
 
 1.  From the main menu, choose *Configuration* and go to the *User Interface* tab.
-2.  From the *User Administration* section, choose *Switch to LDAP*.
+2.  From the *User Administration* section, choose *Switch to LDAP*, and enter the required values for your LDAP user store. For detailed information, see [LDAP Configuration: Best Practices](ldap-configuration-best-practices-703a99d.md).
+
+    > ### Note:  
+    > The flag *Disable Administrator Role* is only active if you configure more than one LDAP user store. For all user stores except for the first one in the list \(*Order* = 1\) you can disable the *Administrator* role \(default: `sccadmin`\).
+    > 
+    > This option is relevant for managed Cloud Connector installations and lets you prevent the assignment of users or user groups to this role, which would grant full configuration rights for this Cloud Connector instance \(like changing the configuration of managed subaccounts\).
+    > 
+    > If you just leave the *Administrator* field in the *Roles* section empty \(without checking the *Disable...* flag\), the default value `sccadmin` would be assigned automatically to this role.
 
     ![](images/SCC_LDAP_Configuration_1_c11223f.png)
 

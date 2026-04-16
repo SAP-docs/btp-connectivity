@@ -127,7 +127,18 @@ Press *Add Subaccount* to define a subaccount. This will open a dialog or wizard
     > ### Restriction:  
     > The option *File-based configuration* does not work for subaccounts in the **Neo** environment.
 
-    You can also choose whether the subaccount is to be *managed* or not. A managed subaccount substantially restricts access for non-administrator roles beyond the restrictions already present to the extent that a subaccount can only be configured and maintained by an administrator \(read-only access as well as connecting/disconnecting is not affected\).
+    You can also choose whether the subaccount is to be *managed* or not.
+
+    A *managed* subaccount substantially restricts access for non-*Administrator* roles beyond the restrictions already present to the extent that a subaccount can only be configured and maintained by an administrator \(read-only access as well as connecting/disconnecting is not affected\).
+
+    > ### Note:  
+    > In a *managed* subaccount, only the *Administrator* role \(default: *sccadmin*\) can change the configuration of a single subaccount, while in a standard \(non-managed\) subaccount also the roles *Associate Administrator* \(*sccassocadmin*\) and *Subaccount Administrator* \(*sccsubadmin*\) are allowed to do so.
+    > 
+    > For more information on role definitions, see also [Use LDAP for User Administration](use-ldap-for-user-administration-120ceec.md).
+    > 
+    > The same applies for changes in the subaccount configuration via REST API: In a *managed* subaccount, only the *Administrator* role can perform POST, PUT, and DELETE tasks. GET tasks are not restricted.
+    > 
+    > For detailed information, see [User Roles](rest-apis-ede0776.md#loioede077617d9d4181b5c755fed15e56c3__roles) and the subaccount-related APIs in [Configuration REST APIs](configuration-rest-apis-cfb9d57.md).
 
     ![](images/SCC_AddManageSubaccounts_2_7edd7f1.png)
 
