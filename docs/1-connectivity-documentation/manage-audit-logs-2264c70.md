@@ -12,7 +12,14 @@ Configure audit log settings and verify the integrity of audit logs.
 
 Choose *Audit* from your subaccount menu and go to *Settings* to specify the type of audit events the Cloud Connector should log at runtime. You can currently select between the following *Audit Levels* \(for either *<subaccount\>* and *<cross-subaccount\>* scope\):
 
+> ### Note:  
+> The cross-subaccount scope includes all configuration activities in the Cloud Connector that are not related to a specific subaccount \(that is, all settings which are not performed within the subaccount menu but under the **Connector** node of the Cloud Connector administration UI\).
+
 -   **Security**: Default value. The Cloud Connector writes an audit entry \(`Access Denied`\) for each request that was blocked. It also writes audit entries, whenever an administrator changes one of the critical configuration settings, such as exposed back-end systems, allowed resources, and so on.
+
+    > ### Note:  
+    > Find the full list of configuration activities that are considered critical in the list below, which shows the corresponding categories of audit log entries.
+
 -   **All**: The Cloud Connector writes one audit entry for each received request, regardless of whether it was allowed to pass or not \(`Access Allowed` and `Access Denied`\). It also writes audit entries that are relevant to the **Security** mode.
 -   **Off**: No audit entries are written.
 

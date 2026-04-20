@@ -13,7 +13,7 @@ Find information about HTTP destinations for Internet and on-premise connections
 
 ## Destinations for Subscribed Applications
 
-In subscription-based scenarios, it is not always possible to consume a service instance by binding it to your application. In this case, you must create a destination pointing to your service instance. For more information, see [Destinations Pointing to Service Instances](destinations-pointing-to-service-instances-685f383.md).
+In subscription-based \(SaaS\) scenarios, it is not always possible to consume a service instance by binding it to your application. In this case, you must create a destination pointing to your service instance. For more information, see [Destinations Pointing to Service Instances](destinations-pointing-to-service-instances-685f383.md).
 
 
 
