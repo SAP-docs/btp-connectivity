@@ -508,7 +508,7 @@ URI
 </td>
 <td valign="top">
 
-`/api/v1/configuration/subaccounts/<regionHost>/<subaccount>/systemMappings/virtualHost:virtualPort` 
+`/api/v1/configuration/subaccounts/<regionHost>/<subaccount>/systemMappings/<virtualHost>:<virtualPort>` 
 
 </td>
 </tr>

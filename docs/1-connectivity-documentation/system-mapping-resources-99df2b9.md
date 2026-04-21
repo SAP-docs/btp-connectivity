@@ -97,7 +97,7 @@ URI
 </td>
 <td valign="top">
 
-`/api/v1/configuration/subaccounts/<regionHost>/<subaccount>/ systemMappings/virtualHost:virtualPort/resources` 
+`/api/v1/configuration/subaccounts/<regionHost>/<subaccount>/systemMappings/<virtualHost>:<virtualPort>/resources` 
 
 </td>
 </tr>
@@ -196,7 +196,7 @@ URI
 </td>
 <td valign="top">
 
-`/api/v1/configuration/subaccounts/<regionHost>/<subaccount>/ systemMappings/virtualHost:virtualPort/resources/<encodedResourceId>` 
+`/api/v1/configuration/subaccounts/<regionHost>/<subaccount>/systemMappings/<virtualHost>:<virtualPort>/resources/<encodedResourceId>` 
 
 </td>
 </tr>
@@ -292,7 +292,7 @@ URI
 </td>
 <td valign="top">
 
-`/api/v1/configuration/subaccounts/<regionHost>/<subaccount>/ systemMappings/virtualHost:virtualPort/resources` 
+`/api/v1/configuration/subaccounts/<regionHost>/<subaccount>/systemMappings/<virtualHost>:<virtualPort>/resources` 
 
 </td>
 </tr>
@@ -398,7 +398,7 @@ URI
 </td>
 <td valign="top">
 
-`/api/v1/configuration/subaccounts/<regionHost>/<subaccount>/ systemMappings/virtualHost:virtualPort/resources/<encodedResourceId>` 
+`/api/v1/configuration/subaccounts/<regionHost>/<subaccount>/systemMappings/<virtualHost>:<virtualPort>/resources/<encodedResourceId>` 
 
 </td>
 </tr>
@@ -493,7 +493,7 @@ URI
 </td>
 <td valign="top">
 
-`/api/v1/configuration/subaccounts/<regionHost>/<subaccount>/ systemMappings/virtualHost:virtualPort/resources/<encodedResourceId>` 
+`/api/v1/configuration/subaccounts/<regionHost>/<subaccount>/systemMappings/<virtualHost>:<virtualPort>/resources/<encodedResourceId>` 
 
 </td>
 </tr>
