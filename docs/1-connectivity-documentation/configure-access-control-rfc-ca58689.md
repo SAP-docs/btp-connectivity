@@ -50,11 +50,18 @@ To allow your cloud applications to access a certain back-end system on the intr
     ![](images/SCC_CS_AccessControlRFC_3_9b53fd9.png)
 
 8.  Specify the parameters of the back-end system. It needs to be an existing network address that can be resolved on the intranet and has network visibility for the Cloud Connector. If this is only possible using a valid [SAProuter](https://help.sap.com/docs/ABAP_PLATFORM_NEW/e245703406684d8a81812f4c6334eb2f/487612ed5ca5055ee10000000a42189b.html?version=202310.003), specify the router in the respective field. The Cloud Connector will try to establish a connection to this system, so the address has to be real.
-    -   When using a load-balancing configuration, the *Message Server* specifies the message server of the ABAP system. The system ID is a three-char identifier that is also found in the SAP Logon configuration. Alternatively, it's possible to directly specify the message server port in the *System ID* field.
+    -   When using a load-balancing configuration, the *Message Server* field specifies the message server of the ABAP system. The system ID is a three-char identifier that is also found in the SAP Logon configuration. Alternatively, you can specify the message server port directly in the *System ID* field.
 
         ![](images/SCC_CS_AccessControlRFC_4_6abe59d.png)
 
-    -   When using direct logon, the *Application Server* specifies one application server of the ABAP system. The instance number is a two-digit number that is also found in the SAP Logon configuration. Alternatively, it's possible to directly specify the gateway port in the *Instance Number* field.
+    -   When using direct logon, the *Application Server* specifies one application server of the ABAP system. The instance number is a two-digit number that is also found in the SAP Logon configuration. Alternatively, you can specify the gateway port directly in the *Instance Number* field.
+
+        > ### Note:  
+        > The default gateway port for RFC communication is `33<instance number>` \(for example, `3302`\). If specified manually, it is the value of the profile parameters `gw/port` or `gw/cloud_connector_port` in the corresponding ABAP server \(transactions RZ10 and RZ11\).
+        > 
+        > For RFC SNC, the gateway port is `48<instance number>`. In this case, the gateway port cannot be specified manually.
+        > 
+        > In both cases \(RFC and RFC SNC\), the internal network must allow access to the required ports.
 
         ![](images/SCC_CS_AccessControlRFC_5_2ac399d.png)
 

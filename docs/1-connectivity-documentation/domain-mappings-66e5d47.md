@@ -62,7 +62,7 @@ Response
 <td valign="top">
 
 ```
-[{virtualDomain, internalDomai}] 
+[{virtualDomain, internalDomain}] 
 ```
 
 
