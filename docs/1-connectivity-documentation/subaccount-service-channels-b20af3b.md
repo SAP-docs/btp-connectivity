@@ -59,13 +59,21 @@ Manage Cloud Connector service channels via API.
 </td>
 <td valign="top">
 
-[Get all ABAP Cloud Service Channels](subaccount-service-channels-b20af3b.md#loiob20af3bf34b441228c2f095744019758__get_abap_all)
+[Get all ABAP Cloud Service Channels without SNC](subaccount-service-channels-b20af3b.md#loiob20af3bf34b441228c2f095744019758__get_abap_all)
 
-[Get ABAP Cloud Service Channel](subaccount-service-channels-b20af3b.md#loiob20af3bf34b441228c2f095744019758__get_abap)
+[Get ABAP Cloud Service Channel without SNC](subaccount-service-channels-b20af3b.md#loiob20af3bf34b441228c2f095744019758__get_abap)
 
-[Create ABAP Cloud Service Channel \(Master Only\)](subaccount-service-channels-b20af3b.md#loiob20af3bf34b441228c2f095744019758__create_abap)
+[Create ABAP Cloud Service Channel without SNC \(Master Only\)](subaccount-service-channels-b20af3b.md#loiob20af3bf34b441228c2f095744019758__create_abap)
 
-[Replace ABAP Cloud Service Channel \(Master Only\)](subaccount-service-channels-b20af3b.md#loiob20af3bf34b441228c2f095744019758__edit_abap) 
+[Replace ABAP Cloud Service Channel without SNC \(Master Only\)](subaccount-service-channels-b20af3b.md#loiob20af3bf34b441228c2f095744019758__edit_abap) 
+
+[Get all ABAP Cloud SNC-Encrypted Service Channels](subaccount-service-channels-b20af3b.md#loiob20af3bf34b441228c2f095744019758__get_abap_all_SNC)
+
+[Get ABAP Cloud SNC-Encrypted Service Channel](subaccount-service-channels-b20af3b.md#loiob20af3bf34b441228c2f095744019758__get_abap_SNC)
+
+[Create ABAP Cloud SNC-Encrypted Service Channel \(Master Only\)](subaccount-service-channels-b20af3b.md#loiob20af3bf34b441228c2f095744019758__create_abap_SNC)
+
+[Replace ABAP Cloud SNC-Encrypted Service Channel \(Master Only\)](subaccount-service-channels-b20af3b.md#loiob20af3bf34b441228c2f095744019758__edit_abap_SNC) 
 
 </td>
 </tr>
@@ -1197,7 +1205,7 @@ Back to [Top](subaccount-service-channels-b20af3b.md#loiob20af3bf34b441228c2f095
 
 <a name="loiob20af3bf34b441228c2f095744019758__get_abap_all"/>
 
-## Get all ABAP Cloud Service Channels
+## Get all ABAP Cloud Service Channels without SNC
 
 
 <table>
@@ -1246,7 +1254,7 @@ Response
 <td valign="top">
 
 ```
-[{id, abapCloudTenantHost, instanceNumber, type, port, enabled, connections, state}]
+[{id, abapCloudTenantHost, instanceNumber, type, port, enabled, connections, state, comment}]
 
 ```
 
@@ -1304,6 +1312,7 @@ An array of objects, each of which represents an ABAP Cloud service channel thro
     -   `openedConnections` \(the number of open, possibly idle connections\), and
     -   `connectedSinceTimeStamp` \(the time stamp, a UTC long number, for the first time the channel was opened/connected\).
 
+-   `comment`: optional comment or short description. This property is not supplied if no comment was provided.
 
 Back to [Top](subaccount-service-channels-b20af3b.md#loiob20af3bf34b441228c2f095744019758__top)
 
@@ -1311,7 +1320,7 @@ Back to [Top](subaccount-service-channels-b20af3b.md#loiob20af3bf34b441228c2f095
 
 <a name="loiob20af3bf34b441228c2f095744019758__get_abap"/>
 
-## Get ABAP Cloud Service Channel
+## Get ABAP Cloud Service Channel without SNC
 
 
 <table>
@@ -1360,7 +1369,7 @@ Response
 <td valign="top">
 
 ```
-{id, abapCloudTenantHost, instanceNumber, type, port, enabled, connections, state}
+{id, abapCloudTenantHost, instanceNumber, type, port, enabled, connections, state, comment}
 
 ```
 
@@ -1416,6 +1425,7 @@ Administrator, Associate Administrator, Subaccount Administrator, Display, Suppo
     -   `openedConnections` \(the number of open, possibly idle connections\), and
     -   `connectedSinceTimeStamp` \(the time stamp, a UTC long number, for the first time the channel was opened/connected\).
 
+-   `comment`: optional comment or short description. This property is not supplied if no comment was provided.
 
 **Errors**:
 
@@ -1427,7 +1437,7 @@ Back to [Top](subaccount-service-channels-b20af3b.md#loiob20af3bf34b441228c2f095
 
 <a name="loiob20af3bf34b441228c2f095744019758__create_abap"/>
 
-## Create ABAP Cloud Service Channel \(Master Only\)
+## Create ABAP Cloud Service Channel without SNC \(Master Only\)
 
 
 <table>
@@ -1464,7 +1474,7 @@ Request
 <td valign="top">
 
 ```
-{abapCloudTenantHost, instanceNumber, connections}
+{abapCloudTenantHost, instanceNumber, connections, comment}
 
 ```
 
@@ -1518,6 +1528,7 @@ Administrator, Associate Administrator, Subaccount Administrator
 
 -   `connections`: maximal number of open connections.
 
+-   `comment`: optional comment or short description \(a string\)
 
 **Errors**:
 
@@ -1529,7 +1540,7 @@ Back to [Top](subaccount-service-channels-b20af3b.md#loiob20af3bf34b441228c2f095
 
 <a name="loiob20af3bf34b441228c2f095744019758__edit_abap"/>
 
-## Replace ABAP Cloud Service Channel \(Master Only\)
+## Replace ABAP Cloud Service Channel without SNC \(Master Only\)
 
 
 <table>
@@ -1566,7 +1577,7 @@ Request
 <td valign="top">
 
 ```
-{abapCloudTenantHost, instanceNumber, connections}
+{abapCloudTenantHost, instanceNumber, connections, comment}
 
 ```
 
@@ -1620,6 +1631,446 @@ Administrator, Associate Administrator, Subaccount Administrator
 
 -   `connections`: maximal number of open connections.
 
+-   `comment`: optional comment or short description \(a string\).
+
+**Errors**:
+
+-   INVALID\_REQUEST \(400\): invalid or out of range values.
+-   NOT\_FOUND \(404\): the ABAP Cloud service channel with the given ID \(that is, <id\>\) or the specified subaccount does not exist.
+
+Back to [Top](subaccount-service-channels-b20af3b.md#loiob20af3bf34b441228c2f095744019758__top)
+
+
+
+<a name="loiob20af3bf34b441228c2f095744019758__get_abap_all_SNC"/>
+
+## Get all ABAP Cloud SNC-Encrypted Service Channels
+
+
+<table>
+<tr>
+<td valign="top">
+
+URI
+
+</td>
+<td valign="top">
+
+`/api/v1/configuration/subaccounts/<regionHost>/<subaccount>/channels/ABAPCloudSNC` 
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+Method
+
+</td>
+<td valign="top">
+
+*GET* 
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+Request
+
+</td>
+<td valign="top">
+
+
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+Response
+
+</td>
+<td valign="top">
+
+```
+[{id, abapCloudTenantHost, instanceNumber, type, port, enabled, connections, state, comment}]
+
+```
+
+
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+Errors
+
+</td>
+<td valign="top">
+
+ 
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+Roles
+
+</td>
+<td valign="top">
+
+Administrator, Associate Administrator, Subaccount Administrator, Display, Support, Monitoring
+
+</td>
+</tr>
+</table>
+
+**Response**:
+
+An array of objects, each of which represents an ABAP Cloud service channel \(SNC-encrypted\) through the following properties:
+
+-   `id`: unique identifier for the service channel \(a positive integer number, starting with 1\). This identifier is unique across all types of service channels.
+
+-   `abapCloudTenantHost`: the host name \(a string\).
+
+-   `instanceNumber`: instance number.
+
+-   `type`: string 'ABAPCloudSNC.
+
+-   `port`: port of the ABAPCloud service channel \(a number\).
+
+-   `enabled`: boolean flag indicating whether the channel is enabled and therefore should be open.
+
+-   `connections`: maximal number of open connections.
+
+-   `state`: current connection state; this property is only available if the channel is enabled \(as per property `enabled`\). The value of this property is an object with the properties:
+
+    -   `connected` \(a boolean flag indicating whether the channel is connected\),
+    -   `openedConnections` \(the number of open, possibly idle connections\), and
+    -   `connectedSinceTimeStamp` \(the time stamp, a UTC long number, for the first time the channel was opened/connected\).
+
+-   `comment`: optional comment or short description. This property is not supplied if no comment was provided.
+
+Back to [Top](subaccount-service-channels-b20af3b.md#loiob20af3bf34b441228c2f095744019758__top)
+
+
+
+<a name="loiob20af3bf34b441228c2f095744019758__get_abap_SNC"/>
+
+## Get ABAP Cloud SNC-Encrypted Service Channel
+
+
+<table>
+<tr>
+<td valign="top">
+
+URI
+
+</td>
+<td valign="top">
+
+`/api/v1/configuration/subaccounts/<regionHost>/<subaccount>/channels/ABAPCloudSNC/<id>` 
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+Method
+
+</td>
+<td valign="top">
+
+*GET* 
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+Request
+
+</td>
+<td valign="top">
+
+
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+Response
+
+</td>
+<td valign="top">
+
+```
+{id, abapCloudTenantHost, instanceNumber, type, port, enabled, connections, state, comment}
+
+```
+
+
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+Errors
+
+</td>
+<td valign="top">
+
+NOT\_FOUND
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+Roles
+
+</td>
+<td valign="top">
+
+Administrator, Associate Administrator, Subaccount Administrator, Display, Support, Monitoring
+
+</td>
+</tr>
+</table>
+
+**Response**:
+
+-   `id`: unique identifier for the service channel \(a positive integer number, starting with 1\). This identifier is unique across all types of service channels.
+
+-   `abapCloudTenantHost`: the host name \(a string\).
+
+-   `instanceNumber`: instance number.
+
+-   `type`: string 'ABAPCloudSNC.
+
+-   `port`: port of the ABAPCloud service channel \(a number\).
+
+-   `enabled`: boolean flag indicating whether the channel is enabled and therefore should be open.
+
+-   `connections`: maximal number of open connections.
+
+-   `state`: current connection state; this property is only available if the channel is enabled \(as per property `enabled`\). The value of this property is an object with the properties:
+
+    -   `connected` \(a boolean flag indicating whether the channel is connected\),
+    -   `openedConnections` \(the number of open, possibly idle connections\), and
+    -   `connectedSinceTimeStamp` \(the time stamp, a UTC long number, for the first time the channel was opened/connected\).
+
+-   `comment`: optional comment or short description. This property is not supplied if no comment was provided.
+
+**Errors**:
+
+-   NOT\_FOUND \(404\): the ABAP Cloud service channel with the given ID \(that is, <id\>\) or the specified subaccount does not exist.
+
+Back to [Top](subaccount-service-channels-b20af3b.md#loiob20af3bf34b441228c2f095744019758__top)
+
+
+
+<a name="loiob20af3bf34b441228c2f095744019758__create_abap_SNC"/>
+
+## Create ABAP Cloud SNC-Encrypted Service Channel \(Master Only\)
+
+
+<table>
+<tr>
+<td valign="top">
+
+URI
+
+</td>
+<td valign="top">
+
+`/api/v1/configuration/subaccounts/<regionHost>/<subaccount>/channels/ABAPCloudSNC` 
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+Method
+
+</td>
+<td valign="top">
+
+*POST* 
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+Request
+
+</td>
+<td valign="top">
+
+```
+{abapCloudTenantHost, instanceNumber, connections, comment}
+
+```
+
+
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+Response
+
+</td>
+<td valign="top">
+
+201 on success
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+Errors
+
+</td>
+<td valign="top">
+
+INVALID\_REQUEST
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+Roles
+
+</td>
+<td valign="top">
+
+Administrator, Associate Administrator, Subaccount Administrator
+
+</td>
+</tr>
+</table>
+
+**Request**:
+
+-   `abapCloudTenantHost`: host name \(a string\).
+
+-   `instanceNumber`: instance number.
+
+-   `connections`: maximal number of open connections.
+
+-   `comment`: optional comment or short description \(a string\).
+
+**Errors**:
+
+-   INVALID\_REQUEST \(400\): invalid or out of range values.
+
+Back to [Top](subaccount-service-channels-b20af3b.md#loiob20af3bf34b441228c2f095744019758__top)
+
+
+
+<a name="loiob20af3bf34b441228c2f095744019758__edit_abap_SNC"/>
+
+## Replace ABAP Cloud SNC-Encrypted Service Channel \(Master Only\)
+
+
+<table>
+<tr>
+<td valign="top">
+
+URI
+
+</td>
+<td valign="top">
+
+`/api/v1/configuration/subaccounts/<regionHost>/<subaccount>/channels/ABAPCloudSNC/<id>` 
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+Method
+
+</td>
+<td valign="top">
+
+*PUT* 
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+Request
+
+</td>
+<td valign="top">
+
+```
+{abapCloudTenantHost, instanceNumber, connections, comment}
+
+```
+
+
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+Response
+
+</td>
+<td valign="top">
+
+204 on success
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+Errors
+
+</td>
+<td valign="top">
+
+INVALID\_REQUEST, NOT\_FOUND
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+Roles
+
+</td>
+<td valign="top">
+
+Administrator, Associate Administrator, Subaccount Administrator
+
+</td>
+</tr>
+</table>
+
+**Request**:
+
+-   `abapCloudTenantHost`: host name \(a string\).
+
+-   `instanceNumber`: instance number.
+
+-   `connections`: maximal number of open connections.
+
+-   `comment`: optional comment or short description \(a string\).
 
 **Errors**:
 
