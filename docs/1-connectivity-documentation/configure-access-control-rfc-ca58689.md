@@ -57,9 +57,7 @@ To allow your cloud applications to access a certain back-end system on the intr
     -   When using direct logon, the *Application Server* specifies one application server of the ABAP system. The instance number is a two-digit number that is also found in the SAP Logon configuration. Alternatively, you can specify the gateway port directly in the *Instance Number* field.
 
         > ### Note:  
-        > The default gateway port for RFC communication is `33<instance number>` \(for example, `3302`\). If specified manually, it is the value of the profile parameters `gw/port` or `gw/cloud_connector_port` in the corresponding ABAP server \(transactions RZ10 and RZ11\).
-        > 
-        > For RFC SNC, the gateway port is `48<instance number>`. In this case, the gateway port cannot be specified manually.
+        > The default gateway port for RFC communication is `33<instance number>` \(for example, `3302`\). For RFC SNC, the gateway port is `48<instance number>`.
         > 
         > In both cases \(RFC and RFC SNC\), the internal network must allow access to the required ports.
 
