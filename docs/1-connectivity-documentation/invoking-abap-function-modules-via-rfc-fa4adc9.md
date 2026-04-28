@@ -106,7 +106,7 @@ Back to [Tasks](invoking-abap-function-modules-via-rfc-fa4adc9.md#loiofa4adc9bd4
 
 ![](images/CS_TASK_Admin_Dev_7c2c6d8.png)
 
-To learn in detail about the SAP JCo API, see the JCo 3.0 documentation on[SAP Support Portal](https://support.sap.com/en/product/connectors/jco.html#section_1355144687).
+To learn in detail about the SAP JCo API, see the JCo 3.1 documentation on[SAP Support Portal](https://support.sap.com/en/product/connectors/jco.html#section_1355144687).
 
 > ### Note:  
 > Some sections of this documentation are not applicable to SAP BTP:
@@ -143,7 +143,7 @@ Back to [Tasks](invoking-abap-function-modules-via-rfc-fa4adc9.md#loiofa4adc9bd4
 
 You can call a service from a fenced customer network using an application that consumes a remote-enabled function module.
 
-Invoking function modules via RFC is enabled by a JCo API that is comparable to the one available in SAP NetWeaver Application Server Java \(version 7.10\), and in JCo standalone 3.0. If you are an experienced JCo developer, you can easily develop a Web application using JCo: you simply consume the APIs like you do in other Java environments. Restrictions that apply in the cloud environment are mentioned in the **Restrictions** section below.
+Invoking function modules via RFC is enabled by a JCo API that is comparable to the one available in SAP NetWeaver Application Server Java 7.50, and in JCo standalone 3.1. If you are an experienced JCo developer, you can easily develop a Web application using JCo: you simply consume the APIs like you do in other Java environments. Restrictions that apply in the cloud environment are mentioned in the **Restrictions** section below.
 
 Find a sample Web application in [Invoke ABAP Function Modules in On-Premise ABAP Systems](invoke-abap-function-modules-in-on-premise-abap-systems-bfcb54c.md). 
 
