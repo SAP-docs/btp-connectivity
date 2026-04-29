@@ -120,7 +120,7 @@ Procedure
 
 In this case, the Destination service looks for the user ID as a field in the provided JWT. When you make the HTTP call to the Destination service, you must provide the `Authorization` header. The value must be a JWT in its encoded form \(see [RFC 7519](https://tools.ietf.org/html/rfc7519)\). The procedure is as follows:
 
--   If the `userIdSource` property is configured in the destination, its value is the key of the JWT field that will be the user ID \(if there is no such key in the JWT, the flow proceeds to the next level\). There are 2 options:
+-   If the `userIdSource` property is configured in the destination, its value is the key of the JWT field that will be the user ID. There are 2 options:
     -   plain string: the exact match is searched on the root-level element keys of the JWT.
     -   [JsonPath](https://github.com/json-path/JsonPath/blob/efdab976ad515b42b05d61d8b09a580e6e1a0665/README.md) expression: lets you use non-root-level elements of the JWT.
 
