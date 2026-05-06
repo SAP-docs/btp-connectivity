@@ -95,10 +95,8 @@ If no settings are modified, the following specifics and features are available 
 
 The following features of the Connectivity Proxy are not available via the *connectivity-proxy* Kyma module:
 
--   [High Availability](high-availability-3c7f10d.md)
 -   [Multi-Region Mode](installing-the-connectivity-proxy-in-multi-region-mode-72072ca.md)
 -   Support for Ingress controllers other than Istio
--   An externally exposed health check endpoint
 
 
 

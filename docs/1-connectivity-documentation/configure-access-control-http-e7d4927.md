@@ -182,5 +182,5 @@ Back to [Tasks](configure-access-control-http-e7d4927.md#loioe7d4927dbb571014af7
 
 [Configure Domain Mappings for Cookies](configure-domain-mappings-for-cookies-b7d257b.md "")
 
-[Consume Backend Systems (Java Web or Java EE 6 Web Profile)](https://help.sap.com/viewer/b865ed651e414196b39f8922db2122c7/Cloud/en-US/e76f9e75bb571014a7218bcd30a8771b.html "") :arrow_upper_right:
+[Consume Backend Systems (Java EE 7 Web Profile TomEE 7)](https://help.sap.com/viewer/b865ed651e414196b39f8922db2122c7/Cloud/en-US/e76f9e75bb571014a7218bcd30a8771b.html "") :arrow_upper_right:
 
