@@ -61,7 +61,7 @@ In the **Cloud Connector UI**, activate the feature for a subaccount by opening 
 
 ![](images/SCC_Renew_Certificate_Subaccount_1_c480b32.png)
 
-In the **SAP BTP cockpit**, activate the feature via *Connectivity* \> *Cloud Connectors* of the respective subacount by switching on *Allow Automatic Subaccount Certificate Refresh*:
+In the **SAP BTP cockpit**, activate the feature via *Connectivity* \> *Cloud Connectors* of the respective subacount by switching on *Auto Renewal*:
 
 ![](images/SCC_Renew_Certificate_Subaccount_2_f06e040.png)
 
