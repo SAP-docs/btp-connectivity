@@ -25,14 +25,19 @@ You can create and configure an *OAuth2ClientCredentials* destination using the 
 
 ## Properties
 
-The table below lists the destination properties required for the *OAuth2ClientCredentials* authentication type.
+To configure a destination of this authentication type, you must specify all the required properties.
 
 
 <table>
 <tr>
 <th valign="top">
 
-Property
+Cockpit Label
+
+</th>
+<th valign="top">
+
+JSON Key
 
 </th>
 <th valign="top">
@@ -42,13 +47,18 @@ Description
 </th>
 </tr>
 <tr>
-<td valign="top" colspan="2">
+<td valign="top" colspan="3">
 
 **Required**
 
 </td>
 </tr>
 <tr>
+<td valign="top">
+
+Name
+
+</td>
 <td valign="top">
 
 `Name`
@@ -61,6 +71,11 @@ Destination name. Must be unique for the destination level.
 </td>
 </tr>
 <tr>
+<td valign="top">
+
+Type
+
+</td>
 <td valign="top">
 
 `Type`
@@ -80,11 +95,21 @@ URL
 </td>
 <td valign="top">
 
+`URL`
+
+</td>
+<td valign="top">
+
 URL of the protected resource on the called application.
 
 </td>
 </tr>
 <tr>
+<td valign="top">
+
+Proxy Type
+
+</td>
 <td valign="top">
 
 `ProxyType`
@@ -99,6 +124,11 @@ You can only use proxy type `Internet` or `OnPremise`. If `OnPremise` is used, t
 <tr>
 <td valign="top">
 
+Authentication
+
+</td>
+<td valign="top">
+
 `Authentication`
 
 </td>
@@ -109,6 +139,11 @@ Authentication type. Use `OAuth2ClientCredentials` as value.
 </td>
 </tr>
 <tr>
+<td valign="top">
+
+Client ID
+
+</td>
 <td valign="top">
 
 `clientId`
@@ -123,16 +158,9 @@ Client ID used to retrieve the access token.
 <tr>
 <td valign="top">
 
-`clientSecret`
+Token Service URL
 
 </td>
-<td valign="top">
-
-Client secret for the Client ID.
-
-</td>
-</tr>
-<tr>
 <td valign="top">
 
 `tokenServiceURL`
@@ -162,6 +190,35 @@ Examples of interpreting of the `tokenServiceURL` for `tokenServiceURLType` `Com
 </td>
 </tr>
 <tr>
+<td valign="top" colspan="3">
+
+**Optional**
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+Client Secret
+
+</td>
+<td valign="top">
+
+`clientSecret`
+
+</td>
+<td valign="top">
+
+Client secret for the Client ID.
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+Token Service User
+
+</td>
 <td valign="top">
 
 `tokenServiceUser`
@@ -176,6 +233,11 @@ User for basic authentication to OAuth server \(if required\).
 <tr>
 <td valign="top">
 
+Token Service Password
+
+</td>
+<td valign="top">
+
 `tokenServicePassword`
 
 </td>
@@ -186,25 +248,11 @@ Password for `tokenServiceUser` \(if required\).
 </td>
 </tr>
 <tr>
-<td valign="top" colspan="2">
-
-**Additional**
-
-</td>
-</tr>
-<tr>
 <td valign="top">
 
-`scope`
+Token Service URL Type
 
 </td>
-<td valign="top">
-
-The value of the OAuth 2.0 scope parameter expressed as a list of space-delimited, case-sensitive strings.
-
-</td>
-</tr>
-<tr>
 <td valign="top">
 
 `tokenServiceURLType`
@@ -219,6 +267,11 @@ Either `Dedicated` \(if the `tokenServiceURL` serves only a single tenant\), or 
 <tr>
 <td valign="top">
 
+Token Service URL Proxy Type
+
+</td>
+<td valign="top">
+
 `tokenServiceURL.ProxyType`
 
 </td>
@@ -229,6 +282,86 @@ If set, it will use the specified `ProxyType` for the token service, independent
 </td>
 </tr>
 <tr>
+<td valign="top">
+
+Token Service Key Store Location
+
+</td>
+<td valign="top">
+
+`tokenService.KeyStoreLocation`
+
+</td>
+<td valign="top">
+
+Contains the name of the certificate configuration to be used. This property is required when using client certificates for authentication. See [OAuth with X.509 Client Certificates](oauth-with-x-509-client-certificates-2c162aa.md).
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+Token Service Key Store Password
+
+</td>
+<td valign="top">
+
+`tokenService.KeyStorePassword` 
+
+</td>
+<td valign="top">
+
+Contains the password for the certificate configuration \(if one is needed\) when using client certificates for authentication. See [OAuth with X.509 Client Certificates](oauth-with-x-509-client-certificates-2c162aa.md).
+
+</td>
+</tr>
+<tr>
+<td valign="top" colspan="3">
+
+**Additional**
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+ 
+
+</td>
+<td valign="top">
+
+**Key**
+
+</td>
+<td valign="top">
+
+**Description**
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+ 
+
+</td>
+<td valign="top">
+
+`scope`
+
+</td>
+<td valign="top">
+
+The value of the OAuth 2.0 scope parameter expressed as a list of space-delimited, case-sensitive strings.
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+ 
+
+</td>
 <td valign="top">
 
 `tokenServiceURL.headers.<header-key>` 
@@ -255,6 +388,11 @@ A static key prefix used as a namespace grouping of the `tokenServiceUrl`'s HTTP
 <tr>
 <td valign="top">
 
+ 
+
+</td>
+<td valign="top">
+
 `tokenServiceURL.ConnectionTimeoutInSeconds`
 
 </td>
@@ -267,6 +405,11 @@ Defines the connection timeout for the token service retrieval. The minimum valu
 <tr>
 <td valign="top">
 
+ 
+
+</td>
+<td valign="top">
+
 `tokenServiceURL.SocketReadTimeoutInSeconds`
 
 </td>
@@ -277,6 +420,11 @@ Defines the read timeout for the token service retrieval. The minimum value allo
 </td>
 </tr>
 <tr>
+<td valign="top">
+
+ 
+
+</td>
 <td valign="top">
 
 `tokenServiceURL.queries.<query-key>` 
@@ -303,6 +451,11 @@ A static key prefix used as a namespace grouping of `tokenServiceUrl`'s query pa
 <tr>
 <td valign="top">
 
+ 
+
+</td>
+<td valign="top">
+
 `tokenService.body.<param-key>`
 
 </td>
@@ -327,28 +480,9 @@ A static key prefix used as a namespace grouping of parameters which are sent as
 <tr>
 <td valign="top">
 
-`tokenService.KeyStoreLocation` 
+ 
 
 </td>
-<td valign="top">
-
-Contains the name of the certificate configuration to be used. This property is required when using client certificates for authentication. See [OAuth with X.509 Client Certificates](oauth-with-x-509-client-certificates-2c162aa.md).
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-`tokenService.KeyStorePassword`
-
-</td>
-<td valign="top">
-
-Contains the password for the certificate configuration \(if one is needed\) when using client certificates for authentication. See [OAuth with X.509 Client Certificates](oauth-with-x-509-client-certificates-2c162aa.md).
-
-</td>
-</tr>
-<tr>
 <td valign="top">
 
 `tokenService.addClientCredentialsInBody` 
@@ -366,6 +500,11 @@ Specifies whether the client credentials should be placed in the request body of
 </td>
 </tr>
 <tr>
+<td valign="top">
+
+ 
+
+</td>
 <td valign="top">
 
 `clientAssertion.type`
@@ -387,6 +526,11 @@ For more information, see [Client Assertion with Automated Assertion Fetching by
 <tr>
 <td valign="top">
 
+ 
+
+</td>
+<td valign="top">
+
 `clientAssertion.destinationName`
 
 </td>
@@ -399,6 +543,11 @@ For more information, see [Client Assertion with Automated Assertion Fetching by
 </td>
 </tr>
 <tr>
+<td valign="top">
+
+ 
+
+</td>
 <td valign="top">
 
 `URL.headers.<header-key>`
@@ -428,6 +577,11 @@ A static key prefix used as a namespace grouping of the URL's HTTP headers whose
 <tr>
 <td valign="top">
 
+ 
+
+</td>
+<td valign="top">
+
 `URL.queries.<query-key>` 
 
 </td>
@@ -453,11 +607,6 @@ A static key prefix used as a namespace grouping of URL's query parameters whose
 </td>
 </tr>
 </table>
-
-> ### Note:  
-> When the OAuth authorization server is called, it accepts the trust settings of the destination, see [Server Certificate Authentication](server-certificate-authentication-e75d7f1.md).
-
-When using an SAP BTP Neo OAuth service \(`https://api.{landscape-domain}/oauth2/apitoken/v1?grant_type=client_credentials` or `oauthasservices.{landscape-domain}/oauth2/apitoken/v1?grant_type=client_credentials`\) as `TokenServiceURL`, or any other OAuth token service which accepts client credentials only as authorization header, you must set the `clientId` and `clientSecret` values also for the `tokenServiceUser` and `tokenServicePassword` properties.
 
 
 

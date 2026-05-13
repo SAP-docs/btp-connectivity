@@ -23,14 +23,19 @@ You can create and configure a *PrincipalPropagation* destination by using the p
 
 ## Properties
 
-The table below lists the destination properties for *PrincipalPropagation* authentication type.
+To configure a destination of this authentication type, you must specify all the required properties.
 
 
 <table>
 <tr>
 <th valign="top">
 
-Property
+Cockpit Label
+
+</th>
+<th valign="top">
+
+JSON Key
 
 </th>
 <th valign="top">
@@ -40,13 +45,18 @@ Description
 </th>
 </tr>
 <tr>
-<td valign="top" colspan="2">
+<td valign="top" colspan="3">
 
 **Required**
 
 </td>
 </tr>
 <tr>
+<td valign="top">
+
+Name
+
+</td>
 <td valign="top">
 
 `Name`
@@ -61,6 +71,11 @@ Destination name. Must be unique for the destination level.
 <tr>
 <td valign="top">
 
+Type
+
+</td>
+<td valign="top">
+
 `Type`
 
 </td>
@@ -71,6 +86,11 @@ Destination type. Use `HTTP` for all HTTP\(S\) destinations.
 </td>
 </tr>
 <tr>
+<td valign="top">
+
+URL
+
+</td>
 <td valign="top">
 
 `URL`
@@ -85,6 +105,11 @@ Virtual URL of the protected on-premise application.
 <tr>
 <td valign="top">
 
+Authentication
+
+</td>
+<td valign="top">
+
 `Authentication`
 
 </td>
@@ -95,6 +120,11 @@ Authentication type. Use `PrincipalPropagation` as value.
 </td>
 </tr>
 <tr>
+<td valign="top">
+
+Proxy Type
+
+</td>
 <td valign="top">
 
 `ProxyType`
@@ -117,8 +147,18 @@ You can only use proxy type `OnPremise`.
  
 
 </td>
+<td valign="top">
+
+ 
+
+</td>
 </tr>
 <tr>
+<td valign="top">
+
+Location ID
+
+</td>
 <td valign="top">
 
 `CloudConnectorLocationId`
@@ -136,13 +176,35 @@ For more information, see [Adding a Subaccount](adding-and-managing-subaccounts-
 </td>
 </tr>
 <tr>
-<td valign="top" colspan="2">
+<td valign="top" colspan="3">
 
 **Additional**
 
 </td>
 </tr>
 <tr>
+<td valign="top">
+
+ 
+
+</td>
+<td valign="top">
+
+**Key**
+
+</td>
+<td valign="top">
+
+**Description**
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+ 
+
+</td>
 <td valign="top">
 
 `URL.headers.<header-key>`
@@ -170,6 +232,11 @@ A static key prefix used as a namespace grouping of the URL's HTTP headers whose
 </td>
 </tr>
 <tr>
+<td valign="top">
+
+ 
+
+</td>
 <td valign="top">
 
 `URL.queries.<query-key>`

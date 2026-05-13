@@ -10,18 +10,26 @@ Create and configure an *SAML Assertion* destination for an application.
 
 The Destination service lets you generate SAML assertions as per SAML 2.0 specification. You can retrieve a generated SAML assertion from the Destination service by using the `SAMLAssertion` authentication type, whereas [OAuth SAML Bearer Assertion Authentication](oauth-saml-bearer-assertion-authentication-c69ea6a.md) sends the generated SAML assertion to an OAuth server to get a token. The Destination service provides functionality for caching the generated SAML assertion for later use, and caching by the app whenever needed, which helps simplifying application development.
 
+> ### Caution:  
+> For SAP on-premise systems, this feature is supported as of S/4HANA \(on-premise\) release 2020.
+
 
 
 ## Properties
 
-The table below lists the destination properties for the *SAMLAssertion* authentication type.
+To configure a destination of this authentication type, you must specify all the required properties.
 
 
 <table>
 <tr>
 <th valign="top">
 
-Property
+Cockpit Label
+
+</th>
+<th valign="top">
+
+JSON Key
 
 </th>
 <th valign="top">
@@ -31,13 +39,18 @@ Description
 </th>
 </tr>
 <tr>
-<td valign="top" colspan="2">
+<td valign="top" colspan="3">
 
 **Required**
 
 </td>
 </tr>
 <tr>
+<td valign="top">
+
+Name
+
+</td>
 <td valign="top">
 
 `Name`
@@ -52,6 +65,11 @@ Name of the destination. Must be unique for the destination level.
 <tr>
 <td valign="top">
 
+Type
+
+</td>
+<td valign="top">
+
 `Type`
 
 </td>
@@ -62,6 +80,11 @@ Destination type. Choose `HTTP` for all HTTP\(S\) destinations.
 </td>
 </tr>
 <tr>
+<td valign="top">
+
+URL
+
+</td>
 <td valign="top">
 
 `URL`
@@ -76,6 +99,11 @@ URL of the target endpoint.
 <tr>
 <td valign="top">
 
+Proxy Type
+
+</td>
+<td valign="top">
+
 `ProxyType`
 
 </td>
@@ -86,6 +114,69 @@ Choose `Internet`, `PrivateLink`, or `OnPremise`.
 </td>
 </tr>
 <tr>
+<td valign="top">
+
+Authentication
+
+</td>
+<td valign="top">
+
+`Authentication`
+
+</td>
+<td valign="top">
+
+Authentication type. Use `SAMLAssertion` as value.
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+Audience
+
+</td>
+<td valign="top">
+
+`audience`
+
+</td>
+<td valign="top">
+
+Value of the `Audience` tag, which is part of the generated SAML assertion. For more information, see [SAML 2.0 specification](http://saml.xml.org/saml-specifications).
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+AuthnContextClassRef
+
+</td>
+<td valign="top">
+
+`authnContextClassRef`
+
+</td>
+<td valign="top">
+
+Value of the `AuthnContextClassRef` tag, which is part of generated SAML assertion. For more information, see [SAML 2.0 specification](http://saml.xml.org/saml-specifications).
+
+</td>
+</tr>
+<tr>
+<td valign="top" colspan="3">
+
+**Optional**
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+Location ID
+
+</td>
 <td valign="top">
 
 `CloudConnectorLocationId`
@@ -102,47 +193,9 @@ The default value is an empty string identifying the Cloud Connector that is con
 <tr>
 <td valign="top">
 
-`Authentication`
+Client Key
 
 </td>
-<td valign="top">
-
-Authentication type. Use `SAMLAssertion` as value.
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-`audience`
-
-</td>
-<td valign="top">
-
-Value of the `Audience` tag, which is part of the generated SAML assertion. For more information, see [SAML 2.0 specification](http://saml.xml.org/saml-specifications).
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-`authnContextClassRef`
-
-</td>
-<td valign="top">
-
-Value of the `AuthnContextClassRef` tag, which is part of generated SAML assertion. For more information, see [SAML 2.0 specification](http://saml.xml.org/saml-specifications).
-
-</td>
-</tr>
-<tr>
-<td valign="top" colspan="2">
-
-**Additional**
-
-</td>
-</tr>
-<tr>
 <td valign="top">
 
 `clientKey`
@@ -157,6 +210,11 @@ Key that identifies the consumer to the authorization server.
 <tr>
 <td valign="top">
 
+Name Qualifier
+
+</td>
+<td valign="top">
+
 `nameQualifier`
 
 </td>
@@ -169,16 +227,9 @@ When this property is set, the `NameQualifier` under the `NameId` tag of the gen
 <tr>
 <td valign="top">
 
-`companyId`
+Assertion Issuer
 
 </td>
-<td valign="top">
-
-Company identifier.
-
-</td>
-</tr>
-<tr>
 <td valign="top">
 
 `assertionIssuer`
@@ -193,6 +244,11 @@ Issuer of the SAML assertion.
 <tr>
 <td valign="top">
 
+Assertion Recipient
+
+</td>
+<td valign="top">
+
 `assertionRecipient`
 
 </td>
@@ -203,6 +259,11 @@ Recipient of the SAML assertion.
 </td>
 </tr>
 <tr>
+<td valign="top">
+
+Name Id Format
+
+</td>
 <td valign="top">
 
 `nameIdFormat`
@@ -217,6 +278,11 @@ Value of the `NameIdFormat` tag, which is part of generated SAML Assertion. For 
 <tr>
 <td valign="top">
 
+User Id Source
+
+</td>
+<td valign="top">
+
 `userIdSource`
 
 </td>
@@ -227,6 +293,11 @@ When this property is set, the user ID in the `NameId` tag of the generated SAML
 </td>
 </tr>
 <tr>
+<td valign="top">
+
+Key Store Location
+
+</td>
 <td valign="top">
 
 `KeyStoreLocation`
@@ -243,6 +314,11 @@ For more information, see [Manage Trust](manage-trust-82dbeca.md).
 <tr>
 <td valign="top">
 
+Key Store Password
+
+</td>
+<td valign="top">
+
 `KeyStorePassword` 
 
 </td>
@@ -253,6 +329,103 @@ Contains the password for the certificate configuration \(if one is needed\) whe
 </td>
 </tr>
 <tr>
+<td valign="top">
+
+Skip User Attributes Prefix In SAML Attribute
+
+</td>
+<td valign="top">
+
+`skipUserAttributesPrefixInSAMLAttributes`
+
+</td>
+<td valign="top">
+
+If set to true, any additional attributes taken from the OAuth server's user information endpoint, under the *user\_attributes* section, will be added to the assertion without the prefix that the Destination service would usually add to them. For more information, see [User Propagation via SAML 2.0 Bearer Assertion Flow](user-propagation-via-saml-2-0-bearer-assertion-flow-3cb7b81.md).
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+Include Signing Certificate In SAML Assertion
+
+</td>
+<td valign="top">
+
+`includeSigningCertificateInSAMLAssertion`
+
+</td>
+<td valign="top">
+
+If set to true, the public part of the signing certificate, used for signing the SAML assertion, will be included in the XML structure of the assertion. Some assertion recipients may require this to accept the assertion.
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+Skip User Uuid In SAML Attributes
+
+</td>
+<td valign="top">
+
+`skipUserUuidInSAMLAttributes`
+
+</td>
+<td valign="top">
+
+If set to true, any SAML assertion attribute with name 'user\_uuid' will not be added to the resulting SAML assertion XML, even if such was found in the JWT, specifying the user's identity.
+
+</td>
+</tr>
+<tr>
+<td valign="top" colspan="3">
+
+**Additional**
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+ 
+
+</td>
+<td valign="top">
+
+**Key**
+
+</td>
+<td valign="top">
+
+**Description**
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+ 
+
+</td>
+<td valign="top">
+
+`companyId`
+
+</td>
+<td valign="top">
+
+Company identifier.
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+ 
+
+</td>
 <td valign="top">
 
 `x_user_token.jwks`
@@ -269,6 +442,11 @@ For more information, see [JWK Set Format](https://tools.ietf.org/html/rfc7517#s
 <tr>
 <td valign="top">
 
+ 
+
+</td>
+<td valign="top">
+
 `x_user_token.header.typ`
 
 </td>
@@ -281,6 +459,11 @@ If this property is not provided, the Destination service will default to value 
 </td>
 </tr>
 <tr>
+<td valign="top">
+
+ 
+
+</td>
 <td valign="top">
 
 `x_user_token.jwks_uri` 
@@ -298,6 +481,11 @@ For more information, see [OpenID Connect Discovery](https://openid.net/specs/op
 </td>
 </tr>
 <tr>
+<td valign="top">
+
+ 
+
+</td>
 <td valign="top">
 
 `URL.headers.<header-key>`
@@ -327,6 +515,11 @@ A static key prefix used as a namespace grouping of the URL's HTTP headers whose
 <tr>
 <td valign="top">
 
+ 
+
+</td>
+<td valign="top">
+
 `URL.queries.<query-key>` 
 
 </td>
@@ -354,36 +547,27 @@ A static key prefix used as a namespace grouping of URL's query parameters whose
 <tr>
 <td valign="top">
 
-`skipUserAttributesPrefixInSAMLAttributes`
+ 
 
 </td>
 <td valign="top">
 
-If set to true, any additional attributes taken from the OAuth server's user information endpoint, under the *user\_attributes* section, will be added to the assertion without the prefix that the Destination service would usually add to them. For more information, see [User Propagation via SAML 2.0 Bearer Assertion Flow](user-propagation-via-saml-2-0-bearer-assertion-flow-3cb7b81.md).
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-`includeSigningCertificateInSAMLAssertion`
+`samlAssertionEncoding`
 
 </td>
 <td valign="top">
 
-If set to true, the public part of the signing certificate, used for signing the SAML assertion, will be included in the XML structure of the assertion. Some assertion recipients may require this to accept the assertion.
+If set, this property controls what encoding will be used to encode the assertion XML prior to sending it to the configured token service. The possible values are "base64" \([RFC 4648, section 4](https://datatracker.ietf.org/doc/html/rfc4648#section-4)\) and "base64url" \([RFC 4648, section 5](https://datatracker.ietf.org/doc/html/rfc4648#section-5)\). If not set, the encoding will be based on the default value of this property \(see below\).
 
-</td>
-</tr>
-<tr>
-<td valign="top">
+Default value:
 
-`skipUserUuidInSAMLAttributes`
+> ### Note:  
+> The exact release date depends on your specific region.
 
-</td>
-<td valign="top">
+-   *Prior to* the *calendar week 24 2026 release* \(8th of June to 11th of June\) - "base64"
+-   *After* the *calendar week 24 2026 release* \(8th of June to 11th of June\) - "base64url"
 
-If set to true, any SAML assertion attribute with name 'user\_uuid' will not be added to the resulting SAML assertion XML, even if such was found in the JWT, specifying the user's identity.
+
 
 </td>
 </tr>

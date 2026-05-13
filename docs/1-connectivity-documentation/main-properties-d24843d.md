@@ -11,12 +11,12 @@ In the *Destination Details* panel, you configure the general settings for a des
 <tr>
 <th valign="top">
 
-Label in Destinations Editor
+Cockpit Label
 
 </th>
 <th valign="top">
 
-Property
+JSON Key
 
 </th>
 <th valign="top">
@@ -24,6 +24,13 @@ Property
 Description
 
 </th>
+</tr>
+<tr>
+<td valign="top" colspan="3">
+
+**Required**
+
+</td>
 </tr>
 <tr>
 <td valign="top">
@@ -62,23 +69,6 @@ Type of the destination. Must be set to `RFC`.
 <tr>
 <td valign="top">
 
-Description
-
-</td>
-<td valign="top">
-
-`jco.destination.description`
-
-</td>
-<td valign="top">
-
-Description that explains the purpose of the concrete destination \(optional\).
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
 Proxy Type
 
 </td>
@@ -96,6 +86,30 @@ The select box for the Proxy Type allows to choose between `Internet`, `OnPremis
 -   `Local` is used to indicate that the destination is used within an *Edge Integration Cell* context.
 
 
+
+</td>
+</tr>
+<tr>
+<td valign="top" colspan="3">
+
+**Optional**
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+Description
+
+</td>
+<td valign="top">
+
+`jco.destination.description`
+
+</td>
+<td valign="top">
+
+Description that explains the purpose of the concrete destination \(optional\).
 
 </td>
 </tr>

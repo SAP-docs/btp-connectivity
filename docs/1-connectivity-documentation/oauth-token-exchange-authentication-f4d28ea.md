@@ -32,7 +32,12 @@ The table below lists the destination properties needed for the creation of dest
 <tr>
 <th valign="top">
 
-Property/Key
+Cockpit Label
+
+</th>
+<th valign="top">
+
+JSON Key
 
 </th>
 <th valign="top">
@@ -42,13 +47,18 @@ Input/Description
 </th>
 </tr>
 <tr>
-<td valign="top" colspan="2">
+<td valign="top" colspan="3">
 
 **Required**
 
 </td>
 </tr>
 <tr>
+<td valign="top">
+
+Name
+
+</td>
 <td valign="top">
 
 `Name`
@@ -63,6 +73,11 @@ Name of the destination. Must be unique for the destination level.
 <tr>
 <td valign="top">
 
+Type
+
+</td>
+<td valign="top">
+
 `Type`
 
 </td>
@@ -73,6 +88,11 @@ Choose `HTTP` \(for HTTP or HTTPS communication\).
 </td>
 </tr>
 <tr>
+<td valign="top">
+
+URL
+
+</td>
 <td valign="top">
 
 `URL`
@@ -87,6 +107,11 @@ URL of the target endpoint.
 <tr>
 <td valign="top">
 
+Proxy Type
+
+</td>
+<td valign="top">
+
 `ProxyType`
 
 </td>
@@ -97,6 +122,11 @@ You can only use proxy type `Internet` or `OnPremise`. If `OnPremise` is used, t
 </td>
 </tr>
 <tr>
+<td valign="top">
+
+Authentication
+
+</td>
 <td valign="top">
 
 `Authentication`
@@ -111,6 +141,11 @@ Use `OAuth2TokenExchange`.
 <tr>
 <td valign="top">
 
+Client ID
+
+</td>
+<td valign="top">
+
 `clientId`
 
 </td>
@@ -121,6 +156,11 @@ OAuth 2.0 client ID to be used for the security access token exchange.
 </td>
 </tr>
 <tr>
+<td valign="top">
+
+Token Service URL
+
+</td>
 <td valign="top">
 
 `tokenServiceURL`
@@ -138,13 +178,18 @@ The URL of the token service, against which the token exchange is performed.
 </td>
 </tr>
 <tr>
-<td valign="top" colspan="2">
+<td valign="top" colspan="3">
 
 **Optional**
 
 </td>
 </tr>
 <tr>
+<td valign="top">
+
+Description
+
+</td>
 <td valign="top">
 
 `Description`
@@ -159,6 +204,11 @@ Human-readable description of the destination.
 <tr>
 <td valign="top">
 
+Client Secret
+
+</td>
+<td valign="top">
+
 `clientSecret`
 
 </td>
@@ -169,13 +219,90 @@ OAuth 2.0 client secret to be used for the security access token exchange.
 </td>
 </tr>
 <tr>
-<td valign="top" colspan="2">
+<td valign="top">
+
+Token Service URL Proxy Type
+
+</td>
+<td valign="top">
+
+`tokenServiceURL.ProxyType`
+
+</td>
+<td valign="top">
+
+If set, it will use the specified `ProxyType` for the token service, independent from the `ProxyType` of the whole destination. This lets you configure Internet-based token services for on-premise systems.
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+Token Service Key Store Location
+
+</td>
+<td valign="top">
+
+`tokenService.KeyStoreLocation`
+
+</td>
+<td valign="top">
+
+Contains the name of the certificate configuration to be used. This property is required when using client certificates for authentication.
+
+For more information, see [OAuth with X.509 Client Certificates](oauth-with-x-509-client-certificates-2c162aa.md).
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+Token Service Key Store Password
+
+</td>
+<td valign="top">
+
+`tokenService.KeyStorePassword`
+
+</td>
+<td valign="top">
+
+Contains the password for the certificate configuration \(if one is needed\) when using client certificates for authentication.
+
+For more information, see [OAuth with X.509 Client Certificates](oauth-with-x-509-client-certificates-2c162aa.md).
+
+</td>
+</tr>
+<tr>
+<td valign="top" colspan="3">
 
 **Additional**
 
 </td>
 </tr>
 <tr>
+<td valign="top">
+
+ 
+
+</td>
+<td valign="top">
+
+**Key**
+
+</td>
+<td valign="top">
+
+**Description**
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+ 
+
+</td>
 <td valign="top">
 
 `scope`
@@ -190,16 +317,9 @@ Value of the OAuth 2.0 scope parameter expressed as a list of space-delimited, c
 <tr>
 <td valign="top">
 
-`tokenServiceURL.ProxyType`
+ 
 
 </td>
-<td valign="top">
-
-If set, it will use the specified `ProxyType` for the token service, independent from the `ProxyType` of the whole destination. This lets you configure Internet-based token services for on-premise systems.
-
-</td>
-</tr>
-<tr>
 <td valign="top">
 
 `tokenServiceURL.headers.<header-key>` 
@@ -226,6 +346,11 @@ A static key prefix used as a namespace grouping of the `tokenServiceUrl`'s HTTP
 <tr>
 <td valign="top">
 
+ 
+
+</td>
+<td valign="top">
+
 `tokenServiceURL.queries.<query-key>` 
 
 </td>
@@ -250,6 +375,11 @@ A static key prefix used as a namespace grouping of `tokenServiceUrl`'s query pa
 <tr>
 <td valign="top">
 
+ 
+
+</td>
+<td valign="top">
+
 `tokenService.body.<param-key>`
 
 </td>
@@ -272,6 +402,11 @@ A static key prefix used as a namespace grouping of parameters which are sent as
 </td>
 </tr>
 <tr>
+<td valign="top">
+
+ 
+
+</td>
 <td valign="top">
 
 `URL.headers.<header-key>`
@@ -301,6 +436,11 @@ A static key prefix used as a namespace grouping of the URL's HTTP headers whose
 <tr>
 <td valign="top">
 
+ 
+
+</td>
+<td valign="top">
+
 `URL.queries.<query-key>` 
 
 </td>
@@ -328,32 +468,9 @@ A static key prefix used as a namespace grouping of URL's query parameters whose
 <tr>
 <td valign="top">
 
-`tokenService.KeyStoreLocation`
+ 
 
 </td>
-<td valign="top">
-
-Contains the name of the certificate configuration to be used. This property is required when using client certificates for authentication.
-
-For more information, see [OAuth with X.509 Client Certificates](oauth-with-x-509-client-certificates-2c162aa.md).
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-`tokenService.KeyStorePassword`
-
-</td>
-<td valign="top">
-
-Contains the password for the certificate configuration \(if one is needed\) when using client certificates for authentication.
-
-For more information, see [OAuth with X.509 Client Certificates](oauth-with-x-509-client-certificates-2c162aa.md).
-
-</td>
-</tr>
-<tr>
 <td valign="top">
 
 `tokenService.addClientCredentialsInBody` 
@@ -368,6 +485,11 @@ Specifies whether the client credentials should be placed in the request body of
 <tr>
 <td valign="top">
 
+ 
+
+</td>
+<td valign="top">
+
 `tokenServiceURL.ConnectionTimeoutInSeconds`
 
 </td>
@@ -380,6 +502,11 @@ Defines the connection timeout for the token service retrieval. The minimum valu
 <tr>
 <td valign="top">
 
+ 
+
+</td>
+<td valign="top">
+
 `tokenServiceURL.SocketReadTimeoutInSeconds` 
 
 </td>
@@ -390,6 +517,11 @@ Defines the read timeout for the token service retrieval. The minimum value allo
 </td>
 </tr>
 <tr>
+<td valign="top">
+
+ 
+
+</td>
 <td valign="top">
 
 `clientAssertion.destinationName` 

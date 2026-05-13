@@ -38,16 +38,14 @@ Back to [Content](oauth-user-token-exchange-authentication-e3c333f.md#loioe3c333
 
 ## Properties
 
-To configure a destination of this type, you must specify all the required properties. You can create destinations of this type via the cloud cockpit \([Access the Destinations Editor](access-the-destinations-editor-82ca377.md)\) or the [Destination Service REST API](destination-service-rest-api-23ccafb.md).
-
-The following table shows the required properties along with their semantics.
+To configure a destination of this authentication type, you must specify all the required properties.
 
 
 <table>
 <tr>
 <th valign="top">
 
-Field/Parameter
+Cockpit Label
 
 </th>
 <th valign="top">
@@ -57,7 +55,7 @@ JSON Key
 </th>
 <th valign="top">
 
-Input/Description
+Description
 
 </th>
 </tr>
@@ -71,12 +69,46 @@ Input/Description
 <tr>
 <td valign="top">
 
-`URL`
+Name
 
 </td>
 <td valign="top">
 
+`Name`
+
+</td>
+<td valign="top">
+
+Name of the destination. Must be unique for the destination level.
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+Type
+
+</td>
+<td valign="top">
+
+`Type`
+
+</td>
+<td valign="top">
+
+Choose `HTTP` \(for HTTP or HTTPS communication\).
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
 URL
+
+</td>
+<td valign="top">
+
+`URL`
 
 </td>
 <td valign="top">
@@ -88,12 +120,63 @@ URL of the target endpoint.
 <tr>
 <td valign="top">
 
-`Token Service URL`
+Proxy Type
 
 </td>
 <td valign="top">
 
-tokenServiceURL
+`ProxyType`
+
+</td>
+<td valign="top">
+
+You can only use proxy type `Internet` or `OnPremise`. If `OnPremise` is used, the OAuth server must be accessed through the Cloud Connector.
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+Authentication
+
+</td>
+<td valign="top">
+
+`Authentication`
+
+</td>
+<td valign="top">
+
+`OAuth2UserTokenExchange` in this case.
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+Client ID
+
+</td>
+<td valign="top">
+
+`clientId`
+
+</td>
+<td valign="top">
+
+OAuth 2.0 client ID to be used for the user access token exchange.
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+Token Service URL
+
+</td>
+<td valign="top">
+
+`tokenServiceURL`
 
 </td>
 <td valign="top">
@@ -122,48 +205,21 @@ The URL of the token service, against which the token exchange is performed. Dep
 </td>
 </tr>
 <tr>
-<td valign="top">
+<td valign="top" colspan="3">
 
-`Name`
-
-</td>
-<td valign="top">
-
-Name
-
-</td>
-<td valign="top">
-
-Name of the destination. Must be unique for the destination level.
+**Optional**
 
 </td>
 </tr>
 <tr>
 <td valign="top">
 
-`Description`
+Client Secret
 
 </td>
 <td valign="top">
 
-Description
-
-</td>
-<td valign="top">
-
-A human-readable description of the destination.
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-`Client Secret`
-
-</td>
-<td valign="top">
-
-clientSecret
+`clientSecret`
 
 </td>
 <td valign="top">
@@ -175,87 +231,12 @@ OAuth 2.0 client secret to be used for the user access token exchange.
 <tr>
 <td valign="top">
 
-`Client ID`
+Description
 
 </td>
-<td valign="top">
-
-clientId
-
-</td>
-<td valign="top">
-
-OAuth 2.0 client ID to be used for the user access token exchange.
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-`Authentication`
-
-</td>
-<td valign="top">
-
-Authentication
-
-</td>
-<td valign="top">
-
-`OAuth2UserTokenExchange` in this case.
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-`Proxy Type`
-
-</td>
-<td valign="top">
-
-ProxyType
-
-</td>
-<td valign="top">
-
-You can only use proxy type `Internet` or `OnPremise`. If `OnPremise` is used, the OAuth server must be accessed through the Cloud Connector.
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-`Type`
-
-</td>
-<td valign="top">
-
-Type
-
-</td>
-<td valign="top">
-
-Choose `HTTP` \(for HTTP or HTTPS communication\).
-
-</td>
-</tr>
-<tr>
-<td valign="top" colspan="3">
-
-**Optional**
-
-</td>
-</tr>
-<tr>
 <td valign="top">
 
 `Description`
-
-</td>
-<td valign="top">
-
-Description
 
 </td>
 <td valign="top">
@@ -267,12 +248,12 @@ Description of the destination.
 <tr>
 <td valign="top">
 
-`Token Service URL Type`
+Token Service URL Type
 
 </td>
 <td valign="top">
 
-tokenServiceURLType
+`tokenServiceURLType`
 
 </td>
 <td valign="top">
@@ -287,12 +268,12 @@ tokenServiceURLType
 <tr>
 <td valign="top">
 
-`Token Service URL Proxy Type`
+Token Service URL Proxy Type
 
 </td>
 <td valign="top">
 
-tokenServiceURL.ProxyType
+`tokenServiceURL.ProxyType`
 
 </td>
 <td valign="top">
@@ -302,9 +283,60 @@ If set, it will use the specified `ProxyType` for the token service, independent
 </td>
 </tr>
 <tr>
+<td valign="top">
+
+Token Service Key Store Location
+
+</td>
+<td valign="top">
+
+`tokenService.KeyStoreLocation`
+
+</td>
+<td valign="top">
+
+Contains the name of the certificate configuration to be used. This property is required when using client certificates for authentication. See [OAuth with X.509 Client Certificates](oauth-with-x-509-client-certificates-2c162aa.md).
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+Token Service Key Store Password
+
+</td>
+<td valign="top">
+
+`tokenService.KeyStorePassword`
+
+</td>
+<td valign="top">
+
+Contains the password for the certificate configuration \(if one is needed\) when using client certificates for authentication. See [OAuth with X.509 Client Certificates](oauth-with-x-509-client-certificates-2c162aa.md).
+
+</td>
+</tr>
+<tr>
 <td valign="top" colspan="3">
 
 **Additional**
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+ 
+
+</td>
+<td valign="top">
+
+**Key**
+
+</td>
+<td valign="top">
+
+**Description**
 
 </td>
 </tr>
@@ -473,40 +505,6 @@ A static key prefix used as a namespace grouping of URL's query parameters whose
 > This is a naming convention. As the call to the target endpoint is performed on the client side, the service only provides the configured properties. The expectation for the client-side processing logic is to parse and use them. If you are using higher-level libraries and tools, please check if they support this convention.
 
 
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
- 
-
-</td>
-<td valign="top">
-
-`tokenService.KeyStoreLocation`
-
-</td>
-<td valign="top">
-
-Contains the name of the certificate configuration to be used. This property is required when using client certificates for authentication. See [OAuth with X.509 Client Certificates](oauth-with-x-509-client-certificates-2c162aa.md).
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
- 
-
-</td>
-<td valign="top">
-
-`tokenService.KeyStorePassword`
-
-</td>
-<td valign="top">
-
-Contains the password for the certificate configuration \(if one is needed\) when using client certificates for authentication. See [OAuth with X.509 Client Certificates](oauth-with-x-509-client-certificates-2c162aa.md).
 
 </td>
 </tr>

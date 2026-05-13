@@ -62,7 +62,7 @@ You can maintain truststore and keystore certificates in the *Destinations* edit
 
 
 
-## Generate a Certificate
+## Generate an SAP Cloud PKI infrastructure Certificate
 
 1.  Choose *Create*.
 
@@ -72,7 +72,12 @@ You can maintain truststore and keystore certificates in the *Destinations* edit
 
     ![](images/CS_Destination_Certificates_-_PKI_2_6d54d99.png)
 
-3.  Enter certificate name and type. You can optionally enter the certificate CN and certificate validity. In addition, you can optionally select the *Enable automatic renewal* checkbox to automatically renew the certificate when close to expiration. Choose *Create* to generate the desired certificate.
+3.  Enter certificate name and type. You can optionally enter the certificate CN and certificate validity. In addition, you can optionally select the *Enable automatic renewal* checkbox to automatically renew the certificate when close to expiration.
+
+    > ### Note:  
+    > In addition, you can optionally upload your own signed *certificate signing request*. In this case, the Destination service will still override the whole subject DN in the resulting certificate, but will not generate its own private key. Instead, you will be using your own local private key.
+
+    Choose *Create* to generate the desired certificate.
 
     ![](images/CS_Destination_Certificates_-_PKI_3_c3cf8d7.png)
 

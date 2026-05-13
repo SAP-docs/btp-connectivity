@@ -22,12 +22,12 @@ In the *Destinations* editor in the cockpit, the configuration must be provided 
 <tr>
 <th valign="top">
 
-Label in Destinations Editor
+Cockpit Label
 
 </th>
 <th valign="top">
 
-Property
+JSON Key
 
 </th>
 <th valign="top">
@@ -35,6 +35,13 @@ Property
 Description
 
 </th>
+</tr>
+<tr>
+<td valign="top" colspan="3">
+
+**Optional**
+
+</td>
 </tr>
 <tr>
 <td valign="top">

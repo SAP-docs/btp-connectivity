@@ -10,11 +10,20 @@ Use an X.509 certificate instead of a secret to authenticate against the authent
 To perform mutual TLS, you can use an X.509 client certificate instead of a client secret when connecting to the authorization server. To do so, you must create a certificate configuration containing a valid X.509 client certificate or a keystore, and link it to the destination configuration using these properties:
 
 
+
+## Properties
+
+
 <table>
 <tr>
 <th valign="top">
 
-Property
+Cockpit Label
+
+</th>
+<th valign="top">
+
+JSON Key
 
 </th>
 <th valign="top">
@@ -24,6 +33,18 @@ Description
 </th>
 </tr>
 <tr>
+<td valign="top" colspan="3">
+
+**Optional**
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+Token Service Key Store Location
+
+</td>
 <td valign="top">
 
 `tokenService.KeyStoreLocation` 
@@ -36,6 +57,11 @@ Contains the name of the certificate configuration to be used. This property is 
 </td>
 </tr>
 <tr>
+<td valign="top">
+
+Token Service Key Store Password
+
+</td>
 <td valign="top">
 
 `tokenService.KeyStorePassword`

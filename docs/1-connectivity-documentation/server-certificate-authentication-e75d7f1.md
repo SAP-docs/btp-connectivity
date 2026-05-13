@@ -12,21 +12,25 @@ Create and configure a *Server Certificate* destination for an application.
 
 The server certificate validation is applicable to all destinations with proxy type `Internet` and `PrivateLink` that use the HTTPS protocol.
 
-> ### Note:  
-> TLS 1.2 became the default TLS version of HTTP destinations. If an HTTP destination is consumed by a java application the change will be effective after restart. All HTTP destinations that use the HTTPS protocol and have ProxyType=Internet can be affected. Previous TLS versions can be used by configuring an additional property TLSVersion=TLSv1.0 or TLSVersion=TLSv1.1.
-
 
 
 <a name="loioe75d7f15b808428e87ae70f494da0b42__section_N10024_N10011_N10001"/>
 
 ## Properties
 
+To configure a destination of this authentication type, you must specify all the required properties.
+
 
 <table>
 <tr>
 <th valign="top">
 
-Property
+Cockpit Label
+
+</th>
+<th valign="top">
+
+JSON Key
 
 </th>
 <th valign="top">
@@ -36,47 +40,45 @@ Description
 </th>
 </tr>
 <tr>
-<td valign="top">
+<td valign="top" colspan="3">
 
-`TLSVersion` 
-
-</td>
-<td valign="top">
-
-Optional property. Can be used to specify the preferred TLS version to be used by the current destination. Since TLS 1.2 is not enabled by default on the older java versions this property can be used to configure TLS 1.2 in case this is required by the server configured in this destination. It is usable only in HTTP destinations. Example: `TLSVersion`=`TLSv1.2` .
+**Optional**
 
 </td>
 </tr>
 <tr>
 <td valign="top">
 
+Trust Store Location
+
+</td>
+<td valign="top">
+
 `TrustStoreLocation` 
-
-1.  When used in local environment
-2.  When used in cloud environment
-
-
 
 </td>
 <td valign="top">
 
 Path to the keystore file which contains trusted certificates \(Certificate Authorities\) for authentication against a remote client.
 
-To find the allowed keystore file formats, see [Manage Destination Certificates](manage-destination-certificates-df1bb55.md).
-
-1.  The relative path to the keystore file. The root path is the server's location on the file system.
-2.  The name of the keystore file.
+-   When using a local environment: The relative path to the JKS file. The root path is the server's location on the file system.
+-   When using a cloud environment: The name of the JKS file.
 
 
 
 > ### Note:  
-> If the `TrustStoreLocation` property is not specified, the JDK trust store is used as a default trust store for the destination.
+> The default JDK truststore is appended to the truststore defined in the destination configuration. As a result, the destination simultaneously uses both truststores. If the `TrustStoreLocation` property is not specified, the JDK truststore is used as a default truststore for the destination.
 
 
 
 </td>
 </tr>
 <tr>
+<td valign="top">
+
+Trust Store Password
+
+</td>
 <td valign="top">
 
 `TrustStorePassword` 
@@ -84,11 +86,40 @@ To find the allowed keystore file formats, see [Manage Destination Certificates]
 </td>
 <td valign="top">
 
-Password for the JKS trust store file. This property is mandatory in case `TrustStoreLocation` is used.
+Password for the JKS trust store file. This property is mandatory if `TrustStoreLocation` is used.
 
 </td>
 </tr>
 <tr>
+<td valign="top" colspan="3">
+
+**Additional**
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+ 
+
+</td>
+<td valign="top">
+
+**Key**
+
+</td>
+<td valign="top">
+
+**Description**
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+ 
+
+</td>
 <td valign="top">
 
 `TrustAll`
@@ -98,13 +129,18 @@ Password for the JKS trust store file. This property is mandatory in case `Trust
 
 If this property is set to `TRUE` in the destination, the server certificate will not be checked for SSL connections. It is intended for test scenarios only, and should not be used in production \(since the SSL server certificate is not checked, the server is not authenticated\). The possible values are `TRUE` or `FALSE`; the default value is `FALSE` \(that is, if the property is not present at all\).
 
-In case `TrustAll` = `TRUE`, the `TrustStoreLocation` property is ignored so you can omit it.
+If `TrustAll` = `TRUE`, the `TrustStoreLocation` property is ignored so you can omit it.
 
-In case `TrustAll` = `FALSE`, the `TrustStoreLocation` property is mandatory to be used.
+If `TrustAll` = `FALSE`, the `TrustStoreLocation` property is mandatory to be used.
 
 </td>
 </tr>
 <tr>
+<td valign="top">
+
+ 
+
+</td>
 <td valign="top">
 
 `HostnameVerifier`
@@ -125,14 +161,11 @@ For more information about these Java classes, see [Package org.apache.http.conn
 
 
 
-In case *<TrustAll\>* = `TRUE`, the *<HostnameVerifier\>* property is ignored so you can omit it.
+If *<TrustAll\>* = `TRUE`, the *<HostnameVerifier\>* property is ignored so you can omit it.
 
 </td>
 </tr>
 </table>
-
-> ### Note:  
-> You can upload trust store JKS files using the same command as for uploading destination configuration property files. You only need to specify the JKS file instead of the destination configuration file.
 
 > ### Note:  
 > Connections to remote services which require *Java Cryptography Extension \(JCE\) unlimited strength jurisdiction policy* are not supported.

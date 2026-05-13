@@ -69,21 +69,18 @@ The format of the assertion as defined by the authorization server. The supporte
 
 <a name="loio1c344728e9604191977795433ab668f7__section_xh2_4bl_cxb"/>
 
-## Use a Property to Add a Reference to the Destination that Provides the Client Assertion
+## Properties
 
-The destination that provides the client assertion can be specified in a property of the destination that uses client assertions:
+To configure a destination of this authentication type, you must specify all the required properties.
+
+**Additional Properties**
 
 
 <table>
 <tr>
 <th valign="top">
 
-Property
-
-</th>
-<th valign="top">
-
-Value
+Key
 
 </th>
 <th valign="top">
@@ -91,6 +88,18 @@ Value
 Description
 
 </th>
+</tr>
+<tr>
+<td valign="top">
+
+`clientAssertion.type`
+
+</td>
+<td valign="top">
+
+absolute URI
+
+</td>
 </tr>
 <tr>
 <td valign="top">
@@ -103,9 +112,32 @@ Description
 Name of a destination
 
 </td>
+</tr>
+</table>
+
+
+<table>
+<tr>
+<th valign="top">
+
+Header
+
+</th>
+<th valign="top">
+
+Value
+
+</th>
+</tr>
+<tr>
 <td valign="top">
 
-Name of the destination that provides the client assertion. Must be on the same subaccount or service instance as the destination that uses client assertions.
+`X-client-assertion-destination-name`
+
+</td>
+<td valign="top">
+
+Name of a destination
 
 </td>
 </tr>
@@ -114,11 +146,7 @@ Name of the destination that provides the client assertion. Must be on the same 
 > ### Caution:  
 > If headers `X-client-assertion` and `X-client-assertion-type` are specified in the *Find Destination* API call, the `clientAssertion.destinationName` property will not be used for an automated assertion fetching mechanism.
 
-
-
-<a name="loio1c344728e9604191977795433ab668f7__section_f33_4bl_cxb"/>
-
-## Use a Header to Specify the Destination that Provides the Client Assertion
+**Use a Header to Specify the Destination that Provides the Client Assertion**
 
 Alternatively, the destination that provides the client assertion can also be specified in a header in the *Find Destination* API.
 

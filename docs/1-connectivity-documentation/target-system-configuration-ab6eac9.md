@@ -31,7 +31,7 @@ You can use the following configuration types alternatively:
 
 -   Direct connection to an ABAP application server via Cloud Connector.
 -   Load balancing connection to a group of ABAP application servers via a message server via Cloud Connector.
--   WebSocket connection to an ABAP application server \(RFC over Internet\)
+-   WebSocket connection to an ABAP application server, either via Cloud Connector or directly \(RFC over Internet\). In the latter case, the target ABAP system must be exposed to the Internet.
 
     > ### Note:  
     > When using a WebSocket connection, the target ABAP system must be exposed to the Internet.
@@ -59,12 +59,12 @@ To use a direct connection \(connection without load balancing\) to an applicati
 <tr>
 <th valign="top">
 
-Label in Destinations Editor
+Cockpit Label
 
 </th>
 <th valign="top">
 
-Property
+JSON Key
 
 </th>
 <th valign="top">
@@ -146,12 +146,12 @@ To use load balancing to a system over Cloud Connector, you must set the value f
 <tr>
 <th valign="top">
 
-Label in Destinations Editor
+Cockpit Label
 
 </th>
 <th valign="top">
 
-Property
+JSON Key
 
 </th>
 <th valign="top">
@@ -283,17 +283,19 @@ Your target system is one of the following:
 
 The trust-related configuration must be provided in the *Client Trust Store* configuration panel.
 
+For using a WebSocket connection via Cloud Connector, the *Proxy Type* must be set to `OnPremise`.
+
 
 <table>
 <tr>
 <th valign="top">
 
-Label in Destinations Editor
+Cockpit Label
 
 </th>
 <th valign="top">
 
-Property
+JSON Key
 
 </th>
 <th valign="top">
@@ -315,7 +317,7 @@ WebSocket RFC Server Host
 </td>
 <td valign="top">
 
-Represents the WebSocket RFC server host on which the target ABAP system is running. The system must be exposed to the Internet.
+Represents the WebSocket RFC server host on which the target ABAP system is running. The system must be exposed to the Internet, when communicating directly. When calling via Cloud Connector, the virtual host in the host mapping of the Cloud Connector must be provided.
 
 </td>
 </tr>
@@ -332,7 +334,7 @@ WebSocket RFC Server Port
 </td>
 <td valign="top">
 
-Represents the WebSocket RFC server port on which the target ABAP system is listening.
+Represents the WebSocket RFC server port on which the target ABAP system is listening. When calling via Cloud Connector, the virtual port in the host mapping of the Cloud Connector must be provided.
 
 </td>
 </tr>
@@ -366,7 +368,7 @@ WebSocket RFC Ping Period
 </td>
 <td valign="top">
 
-Optional property.
+Optional property and not relevant when using *Proxy Type* `OnPremise`.
 
 Time period of a WebSocket client connection in seconds after which a keep alive WebSocket ping packet is sent while waiting for response data during a call.
 
@@ -391,7 +393,7 @@ WebSocket RFC Pong Timeout
 </td>
 <td valign="top">
 
-Optional property.
+Optional property and not relevant when using *Proxy Type* `OnPremise`.
 
 Timeout for a WebSocket keep alive ping reply packet in seconds. If no such so-called pong packet is received from the communication partner as a reply to a previously sent WebSocket keep alive ping packet within this timeout period, the client connection is considered as broken and will be closed.
 
@@ -424,31 +426,33 @@ The checkbox *Use default client trust store* must be unchecked.
 In an imported configuration file, the respective values are 1 and 0.
 
 > ### Note:  
-> We recommend that you **do not use value `1` \("trust all"\) in productive scenarios**, but only for demo/test purposes.
+> We *strongly* recommend that you **leave this checkbox unchecked in productive scenarios**, and mark it as checked *only* for demo/test purposes.
 
-
+Not relevant when using *Proxy Type* `OnPremise`.
 
 </td>
 </tr>
 <tr>
 <td valign="top">
 
-TrustStoreLocation
+Trust Store Location
 
 </td>
 <td valign="top">
 
-*<Trust Store Location\>*
+`TrustStoreLocation`
 
 </td>
 <td valign="top">
 
-You can choose a <Trust Store Location\>. This field indicates the name of the trust store on the *Destination Certificates* page which contains trusted certificates \(Certificate Authorities\) for authentication against a remote client.
+You can choose a trust store location. This field indicates the name of the trust store on the *Destination Certificates* page which contains trusted certificates \(certificate authorities\) for authentication against a remote client.
+
+Not relevant when using *Proxy Type* `OnPremise`.
 
 
 
 > ### Note:  
-> You can only configure a trust store location, if both the checkboxes *Use default client trust store* and *Trust All* are unchecked.
+> You can only configure a trust store location, if both checkboxes *Use default client trust store* and *Trust All* are unchecked.
 
 
 
@@ -457,17 +461,19 @@ You can choose a <Trust Store Location\>. This field indicates the name of the t
 <tr>
 <td valign="top">
 
-TrustStorePassword
+Trust Store Password
 
 </td>
 <td valign="top">
 
-*<Trust Store Password\>*
+`TrustStorePassword`
 
 </td>
 <td valign="top">
 
-Password for the trust store file specified via *<Trust Store Location\>*.
+Password for the trust store file specified via *Trust Store Location*.
+
+Not relevant when using *Proxy Type* `OnPremise`.
 
 </td>
 </tr>

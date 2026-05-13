@@ -14,14 +14,19 @@ You can call an OAuth2-protected remote system/API and propagate a user ID to th
 
 ## Properties
 
-The table below lists the destination properties for *OAuth2SAMLBearerAssertion* authentication type. You can find the values for these properties in the provider-specific documentation of OAuth-protected services. Usually, only a subset of the optional properties is required by a particular service provider.
+To configure a destination of this authentication type, you must specify all the required properties.
 
 
 <table>
 <tr>
 <th valign="top">
 
-Property
+Cockpit Label
+
+</th>
+<th valign="top">
+
+JSON Key
 
 </th>
 <th valign="top">
@@ -31,13 +36,18 @@ Description
 </th>
 </tr>
 <tr>
-<td valign="top" colspan="2">
+<td valign="top" colspan="3">
 
 **Required**
 
 </td>
 </tr>
 <tr>
+<td valign="top">
+
+Name
+
+</td>
 <td valign="top">
 
 `Name`
@@ -52,6 +62,11 @@ Name of the destination. Must be unique for the destination level.
 <tr>
 <td valign="top">
 
+Type
+
+</td>
+<td valign="top">
+
 `Type`
 
 </td>
@@ -62,6 +77,11 @@ Destination type. Choose `HTTP` for all HTTP\(S\) destinations.
 </td>
 </tr>
 <tr>
+<td valign="top">
+
+URL
+
+</td>
 <td valign="top">
 
 `URL`
@@ -76,6 +96,11 @@ URL of the target endpoint.
 <tr>
 <td valign="top">
 
+Proxy Type
+
+</td>
+<td valign="top">
+
 `ProxyType`
 
 </td>
@@ -86,6 +111,11 @@ You can only use proxy type `Internet` or `OnPremise`. If `OnPremise` is used, t
 </td>
 </tr>
 <tr>
+<td valign="top">
+
+Authentication
+
+</td>
 <td valign="top">
 
 `Authentication`
@@ -100,30 +130,9 @@ Authentication type. Use `OAuth2SAMLBearerAssertion` as value.
 <tr>
 <td valign="top">
 
-`KeyStoreLocation`
+Audience
 
 </td>
-<td valign="top">
-
-Contains the name of the certificate configuration to be used for *per-destination* SAML assertion signing. This certificate will be used instead of the standard subaccount-wide signing key.
-
-For more information, see [Manage Trust](manage-trust-82dbeca.md).
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-`KeyStorePassword` 
-
-</td>
-<td valign="top">
-
-Contains the password for the certificate configuration \(if one is needed\) when using a *per-destination* SAML assertion signing certificate.
-
-</td>
-</tr>
-<tr>
 <td valign="top">
 
 `audience`
@@ -145,6 +154,11 @@ For more information, see [SAML 2.0 Bearer Assertion Profiles for OAuth 2.0](htt
 <tr>
 <td valign="top">
 
+Client Key
+
+</td>
+<td valign="top">
+
 `clientKey`
 
 </td>
@@ -155,6 +169,11 @@ Key that identifies the consumer to the authorization server.
 </td>
 </tr>
 <tr>
+<td valign="top">
+
+Token Service URL
+
+</td>
 <td valign="top">
 
 `tokenServiceURL`
@@ -186,6 +205,35 @@ The URL of the token service, against which the token exchange is performed. Dep
 <tr>
 <td valign="top">
 
+AuthnContextClassRef
+
+</td>
+<td valign="top">
+
+`authnContextClassRef`
+
+</td>
+<td valign="top">
+
+Value of the `AuthnContextClassRef` tag, which is part of generated `OAuth2SAMLBearerAssertion` authentication. For more information, see [SAML 2.0 specification](http://saml.xml.org/saml-specifications).
+
+</td>
+</tr>
+<tr>
+<td valign="top" colspan="3">
+
+**Optional**
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+Token Service User
+
+</td>
+<td valign="top">
+
 `tokenServiceUser`
 
 </td>
@@ -198,6 +246,11 @@ User for basic authentication to OAuth server \(if required\).
 <tr>
 <td valign="top">
 
+Token Service Password
+
+</td>
+<td valign="top">
+
 `tokenServicePassword`
 
 </td>
@@ -208,6 +261,297 @@ Password for `tokenServiceUser` \(if required\).
 </td>
 </tr>
 <tr>
+<td valign="top">
+
+SAML Assertion Provider
+
+</td>
+<td valign="top">
+
+`SAMLAssertionProvider`
+
+</td>
+<td valign="top">
+
+Specifies how the SAML assertion will be provided to the token service. There are two possible values:
+
+-   `DestinationServiceGenerated`: specifies that Destination service will generate the SAML assertion, sign it using the subaccount trust certificate, and pass it to the token service.
+-   `ClientProvided`: specifies that the client will provide the SAML assertion externally to the Destination service, and the service will pass it to the token service.
+
+If the property is missing, the Destination service will treat it by default as if the property was set to `DestinationServiceGenerated`.
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+Name Qualifier
+
+</td>
+<td valign="top">
+
+`nameQualifier`
+
+</td>
+<td valign="top">
+
+Security domain of the user for which access token is requested.
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+Assertion Issuer
+
+</td>
+<td valign="top">
+
+`assertionIssuer`
+
+</td>
+<td valign="top">
+
+Issuer of the SAML assertion.
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+Assertion Recipient
+
+</td>
+<td valign="top">
+
+`assertionRecipient`
+
+</td>
+<td valign="top">
+
+Recipient of the SAML assertion. If not set, the token service URL will be the assertion's recipient.
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+Name Id Format
+
+</td>
+<td valign="top">
+
+`nameIdFormat`
+
+</td>
+<td valign="top">
+
+Value of the `NameIdFormat` tag, which is part of generated `OAuth2SAMLBearerAssertion` authentication. For more information, see [SAML 2.0 specification](http://saml.xml.org/saml-specifications).
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+User Id Source
+
+</td>
+<td valign="top">
+
+`userIdSource`
+
+</td>
+<td valign="top">
+
+When this property is set, the generated SAML2 assertion uses the currently logged-in user as a value for the `NameId` tag. See [User Propagation via SAML 2.0 Bearer Assertion Flow](user-propagation-via-saml-2-0-bearer-assertion-flow-3cb7b81.md).
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+Token Service URL Type
+
+</td>
+<td valign="top">
+
+`tokenServiceURLType`
+
+</td>
+<td valign="top">
+
+Either `Dedicated` \(if the `tokenServiceURL` serves only a single tenant\), or `Common` \(if the `tokenServiceURL` serves multiple tenants\).
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+Token Service URL Proxy Type
+
+</td>
+<td valign="top">
+
+`tokenServiceURL.ProxyType`
+
+</td>
+<td valign="top">
+
+If set, it will use the specified `ProxyType` for the token service, independent from the `ProxyType` of the whole destination. This lets you configure Internet-based token services for on-premise systems.
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+Key Store Location
+
+</td>
+<td valign="top">
+
+`KeyStoreLocation`
+
+</td>
+<td valign="top">
+
+Contains the name of the certificate configuration to be used for *per-destination* SAML assertion signing. This certificate will be used instead of the standard subaccount-wide signing key.
+
+For more information, see [Manage Trust](manage-trust-82dbeca.md).
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+Key Store Password
+
+</td>
+<td valign="top">
+
+`KeyStorePassword` 
+
+</td>
+<td valign="top">
+
+Contains the password for the certificate configuration \(if one is needed\) when using a *per-destination* SAML assertion signing certificate.
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+Token Service Key Store Location
+
+</td>
+<td valign="top">
+
+`tokenService.KeyStoreLocation`
+
+</td>
+<td valign="top">
+
+Contains the name of the certificate configuration to be used for mTLS towards the token service. This property is required when using [OAuth with X.509 Client Certificates](oauth-with-x-509-client-certificates-2c162aa.md).
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+Token Service Key Store Password
+
+</td>
+<td valign="top">
+
+`tokenService.KeyStorePassword`
+
+</td>
+<td valign="top">
+
+Contains the password for the certificate configuration \(if one is needed\) when using [OAuth with X.509 Client Certificates](oauth-with-x-509-client-certificates-2c162aa.md).
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+Skip User Attributes Prefix In SAML Attributes
+
+</td>
+<td valign="top">
+
+`skipUserAttributesPrefixInSAMLAttributes`
+
+</td>
+<td valign="top">
+
+If set to *true*, any additional attributes taken from the OAuth server's user information endpoint, under the *user\_attributes* section, will be added to the assertion without the prefix that the Destination service would usually add to them. For more information, see [User Propagation via SAML 2.0 Bearer Assertion Flow](user-propagation-via-saml-2-0-bearer-assertion-flow-3cb7b81.md).
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+Include Signing Certificate In SAML Assertion
+
+</td>
+<td valign="top">
+
+`includeSigningCertificateInSAMLAssertion`
+
+</td>
+<td valign="top">
+
+If set to *true*, the public part of the signing certificate, used for signing the SAML assertion, will be included in the XML structure of the assertion. Some assertion recipients may require this to accept the assertion.
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+Skip User Uuid In SAML Attributes
+
+</td>
+<td valign="top">
+
+`skipUserUuidInSAMLAttributes`
+
+</td>
+<td valign="top">
+
+If set to *true*, any SAML assertion attribute with name 'user\_uuid' will not be added to the resulting SAML assertion XML, even if such was found in the JWT, specifying the user's identity.
+
+</td>
+</tr>
+<tr>
+<td valign="top" colspan="3">
+
+**Additional**
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+ 
+
+</td>
+<td valign="top">
+
+**Key**
+
+</td>
+<td valign="top">
+
+**Description**
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+ 
+
+</td>
 <td valign="top">
 
 \(Deprecated\) `SystemUser`
@@ -238,52 +582,9 @@ User to be used when requesting an access token from the OAuth authorization ser
 <tr>
 <td valign="top">
 
-`authnContextClassRef`
+ 
 
 </td>
-<td valign="top">
-
-Value of the `AuthnContextClassRef` tag, which is part of generated `OAuth2SAMLBearerAssertion` authentication. For more information, see [SAML 2.0 specification](http://saml.xml.org/saml-specifications).
-
-</td>
-</tr>
-<tr>
-<td valign="top" colspan="2">
-
-**Additional**
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-`SAMLAssertionProvider`
-
-</td>
-<td valign="top">
-
-Specifies how the SAML assertion will be provided to the token service. There are two possible values:
-
--   `DestinationServiceGenerated`: specifies that Destination service will generate the SAML assertion, sign it using the subaccount trust certificate, and pass it to the token service.
--   `ClientProvided`: specifies that the client will provide the SAML assertion externally to the Destination service, and the service will pass it to the token service.
-
-If the property is missing, the Destination service will treat it by default as if the property was set to `DestinationServiceGenerated`.
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-`nameQualifier`
-
-</td>
-<td valign="top">
-
-Security domain of the user for which access token is requested.
-
-</td>
-</tr>
-<tr>
 <td valign="top">
 
 `companyId`
@@ -298,52 +599,9 @@ Company identifier.
 <tr>
 <td valign="top">
 
-`assertionIssuer`
+ 
 
 </td>
-<td valign="top">
-
-Issuer of the SAML assertion.
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-`assertionRecipient`
-
-</td>
-<td valign="top">
-
-Recipient of the SAML assertion. If not set, the token service URL will be the assertion's recipient.
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-`nameIdFormat`
-
-</td>
-<td valign="top">
-
-Value of the `NameIdFormat` tag, which is part of generated `OAuth2SAMLBearerAssertion` authentication. For more information, see [SAML 2.0 specification](http://saml.xml.org/saml-specifications).
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-`userIdSource`
-
-</td>
-<td valign="top">
-
-When this property is set, the generated SAML2 assertion uses the currently logged-in user as a value for the `NameId` tag. See [User Propagation via SAML 2.0 Bearer Assertion Flow](user-propagation-via-saml-2-0-bearer-assertion-flow-3cb7b81.md).
-
-</td>
-</tr>
-<tr>
 <td valign="top">
 
 `scope`
@@ -358,28 +616,9 @@ The value of the OAuth 2.0 scope parameter, expressed as a list of space-delimit
 <tr>
 <td valign="top">
 
-`tokenServiceURLType`
+ 
 
 </td>
-<td valign="top">
-
-Either `Dedicated` \(if the `tokenServiceURL` serves only a single tenant\), or `Common` \(if the `tokenServiceURL` serves multiple tenants\).
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-`tokenServiceURL.ProxyType`
-
-</td>
-<td valign="top">
-
-If set, it will use the specified `ProxyType` for the token service, independent from the `ProxyType` of the whole destination. This lets you configure Internet-based token services for on-premise systems.
-
-</td>
-</tr>
-<tr>
 <td valign="top">
 
 `tokenServiceURL.headers.<header-key>` 
@@ -406,6 +645,11 @@ A static key prefix used as a namespace grouping of the `tokenServiceUrl`'s HTTP
 <tr>
 <td valign="top">
 
+ 
+
+</td>
+<td valign="top">
+
 `tokenServiceURL.ConnectionTimeoutInSeconds`
 
 </td>
@@ -418,6 +662,11 @@ Defines the connection timeout for the token service retrieval. The minimum valu
 <tr>
 <td valign="top">
 
+ 
+
+</td>
+<td valign="top">
+
 `tokenServiceURL.SocketReadTimeoutInSeconds`
 
 </td>
@@ -428,6 +677,11 @@ Defines the read timeout for the token service retrieval. The minimum value allo
 </td>
 </tr>
 <tr>
+<td valign="top">
+
+ 
+
+</td>
 <td valign="top">
 
 `tokenServiceURL.queries.<query-key>` 
@@ -454,6 +708,11 @@ A static key prefix used as a namespace grouping of `tokenServiceUrl`'s query pa
 <tr>
 <td valign="top">
 
+ 
+
+</td>
+<td valign="top">
+
 `tokenService.body.<param-key>`
 
 </td>
@@ -478,28 +737,9 @@ A static key prefix used as a namespace grouping of parameters which are sent as
 <tr>
 <td valign="top">
 
-`tokenService.KeyStoreLocation`
+ 
 
 </td>
-<td valign="top">
-
-Contains the name of the certificate configuration to be used for mTLS towards the token service. This property is required when using [OAuth with X.509 Client Certificates](oauth-with-x-509-client-certificates-2c162aa.md).
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-`tokenService.KeyStorePassword`
-
-</td>
-<td valign="top">
-
-Contains the password for the certificate configuration \(if one is needed\) when using [OAuth with X.509 Client Certificates](oauth-with-x-509-client-certificates-2c162aa.md).
-
-</td>
-</tr>
-<tr>
 <td valign="top">
 
 `URL.headers.<header-key>`
@@ -529,6 +769,11 @@ A static key prefix used as a namespace grouping of the URL's HTTP headers whose
 <tr>
 <td valign="top">
 
+ 
+
+</td>
+<td valign="top">
+
 `URL.queries.<query-key>` 
 
 </td>
@@ -556,6 +801,11 @@ A static key prefix used as a namespace grouping of URL's query parameters whose
 <tr>
 <td valign="top">
 
+ 
+
+</td>
+<td valign="top">
+
 `x_user_token.jwks`
 
 </td>
@@ -570,6 +820,11 @@ For more information, see[JWK Set Format](https://tools.ietf.org/html/rfc7517#se
 <tr>
 <td valign="top">
 
+ 
+
+</td>
+<td valign="top">
+
 `x_user_token.header.typ`
 
 </td>
@@ -582,6 +837,11 @@ If this property is not provided, the Destination service will default to value 
 </td>
 </tr>
 <tr>
+<td valign="top">
+
+ 
+
+</td>
 <td valign="top">
 
 `x_user_token.jwks_uri` 
@@ -601,36 +861,27 @@ For more information, see [OpenID Connect Discovery](https://openid.net/specs/op
 <tr>
 <td valign="top">
 
-`skipUserAttributesPrefixInSAMLAttributes`
+ 
 
 </td>
 <td valign="top">
 
-If set to true, any additional attributes taken from the OAuth server's user information endpoint, under the *user\_attributes* section, will be added to the assertion without the prefix that the Destination service would usually add to them. For more information, see [User Propagation via SAML 2.0 Bearer Assertion Flow](user-propagation-via-saml-2-0-bearer-assertion-flow-3cb7b81.md).
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-`includeSigningCertificateInSAMLAssertion`
+`samlAssertionEncoding`
 
 </td>
 <td valign="top">
 
-If set to true, the public part of the signing certificate, used for signing the SAML assertion, will be included in the XML structure of the assertion. Some assertion recipients may require this to accept the assertion.
+If set, this property controls what encoding will be used to encode the assertion XML prior to sending it to the configured token service. The possible values are "base64" \([RFC 4648, section 4](https://datatracker.ietf.org/doc/html/rfc4648#section-4)\) and "base64url" \([RFC 4648, section 5](https://datatracker.ietf.org/doc/html/rfc4648#section-5)\). If not set, the encoding will be based on the default value of this property \(see below\).
 
-</td>
-</tr>
-<tr>
-<td valign="top">
+Default value:
 
-`skipUserUuidInSAMLAttributes`
+> ### Note:  
+> The exact release date depends on your specific region.
 
-</td>
-<td valign="top">
+-   *Prior to* the *calendar week 24 2026 release* \(8th of June to 11th of June\) - "base64"
+-   *After* the *calendar week 24 2026 release* \(8th of June to 11th of June\) - "base64url"
 
-If set to true, any SAML assertion attribute with name 'user\_uuid' will not be added to the resulting SAML assertion XML, even if such was found in the JWT, specifying the user's identity.
+
 
 </td>
 </tr>

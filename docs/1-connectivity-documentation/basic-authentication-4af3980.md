@@ -4,22 +4,13 @@
 
 Create and configure a *Basic Authentication* destination for an application.
 
-Authentication type *Basic Authentication* is used for destinations that refer to a service on the Internet, an on-premise system, or a *Private Link* endpoint that requires basic authentication. The relevant property value is:
-
-
-<table>
-<tr>
-<td valign="top">
-
-`Authentication`=`BasicAuthentication`
-
-</td>
-</tr>
-</table>
+Authentication type *Basic Authentication* is used for destinations that refer to a service on the Internet, an on-premise system, or a *Private Link* endpoint that requires basic authentication.
 
 
 
-The following credentials must be specified:
+## Properties
+
+To configure a destination of this authentication type, you must specify all the required properties.
 
 > ### Caution:  
 > Do not use your *own personal credentials* in the *<User\>* and *<Password\>* fields. Always use a *technical user* instead.
@@ -29,7 +20,12 @@ The following credentials must be specified:
 <tr>
 <th valign="top">
 
-Property
+Cockpit Label
+
+</th>
+<th valign="top">
+
+JSON Key
 
 </th>
 <th valign="top">
@@ -39,6 +35,108 @@ Description
 </th>
 </tr>
 <tr>
+<td valign="top" colspan="2">
+
+**Required**
+
+</td>
+<td valign="top">
+
+ 
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+Name
+
+</td>
+<td valign="top">
+
+`Name`
+
+</td>
+<td valign="top">
+
+Destination name. Must be unique for the destination level.
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+Type
+
+</td>
+<td valign="top">
+
+`Type`
+
+</td>
+<td valign="top">
+
+Destination type. Use `HTTP` as value for all HTTP\(S\) destinations.
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+URL
+
+</td>
+<td valign="top">
+
+`URL`
+
+</td>
+<td valign="top">
+
+URL of the protected resource on the called application.
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+Proxy Type
+
+</td>
+<td valign="top">
+
+`ProxyType`
+
+</td>
+<td valign="top">
+
+`Internet`, `OnPremise`, or `PrivateLink`.
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+Authentication
+
+</td>
+<td valign="top">
+
+`Authentication`
+
+</td>
+<td valign="top">
+
+Authentication type. Use `BasicAuthentication` as value.
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+User
+
+</td>
 <td valign="top">
 
 `User` 
@@ -46,11 +144,16 @@ Description
 </td>
 <td valign="top">
 
-User name of the technical user to be used.
+User name of the *technical* user to be used.
 
 </td>
 </tr>
 <tr>
+<td valign="top">
+
+Password
+
+</td>
 <td valign="top">
 
 `Password` 
@@ -58,14 +161,43 @@ User name of the technical user to be used.
 </td>
 <td valign="top">
 
-Password of the technical user to be used.
+Password of the *technical* user to be used.
+
+</td>
+</tr>
+<tr>
+<td valign="top" colspan="3">
+
+**Additional**
 
 </td>
 </tr>
 <tr>
 <td valign="top">
 
-`Preemptive` 
+ 
+
+</td>
+<td valign="top">
+
+**Key**
+
+</td>
+<td valign="top">
+
+**Description**
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+
+
+</td>
+<td valign="top">
+
+`Preemptive`
 
 </td>
 <td valign="top">
@@ -87,14 +219,14 @@ The response for "find a destination" contains an `authTokens` object in the for
 > ### Sample Code:  
 > ```
 > "authTokens": [
->     {
->         "type": "Basic",
->         "value": "dGVzdDpwYXNzMTIzNDU=",
->         "http_header": {
->             "key":"Authorization",
->             "value":"Basic dGVzdDpwYXNzMTIzNDU="
->         }
->     }
-> ]
+> 						{
+> 						"type": "Basic",
+> 						"value": "dGVzdDpwYXNzMTIzNDU=",
+> 						"http_header": {
+> 						"key":"Authorization",
+> 						"value":"Basic dGVzdDpwYXNzMTIzNDU="
+> 						}
+> 						}
+> 						]
 > ```
 

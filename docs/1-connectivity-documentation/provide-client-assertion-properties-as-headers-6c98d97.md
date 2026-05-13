@@ -4,7 +4,13 @@
 
 Provide client assertion properties as headers when using client assertion with OAuth flows for a destination.
 
-You can provide the following headers to use client assertion authentication:
+
+
+## Properties
+
+To configure a destination of this authentication type, you must specify all the required properties.
+
+**Additional Properties**
 
 
 <table>
@@ -19,11 +25,6 @@ Header
 Value
 
 </th>
-<th valign="top">
-
-Description
-
-</th>
 </tr>
 <tr>
 <td valign="top">
@@ -34,18 +35,6 @@ Description
 <td valign="top">
 
 Absolute URI
-
-</td>
-<td valign="top">
-
-Format of the assertion as defined by the authorization server. The value is an absolute URI. A URN of the form *urn:ietf:params:oauth:client-assertion-type:\** is suggested.
-
-Examples:
-
--   "urn:ietf:params:oauth:client-assertion-type:saml2-bearer" =\> indicating a SAML Bearer assertion.
--   "urn:ietf:params:oauth:client-assertion-type:jwt-bearer" =\> indicating a JWT Bearer token.
-
-
 
 </td>
 </tr>
@@ -60,36 +49,10 @@ Examples:
 Token
 
 </td>
-<td valign="top">
-
-Assertion being used to authenticate the client.
-
-</td>
 </tr>
 </table>
 
-
-
-<a name="loio6c98d97155434f94a47597c04ab37737__section_hmw_c1l_cxb"/>
-
-## Example: Destination for an OAuth Service Accepting Client Assertion instead of Client Secret
-
-> ### Sample Code:  
-> ```
-> Name=sap_Destination
-> Type=HTTP
-> URL= https://xxxx.example.com
-> ProxyType=Internet
-> Authentication=OAuth2ClientCredentials
-> clientId=clientId
-> tokenServiceURL=https://authserver.example.com/oauth/token/
-> ```
-
-
-
-<a name="loio6c98d97155434f94a47597c04ab37737__section_uwj_c1l_cxb"/>
-
-## Example: Client Assertion Properties as Headers
+**Example of Client Assertion Properties as Headers**
 
 To use the client assertion mechanism in the *Find Destination* API, you must add two mandatory headers as shown in the following example:
 

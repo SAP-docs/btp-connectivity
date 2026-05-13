@@ -34,17 +34,19 @@ Back to [Content](oauth-password-authentication-452357c.md#loio452357cdd82a4c0ba
 
 ## Properties
 
-The table below lists the destination properties needed for the OAuth2Password authentication type.
-
-> ### Caution:  
-> Do not use your *own personal credentials* in the *<User\>* and *<Password\>* fields. Always use a *technical user* instead.
+To configure a destination of this authentication type, you must specify all the required properties.
 
 
 <table>
 <tr>
 <th valign="top">
 
-Property
+Cockpit Label
+
+</th>
+<th valign="top">
+
+JSON Key
 
 </th>
 <th valign="top">
@@ -54,13 +56,18 @@ Description
 </th>
 </tr>
 <tr>
-<td valign="top" colspan="2">
+<td valign="top" colspan="3">
 
 **Required**
 
 </td>
 </tr>
 <tr>
+<td valign="top">
+
+Name
+
+</td>
 <td valign="top">
 
 `Name`
@@ -75,6 +82,11 @@ Destination name. It must be the same as the destination name you use for the co
 <tr>
 <td valign="top">
 
+Type
+
+</td>
+<td valign="top">
+
 `Type`
 
 </td>
@@ -85,6 +97,11 @@ Destination type. Choose `HTTP` \(for HTTP or HTTPS communication\).
 </td>
 </tr>
 <tr>
+<td valign="top">
+
+URL
+
+</td>
 <td valign="top">
 
 `URL`
@@ -99,6 +116,11 @@ URL of the protected resource being accessed.
 <tr>
 <td valign="top">
 
+Proxy Type
+
+</td>
+<td valign="top">
+
 `ProxyType`
 
 </td>
@@ -109,6 +131,11 @@ You can only use proxy type `Internet` or `OnPremise`. If `OnPremise` is used, t
 </td>
 </tr>
 <tr>
+<td valign="top">
+
+Authentication
+
+</td>
 <td valign="top">
 
 `Authentication`
@@ -123,6 +150,11 @@ Authentication type. Use `OAuth2Password` as value.
 <tr>
 <td valign="top">
 
+Client ID
+
+</td>
+<td valign="top">
+
 `clientId`
 
 </td>
@@ -135,16 +167,9 @@ Client ID used to retrieve the access token.
 <tr>
 <td valign="top">
 
-`clientSecret`
+User
 
 </td>
-<td valign="top">
-
-Client secret for the client ID.
-
-</td>
-</tr>
-<tr>
 <td valign="top">
 
 `User`
@@ -159,6 +184,11 @@ User name of the technical user trying to get a token.
 <tr>
 <td valign="top">
 
+Password
+
+</td>
+<td valign="top">
+
 `Password`
 
 </td>
@@ -171,6 +201,11 @@ Password of the technical user trying to get a token.
 <tr>
 <td valign="top">
 
+Token Service URL
+
+</td>
+<td valign="top">
+
 `tokenServiceURL`
 
 </td>
@@ -181,13 +216,110 @@ Token retrieval URL of the OAuth server.
 </td>
 </tr>
 <tr>
-<td valign="top" colspan="2">
+<td valign="top" colspan="3">
+
+**Optional**
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+Client Secret
+
+</td>
+<td valign="top">
+
+`clientSecret`
+
+</td>
+<td valign="top">
+
+Client secret for the client ID.
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+Token Service URL Proxy Type
+
+</td>
+<td valign="top">
+
+`tokenServiceURL.ProxyType`
+
+</td>
+<td valign="top">
+
+If set, it will use the specified `ProxyType` for the token service, independent from the `ProxyType` of the whole destination. This lets you configure Internet-based token services for on-premise systems.
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+Token Service Key Store Location
+
+</td>
+<td valign="top">
+
+`tokenService.KeyStoreLocation` 
+
+</td>
+<td valign="top">
+
+Contains the name of the certificate configuration to be used. This property is required when using client certificates for authentication. See [OAuth with X.509 Client Certificates](oauth-with-x-509-client-certificates-2c162aa.md).
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+Token Service Key Store Password
+
+</td>
+<td valign="top">
+
+`tokenService.KeyStorePassword`
+
+</td>
+<td valign="top">
+
+Contains the password for the certificate configuration \(if one is needed\) when using client certificates for authentication. See [OAuth with X.509 Client Certificates](oauth-with-x-509-client-certificates-2c162aa.md).
+
+</td>
+</tr>
+<tr>
+<td valign="top" colspan="3">
 
 **Additional**
 
 </td>
 </tr>
 <tr>
+<td valign="top">
+
+ 
+
+</td>
+<td valign="top">
+
+**Key**
+
+</td>
+<td valign="top">
+
+**Description**
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+ 
+
+</td>
 <td valign="top">
 
 `scope`
@@ -202,16 +334,9 @@ Value of the OAuth 2.0 `scope` parameter, expressed as a list of space-delimited
 <tr>
 <td valign="top">
 
-`tokenServiceURL.ProxyType`
+ 
 
 </td>
-<td valign="top">
-
-If set, it will use the specified `ProxyType` for the token service, independent from the `ProxyType` of the whole destination. This lets you configure Internet-based token services for on-premise systems.
-
-</td>
-</tr>
-<tr>
 <td valign="top">
 
 `tokenServiceURL.headers.<header-key>` 
@@ -238,6 +363,11 @@ Static key prefix used as a namespace grouping of the `tokenServiceUrl`'s HTTP h
 <tr>
 <td valign="top">
 
+ 
+
+</td>
+<td valign="top">
+
 `tokenServiceURL.ConnectionTimeoutInSeconds`
 
 </td>
@@ -250,6 +380,11 @@ Defines the connection timeout for the token service retrieval. The minimum valu
 <tr>
 <td valign="top">
 
+ 
+
+</td>
+<td valign="top">
+
 `tokenServiceURL.SocketReadTimeoutInSeconds`
 
 </td>
@@ -260,6 +395,11 @@ Defines the read timeout for the token service retrieval. The minimum value allo
 </td>
 </tr>
 <tr>
+<td valign="top">
+
+ 
+
+</td>
 <td valign="top">
 
 `tokenServiceURL.queries.<query-key>` 
@@ -286,6 +426,11 @@ Static key prefix used as a namespace grouping of `tokenServiceUrl`'s query para
 <tr>
 <td valign="top">
 
+ 
+
+</td>
+<td valign="top">
+
 `tokenService.body.<param-key>`
 
 </td>
@@ -310,28 +455,9 @@ A static key prefix used as a namespace grouping of parameters which are sent as
 <tr>
 <td valign="top">
 
-`tokenService.KeyStoreLocation` 
+ 
 
 </td>
-<td valign="top">
-
-Contains the name of the certificate configuration to be used. This property is required when using client certificates for authentication. See [OAuth with X.509 Client Certificates](oauth-with-x-509-client-certificates-2c162aa.md).
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-`tokenService.KeyStorePassword`
-
-</td>
-<td valign="top">
-
-Contains the password for the certificate configuration \(if one is needed\) when using client certificates for authentication. See [OAuth with X.509 Client Certificates](oauth-with-x-509-client-certificates-2c162aa.md).
-
-</td>
-</tr>
-<tr>
 <td valign="top">
 
 `tokenService.addClientCredentialsInBody` 
@@ -346,6 +472,11 @@ Specifies whether the client credentials should be placed in the request body of
 <tr>
 <td valign="top">
 
+ 
+
+</td>
+<td valign="top">
+
 `clientAssertion.destinationName`
 
 </td>
@@ -358,6 +489,11 @@ For more information, see [Client Assertion with Automated Assertion Fetching by
 </td>
 </tr>
 <tr>
+<td valign="top">
+
+ 
+
+</td>
 <td valign="top">
 
 `URL.headers.<header-key>`
@@ -387,6 +523,11 @@ Static key prefix used as a namespace grouping of the URL's HTTP headers whose v
 <tr>
 <td valign="top">
 
+ 
+
+</td>
+<td valign="top">
+
 `URL.queries.<query-key>` 
 
 </td>
@@ -412,9 +553,6 @@ Static key prefix used as a namespace grouping of URL's query parameters whose v
 </td>
 </tr>
 </table>
-
-> ### Note:  
-> When the OAuth server is called, the caller side trusts the server based on the trust settings of the destination. For more information, see [Server Certificate Authentication](server-certificate-authentication-e75d7f1.md).
 
 Back to [Content](oauth-password-authentication-452357c.md#loio452357cdd82a4c0ba6095b36c0057526__content)
 

@@ -4,30 +4,22 @@
 
 Create and configure a *Client Certificate* destination for an application.
 
-This authentication type is used for destinations that refer to a service on the Internet or a *Private Link* endpoint. The relevant property value is:
-
-
-<table>
-<tr>
-<td valign="top">
-
-`Authentication`=`ClientCertificateAuthentication`
-
-</td>
-</tr>
-</table>
-
 > ### Caution:  
 > In the cockpit, this authentication type is shown in the selection list only if you have entered a URL that starts with `https://`.
 
-The following credentials must be specified:
+To configure a destination of this authentication type, you must specify all the required properties.
 
 
 <table>
 <tr>
 <th valign="top">
 
-Property
+Cockpit Label
+
+</th>
+<th valign="top">
+
+JSON Key
 
 </th>
 <th valign="top">
@@ -37,6 +29,110 @@ Description
 </th>
 </tr>
 <tr>
+<td valign="top" colspan="3">
+
+**Required**
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+Name
+
+</td>
+<td valign="top">
+
+`Name`
+
+</td>
+<td valign="top">
+
+Destination name. Must be unique for the destination level.
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+Type
+
+</td>
+<td valign="top">
+
+`Type`
+
+</td>
+<td valign="top">
+
+Destination type. Use `HTTP` as value for all HTTP\(S\) destinations.
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+URL
+
+</td>
+<td valign="top">
+
+`URL`
+
+</td>
+<td valign="top">
+
+URL of the target endpoint.
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+Proxy Type
+
+</td>
+<td valign="top">
+
+`ProxyType`
+
+</td>
+<td valign="top">
+
+`Internet`, `OnPremise`, or `PrivateLink`.
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+Authentication
+
+</td>
+<td valign="top">
+
+`Authentication`
+
+</td>
+<td valign="top">
+
+Authentication type. Use `ClientCertificateAuthentication` as value.
+
+</td>
+</tr>
+<tr>
+<td valign="top" colspan="3">
+
+**Optional**
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+Key Store Source
+
+</td>
 <td valign="top">
 
 `KeyStore.Source`
@@ -56,6 +152,11 @@ If the property is not set, the key store is managed by the Destination service 
 <tr>
 <td valign="top">
 
+Key Store Location
+
+</td>
+<td valign="top">
+
 `KeyStoreLocation` 
 
 </td>
@@ -68,12 +169,61 @@ The name of the key store file that contains the client certificate\(s\) for cli
 <tr>
 <td valign="top">
 
+Key Store Password
+
+</td>
+<td valign="top">
+
 `KeyStorePassword` 
 
 </td>
 <td valign="top">
 
-Password for the key store file specified by `KeyStoreLocation`. This property is optional if `KeyStoreLocation` is used in combination with `KeyStore.Source`, and `KeyStore.Source` is set to `ClientProvided`.
+Password for the key store file specified by `KeyStoreLocation`. Can be set empty.
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+Trust Store Location
+
+</td>
+<td valign="top">
+
+`TrustStoreLocation` 
+
+</td>
+<td valign="top">
+
+Path to the keystore file which contains trusted certificates \(Certificate Authorities\) for authentication against a remote client.
+
+-   When using a local environment: The relative path to the JKS file. The root path is the server's location on the file system.
+-   When using a cloud environment: The name of the JKS file.
+
+Only shown and required if the default clilent trust store is not used.
+
+> ### Note:  
+> The default JDK truststore is appended to the truststore defined in the destination configuration. As a result, the destination simultaneously uses both truststores. If the `TrustStoreLocation` property is not specified, the JDK truststore is used as a default truststore for the destination.
+
+
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+Trust Store Password
+
+</td>
+<td valign="top">
+
+`TrustStorePassword` 
+
+</td>
+<td valign="top">
+
+Only shown if the default clilent trust store is not used. Can be set empty.
 
 </td>
 </tr>

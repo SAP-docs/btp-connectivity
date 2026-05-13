@@ -15,12 +15,12 @@ In the *Destinations* editor, you can configure the user logon properties for a 
 <tr>
 <th valign="top">
 
-Label in Destinations Editor
+Cockpit Label
 
 </th>
 <th valign="top">
 
-Property
+JSON Key
 
 </th>
 <th valign="top">
@@ -30,19 +30,40 @@ Description
 </th>
 </tr>
 <tr>
+<td valign="top" colspan="3">
+
+**Required** \(depending on the authentication type and the chosen credentials\)
+
+</td>
+</tr>
+<tr>
 <td valign="top">
 
-Logon Language
+Authentication Type
 
 </td>
 <td valign="top">
 
-`jco.client.lang`
+`jco.destination.auth_type`
 
 </td>
 <td valign="top">
 
-Optional property. Represents the logon language. If the property is not provided, the user's or system's default language is used. Valid values are two-character ISO language codes or one-character SAP language codes.
+> ### Note:  
+> SAP BTP supports the propagation of business users \(principal propagation\) and technical users from the cloud application towards on-premise systems.
+> 
+> In both cases, a specific access token representing the business user or technical user is retrieved in the RFC runtime \(for example, in JCo or SAP BTP ABAP environment\), which can then be sent to the Connectivity service.
+> 
+> For more information, see [Authenticating Users against On-Premises Systems](authenticating-users-against-on-premises-systems-b643fbe.md).
+
+-   If the property is not provided in a file, its default value `CONFIGURED_USER` is used. In this case, you must specify *user*, *password*, or other credentials directly.
+-   To enable single sign-on via principal propagation \(an access token representing the business user logged on in the cloud application is forwarded to the on-premise system\), set the value to `PrincipalPropagation`. In this case, you do not need to provide `jco.client.user` and `jco.client.passwd` in the configuration.
+-   To enable technical user propagation \(an access token representing the technical user is forwarded to the on-premise system\), set the value to `TechnicalUserPropagation`. In this case, you do not need to provide `jco.client.user` and `jco.client.passwd` in the configuration.
+
+> ### Note:  
+> For `PrincipalPropagation`, we recommend that you do not use the *RepositoryDefaultCredentials*, since there are special permissions needed \(for metadata lookup in the backend\) that not all business application users might have.
+
+
 
 </td>
 </tr>
@@ -190,37 +211,6 @@ The password for the key store file specified via `KeyStoreLocation`.
 <tr>
 <td valign="top">
 
-Authorization Type
-
-</td>
-<td valign="top">
-
-`jco.destination.auth_type`
-
-</td>
-<td valign="top">
-
-> ### Note:  
-> SAP BTP supports the propagation of business users \(principal propagation\) and technical users from the cloud application towards on-premise systems.
-> 
-> In both cases, a specific access token representing the business user or technical user is retrieved in the RFC runtime \(for example, in JCo or SAP BTP ABAP environment\), which can then be sent to the Connectivity service.
-> 
-> For more information, see [Authenticating Users against On-Premises Systems](authenticating-users-against-on-premises-systems-b643fbe.md).
-
--   If the property is not provided in a file, its default value `CONFIGURED_USER` is used. In this case, you must specify *user*, *password*, or other credentials directly.
--   To enable single sign-on via principal propagation \(an access token representing the business user logged on in the cloud application is forwarded to the on-premise system\), set the value to `PrincipalPropagation`. In this case, you do not need to provide `jco.client.user` and `jco.client.passwd` in the configuration.
--   To enable technical user propagation \(an access token representing the technical user is forwarded to the on-premise system\), set the value to `TechnicalUserPropagation`. In this case, you do not need to provide `jco.client.user` and `jco.client.passwd` in the configuration.
-
-> ### Note:  
-> For `PrincipalPropagation`, we recommend that you do not use the *RepositoryDefaultCredentials*, since there are special permissions needed \(for metadata lookup in the backend\) that not all business application users might have.
-
-
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
 Client ID
 
 </td>
@@ -279,6 +269,30 @@ Mandatory when setting *Authorization Type*/`jco.destination.auth_type` to `Tech
 When using the Authorization and Trust Management service \(xsuaa\) as token service for *Technical User Propagation*, the URL should follow this example:
 
 `https://{tenant}.authentication.us10.hana.ondemand.com/oauth/token → https://mytenant.authentication.us10.hana.ondemand.com/oauth/token`
+
+</td>
+</tr>
+<tr>
+<td valign="top" colspan="3">
+
+**Optional**
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+Logon Language
+
+</td>
+<td valign="top">
+
+`jco.client.lang`
+
+</td>
+<td valign="top">
+
+Optional property. Represents the logon language. If the property is not provided, the user's or system's default language is used. Valid values are two-character ISO language codes or one-character SAP language codes.
 
 </td>
 </tr>

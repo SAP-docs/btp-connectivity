@@ -120,8 +120,8 @@ Back to [Steps](saml-bearer-assertion-flow-between-cloud-foundry-applications-8e
     > ### Sample Code:  
     > ```
     > <ns3:EntityDescriptor
-    >     ID="cfapps.${S1_LANDSCAPE_DOMAIN}/${S1_SUBACCOUNT_ID}"
-    >     entityID="cfapps.${S1_LANDSCAPE_DOMAIN}/${S1_SUBACCOUNT_ID}"
+    >     ID="cfapps.${S1_LANDSCAPE_HOST}/${S1_SUBACCOUNT_ID}"
+    >     entityID="cfapps.${S1_LANDSCAPE_HOST}/${S1_SUBACCOUNT_ID}"
     >     xmlns="http://www.w3.org/2000/09/xmldsig#"
     >     xmlns:ns2="http://www.w3.org/2001/04/xmlenc#"
     >     xmlns:ns4="urn:oasis:names:tc:SAML:2.0:assertion"
@@ -151,7 +151,9 @@ Back to [Steps](saml-bearer-assertion-flow-between-cloud-foundry-applications-8e
     >                     </X509Certificate>
     >                 </X509Data>
     >             </KeyInfo>
-    >         </ns3:KeyDescriptor>
+    > 			<!-- This is not used, but its needed to have a valid SAML metadata -->
+    > 			<ns3:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://sap.com"/>
+    >         </ns3:KeyDescriptor>
     >     </ns3:IDPSSODescriptor>
     > </ns3:EntityDescriptor>
     > ```

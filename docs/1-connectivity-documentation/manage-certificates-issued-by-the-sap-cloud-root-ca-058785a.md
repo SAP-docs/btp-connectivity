@@ -14,7 +14,10 @@ You have an SAP BTP subaccount. There are no specific requirements for the subac
 
 ## Steps
 
-**Getting Access to the API**
+> ### Note:  
+> Each step is marked with "API", "UI" or "API and UI", to indicate for which administration scenario it is relevant.
+
+**API: Getting Access to the API**
 
 1.  First, you need a service instance of the Destination service with service plan lite. You can do this in a Cloud Foundry space \(using the cockpit or the Cloud Foundry CLI\), or directly in the subaccount \(the so called "Other Environment", using the cockpit or the BTP CLI\), or in Kubernetes/Kyma \(using the SAP BTP service operator\).
 2.  Create a binding and service key for the instance. We recommend that you use x509 bindings, but for quick tests you can also take client secrets \(which is the default\).
@@ -35,7 +38,14 @@ You have an SAP BTP subaccount. There are no specific requirements for the subac
 
 For more information, see also [Calling the Destination Service REST API](calling-the-destination-service-rest-api-84c5d38.md).
 
-**Generating a Private Key and a CSR**
+**UI: Navigate to the Destination Certificates UI**
+
+1.  Open your subaccount in the SAP BTP cockpit.
+2.  Select *Destination Certificates* from the left panel \(subaccount menu\).
+
+For more information, see [Manage Destination Certificates](manage-destination-certificates-df1bb55.md).
+
+**API and UI: Generating a Private Key and a CSR**
 
 1.  We will use *openssl* for the purposes of the example to get the CSR, signed by a newly generated private key.
 2.  Execute:
@@ -61,7 +71,7 @@ For more information, see also [Calling the Destination Service REST API](callin
 
 5.  We will use the output of this command later.
 
-**Call the Destination Service REST API to Generate the Certificate**
+**API: Call the Destination Service REST API to Generate the Certificate**
 
 1.  Execute:
 
@@ -96,25 +106,42 @@ For more information, see also [Calling the Destination Service REST API](callin
 
 For more information, see also [SAP Business Accelerator Hub](https://api.sap.com/api/SAP_CP_CF_Connectivity_Destination/resource/post_v1_subaccountCertificates).
 
-**Fetch your Newly Generated Certificate**
+**UI: Use the *Destination Certificates* Screen to Generate the Certificate** 
 
-We will show here the corresponding REST API method.
+1.  On the *Destination Certificates* screen, choose the *Create* button to generate a new certificate.
+2.  Specify `Name`, `CN`, expiration, renewal and format details.
+3.  Use the *Certificate Signing Request* file upload option to select your local CSR file \(*genExample.csr*\).
 
-1.  Execute:
+    ![](images/CS_Root_CA_-_Generate_Certificate_42cc1cb.png)
 
-    > ### Sample Code:  
-    > ```
-    > curl --request GET \
-    >     --url "${uri}/destination-configuration/v1/subaccountCertificates/example.pem" \
-    >     --header "Authorization: Bearer ${token}"
-    > ```
+4.  Choose *Create* to generate the certificate.
 
-2.  You will find the needed value in the `Content` field of the response JSON.
-3.  Base64-decode the value of this field and you will get the certificate chain.
+**API and UI: Fetch your Newly Generated Certificate**
 
-For more information, see also:
+-   Via REST API
 
-[SAP Business Accelerator Hub](https://api.sap.com/api/SAP_CP_CF_Connectivity_Destination/resource/get_v1_subaccountCertificates__certificate_name_) \(REST API\)
+    1.  Execute:
 
-[Manage Destination Certificates](manage-destination-certificates-df1bb55.md) \(cockpit\)
+        > ### Sample Code:  
+        > ```
+        > curl --request GET \
+        >     --url "${uri}/destination-configuration/v1/subaccountCertificates/example.pem" \
+        >     --header "Authorization: Bearer ${token}"
+        > ```
+
+    2.  You will find the needed value in the `Content` field of the response JSON.
+    3.  Base64-decode the value of this field and you will get the certificate chain.
+
+    For more information, see also [SAP Business Accelerator Hub](https://api.sap.com/api/SAP_CP_CF_Connectivity_Destination/resource/get_v1_subaccountCertificates__certificate_name_) \(REST API\).
+
+
+-   Via UI:
+
+    1.  On the *Destination Certificates* screen, select the generated certificate.
+    2.  Choose the main *Export* button to get the whole chain \(green arrow\) or the *Export* button on the individual nodes to get only one of the certificates in the chain \(red arrows\).
+
+    ![](images/CS_Root_CA_-_Fetch_Certificate_24875c1.png)
+
+    For more information, see also [Manage Destination Certificates](manage-destination-certificates-df1bb55.md) \(cockpit\).
+
 

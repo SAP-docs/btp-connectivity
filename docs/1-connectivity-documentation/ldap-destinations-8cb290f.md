@@ -12,7 +12,12 @@ Find information about LDAP destinations for on-premise connections from an SAP 
 <tr>
 <th valign="top">
 
-Property
+Cockpit Label
+
+</th>
+<th valign="top">
+
+JSON Key
 
 </th>
 <th valign="top">
@@ -22,7 +27,7 @@ Description
 </th>
 </tr>
 <tr>
-<td valign="top" colspan="2">
+<td valign="top" colspan="3">
 
 **Required**
 
@@ -32,6 +37,11 @@ Description
 <td valign="top">
 
 Name
+
+</td>
+<td valign="top">
+
+`Name`
 
 </td>
 <td valign="top">
@@ -48,6 +58,11 @@ Type
 </td>
 <td valign="top">
 
+`Type`
+
+</td>
+<td valign="top">
+
 Choose `LDAP`.
 
 </td>
@@ -56,6 +71,11 @@ Choose `LDAP`.
 <td valign="top">
 
 URL
+
+</td>
+<td valign="top">
+
+`ldap.url`
 
 </td>
 <td valign="top">
@@ -72,6 +92,11 @@ Proxy Type
 </td>
 <td valign="top">
 
+`ldap.proxyType` 
+
+</td>
+<td valign="top">
+
 `OnPremise` 
 
 </td>
@@ -84,12 +109,17 @@ Authentication
 </td>
 <td valign="top">
 
+`ldap.authentication`
+
+</td>
+<td valign="top">
+
 `NoAuthentication` or `BasicAuthentication` 
 
 </td>
 </tr>
 <tr>
-<td valign="top" colspan="2">
+<td valign="top" colspan="3">
 
 **Optional**
 
@@ -103,6 +133,11 @@ Description
 </td>
 <td valign="top">
 
+`Description`
+
+</td>
+<td valign="top">
+
 Free text describing the LDAP destination.
 
 </td>
@@ -111,6 +146,11 @@ Free text describing the LDAP destination.
 <td valign="top">
 
 Location ID
+
+</td>
+<td valign="top">
+
+`CloudConnectorLocationId` 
 
 </td>
 <td valign="top">
