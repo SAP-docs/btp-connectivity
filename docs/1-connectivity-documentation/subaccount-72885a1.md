@@ -27,8 +27,6 @@ Manage the Cloud Connector's subaccount settings via API.
 
 [Get Subaccounts](subaccount-72885a1.md#loio72885a1eee784790a8c8d07538051134__getSubs)
 
-[Get Corrupted Subaccounts](subaccount-72885a1.md#loio72885a1eee784790a8c8d07538051134__getCorrSubs)
-
 [Create Subaccount \(Master Only\)](subaccount-72885a1.md#loio72885a1eee784790a8c8d07538051134__createSub) 
 
 [Delete Subaccount \(Master Only\)](subaccount-72885a1.md#loio72885a1eee784790a8c8d07538051134__deleteSub) 
