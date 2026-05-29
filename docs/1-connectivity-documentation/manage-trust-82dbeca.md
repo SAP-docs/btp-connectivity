@@ -21,6 +21,16 @@ For more information, see [User Roles](user-roles-b922fc8.md).
 
 
 
+## Choose a Context Level
+
+In most cases, trust will be configured for the subaccount itself. This is the default *Context Level* when opening the *Destination Trust* screen in the cockpit.
+
+If you have connected [Edge Integration Cell\(s\)](https://help.sap.com/docs/integration-suite/sap-integration-suite/what-is-sap-integration-suite-edge-integration-cell?version=CLOUD) to your subaccount, you will also see them listed in the *Integrations* section of the available context levels. This lets you manage specific SAML configurations for each of them.
+
+![](images/CS_Set_Up_Trust_Between_Systems_-_Context_Level_94e06cc.png)
+
+
+
 <a name="loio82dbecae3454493782d16a79e30f1a6d__setup_cert"/>
 
 ## Set Up a Certificate
