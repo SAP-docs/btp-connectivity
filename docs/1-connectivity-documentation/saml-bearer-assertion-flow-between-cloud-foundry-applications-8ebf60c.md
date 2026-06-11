@@ -151,8 +151,7 @@ Back to [Steps](saml-bearer-assertion-flow-between-cloud-foundry-applications-8e
     >                     </X509Certificate>
     >                 </X509Data>
     >             </KeyInfo>
-    > 			<!-- This is not used, but its needed to have a valid SAML metadata -->
-    > 			<ns3:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://sap.com"/>
+    >             <ns3:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://sap.com"/>
     >         </ns3:KeyDescriptor>
     >     </ns3:IDPSSODescriptor>
     > </ns3:EntityDescriptor>
