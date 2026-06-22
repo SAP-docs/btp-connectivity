@@ -293,7 +293,7 @@ SapMachine 64-bit
 </td>
 <td valign="top">
 
-2.15.0 and higher
+2.15.0 up to 2.19.x
 
 </td>
 </tr>

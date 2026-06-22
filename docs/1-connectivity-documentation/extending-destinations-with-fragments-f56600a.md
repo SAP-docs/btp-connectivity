@@ -2,7 +2,7 @@
 
 # Extending Destinations with Fragments
 
-Use the “Find Destination” API to extend your destination with a destination fragment.
+Use the “Find Destination” API to extend your destination with one or more destination fragments.
 
 
 
@@ -69,6 +69,8 @@ Find below some common use cases for destination fragments:
 This extension involves merging the JSON object of the destination properties, together with the JSON object of the fragment properties.
 
 > ### Note:  
+> If one or more fragments were found and applied to the requested destination, the resulting destination properties will include `FragmentName`, containing a comma-separated list of all applied fragments.
+> 
 > If any fragment property uses the same key name as a destination property, the combined JSON object will use the value of the fragment property.
 > 
 > The combined JSON of the destination and fragment will be returned in the response body as the value of the “destinationConfiguration” property. Additionally, this combined JSON will be used for retrieving tokens from authorization servers, if applicable.
@@ -80,8 +82,8 @@ This extension involves merging the JSON object of the destination properties, t
 
 To apply this mechanism, you must use the following configurations:
 
--   A Destination – with any properties
--   A Destination Fragment – with any properties
+-   A destination – with any properties
+-   One or more destination fragments – with any properties
 
 > ### Note:  
 > For more information on how to create and manage resources like destinations and destination fragments, see [SAP Business Accelerator Hub](https://api.sap.com/package/scpconnectivity/rest).
@@ -119,12 +121,29 @@ X-Fragment-Name
 </td>
 <td valign="top">
 
-Name of a destination fragment
+Names of the destination fragments
 
 </td>
 <td valign="top">
 
-Name of the destination fragment. The fragment itself must be maintained on the same level as the destination.
+The names of the destination fragment as a comma-separated list. The fragments themselves must be maintained on the same level as the destination.
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+X-Fragment-Optional
+
+</td>
+<td valign="top">
+
+true/false
+
+</td>
+<td valign="top">
+
+To mark a destination fragment provided with the `X-Fragment-Name` as optional, you can use the header `X-Fragment-Optional`. If the fragment is marked as optional and it does not exist, the destination with its original properties will be returned.
 
 </td>
 </tr>
@@ -132,6 +151,9 @@ Name of the destination fragment. The fragment itself must be maintained on the 
 
 > ### Caution:  
 > Only one `X-Fragment-Name` header may be present in the “Find Destination” request.
+
+> ### Caution:  
+> If multiple fragments are listed in the `X-Fragment-Name` request header, the `X-Fragment-Optional` header will be disabled and should not be included in the request. All of the specified fragments are expected to be maintained on the same level as the destination. If any fragment is not found, the request will fail.
 
 
 
@@ -143,11 +165,11 @@ Name of the destination fragment. The fragment itself must be maintained on the 
 
 > ### Sample Code:  
 > ```
-> Name=destination 
-> Type=HTTP 
-> URL=https://xxxx.example.com 
-> ProxyType=Internet 
-> Authentication=NoAuthentication
+> Name=example-destination 
+> Type=HTTP 
+> URL=https://xxxx.example.com 
+> ProxyType=Internet 
+> Authentication=NoAuthentication 
 > ```
 
 
@@ -156,38 +178,38 @@ Name of the destination fragment. The fragment itself must be maintained on the 
 
 > ### Sample Code:  
 > ```
-> FragmentName=fragment 
-> example-property=example-value
+> FragmentName=example-fragment 
+> example-property=example-value 
 > ```
 
 **cURL call to send “Find Destination” request:** 
 
 > ### Sample Code:  
 > ```
-> curl --request GET --url 'https://<destination_service_host>/destination-configuration/v1/destinations/<name_of_destination_being_extended>' \ 
->  --header 'Accept: */*' \ 
->  --header 'Authorization: Bearer <access_token>' \ 
->  --header 'X-Fragment-Name: <name_of_fragment>' 
+> curl --request GET --url 'https://<destination_service_host>/destination-configuration/v1/destinations/example-destination' \ 
+>   --header 'Accept: */*' \ 
+>   --header 'Authorization: Bearer <access_token>' \ 
+>   --header 'X-Fragment-Name: example-fragment'   
 > ```
 
 **Response:**
 
 > ### Sample Code:  
 > ```
-> { 
-> "owner": { 
-> "SubaccountId": <subaccount_id>, 
-> "InstanceId": null 
-> }, 
-> "destinationConfiguration": { 
-> "Name": "destination", 
-> "Type": "HTTP", 
-> "URL": "https://xxxx.example.com", 
-> "Authentication": "NoAuthentication", 
-> "ProxyType": "Internet", 
-> "FragmentName": "fragment", 
-> "example-property": "example-value" 
-> } 
+> {
+>   "owner": {
+>     "SubaccountId": "<subaccount_id>",
+>     "InstanceId": null
+>   },
+>   "destinationConfiguration": {
+>     "Name": "example-destination",
+>     "Type": "HTTP",
+>     "URL": "https://xxxx.example.com",
+>     "Authentication": "NoAuthentication",
+>     "ProxyType": "Internet",
+>     "FragmentName": "example-fragment",
+>     "example-property": "example-value"
+>   }
 > } 
 > ```
 
@@ -201,24 +223,24 @@ Name of the destination fragment. The fragment itself must be maintained on the 
 
 > ### Sample Code:  
 > ```
-> Name=destination 
-> Type=HTTP 
-> URL=https://xxxx.example.com 
+> Name=example-destination
+> Type=HTTP 
+> URL=https://xxxx.example.com 
 > ProxyType=Internet 
-> Authentication=OAuth2ClientCredentials 
-> clientId=clientId 
-> clientSecret=secret1234 
-> tokenServiceURL=https://authserver1.example.com/oauth/token/ 
+> Authentication=OAuth2ClientCredentials 
+> clientId=clientId 
+> clientSecret=secret1234 
+> tokenServiceURL=https://authserver1.example.com/oauth/token/  
 > ```
 
 **Destination Fragment:**
 
 > ### Sample Code:  
 > ```
-> FragmentName=fragment 
-> clientId=clientId-2 
-> clientSecret=secret2345 
-> tokenServiceURL=https://authserver2.example.com/oauth/token/ 
+> FragmentName=example-fragment
+> clientId=clientId-2 
+> clientSecret=secret2345 
+> tokenServiceURL=https://authserver2.example.com/oauth/token/  
 > ```
 
 **cURL call to send “Find Destination” request:**
@@ -226,42 +248,103 @@ Name of the destination fragment. The fragment itself must be maintained on the 
 > ### Sample Code:  
 > ```
 > curl --request GET \ 
->  --url 'https://<destination_service_host>/destination-configuration/v1/destinations/<name_of_destination_being_extended>' \ 
->  --header 'Accept: */*' \ 
->  --header 'Authorization: Bearer <access_token>' \ 
->  --header 'X-Fragment-Name: <name_of_fragment>' 
+>   --url 'https://<destination_service_host>/destination-configuration/v1/destinations/example-destination' \ 
+>   --header 'Accept: */*' \ 
+>   --header 'Authorization: Bearer <access_token>' \ 
+>   --header 'X-Fragment-Name: example-fragment'  
 > ```
 
 **Response:**
 
 > ### Sample Code:  
 > ```
-> { 
-> "owner": { 
-> "SubaccountId": <subaccount_id>, 
-> "InstanceId": null 
-> }, 
-> "destinationConfiguration": { 
-> "Name": "destination", 
-> "Type": "HTTP", 
-> "URL": "https://xxxx.example.com", 
-> "Authentication": "OAuth2ClientCredentials", 
-> "ProxyType": "Internet", 
-> "FragmentName": "fragment", 
-> "clientId": "clientId-2", 
-> "clientSecret": "secret2345", 
-> "tokenServiceURL": "https://authserver2.example.com/oauth/token/" 
-> }, 
-> "authTokens": [ 
-> { 
-> "type": "Bearer", 
-> "value": "eyJhbGciOiJSUzI1NiIsInR5cC...", 
-> "http_header": { 
-> "key":"Authorization", 
-> "value":"Bearer eyJhbGciOiJSUzI1NiIsInR5cC..." 
+> {
+>   "owner": {
+>     "SubaccountId": "<subaccount_id>",
+>     "InstanceId": null
+>   },
+>   "destinationConfiguration": {
+>     "Name": "example-destination",
+>     "Type": "HTTP",
+>     "URL": "https://xxxx.example.com",
+>     "Authentication": "OAuth2ClientCredentials",
+>     "ProxyType": "Internet",
+>     "FragmentName": "example-fragment",
+>     "clientId": "clientId-2",
+>     "clientSecret": "secret2345",
+>     "tokenServiceURL": "https://authserver2.example.com/oauth/token/"
+>   },
+>   "authTokens": [
+>     {
+>       "type": "Bearer",
+>       "value": "eyJhbGciOiJSUzI1NiIsInR5cC...",
+>       "http_header": {
+>         "key": "Authorization",
+>         "value": "Bearer eyJhbGciOiJSUzI1NiIsInR5cC..."
+>       }
+>     }
+>   ]
 > } 
-> } 
-> ] 
+> ```
+
+
+
+## Example: Using Multiple Destination Fragments to Add New Properties to a Destination
+
+**Destination:**
+
+> ### Sample Code:  
+> ```
+> Name=example-destination 
+> Type=HTTP 
+> URL=https://xxxx.example.com 
+> ProxyType=Internet 
+> Authentication=NoAuthentication   
+> ```
+
+**Destination Fragments:**
+
+> ### Sample Code:  
+> ```
+> FragmentName=example-fragment-1 
+> example-property-1=example-value-1
+> conflicting-property=conflicting-value-1
+> 
+> FragmentName=example-fragment-2
+> example-property-2=example-value-2
+> conflicting-property=conflicting-value-2  
+> ```
+
+**cURL call to send “Find Destination” request:**
+
+> ### Sample Code:  
+> ```
+> curl --request GET --url 'https://<destination_service_host>/destination-configuration/v1/destinations/example-destination' \ 
+>   --header 'Accept: */*' \ 
+>   --header 'Authorization: Bearer <access_token>' \ 
+>   --header 'X-Fragment-Name: example-fragment-1,example-fragment-2'   
+> ```
+
+**Response:**
+
+> ### Sample Code:  
+> ```
+> {
+>   "owner": {
+>     "SubaccountId": "<subaccount_id>",
+>     "InstanceId": null
+>   },
+>   "destinationConfiguration": {
+>     "Name": "example-destination",
+>     "Type": "HTTP",
+>     "URL": "https://xxxx.example.com",
+>     "Authentication": "NoAuthentication",
+>     "ProxyType": "Internet",
+>     "FragmentName": "example-fragment-1,example-fragment-2",
+>     "example-property-1": "example-value-1",
+>     "example-property-2": "example-value-2", 
+>     "conflicting-property": "conflicting-value-2", 
+>   }
 > } 
 > ```
 

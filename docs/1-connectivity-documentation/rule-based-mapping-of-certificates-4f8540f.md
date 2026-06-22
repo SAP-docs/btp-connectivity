@@ -44,5 +44,5 @@ To perform rule-based mapping of certificates in the ABAP server, proceed as fol
 
 ## Related Information
 
-[Rule-Based Certificate Mapping](https://help.sap.com/viewer/d528eef3dca14679bcb47b069aa17a9d/7.51.0/en-US/c830fd902dc8473b9e59db1576cc784b.html)
+[Rule-Based Certificate Mapping](https://help.sap.com/docs/ABAP_PLATFORM_NEW/e815bb97839a4d83be6c4fca48ee5777/c830fd902dc8473b9e59db1576cc784b.html?version=202510.001)
 

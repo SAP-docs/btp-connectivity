@@ -99,7 +99,11 @@ For more information, see [Manage Destination Certificates](manage-destination-c
 
 2.  Note that the `${...}` values are the data collected in the previous steps.
 3.  You can specify the `Validity` of the certificate.
-4.  You can set an `AutomaticRenew` flag for the certificate. If you do not use the auto-renew function, you may want to get notified about the certificate expiration.
+4.  You can set an `AutomaticRenew` flag for the certificate.
+
+    For more information, see [Automatic Renewal of Generated Certificates](automatic-renewal-of-generated-certificates-fb31561.md).
+
+    If you do not use the auto-renew function, you may want to get notified about the certificate expiration.
 
     For more information, see [Destination Service Notifications](destination-service-notifications-552e8fd.md).
 
@@ -117,6 +121,9 @@ For more information, see also [SAP Business Accelerator Hub](https://api.sap.co
 4.  Choose *Create* to generate the certificate.
 
 **API and UI: Fetch your Newly Generated Certificate**
+
+> ### Note:  
+> If you enabled automatic renewal, you should perform this fetching step periodically or when the renewal happens in order to be able to acquire the new certificate.
 
 -   Via REST API
 
