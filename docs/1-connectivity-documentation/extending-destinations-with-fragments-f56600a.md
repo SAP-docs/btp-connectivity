@@ -86,6 +86,9 @@ To apply this mechanism, you must use the following configurations:
 -   One or more destination fragments – with any properties
 
 > ### Note:  
+> If more than one fragment is used to extend the destination, the destination JSON will be merged with each fragment in the order of how the fragments are listed in the `X-Fragment-Name` request header.
+
+> ### Note:  
 > For more information on how to create and manage resources like destinations and destination fragments, see [SAP Business Accelerator Hub](https://api.sap.com/package/scpconnectivity/rest).
 
 
