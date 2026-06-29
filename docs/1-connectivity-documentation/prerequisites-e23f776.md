@@ -506,7 +506,7 @@ x86\_64
 </td>
 <td valign="top">
 
-2.9.1 and higher
+2.9.1 up to 2.19.x
 
 </td>
 </tr>
