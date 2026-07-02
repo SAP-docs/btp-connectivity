@@ -27,6 +27,8 @@ Manage the Cloud Connector's subaccount settings via API.
 
 [Get Subaccounts](subaccount-72885a1.md#loio72885a1eee784790a8c8d07538051134__getSubs)
 
+[Get Corrupted Subaccounts](subaccount-72885a1.md#loio72885a1eee784790a8c8d07538051134__getCorrSubs)
+
 [Create Subaccount \(Master Only\)](subaccount-72885a1.md#loio72885a1eee784790a8c8d07538051134__createSub) 
 
 [Delete Subaccount \(Master Only\)](subaccount-72885a1.md#loio72885a1eee784790a8c8d07538051134__deleteSub) 
@@ -191,6 +193,106 @@ An array of objects with the following properties:
 -   `regionHost`: region hosts \(a string\).
 -   `subaccount`: subaccount name \(a string\).
 -   `locationID`: location identifier for the Cloud Connector instance \(a string\); this property is not available if the default location ID is in use.
+
+Back to [Operations](subaccount-72885a1.md#loio72885a1eee784790a8c8d07538051134__operations)
+
+
+
+<a name="loio72885a1eee784790a8c8d07538051134__getCorrSubs"/>
+
+## Get Corrupted Subaccounts
+
+> ### Note:  
+> Available as of version 2.19.1.
+
+
+<table>
+<tr>
+<td valign="top">
+
+URI
+
+</td>
+<td valign="top">
+
+`/api/v1/configuration/subaccounts/corrupted` 
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+Method
+
+</td>
+<td valign="top">
+
+*GET* 
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+Request
+
+</td>
+<td valign="top">
+
+
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+Response
+
+</td>
+<td valign="top">
+
+```
+[{regionHost, subaccount}] 
+```
+
+
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+Errors
+
+</td>
+<td valign="top">
+
+
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+Roles
+
+</td>
+<td valign="top">
+
+Administrator, Associate Administrator, Subaccount Administrator, Display, Support, Monitoring
+
+</td>
+</tr>
+</table>
+
+**Response**:
+
+This will return an an array of corrupted subaccounts, that is, subaccounts whose configuration files were tampered and the Cloud Connector was not able to properly load them on startup.
+
+An array of objects with the following properties:
+
+-   `regionHost`: region hosts \(a string\).
+-   `subaccount`: subaccount names \(a string\).
 
 Back to [Operations](subaccount-72885a1.md#loio72885a1eee784790a8c8d07538051134__operations)
 

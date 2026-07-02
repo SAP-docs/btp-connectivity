@@ -871,17 +871,7 @@ For more information, see [OpenID Connect Discovery](https://openid.net/specs/op
 </td>
 <td valign="top">
 
-If set, this property controls what encoding will be used to encode the assertion XML prior to sending it to the configured token service. The possible values are "base64" \([RFC 4648, section 4](https://datatracker.ietf.org/doc/html/rfc4648#section-4)\) and "base64url" \([RFC 4648, section 5](https://datatracker.ietf.org/doc/html/rfc4648#section-5)\). If not set, the encoding will be based on the default value of this property \(see below\).
-
-Default value:
-
-> ### Note:  
-> The exact release date depends on your specific region.
-
--   *Prior to* the *calendar week 24 2026 release* \(8th of June to 11th of June\) - "base64"
--   *After* the *calendar week 24 2026 release* \(8th of June to 11th of June\) - "base64url"
-
-
+If set, this property controls what encoding will be used to encode the assertion XML prior to sending it to the configured token service. The possible values are "base64" \([RFC 4648, section 4](https://datatracker.ietf.org/doc/html/rfc4648#section-4)\) and "base64url" \([RFC 4648, section 5](https://datatracker.ietf.org/doc/html/rfc4648#section-5)\). If not set, the encoding will be "base64url".
 
 </td>
 </tr>

@@ -1814,7 +1814,7 @@ connectivitytunnel.us02-l-d.uc-live.shoot.live.k8s-hana.ondemand.com
 </td>
 </tr>
 <tr>
-<td valign="top" rowspan="5">
+<td valign="top" rowspan="6">
 
 US East \(VA\) - AWS
 
@@ -1936,6 +1936,27 @@ connectivitytunnel.cf.us10-002.hana.ondemand.com
 <td valign="top">
 
 2600:1f18:264b:5405::17, 2600:1f18:264b:5402::17, 2600:1f18:264b:5408::17
+
+</td>
+</tr>
+<tr>
+<td valign="top" colspan="2">
+
+connectivitytunnel.cf.us10-003.hana.ondemand.com
+
+</td>
+<td valign="top">
+
+`3.41.185.1`,
+
+`3.41.185.0`,
+
+`3.41.185.2`
+
+</td>
+<td valign="top">
+
+ 
 
 </td>
 </tr>
@@ -2068,7 +2089,7 @@ connectivitytunnel.cf.us20.hana.ondemand.com
 </td>
 </tr>
 <tr>
-<td valign="top" rowspan="3">
+<td valign="top" rowspan="4">
 
 US East \(VA\) - Azure
 
@@ -2129,6 +2150,23 @@ connectivitytunnel.cf.us21.hana.ondemand.com
 **Additional IP address \(as of January 19, 2025\):**
 
 **48.216.153.226**
+
+</td>
+<td valign="top">
+
+ 
+
+</td>
+</tr>
+<tr>
+<td valign="top" colspan="2">
+
+connectivitytunnel.cf.us21-001.hana.ondemand.com
+
+</td>
+<td valign="top">
+
+`20.241.255.189` 
 
 </td>
 <td valign="top">
