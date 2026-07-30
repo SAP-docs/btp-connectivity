@@ -3451,7 +3451,7 @@ connectivitycertsigning.cf.ap20.hana.ondemand.com
 
 Additional IP address \(as of January 19, 2025\):
 
-**20.227.99.35**
+20.227.99.35
 
 </td>
 <td valign="top">
@@ -5503,9 +5503,9 @@ Additional IP addresses \(as of January 19, 2025\):
 
 2600:1f18:ef:9b05::17, 2600:1f18:ef:9b08::17, 2600:1f18:ef:9b02::17
 
-**New** \(as of May 10, 2026\):
+New \(as of May 10, 2026\):
 
-**2600:1f18:ef:9b08::17, 2600:1f18:ef:9b0b::17, 2600:1f18:ef:9b02::17**
+2600:1f18:ef:9b08::17, 2600:1f18:ef:9b0b::17, 2600:1f18:ef:9b02::17
 
 </td>
 </tr>
@@ -5528,9 +5528,9 @@ Additional IP addresses \(as of January 19, 2025\):
 
 2600:1f18:ef:9b05::17, 2600:1f18:ef:9b08::17, 2600:1f18:ef:9b02::17
 
-**New** \(as of May 10, 2026\):
+New \(as of May 10, 2026\):
 
-**2600:1f18:ef:9b08::17, 2600:1f18:ef:9b0b::17, 2600:1f18:ef:9b02::17**
+2600:1f18:ef:9b08::17, 2600:1f18:ef:9b0b::17, 2600:1f18:ef:9b02::17
 
 </td>
 </tr>
@@ -5557,9 +5557,9 @@ Additional IP addresses \(as of January 19, 2025\):
 
 2600:1f18:12b5:c605::17, 2600:1f18:12b5:c602::17, 2600:1f18:12b5:c608::17
 
-**New** \(as of May 10, 2026\):
+New \(as of May 10, 2026\):
 
-**2600:1f18:12b5:c60b::17, 2600:1f18:12b5:c602::17, 2600:1f18:12b5:c608::17**
+2600:1f18:12b5:c60b::17, 2600:1f18:12b5:c602::17, 2600:1f18:12b5:c608::17
 
 </td>
 </tr>
