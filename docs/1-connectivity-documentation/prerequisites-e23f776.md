@@ -205,7 +205,7 @@ Back to [Content](prerequisites-e23f776.md#loioe23f776e4d594fdbaeeb1196d47bbcc0_
 -   A full JDK must be installed. Lightweight JRE installations are not sufficient. You can download a fitting up-to-date SAP JVM from [SAP Development Tools for Eclipse](https://tools.hana.ondemand.com/#cloud).
 
 > ### Caution:  
-> Do not use [Apache Portable Runtime \(APR\)](http://tomcat.apache.org/tomcat-8.5-doc/apr.html) on the system on which you use the Cloud Connector. If you cannot avoid this restriction and want to use APR at your own risk, you must manually adapt the `server.xml` configuration file in directory `<scc_installation_folder>/conf`. To do so, follow the steps in [HTTPS port configuration](http://tomcat.apache.org/tomcat-8.5-doc/config/http.html#SSL_Support_-_Connector_-_APR/Native_(deprecated)) for APR.
+> Do not use [Apache Portable Runtime \(APR\)](http://tomcat.apache.org/tomcat-8.5-doc/apr.html) on the system on which you use the Cloud Connector. If you cannot avoid this restriction and want to use APR at your own risk, you need to manually adopt the `server.xml` configuration file in directory `<scc_installation_folder>/conf`. To do so, follow the steps in [HTTPS port configuration](http://tomcat.apache.org/tomcat-8.5-doc/config/http.html#SSL_Support_-_Connector_-_APR/Native_(deprecated)) for APR.
 
 Back to [Content](prerequisites-e23f776.md#loioe23f776e4d594fdbaeeb1196d47bbcc0__content)
 
@@ -325,7 +325,7 @@ SapMachine 64-bit
 
 If you want to use SAP JVM, you can download its installer package from the [SAP Development Tools](https://tools.hana.ondemand.com/#cloud) page or a compressed SAR archive from the [SAP Software Center](https://me.sap.com/swdcnav/products/_APP=00200682500000001943&_EVENT=DISPHIER&HEADER=Y&FUNCTIONBAR=N&EVENT=TREE&NE=NAVIGATE&ENR=01200615320100003755&V=MAINT).
 
-Alternatively supported SapMachine JDK versions can be downloaded from the [SapMachine](https://sapmachine.io) homepage.
+Alternatively supported SapMachine JDK versions can be downloaded from the [SapMachine](https://sapmachine.io/) homepage.
 
 Back to [Content](prerequisites-e23f776.md#loioe23f776e4d594fdbaeeb1196d47bbcc0__content)
 
@@ -960,7 +960,9 @@ Europe \(Frankfurt\) - SAP \(EU Access Only\)
 > ### Note:  
 > Available as of September 19, 2025
 
+**New domain \(as of November 15, 2026\):**
 
+**\(eu01.uc.platform.cloud.sap\)**
 
 </td>
 <td valign="top" colspan="2">
@@ -1001,6 +1003,10 @@ connectivitycertsigning.mtls.eu01-l-c.uc-live-eu.shoot.live.k8s-hana.ondemand.co
 
 connectivitytunnel.eu01-l-d.uc-live-eu.shoot.live.k8s-hana.ondemand.com
 
+**New host \(as of November 15, 2026\):**
+
+**connectivitytunnel.eu01.uc.platform.cloud.sap**
+
 </td>
 <td valign="top">
 
@@ -1025,7 +1031,9 @@ Europe \(Rot\) - SAP \(EU Access Only\)
 > ### Note:  
 > Available as of November 28, 2025
 
+**New domain \(as of November 15, 2026\):**
 
+**\(eu02.uc.platform.cloud.sap\)**
 
 </td>
 <td valign="top" colspan="2">
@@ -1066,6 +1074,10 @@ connectivitycertsigning.mtls.eu02-l-c.uc-live-eu.shoot.live.k8s-hana.ondemand.co
 
 connectivitytunnel.eu02-l-d.uc-live-eu.shoot.live.k8s-hana.ondemand.com
 
+**New host \(as of November 15, 2026\):**
+
+**connectivitytunnel.eu02.uc.platform.cloud.sap**
+
 </td>
 <td valign="top">
 
@@ -1084,6 +1096,10 @@ connectivitytunnel.eu02-l-d.uc-live-eu.shoot.live.k8s-hana.ondemand.com
 Europe \(Frankfurt\) - AWS
 
 \(`cf.eu10.hana.ondemand.com`\)
+
+**New domain \(as of November 15, 2026\):**
+
+**\(eu10.uc.platform.cloud.sap\)**
 
 *Enterprise & Trial*
 
@@ -1134,6 +1150,10 @@ connectivitycertsigning.cf.eu10.hana.ondemand.com
 
 connectivitytunnel.cf.eu10.hana.ondemand.com
 
+**New host \(as of November 15, 2026\):**
+
+**connectivitytunnel.eu10.uc.platform.cloud.sap**
+
 </td>
 <td valign="top">
 
@@ -1155,6 +1175,10 @@ connectivitytunnel.cf.eu10.hana.ondemand.com
 
 connectivitytunnel.cf.eu10-002.hana.ondemand.com
 
+**New host \(as of November 15, 2026\):**
+
+**connectivitytunnel.eu10.uc.platform.cloud.sap**
+
 </td>
 <td valign="top">
 
@@ -1164,10 +1188,22 @@ connectivitytunnel.cf.eu10-002.hana.ondemand.com
 
 **3.72.125.186, 18.199.43.118, 3.69.159.226**
 
+**Additional IP addresses \(as of November 15, 2026\):**
+
+35.157.237.81, 52.58.116.80, 18.196.77.73
+
 </td>
 <td valign="top">
 
 2a05:d014:173b:8505::17, 2a05:d014:173b:8502::17, 2a05:d014:173b:8508::17
+
+**Additional IP addresses \(as of November 15, 2026\):**
+
+2a05:d014:e0d:f902::17,
+
+2a05:d014:e0d:f908::17,
+
+2a05:d014:e0d:f905::17
 
 </td>
 </tr>
@@ -1175,6 +1211,10 @@ connectivitytunnel.cf.eu10-002.hana.ondemand.com
 <td valign="top" colspan="2">
 
 connectivitytunnel.cf.eu10-003.hana.ondemand.com
+
+**New host \(as of November 15, 2026\):**
+
+**connectivitytunnel.eu10.uc.platform.cloud.sap**
 
 </td>
 <td valign="top">
@@ -1185,10 +1225,22 @@ connectivitytunnel.cf.eu10-003.hana.ondemand.com
 
 **3.65.23.248, 18.192.224.62, 35.159.136.14**
 
+**Additional IP addresses \(as of November 15, 2026\):**
+
+35.157.237.81, 52.58.116.80, 18.196.77.73
+
 </td>
 <td valign="top">
 
 2a05:d014:1db0:1705::17, 2a05:d014:1db0:1702::17, 2a05:d014:1db0:1708::17
+
+**Additional IP addresses \(as of November 15, 2026\):**
+
+2a05:d014:e0d:f902::17,
+
+2a05:d014:e0d:f908::17,
+
+2a05:d014:e0d:f905::17
 
 </td>
 </tr>
@@ -1196,6 +1248,10 @@ connectivitytunnel.cf.eu10-003.hana.ondemand.com
 <td valign="top" colspan="2">
 
 connectivitytunnel.cf.eu10-004.hana.ondemand.com
+
+**New host \(as of November 15, 2026\):**
+
+**connectivitytunnel.eu10.uc.platform.cloud.sap**
 
 </td>
 <td valign="top">
@@ -1206,10 +1262,22 @@ connectivitytunnel.cf.eu10-004.hana.ondemand.com
 
 **3.125.225.167, 18.158.49.214, 35.157.19.103**
 
+**Additional IP addresses \(as of November 15, 2026\):**
+
+35.157.237.81, 52.58.116.80, 18.196.77.73
+
 </td>
 <td valign="top">
 
 2a05:d014:1140:c905::17, 2a05:d014:1140:c908::17, 2a05:d014:1140:c902::17
+
+**Additional IP addresses \(as of November 15, 2026\):**
+
+2a05:d014:e0d:f902::17,
+
+2a05:d014:e0d:f908::17,
+
+2a05:d014:e0d:f905::17
 
 </td>
 </tr>
@@ -1217,6 +1285,10 @@ connectivitytunnel.cf.eu10-004.hana.ondemand.com
 <td valign="top" colspan="2">
 
 connectivitytunnel.cf.eu10-005.hana.ondemand.com
+
+**New host \(as of November 15, 2026\):**
+
+**connectivitytunnel.eu10.uc.platform.cloud.sap**
 
 </td>
 <td valign="top">
@@ -1227,10 +1299,22 @@ connectivitytunnel.cf.eu10-005.hana.ondemand.com
 
 **3.72.138.152, 18.195.38.125, 52.57.99.237**
 
+**Additional IP addresses \(as of November 15, 2026\):**
+
+35.157.237.81, 52.58.116.80, 18.196.77.73
+
 </td>
 <td valign="top">
 
 2a05:d014:1e09:6a02::17, 2a05:d014:1e09:6a05::17, 2a05:d014:1e09:6a08::17
+
+**Additional IP addresses \(as of November 15, 2026\):**
+
+2a05:d014:e0d:f902::17,
+
+2a05:d014:e0d:f908::17,
+
+2a05:d014:e0d:f905::17
 
 </td>
 </tr>
@@ -1240,6 +1324,10 @@ connectivitytunnel.cf.eu10-005.hana.ondemand.com
 Europe \(Frankfurt\) - AWS
 
 \(`cf.eu11.hana.ondemand.com`\)
+
+**New domain \(as of November 15, 2026\):**
+
+**\(eu11.uc.platform.cloud.sap\)**
 
 </td>
 <td valign="top" colspan="2">
@@ -1288,6 +1376,10 @@ connectivitycertsigning.cf.eu11.hana.ondemand.com
 
 connectivitytunnel.cf.eu11.hana.ondemand.com
 
+**New host \(as of November 15, 2026\):**
+
+**connectivitytunnel.eu11.uc.platform.cloud.sap**
+
 </td>
 <td valign="top">
 
@@ -1314,7 +1406,9 @@ Europe \(Milan\) - AWS
 > ### Note:  
 > Available as of October 30, 2025
 
+**New domain \(as of November 15, 2026\):**
 
+**\(eu13.uc.platform.cloud.sap\)**
 
 </td>
 <td valign="top" colspan="2">
@@ -1363,6 +1457,10 @@ connectivitycertsigning.cf.eu13.hana.ondemand.com
 
 connectivitytunnel.cf.eu13.hana.ondemand.com
 
+**New host \(as of November 15, 2026\):**
+
+**connectivitytunnel.eu13.uc.platform.cloud.sap**
+
 </td>
 <td valign="top">
 
@@ -1385,6 +1483,10 @@ connectivitytunnel.cf.eu13.hana.ondemand.com
 Europe \(Netherlands\) - Azure
 
 \(`cf.eu20.hana.ondemand.com`\)
+
+**New domain \(as of November 15, 2026\):**
+
+**\(eu20.uc.platform.cloud.sap\)**
 
 </td>
 <td valign="top" colspan="2">
@@ -1433,6 +1535,10 @@ connectivitycertsigning.cf.eu20.hana.ondemand.com
 
 connectivitytunnel.cf.eu20.hana.ondemand.com
 
+**New host \(as of November 15, 2026\):**
+
+**connectivitytunnel.eu20.uc.platform.cloud.sap**
+
 </td>
 <td valign="top">
 
@@ -1454,6 +1560,10 @@ connectivitytunnel.cf.eu20.hana.ondemand.com
 
 connectivitytunnel.cf.eu20-001.hana.ondemand.com
 
+**New host \(as of November 15, 2026\):**
+
+**connectivitytunnel.eu20.uc.platform.cloud.sap**
+
 </td>
 <td valign="top">
 
@@ -1462,6 +1572,10 @@ connectivitytunnel.cf.eu20-001.hana.ondemand.com
 **Additional IP address \(as of January 19, 2025\):**
 
 **20.67.69.84**
+
+**Additional IP addresses \(as of November 15, 2026\):**
+
+**57.153.52.157**
 
 </td>
 <td valign="top">
@@ -1475,10 +1589,18 @@ connectivitytunnel.cf.eu20-001.hana.ondemand.com
 
 connectivitytunnel.cf.eu20-002.hana.ondemand.com
 
+**New host \(as of November 15, 2026\):**
+
+**connectivitytunnel.eu20.uc.platform.cloud.sap**
+
 </td>
 <td valign="top">
 
-`98.64.76.0` 
+`98.64.76.0`
+
+**Additional IP addresses \(as of November 15, 2026\):**
+
+**57.153.52.157**
 
 </td>
 <td valign="top">
@@ -1497,7 +1619,9 @@ Europe \(Frankfurt\) - Azure
 > ### Note:  
 > Available as of January 30, 2026
 
+**New domain \(as of November 15, 2026\):**
 
+**\(eu22.uc.platform.cloud.sap\)**
 
 </td>
 <td valign="top" colspan="2">
@@ -1538,10 +1662,18 @@ connectivitycertsigning.cf.eu22.hana.ondemand.com
 
 connectivitytunnel.cf.eu22.hana.ondemand.com
 
+**New host \(as of November 15, 2026\):**
+
+**connectivitytunnel.eu22.uc.platform.cloud.sap**
+
 </td>
 <td valign="top">
 
-`9.141.129.192` 
+`9.141.129.192`
+
+**Additional IP addresses \(as of November 15, 2026\):**
+
+**4.185.195.58**
 
 </td>
 <td valign="top">
@@ -1556,6 +1688,10 @@ connectivitytunnel.cf.eu22.hana.ondemand.com
 Europe \(Frankfurt\) - Google Cloud
 
 \(`cf.eu30.hana.ondemand.com` \)
+
+**New domain \(as of November 15, 2026\):**
+
+**\(eu30.uc.platform.cloud.sap\)**
 
 </td>
 <td valign="top" colspan="2">
@@ -1604,6 +1740,10 @@ connectivitycertsigning.cf.eu30.hana.ondemand.com
 
 connectivitytunnel.cf.eu30.hana.ondemand.com
 
+**New host \(as of November 15, 2026\):**
+
+**connectivitytunnel.eu30.uc.platform.cloud.sap**
+
 </td>
 <td valign="top">
 
@@ -1630,7 +1770,9 @@ UK South \(London\) - Azure
 > ### Note:  
 > Available as of January 30, 2026
 
+**New domain \(as of November 15, 2026\):**
 
+**\(cf.uk20.hana.ondemand.com\)**
 
 </td>
 <td valign="top" colspan="2">
@@ -1671,6 +1813,10 @@ connectivitycertsigning.cf.uk20.hana.ondemand.com
 
 connectivitytunnel.cf.uk20.hana.ondemand.com
 
+**New host \(as of November 15, 2026\):**
+
+**connectivitytunnel.uk20.uc.platform.cloud.sap**
+
 </td>
 <td valign="top">
 
@@ -1695,7 +1841,9 @@ US \(Sterling\) - SAP
 > ### Note:  
 > Available as of January 30, 2026
 
+**New domain \(as of November 15, 2026\):**
 
+**\(us01.uc.platform.cloud.sap\)**
 
 </td>
 <td valign="top" colspan="2">
@@ -1736,6 +1884,10 @@ connectivitycertsigning.mtls.us01-l-c.uc-live.shoot.live.k8s-hana.ondemand.com
 
 connectivitytunnel.us01-l-d.uc-live.shoot.live.k8s-hana.ondemand.com
 
+**New host \(as of November 15, 2026\):**
+
+**connectivitytunnel.us01.uc.platform.cloud.sap**
+
 </td>
 <td valign="top">
 
@@ -1760,7 +1912,9 @@ US West \(Colorado\) - SAP
 > ### Note:  
 > Available as of December 30, 2025
 
+**New domain \(as of November 15, 2026\):**
 
+**\(us02.uc.platform.cloud.sap\)**
 
 </td>
 <td valign="top" colspan="2">
@@ -1801,6 +1955,10 @@ connectivitycertsigning.mtls.us02-l-c.uc-live.shoot.live.k8s-hana.ondemand.com
 
 connectivitytunnel.us02-l-d.uc-live.shoot.live.k8s-hana.ondemand.com
 
+**New host \(as of November 15, 2026\):**
+
+**connectivitytunnel.us02.uc.platform.cloud.sap**
+
 </td>
 <td valign="top">
 
@@ -1822,6 +1980,10 @@ US East \(VA\) - AWS
 
 *Enterprise & Trial*
 
+**New domain \(as of November 15, 2026\):**
+
+**\(us10.uc.platform.cloud.sap\)**
+
 </td>
 <td valign="top" colspan="2">
 
@@ -1841,7 +2003,7 @@ connectivitynotification.cf.us10.hana.ondemand.com
 
 2600:1f18:ef:9b05::17, 2600:1f18:ef:9b08::17, 2600:1f18:ef:9b02::17
 
-**New** \(as of Q2 2026, exact date will be announced via release note\):
+**New** \(as of May 10, 2026\):
 
 **2600:1f18:ef:9b08::17, 2600:1f18:ef:9b0b::17, 2600:1f18:ef:9b02::17**
 
@@ -1866,7 +2028,7 @@ connectivitycertsigning.cf.us10.hana.ondemand.com
 
 2600:1f18:ef:9b05::17, 2600:1f18:ef:9b08::17, 2600:1f18:ef:9b02::17
 
-**New** \(as of Q2 2026, exact date will be announced via release note\):
+**New** \(as of May 10, 2026\):
 
 **2600:1f18:ef:9b08::17, 2600:1f18:ef:9b0b::17, 2600:1f18:ef:9b02::17**
 
@@ -1876,6 +2038,10 @@ connectivitycertsigning.cf.us10.hana.ondemand.com
 <td valign="top" colspan="2">
 
 connectivitytunnel.cf.us10.hana.ondemand.com
+
+**New host \(as of November 15, 2026\):**
+
+**connectivitytunnel.us10.uc.platform.cloud.sap**
 
 </td>
 <td valign="top">
@@ -1891,7 +2057,7 @@ connectivitytunnel.cf.us10.hana.ondemand.com
 
 2600:1f18:12b5:c605::17, 2600:1f18:12b5:c602::17, 2600:1f18:12b5:c608::17
 
-**New** \(as of Q2 2026, exact date will be announced via release note\):
+**New** \(as of May 10, 2026\):
 
 **2600:1f18:12b5:c60b::17, 2600:1f18:12b5:c602::17, 2600:1f18:12b5:c608::17**
 
@@ -1902,6 +2068,10 @@ connectivitytunnel.cf.us10.hana.ondemand.com
 
 connectivitytunnel.cf.us10-001.hana.ondemand.com
 
+**New host \(as of November 15, 2026\):**
+
+**connectivitytunnel.us10.uc.platform.cloud.sap**
+
 </td>
 <td valign="top">
 
@@ -1911,10 +2081,18 @@ connectivitytunnel.cf.us10-001.hana.ondemand.com
 
 **54.157.55.28, 3.234.87.202, 50.17.185.79**
 
+**Additional IP addresses \(as of November 15, 2026\):**
+
+**54.147.47.110, 18.214.162.12, 44.206.11.12**
+
 </td>
 <td valign="top">
 
 2600:1f18:2d7e:2905::17, 2600:1f18:2d7e:2908::17, 2600:1f18:2d7e:2902::17
+
+**Additional IP addresses \(as of November 15, 2026\):**
+
+**2600:1f18:12b5:c60b::17, 2600:1f18:12b5:c602::17, 2600:1f18:12b5:c608::17**
 
 </td>
 </tr>
@@ -1922,6 +2100,10 @@ connectivitytunnel.cf.us10-001.hana.ondemand.com
 <td valign="top" colspan="2">
 
 connectivitytunnel.cf.us10-002.hana.ondemand.com
+
+**New host \(as of November 15, 2026\):**
+
+**connectivitytunnel.us10.uc.platform.cloud.sap**
 
 </td>
 <td valign="top">
@@ -1932,10 +2114,18 @@ connectivitytunnel.cf.us10-002.hana.ondemand.com
 
 **34.234.117.43, 34.237.168.235, 44.221.148.86**
 
+**Additional IP addresses \(as of November 15, 2026\):**
+
+**54.147.47.110, 18.214.162.12, 44.206.11.12**
+
 </td>
 <td valign="top">
 
 2600:1f18:264b:5405::17, 2600:1f18:264b:5402::17, 2600:1f18:264b:5408::17
+
+**Additional IP addresses \(as of November 15, 2026\):**
+
+**2600:1f18:12b5:c60b::17, 2600:1f18:12b5:c602::17, 2600:1f18:12b5:c608::17**
 
 </td>
 </tr>
@@ -1943,6 +2133,10 @@ connectivitytunnel.cf.us10-002.hana.ondemand.com
 <td valign="top" colspan="2">
 
 connectivitytunnel.cf.us10-003.hana.ondemand.com
+
+**New host \(as of November 15, 2026\):**
+
+**connectivitytunnel.us10.uc.platform.cloud.sap**
 
 </td>
 <td valign="top">
@@ -1953,10 +2147,16 @@ connectivitytunnel.cf.us10-003.hana.ondemand.com
 
 `3.41.185.2`
 
+**Additional IP addresses \(as of November 15, 2026\):**
+
+**54.147.47.110, 18.214.162.12, 44.206.11.12**
+
 </td>
 <td valign="top">
 
- 
+**Additional IP addresses \(as of November 15, 2026\):**
+
+**2600:1f18:12b5:c60b::17, 2600:1f18:12b5:c602::17, 2600:1f18:12b5:c608::17**
 
 </td>
 </tr>
@@ -1966,6 +2166,10 @@ connectivitytunnel.cf.us10-003.hana.ondemand.com
 US West \(Oregon\) - AWS
 
 \(`cf.us11.hana.ondemand.com`\)
+
+**New domain \(as of November 15, 2026\):**
+
+**\(us11.uc.platform.cloud.sap\)**
 
 </td>
 <td valign="top" colspan="2">
@@ -2006,6 +2210,10 @@ connectivitycertsigning.cf.us11.hana.ondemand.com
 
 connectivitytunnel.cf.us11.hana.ondemand.com
 
+**New host \(as of November 15, 2026\):**
+
+**connectivitytunnel.us11.uc.platform.cloud.sap**
+
 </td>
 <td valign="top">
 
@@ -2024,6 +2232,10 @@ connectivitytunnel.cf.us11.hana.ondemand.com
 US West \(WA\) - Azure
 
 \(`cf.us20.hana.ondemand.com`\)
+
+**New domain \(as of November 15, 2026\):**
+
+**\(us20.uc.platform.cloud.sap\)**
 
 </td>
 <td valign="top" colspan="2">
@@ -2072,6 +2284,10 @@ connectivitycertsigning.cf.us20.hana.ondemand.com
 
 connectivitytunnel.cf.us20.hana.ondemand.com
 
+**New host \(as of November 15, 2026\):**
+
+**connectivitytunnel.us20.uc.platform.cloud.sap**
+
 </td>
 <td valign="top">
 
@@ -2094,6 +2310,10 @@ connectivitytunnel.cf.us20.hana.ondemand.com
 US East \(VA\) - Azure
 
 \(`cf.us21.hana.ondemand.com`\)
+
+**New domain \(as of November 15, 2026\):**
+
+**\(us21.uc.platform.cloud.sap\)**
 
 </td>
 <td valign="top" colspan="2">
@@ -2142,6 +2362,10 @@ connectivitycertsigning.cf.us21.hana.ondemand.com
 
 connectivitytunnel.cf.us21.hana.ondemand.com
 
+**New host \(as of November 15, 2026\):**
+
+**connectivitytunnel.us21.uc.platform.cloud.sap**
+
 </td>
 <td valign="top">
 
@@ -2163,10 +2387,18 @@ connectivitytunnel.cf.us21.hana.ondemand.com
 
 connectivitytunnel.cf.us21-001.hana.ondemand.com
 
+**New host \(as of November 15, 2026\):**
+
+**connectivitytunnel.us21.uc.platform.cloud.sap**
+
 </td>
 <td valign="top">
 
-`20.241.255.189` 
+`20.241.255.189`
+
+**Additional IP addresses \(as of November 15, 2026\):**
+
+**48.216.153.226**
 
 </td>
 <td valign="top">
@@ -2181,6 +2413,10 @@ connectivitytunnel.cf.us21-001.hana.ondemand.com
 US Central \(IA\) - Google Cloud
 
 \(`cf.us30.hana.ondemand.com`\)
+
+**New domain \(as of November 15, 2026\):**
+
+**\(us30.uc.platform.cloud.sap\)**
 
 </td>
 <td valign="top" colspan="2">
@@ -2229,6 +2465,10 @@ connectivitycertsigning.cf.us30.hana.ondemand.com
 
 connectivitytunnel.cf.us30.hana.ondemand.com
 
+**New host \(as of November 15, 2026\):**
+
+**connectivitytunnel.us30.uc.platform.cloud.sap**
+
 </td>
 <td valign="top">
 
@@ -2251,6 +2491,10 @@ connectivitytunnel.cf.us30.hana.ondemand.com
 Brazil \(São Paulo\) - AWS
 
 \(`cf.br10.hana.ondemand.com`\)
+
+**New domain \(as of November 15, 2026\):**
+
+**\(br10.uc.platform.cloud.sap\)**
 
 </td>
 <td valign="top" colspan="2">
@@ -2299,6 +2543,10 @@ connectivitycertsigning.cf.br10.hana.ondemand.com
 
 connectivitytunnel.cf.br10.hana.ondemand.com
 
+**New host \(as of November 15, 2026\):**
+
+**connectivitytunnel.br10.uc.platform.cloud.sap**
+
 </td>
 <td valign="top">
 
@@ -2321,6 +2569,10 @@ connectivitytunnel.cf.br10.hana.ondemand.com
 Brazil \(São Paulo\) - Azure
 
 \(`cf.br20.hana.ondemand.com`\)
+
+**New domain \(as of November 15, 2026\):**
+
+**\(br20.uc.platform.cloud.sap\)**
 
 </td>
 <td valign="top" colspan="2">
@@ -2369,6 +2621,10 @@ connectivitycertsigning.cf.br20.hana.ondemand.com
 
 connectivitytunnel.cf.br20.hana.ondemand.com
 
+**New host \(as of November 15, 2026\):**
+
+**connectivitytunnel.br20.uc.platform.cloud.sap**
+
 </td>
 <td valign="top">
 
@@ -2391,6 +2647,10 @@ connectivitytunnel.cf.br20.hana.ondemand.com
 Brazil \(São Paulo\) - Google Cloud
 
 \(`cf.br30.hana.ondemand.com`\)
+
+**New domain \(as of November 15, 2026\):**
+
+**\(br30.uc.platform.cloud.sap\)**
 
 </td>
 <td valign="top" colspan="2">
@@ -2439,6 +2699,10 @@ connectivitycertsigning.cf.br30.hana.ondemand.com
 
 connectivitytunnel.cf.br30.hana.ondemand.com
 
+**New host \(as of November 15, 2026\):**
+
+**connectivitytunnel.br30.uc.platform.cloud.sap**
+
 </td>
 <td valign="top">
 
@@ -2467,7 +2731,9 @@ Japan \(Tokyo\) - SAP
 > ### Note:  
 > Available as of January 15, 2026
 
+**New domain \(as of November 15, 2026\):**
 
+**\(jp01.uc.platform.cloud.sap\)**
 
 </td>
 <td valign="top" colspan="2">
@@ -2508,6 +2774,10 @@ connectivitycertsigning.mtls.jp01-l-c.uc-live.shoot.live.k8s-hana.ondemand.com
 
 connectivitytunnel.jp01-l-d.uc-live.shoot.live.k8s-hana.ondemand.com
 
+**New host \(as of November 15, 2026\):**
+
+**connectivitytunnel.jp01.uc.platform.cloud.sap**
+
 </td>
 <td valign="top">
 
@@ -2526,6 +2796,10 @@ connectivitytunnel.jp01-l-d.uc-live.shoot.live.k8s-hana.ondemand.com
 Japan \(Tokyo\) - AWS
 
 \(`cf.jp10.hana.ondemand.com`\)
+
+**New domain \(as of November 15, 2026\):**
+
+**\(jp10.uc.platform.cloud.sap\)**
 
 </td>
 <td valign="top" colspan="2">
@@ -2574,6 +2848,10 @@ connectivitycertsigning.cf.jp10.hana.ondemand.com
 
 connectivitytunnel.cf.jp10.hana.ondemand.com
 
+**New host \(as of November 15, 2026\):**
+
+**connectivitytunnel.jp10.uc.platform.cloud.sap**
+
 </td>
 <td valign="top">
 
@@ -2596,6 +2874,10 @@ connectivitytunnel.cf.jp10.hana.ondemand.com
 Japan \(Tokyo\) - Azure
 
 \(`cf.jp20.hana.ondemand.com`\)
+
+**New domain \(as of November 15, 2026\):**
+
+**\(jp20.uc.platform.cloud.sap\)**
 
 </td>
 <td valign="top" colspan="2">
@@ -2644,6 +2926,10 @@ connectivitycertsigning.cf.jp20.hana.ondemand.com
 
 connectivitytunnel.cf.jp20.hana.ondemand.com
 
+**New host \(as of November 15, 2026\):**
+
+**connectivitytunnel.jp20.uc.platform.cloud.sap**
+
 </td>
 <td valign="top">
 
@@ -2666,6 +2952,10 @@ connectivitytunnel.cf.jp20.hana.ondemand.com
 Japan \(Osaka\) - Google Cloud
 
 \(`cf.jp30.hana.ondemand.com`\)
+
+**New domain \(as of November 15, 2026\):**
+
+**\(jp30.uc.platform.cloud.sap\)**
 
 </td>
 <td valign="top" colspan="2">
@@ -2714,6 +3004,10 @@ connectivitycertsigning.cf.jp30.hana.ondemand.com
 
 connectivitytunnel.cf.jp30.hana.ondemand.com
 
+**New host \(as of November 15, 2026\):**
+
+**connectivitytunnel.jp30.uc.platform.cloud.sap**
+
 </td>
 <td valign="top">
 
@@ -2736,6 +3030,10 @@ connectivitytunnel.cf.jp30.hana.ondemand.com
 Japan \(Tokyo\) - Google Cloud
 
 \(`cf.jp31.hana.ondemand.com`\)
+
+**New domain \(as of November 15, 2026\):**
+
+**\(jp31.uc.platform.cloud.sap\)**
 
 </td>
 <td valign="top" colspan="2">
@@ -2784,6 +3082,10 @@ connectivitycertsigning.cf.jp31.hana.ondemand.com
 
 connectivitytunnel.cf.jp31.hana.ondemand.com
 
+**New host \(as of November 15, 2026\):**
+
+**connectivitytunnel.jp31.uc.platform.cloud.sap**
+
 </td>
 <td valign="top">
 
@@ -2812,7 +3114,9 @@ Australia \(Sydney\) - SAP
 > ### Note:  
 > Available as of December 30, 2025
 
+**New domain \(as of November 15, 2026\):**
 
+**\(ap01.uc.platform.cloud.sap\)**
 
 </td>
 <td valign="top" colspan="2">
@@ -2853,6 +3157,10 @@ connectivitycertsigning.mtls.ap01-l-c.uc-live.shoot.live.k8s-hana.ondemand.com
 
 connectivitytunnel.ap01-l-c.uc-live.shoot.live.k8s-hana.ondemand.com
 
+**New host \(as of November 15, 2026\):**
+
+**connectivitytunnel.ap01.uc.platform.cloud.sap**
+
 </td>
 <td valign="top">
 
@@ -2871,6 +3179,10 @@ connectivitytunnel.ap01-l-c.uc-live.shoot.live.k8s-hana.ondemand.com
 Australia \(Sydney\) - AWS
 
 \(`cf.ap10.hana.ondemand.com`\)
+
+**New domain \(as of November 15, 2026\):**
+
+**\(ap10.uc.platform.cloud.sap\)**
 
 </td>
 <td valign="top" colspan="2">
@@ -2919,6 +3231,10 @@ connectivitycertsigning.cf.ap10.hana.ondemand.com
 
 connectivitytunnel.cf.ap10.hana.ondemand.com
 
+**New host \(as of November 15, 2026\):**
+
+**connectivitytunnel.ap10.uc.platform.cloud.sap**
+
 </td>
 <td valign="top">
 
@@ -2941,6 +3257,10 @@ connectivitytunnel.cf.ap10.hana.ondemand.com
 Asia Pacific \(Singapore\) - AWS
 
 \(`cf.ap11.hana.ondemand.com`\)
+
+**New domain \(as of November 15, 2026\):**
+
+**\(ap11.uc.platform.cloud.sap\)**
 
 </td>
 <td valign="top" colspan="2">
@@ -2989,6 +3309,10 @@ connectivitycertsigning.cf.ap11.hana.ondemand.com
 
 connectivitytunnel.cf.ap11.hana.ondemand.com
 
+**New host \(as of November 15, 2026\):**
+
+**connectivitytunnel.ap11.uc.platform.cloud.sap**
+
 </td>
 <td valign="top">
 
@@ -3011,6 +3335,10 @@ connectivitytunnel.cf.ap11.hana.ondemand.com
 Asia Pacific \(Seoul\) - AWS
 
 \(`cf.ap12.hana.ondemand.com`\)
+
+**New domain \(as of November 15, 2026\):**
+
+**\(ap12.uc.platform.cloud.sap\)**
 
 </td>
 <td valign="top" colspan="2">
@@ -3059,6 +3387,10 @@ connectivitycertsigning.cf.ap12.hana.ondemand.com
 
 connectivitytunnel.cf.ap12.hana.ondemand.com
 
+**New host \(as of November 15, 2026\):**
+
+**connectivitytunnel.ap12.uc.platform.cloud.sap**
+
 </td>
 <td valign="top">
 
@@ -3081,6 +3413,10 @@ connectivitytunnel.cf.ap12.hana.ondemand.com
 Australia \(Sydney\) - Azure
 
 \(`cf.ap20.hana.ondemand.com`\)
+
+**New domain \(as of November 15, 2026\):**
+
+**\(ap20.uc.platform.cloud.sap\)**
 
 </td>
 <td valign="top" colspan="2">
@@ -3129,6 +3465,10 @@ connectivitycertsigning.cf.ap20.hana.ondemand.com
 
 connectivitytunnel.cf.ap20.hana.ondemand.com
 
+**New host \(as of November 15, 2026\):**
+
+**connectivitytunnel.ap20.uc.platform.cloud.sap**
+
 </td>
 <td valign="top">
 
@@ -3151,6 +3491,10 @@ connectivitytunnel.cf.ap20.hana.ondemand.com
 Singapore - Azure
 
 \(`cf.ap21.hana.ondemand.com`\)
+
+**New domain \(as of November 15, 2026\):**
+
+**\(ap21.uc.platform.cloud.sap\)**
 
 *Enterprise & Trial*
 
@@ -3201,6 +3545,10 @@ connectivitycertsigning.cf.ap21.hana.ondemand.com
 
 connectivitytunnel.cf.ap21.hana.ondemand.com
 
+**New host \(as of November 15, 2026\):**
+
+**connectivitytunnel.ap21.uc.platform.cloud.sap**
+
 </td>
 <td valign="top">
 
@@ -3223,6 +3571,10 @@ connectivitytunnel.cf.ap21.hana.ondemand.com
 Australia \(Sydney\) - Google Cloud
 
 \(`cf.ap30.hana.ondemand.com`\)
+
+**New domain \(as of November 15, 2026\):**
+
+**\(ap30.uc.platform.cloud.sap\)**
 
 </td>
 <td valign="top" colspan="2">
@@ -3271,6 +3623,10 @@ connectivitycertsigning.cf.ap30.hana.ondemand.com
 
 connectivitytunnel.cf.ap30.hana.ondemand.com
 
+**New host \(as of November 15, 2026\):**
+
+**connectivitytunnel.ap30.uc.platform.cloud.sap**
+
 </td>
 <td valign="top">
 
@@ -3293,6 +3649,10 @@ connectivitytunnel.cf.ap30.hana.ondemand.com
 Canada \(Montreal\) - AWS
 
 \(`cf.ca10.hana.ondemand.com`\)
+
+**New domain \(as of November 15, 2026\):**
+
+**\(ca10.uc.platform.cloud.sap\)**
 
 </td>
 <td valign="top" colspan="2">
@@ -3341,6 +3701,10 @@ connectivitycertsigning.cf.ca10.hana.ondemand.com
 
 connectivitytunnel.cf.ca10.hana.ondemand.com
 
+**New host \(as of November 15, 2026\):**
+
+**connectivitytunnel.ca10.uc.platform.cloud.sap**
+
 </td>
 <td valign="top">
 
@@ -3363,6 +3727,10 @@ connectivitytunnel.cf.ca10.hana.ondemand.com
 Canada Central \(Toronto\) - Azure
 
 \(`cf.ca20.hana.ondemand.com`\)
+
+**New domain \(as of November 15, 2026\):**
+
+**\(ca20.uc.platform.cloud.sap\)**
 
 </td>
 <td valign="top" colspan="2">
@@ -3403,6 +3771,10 @@ connectivitycertsigning.cf.ca20.hana.ondemand.com
 
 connectivitytunnel.cf.ca20.hana.ondemand.com
 
+**New host \(as of November 15, 2026\):**
+
+**connectivitytunnel.ca20.uc.platform.cloud.sap**
+
 </td>
 <td valign="top">
 
@@ -3421,6 +3793,10 @@ connectivitytunnel.cf.ca20.hana.ondemand.com
 Switzerland \(Zurich\) - Azure
 
 \(`cf.ch20.hana.ondemand.com`\)
+
+**New domain \(as of November 15, 2026\):**
+
+**\(ch20.uc.platform.cloud.sap\)**
 
 </td>
 <td valign="top" colspan="2">
@@ -3469,6 +3845,10 @@ connectivitycertsigning.cf.ch20.hana.ondemand.com
 
 connectivitytunnel.cf.ch20.hana.ondemand.com
 
+**New host \(as of November 15, 2026\):**
+
+**connectivitytunnel.ch20.uc.platform.cloud.sap**
+
 </td>
 <td valign="top">
 
@@ -3491,6 +3871,10 @@ connectivitytunnel.cf.ch20.hana.ondemand.com
 India \(Mumbai\) - Google Cloud
 
 \(`cf.in30.hana.ondemand.com`\)
+
+**New domain \(as of November 15, 2026\):**
+
+**\(in30.uc.platform.cloud.sap\)**
 
 </td>
 <td valign="top" colspan="2">
@@ -3539,6 +3923,10 @@ connectivitycertsigning.cf.in30.hana.ondemand.com
 
 connectivitytunnel.cf.in30.hana.ondemand.com
 
+**New host \(as of November 15, 2026\):**
+
+**connectivitytunnel.in30.uc.platform.cloud.sap**
+
 </td>
 <td valign="top">
 
@@ -3561,6 +3949,10 @@ connectivitytunnel.cf.in30.hana.ondemand.com
 Israel \(Tel Aviv\) - Google Cloud
 
 \(`cf.il30.hana.ondemand.com`\)
+
+**New domain \(as of November 15, 2026\):**
+
+**\(il30.uc.platform.cloud.sap\)**
 
 </td>
 <td valign="top" colspan="2">
@@ -3609,6 +4001,10 @@ connectivitycertsigning.cf.il30.hana.ondemand.com
 
 connectivitytunnel.cf.il30.hana.ondemand.com
 
+**New host \(as of November 15, 2026\):**
+
+**connectivitytunnel.il30.uc.platform.cloud.sap**
+
 </td>
 <td valign="top">
 
@@ -3631,6 +4027,10 @@ connectivitytunnel.cf.il30.hana.ondemand.com
 China North - Azure
 
 \(`cf.cn20.hana.ondemand.com`\)
+
+**New domain \(as of November 15, 2026\):**
+
+**\(cn20.uc.platform.cloud.sap\)**
 
 </td>
 <td valign="top" colspan="2">
@@ -3671,6 +4071,10 @@ connectivitycertsigning.cf.cn20.hana.ondemand.com
 
 connectivitytunnel.cf.cn20.hana.ondemand.com
 
+**New host \(as of November 15, 2026\):**
+
+**connectivitytunnel.cn20.uc.platform.cloud.sap**
+
 </td>
 <td valign="top">
 
@@ -3689,6 +4093,10 @@ connectivitytunnel.cf.cn20.hana.ondemand.com
 China \(Shanghai\) - Alibaba Cloud
 
 \(`cf.cn40.platform.sapcloud.cn`\)
+
+**New domain \(as of November 15, 2026\):**
+
+**\(cn40.uc.platform.cloud.sap\)**
 
 </td>
 <td valign="top" colspan="2">
@@ -3729,6 +4137,10 @@ connectivitycertsigning.cf.cn40.platform.sapcloud.cn
 
 connectivitytunnel.cf.cn40.platform.sapcloud.cn
 
+**New host \(as of November 15, 2026\):**
+
+**connectivitytunnel.cn40.uc.platform.cloud.sap**
+
 </td>
 <td valign="top">
 
@@ -3747,6 +4159,10 @@ connectivitytunnel.cf.cn40.platform.sapcloud.cn
 KSA \(Dammam\) - Google Cloud
 
 \(`cf.sa30.hana.ondemand.com`\)
+
+**New domain \(as of November 15, 2026\):**
+
+**\(sa30.uc.platform.cloud.sap\)**
 
 </td>
 <td valign="top" colspan="2">
@@ -3795,6 +4211,10 @@ connectivitycertsigning.cf.sa30.hana.ondemand.com
 
 connectivitytunnel.cf.sa30.hana.ondemand.com
 
+**New host \(as of November 15, 2026\):**
+
+**connectivitytunnel.sa30.uc.platform.cloud.sap**
+
 </td>
 <td valign="top">
 
@@ -3817,6 +4237,10 @@ connectivitytunnel.cf.sa30.hana.ondemand.com
 KSA \(Dammam\) - Google Cloud
 
 \(`cf.sa31.hana.ondemand.com`\)
+
+**New domain \(as of November 15, 2026\):**
+
+**\(sa31.uc.platform.cloud.sap\)**
 
 </td>
 <td valign="top" colspan="2">
@@ -3865,6 +4289,10 @@ connectivitycertsigning.cf.sa31.hana.ondemand.com
 
 connectivitytunnel.cf.sa31.hana.ondemand.com
 
+**New host \(as of November 15, 2026\):**
+
+**connectivitytunnel.sa31.uc.platform.cloud.sap**
+
 </td>
 <td valign="top">
 
@@ -3893,7 +4321,9 @@ UAE \(Dubai\) - SAP
 > ### Note:  
 > Available as of October 31, 2025
 
+**New domain \(as of November 15, 2026\):**
 
+**\(ae01.uc.platform.cloud.sap\)**
 
 </td>
 <td valign="top" colspan="2">
@@ -3933,6 +4363,10 @@ connectivitycertsigning.mtls.ae01-l-c.uc-live.shoot.live.k8s-hana.ondemand.com
 <td valign="top" colspan="2">
 
 connectivitytunnel.ae01-l-d.uc-live.shoot.live.k8s-hana.ondemand.com
+
+**New host \(as of November 15, 2026\):**
+
+**connectivitytunnel.ae01.uc.platform.cloud.sap**
 
 </td>
 <td valign="top">
@@ -4968,6 +5402,10 @@ Europe \(Frankfurt\) - AWS
 
 \(`cf.eu10.hana.ondemand.com`\)
 
+**New domain \(as of November 15, 2026\):**
+
+**\(eu10.uc.platform.cloud.sap\)**
+
 </td>
 <td valign="top" colspan="2">
 
@@ -5015,6 +5453,10 @@ connectivitycertsigning.cf.eu10.hana.ondemand.com
 
 connectivitytunnel.cf.eu10.hana.ondemand.com
 
+**New host \(as of November 15, 2026\):**
+
+**connectivitytunnel.eu10.uc.platform.cloud.sap**
+
 </td>
 <td valign="top">
 
@@ -5038,6 +5480,10 @@ United States East \(VA\) - AWS
 
 \(`cf.us10.hana.ondemand.com`\)
 
+**New domain \(as of November 15, 2026\):**
+
+**\(us10.uc.platform.cloud.sap\)**
+
 </td>
 <td valign="top" colspan="2">
 
@@ -5057,7 +5503,7 @@ connectivitynotification.cf.us10.hana.ondemand.com
 
 2600:1f18:ef:9b05::17, 2600:1f18:ef:9b08::17, 2600:1f18:ef:9b02::17
 
-**New** \(as of Q2 2026, exact date will be announced via release note\):
+**New** \(as of May 10, 2026\):
 
 **2600:1f18:ef:9b08::17, 2600:1f18:ef:9b0b::17, 2600:1f18:ef:9b02::17**
 
@@ -5082,7 +5528,7 @@ connectivitycertsigning.cf.us10.hana.ondemand.com
 
 2600:1f18:ef:9b05::17, 2600:1f18:ef:9b08::17, 2600:1f18:ef:9b02::17
 
-**New** \(as of Q2 2026, exact date will be announced via release note\):
+**New** \(as of May 10, 2026\):
 
 **2600:1f18:ef:9b08::17, 2600:1f18:ef:9b0b::17, 2600:1f18:ef:9b02::17**
 
@@ -5092,6 +5538,10 @@ connectivitycertsigning.cf.us10.hana.ondemand.com
 <td valign="top" colspan="2">
 
 connectivitytunnel.cf.us10.hana.ondemand.com
+
+**New host \(as of November 15, 2026\):**
+
+**connectivitytunnel.us10.uc.platform.cloud.sap**
 
 </td>
 <td valign="top">
@@ -5107,7 +5557,7 @@ connectivitytunnel.cf.us10.hana.ondemand.com
 
 2600:1f18:12b5:c605::17, 2600:1f18:12b5:c602::17, 2600:1f18:12b5:c608::17
 
-**New** \(as of Q2 2026, exact date will be announced via release note\):
+**New** \(as of May 10, 2026\):
 
 **2600:1f18:12b5:c60b::17, 2600:1f18:12b5:c602::17, 2600:1f18:12b5:c608::17**
 
@@ -5119,6 +5569,10 @@ connectivitytunnel.cf.us10.hana.ondemand.com
 Singapore - Azure
 
 \(`cf.ap21.hana.ondemand.com`\)
+
+**New domain \(as of November 15, 2026\):**
+
+**\(ap21.uc.platform.cloud.sap\)**
 
 </td>
 <td valign="top" colspan="2">
@@ -5158,6 +5612,10 @@ connectivitycertsigning.cf.ap21.hana.ondemand.com
 <td valign="top" colspan="2">
 
 connectivitytunnel.cf.ap21.hana.ondemand.com
+
+**New host \(as of November 15, 2026\):**
+
+**connectivitytunnel.ap21.uc.platform.cloud.sap**
 
 </td>
 <td valign="top">
