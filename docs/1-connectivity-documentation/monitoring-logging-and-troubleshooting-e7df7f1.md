@@ -312,5 +312,5 @@ Use local user store and discard any stored LDAP configuration.
 **Related Information**  
 
 
-[Getting Support](https://help.sap.com/viewer/65de2977205c403bbc107264b8eccf4b/Cloud/en-US/5dd739823b824b539eee47b7860a00be.html "To get help, use the available support channels provided by SAP for Me.") :arrow_upper_right:
+[Getting Support](https://help.sap.com/viewer/65de2977205c403bbc107264b8eccf4b/Cloud/en-US/5dd739823b824b539eee47b7860a00be.html "Learn about the support channels and procedures you can use to report technical issues and get help through SAP for Me.") :arrow_upper_right:
 

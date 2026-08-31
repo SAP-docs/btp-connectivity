@@ -116,7 +116,7 @@ Administrator, Associate Administrator, Subaccount Administrator, Display, Suppo
 ## Example
 
 ```
-curl -i -k -u <user>:<password> -X GET https://<host>:<port>/api/v1/configuration/connector/onPremises/truststoreConfiguration
+curl -i -k -u <user>:<password> -X GET https://<host>:<port>/api/v1/configuration/connector/onPremises/truststore
 ```
 
 
