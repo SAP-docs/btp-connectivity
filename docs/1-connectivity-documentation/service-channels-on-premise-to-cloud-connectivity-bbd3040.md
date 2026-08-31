@@ -29,10 +29,7 @@ Perform the following steps to expose an application through the Connectivity Pr
     > ```
 
     -   `name`: Required. Name of the `ServiceMapping` that is created.
-    -   `type`: Required. Type of the `ServiceMapping`. The type defines the connection protocol used to expose the cloud application. Currently, the supported types are **RFC** and **TCP**.
-
-        > ### Note:  
-        > For Cloud Connectors below version 2.14.2, only **RFC** is supported.
+    -   `type`: Required. Type of the `ServiceMapping`. The type defines the connection protocol used to expose the cloud application. Currently, the supported type is **TCP**.
 
     -   `subaccountId`: Required for multi-tenant modes and optional for single-tenant modes. This is the ID of the tenant on whose behalf the cloud application is exposed. In single-tenant modes, the configured dedicated tenant is used by default.
     -   `serviceId`: Required. This is the virtual host used to expose the cloud application.
