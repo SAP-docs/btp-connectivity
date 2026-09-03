@@ -15,3 +15,7 @@ To do so, perform the follwing steps:
 
 For more information, see [Initial Configuration](initial-configuration-db9170a.md) \(Cloud Connector\), step 4.
 
+Authentication metadata can also be obtained from the Connectivity service REST API.
+
+For more information, see [Connectivity Service REST API](connectivity-service-rest-api-aae0139.md).
+

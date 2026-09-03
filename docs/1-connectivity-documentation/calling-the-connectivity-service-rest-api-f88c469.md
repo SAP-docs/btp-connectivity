@@ -16,7 +16,11 @@ For more information, see [Create and Bind a Connectivity Service Instance](crea
 
 ## Get an Access Token
 
-The endpoints of the Connectivity service REST API are protected with OAuth access tokens issued by XSUAA. In order to obtain one, you need to extract the value of `token_service_url` from the binding information and call it using the binding credentials.
+The endpoints of the Connectivity service REST API are protected with OAuth tokens issued by XSUAA. In order to obtain one, you need to extract the value of `token_service_url` from the binding information and call it using the binding credentials.
+
+The *Cloud Connector Info* API is protected by an access token, which can be obtained by the [OAuth2 Client Credentials grant type](https://datatracker.ietf.org/doc/html/rfc6749#section-4.4).
+
+The *Authentication Metadata Retrieval* API is protected by the user exchange JWT, which is obtained by exchanging a valid user token following the OAuth2 [JWT Bearer grant type](https://datatracker.ietf.org/doc/html/rfc7523#section-2.1). A user token needed in this flow has to be obtained by authenticating a platform user, which has the *Cloud Connector Administrator* role assigned in the subaccount.
 
 **Example: Obtaining an XSUAA access token**
 
@@ -55,7 +59,7 @@ Once you have obtained an access token, you can call one of the Connectivity ser
 
 For more information about the available endpoints, see *Connectivity service REST API reference*.
 
-**Example: Calling the Cloud Connector info REST API endpoint**
+**Example: Calling the *Cloud Connector Info* REST API endpoint**
 
 *Request:*
 
@@ -86,5 +90,25 @@ For more information about the available endpoints, see *Connectivity service RE
 >     }
 >   }
 > ]
+> ```
+
+**Example: Calling the *Authentication Metadata Retrieval* REST API endpoint**
+
+*Request:*
+
+> ### Sample Code:  
+> ```
+> PUT <url><authentication_metadata_path>
+> Accept: application/json
+> Authorization: Bearer <user_exchange_token>
+> ```
+
+*Response:*
+
+> ### Sample Code:  
+> ```
+> {
+>   "authenticationMetadata": "Base64 encoded authentication metadata"
+> }
 > ```
 

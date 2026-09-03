@@ -190,5 +190,5 @@ Back to [Tasks](invoking-abap-function-modules-via-rfc-fa4adc9.md#loiofa4adc9bd4
 
 -   [Use Cases](use-cases-effd6be.md)
 -   [Developing Java in the Cloud Foundry Environment](https://help.sap.com/viewer/65de2977205c403bbc107264b8eccf4b/Cloud/en-US/a3f90069d6cd41da82f34a6123d82ce6.html "Find selected information for Java development on SAP BTP, Cloud Foundry and references to more detailed sources.") :arrow_upper_right:
--   [SAP Java Connector](https://help.sap.com/viewer/65de2977205c403bbc107264b8eccf4b/Cloud/en-US/3cee866c27ec4492b789b10c5d52d94b.html "You can use the SAP Java Connector through the SAP Java buildpacks.") :arrow_upper_right:
+-   [SAP Java Connector](https://help.sap.com/viewer/65de2977205c403bbc107264b8eccf4b/Cloud/en-US/3cee866c27ec4492b789b10c5d52d94b.html "You can use the SAP Java Connector (SAP JCo) through SAP Java Buildpack.") :arrow_upper_right:
 

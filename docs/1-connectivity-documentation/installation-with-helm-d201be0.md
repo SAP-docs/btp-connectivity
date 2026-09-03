@@ -5,7 +5,7 @@
 Use the Helm chart to configure and manage the lifecycle of the Transparent Proxy.
 
 > ### Note:  
-> Current version of the Transparent Proxy is 1.9.2.
+> Current version of the Transparent Proxy is 1.10.0.
 
 The Transparent Proxy delivery includes a Helm chart that you can use for lifecycle management. The Helm allows full configuration via [the standard Helm method of a "values.yaml" file](https://helm.sh/docs/chart_template_guide/values_files/).
 
@@ -27,7 +27,7 @@ The Transparent Proxy Helm chart is available via the RBSC \(*repository-based s
     > Do not extract the archive and modify the default `values.yml` file included there. Instead, use your own `values.yml` and only include fields that should be overridden.
 
     > ### Note:  
-    > By default, mTLS encryption is enabled using [cert-manager](https://cert-manager.io/). You should check the [Configuration Guide](configuration-guide-2a22cd7.md) to modify the configuration settings according to your setup, for example, referencing your *cert-manager Issuer* or *ClusterIssuer*.
+    > By default, mTLS encryption is enabled using [cert-manager](https://cert-manager.io/). You should check the [Configuration Guide](configuration-guide-2a22cd7.md) to modify the configuration settings according to your setup, for example, referencing your *cert-manager* [Issuer/ClusterIssuer](https://cert-manager.io/docs/concepts/issuer/).
 
     > ### Tip:  
     > Encryption for the Transparent Proxy components can also be disabled for test purposes or if you have implemented your own mTLS sidecar solution, for example, Istio.
@@ -36,102 +36,152 @@ The Transparent Proxy Helm chart is available via the RBSC \(*repository-based s
 
     > ### Sample Code:  
     > ```
+    > compliance:
+    >   ## Enables or disables FIPS mode for the Transparent Proxy components. When enabled, all cryptographic operations performed by the Transparent Proxy components will use FIPS-validated algorithms and libraries.
+    >   fipsModeEnabled: false
+    > additionalCAs:
+    >   ## The name of the secret that allows to specify a list of CA certificates which are to be trusted, in addition to the default ones for the outbound communication of the Transparent Proxy components.
+    >   #secretName: <secret-name>
+    >   ## The key in the additionalCAs.secretName that defines the CAs to be trusted, concatenated together one after the other.
+    >   #secretKey: <secret-key>
+    >   ## The namespace of the existing secret to be used, which holds the additional CA certificates. the Destination service. Should be specified when the additionalCAs.secretName is in a different namespace to the Transparent Proxy's installation namespace.
+    >   #secretNamespace: <secret-namespace>
     > deployment:
     >   image:
-    >     ## Тhe name of the registry from which the Transparent Proxy will be downloaded.
+    >     ## Тhe name of the registry from which the transparent proxy will be downloaded.
     >     registry: docker.io
-    >     ## Тhe name of the repository from which the Transparent Proxy will be downloaded.
+    >     ## Тhe name of the repository from which the transparent proxy will be downloaded.
     >     repository: sapse
     >     ## Оne of Always, Never, IfNotPresent. For more information, see https://kubernetes.io/docs/concepts/containers/images#updating-images.
     >     pullPolicy: IfNotPresent
     >     ## Тhe secret used for authenticating against the repository. (Not required when using the DockerHub registry).
     >     #pullSecret: ""
-    >     ## Тhe version of the Transparent Proxy images that are to be deployed. By default, it is the chart version
+    >     ## Тhe version of the transparent proxy images that are to be deployed. By default, it is the chart version
     >     #tag:
     >   replicas:
     >     ## Тhe amount of transparent HTTP proxy pods to start.
     >     http: 1
-    >     ## Тhe amount of transparent TCP proxy pods for each TCP destination to start.
+    >     ## Тhe amount of transparent TCP proxy pods to start.
     >     tcp: 1
     >   resources:
     >     http:
     >       requests:
     >         ## The K8s scheduler uses this information to decide which node to place the pod on. If there are no nodes with the specified amount of CPU resources, the pod won't be scheduled (and therefore started).
-    >         cpu: 0.2
+    >         cpu: 0.05
     >         ## The K8s scheduler uses this information to decide which node to place the Pod on. If there are no nodes with the specified amount of memory, the pod won't be scheduled (and therefore started).
-    >         memory: 256M
+    >         memory: 192M
+    >       limits:
+    >         ## The Kubelet enforces the limit so that the running container is not allowed to use more CPU resources than the set limit. In case the limit is crossed, the process would be throttled.
+    >         cpu: 0.05
+    >         ## The Kubelet enforces the limit so that the running container is not allowed to use more memory than the set limit. In case the limit is crossed, the process would be terminated with an out-of-memory (OOM) error.
+    >         memory: 192M
+    >     tcp:
+    >       requests:
+    >         ## The K8s scheduler uses this information to decide which node to place the pod on. If there are no nodes with the specified amount of CPU resources, the pod won't be scheduled (and therefore started).
+    >         cpu: 0.01
+    >         ## The K8s scheduler uses this information to decide which node to place the Pod on. If there are no nodes with the specified amount of memory, the pod won't be scheduled (and therefore started).
+    >         memory: 64M
+    >       limits:
+    >         ## The Kubelet enforces the limit so that the running container is not allowed to use more CPU resources than the set limit. In case the limit is crossed, the process would be throttled.
+    >         cpu: 0.01
+    >         ## The Kubelet enforces the limit so that the running container is not allowed to use more memory than the set limit. In case the limit is crossed, the process would be terminated with an out-of-memory (OOM) error.
+    >         memory: 64M
+    >     manager:
+    >       requests:
+    >         ## The K8s scheduler uses this information to decide which node to place the pod on. If there are no nodes with the specified amount of CPU resources, the pod won't be scheduled (and therefore started).
+    >         cpu: 0.4
+    >         ## The K8s scheduler uses this information to decide which node to place the Pod on. If there are no nodes with the specified amount of memory, the pod won't be scheduled (and therefore started).
+    >         memory: 192M
     >       limits:
     >         ## The Kubelet enforces the limit so that the running container is not allowed to use more CPU resources than the set limit. In case the limit is crossed, the process would be throttled.
     >         cpu: 0.4
     >         ## The Kubelet enforces the limit so that the running container is not allowed to use more memory than the set limit. In case the limit is crossed, the process would be terminated with an out-of-memory (OOM) error.
-    >         memory: 512M
-    >     tcp:
-    >       requests:
-    >         ## The K8s scheduler uses this information to decide which node to place the pod on. If there are no nodes with the specified amount of CPU resources, the pod won't be scheduled (and therefore started).
-    >         cpu: 0.05
-    >         ## The K8s scheduler uses this information to decide which node to place the Pod on. If there are no nodes with the specified amount of memory, the pod won't be scheduled (and therefore started).
-    >         memory: 32M
-    >       limits:
-    >         ## The Kubelet enforces the limit so that the running container is not allowed to use more CPU resources than the set limit. In case the limit is crossed, the process would be throttled.
-    >         cpu: 0.1
-    >         ## The Kubelet enforces the limit so that the running container is not allowed to use more memory than the set limit. In case the limit is crossed, the process would be terminated with an out-of-memory (OOM) error.
-    >         memory: 64M
+    >         memory: 192M
     >   autoscaling:
     >     http:
     >       vertical:
-    >         ## Enables or disables the Vertical Pod Autoscaler mechanism for http proxy pods. In order for this configuration to take effect, the Vertical Pod Autoscaling mechanism for the cluster should be enabled. See Vertical Pod Auto-Scaling for details
+    >         ## Enables or disables the Vertical Pod Autoscaler mechanism for HTTP proxy pods. For this configuration to take effect, the Vertical Pod Autoscaling mechanism for the cluster should be enabled. See Vertical Pod Auto-Scaling for details.
     >         ## Cannot enable both horizontal and vertical autoscaling. If you want vertical autoscaling deployment.autoscaling.http.horizontal.enabled should not be set to true
     >         enabled: false
     >         ##  The mode in which the Vertical Pod Autoscaler should operate. For more details see https://github.com/kubernetes/autoscaler/tree/master/vertical-pod-autoscaler#quick-start
     >         updateMode: "Off"
+    >         ## Specifies the minimal amount of CPU/memory that will be recommended for each HTTP proxy pod. By default, there is no minimum. There are 2 containers in each HTTP proxy pod.
+    >         #minAllowed:
+    >           #cpu: 0.25
+    >           #memory: 128M
+    >         ## Specifies the minimal amount of CPU/memory that will be recommended for each HTTP proxy pod. By default, there is no minimum. There are 2 containers in each HTTP proxy pod.
+    >         #maxAllowed:
+    >           #cpu: 0.25
+    >           #memory: 128M
     >       horizontal:
-    >         ## Enables or disables the Horizontal Pod Autoscaler mechanism see  Horizontal Pod Autoscaler(Kubernetes documentation) for http proxy pods.
+    >         ## Enables or disables the Horizontal Pod Autoscaler mechanism see  Horizontal Pod Autoscaler(Kubernetes documentation) for HTTP proxy pods.
     >         ## Cannot enable both horizontal and vertical autoscaling.If you want horizontal autoscaling deployment.autoscaling.http.vertical.enabled should not be set to true
     >         enabled: false
-    >         ## Upper limit for the number of http Transparent Proxy replicas to which the autoscaler can scale up. It should be higher than deployment.replicas.http.
+    >         ## Upper limit for the number of HTTP transparent proxy replicas to which the autoscaler can scale up. It should be higher than deployment.replicas.http.
     >         maxReplicaCount: 2
     >         metrics:
-    >           ## Target value of the average CPU metric across all transparent http proxy pods, represented as a percentage of the requested value of the CPU for the pods.
+    >           ## Target value of the average CPU metric across all transparent HTTP proxy pods, represented as a percentage of the requested value of the CPU for the pods.
     >           cpuAverageUtilization: 80
-    >           ## Target value of the average memory metric across all transparent http proxy pods, represented as a percentage of the requested value of the memory for the pods.
+    >           ## Target value of the average memory metric across all transparent HTTP proxy pods, represented as a percentage of the requested value of the memory for the pods.
     >           memoryAverageUtilization: 80
     >     tcp:
     >       horizontal:
-    >         ## Enables or disables the Horizontal Pod Autoscaler mechanism see  Horizontal Pod Autoscaler(Kubernetes documentation) for tcp proxy pods.
-    >         ## Cannot enable both horizontal and vertical autoscaling.If you want horizontal autoscaling deployment.autoscaling.tcp.vertical.enabled should not be set to true
+    >         ## Enables or disables the Horizontal Pod Autoscaler mechanism. See Horizontal Pod Autoscaler(Kubernetes documentation) for TCP proxy pods.
+    >         ## Cannot enable both horizontal and vertical autoscaling. If you want horizontal autoscaling deployment.autoscaling.tcp.vertical.enabled should not be set to true
     >         enabled: false
-    >         ## Upper limit for the number of tcp Transparent Proxy replicas to which the autoscaler can scale up. It should be higher than deployment.replicas.tcp.
+    >         ## Upper limit for the number of TCP transparent proxy replicas to which the autoscaler can scale up. It should be higher than deployment.replicas.tcp.
     >         maxReplicaCount: 2
     >         metrics:
-    >           ## Target value of the average CPU metric across all transparent tcp proxy pods for a given destination instance, represented as a percentage of the requested value of the CPU for the pods.
+    >           ## Target value of the average CPU metric across all transparent TCP proxy pods for a given destination instance, represented as a percentage of the requested value of the CPU for the pods.
     >           cpuAverageUtilization: 80
-    >           ## Target value of the average memory metric across transparent tcp proxy pods for a given destination instance, represented as a percentage of the requested value of the memory for the pods.
+    >           ## Target value of the average memory metric across transparent TCP proxy pods for a given destination instance, represented as a percentage of the requested value of the memory for the pods.
     >           memoryAverageUtilization: 80
     >       vertical:
-    >         ## Enables or disables the Vertical Pod Autoscaler mechanism for tcp proxy pods. In order for this configuration to take effect, the Vertical Pod Autoscaling mechanism for the cluster should be enabled. See Vertical Pod Auto-Scaling for details
+    >         ## Enables or disables the Vertical Pod Autoscaler mechanism for TCP proxy pods. In order for this configuration to take effect, the Vertical Pod Autoscaling mechanism for the cluster should be enabled. See Vertical Pod Auto-Scaling for details.
     >         ## Cannot enable both horizontal and vertical autoscaling. If you want vertical autoscaling deployment.autoscaling.tcp.horizontal.enabled should not be set to true
     >         enabled: false
     >         updateMode: "Off"
+    >         ## Specifies the minimal amount of CPU/memory that will be recommended for each TCP proxy pod. By default, there is no minimum.
+    >         #minAllowed:
+    >           #cpu: 0.025
+    >           #memory: 64M
+    >         ## Specifies the minimal amount of CPU/memory that will be recommended for each TCP proxy pod. By default, there is no minimum.
+    >         #maxAllowed:
+    >           #cpu: 0.025
+    >           #memory: 64M
+    >   priority:
+    >     ## 	Specifies the pod priority of the TP components. By default, there is no priority. For more details about pod priority see https://kubernetes.io/docs/concepts/scheduling-eviction/pod-priority-preemption/
+    >     value: 0
     > config:
+    >   helm:
+    >     ## Skips validation of existing Kubernetes resources during Helm installation/upgrade. When set to true, the chart will not verify the existence of referenced resources (e.g., Connectivity Proxy ConfigMaps, cert-manager Issuers, additional CA Secrets). This is useful for testing helm template generation, CI/CD pipelines, or deploying in environments where referenced resources may not exist yet. Default is false (validation enabled).
+    >     skipExistingResourceValidation: false
+    >   http:
+    >     retry:
+    >       maxRetries: 0
+    >       statusCodes: []
+    >   metrics:
+    >     prometheus:
+    >       enabled: false
     >   logging:
-    >     ## The initial log level across all Transparent Proxy components. Accepted log levels are: trace, debug, info, warn, error, fatal.
+    >     ## The initial log level across all transparent proxy components. Accepted log levels are: trace, debug, info, warn, error, fatal.
     >     ## The log levels can be changed dynamically, see https://help.sap.com/docs/connectivity/sap-btp-connectivity-cf/transparent-proxy-troubleshooting?locale=en-US&q=transparent%20proxy#change-log-levels-of-the-transparent-proxy-components
     >     level: info
-    >   ## Defines the tenant mode in which Transparent Proxy is working in. Default value "dedicated" means that only Destinations in the subaccount defined in Destination Service key could be exposed and accessed via TP.
-    >   ## The other option "shared" shows that the proxy could work with different subscribed tenants to the provider in the service key. Then, on each request "X-Tenant-Subdomain" or "X-Tenant-Id" header becomes required in this mode.
+    >     ## Defines the tenant mode in which transparent proxy is working in. Default value "dedicated" means that only destinations in the subaccount defined in Destination Service key could be exposed and accessed via TP.
+    >     ## The other option "shared" shows that the proxy could work with different subscribed tenants to the provider in the service key. Then, on each request "X-Tenant-Subdomain" or "X-Tenant-Id" header becomes required in this mode.
     >   tenantMode: dedicated
     >   security:
     >     accessControl:
     >       destinations:
-    >         ## Defines the default scope of Destination CRs. Possible values are “namespaced” or “clusterWide”. See https://help.sap.com/docs/connectivity/sap-btp-connectivity-cf/destination-custom-resource-scope?locale=en-US&q=transparent%20proxy
+    >         ## Defines the default scope of Destination CRs. Possible values are "namespaced" or "clusterWide". See https://help.sap.com/docs/connectivity/sap-btp-connectivity-cf/destination-custom-resource-scope?locale=en-US&q=transparent%20proxy
     >         defaultScope: "namespaced"
     >     communication:
     >       internal:
-    >         ## Enables/Disables mTLS communication between the Transparent Proxy components. Make sure to install cert-manager in advance.
-    >         #It should be disabled only in test environments or if you implement your own mTLS solution like Istio for example.
+    >         ## Enables/Disables mTLS communication between the transparent proxy components. Make sure to install cert-manager in advance.
+    >         ## You can disable the encryption at your own risk. It is advisable to disable it only in test environments.
     >         encryptionEnabled: true
     >         ## Certificate management types cert-manager.io(https://cert-manager.io/docs/) and cert.gardener.cloud(https://github.com/gardener/cert-management) are currently supported
-    >         # certManager:
+    >         certManager:
     >             # issuerRef:
     >             ##  The name of the installed cert-manager issuer.
     >             #   name:
@@ -140,19 +190,19 @@ The Transparent Proxy Helm chart is available via the RBSC \(*repository-based s
     >             ##  The namespace of the installed cert-manager issuer(only applicable for cert.gardener.cloud).
     >             #   namespace:
     >             ## Certificate properties are only applicable for cert-manager.io. If specified when using cert.gardener.cloud - will be ignored.
-    >             # certificate:
-    >               # privateKey:
+    >             certificate:
+    >               privateKey:
     >                 ## Check cert-manager private key docs - https://cert-manager.io/docs/reference/api-docs/#cert-manager.io/v1.CertificatePrivateKey
-    >                 # algorithm: ECDSA
+    >                 algorithm: ECDSA
     >                 ## Check cert-manager private key docs - https://cert-manager.io/docs/reference/api-docs/#cert-manager.io/v1.CertificatePrivateKey
-    >                 # encoding: PKCS8
+    >                 encoding: PKCS8
     >                 ## Check cert-manager private key docs - https://cert-manager.io/docs/reference/api-docs/#cert-manager.io/v1.CertificatePrivateKey
-    >                 # size: 256
+    >                 size: 256
     >               ## The duration for which the certificates will be valid. Minimum accepted duration is 1 hour. Value must be in units accepted by Go time.ParseDuration https://golang.org/pkg/time/#ParseDuration
-    >               # duration: 720h
-    >               ## How long before the currently issued certificate’s expiry cert-manager should renew the certificate. Value must be in units accepted by Go time.ParseDuration https://golang.org/pkg/time/#ParseDuration
-    >               # renewBefore: 120h
-    >   ## The mode in which Transparent Proxy operates with the Destinations in the cluster. Possible values are "all" or "labelSelector".
+    >               duration: 720h
+    >               ## How long before the currently issued certificate's expiry cert-manager should renew the certificate. Value must be in units accepted by Go time.ParseDuration https://golang.org/pkg/time/#ParseDuration
+    >               renewBefore: 120h
+    >   ## The mode in which transparent proxy operates with the destinations in the cluster. Possible values are "all" or "labelSelector".
     >   ## If "labelSelector" set, TP operates only in namespaces labeled with "transparent-proxy.connectivity.api.sap/namespace:<namespace where TP is installed in>"
     >   managedNamespacesMode: "all"
     >   manager:
@@ -160,33 +210,45 @@ The Transparent Proxy Helm chart is available via the RBSC \(*repository-based s
     >     ## It is not advisable to set this value higher than 5 if there are frequent updates on the destinations.
     >     executionIntervalMinutes: 3
     >   integration:
+    >     ## Integration with service mesh. Currently, only Istio service mesh is supported. The only acceptable value is 'enabled'. If it is set, the Transparent proxy components will be integrated in the mesh, otherwise they will be exclusively removed from the mesh.
+    >     #serviceMesh:
+    >       #istio:
+    >         #istio-injection: enabled
     >     destinationService:
     >       ## Name of the default destination service instance to be used when 'destinationServiceInstanceName' is not provided in the Destination Custom Resource spec.
-    >       defaultInstanceName: <default-dest-service-instance-name>
-    >       ## The connect timeout used when getting access tokens and destination service clients. [1, 60] seconds allowed.
+    >       #defaultInstanceName: dest-service-instance
+    >       ## The connect timeout used when getting access tokens and Destination service clients. [1, 60] seconds allowed.
     >       connectionTimeoutSeconds: 5
-    >       ## The read timeout used when getting access tokens and destination service clients. [1, 60] seconds allowed.
+    >       ## The read timeout used when getting access tokens and Destination service clients. [1, 60] seconds allowed.
     >       readTimeoutSeconds: 10
-    >       instances:
-    >     ##     Name of the destination service instance that is described. It could be used as config.integration.destinationService.defaultInstanceName or it can be referenced in the Destination Custom Resource spec as destinationServiceInstanceName.
-    >           - name: <dest-service-instance-name>
-    >             serviceCredentials:
-    >     ##         The key in the Destination service secret resource, which holds the base64 encoded value of the destination service key. (info) Make sure to provide the right key for an existing secret. Required when Transparent Proxy should create secret and not required when describing an existing secret.
-    >               secretKey: <secret-key>
-    >     ##         The name of the existing secret, which holds the credentials for the Destination service or the name of the secret to be created based on "secretName", "secretData", "secretKey" fields.
-    >               secretName: <secret-name>
+    >       instances: []
+    >     ##     Local name of the Destination service instance that is described. It could be used as config.integration.destinationService.defaultInstanceName or it can be referenced in the destination custom resource spec as destinationServiceInstanceName.
+    >     #      - name: dest-service-instance
+    > 
+    >     #        serviceCredentials:
+    >     ##         The key in the Destination service secret resource, which holds the base64 encoded value of the Destination service key.
+    >     #          secretKey: secret
+    >     ##         The name of the existing secret, which holds the credentials for the Destination service.
+    >     #          secretName: dest-svc-secret
     >     ##         The base64 encoded value of the service key, obtained from the Destination service instance. Required when Transparent Proxy should create secret and not required when describing an existing secret.
-    >               secretData: <secret-data>
-    >     ##         The namespace of the existing secret to be used, which holds the credentials for the Destination service. This field should not be present if there is no existing secret and Transparent Proxy would create one based on "secretName", "secretData", "secretKey" fields
+    >     #          secretData:
+    >     ##         The namespace of the existing secret to be used, which holds the credentials for the Destination service.
     >     #          secretNamespace:
     >     #          privateKey:
-    >     ##           The name of K8s secret, which holds the private key to authenticate if using an x509-based service key to the Destination service.
+    >     ##           The name of K8s secret, which holds the private key to authenticate if using an x.509-based service key to the Destination service.
     >     #            secretName: x509-svc-key-private-key
-    >     ##           The name of the internal key inside the K8s secret holding the private key to authenticate if using an x509-based service key to the Destination service.
+    >     ##           The name of the internal key inside the K8s secret holding the private key to authenticate if using an x.509-based service key to the Destination service.
     >     #            secretInternalKey: pk.pem
+    >     ##           The namespace of the existing secret to be used, which holds the private key.
+    >     #            secretNamespace:
     >     connectivityProxy:
-    >       ## The connect timeout is to be used when accessing an HTTP system with ProxyType=OnPremise through the Connectivity Proxy. [1, 60] seconds allowed.
+    >       ## The K8s service name and namespace associated with the connectivity proxy workload.
+    >       #serviceName: connectivity-proxy
+    >       ## The connect timeout is to be used when accessing an HTTP system with ProxyType=OnPremise through the connectivity proxy. [1, 60] seconds allowed.
     >       connectionTimeoutSeconds: 1
+    >     ztis:
+    >       ## Defines the K8s socket path for the SPIRE agent connection. This path is where the SPIRE agent exposes its UNIX domain socket. The transparent proxy components use this socket to request certificates and verify identities.
+    >       socketPath: /run/spire/agent-sockets/spire-agent.sock
     > ```
 
 
@@ -212,7 +274,7 @@ helm install transparent-proxy oci://registry-1.docker.io/sapse/transparent-prox
 
 **Registry:** 73554900100900006891.helmsrv.cdn.repositories.cloud.sap
 
-**Tag:** 1.9.2
+**Tag:** 1.10.0
 
 **Authorization**: See [RBSC documentation](https://help.sap.com/viewer/0a64be17478d4f5ba45d14ab62b0d74c/Cloud/en-US/7e83dfc309834942b441fc2106c5b7f5.html).
 

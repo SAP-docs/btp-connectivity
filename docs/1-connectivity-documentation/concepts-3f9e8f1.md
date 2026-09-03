@@ -7,6 +7,8 @@ Find information on basic concepts of the Transparent Proxy for Kubernetes.
 **Related Information**  
 
 
+[Actions](actions-1785b5b.md "Actions let the Transparent Proxy attach a client-side authentication flow to a destination. When an action is configured, the Transparent Proxy obtains a token at request time and sets it on the request forwarded to the target system.")
+
 [Cache](cache-093f280.md "Find informationn on cache types for the Transparent Proxy for Kubernetes.")
 
 [Destination Custom Resource](destination-custom-resource-fc7951e.md "A destination custom resource represents an SAP BTP destination from the Destination service that can be used by the Transparent Proxy.")

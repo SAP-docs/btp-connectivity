@@ -383,6 +383,7 @@
         -   [Transparent Proxy in the Kyma Environment](1-connectivity-documentation/transparent-proxy-in-the-kyma-environment-1700cfe.md)
             -   [Create a Destination Custom Resource in the Kyma Environment](1-connectivity-documentation/create-a-destination-custom-resource-in-the-kyma-environment-65cf433.md)
         -   [Concepts](1-connectivity-documentation/concepts-3f9e8f1.md)
+            -   [Actions](1-connectivity-documentation/actions-1785b5b.md)
             -   [Cache](1-connectivity-documentation/cache-093f280.md)
             -   [Destination Custom Resource](1-connectivity-documentation/destination-custom-resource-fc7951e.md)
                 -   [Restrict Access Using Scoping](1-connectivity-documentation/restrict-access-using-scoping-bd47cbe.md)

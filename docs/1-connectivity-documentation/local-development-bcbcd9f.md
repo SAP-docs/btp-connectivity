@@ -28,52 +28,58 @@ Before you begin, ensure the following prerequisites are set up:
 
 This guide outlines the steps to set up port forwarding and use a Transparent Proxy service from your local environment. Follow the steps below to list the services, forward ports, and consume services.
 
-1.  List the Kubernetes services in the *sap-transp-proxy-system* namespace:
+1.  Find the Kubernetes Service that match your destination custom resource name and namespace.
+
+    Search by labels containing destination custom resource attributes\(e.g. name=example-dest, namespace=client-namespace, tp-namespace=sap-transp-proxy-system\):
 
     > ### Sample Code:  
     > ```
-    > kubectl get svc -n <transparent-proxy-namespace>
+    > kubectl get svc -n <tp-namespace> -l transparent-proxy.connectivity.api.sap/parent-destination-cr-name=<name>,transparent-proxy.connectivity.api.sap/parent-destination-cr-namespace=<namespace> -o yaml
     > ```
-
-2.  Get the name of the desired service from the result of the execution of the previous command:
 
     > ### Sample Code:  
     > ```
-    > NAME                                        TYPE        CLUSTER-IP       EXTERNAL-IP   PORT(S)    AGE
-    > example-dest-no-auth                        ClusterIP   10.108.120.25    <none>        80/TCP     16h
-    > sap-transp-proxy-healthcheck                ClusterIP   10.109.111.169   <none>        80/TCP     20h
-    > sap-transp-proxy-int-healthcheck            ClusterIP   10.107.172.32    <none>        80/TCP     20h
-    > sap-transp-proxy-manager                    ClusterIP   10.110.144.77    <none>        80/TCP     20h
+    > apiVersion: v1
+    > kind: Service
+    > metadata:
+    >   creationTimestamp: "2025-11-22T21:44:48Z"
+    >   labels:
+    >     transparent-proxy.connectivity.api.sap/parent-destination-cr-name: example-dest
+    >     transparent-proxy.connectivity.api.sap/parent-destination-cr-namespace: client-namespace
+    >   name: example-dest-d3q12
+    >   namespace: sap-transp-proxy-system
+    > ...
+    > 
     > ```
 
-3.  Port forward the selected service to your local machine. Replace \`<local-port\>\` with any available port number on your local machine \(for example, \`8042\`\), and \`<k8s-svc-port\>\` with the port number used by the Kubernetes service \(for example, \`80\`\).
+2.  [Port forward](https://kubernetes.io/docs/reference/kubectl/generated/kubectl_port-forward/) the selected service to your local machine. Replace \`<local-port\>\` with any available port number on your local machine \(for example, \`8042\`\), and \`<k8s-svc-port\>\` with the port number used by the Kubernetes service \(for example, \`80\`\).
 
     > ### Sample Code:  
     > ```
-    > kubectl port-forward svc/<destiation-cr-name> <local-port>:<k8s-svc-port> -n <transparent-proxy-namespace>
+    > kubectl port-forward svc/<cluster-ip-service-name> <local-port>:<k8s-svc-port> -n <transparent-proxy-namespace>
     > ```
 
-    For example, to port forward \`example-dest-no-auth\` service to local port \`8042\`, execute:
+    For example, to port forward \`example-dest-no-auth-d3q12\` service to local port \`8042\`, execute:
 
     > ### Sample Code:  
     > ```
-    > kubectl port-forward svc/example-dest-no-auth 8042:80 -n <transparent-proxy-namespace>
+    > kubectl port-forward svc/example-dest-d3q12 8042:80 -n <transparent-proxy-namespace>
     > ```
 
-4.  When consuming the service from your local environment, ensure that you rewrite the \`Host\` header with the destination custom resource name.
+3.  When making requests from your local environment, **include the `Host` header** with the `ClusterIP` service name.
 
     **Consumption Using curl**
 
     > ### Sample Code:  
     > ```
-    > curl localhost:<local-port> -H "Host: <destination-cr-name>"
+    > curl localhost:<local-port> -H "Host: <cluster-ip-service-name>"
     > ```
 
     **Consumption of `example-dest-no-auth` on Port 8042 Using curl** 
 
     > ### Sample Code:  
     > ```
-    > curl localhost:8042  -H "Host: example-dest-no-auth"
+    > curl localhost:8042 -H "Host: example-dest-d3q12"
     > ```
 
     > ### Caution:  

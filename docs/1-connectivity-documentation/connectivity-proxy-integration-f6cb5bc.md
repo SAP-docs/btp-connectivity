@@ -55,6 +55,74 @@ The Connectivity Proxy is a Kubernetes component that connects workloads running
 >             locallyConfiguredRegionId: <locally-configured-conn-proxy-region-id>
 > ```
 
+
+
+## Connectivity Proxy in Untrusted Mode
+
+The Connectivity Proxy can be configured to require authentication on every incoming request. To do so, configure the following flags on the Connectivity Proxy CR in Kyma, or in the Connectivity Proxy Helm values when deployed on any other Kubernetes cluster:
+
+-   `config.servers.proxy.http.enableProxyAuthorization`: when `true`, the Transparent Proxy automatically mints a Bearer token for the provider subaccount and injects it on every outbound HTTP request to the Connectivity Proxy.
+-   `config.servers.proxy.socks5.enableProxyAuthorization`: when `true`, the Transparent Proxy automatically mints a Bearer token for the provider subaccount and uses it for SOCKS5 authentication on every outbound TCP request to the Connectivity Proxy.
+
+-   `config.servers.proxy.rfcAndLdap.enableProxyAuthorization`: when `true`, the Transparent Proxy automatically mints a Bearer token for the provider subaccount and includes it in the LDAP/RFC handshake to the Connectivity Proxy.
+
+
+The flags can be changed at runtime without restarting the Transparent Proxy. The new value propagates to all Transparent Proxy pods within a few seconds.
+
+**Prerequisite: `allowedClientIds`**
+
+Before enabling any of these flags, you *must* add the Transparent Proxy's `client_id` to the Connectivity Proxy's allowlist. Otherwise, the Connectivity Proxy rejects every Transparent Proxy request and all on-premise traffic fails. The Transparent Proxy `client_id` is the *provider subaccount `client_id` of the Connectivity Proxy instance* used by the Transparent Proxy.
+
+The allowlist is stored in the `connectivity-proxy-region-configurations` Secret in the Connectivity Proxy namespace, under `allowedClientIds`. The exact path depends on whether the Connectivity Proxy is configured in *multi-region* or *single-region* mode. Each region has its own `allowedClientIds` list, so you must add the provider subaccount `client_id` to every region to which the Transparent Proxy can route:
+
+**Example: Allowed Client IDs in Multi-Region Mode**
+
+> ### Sample Code:  
+> ```
+>  {
+> 
+>     "default": {
+> 
+>       "allowedClientIds": ["<provider-subaccount-client-id>"],
+> 
+>       "dependencies": { ... }
+> 
+>     },
+> 
+>     "eu10": {
+> 
+>       "allowedClientIds": ["<provider-subaccount-client-id>"],
+> 
+>       "dependencies": { ... }
+> 
+>     }
+> 
+>   } 
+> ```
+
+In *single-region* mode, the JSON has a flat top-level structure \(no region keys\). In this case, add the provider subaccount `client_id` to the single top-level `allowedClientIds` list:
+
+**Example: Allowed Client IDs in Single-Region Mode**
+
+> ### Sample Code:  
+> ```
+>  {
+> 
+>     "allowedClientIds": ["<provider-subaccount-client-id>"],
+> 
+>     "dependencies": { ... }
+> 
+>   } 
+> ```
+
+After updating the Secret, restart the Connectivity Proxy *StatefulSet* to make it pick up the new allowlist.
+
+**HTTP: customer-supplied authorization \(optional\)**
+
+If your application already has a Connectivity Proxy-compatible Bearer token, it can supply it explicitly with the header `connectivity-proxy-authorization`: Bearer <jwt\>.
+
+The Transparent Proxy honors this value and forwards it to the Connectivity Proxy. If the header is absent, the Transparent Proxy automatically mints a token as described above. The header name avoids a collision with the application's use of the standard `Proxy-Authorization` header.
+
 **Related Information**  
 
 

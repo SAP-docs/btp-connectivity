@@ -10,33 +10,33 @@ Get logs and change log levels for the Transparent Proxy for Kubernetes.
 
 ## Get Logs of the Transparent Proxy Components
 
-The Transparent Proxy consists of a Transparent Proxy manager, transparent HTTP proxy, transparent TCP proxy, and Transparent Proxy health check.
+The Transparent Proxy consists of a Transparent Proxy Manager, Transparent HTTP Proxy, Transparent TCP Proxy, Transparent Proxy Health Check, and Transparent Proxy Operator.
 
-1.  To get the logs of the Transparent Proxy manager, execute:
+1.  To get the logs of the Transparent Proxy Manager, execute:
 
     ```
     kubectl logs -l transparent-proxy.connectivity.api.sap/component=manager --tail=-1 -n <installation-namespace> > transparent-proxy-manager.log
     ```
 
-2.  To get the logs of the transparent HTTP proxy, execute:
+2.  To get the logs of the Transparent HTTP Proxy, execute:
 
     ```
     kubectl logs -l transparent-proxy.connectivity.api.sap/component=http-proxy --all-containers --tail=-1 -n <installation-namespace> > transparent-http-proxy.log
     ```
 
-3.  To get the logs of the transparent TCP proxy, execute:
+3.  To get the logs of the Transparent TCP Proxy, execute:
 
     ```
     kubectl logs -l transparent-proxy.connectivity.api.sap/component=tcp-proxy --tail=-1 -n <installation-namespace> > transparent-tcp-proxy.log
     ```
 
-4.  To get the logs of the Transparent Proxy health check, execute:
+4.  To get the logs of the Transparent Proxy Health Check, execute:
 
     ```
     kubectl logs -l transparent-proxy.connectivity.api.sap/component=healthcheck --tail=-1 -n <installation-namespace> > transparent-proxy-health-check.log
     ```
 
-5.  To get the logs of the Transparent Proxy Operator \(installed only when [Transparent Proxy is enabled as a Kyma Module in the Kyma environment](transparent-proxy-in-the-kyma-environment-1700cfe.md)\) execute:
+5.  To get the logs of the Transparent Proxy Operator \(not installed when Transparent Proxy is deployed via Helm\) execute:
 
     ```
     kubectl logs -l transparent-proxy.connectivity.api.sap/component=operator --tail=-1 -n <installation-namespace> > transparent-proxy-operator.log
@@ -71,36 +71,73 @@ kubectl describe destinations -n <installation-namespace>
 
 When the default logging level is not sufficient for debugging the issue you are facing, you can change the log level to get more insight about the problem.
 
-Changing a log level is done without any downtime and requires no restarts. All you need to do is invoke a simple command on the pod of a Transparent Proxy component where you need to gain more insight. Here are some examples:
+Changing a log level is done without any downtime and requires no restarts. All you need to do is invoke a simple command in the namespace of the Transparent Proxy to gain more insight about a component. Here are some examples:
 
-1.  To change the log level of the Transparent Proxy manager, execute:
+**Prerequisites:**
 
-    ```
-    kubectl exec <transparent proxy manager pod> -n <installation-namespace> -it -- /etc/logging/change-log-level DEBUG
-    ```
+-   Kubectl version: Client v1.25+ \(Recommended: v1.28+\).
+-   Cluster version: Kubernetes v1.25+ \(ephemeral containers must be enabled\).
+-   Version compatibility: The kubectl client version must be within +/- 1 minor version of the Kubernetes server version.
+    -   Example: If the server is v1.33, the client must be v1.32, v1.33, or v1.34.
 
-2.  To change the log level of the transparent HTTP proxy, execute:
+        > ### Note:  
+        > Larger version gaps cause API mismatches that break the `--profile` flag.
 
-    ```
-    kubectl exec <transparent http proxy pod> -n <installation-namespace> -it -- /etc/logging/change-log-level DEBUG
-    ```
 
-3.  To change the log level of a transparent TCP proxy, execute:
 
-    ```
-    kubectl exec <transparent tcp proxy pod> -n <installation-namespace> -it -- /etc/logging/change-log-level DEBUG
-    ```
-
-4.  To change the log level of the Transparent Proxy health check, execute:
+1.  To change the log level of the Transparent Proxy Manager, execute:
 
     ```
-    kubectl exec <transparent proxy health check pod> -n <installation-namespace> -it -- /etc/logging/change-log-level DEBUG
+    kubectl debug -it <pod-name> \
+    		--namespace=<installation-namespace> \
+    		--image=alpine \
+    		--target=sap-transp-proxy-manager \
+    		--profile=sysadmin \
+    		-- sh -c "printf 'log:\n  level: <log-level>' > /proc/1/root/etc/logging/logger-config.yaml"
+    ```
+
+2.  To change the log level of the Transparent HTTP Proxy, execute:
+
+    ```
+    kubectl debug -it <pod-name> \
+    	    --namespace=<installation-namespace> \
+    		--image=alpine \
+    		--target=sap-transp-proxy-http \
+    		--profile=sysadmin \
+    		-- sh -c "printf 'log:\n  level: <log-level>' > /proc/1/root/etc/logging/logger-config.yaml"
+    ```
+
+3.  To change the log level of a Transparent TCP Proxy, execute:
+
+    ```
+    kubectl debug -it <pod-name> \
+    	    --namespace=<installation-namespace> \
+    		--image=alpine \
+    		--target=sap-transp-proxy-tcp \
+    		--profile=sysadmin \
+    		-- sh -c "printf 'log:\n  level: <log-level>' > /proc/1/root/etc/logging/logger-config.yaml"
+    ```
+
+4.  To change the log level of the Transparent Proxy Health Check, execute:
+
+    ```
+    kubectl debug -it <pod-name> \
+    	    --namespace=<installation-namespace> \
+    		--image=alpine \
+    		--target=sap-transp-proxy-healthcheck \
+    		--profile=sysadmin \
+    		-- sh -c "printf 'log:\n  level: <log-level>' > /proc/1/root/etc/logging/logger-config.yaml"
     ```
 
 5.  To change the log level of the Transparent Proxy Operator \(installed only when [Transparent Proxy is enabled as a Kyma Module in the Kyma environment](transparent-proxy-in-the-kyma-environment-1700cfe.md)\) execute:
 
     ```
-    kubectl exec <transparent proxy operator pod> -n <installation-namespace> -it -- /etc/logging/change-log-level DEBUG
+    kubectl debug -it <pod-name> \
+    	    --namespace=<installation-namespace> \
+    		--image=alpine \
+            --target=sap-transp-proxy-operator \
+            --profile=sysadmin \
+            -- sh -c "printf 'log:\n  level: <log-level>' > /proc/1/root/etc/logging/logger-config.yaml"
     ```
 
 

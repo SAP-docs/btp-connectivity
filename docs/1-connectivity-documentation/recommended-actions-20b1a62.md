@@ -68,12 +68,8 @@ This indicates that the Transparent Proxy is currently considered operational. H
 4.  Restart the Transparent HTTP Proxy and Transparent TCP Proxy instances. Example via `kubectl`:
 
     ```
-    k delete po -l transparent-proxy.connectivity.api.sap/component=http-proxy -n <installation-namespace>
-    
-    ```
-
-    ```
-    k delete po -l transparent-proxy.connectivity.api.sap/component=tcp-proxy -n <installation-namespace>
+    kubectl delete po -l transparent-proxy.connectivity.api.sap/component=http-proxy -n <installation-namespace>
+    kubectl delete po -l transparent-proxy.connectivity.api.sap/component=tcp-proxy -n <installation-namespace> 
     ```
 
 5.  Collect the logs from the Transparent Proxy components after the restart completes.
@@ -98,12 +94,8 @@ This indicates that the Transparent Proxy itself is indeed having issues. Please
 3.  Restart the Transparent HTTP Proxy and Transparent TCP Proxy instances. Example via `kubectl`:
 
     ```
-    k delete po -l transparent-proxy.connectivity.api.sap/component=http-proxy -n <installation-namespace>
-    
-    ```
-
-    ```
-    k delete po -l transparent-proxy.connectivity.api.sap/component=tcp-proxy -n <installation-namespace>
+    kubectl delete po -l transparent-proxy.connectivity.api.sap/component=http-proxy -n <installation-namespace>
+    kubectl delete po -l transparent-proxy.connectivity.api.sap/component=tcp-proxy -n <installation-namespace>
     ```
 
 4.  Collect logs from the Transparent Proxy after the restart completes.

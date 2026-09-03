@@ -372,7 +372,7 @@ Kubernetes service name and namespace associated with the Connectivity Proxy wor
 </td>
 <td valign="top">
 
-None
+testservice.testnamespace
 
 </td>
 <td valign="top">
@@ -457,12 +457,12 @@ If the configuration is changed, it triggers a restart.
 </td>
 <td valign="top">
 
-"enabled"
+ 
 
 </td>
 <td valign="top">
 
- 
+"enabled"
 
 </td>
 <td valign="top">
@@ -589,7 +589,7 @@ False
 </td>
 <td valign="top">
 
-The execution interval in minutes, on which the destination resource updates are fetched and applied to the cluster.
+The execution interval in minutes, on which the destination resource updates are fetched and applied to the configurations.
 
 > ### Tip:  
 > We recommend that you do not set this value higher than 5, if there are frequent updates on destinations.
@@ -672,7 +672,7 @@ true
 </td>
 <td valign="top">
 
- 
+False
 
 </td>
 </tr>
@@ -750,12 +750,12 @@ The namespace of the installed cert-manager issuer. Only applicable for cert.gar
 </td>
 <td valign="top">
 
- 
+sap-transp-proxy-issuer
 
 </td>
 <td valign="top">
 
- 
+False when encryption is disabled
 
 </td>
 </tr>
@@ -774,12 +774,12 @@ Only applicable for cert-manager.io \([https://cert-manager.io/docs/](https://ce
 </td>
 <td valign="top">
 
- 
+ECDSA
 
 </td>
 <td valign="top">
 
-ECDSA
+ 
 
 </td>
 <td valign="top">
@@ -803,12 +803,12 @@ Only applicable for cert-manager.io \([https://cert-manager.io/docs/](https://ce
 </td>
 <td valign="top">
 
- 
+ECDSA
 
 </td>
 <td valign="top">
 
-PKCS8
+ 
 
 </td>
 <td valign="top">
@@ -832,12 +832,12 @@ Only applicable for cert-manager.io \([https://cert-manager.io/docs/](https://ce
 </td>
 <td valign="top">
 
- 
+256
 
 </td>
 <td valign="top">
 
-256
+ 
 
 </td>
 <td valign="top">
@@ -861,12 +861,12 @@ Only applicable for cert-manager.io \([https://cert-manager.io/docs/](https://ce
 </td>
 <td valign="top">
 
- 
+720h
 
 </td>
 <td valign="top">
 
-720h
+ 
 
 </td>
 <td valign="top">
@@ -890,12 +890,12 @@ Only applicable for cert-manager.io \([https://cert-manager.io/docs/](https://ce
 </td>
 <td valign="top">
 
- 
+240h
 
 </td>
 <td valign="top">
 
-240h
+ 
 
 </td>
 <td valign="top">
@@ -954,7 +954,7 @@ Name of the destination service instance that is described. You can use it as `c
 </td>
 <td valign="top">
 
-False
+True
 
 </td>
 </tr>
@@ -971,7 +971,7 @@ The name of the existing secret, which holds the credentials for the Destination
 </td>
 <td valign="top">
 
-destination-service-key
+ 
 
 </td>
 <td valign="top">
@@ -981,7 +981,7 @@ destination-service-key
 </td>
 <td valign="top">
 
-False
+True
 
 </td>
 </tr>
@@ -996,7 +996,7 @@ False
 The key in the Destination service secret resource, which holds the base64-encoded value of the destination service key.
 
 > ### Note:  
-> Make sure you provide the right key for an existing secret. Required when the Transparent Proxy should create a secret and not required when describing an existing secret.
+> Make sure you provide the right key for an existing secret.
 
 
 
@@ -1013,7 +1013,7 @@ The key in the Destination service secret resource, which holds the base64-encod
 </td>
 <td valign="top">
 
-False
+True
 
 </td>
 </tr>
@@ -1089,7 +1089,7 @@ The name of the Kubenetes secret, which holds the private key to authenticate if
 </td>
 <td valign="top">
 
-x509-svc-key-private-key
+ 
 
 </td>
 <td valign="top">
@@ -1116,7 +1116,7 @@ The name of the internal key inside the Kubenetes secret holding the private key
 </td>
 <td valign="top">
 
-pk.pem
+ 
 
 </td>
 <td valign="top">
@@ -1583,6 +1583,114 @@ The Kubelet enforces the limit so that the running container is not allowed to u
 <td valign="top">
 
 
+
+</td>
+<td valign="top">
+
+False
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+`deployment.resources.manager.request.cpu`
+
+</td>
+<td valign="top">
+
+The Kubernetes scheduler uses this information to decide which node to place the pod on. If there are no nodes with the specified amount of CPU resources, the pod won't be scheduled \(and therefore started\).
+
+</td>
+<td valign="top">
+
+0.4
+
+</td>
+<td valign="top">
+
+ 
+
+</td>
+<td valign="top">
+
+False
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+`deployment.resources.manager.request.memory` 
+
+</td>
+<td valign="top">
+
+The Kubernetes scheduler uses this information to decide which node to place the Pod on. If there are no nodes with the specified amount of memory, the pod won't be scheduled \(and therefore started\).
+
+</td>
+<td valign="top">
+
+192M
+
+</td>
+<td valign="top">
+
+ 
+
+</td>
+<td valign="top">
+
+False
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+`deployment.resources.manager.limits.cpu`
+
+</td>
+<td valign="top">
+
+The Kubernetes enforces the limit so that the running container is not allowed to use more CPU resources than the set limit. In case the limit is crossed, the process would be throttled.
+
+</td>
+<td valign="top">
+
+0.4
+
+</td>
+<td valign="top">
+
+ 
+
+</td>
+<td valign="top">
+
+False
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+`deployment.resources.manager.limits.memory` 
+
+</td>
+<td valign="top">
+
+The Kubelet enforces the limit so that the running container is not allowed to use more memory than the set limit. In case the limit is crossed, the process would be terminated with an out-of-memory \(OOM\) error.
+
+</td>
+<td valign="top">
+
+192M
+
+</td>
+<td valign="top">
+
+ 
 
 </td>
 <td valign="top">

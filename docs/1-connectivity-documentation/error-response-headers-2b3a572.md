@@ -898,7 +898,7 @@ Transparent Proxy
 </td>
 <td valign="top">
 
-Make sure you provide correct Connectivity proxy serviceName in Helm Configurations.
+Make sure you provide correct Connectivity Proxy serviceName in Helm Configurations.
 
 </td>
 </tr>
@@ -1229,12 +1229,39 @@ You should either pass SAP-Connectivity-Region-Configuration-Id header or static
 <tr>
 <td valign="top">
 
+500 Internal Server Error
+
+</td>
+<td valign="top">
+
+Invalid Connectivity Proxy instance configuration. Contact the local Kubernetes cluster administrator to inspect the Connectivity Proxy deployment configuration.
+
+</td>
+<td valign="top">
+
+XSUAA/IAS
+
+</td>
+<td valign="top">
+
+ 
+
+</td>
+<td valign="top">
+
+Check the provided header "connectivity-proxy-authorization" or Connectivity Proxy configuration secret for valid credentials.
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
 502 Bad Gateway
 
 </td>
 <td valign="top">
 
-Invalid Connectivity proxy instance configuration. Contact the local Kubernetes cluster administrator to inspect the Connectivity Proxy deployment configuration.
+Invalid Connectivity Proxy instance configuration. Contact the local Kubernetes cluster administrator to inspect the Connectivity Proxy deployment configuration.
 
 </td>
 <td valign="top">

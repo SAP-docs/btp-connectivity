@@ -183,6 +183,45 @@ In the destination custom resource spec you can describe on which port you would
 >     port: <service-port>
 > ```
 
+**Configurable Target-System Timeouts** 
+
+The destination custom resource supports two optional integer fields that set default timeouts for calls to the target system:
+
+-   `spec.readTimeout`: the socket read timeout, in seconds \(allowed range `1–86400`, that is, up to 24 h\).
+-   `spec.connectTimeout`: the connection timeout, in seconds \(allowed range `1–60`\).
+
+
+
+These are defaults that apply to every tenant consuming the destination.
+
+Precedence \(highest first\):
+
+1.  the value in the individual destination configuration \(`URL.socketReadTimeoutInSeconds` / `URL.connectionTimeoutInSeconds`\), if set.
+
+2.  the CR-level `spec.readTimeout` / `spec.connectTimeout`, if set.
+
+3.  the built-in default
+
+    -   read timeout: 30 s
+    -   connect timeout: the transparent proxy's configured destination service connection timeout, 5 s by default
+
+
+Both fields apply to **HTTP destinations only**; they have no effect on TCP destinations. Values outside the allowed range are rejected \(the destination CR reports ***ReadTimeoutNotSupported*** / ***ConnectTimeoutNotSupported*** in its status\). Both fields can also be set from the Kyma dashboard.
+
+> ### Sample Code:  
+> ```
+> apiVersion: destination.connectivity.api.sap/v1
+> kind: Destination 
+> metadata: 
+>   name: <destination-cr-name>
+> spec:   
+>   destinationRef:
+>     name: <destination-name>
+>   destinationServiceInstanceName: <dest-service-instance-name> // can be omitted if config.destinationService.defaultInstanceName is provided
+>   readTimeout: 200
+>   connectTimeout: 100
+> ```
+
 
 
 <a name="loiofc7951e80cb0423ebc0d35e3443c32dc__section_sss_zmc_3cc"/>
