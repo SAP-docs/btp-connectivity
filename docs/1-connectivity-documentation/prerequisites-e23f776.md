@@ -4028,10 +4028,6 @@ China North - Azure
 
 \(`cf.cn20.hana.ondemand.com`\)
 
-**New domain \(as of November 15, 2026\):**
-
-**\(cn20.uc.platform.cloud.sap\)**
-
 </td>
 <td valign="top" colspan="2">
 
@@ -4071,10 +4067,6 @@ connectivitycertsigning.cf.cn20.hana.ondemand.com
 
 connectivitytunnel.cf.cn20.hana.ondemand.com
 
-**New host \(as of November 15, 2026\):**
-
-**connectivitytunnel.cn20.uc.platform.cloud.sap**
-
 </td>
 <td valign="top">
 
@@ -4093,10 +4085,6 @@ connectivitytunnel.cf.cn20.hana.ondemand.com
 China \(Shanghai\) - Alibaba Cloud
 
 \(`cf.cn40.platform.sapcloud.cn`\)
-
-**New domain \(as of November 15, 2026\):**
-
-**\(cn40.uc.platform.cloud.sap\)**
 
 </td>
 <td valign="top" colspan="2">
@@ -4136,10 +4124,6 @@ connectivitycertsigning.cf.cn40.platform.sapcloud.cn
 <td valign="top" colspan="2">
 
 connectivitytunnel.cf.cn40.platform.sapcloud.cn
-
-**New host \(as of November 15, 2026\):**
-
-**connectivitytunnel.cn40.uc.platform.cloud.sap**
 
 </td>
 <td valign="top">
