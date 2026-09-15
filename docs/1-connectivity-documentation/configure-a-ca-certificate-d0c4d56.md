@@ -34,6 +34,9 @@ The Cloud Connector uses the configured CA approach to issue short-lived certifi
 
 To issue short-lived certificates that are used for principal propagation to a back-end system, you can import an X.509 client certificate into the Cloud Connector. This CA certificate must be provided as *PKCS\#12* file containing the \(intermediate\) certificate, the corresponding private key, and the CA root certificate that signed the intermediate certificate \(plus the certificates of any other intermediate CAs, if the certificate chain includes more than those two certificates\).
 
+> ### Caution:  
+> Currently, only RSA certificates can be used as CA certificate. ECDSA certificates won't work at runtime, even if they could be imported successfully.
+
 Use either of the following options to install a local CA certificate:
 
 -   Option 1: Choose the PKCS\#12 file from the file system, using the file upload dialog. For the import process, you must also provide the file password.
