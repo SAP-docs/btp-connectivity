@@ -1334,5 +1334,59 @@ Check if the Connectivity Proxy service name provided through integration.connec
 
 </td>
 </tr>
+<tr>
+<td valign="top">
+
+400 Bad Request
+
+</td>
+<td valign="top">
+
+‘x-tenant-id‘ cannot be used when the authorization server for the given Destination service instance is IAS.
+
+</td>
+<td valign="top">
+
+Transparent Proxy
+
+</td>
+<td valign="top">
+
+ 
+
+</td>
+<td valign="top">
+
+Passing 'x-tenant-id' header when the authorization to the Destination service is done using IAS is not supported.
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+400 Bad Request
+
+</td>
+<td valign="top">
+
+Authorization header cannot be set when authentication method is OAuth2TechnicalUserPropagation.
+
+</td>
+<td valign="top">
+
+Transparent Proxy
+
+</td>
+<td valign="top">
+
+ 
+
+</td>
+<td valign="top">
+
+Omit the 'Authorization' header when the authentication method is OAuth2TechnicalUserPropagation.
+
+</td>
+</tr>
 </table>
 

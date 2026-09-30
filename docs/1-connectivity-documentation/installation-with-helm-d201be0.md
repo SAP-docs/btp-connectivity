@@ -5,7 +5,7 @@
 Use the Helm chart to configure and manage the lifecycle of the Transparent Proxy.
 
 > ### Note:  
-> Current version of the Transparent Proxy is 1.10.0.
+> Current version of the Transparent Proxy is 1.10.1.
 
 The Transparent Proxy delivery includes a Helm chart that you can use for lifecycle management. The Helm allows full configuration via [the standard Helm method of a "values.yaml" file](https://helm.sh/docs/chart_template_guide/values_files/).
 
@@ -58,6 +58,8 @@ The Transparent Proxy Helm chart is available via the RBSC \(*repository-based s
     >     #pullSecret: ""
     >     ## Тhe version of the transparent proxy images that are to be deployed. By default, it is the chart version
     >     #tag:
+    >     ## The full image used by the manager and healthcheck config-init containers.
+    >     initContainer: docker.io/library/alpine:3.22.2
     >   replicas:
     >     ## Тhe amount of transparent HTTP proxy pods to start.
     >     http: 1
@@ -167,6 +169,9 @@ The Transparent Proxy Helm chart is available via the RBSC \(*repository-based s
     >     ## The initial log level across all transparent proxy components. Accepted log levels are: trace, debug, info, warn, error, fatal.
     >     ## The log levels can be changed dynamically, see https://help.sap.com/docs/connectivity/sap-btp-connectivity-cf/transparent-proxy-troubleshooting?locale=en-US&q=transparent%20proxy#change-log-levels-of-the-transparent-proxy-components
     >     level: info
+    >     requestContext:
+    >       ## Enables additional INFO logs for destination request flow details, including destination, fragment, level, and tenant information.
+    >       enabled: false
     >     ## Defines the tenant mode in which transparent proxy is working in. Default value "dedicated" means that only destinations in the subaccount defined in Destination Service key could be exposed and accessed via TP.
     >     ## The other option "shared" shows that the proxy could work with different subscribed tenants to the provider in the service key. Then, on each request "X-Tenant-Subdomain" or "X-Tenant-Id" header becomes required in this mode.
     >   tenantMode: dedicated
@@ -242,8 +247,15 @@ The Transparent Proxy Helm chart is available via the RBSC \(*repository-based s
     >     ##           The namespace of the existing secret to be used, which holds the private key.
     >     #            secretNamespace:
     >     connectivityProxy:
-    >       ## The K8s service name and namespace associated with the connectivity proxy workload.
+    >       ## Connectivity Proxy topology: 'inCluster' (default) or 'remote'.
+    >       ## In remote mode the CP is reached through an Istio Egress Gateway (or any TLS-terminating
+    >       ## gateway) at serviceName:443.
+    >       #type: inCluster
+    >       ## In-cluster mode: K8s Service name of the connectivity proxy workload.
+    >       ## Remote mode: DNS name of the egress gateway (e.g. istio-egressgateway.istio-system.svc.cluster.local).
     >       #serviceName: connectivity-proxy
+    >       ## TCP port of the remote Connectivity Proxy endpoint. Applies only in remote mode; ignored in in-cluster mode.
+    >       #servicePort: 443
     >       ## The connect timeout is to be used when accessing an HTTP system with ProxyType=OnPremise through the connectivity proxy. [1, 60] seconds allowed.
     >       connectionTimeoutSeconds: 1
     >     ztis:
@@ -274,7 +286,7 @@ helm install transparent-proxy oci://registry-1.docker.io/sapse/transparent-prox
 
 **Registry:** 73554900100900006891.helmsrv.cdn.repositories.cloud.sap
 
-**Tag:** 1.10.0
+**Tag:** 1.10.1
 
 **Authorization**: See [RBSC documentation](https://help.sap.com/viewer/0a64be17478d4f5ba45d14ab62b0d74c/Cloud/en-US/7e83dfc309834942b441fc2106c5b7f5.html).
 

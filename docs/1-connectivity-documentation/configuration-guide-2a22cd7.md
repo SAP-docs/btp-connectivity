@@ -528,6 +528,33 @@ False
 <tr>
 <td valign="top">
 
+`config.logging.requestContext.enabled`
+
+</td>
+<td valign="top">
+
+Enables additional INFO logs for destination request flow details, including destination, fragment, level, and tenant information.
+
+</td>
+<td valign="top">
+
+false
+
+</td>
+<td valign="top">
+
+ 
+
+</td>
+<td valign="top">
+
+False
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
 `config.managedNamespacesMode` 
 
 </td>
