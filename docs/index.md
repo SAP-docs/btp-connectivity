@@ -50,6 +50,7 @@
             -   [Technical User Access to SuccessFactors](1-connectivity-documentation/technical-user-access-to-successfactors-60267d3.md)
             -   [Connectivity Scenarios: Examples](1-connectivity-documentation/connectivity-scenarios-examples-c56d0fa.md)
         -   [What's New for Connectivity](1-connectivity-documentation/what-s-new-for-connectivity-7882854.md)
+            -   [2022-2024 Connectivity \(Archive\)](1-connectivity-documentation/2022-2024-connectivity-archive-7b2dfa2.md)
             -   [2021 Connectivity \(Archive\)](1-connectivity-documentation/2021-connectivity-archive-2f8b032.md)
             -   [2020 Connectivity \(Archive\)](1-connectivity-documentation/2020-connectivity-archive-c316606.md)
             -   [2019 Connectivity \(Archive\)](1-connectivity-documentation/2019-connectivity-archive-9ef116d.md)

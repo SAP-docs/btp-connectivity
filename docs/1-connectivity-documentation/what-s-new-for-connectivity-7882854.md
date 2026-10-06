@@ -9,6 +9,8 @@ Find the latest features, enhancements and bug fixes for SAP BTP Connectivity .
 **Related Information**  
 
 
+[2022-2024 Connectivity \(Archive\)](2022-2024-connectivity-archive-7b2dfa2.md)
+
 [2021 Connectivity \(Archive\)](2021-connectivity-archive-2f8b032.md)
 
 [2020 Connectivity \(Archive\)](2020-connectivity-archive-c316606.md)
