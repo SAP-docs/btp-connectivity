@@ -14,7 +14,7 @@ To backup or restore your Cloud Connector configuration, do the following:
     1.  To backup your configuration, enter and repeat a password in the *Backup* dialog and choose *Backup*.
 
         > ### Note:  
-        > An archive containing a snapshot of the current Cloud Connector configuration is created and downloaded by your browser. For security reasons, some files are encrypted, using the password provided for the backup procedure.
+        > An archive containing a snapshot of the current Cloud Connector configuration is created and downloaded by your browser. For security reasons, some files are encrypted, using the password provided for the backup procedure. We recommend that you choose a strong password for the backup - a good password is long, uses multiple character classes, and is not predictable.
 
         > ### Tip:  
         > You can use this archive to restore the current state of the same installation or to move the current configuration to a new Cloud Connector installation, if the original instance can no longer be used.
