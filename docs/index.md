@@ -162,6 +162,7 @@
                 -   [AuthenticationHeaderProvider API](1-connectivity-documentation/authenticationheaderprovider-api-2959ab8.md)
             -   [Extending Destinations with Fragments](1-connectivity-documentation/extending-destinations-with-fragments-f56600a.md)
             -   [Using an IAS User Token for Corporate IdP Token Principal Propagation to On-Premise Systems](1-connectivity-documentation/using-an-ias-user-token-for-corporate-idp-token-principal-propagation-to-on-premise-e50acf1.md)
+            -   [Resolve Dynamic Token-Based Property Values](1-connectivity-documentation/resolve-dynamic-token-based-property-values-014dde2.md)
     -   [Cloud Connector](1-connectivity-documentation/cloud-connector-e6c7616.md)
         -   [Installation](1-connectivity-documentation/installation-57ae3d6.md)
             -   [Prerequisites](1-connectivity-documentation/prerequisites-e23f776.md)

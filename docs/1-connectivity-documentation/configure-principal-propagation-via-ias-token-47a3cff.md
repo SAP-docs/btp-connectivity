@@ -49,6 +49,12 @@ Header: `"Proxy-Authorization" : "Bearer <accessToken>"`
 
 
 
+## Additional Resources
+
+For information on obtaining the IAS token, see [Configure Authorization](consuming-the-connectivity-service-313b215.md#loio313b215066a8400db461b311e01bd99b__section_RequiredInformation).
+
+
+
 ## More Information
 
 [Identity Authentication](https://help.sap.com/viewer/6d6d63354d1242d185ab4830fc04feb1/Cloud/en-US/d17a116432d24470930ebea41977a888.html)

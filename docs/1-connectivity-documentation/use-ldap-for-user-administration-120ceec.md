@@ -43,7 +43,6 @@ Administrate the Cloud Connector \(unrestricted access to all operations and set
 <td valign="top">
 
 -   Administrate all subaccount-related settings unless a subaccount is *managed*.
--   Perform support-related tasks like setting trace levels or creating a thread dump.
 -   Administrate certain cross-subaccount settings including, but not limited to, certificates and back-end trust.
 
 
@@ -59,7 +58,6 @@ Administrate the Cloud Connector \(unrestricted access to all operations and set
 <td valign="top">
 
 -   Administrate all subaccount-related settings unless a subaccount is *managed*.
--   Perform support-related tasks like setting trace levels or creating a thread dump.
 
 
 
