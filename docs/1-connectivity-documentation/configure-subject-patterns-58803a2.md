@@ -100,6 +100,11 @@ Using the selection menu, you can assign values for the following parameters:
 > 
 > When using a subaccount in the **multi-cloud** environment: The Cloud Connector also offers direct access to custom variables injected in the JWT \(JSON Web token\) by SAP BTP *Authorization & Trust Management* that were taken over from a SAML assertion, and are available in the *xs.user.attributes* section of the token. If such a custom variable has the same name as one on root level, the one on root level can still be accessed using `cp.` as a prefix to the name. *Example*: if `userId` is present on root level and in *xs.user.attributes*, then `${userId}` will contain the value of the variable in *xs.user.attributes*, and `${cp.userId}` the one of the variable on root level.
 
+> ### Caution:  
+> **Security Impact**
+> 
+> Never use user attributes that can be modified by the user itself. Such attribute values can potentially be changed by attackers to try an injection attack.
+
 The values for these variables are provided by the trusted identity provider in the token which is passed to the Cloud Connector and specifies the user that has logged on to the cloud application.
 
 By default, the following attributes are provided:

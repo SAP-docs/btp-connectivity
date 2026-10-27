@@ -105,7 +105,7 @@ Transparent Proxy for Kubernetes
 </td>
 <td valign="top">
 
-The Transparent Proxy lightens the way your Kubernetes workloads connect to remote systems using BTP destinations. It provides authentication, user principal propagation, automated Connectivity Proxy handshakes, and easy access to the destination target systems by exposing them as Kubernetes services and routing the traffic to them:
+The Transparent Proxy lightens the way your Kubernetes workloads connect to remote systems using SAP BTP destinations. It provides authentication, user principal propagation, automated Connectivity Proxy handshakes, and easy access to the destination target systems by exposing them as Kubernetes services and routing the traffic to them:
 
 -   Directly for Internet-accessible solutions/applications/systems
 -   Via the Connectivity Proxy and the Cloud Connector for on-premise systems

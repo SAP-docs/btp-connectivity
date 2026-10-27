@@ -73,7 +73,7 @@ Back to [Procedure](create-and-bind-a-connectivity-service-instance-a2b88cf.md#l
 
 Assuming that you have already deployed your application to the platform, follow these steps to create a service instance and bind it to an application:
 
-1.  In the SAP BTP Cockpit, navigate to your application.
+1.  In the SAP BTP cockpit, navigate to your application.
 2.  From the left navigation menu, choose *Service Bindings*.
 3.  Choose the *Bind Service* button.
 4.  The *Bind Service* wizard appears.

@@ -14,7 +14,7 @@ For the master setup, keep in mind the expected load for communication between t
 <tr>
 <th valign="top">
 
-Installation Size \(S, M, L\)
+Installation Size \(S, M, L, XL\)
 
 </th>
 <th valign="top">
@@ -109,6 +109,38 @@ We recommend that you do the setup in a virtual or physical machine. A virtual m
 <td valign="top">
 
 32GB RAM / 8GB / 16GB
+
+</td>
+<td valign="top">
+
+40GB
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+**XL:**
+
+The expected load is large \(**more than 10 million requests** per day, request concurrency and size is mostly medium or high\) and multiple subaccounts with multiple applications are connected.
+
+On some of them, **high traffic load** is expected.
+
+In addition, many service channels are used, and a **large data amount is replicated** to cloud systems concurrently.
+
+We recommend that you do the setup in a virtual or physical machine. A virtual machine should be on a host without overcommitted resources.
+
+</td>
+<td valign="top">
+
+16 cores 3.0 Ghz
+
+</td>
+<td valign="top">
+
+64GB RAM / 16GB / 32GB
+
+10GBit/s network
 
 </td>
 <td valign="top">

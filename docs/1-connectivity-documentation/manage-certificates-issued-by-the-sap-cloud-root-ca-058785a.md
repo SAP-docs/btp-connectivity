@@ -19,7 +19,7 @@ You have an SAP BTP subaccount. There are no specific requirements for the subac
 
 **API: Getting Access to the API**
 
-1.  First, you need a service instance of the Destination service with service plan lite. You can do this in a Cloud Foundry space \(using the cockpit or the Cloud Foundry CLI\), or directly in the subaccount \(the so called "Other Environment", using the cockpit or the BTP CLI\), or in Kubernetes/Kyma \(using the SAP BTP service operator\).
+1.  First, you need a service instance of the Destination service with service plan lite. You can do this in a Cloud Foundry space \(using the cockpit or the Cloud Foundry CLI\), or directly in the subaccount \(the so called "Other Environment", using the cockpit or the SAP BTP CLI\), or in Kubernetes/Kyma \(using the SAP BTP service operator\).
 2.  Create a binding and service key for the instance. We recommend that you use x509 bindings, but for quick tests you can also take client secrets \(which is the default\).
 3.  In the binding, you will see the base Destination service URL \(field `uri`\), the subaccount's token retrieval base URL \(field `url`\), the client ID \(field `clientid`\), and either the client secret \(field `clientsecret`\) or the mTLS properties.
 4.  Use the credentials to fetch a token which will then be used to call the REST API \(the example uses `clientid` and `clientsecret`\):

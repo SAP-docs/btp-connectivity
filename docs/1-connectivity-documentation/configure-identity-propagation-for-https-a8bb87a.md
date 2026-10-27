@@ -16,7 +16,7 @@ Find step-by-step instructions to configure principal propagation to an ABAP ser
 The following data are used in this example:
 
 -   System certificate was issued by: `CN=MyCompany CA`,`O=Trust Community`,`C=DE`.
--   It has the subject: `CN=SCC`, `OU=BTP Scenarios`,`O=Trust Community`,`C=DE`.
+-   It has the subject: `CN=SCC`, `OU=BAIP Scenarios`,`O=Trust Community`,`C=DE`.
 -   The short-lived certificate has the subject `CN=P1234567890`, where `P1234567890` is the platform user.
 
 
@@ -90,11 +90,11 @@ Back to [Step](configure-identity-propagation-for-https-a8bb87a.md#loioa8bb87a72
 
     -   Select a free index for `<x>`.
 
-    -   `<subject>` is the subject of the system certificate \(example data: `CN=SCC`, `OU=BTP Scenarios`, `O=Trust Community`, `C=DE`\).
+    -   `<subject>` is the subject of the system certificate \(example data: `CN=SCC`, `OU=BAIP Scenarios`, `O=Trust Community`, `C=DE`\).
 
     -   `<issuer>` is the issuer of the system certificate \(example data: `CN=MyCompany CA`, `O=Trust Community`, `C=DE` \).
 
-    -   Example: `icm/trusted_reverse_proxy_2 = SUBJECT="CN=SCC, OU=BTP Scenarios, O=Trust Community, C=DE", ISSUER="CN=MyCompany CA, O=Trust Community, C=DE"`.
+    -   Example: `icm/trusted_reverse_proxy_2 = SUBJECT="CN=SCC, OU=BAIP Scenarios, O=Trust Community, C=DE", ISSUER="CN=MyCompany CA, O=Trust Community, C=DE"`.
 
 
     > ### Note:  
@@ -102,10 +102,10 @@ Back to [Step](configure-identity-propagation-for-https-a8bb87a.md#loioa8bb87a72
     > 
     > -   `icm/HTTPS/trust_client_with_issuer`: this is the issuer of the system certificate \(example data: `CN=MyCompany CA`, `O=Trust Community`, `C=DE`\).
     > 
-    > -   `icm/HTTPS/trust_client_with_subject`: this is the subject of the system certificate \(example data: `CN=SCC`, `OU=BTP Scenarios`, `O=Trust Community`, `C=DE`\).
+    > -   `icm/HTTPS/trust_client_with_subject`: this is the subject of the system certificate \(example data: `CN=SCC`, `OU=BAIP Scenarios`, `O=Trust Community`, `C=DE`\).
 
     > ### Caution:  
-    > In all kernel releases below 7.53, the ICM expects *blanks after the separating comma* for the issuer and subject elements. Even if the Cloud Connector administration UI shows a string without blanks, for example: *CN=SCC,OU=BTP Scenarios,O=Trust Community,C=DE*, you must specify in ICM: *CN=SCC, OU=BTP Scenarios, O=Trust Community, C=DE*.
+    > In all kernel releases below 7.53, the ICM expects *blanks after the separating comma* for the issuer and subject elements. Even if the Cloud Connector administration UI shows a string without blanks, for example: *CN=SCC,OU=BAIP Scenarios,O=Trust Community,C=DE*, you must specify in ICM: *CN=SCC, OU=BAIP Scenarios, O=Trust Community, C=DE*.
     > 
     > As of kernel release 7.53, this restriction does not exist any more. For more information, see SAP note [3335949](https://me.sap.com/notes/3335949).
 
@@ -231,5 +231,5 @@ Back to [Example Data](configure-identity-propagation-for-https-a8bb87a.md#loioa
 
 [Principal Propagation](https://help.sap.com/viewer/b865ed651e414196b39f8922db2122c7/Cloud/en-US/d4d3e1e9b2dd44318b49a4812cd51383.html "Forward the identity of cloud users to an on-premise system to enable single sign-on (Neo environment).") :arrow_upper_right: \(Neo environment\)
 
-[Principal Propagation from SAP BTP Applications to On-Premise Systems Using Corporate IdP Tokens](https://help.sap.com/docs/btp/sap-business-technology-platform/configure-principal-propagation-from-btp-applications-to-on-premise-systems-using-corporate-idp-tokens?version=Cloud) \(multi-cloud environment\)
+[Principal Propagation from SAP BAIP Applications to On-Premise Systems Using Corporate IdP Tokens](https://help.sap.com/docs/btp/sap-business-technology-platform/configure-principal-propagation-from-btp-applications-to-on-premise-systems-using-corporate-idp-tokens?version=Cloud) \(multi-cloud environment\)
 

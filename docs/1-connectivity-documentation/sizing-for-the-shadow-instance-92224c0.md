@@ -65,5 +65,19 @@ Shadow
 
 </td>
 </tr>
+<tr>
+<td valign="top">
+
+**XL**
+
+</td>
+<td valign="top">
+
+**L** installation as virtual or physical machine
+
+**XL** installation as virtual or physical machine for risk mitigation
+
+</td>
+</tr>
 </table>
 

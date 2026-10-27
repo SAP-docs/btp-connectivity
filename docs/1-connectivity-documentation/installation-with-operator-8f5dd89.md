@@ -12,7 +12,7 @@ Use the operator to install the Transparent Proxy for Kubernetes.
 
 **Integration with Destination Service**
 
-You need an existing Destination service instance so the Transparent Proxy can link to it. If the [SAP BTP Service Operator](https://github.com/SAP/sap-btp-service-operator) is installed in your Kubernetes cluster, the Transparent Proxy will automatically create a Destination service instance in your Kubernetes cluster and link to it.
+You need an existing Destination service instance so the Transparent Proxy can link to it. If the [SAP Business AI Platform Service Operator](https://github.com/SAP/sap-btp-service-operator) is installed in your Kubernetes cluster, the Transparent Proxy will automatically create a Destination service instance in your Kubernetes cluster and link to it.
 
 **Encryption**
 
@@ -73,7 +73,7 @@ This operation creates *service instance* and *service binding* custom resources
 
 Prerequisites:
 
--   [SAP BTP Service Operator](https://github.com/SAP/sap-btp-service-operator) set up in your Kubernetes cluster
+-   [SAP Business AI Platform Service Operator](https://github.com/SAP/sap-btp-service-operator) set up in your Kubernetes cluster
 
 ```
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/sap-software/btp-transparent-proxy/refs/heads/main/deploy.sh)"

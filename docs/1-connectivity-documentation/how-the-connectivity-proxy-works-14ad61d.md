@@ -20,7 +20,7 @@ Learn about the Connectivity Proxy for Kubernetes: Scenario and required configu
 
 ## Glossary
 
--   **SAP Business Technology Platform** \(SAP BTP\): SAP platform for cloud services \(replaces *SAP Cloud Platform*\).
+-   **SAP BTP**: SAP platform for cloud services \(replaces *SAP Cloud Platform*, *SAP Business Technology Platform*\).
 -   **SAP Connectivity service**: Core platform service, offering a secure tunnelling solution between your on-premise network and the cloud.
 -   **Cloud Connector**: On-premise client of the Connectivity service, deployed and lifecycle-managed in your local network. The initiator of the secure tunnel to the platform, that is, to the Connectivity service.
 -   **Connectivity proxy**: Software component \(logically part of the Connectivity service\), deployed locally to the consuming part \(usually a cloud application or a service component\). It can work in multiple operational modes, depending on the exact requirement of the consuming party.

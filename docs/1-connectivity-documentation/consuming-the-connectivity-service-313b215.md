@@ -231,7 +231,7 @@ To enable your application for consuming the Connectivity service via IAS, you n
 3.  \(Optional\) Verify that the Connectivity binding JSON contains the property "token-type" with value \["xsuaa", "ias"\].
 4.  Create or update an existing Cloud Identity Services instance and bind it to the application. During the creation/update you must set the "consumed-services" property to an array that contains the name of the Connectivity service instance.
 
-    For more information, see [Getting Started with the Identity Service of SAP BTP](https://help.sap.com/docs/cloud-identity-services/cloud-identity-services/getting-started-with-identity-service-of-sap-btp?version=Cloud) and [Reference Information for the Identity Service of SAP BTP](https://help.sap.com/docs/cloud-identity-services/cloud-identity-services/reference-information-for-identity-service-of-sap-btp?version=Cloud).
+    For more information, see [Getting Started with the Identity Service of SAP Business AI Platform](https://help.sap.com/docs/cloud-identity-services/cloud-identity-services/getting-started-with-identity-service-of-sap-btp?version=Cloud) and [Reference Information for the Identity Service of SAP Business AI Platform](https://help.sap.com/docs/cloud-identity-services/cloud-identity-services/reference-information-for-identity-service-of-sap-btp?version=Cloud).
 
 
 For obtaining an IAS proxy authorization token you should use the Cloud Identity Services binding information. The token request must contain an additional parameter - "resource" with value "urn:sap:identity:application:service:id:<instance\_id\>", where <instance\_id\> is the value of the root-level property "instance\_guid" in the Connectivity binding JSON .
