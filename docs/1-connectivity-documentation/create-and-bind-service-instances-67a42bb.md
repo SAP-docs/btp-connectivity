@@ -54,41 +54,23 @@ Back to [Procedure](create-and-bind-service-instances-6dd5e26.md#loio6dd5e268b2c
     > ```
     > 
     > {
-    > 
     >     "xsappname" : "jco-demo-p1234",
-    > 
     >     "tenant-mode": "dedicated",
-    > 
     >     "scopes": [
-    > 
     >         {
-    > 
     >             "name": "$XSAPPNAME.all",
-    > 
     >             "description": "all"
-    > 
     >         }
-    > 
     >     ],
-    > 
     >     "role-templates": [
-    > 
     >         {
-    > 
     >             "name": "all",
-    > 
     >             "description": "all",
-    > 
     >             "scope-references": [
-    > 
     >                 "$XSAPPNAME.all"
-    > 
     >             ]
-    > 
     >         }
-    > 
     >     ]
-    > 
     > }
     > 
     > ```

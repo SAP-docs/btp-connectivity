@@ -38,32 +38,20 @@ You have created and bound the required service instances, see [Create and Bind 
     > ```
     > 
     > ---
-    > 
     > applications:
     > 
-    >  
-    > 
     > - name: jco-demo-p1234
-    > 
     >   buildpacks:
-    > 
     >   - sap_java_buildpack
-    > 
     >   env:
-    > 
     >     USE_JCO: true
-    > 
     >     # This is necessary only if more than one instance is bound
     >     xsuaa_connectivity_instance_name: "xsuaa_jco"
     >     connectivity_instance_name: "connectivity_jco"
     >     destination_instance_name: "destination_jco"
-    > 
     >   services:
-    > 
     >     - xsuaa_jco
-    > 
     >     - connectivity_jco
-    > 
     >     - destination_jco
     > 
     > ```

@@ -12,42 +12,25 @@ For authentication purposes, configure and deploy an application router for your
 
     > ### Sample Code:  
     > ```
-    > 
     > ---
-    > 
     > applications:
     > 
-    >  
-    > 
-    > - name: approuter-jco-demo-p1234
-    > 
+    > - name: approuter-jco-demo-p42424242
     >   path: ./
-    > 
     >   buildpacks:
-    > 
     >   - nodejs_buildpack
-    > 
     >   memory: 120M
-    > 
     >   routes:
-    > 
-    >   - route: approuter-jco-demo-p1234.cfapps.eu10.hana.ondemand.com
-    > 
+    >   - route: approuter-jco-demo-p42424242.cfapps.eu10.hana.ondemand.com
     >   env:
-    > 
     >     NODE_TLS_REJECT_UNAUTHORIZED: 0
-    > 
     >     destinations: >
-    > 
     >       [
-    > 
-    >          {"name":"dest-to-example", "url" :"https://jco-demo-p1234.cfapps.eu10.hana.ondemand.com/ConnectivityRFCExample", "forwardAuthToken": true }
-    > 
+    >          {"name":"dest-to-example", "url" :"https://jco-demo-p42424242.cfapps.eu10.hana.ondemand.com/ConnectivityRFCExample", "forwardAuthToken": true }
     >       ]
-    > 
     >   services:
-    > 
     >     - xsuaa_jco
+    > 
     > 
     > ```
 

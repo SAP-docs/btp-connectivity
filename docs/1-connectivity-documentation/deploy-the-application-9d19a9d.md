@@ -36,34 +36,20 @@ You have created and bound the required service instances, see [Create and Bind 
 
     > ### Sample Code:  
     > ```
-    > 
     > ---
-    > 
     > applications:
     > 
-    >  
-    > 
-    > - name: jco-demo-p1234
-    > 
+    > - name: jco-demo-p42424242
     >   buildpacks:
-    > 
     >   - sap_java_buildpack
-    > 
     >   env:
-    > 
-    >     USE_JCO: true
-    > 
-    >     # This is necessary only if more than one instance is bound
+    >     # Accept any OAuth client of any identity zone
+    >     SAP_JWT_TRUST_ACL: '[{"clientid":"*","identityzone":"*"}]'
     >     xsuaa_connectivity_instance_name: "xsuaa_jco"
-    >     connectivity_instance_name: "connectivity_jco"
-    >     destination_instance_name: "destination_jco"
-    > 
+    >     JAVA_OPTS: '-Xss349k'
     >   services:
-    > 
     >     - xsuaa_jco
-    > 
     >     - connectivity_jco
-    > 
     >     - destination_jco
     > 
     > ```
