@@ -73,20 +73,14 @@ Back to [Steps](develop-a-sample-web-application-7808d1d.md#loio7808d1d32c994a9e
     > 
     > package com.sap.demo.jco;
     > 
-    >  
-    > 
     > import java.io.IOException;
     > import java.io.PrintWriter;
-    > 
-    >  
     > 
     > import javax.servlet.ServletException;
     > import javax.servlet.annotation.WebServlet;
     > import javax.servlet.http.HttpServlet;
     > import javax.servlet.http.HttpServletRequest;
     > import javax.servlet.http.HttpServletResponse;
-    > 
-    >  
     > 
     > import com.sap.conn.jco.AbapException;
     > import com.sap.conn.jco.JCoDestination;
@@ -95,8 +89,6 @@ Back to [Steps](develop-a-sample-web-application-7808d1d.md#loio7808d1d32c994a9e
     > import com.sap.conn.jco.JCoFunction;
     > import com.sap.conn.jco.JCoParameterList;
     > import com.sap.conn.jco.JCoRepository;
-    > 
-    >  
     > 
     > /**
     >  * Sample application that makes use of the capability to invoke a function module in an ABAP system
@@ -108,8 +100,6 @@ Back to [Steps](develop-a-sample-web-application-7808d1d.md#loio7808d1d32c994a9e
     > public class ConnectivityRFCExample extends HttpServlet {
     >     private static final long serialVersionUID = 1L;
     > 
-    >  
-    > 
     >     protected void doGet(HttpServletRequest request, HttpServletResponse response)
     >             throws ServletException, IOException {
     >         PrintWriter responseWriter = response.getWriter();
@@ -117,23 +107,17 @@ Back to [Steps](develop-a-sample-web-application-7808d1d.md#loio7808d1d32c994a9e
     >             // access the RFC Destination "JCoDemoSystem"
     >             JCoDestination destination = JCoDestinationManager.getDestination("JCoDemoSystem");
     > 
-    >  
-    > 
     >             // make an invocation of STFC_CONNECTION in the backend;
     >             JCoRepository repo = destination.getRepository();
     >             JCoFunction stfcConnection = repo.getFunction("STFC_CONNECTION");
     > 
-    >  
-    > 
     >             JCoParameterList imports = stfcConnection.getImportParameterList();
     >             imports.setValue("REQUTEXT", "SAP BTP Connectivity runs with JCo");
-    > 
     > 
     >             stfcConnection.execute(destination);
     >             JCoParameterList exports = stfcConnection.getExportParameterList();
     >             String echotext = exports.getString("ECHOTEXT");
     >             String resptext = exports.getString("RESPTEXT");
-    > 
     > 
     >             response.addHeader("Content-type", "text/html");
     >             responseWriter.println("<html><body>");
