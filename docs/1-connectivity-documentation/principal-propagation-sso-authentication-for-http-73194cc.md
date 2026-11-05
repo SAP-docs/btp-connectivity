@@ -2,7 +2,7 @@
 
 # Principal Propagation SSO Authentication for HTTP
 
-Forward the identity of a cloud user from a Cloud Foundry application to a backend system via HTTP to enable single sign-on \(SSO\).
+Forward the identity of a cloud user from a Cloud Foundry application to a back-end system via HTTP to enable single sign-on \(SSO\).
 
 
 

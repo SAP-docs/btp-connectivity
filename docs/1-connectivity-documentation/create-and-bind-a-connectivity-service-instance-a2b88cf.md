@@ -23,7 +23,7 @@ Previously, access to service plan “lite” has been granted via entitlement a
 
 ## Procedure
 
-You have two options for creating a service instance – using the CLI or using the SAP BTP cockpit:
+You have two options for creating a service instance – using the CLI or using the cockpit:
 
 -   [Create and Bind a Service Instance from the CLI](create-and-bind-a-connectivity-service-instance-a2b88cf.md#loioa2b88cf9d41e4061bfb06a23d9ba1c43__cli_cs)
     -   [Example](create-and-bind-a-connectivity-service-instance-a2b88cf.md#loioa2b88cf9d41e4061bfb06a23d9ba1c43__example_cs)
@@ -73,7 +73,7 @@ Back to [Procedure](create-and-bind-a-connectivity-service-instance-a2b88cf.md#l
 
 Assuming that you have already deployed your application to the platform, follow these steps to create a service instance and bind it to an application:
 
-1.  In the SAP BTP cockpit, navigate to your application.
+1.  In the cockpit, navigate to your application.
 2.  From the left navigation menu, choose *Service Bindings*.
 3.  Choose the *Bind Service* button.
 4.  The *Bind Service* wizard appears.

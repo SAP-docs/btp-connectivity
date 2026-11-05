@@ -21,7 +21,7 @@ You have created and bound the required service instances, see [Create and Bind 
 1.  To deploy your Web application, you can use the following two alternative procedures:
     -   [Deploying from the Eclipse IDE](https://www.eclipse.org/cft/documentation/projectPageLink/CFTProjectPagedocumentation.html)
 
-    -   Deploying from the CLI, see [Developing Java in the Cloud Foundry Environment](https://help.sap.com/viewer/65de2977205c403bbc107264b8eccf4b/Cloud/en-US/a3f90069d6cd41da82f34a6123d82ce6.html "Find selected information for Java development on SAP BTP, Cloud Foundry and references to more detailed sources.") :arrow_upper_right:
+    -   Deploying from the CLI, see [Developing Java in the Cloud Foundry Environment](https://help.sap.com/viewer/65de2977205c403bbc107264b8eccf4b/Cloud/en-US/a3f90069d6cd41da82f34a6123d82ce6.html "Find selected information for Java development on Cloud Foundry and references to more detailed sources.") :arrow_upper_right:
 
 
 2.  In the following, we publish it with the CLI.
