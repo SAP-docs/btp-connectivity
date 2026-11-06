@@ -131,7 +131,7 @@ Here is an example call using **curl**:
 > curl -X POST \
 >         "<url>/oauth/token" \
 >         -H "Content-Type: application/x-www-form-urlencoded" \
->         -d "grant_type=client_credentials" --data-urlencode "client_id=<client_id>" --data-urlencode "client_secret=<client_secret>"
+>         -d "grant_type=client_credentials" --data-urlencode 'client_id=<client_id>' --data-urlencode 'client_secret=<client_secret>'
 > ```
 
 where:
