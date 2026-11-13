@@ -883,6 +883,21 @@ You must have Internet connection at least to the following Connectivity service
 > For some solutions of the BTP portfolio, you must include additional hosts to set up an on-premises connectivity scenario with the Cloud Connector. This applies, for example, to: SAP Data Intelligence, SAP HANA Cloud, Business Appilcation Studio, SAP Cloud Identity Services, and SAP Build Apps. Check the respective solution documentation for details.
 
 > ### Note:  
+> For connections to and from a Kubernetes cluster, also the corresponding endpoint of the Connectivity Proxy must be exposed.
+> 
+> In the Kyma environment, you can find this endpoint in the *Service Mappings* status.
+> 
+> For more information, see also:
+> 
+> [Configure a Service Channel for a Kubernetes Cluster](configure-a-service-channel-for-a-kubernetes-cluster-d6d395e.md)
+> 
+> [Connectivity for Kubernetes](what-is-sap-btp-connectivity-e54cc8f.md#loioe54cc8fbbb571014beb5caaf6aa31280__kubernetes)
+> 
+> [Connectivity in the Kyma Environment](connectivity-in-the-kyma-environment-7501fbc.md)
+> 
+> [Connectivity Proxy for Kubernetes](connectivity-proxy-for-kubernetes-e661713.md)
+
+> ### Note:  
 > To configure the Cloud Connector for SAP Datasphere, see also [Configure Cloud Connector](https://help.sap.com/docs/SAP_DATASPHERE/9f804b8efa8043539289f42f372c4862/f289920243a34127b0c8b13012a1a4b5.html) \(SAP Datasphere documentation\).
 
 > ### Note:  
